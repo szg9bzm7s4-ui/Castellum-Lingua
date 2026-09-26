@@ -113801,7 +113801,7 @@ function friendsView(){if(!Cloud.signedIn)return authPage();if(!Social.loaded&&!
   return `<div class="social-shell"><div class="social-hero"><div><h1>Compétition entre amis</h1><p class="muted">Ajoute tes amis, grimpe dans la ligue et lance des défis.</p></div><span class="social-badge">🔥 ${Math.max(streak(),Cloud.displayStreak())} jours · ⚡ ${Math.max(S.xp,Cloud.profile?.total_xp||0)} XP</span></div>
   <div class="social-tabs seg">${tabs.map(([k,n])=>`<button data-social-tab="${k}" aria-pressed="${Social.tab===k}">${n}</button>`).join('')}</div>${Social.error?`<div class="card auth-err">${esc(Social.error)}<br><small>Si tu viens d'ajouter cette fonction, exécute d'abord le fichier SQL Supabase fourni.</small></div>`:''}${Social.loading&&!Social.loaded?`<div class="card social-empty"><span class="spinner"></span><p>Chargement de ta ligue…</p></div>`:socialTabView(Social.tab,D)}</div>`}
 function socialTabView(tab,D){const friends=D.friends||[],incoming=D.incoming||[],outgoing=D.outgoing||[],challenges=D.challenges||[];
-  if(tab==='league'){const me={id:Cloud.user?.id,display_name:Cloud.profile?.display_name||'Moi',username:Cloud.profile?.username||'',avatar_url:Cloud.profile?.avatar_url||'',weekly_xp:D.me_weekly_xp||0,total_xp:Cloud.profile?.total_xp||S.xp,current_streak:Cloud.profile?.current_streak||streak(),is_me:true};const rows=[me,...friends].sort((a,b)=>(b.weekly_xp||0)-(a.weekly_xp||0));return `<section class="card"><div class="section-head"><div><h2>🏆 Ligue des amis</h2><p class="muted">XP gagnés depuis lundi</p></div><button class="btn sm ghost" data-social="refresh">↻</button></div><div>${rows.map((p,i)=>`<div class="rank-row"><div class="rank-pos">${i<3?['🥇','🥈','🥉'][i]:i+1}</div>${socialAvatar(p,38)}<div>${socialName(p)}<span class="fr-meta">🔥 ${p.current_streak||0} · ⚡ ${p.total_xp||0} XP total${p.is_me?' · toi':''}</span></div><div class="rank-xp"><b>${p.weekly_xp||0}</b><small>XP semaine</small></div></div>`).join('')}</div>${friends.length===0?`<p class="social-note">Ajoute au moins un ami pour créer ta propre ligue privée.</p>`:''}</section>`}
+  if(tab==='league'){const me={id:Cloud.user?.id,display_name:Cloud.profile?.display_name||'Moi',username:Cloud.profile?.username||'',avatar_url:Cloud.profile?.avatar_url||'',weekly_xp:D.me_weekly_xp||0,total_xp:Cloud.profile?.total_xp||S.xp,current_streak:Cloud.profile?.current_streak||streak(),is_me:true};const rows=[me,...friends].sort((a,b)=>(b.weekly_xp||0)-(a.weekly_xp||0));return `<section class="card"><div class="section-head"><div><h2>🏆 Ligue des amis</h2><p class="muted">XP gagnés depuis lundi · niveau de château basé sur l'XP total</p></div><button class="btn sm ghost" data-social="refresh">↻</button></div><div>${rows.map((p,i)=>{const c=castleLevelForXP(p.total_xp||0);return `<div class="rank-row"><div class="rank-pos">${i<3?['🥇','🥈','🥉'][i]:i+1}</div>${socialAvatar(p,38)}<div>${socialName(p)}<span class="fr-meta">${c.e} ${c.n} · 🔥 ${p.current_streak||0} · ⚡ ${p.total_xp||0} XP total${p.is_me?' · toi':''}</span></div><div class="rank-xp"><b>${p.weekly_xp||0}</b><small>XP semaine</small></div></div>`}).join('')}</div>${friends.length===0?`<p class="social-note">Ajoute au moins un ami pour créer ta propre ligue privée.</p>`:''}</section>`}
   if(tab==='friends'){return `<section class="card"><h2>Trouver un ami</h2><form id="friendSearchForm" class="friend-search"><input class="auth-in" name="q" minlength="2" maxlength="40" placeholder="Pseudo ou nom…" value="${esc(Social.q)}"><button class="btn good" type="submit">Rechercher</button></form>${Social.results.length?`<div class="social-list" style="margin-top:12px">${Social.results.map(p=>friendSearchRow(p)).join('')}</div>`:''}</section><section class="card"><h2>Mes amis · ${friends.length}</h2><div class="social-list">${friends.length?friends.map(friendRow).join(''):`<div class="social-empty">Tu n'as pas encore d'amis. Recherche leur pseudo pour les ajouter.</div>`}</div></section>`}
   if(tab==='requests'){return `<section class="card"><h2>Demandes reçues · ${incoming.length}</h2><div class="social-list">${incoming.length?incoming.map(p=>requestRow(p,true)).join(''):`<div class="social-empty">Aucune demande en attente.</div>`}</div></section><section class="card"><h2>Demandes envoyées · ${outgoing.length}</h2><div class="social-list">${outgoing.length?outgoing.map(p=>requestRow(p,false)).join(''):`<div class="social-empty">Aucune demande envoyée.</div>`}</div></section>`}
   if(tab==='duels'){const live=challenges.filter(c=>['pending','active'].includes(c.status)),history=challenges.filter(c=>c.status==='completed');return `<section class="card"><div class="section-head"><div><h2>⚔️ Défis en cours</h2><p class="muted">Les deux joueurs reçoivent exactement la même série de questions.</p></div><button class="btn sm ghost" data-social="refresh">↻</button></div>${live.length?`<div class="social-list">${live.map(duelRow).join('')}</div>`:`<div class="social-empty">Aucun défi en cours. Lance un duel depuis ta liste d'amis.</div>`}</section><section class="card"><h2>🏅 Historique des duels</h2>${history.length?`<div class="social-list">${history.map(duelRow).join('')}</div>`:`<div class="social-empty">Tes résultats apparaîtront ici après ton premier duel terminé.</div>`}</section>`}
@@ -113863,6 +113863,11 @@ const CASTLE_LEVELS=[
   {xp:4000,n:"Grande forteresse",e:"🏰"},{xp:10000,n:"Citadelle royale",e:"👑"},{xp:25000,n:"Castellum impérial",e:"🏛️"},{xp:50000,n:"Castellum légendaire",e:"✨"},
   {xp:100000,n:"Forteresse céleste",e:"☁️"},{xp:200000,n:"Cité royale",e:"🌆"},{xp:350000,n:"Capitale impériale",e:"🦅"},{xp:500000,n:"Castellum éternel",e:"💎"}
 ];
+function castleLevelForXP(xp){
+  xp=Math.max(0,Number(xp)||0);
+  let idx=0;for(let i=0;i<CASTLE_LEVELS.length;i++)if(xp>=CASTLE_LEVELS[i].xp)idx=i;
+  return CASTLE_LEVELS[idx];
+}
 function castleProgressCard(){
   const xp=Math.max(0,Number(Cloud?.profile?.total_xp ?? S.xp ?? 0)||0);
   let idx=0;for(let i=0;i<CASTLE_LEVELS.length;i++)if(xp>=CASTLE_LEVELS[i].xp)idx=i;
@@ -114035,4 +114040,38 @@ document.addEventListener('click',function(e){
   if(previous==='idle')m.dataset.mood='cheer';
   setTimeout(function(){m.classList.remove('mascot-tap');if(previous==='idle')m.dataset.mood='idle'},650);
 });
+</script>
+<style>
+/* FIX mobile : le bouton Continuer reste toujours tappable */
+#lxFoot [data-lx="next"]{position:relative;z-index:50;pointer-events:auto!important;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+</style>
+<script>
+/* FIX robuste du bouton Continuer sur mobile */
+(function(){
+  if(typeof nextStep!=="function"||window.__castellumNextFix)return;
+  window.__castellumNextFix=true;
+  const originalNextStep=nextStep;
+  nextStep=function(){
+    if(!LX||!LX.steps)return;
+    const before=LX.i;
+    try{
+      return originalNextStep();
+    }catch(err){
+      console.error("Castellum next-step recovery",err);
+      if(!LX||!LX.steps)return;
+      if(LX.i===before)LX.i++;
+      while(LX.i<LX.steps.length){
+        try{renderStep();return}catch(e){console.error("Skipping invalid step",e);LX.i++}
+      }
+      try{finish()}catch(e){console.error("Finish after invalid step failed",e);try{closeLx()}catch(_){}}
+    }
+  };
+  document.addEventListener('click',function(e){
+    const b=e.target.closest&&e.target.closest('.lx [data-lx="next"]');
+    if(!b||b.disabled)return;
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    nextStep();
+  },true);
+})();
 </script>
