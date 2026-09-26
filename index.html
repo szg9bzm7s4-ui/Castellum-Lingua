@@ -112166,6 +112166,34 @@ const Cloud = {
     if (error) throw error;
     this.profile = data; return data;
   },
+  async uploadAvatar(file) {
+    if (!this.signedIn || !this.user?.id) throw new Error('Connecte-toi pour modifier ta photo.');
+    if (!(file instanceof File) || !file.type?.startsWith('image/')) throw new Error('Choisis une image valide.');
+    if (file.size > 20 * 1024 * 1024) throw new Error('La photo est trop lourde (20 Mo maximum).');
+    const uid = this.user.id;
+    let blob = file, contentType = file.type || 'image/jpeg';
+    try {
+      const src = URL.createObjectURL(file);
+      const img = await new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>resolve(im);im.onerror=reject;im.src=src});
+      const max=1200, scale=Math.min(1,max/Math.max(img.naturalWidth||1,img.naturalHeight||1));
+      const w=Math.max(1,Math.round((img.naturalWidth||1)*scale)), h=Math.max(1,Math.round((img.naturalHeight||1)*scale));
+      const c=document.createElement('canvas');c.width=w;c.height=h;const ctx=c.getContext('2d');ctx.drawImage(img,0,0,w,h);URL.revokeObjectURL(src);
+      blob=await new Promise(r=>c.toBlob(r,'image/jpeg',.86))||file;
+      if(blob!==file)contentType='image/jpeg';
+    } catch(_) {}
+    if (blob.size > 6 * 1024 * 1024) throw new Error('La photo reste trop lourde après optimisation.');
+    try {
+      const { data: old } = await this.client.storage.from('avatars').list(uid,{limit:20});
+      if(old?.length)await this.client.storage.from('avatars').remove(old.map(x=>uid+'/'+x.name));
+    } catch(_) {}
+    const ext=contentType.includes('png')?'png':contentType.includes('webp')?'webp':'jpg';
+    const path=`${uid}/avatar-${Date.now()}.${ext}`;
+    const { error }=await this.client.storage.from('avatars').upload(path,blob,{contentType,cacheControl:'3600',upsert:false});
+    if(error)throw error;
+    const { data }=this.client.storage.from('avatars').getPublicUrl(path);
+    if(!data?.publicUrl)throw new Error("Impossible d'obtenir l'URL de la photo.");
+    return data.publicUrl;
+  },
   /** Migration unique de la progression locale. @param {Record<string,any>} payload */
   async importLocal(payload) {
     const { data, error } = await this.client.rpc('import_local_progress', { p_payload: payload });
@@ -112963,6 +112991,50 @@ function conjSteps(c,verb){
   if(latin)shuffle([0,1,2,3,4,5]).slice(0,4).forEach(i=>steps.push({k:"gaptype",q:`${c.pron[i]} ___`,ans:c.forms[i],title:`Écris la forme de « ${c.inf} »`,hint:`${verb} · ${cTense.toLowerCase()}`}));
   return steps}
 
+/* =================== DUELS COMPÉTITIFS =================== */
+function duelHash(str){let h=2166136261>>>0;for(const ch of String(str)){h^=ch.charCodeAt(0);h=Math.imul(h,16777619)}return h>>>0}
+function duelRng(seed){let a=seed>>>0;return ()=>{a=(a+0x6D2B79F5)>>>0;let t=a;t=Math.imul(t^(t>>>15),t|1);t^=t+Math.imul(t^(t>>>7),t|61);return ((t^(t>>>14))>>>0)/4294967296}}
+function duelShuffle(a,rnd){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(rnd()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function duelItems(c){const ot=S.tgt,ol=S.level;try{S.tgt=c.language_id||S.tgt;S.level=c.level||S.level;let out=[];for(const U of (lvUnits(S.level)||[])){const d=setData(U.id);if(d)out.push(...d)}if(out.length<20)out=allAvailableItems();return out.filter(x=>x&&x.t)}finally{S.tgt=ot;S.level=ol}}
+function duelSteps(c){
+  const rnd=duelRng(duelHash(c.id)),pool=duelItems(c),wanted=Math.max(5,Math.min(Number(c.question_count)||10,50));
+  const sentences=duelShuffle(pool.filter(it=>it.t.split(/\s+/).filter(Boolean).length>=2),rnd),wordBank=[...new Set(pool.flatMap(it=>it.t.split(/\s+/).map(t=>splitTok(t).core).filter(w=>w&&w.length>=2)))];
+  const out=[];
+  for(const it of sentences){
+    const toks=it.t.split(/\s+/),cand=toks.map((t,i)=>({i,p:splitTok(t)})).filter(x=>x.p.core.length>=2);if(!cand.length)continue;
+    const ch=cand[Math.floor(rnd()*cand.length)],answer=ch.p.core,inSentence=new Set(toks.map(t=>norm(splitTok(t).core)));
+    const distract=duelShuffle(wordBank.filter(w=>norm(w)!==norm(answer)&&!inSentence.has(norm(w))),rnd).slice(0,3);if(distract.length<3)continue;
+    const q=toks.map((t,i)=>i===ch.i?ch.p.pre+'___'+ch.p.post:t).join(' '),opts=duelShuffle([answer,...distract],rnd);
+    out.push({k:'gap',q,ans:answer,opts,title:'⚔️ Duel',hint:`${L[c.language_id]?.n||c.language_id} · ${c.level}`,full:it.t,duel:true});
+    if(out.length>=wanted)break;
+  }
+  return out;
+}
+function startDuel(c){
+  if(!c||c.status!=='active')return toast('Ce duel n’est pas encore prêt.');
+  const mine=c.challenger_id===Cloud.user?.id,myScore=mine?c.challenger_score:c.opponent_score;if(myScore!=null)return toast('Tu as déjà joué ce duel.');
+  if(c.language_id&&L[c.language_id]){if(S.tgt!==c.language_id)switchLang(c.language_id);setLevel(c.level||S.level);save()}
+  const steps=duelSteps(c);if(steps.length<(c.question_count||10))return toast('Pas assez de contenu hors ligne pour créer ce duel à ce niveau.');
+  openLx();begin({mode:'game',game:'duel',label:'Duel',items:[],steps,duel:{challenge:c},t0:Date.now()});
+}
+async function finishDuel(){
+  if(!LX||!LX.duel||LX.finishing)return;LX.finishing=true;if(LX.timer)clearInterval(LX.timer);
+  const secs=Math.max(1,Math.round((Date.now()-LX.t0)/1000)),score=LX.right||0,total=LX.graded||LX.steps.length,acc=total?Math.round(score/total*100):0;
+  let xp=10;if(acc===100)xp+=5;if(LX.maxCombo>=5)xp+=5;const d=day();d.xp+=xp;d.sec+=Math.min(secs,1800);addXP(xp);save();
+  $('#lxBar').style.width='100%';$('#lxCombo').textContent='';setBarHeartsFinal();
+  $('#lxBody').innerHTML=`<div class="lx-inner done-screen">${mascot('happy')}<h1>Score envoyé…</h1><div class="spinner"></div><p class="muted">On enregistre ton résultat du duel.</p></div>`;$('#lxFoot').innerHTML='';
+  try{
+    const c=await Social.submitDuel(LX.duel.challenge.id,score,secs),mine=c.challenger_id===Cloud.user?.id,myScore=mine?c.challenger_score:c.opponent_score,mySecs=mine?c.challenger_seconds:c.opponent_seconds,otherScore=mine?c.opponent_score:c.challenger_score,otherSecs=mine?c.opponent_seconds:c.challenger_seconds;
+    const other=mine?LX.duel.challenge.opponent:LX.duel.challenge.challenger,w=duelWinner(c),iWon=(w==='challenger'&&mine)||(w==='opponent'&&!mine),done=c.status==='completed';
+    tone(SND.win);confetti();
+    $('#lxBody').innerHTML=`<div class="lx-inner done-screen">${mascot(done&&iWon?'cheer':'happy')}<h1>${done?(w==='tie'?'🤝 Égalité !':iWon?'🏆 Duel gagné !':'⚔️ Duel terminé'):'⌛ À ton ami de jouer'}</h1>
+      <div class="tiles"><div class="tile" style="--c:var(--gold)"><small>Ton score</small><b>${score}/${total}</b></div><div class="tile" style="--c:var(--good)"><small>Précision</small><b>${acc}%</b></div><div class="tile" style="--c:var(--accent)"><small>Temps</small><b>${duelTime(secs)}</b></div></div>
+      ${done?`<div class="card" style="margin-top:16px;text-align:left"><b>⚔️ Résultat final</b><p style="margin:8px 0 0">Toi : <b>${myScore}/${c.question_count}</b> · ${duelTime(mySecs)}<br>${esc(other?.display_name||other?.username||'Ton ami')} : <b>${otherScore}/${c.question_count}</b> · ${duelTime(otherSecs)}</p></div>`:`<p class="muted">Ton score est enregistré. Le résultat final apparaîtra dès que ${esc(other?.display_name||other?.username||'ton ami')} aura terminé les mêmes ${c.question_count||10} questions.</p>`}
+      <p class="muted">+${xp} XP</p></div>`;
+    $('#lxFoot').className='lx-foot';$('#lxFoot').innerHTML=`<div class="foot-in"><span></span><button class="btn" data-lx="close" id="nextBtn">Voir les défis</button></div>`;LX.state='finished';Social.tab='duels';
+  }catch(e){LX.finishing=false;renderError(Cloud.message(e)||'Impossible d’enregistrer le score du duel. Réessaie.')}
+}
+
 /* =================== MOTEUR DE JEU =================== */
 async function startLesson(u,l){
   syncHearts();
@@ -113097,6 +113169,7 @@ function nextStep(){
   LX.i++;if(LX.i>=LX.steps.length){finish();return}renderStep();
 }
 function finish(){
+  if(LX?.duel)return finishDuel();
   if(LX.timer)clearInterval(LX.timer);
   const secs=Math.round((Date.now()-LX.t0)/1000),acc=LX.graded?Math.round(LX.right/LX.graded*100):100;
   let xp;if(LX.game==="chrono")xp=Math.max(5,LX.right*2);else if(LX.mode==="lesson")xp=LX.l===3?20:10;else xp=10;
@@ -113713,7 +113786,9 @@ const Social={
   async respond(id,accept){await this.rpc('social_respond_request',{p_friendship:id,p_accept:!!accept});await this.load(true)},
   async remove(id){await this.rpc('social_remove_friend',{p_friend:id});await this.load(true)},
   async challenge(id){const lang=S.tgt||'fr',level=S.level||'A1';await this.rpc('social_create_challenge',{p_opponent:id,p_language:lang,p_level:level,p_question_count:10});await this.load(true)},
-  async challengeRespond(id,accept){await this.rpc('social_respond_challenge',{p_challenge:id,p_accept:!!accept});await this.load(true)}
+  async challengeRespond(id,accept){await this.rpc('social_respond_challenge',{p_challenge:id,p_accept:!!accept});await this.load(true)},
+  async submitDuel(id,score,seconds){const data=await this.rpc('social_submit_challenge',{p_challenge:id,p_score:score,p_seconds:seconds});await this.load(true);return data},
+  challengeById(id){return (this.dashboard?.challenges||[]).find(c=>c.id===id)||null}
 };
 function socialAvatar(p,size=42){const name=p.display_name||p.username||'?';const hue=[...name].reduce((a,c)=>a+c.charCodeAt(0),0)%360;
   return p.avatar_url&&/^https:\/\//.test(p.avatar_url)?`<img class="avatar" src="${esc(p.avatar_url)}" alt="" referrerpolicy="no-referrer" style="width:${size}px;height:${size}px">`:`<span class="avatar" style="width:${size}px;height:${size}px;background:hsl(${hue} 60% 48%);font-size:${size*.42}px">${esc(name.trim()[0]?.toUpperCase()||'?')}</span>`}
@@ -113726,13 +113801,26 @@ function socialTabView(tab,D){const friends=D.friends||[],incoming=D.incoming||[
   if(tab==='league'){const me={id:Cloud.user?.id,display_name:Cloud.profile?.display_name||'Moi',username:Cloud.profile?.username||'',avatar_url:Cloud.profile?.avatar_url||'',weekly_xp:D.me_weekly_xp||0,total_xp:Cloud.profile?.total_xp||S.xp,current_streak:Cloud.profile?.current_streak||streak(),is_me:true};const rows=[me,...friends].sort((a,b)=>(b.weekly_xp||0)-(a.weekly_xp||0));return `<section class="card"><div class="section-head"><div><h2>🏆 Ligue des amis</h2><p class="muted">XP gagnés depuis lundi</p></div><button class="btn sm ghost" data-social="refresh">↻</button></div><div>${rows.map((p,i)=>`<div class="rank-row"><div class="rank-pos">${i<3?['🥇','🥈','🥉'][i]:i+1}</div>${socialAvatar(p,38)}<div>${socialName(p)}<span class="fr-meta">🔥 ${p.current_streak||0} · ⚡ ${p.total_xp||0} XP total${p.is_me?' · toi':''}</span></div><div class="rank-xp"><b>${p.weekly_xp||0}</b><small>XP semaine</small></div></div>`).join('')}</div>${friends.length===0?`<p class="social-note">Ajoute au moins un ami pour créer ta propre ligue privée.</p>`:''}</section>`}
   if(tab==='friends'){return `<section class="card"><h2>Trouver un ami</h2><form id="friendSearchForm" class="friend-search"><input class="auth-in" name="q" minlength="2" maxlength="40" placeholder="Pseudo ou nom…" value="${esc(Social.q)}"><button class="btn good" type="submit">Rechercher</button></form>${Social.results.length?`<div class="social-list" style="margin-top:12px">${Social.results.map(p=>friendSearchRow(p)).join('')}</div>`:''}</section><section class="card"><h2>Mes amis · ${friends.length}</h2><div class="social-list">${friends.length?friends.map(friendRow).join(''):`<div class="social-empty">Tu n'as pas encore d'amis. Recherche leur pseudo pour les ajouter.</div>`}</div></section>`}
   if(tab==='requests'){return `<section class="card"><h2>Demandes reçues · ${incoming.length}</h2><div class="social-list">${incoming.length?incoming.map(p=>requestRow(p,true)).join(''):`<div class="social-empty">Aucune demande en attente.</div>`}</div></section><section class="card"><h2>Demandes envoyées · ${outgoing.length}</h2><div class="social-list">${outgoing.length?outgoing.map(p=>requestRow(p,false)).join(''):`<div class="social-empty">Aucune demande envoyée.</div>`}</div></section>`}
-  if(tab==='duels'){const pending=challenges.filter(c=>['pending','active'].includes(c.status));return `<section class="card"><div class="section-head"><div><h2>⚔️ Défis</h2><p class="muted">10 questions · ${esc(S.level||'A1')} · ${esc(L[S.tgt]?.n||'ta langue')}</p></div></div>${pending.length?`<div class="social-list">${pending.map(duelRow).join('')}</div>`:`<div class="social-empty">Aucun défi en cours. Lance un duel depuis ta liste d'amis.</div>`}<p class="social-note">La première version crée et accepte les duels. Le branchement automatique du score au jeu compétitif peut ensuite être ajouté au moteur de quiz existant.</p></section>`}
+  if(tab==='duels'){const live=challenges.filter(c=>['pending','active'].includes(c.status)),history=challenges.filter(c=>c.status==='completed');return `<section class="card"><div class="section-head"><div><h2>⚔️ Défis en cours</h2><p class="muted">Les deux joueurs reçoivent exactement la même série de questions.</p></div><button class="btn sm ghost" data-social="refresh">↻</button></div>${live.length?`<div class="social-list">${live.map(duelRow).join('')}</div>`:`<div class="social-empty">Aucun défi en cours. Lance un duel depuis ta liste d'amis.</div>`}</section><section class="card"><h2>🏅 Historique des duels</h2>${history.length?`<div class="social-list">${history.map(duelRow).join('')}</div>`:`<div class="social-empty">Tes résultats apparaîtront ici après ton premier duel terminé.</div>`}</section>`}
   return ''}
 function friendSearchRow(p){let action='';if(p.relationship_status==='accepted')action='<span class="social-badge">✓ Ami</span>';else if(p.relationship_status==='pending_sent')action='<span class="social-badge">En attente</span>';else if(p.relationship_status==='pending_received')action=`<button class="btn sm good" data-social="accept" data-id="${p.friendship_id}">Accepter</button>`;else action=`<button class="btn sm good" data-social="add" data-id="${p.id}">+ Ajouter</button>`;return `<div class="friend-row">${socialAvatar(p)}<div class="fr-main">${socialName(p)}<span class="fr-meta">⚡ ${p.total_xp||0} XP · 🔥 ${p.current_streak||0}</span></div><div class="fr-actions">${action}</div></div>`}
 function friendRow(p){return `<div class="friend-row">${socialAvatar(p)}<div class="fr-main">${socialName(p)}<span class="fr-meta">Cette semaine : ${p.weekly_xp||0} XP · 🔥 ${p.current_streak||0}</span></div><div class="fr-actions"><button class="btn sm good" data-social="challenge" data-id="${p.id}">⚔️ Défier</button><button class="btn sm ghost" data-social="remove" data-id="${p.id}">Retirer</button></div></div>`}
 function requestRow(p,incoming){return `<div class="friend-row">${socialAvatar(p)}<div class="fr-main">${socialName(p)}<span class="fr-meta">${incoming?'veut devenir ton ami':'demande envoyée'}</span></div><div class="fr-actions">${incoming?`<button class="btn sm good" data-social="accept" data-id="${p.friendship_id}">Accepter</button><button class="btn sm ghost" data-social="decline" data-id="${p.friendship_id}">Refuser</button>`:'<span class="social-badge">En attente</span>'}</div></div>`}
-function duelRow(c){const mine=c.challenger_id===Cloud.user?.id,other=mine?c.opponent:c.challenger;const canAnswer=!mine&&c.status==='pending';return `<div class="duel-card"><div><div class="duel-vs">⚔️ ${mine?'Toi':'@'+esc(other?.username||other?.display_name||'ami')} vs ${mine?'@'+esc(other?.username||other?.display_name||'ami'):'toi'}</div><small>${esc(c.language_id||S.tgt)} · ${esc(c.level||S.level)} · ${c.question_count||10} questions · ${c.status==='active'?'accepté':'en attente'}</small></div><div class="fr-actions">${canAnswer?`<button class="btn sm good" data-social="challenge-accept" data-id="${c.id}">Accepter</button><button class="btn sm ghost" data-social="challenge-decline" data-id="${c.id}">Refuser</button>`:`<span class="social-badge">${c.status==='active'?'🔥 Duel prêt':'⏳ Invitation'}</span>`}</div></div>`}
-document.addEventListener('click',async e=>{const tb=e.target.closest('[data-social-tab]');if(tb){Social.tab=tb.dataset.socialTab;render();return}const t=e.target.closest('[data-social]');if(!t)return;const a=t.dataset.social,id=t.dataset.id;try{t.disabled=true;if(a==='refresh')await Social.load(true);if(a==='add'){await Social.send(id);toast('Demande d’ami envoyée ✓')}if(a==='accept'){await Social.respond(id,true);toast('Vous êtes maintenant amis 🎉')}if(a==='decline')await Social.respond(id,false);if(a==='remove'){await Social.remove(id);toast('Ami retiré')}if(a==='challenge'){await Social.challenge(id);Social.tab='duels';toast('Défi envoyé ⚔️')}if(a==='challenge-accept'){await Social.challengeRespond(id,true);toast('Défi accepté 🔥')}if(a==='challenge-decline')await Social.challengeRespond(id,false)}catch(err){toast(Cloud.message(err));Social.error=Cloud.message(err);render()}});
+function duelWinner(c){if(c.challenger_score==null||c.opponent_score==null)return null;if(c.challenger_score!==c.opponent_score)return c.challenger_score>c.opponent_score?'challenger':'opponent';if((c.challenger_seconds||999999)!==(c.opponent_seconds||999999))return c.challenger_seconds<c.opponent_seconds?'challenger':'opponent';return 'tie'}
+function duelRow(c){
+  const mine=c.challenger_id===Cloud.user?.id,other=mine?c.opponent:c.challenger,canAnswer=!mine&&c.status==='pending';
+  const myScore=mine?c.challenger_score:c.opponent_score,mySecs=mine?c.challenger_seconds:c.opponent_seconds,otherScore=mine?c.opponent_score:c.challenger_score,otherSecs=mine?c.opponent_seconds:c.challenger_seconds;
+  const myDone=myScore!=null,w=duelWinner(c),iWon=(w==='challenger'&&mine)||(w==='opponent'&&!mine),iLost=(w==='challenger'&&!mine)||(w==='opponent'&&mine);
+  const result=c.status==='completed'?`<div class="duel-result"><b>${w==='tie'?'🤝 Égalité':iWon?'🏆 Victoire':'🛡️ Défaite'}</b><span>Toi ${myScore}/${c.question_count||10} · ${duelTime(mySecs)} &nbsp;—&nbsp; ${esc(other?.display_name||other?.username||'Ami')} ${otherScore}/${c.question_count||10} · ${duelTime(otherSecs)}</span></div>`:'';
+  let action='';
+  if(canAnswer)action=`<button class="btn sm good" data-social="challenge-accept" data-id="${c.id}">Accepter</button><button class="btn sm ghost" data-social="challenge-decline" data-id="${c.id}">Refuser</button>`;
+  else if(c.status==='pending')action='<span class="social-badge">⏳ Invitation envoyée</span>';
+  else if(c.status==='active'&&!myDone)action=`<button class="btn good" data-social="duel-play" data-id="${c.id}">▶ Jouer le duel</button>`;
+  else if(c.status==='active'&&myDone)action='<span class="social-badge">⌛ En attente de ton ami</span>';
+  else if(c.status==='completed')action=`<span class="social-badge">${w==='tie'?'🤝 Égalité':iWon?'🏆 Gagné':iLost?'🛡️ Perdu':'✓ Terminé'}</span>`;
+  return `<div class="duel-card"><div style="min-width:0;flex:1"><div class="duel-vs">⚔️ Toi vs @${esc(other?.username||other?.display_name||'ami')}</div><small>${esc(L[c.language_id]?.n||c.language_id||S.tgt)} · ${esc(c.level||S.level)} · ${c.question_count||10} questions${c.status==='active'?' · duel actif':c.status==='completed'?' · terminé':' · en attente'}</small>${result}</div><div class="fr-actions">${action}</div></div>`}
+function duelTime(s){s=Number(s||0);return `${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`}
+document.addEventListener('click',async e=>{const tb=e.target.closest('[data-social-tab]');if(tb){Social.tab=tb.dataset.socialTab;render();return}const t=e.target.closest('[data-social]');if(!t)return;const a=t.dataset.social,id=t.dataset.id;try{t.disabled=true;if(a==='refresh')await Social.load(true);if(a==='add'){await Social.send(id);toast('Demande d’ami envoyée ✓')}if(a==='accept'){await Social.respond(id,true);toast('Vous êtes maintenant amis 🎉')}if(a==='decline')await Social.respond(id,false);if(a==='remove'){await Social.remove(id);toast('Ami retiré')}if(a==='challenge'){await Social.challenge(id);Social.tab='duels';toast('Défi envoyé ⚔️')}if(a==='challenge-accept'){await Social.challengeRespond(id,true);toast('Défi accepté 🔥')}if(a==='challenge-decline')await Social.challengeRespond(id,false);if(a==='duel-play'){const c=Social.challengeById(id);if(c)startDuel(c)}}catch(err){toast(Cloud.message(err));Social.error=Cloud.message(err);render()}});
 document.addEventListener('submit',e=>{const f=e.target;if(f.id!=='friendSearchForm')return;e.preventDefault();Social.search(String(new FormData(f).get('q')||''))});
 /* ================= FIN CASTELLUM SOCIAL ================= */
 
@@ -113826,13 +113914,15 @@ document.addEventListener("click",async e=>{const t=e.target.closest("[data-clou
   if(a==="edit"){const p=Cloud.profile||{};openSheet(`<div class="section-head"><h2>Modifier le profil</h2><button class="icon-btn" data-act="closesheet" aria-label="Fermer">${XS}</button></div>
     <form id="profileForm" class="prof-form"><label class="field"><span>Nom affiché</span><input class="auth-in" name="display_name" maxlength="60" value="${esc(p.display_name||"")}"></label>
     <label class="field"><span>Pseudo</span><input class="auth-in" name="username" maxlength="30" pattern="[A-Za-z0-9_.\\-]{3,30}" placeholder="3 à 30 caractères : lettres, chiffres, . _ -" value="${esc(p.username||"")}"></label>
-    <label class="field"><span>Photo (lien d'une image)</span><input class="auth-in" name="avatar_url" type="url" maxlength="500" placeholder="https://…" value="${esc(p.avatar_url||"")}"></label>
+    <div class="field"><span>Photo de profil</span><div style="display:flex;align-items:center;gap:14px;margin-top:7px"><div id="avatarPickPreview">${avatarHTML(72)}</div><label class="btn ghost" style="cursor:pointer;flex:1;justify-content:center;position:relative"><span>📷 Choisir une photo</span><input id="avatarFile" name="avatar_file" type="file" accept="image/*" style="position:absolute;inset:0;opacity:0;cursor:pointer"></label></div><small class="muted" style="display:block;margin-top:7px">Photothèque ou appareil photo. L'image est optimisée automatiquement.</small></div>
     <p class="auth-err" id="profErr" hidden></p><button class="btn good block" type="submit">Enregistrer</button></form>`);return}
 });
+document.addEventListener("change",e=>{if(e.target?.id!=="avatarFile")return;const file=e.target.files?.[0];if(!file)return;const el=$("#avatarPickPreview");if(!el)return;const url=URL.createObjectURL(file);el.innerHTML=`<img class="avatar" src="${url}" alt="Aperçu" style="width:72px;height:72px;object-fit:cover">`});
 document.addEventListener("submit",async e=>{const f=e.target;if(f.id==="profileForm"){e.preventDefault();const fd=new FormData(f);const u=String(fd.get("username")||"").trim();
     if(u&&!/^[A-Za-z0-9_.-]{3,30}$/.test(u)){const el=$("#profErr");el.hidden=false;el.textContent="Pseudo : 3 à 30 caractères (lettres, chiffres, . _ -).";return}
-    try{await Cloud.updateProfile({display_name:String(fd.get("display_name")||""),username:u||null,avatar_url:String(fd.get("avatar_url")||"")||null});closeSheet();toast("Profil enregistré");render()}
-    catch(err){const el=$("#profErr");el.hidden=false;el.textContent=Cloud.message(err)}return}
+    const errEl=$("#profErr"),btn=f.querySelector('button[type="submit"]');if(errEl)errEl.hidden=true;if(btn){btn.disabled=true;btn.innerHTML='<span class="spinner sm"></span> Enregistrement…'}
+    try{let avatar=Cloud.profile?.avatar_url||null;const file=$("#avatarFile")?.files?.[0];if(file)avatar=await Cloud.uploadAvatar(file);await Cloud.updateProfile({display_name:String(fd.get("display_name")||""),username:u||null,avatar_url:avatar});closeSheet();toast("Profil enregistré");render()}
+    catch(err){if(errEl){errEl.hidden=false;errEl.textContent=Cloud.message(err)}if(btn){btn.disabled=false;btn.textContent='Enregistrer'}}return}
   if(f.id!=="authForm")return;e.preventDefault();if(authBusy)return;
   const fd=new FormData(f),m=f.dataset.mode,email=String(fd.get("email")||"").trim(),pw=String(fd.get("password")||""),name=String(fd.get("name")||"").trim();
   authErr="";authMsg="";authEmail=email;authName=name;
