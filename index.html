@@ -653,6 +653,17 @@ table.conj td:last-child{text-align:right;width:56px}
 .w-login{display:flex;justify-content:flex-end;align-items:center;gap:10px;margin:-4px 0 6px;font-size:.9rem}
 .w-login .acc-chip{background:none;cursor:pointer}
 
+/* === Castellum Social / Amis & Ligue === */
+.social-shell{display:grid;gap:16px}.social-hero{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px;border-radius:24px;background:linear-gradient(135deg,rgba(91,74,255,.14),rgba(255,190,72,.13));border:1px solid var(--line)}
+.social-hero h1{margin:0 0 4px}.social-tabs{display:flex;gap:8px;overflow:auto;padding-bottom:2px}.social-tabs button{white-space:nowrap}
+.friend-search{display:flex;gap:8px}.friend-search .auth-in{margin:0;flex:1}.social-list{display:grid;gap:9px}.friend-row{display:flex;align-items:center;gap:11px;padding:11px 12px;border:1px solid var(--line);border-radius:17px;background:var(--card)}
+.friend-row .fr-main{min-width:0;flex:1}.friend-row .fr-main b,.friend-row .fr-main span{display:block}.friend-row .fr-main b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.friend-row .fr-meta{font-size:.82rem;color:var(--muted);margin-top:2px}.friend-row .fr-actions{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.rank-row{display:grid;grid-template-columns:38px 42px minmax(0,1fr) auto;align-items:center;gap:10px;padding:11px 8px;border-bottom:1px solid var(--line)}.rank-row:last-child{border-bottom:0}.rank-pos{font-weight:900;text-align:center;font-size:1.05rem}.rank-xp{text-align:right}.rank-xp b{display:block}.rank-xp small{color:var(--muted)}
+.social-badge{display:inline-flex;align-items:center;gap:5px;padding:5px 8px;border-radius:999px;font-size:.78rem;font-weight:800;background:var(--soft);color:var(--ink)}.social-empty{text-align:center;padding:22px 12px;color:var(--muted)}
+.duel-card{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:12px;border:1px solid var(--line);border-radius:17px}.duel-card .duel-vs{font-weight:900}.duel-card small{display:block;color:var(--muted);margin-top:3px}
+.social-count{display:inline-grid;place-items:center;min-width:20px;height:20px;padding:0 6px;border-radius:999px;background:var(--bad);color:#fff;font-size:.72rem;font-weight:900;margin-left:5px}.social-note{font-size:.84rem;color:var(--muted);line-height:1.45}
+@media(max-width:640px){.social-hero{align-items:flex-start;flex-direction:column}.friend-search{flex-direction:column}.friend-row{align-items:flex-start}.friend-row .fr-actions{max-width:42%}.rank-row{grid-template-columns:30px 38px minmax(0,1fr) auto}}
+
 </style>
 
 <div class="app">
@@ -112084,7 +112095,7 @@ const Cloud = {
     const { error } = await this.client.auth.signOut();
     if (error) throw error;
     this.user = null; this.profile = null; this.languages = []; this.achievements = [];
-    this.status = 'unauthenticated';
+    this.status = 'unauthenticated'; if(typeof Social!=='undefined') Social.reset();
   },
 
   /* ------------------------------ LECTURE ------------------------------ */
@@ -112479,7 +112490,7 @@ function conjData(verb,tense){const v=CONJ.verbs[S.tgt]?.[verb];
 const NAV=[["learn","Apprendre"],["play","Jouer"],["lists","Listes"],["dict","Dictionnaire"],["alpha","Alphabets"],["grammar","Grammaire"],["teacher","Professeur"],["words","Mes mots"],["langs","Langues"],["profile","Progression"]];
 const NAVNAME=Object.fromEntries(NAV);
 function navHTML(mobile){const items=mobile?[...NAV.slice(0,4),["more","Plus"]]:NAV;const cur=view==="list"?"lists":view;
-  return items.map(([k,n])=>`<button ${k==="more"?'data-act="more"':`data-go="${k}"`} ${cur===k||(k==="more"&&["alpha","grammar","teacher","words","langs","profile"].includes(cur))?'aria-current="page"':""} aria-label="${n}">${svgI(I[k])}<span>${n}</span></button>`).join("")}
+  return items.map(([k,n])=>`<button ${k==="more"?'data-act="more"':`data-go="${k}"`} ${cur===k||(k==="more"&&["alpha","grammar","teacher","words","langs","profile","account","friends"].includes(cur))?'aria-current="page"':""} aria-label="${n}">${svgI(I[k])}<span>${n}</span></button>`).join("")}
 function go(v){view=v;closeSheet();render();window.scrollTo(0,0)}
 
 function statsChips(){syncHearts();return `
@@ -113685,11 +113696,52 @@ function guestNudge(info){if(!Cloud.enabled||Cloud.signedIn||info.mode!=="lesson
   setTimeout(()=>openSheet(`<div class="mig">${mascot("happy")}<h2>Garde ta progression</h2><p class="lead">Crée un compte gratuit pour sauvegarder tes XP et tes leçons, et les retrouver sur ton téléphone comme sur ton ordinateur.</p>
     <button class="btn good block" data-cloud="gosignup">Créer un compte</button><button class="btn ghost block" data-cloud="golog">J'ai déjà un compte</button><button class="btn ghost block" data-act="closesheet">Plus tard</button></div>`),700)}
 
+
+/* =================== CASTELLUM SOCIAL : AMIS, LIGUE, DÉFIS =================== */
+I.friends='<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>';
+const Social={
+  loaded:false,loading:false,error:'',tab:'league',q:'',results:[],dashboard:{friends:[],incoming:[],outgoing:[],challenges:[]},
+  get enabled(){return Cloud.enabled&&Cloud.signedIn&&!!Cloud.client},
+  reset(){this.loaded=false;this.loading=false;this.error='';this.results=[];this.dashboard={friends:[],incoming:[],outgoing:[],challenges:[]}},
+  async rpc(name,args={}){const {data,error}=await Cloud.client.rpc(name,args);if(error)throw error;return data},
+  async load(force=false){if(!this.enabled)return;if(this.loading||(!force&&this.loaded))return;this.loading=true;this.error='';
+    try{this.dashboard=(await this.rpc('social_get_dashboard'))||this.dashboard;this.loaded=true}
+    catch(e){this.error=Cloud.message(e)}finally{this.loading=false;if(view==='friends')render()}},
+  async search(q){this.q=q.trim();this.results=[];if(this.q.length<2){if(view==='friends')render();return}this.loading=true;this.error='';if(view==='friends')render();
+    try{this.results=(await this.rpc('social_search_users',{p_query:this.q}))||[]}catch(e){this.error=Cloud.message(e)}finally{this.loading=false;if(view==='friends')render()}},
+  async send(id){await this.rpc('social_send_request',{p_user:id});await this.load(true)},
+  async respond(id,accept){await this.rpc('social_respond_request',{p_friendship:id,p_accept:!!accept});await this.load(true)},
+  async remove(id){await this.rpc('social_remove_friend',{p_friend:id});await this.load(true)},
+  async challenge(id){const lang=S.tgt||'fr',level=S.level||'A1';await this.rpc('social_create_challenge',{p_opponent:id,p_language:lang,p_level:level,p_question_count:10});await this.load(true)},
+  async challengeRespond(id,accept){await this.rpc('social_respond_challenge',{p_challenge:id,p_accept:!!accept});await this.load(true)}
+};
+function socialAvatar(p,size=42){const name=p.display_name||p.username||'?';const hue=[...name].reduce((a,c)=>a+c.charCodeAt(0),0)%360;
+  return p.avatar_url&&/^https:\/\//.test(p.avatar_url)?`<img class="avatar" src="${esc(p.avatar_url)}" alt="" referrerpolicy="no-referrer" style="width:${size}px;height:${size}px">`:`<span class="avatar" style="width:${size}px;height:${size}px;background:hsl(${hue} 60% 48%);font-size:${size*.42}px">${esc(name.trim()[0]?.toUpperCase()||'?')}</span>`}
+function socialName(p){return `<b data-noi18n>${esc(p.display_name||p.username||'Joueur')}</b>${p.username?`<span class="fr-meta" data-noi18n>@${esc(p.username)}</span>`:''}`}
+function friendsView(){if(!Cloud.signedIn)return authPage();if(!Social.loaded&&!Social.loading)queueMicrotask(()=>Social.load());const D=Social.dashboard||{};const incoming=D.incoming||[],friends=D.friends||[],challenges=D.challenges||[];
+  const tabs=[['league','🏆 Ligue'],['friends','👥 Amis'],['requests',`🔔 Demandes${incoming.length?` <span class="social-count">${incoming.length}</span>`:''}`],['duels','⚔️ Défis']];
+  return `<div class="social-shell"><div class="social-hero"><div><h1>Compétition entre amis</h1><p class="muted">Ajoute tes amis, grimpe dans la ligue et lance des défis.</p></div><span class="social-badge">🔥 ${Math.max(streak(),Cloud.displayStreak())} jours · ⚡ ${Math.max(S.xp,Cloud.profile?.total_xp||0)} XP</span></div>
+  <div class="social-tabs seg">${tabs.map(([k,n])=>`<button data-social-tab="${k}" aria-pressed="${Social.tab===k}">${n}</button>`).join('')}</div>${Social.error?`<div class="card auth-err">${esc(Social.error)}<br><small>Si tu viens d'ajouter cette fonction, exécute d'abord le fichier SQL Supabase fourni.</small></div>`:''}${Social.loading&&!Social.loaded?`<div class="card social-empty"><span class="spinner"></span><p>Chargement de ta ligue…</p></div>`:socialTabView(Social.tab,D)}</div>`}
+function socialTabView(tab,D){const friends=D.friends||[],incoming=D.incoming||[],outgoing=D.outgoing||[],challenges=D.challenges||[];
+  if(tab==='league'){const me={id:Cloud.user?.id,display_name:Cloud.profile?.display_name||'Moi',username:Cloud.profile?.username||'',avatar_url:Cloud.profile?.avatar_url||'',weekly_xp:D.me_weekly_xp||0,total_xp:Cloud.profile?.total_xp||S.xp,current_streak:Cloud.profile?.current_streak||streak(),is_me:true};const rows=[me,...friends].sort((a,b)=>(b.weekly_xp||0)-(a.weekly_xp||0));return `<section class="card"><div class="section-head"><div><h2>🏆 Ligue des amis</h2><p class="muted">XP gagnés depuis lundi</p></div><button class="btn sm ghost" data-social="refresh">↻</button></div><div>${rows.map((p,i)=>`<div class="rank-row"><div class="rank-pos">${i<3?['🥇','🥈','🥉'][i]:i+1}</div>${socialAvatar(p,38)}<div>${socialName(p)}<span class="fr-meta">🔥 ${p.current_streak||0} · ⚡ ${p.total_xp||0} XP total${p.is_me?' · toi':''}</span></div><div class="rank-xp"><b>${p.weekly_xp||0}</b><small>XP semaine</small></div></div>`).join('')}</div>${friends.length===0?`<p class="social-note">Ajoute au moins un ami pour créer ta propre ligue privée.</p>`:''}</section>`}
+  if(tab==='friends'){return `<section class="card"><h2>Trouver un ami</h2><form id="friendSearchForm" class="friend-search"><input class="auth-in" name="q" minlength="2" maxlength="40" placeholder="Pseudo ou nom…" value="${esc(Social.q)}"><button class="btn good" type="submit">Rechercher</button></form>${Social.results.length?`<div class="social-list" style="margin-top:12px">${Social.results.map(p=>friendSearchRow(p)).join('')}</div>`:''}</section><section class="card"><h2>Mes amis · ${friends.length}</h2><div class="social-list">${friends.length?friends.map(friendRow).join(''):`<div class="social-empty">Tu n'as pas encore d'amis. Recherche leur pseudo pour les ajouter.</div>`}</div></section>`}
+  if(tab==='requests'){return `<section class="card"><h2>Demandes reçues · ${incoming.length}</h2><div class="social-list">${incoming.length?incoming.map(p=>requestRow(p,true)).join(''):`<div class="social-empty">Aucune demande en attente.</div>`}</div></section><section class="card"><h2>Demandes envoyées · ${outgoing.length}</h2><div class="social-list">${outgoing.length?outgoing.map(p=>requestRow(p,false)).join(''):`<div class="social-empty">Aucune demande envoyée.</div>`}</div></section>`}
+  if(tab==='duels'){const pending=challenges.filter(c=>['pending','active'].includes(c.status));return `<section class="card"><div class="section-head"><div><h2>⚔️ Défis</h2><p class="muted">10 questions · ${esc(S.level||'A1')} · ${esc(L[S.tgt]?.n||'ta langue')}</p></div></div>${pending.length?`<div class="social-list">${pending.map(duelRow).join('')}</div>`:`<div class="social-empty">Aucun défi en cours. Lance un duel depuis ta liste d'amis.</div>`}<p class="social-note">La première version crée et accepte les duels. Le branchement automatique du score au jeu compétitif peut ensuite être ajouté au moteur de quiz existant.</p></section>`}
+  return ''}
+function friendSearchRow(p){let action='';if(p.relationship_status==='accepted')action='<span class="social-badge">✓ Ami</span>';else if(p.relationship_status==='pending_sent')action='<span class="social-badge">En attente</span>';else if(p.relationship_status==='pending_received')action=`<button class="btn sm good" data-social="accept" data-id="${p.friendship_id}">Accepter</button>`;else action=`<button class="btn sm good" data-social="add" data-id="${p.id}">+ Ajouter</button>`;return `<div class="friend-row">${socialAvatar(p)}<div class="fr-main">${socialName(p)}<span class="fr-meta">⚡ ${p.total_xp||0} XP · 🔥 ${p.current_streak||0}</span></div><div class="fr-actions">${action}</div></div>`}
+function friendRow(p){return `<div class="friend-row">${socialAvatar(p)}<div class="fr-main">${socialName(p)}<span class="fr-meta">Cette semaine : ${p.weekly_xp||0} XP · 🔥 ${p.current_streak||0}</span></div><div class="fr-actions"><button class="btn sm good" data-social="challenge" data-id="${p.id}">⚔️ Défier</button><button class="btn sm ghost" data-social="remove" data-id="${p.id}">Retirer</button></div></div>`}
+function requestRow(p,incoming){return `<div class="friend-row">${socialAvatar(p)}<div class="fr-main">${socialName(p)}<span class="fr-meta">${incoming?'veut devenir ton ami':'demande envoyée'}</span></div><div class="fr-actions">${incoming?`<button class="btn sm good" data-social="accept" data-id="${p.friendship_id}">Accepter</button><button class="btn sm ghost" data-social="decline" data-id="${p.friendship_id}">Refuser</button>`:'<span class="social-badge">En attente</span>'}</div></div>`}
+function duelRow(c){const mine=c.challenger_id===Cloud.user?.id,other=mine?c.opponent:c.challenger;const canAnswer=!mine&&c.status==='pending';return `<div class="duel-card"><div><div class="duel-vs">⚔️ ${mine?'Toi':'@'+esc(other?.username||other?.display_name||'ami')} vs ${mine?'@'+esc(other?.username||other?.display_name||'ami'):'toi'}</div><small>${esc(c.language_id||S.tgt)} · ${esc(c.level||S.level)} · ${c.question_count||10} questions · ${c.status==='active'?'accepté':'en attente'}</small></div><div class="fr-actions">${canAnswer?`<button class="btn sm good" data-social="challenge-accept" data-id="${c.id}">Accepter</button><button class="btn sm ghost" data-social="challenge-decline" data-id="${c.id}">Refuser</button>`:`<span class="social-badge">${c.status==='active'?'🔥 Duel prêt':'⏳ Invitation'}</span>`}</div></div>`}
+document.addEventListener('click',async e=>{const tb=e.target.closest('[data-social-tab]');if(tb){Social.tab=tb.dataset.socialTab;render();return}const t=e.target.closest('[data-social]');if(!t)return;const a=t.dataset.social,id=t.dataset.id;try{t.disabled=true;if(a==='refresh')await Social.load(true);if(a==='add'){await Social.send(id);toast('Demande d’ami envoyée ✓')}if(a==='accept'){await Social.respond(id,true);toast('Vous êtes maintenant amis 🎉')}if(a==='decline')await Social.respond(id,false);if(a==='remove'){await Social.remove(id);toast('Ami retiré')}if(a==='challenge'){await Social.challenge(id);Social.tab='duels';toast('Défi envoyé ⚔️')}if(a==='challenge-accept'){await Social.challengeRespond(id,true);toast('Défi accepté 🔥')}if(a==='challenge-decline')await Social.challengeRespond(id,false)}catch(err){toast(Cloud.message(err));Social.error=Cloud.message(err);render()}});
+document.addEventListener('submit',e=>{const f=e.target;if(f.id!=='friendSearchForm')return;e.preventDefault();Social.search(String(new FormData(f).get('q')||''))});
+/* ================= FIN CASTELLUM SOCIAL ================= */
+
+
 /* ---------- 9. Navigation ---------- */
 I.home='<rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/>';
 I.account='<circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/>';
 const NAV_BASE=NAV.slice();
-function NAV_SET(){NAV.length=0;if(Cloud.signedIn)NAV.push(["home","Accueil"],NAV_BASE[0],NAV_BASE[1],["account","Profil"],...NAV_BASE.slice(2));else{NAV.push(...NAV_BASE);if(Cloud.enabled)NAV.push(["account","Se connecter"])}}
+function NAV_SET(){NAV.length=0;if(Cloud.signedIn)NAV.push(["home","Accueil"],NAV_BASE[0],NAV_BASE[1],["friends","Amis"],["account","Profil"],...NAV_BASE.slice(2));else{NAV.push(...NAV_BASE);if(Cloud.enabled)NAV.push(["account","Se connecter"])}}
 NAV_SET();
 function avatarHTML(size=40){const p=Cloud.profile;const name=p?.display_name||Cloud.user?.email||"?";const hue=[...name].reduce((a,c)=>a+c.charCodeAt(0),0)%360;
   return p?.avatar_url&&/^https:\/\//.test(p.avatar_url)?`<img class="avatar" src="${esc(p.avatar_url)}" alt="" referrerpolicy="no-referrer" style="width:${size}px;height:${size}px">`
@@ -113702,8 +113754,8 @@ let authMode="login",authBusy=false,authMsg="",authErr="",authEmail="",authName=
 function render(){
   $("#sideNav").innerHTML=navHTML(false);$("#bottomNav").innerHTML=navHTML(true);$("#rail").innerHTML=railHTML();
   if(view==="home"&&!Cloud.signedIn)view="learn";
-  const V={home:homeView,account:accountView,learn:pathView,play:playView,lists:listsView,list:listView,dict:dictView,alpha:alphaView,grammar:grammarView,teacher:teacherView,words:wordsView,langs:langsView,profile:profileView}[view]||pathView;
-  $("#view").className="wrap"+(["langs","lists","play","grammar","list","dict","alpha","home","account"].includes(view)?" wide":"");
+  const V={home:homeView,account:accountView,friends:friendsView,learn:pathView,play:playView,lists:listsView,list:listView,dict:dictView,alpha:alphaView,grammar:grammarView,teacher:teacherView,words:wordsView,langs:langsView,profile:profileView}[view]||pathView;
+  $("#view").className="wrap"+(["langs","lists","play","grammar","list","dict","alpha","home","account","friends"].includes(view)?" wide":"");
   $("#view").innerHTML=`<div class="topbar">${statsChips()}</div>`+(view==="learn"?guestBanner():"")+V();
   if(view==="teacher"){const c=$("#chat");if(c)c.scrollTop=c.scrollHeight}
   if(view==="learn")requestAnimationFrame(()=>{const cur=$(".node-wrap.current,.node.cur");if(cur&&!render.scrolled){render.scrolled=true;cur.scrollIntoView({block:"center"})}});
@@ -113722,7 +113774,8 @@ function homeView(){const p=Cloud.profile||{};const first=(p.display_name||"").s
     <div class="st"><span style="color:var(--good)">${CHECK}</span><div><b>${d.lessons||0}</b><span>leçons aujourd'hui</span></div></div>
     <div class="st"><span style="color:var(--accent)">${STAR}</span><div><b>${Math.min(100,Math.round(d.xp/S.goal*100))} %</b><span>objectif du jour</span></div></div></div>
   <section class="card" style="display:flex;flex-direction:column;gap:10px"><h2>Mes langues</h2>${cards||`<p class="muted">Aucune langue pour l'instant.</p>`}<button class="btn ghost" data-go="langs">+ Ajouter une langue</button></section>
-  <section class="card" style="display:flex;flex-direction:column;gap:10px"><h3>Progression hebdomadaire</h3>${weekBars()}</section>`}
+  <section class="card" style="display:flex;flex-direction:column;gap:10px"><h3>Progression hebdomadaire</h3>${weekBars()}</section>
+  <button class="card" data-go="friends" style="width:100%;text-align:left;display:flex;align-items:center;gap:12px;cursor:pointer"><span style="font-size:2rem">🏆</span><span><b>Compétition entre amis</b><small class="muted" style="display:block;margin-top:3px">Ligue hebdomadaire · amis · défis 1 contre 1</small></span><span style="margin-left:auto;font-size:1.4rem">→</span></button>`}
 function accountView(){return Cloud.signedIn&&!Cloud.recovery?profilePage():authPage()}
 function authPage(){if(!Cloud.enabled)return `<div class="card empty">${mascot()}<p>Les comptes ne sont pas activés sur cette version de l'application.</p></div>`;
   const m=authMode;const title={login:"Content de te revoir !",signup:"Crée ton compte",reset:"Mot de passe oublié",newpass:"Nouveau mot de passe"}[m];
