@@ -115638,161 +115638,8 @@ document.addEventListener('error',function(e){
 }
 </style>
 
-<style id="castellum-simple-castle-v3">
-/* Château simple : aucune galerie, aucun sélecteur, aucune vue compliquée. */
-.simple-castle-v3{
-  overflow:hidden;
-  padding:0!important;
-}
-.simple-castle-v3-inner{
-  display:grid;
-  grid-template-columns:320px minmax(0,1fr);
-  min-height:220px;
-}
-.simple-castle-v3-art{
-  position:relative;
-  background:linear-gradient(180deg,#9cc3ea 0%,#d9e8f4 52%,#91b86f 53%,#6f9c55 100%);
-  overflow:hidden;
-}
-.simple-castle-v3-art svg{
-  width:100%;
-  height:100%;
-  min-height:220px;
-  display:block;
-}
-.simple-castle-v3-tag{
-  position:absolute;
-  left:12px;
-  top:12px;
-  padding:7px 10px;
-  border-radius:999px;
-  background:rgba(10,24,61,.82);
-  color:#fff;
-  font-size:.72rem;
-  font-weight:900;
-}
-.simple-castle-v3-copy{
-  padding:18px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  gap:11px;
-}
-.simple-castle-v3-copy h2{
-  font-family:Georgia,serif;
-  margin:1px 0 0;
-  font-size:1.55rem;
-}
-.simple-castle-v3-copy p{
-  margin:0;
-  color:var(--muted);
-}
-.simple-castle-v3-row{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:12px;
-  flex-wrap:wrap;
-  font-size:.86rem;
-}
-.simple-castle-v3-row b{font-size:.96rem}
-.simple-castle-v3-bar{
-  height:12px;
-  border-radius:999px;
-  background:var(--soft);
-  overflow:hidden;
-}
-.simple-castle-v3-bar i{
-  display:block;
-  height:100%;
-  border-radius:inherit;
-  background:linear-gradient(90deg,#efb23d,#ffd772);
-}
-.simple-castle-v3-next{
-  padding:10px 12px;
-  border-radius:13px;
-  background:var(--soft);
-  color:var(--ink);
-  font-size:.82rem;
-}
-/* Le château reste volontairement simple : pas de landmark/immersion dans le parcours. */
-.lw-castle-landmark{display:none!important}
-@media(max-width:700px){
-  .simple-castle-v3-inner{grid-template-columns:1fr}
-  .simple-castle-v3-art{min-height:190px}
-  .simple-castle-v3-art svg{min-height:190px}
-}
-</style>
-<script>
-(function(){
-  /* On garde les fonctions/données originales intactes et on remplace seulement l'affichage. */
-  if(typeof castleV2ForXP!=="function" || typeof CASTLE_STAGE_XP==="undefined") return;
 
-  function simpleCastleDrawing(level){
-    const n=Math.max(1,Math.min(8,Number(level)||1));
-    const towerH=70+n*7;
-    const centerH=85+n*8;
-    const wallW=138+n*5;
-    return `<svg viewBox="0 0 420 250" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <circle cx="342" cy="45" r="24" fill="#fff1b2" opacity=".95"/>
-      <ellipse cx="82" cy="48" rx="44" ry="14" fill="#fff" opacity=".75"/>
-      <ellipse cx="121" cy="54" rx="33" ry="12" fill="#fff" opacity=".7"/>
-      <path d="M0 196 Q95 168 180 192 T420 184 V250 H0Z" fill="#6f9c55"/>
-      <g transform="translate(210 197)">
-        <rect x="${-wallW/2}" y="-64" width="${wallW}" height="64" rx="3" fill="#e2cfaa" stroke="#bda679" stroke-width="3"/>
-        <rect x="${-wallW/2-35}" y="${-towerH}" width="54" height="${towerH}" rx="3" fill="#dbc79f" stroke="#bda679" stroke-width="3"/>
-        <rect x="${wallW/2-19}" y="${-towerH}" width="54" height="${towerH}" rx="3" fill="#dbc79f" stroke="#bda679" stroke-width="3"/>
-        <rect x="-38" y="${-centerH}" width="76" height="${centerH}" rx="3" fill="#ead8b2" stroke="#bda679" stroke-width="3"/>
-        <polygon points="-45,${-centerH} 0,${-centerH-43} 45,${-centerH}" fill="#a8483e"/>
-        <polygon points="${-wallW/2-41},${-towerH} ${-wallW/2-8},${-towerH-32} ${-wallW/2+25},${-towerH}" fill="#a8483e"/>
-        <polygon points="${wallW/2-25},${-towerH} ${wallW/2+8},${-towerH-32} ${wallW/2+41},${-towerH}" fill="#a8483e"/>
-        <path d="M-18 0 v-35 q18-23 36 0 V0Z" fill="#594029"/>
-        <rect x="-12" y="${-centerH+24}" width="24" height="33" rx="10" fill="#416bb1"/>
-        <rect x="${-wallW/2-22}" y="${-towerH+26}" width="17" height="27" rx="7" fill="#416bb1"/>
-        <rect x="${wallW/2+5}" y="${-towerH+26}" width="17" height="27" rx="7" fill="#416bb1"/>
-        ${n>=4?`<rect x="${-wallW/2-72}" y="-46" width="42" height="46" fill="#d7c397" stroke="#b49e72" stroke-width="3"/><rect x="${wallW/2+30}" y="-46" width="42" height="46" fill="#d7c397" stroke="#b49e72" stroke-width="3"/>`:``}
-        ${n>=6?`<rect x="-4" y="${-centerH-61}" width="8" height="20" fill="#243f89"/><path d="M4 ${-centerH-61} q30 8 0 23z" fill="#ffd15d"/>`:``}
-      </g>
-    </svg>`;
-  }
 
-  castleProgressCard=function(){
-    const xp=Math.max(0,Number(Cloud?.profile?.total_xp ?? S.xp ?? 0)||0);
-    const key=castleStyleKey();
-    const c=castleV2ForXP(xp,key);
-    const base=CASTLE_STAGE_XP[c.index]||0;
-    const next=c.next;
-    const pct=next?Math.max(0,Math.min(100,Math.round((xp-base)/(next-base)*100))):100;
-    const nextName=next?c.style.stages[c.index+1]:c.n;
-    return `<section class="card simple-castle-v3">
-      <div class="simple-castle-v3-inner">
-        <div class="simple-castle-v3-art">
-          <span class="simple-castle-v3-tag">🏰 Mon château · Niveau ${c.index+1}/8</span>
-          ${simpleCastleDrawing(c.index+1)}
-        </div>
-        <div class="simple-castle-v3-copy">
-          <div>
-            <span class="eyebrow">${esc(c.style.name)}</span>
-            <h2>${esc(c.n)}</h2>
-            <p>Ton château évolue simplement avec l'XP gagnée.</p>
-          </div>
-          <div class="simple-castle-v3-row">
-            <b>⚡ ${xp.toLocaleString("fr-FR")} XP</b>
-            <span>${next?`${next.toLocaleString("fr-FR")} XP pour le niveau suivant`:"Niveau maximum"}</span>
-          </div>
-          <div class="simple-castle-v3-bar"><i style="width:${pct}%"></i></div>
-          <div class="simple-castle-v3-next">
-            ${next?`Encore <b>${Math.max(0,next-xp).toLocaleString("fr-FR")} XP</b> pour débloquer <b>${esc(nextName)}</b>.`:`🏆 Ton château a atteint son dernier niveau.`}
-          </div>
-        </div>
-      </div>
-    </section>`;
-  };
-
-  /* Force un rerender seulement après que toute l'application est chargée. */
-  try{ if(typeof render==="function") render(); }catch(e){ console.warn("Simple castle render skipped",e); }
-})();
-</script>
 
 
 
@@ -116411,6 +116258,285 @@ document.addEventListener('error',function(e){
 
   const observer=new MutationObserver(normalizeFlags);
   observer.observe(document.documentElement,{childList:true,subtree:true});
+})();
+</script>
+
+
+
+<style id="castellum-single-castle-progression">
+.single-castle{
+  overflow:hidden;
+  padding:0!important;
+  border-radius:26px!important;
+}
+.single-castle-hero{
+  position:relative;
+  min-height:330px;
+  background:#0b173a;
+  overflow:hidden;
+}
+.single-castle-hero img{
+  width:100%;
+  height:100%;
+  min-height:330px;
+  object-fit:cover;
+  display:block;
+}
+.single-castle-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(4,11,28,.04) 40%,rgba(4,11,28,.72) 100%);
+}
+.single-castle-badge{
+  position:absolute;
+  top:16px;
+  left:16px;
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  padding:9px 13px;
+  border-radius:999px;
+  background:rgba(8,20,55,.84);
+  border:1px solid rgba(255,255,255,.12);
+  color:#fff;
+  font-size:.78rem;
+  font-weight:900;
+}
+.single-castle-title{
+  position:absolute;
+  left:20px;
+  right:20px;
+  bottom:18px;
+  color:#fff;
+}
+.single-castle-title span{
+  display:block;
+  margin-bottom:5px;
+  color:#ffd568;
+  font-size:.75rem;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.single-castle-title h2{
+  margin:0;
+  font-family:Georgia,serif;
+  font-size:2rem;
+  line-height:1.05;
+}
+.single-castle-body{
+  padding:18px;
+  display:grid;
+  gap:16px;
+}
+.single-castle-xprow{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+.single-castle-xprow b{
+  font-size:1.05rem;
+}
+.single-castle-xprow span{
+  color:var(--muted);
+  font-size:.88rem;
+}
+.single-castle-bar{
+  height:12px;
+  border-radius:999px;
+  background:var(--soft);
+  overflow:hidden;
+}
+.single-castle-bar i{
+  display:block;
+  height:100%;
+  border-radius:inherit;
+  background:linear-gradient(90deg,#f5b83f,#ffd66c);
+}
+.single-castle-next{
+  border-radius:15px;
+  padding:12px 14px;
+  background:var(--soft);
+  color:var(--ink);
+  font-size:.87rem;
+}
+.single-castle-section-head{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  align-items:end;
+  flex-wrap:wrap;
+}
+.single-castle-section-head h3{
+  margin:0;
+  font-size:1rem;
+}
+.single-castle-section-head small{
+  color:var(--muted);
+}
+.single-castle-road{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:10px;
+}
+.single-castle-stage{
+  position:relative;
+  overflow:hidden;
+  min-height:155px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:var(--card);
+}
+.single-castle-stage img{
+  width:100%;
+  height:92px;
+  object-fit:cover;
+  display:block;
+}
+.single-castle-stage-copy{
+  padding:9px 10px 10px;
+  display:grid;
+  gap:3px;
+}
+.single-castle-stage-copy b{
+  font-size:.78rem;
+  line-height:1.15;
+}
+.single-castle-stage-copy small{
+  color:var(--muted);
+  font-size:.68rem;
+}
+.single-castle-stage.current{
+  border-color:rgba(245,184,63,.72);
+  box-shadow:0 0 0 2px rgba(245,184,63,.11);
+}
+.single-castle-stage.done{
+  border-color:rgba(29,169,109,.36);
+}
+.single-castle-stage.locked img{
+  filter:saturate(.72) brightness(.78);
+}
+.single-castle-stage-state{
+  position:absolute;
+  top:8px;
+  left:8px;
+  padding:5px 7px;
+  border-radius:999px;
+  background:rgba(7,17,45,.82);
+  color:#fff;
+  font-size:.6rem;
+  font-weight:900;
+}
+@media(max-width:760px){
+  .single-castle-hero,
+  .single-castle-hero img{
+    min-height:270px;
+  }
+  .single-castle-road{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+@media(max-width:430px){
+  .single-castle-hero,
+  .single-castle-hero img{
+    min-height:235px;
+  }
+  .single-castle-title h2{
+    font-size:1.6rem;
+  }
+  .single-castle-body{
+    padding:14px;
+  }
+}
+</style>
+
+<script id="castellum-single-castle-progression-js">
+(function(){
+  const SINGLE_CASTLE_NAMES=[
+    "Tour fortifiée",
+    "Donjon",
+    "Fort militaire",
+    "Domaine fortifié",
+    "Château noble",
+    "Grande forteresse",
+    "Citadelle royale",
+    "Castellum impérial"
+  ];
+
+  function stageForXP(xp){
+    let index=0;
+    for(let i=0;i<CASTLE_STAGE_XP.length;i++){
+      if(xp>=CASTLE_STAGE_XP[i]) index=i;
+    }
+    return index;
+  }
+
+  castleProgressCard=function(){
+    const xp=Math.max(0,Number(Cloud?.profile?.total_xp ?? S.xp ?? 0)||0);
+    const index=stageForXP(xp);
+    const next=CASTLE_STAGE_XP[index+1] ?? null;
+    const base=CASTLE_STAGE_XP[index] || 0;
+    const pct=next ? Math.max(0,Math.min(100,Math.round((xp-base)/(next-base)*100))) : 100;
+
+    const visuals=(typeof CASTLE_STAGE_VISUALS!=="undefined" && CASTLE_STAGE_VISUALS.romain) ? CASTLE_STAGE_VISUALS.romain : [];
+    const hero=visuals[index] || (typeof CASTLE_VISUALS!=="undefined" ? CASTLE_VISUALS.romain : "");
+
+    const road=SINGLE_CASTLE_NAMES.map((name,i)=>{
+      const state=i<index?"done":i===index?"current":"locked";
+      const label=i<index?"✓ Débloqué":i===index?"Niveau actuel":"🔒 À débloquer";
+      const pic=visuals[i] || hero;
+      return `<div class="single-castle-stage ${state}">
+        ${pic?`<img src="${pic}" alt="${esc(name)}">`:""}
+        <span class="single-castle-stage-state">${label}</span>
+        <div class="single-castle-stage-copy">
+          <b>${esc(name)}</b>
+          <small>${CASTLE_STAGE_XP[i].toLocaleString("fr-FR")} XP</small>
+        </div>
+      </div>`;
+    }).join("");
+
+    return `<section class="card single-castle">
+      <div class="single-castle-hero">
+        ${hero?`<img src="${hero}" alt="${esc(SINGLE_CASTLE_NAMES[index])}">`:""}
+        <div class="single-castle-overlay"></div>
+        <div class="single-castle-badge">🏰 Mon château · Niveau ${index+1}/8</div>
+        <div class="single-castle-title">
+          <span>Progression du domaine</span>
+          <h2>${esc(SINGLE_CASTLE_NAMES[index])}</h2>
+        </div>
+      </div>
+
+      <div class="single-castle-body">
+        <div class="single-castle-xprow">
+          <b>⚡ ${xp.toLocaleString("fr-FR")} XP</b>
+          <span>${next?`${next.toLocaleString("fr-FR")} XP pour le niveau suivant`:"Niveau maximum atteint"}</span>
+        </div>
+
+        <div class="single-castle-bar"><i style="width:${pct}%"></i></div>
+
+        <div class="single-castle-next">
+          ${next
+            ? `Encore <b>${Math.max(0,next-xp).toLocaleString("fr-FR")} XP</b> pour débloquer <b>${esc(SINGLE_CASTLE_NAMES[index+1])}</b>.`
+            : `👑 Tu as atteint <b>${esc(SINGLE_CASTLE_NAMES[index])}</b>, le dernier niveau du château.`}
+        </div>
+
+        <div class="single-castle-section-head">
+          <h3>Les 8 étapes de ton château</h3>
+          <small>Une seule progression, sans styles à choisir</small>
+        </div>
+
+        <div class="single-castle-road">${road}</div>
+      </div>
+    </section>`;
+  };
+
+  try{
+    if(typeof render==="function") render();
+  }catch(e){
+    console.warn("Castle progression render skipped",e);
+  }
 })();
 </script>
 
