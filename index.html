@@ -115076,12 +115076,10 @@ function capitalFlagURL(flag){
 const __stepHTMLCapital=stepHTML;stepHTML=function(st){if(st.k==='capital')return `
   <div class="capital-question-title">Quelle est la capitale de ce pays ?</div>
   <div class="capital-flag-stage" data-capital-flag-stage>
-    <span class="flag-pole" aria-hidden="true"></span>
     <div class="capital-flag-fabric" data-capital-flag-fabric aria-label="Drapeau de ${esc(st.country)}">
       <img class="capital-flag-img" src="${capitalFlagURL(st.flag)}" alt="Drapeau de ${esc(st.country)}" loading="eager" decoding="async">
       <span class="capital-flag-fallback" aria-hidden="true">${st.flag}</span>
     </div>
-    <span class="capital-flag-hint">Touche ou glisse sur le drapeau 🌬️</span>
   </div>
   <div class="capital-country">${esc(st.country)}</div>
   <div class="capital-sub">Choisis la bonne capitale</div>
@@ -115494,50 +115492,7 @@ if(chest){e.preventDefault();const u=LWPreview??0,n=[0,1,2,3].filter(l=>!!S.done
   },{passive:true});
 })();
 </script>
-<script>
-/* ===== CASTELLUM · FLAG WIND INTERACTION ===== */
-(function(){
-  let dragX=0,dragY=0,dragging=false;
-  function stageFrom(e){return e.target.closest?.('[data-capital-flag-stage]')}
-  document.addEventListener('pointerdown',e=>{
-    const s=stageFrom(e);if(!s)return;
-    dragging=true;dragX=e.clientX;dragY=e.clientY;
-    s.classList.add('wind-strong');s.classList.remove('wind-soft');
-    try{s.setPointerCapture?.(e.pointerId)}catch(_){}
-  },true);
-  document.addEventListener('pointermove',e=>{
-    if(!dragging)return;
-    const s=stageFrom(e)||document.querySelector('[data-capital-flag-stage]');
-    if(!s)return;
-    const dx=e.clientX-dragX,dy=e.clientY-dragY;
-    const fabric=s.querySelector('[data-capital-flag-fabric]');
-    if(fabric){
-      const ry=Math.max(-18,Math.min(18,dx/5));
-      const rz=Math.max(-3,Math.min(3,dy/20));
-      fabric.style.transform=`rotateY(${ry}deg) rotateZ(${rz}deg)`;
-    }
-  },true);
-  function release(e){
-    if(!dragging)return;dragging=false;
-    const s=stageFrom(e)||document.querySelector('[data-capital-flag-stage]');
-    if(!s)return;
-    const fabric=s.querySelector('[data-capital-flag-fabric]');
-    if(fabric)fabric.style.transform='';
-    s.classList.remove('wind-strong');
-    s.classList.add('wind-soft');
-    setTimeout(()=>s.classList.remove('wind-soft'),1300)
-  }
-  document.addEventListener('pointerup',release,true);
-  document.addEventListener('pointercancel',release,true);
-  document.addEventListener('click',e=>{
-    const s=stageFrom(e);if(!s)return;
-    if(e.target.closest?.('.opt'))return;
-    s.classList.remove('wind-soft');
-    s.classList.add('wind-strong');
-    setTimeout(()=>s.classList.remove('wind-strong'),900)
-  },true);
-})();
-</script>
+
 
 <script>
 /* ===== CASTELLUM · FLAG IMAGE FALLBACK ===== */
@@ -115836,6 +115791,626 @@ document.addEventListener('error',function(e){
 
   /* Force un rerender seulement après que toute l'application est chargée. */
   try{ if(typeof render==="function") render(); }catch(e){ console.warn("Simple castle render skipped",e); }
+})();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style id="castellum-capitals-uniform-flags">
+/* ==========================================================
+   CASTELLUM · CAPITALES — DRAPEAUX UNIFORMES ET STATIQUES
+   ========================================================== */
+
+.capital-flag-stage{
+  position:relative!important;
+  width:min(100%,700px)!important;
+  height:336px!important;
+  margin:0 auto!important;
+  overflow:hidden!important;
+  border-radius:28px!important;
+}
+
+/* Keep the decorative pole, but make it independent from flag sizing. */
+.flag-pole{
+  left:8.5%!important;
+  top:8%!important;
+  bottom:8%!important;
+  z-index:4!important;
+}
+
+/* One identical presentation frame for EVERY flag. */
+.capital-flag-fabric{
+  position:absolute!important;
+  left:14%!important;
+  top:50%!important;
+
+  width:72%!important;
+  height:auto!important;
+  aspect-ratio:3 / 2!important;
+
+  transform:translateY(-50%)!important;
+  transform-origin:center center!important;
+
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+
+  overflow:hidden!important;
+
+  border-radius:0 14px 14px 0!important;
+  background:#fff!important;
+
+  animation:none!important;
+  transition:none!important;
+  perspective:none!important;
+  will-change:auto!important;
+
+  box-shadow:0 14px 28px rgba(0,0,0,.22)!important;
+}
+
+/* Remove the fake fabric lighting/wave layers. */
+.capital-flag-fabric::before,
+.capital-flag-fabric::after{
+  display:none!important;
+  content:none!important;
+}
+
+/*
+  Every real flag gets exactly the same outer box.
+  contain = whole flag visible, regardless of original ratio.
+*/
+.capital-flag-img{
+  position:absolute!important;
+  inset:0!important;
+
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+
+  max-width:100%!important;
+  max-height:100%!important;
+
+  object-fit:contain!important;
+  object-position:center center!important;
+
+  margin:auto!important;
+
+  transform:none!important;
+  animation:none!important;
+  transition:none!important;
+  filter:none!important;
+
+  clip-path:none!important;
+  -webkit-clip-path:none!important;
+
+  user-select:none!important;
+  -webkit-user-drag:none!important;
+  pointer-events:none!important;
+
+  z-index:2!important;
+}
+
+/* No movement-related UI anymore. */
+.capital-flag-hint{
+  display:none!important;
+}
+
+/* No residual wind state. */
+.capital-flag-stage.wind-strong .capital-flag-fabric,
+.capital-flag-stage.wind-soft .capital-flag-fabric{
+  transform:translateY(-50%)!important;
+  animation:none!important;
+}
+
+/* The emoji fallback uses the same frame. */
+.capital-flag-fallback{
+  position:absolute!important;
+  inset:0!important;
+  place-items:center!important;
+  font-size:4rem!important;
+  line-height:1!important;
+}
+
+/* Desktop: fixed, balanced display. */
+@media(min-width:701px){
+  .capital-flag-stage{
+    height:336px!important;
+    max-width:700px!important;
+  }
+
+  .capital-flag-fabric{
+    width:72%!important;
+    max-width:504px!important;
+  }
+}
+
+/* Tablet / mobile: same geometry, simply scaled down. */
+@media(max-width:700px){
+  .capital-flag-stage{
+    width:100%!important;
+    height:260px!important;
+    border-radius:22px!important;
+  }
+
+  .flag-pole{
+    left:8%!important;
+    top:8%!important;
+    bottom:8%!important;
+  }
+
+  .capital-flag-fabric{
+    left:14%!important;
+    width:76%!important;
+    max-width:none!important;
+    border-radius:0 12px 12px 0!important;
+  }
+}
+
+@media(max-width:430px){
+  .capital-flag-stage{
+    height:225px!important;
+  }
+
+  .capital-flag-fabric{
+    left:15%!important;
+    width:74%!important;
+  }
+}
+</style>
+
+<script id="castellum-capitals-uniform-flags-js">
+(function(){
+  function normalizeCapitalFlags(){
+    document.querySelectorAll('.capital-flag-stage').forEach(stage=>{
+      stage.classList.remove('wind-strong','wind-soft');
+
+      const hint=stage.querySelector('.capital-flag-hint');
+      if(hint) hint.remove();
+
+      const fabric=stage.querySelector('.capital-flag-fabric');
+      if(fabric){
+        /* Remove old interaction-set inline values. CSS above becomes authoritative. */
+        ['transform','animation','transition','perspective','width','height','top','left']
+          .forEach(prop=>fabric.style.removeProperty(prop));
+      }
+
+      const img=stage.querySelector('.capital-flag-img');
+      if(img){
+        ['transform','animation','transition','filter','clip-path',
+         'object-fit','object-position','width','height','max-width','max-height']
+          .forEach(prop=>img.style.removeProperty(prop));
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded',normalizeCapitalFlags);
+  window.addEventListener('load',normalizeCapitalFlags);
+
+  const observer=new MutationObserver(normalizeCapitalFlags);
+  observer.observe(document.documentElement,{childList:true,subtree:true});
+})();
+</script>
+
+
+
+
+
+
+
+<style id="castellum-capitals-mode-card-premium">
+/* ===== MODE CARD · CAPITALES DU MONDE · PREMIUM ===== */
+
+[data-mode="capitals"]{
+  position:relative!important;
+  display:grid!important;
+  grid-template-columns:64px minmax(0,1fr)!important;
+  align-items:center!important;
+  gap:16px!important;
+
+  min-height:128px!important;
+  padding:18px 20px!important;
+
+  border:1px solid #d7deef!important;
+  border-radius:24px!important;
+  background:#fff!important;
+
+  box-shadow:
+    0 7px 0 rgba(28,57,126,.08),
+    0 14px 28px rgba(24,49,107,.06)!important;
+
+  overflow:hidden!important;
+}
+
+/* Left icon tile */
+[data-mode="capitals"] .mode-ic{
+  width:64px!important;
+  height:64px!important;
+  min-width:64px!important;
+
+  display:grid!important;
+  place-items:center!important;
+
+  border-radius:20px!important;
+  background:linear-gradient(180deg,#2368c7 0%,#144a9c 100%)!important;
+
+  color:#fff!important;
+
+  box-shadow:
+    inset 0 -5px 0 rgba(8,43,103,.35),
+    0 8px 18px rgba(27,83,174,.18)!important;
+}
+
+[data-mode="capitals"] .mode-ic > span{
+  font-size:30px!important;
+  line-height:1!important;
+}
+
+/* Main copy */
+[data-mode="capitals"] .mode-t{
+  min-width:0!important;
+  padding:0 78px 0 0!important;
+  display:block!important;
+}
+
+[data-mode="capitals"] .mode-t b{
+  display:block!important;
+
+  margin:0 0 6px!important;
+  padding:0!important;
+
+  color:#0f275d!important;
+
+  font-size:1.08rem!important;
+  line-height:1.18!important;
+  font-weight:900!important;
+
+  white-space:normal!important;
+  overflow:visible!important;
+  text-overflow:clip!important;
+}
+
+[data-mode="capitals"] .mode-t small{
+  display:block!important;
+
+  color:#61719b!important;
+
+  font-size:.87rem!important;
+  line-height:1.42!important;
+  font-weight:650!important;
+}
+
+/* Badge */
+[data-mode="capitals"] .tag{
+  position:absolute!important;
+  top:14px!important;
+  right:14px!important;
+
+  margin:0!important;
+  padding:6px 10px!important;
+
+  border-radius:999px!important;
+  background:#fff3cf!important;
+  color:#b57600!important;
+
+  font-size:.68rem!important;
+  line-height:1!important;
+  font-weight:900!important;
+
+  box-shadow:none!important;
+  border:0!important;
+}
+
+/* Hover desktop */
+@media(hover:hover){
+  [data-mode="capitals"]:hover{
+    transform:translateY(-2px)!important;
+    box-shadow:
+      0 8px 0 rgba(28,57,126,.09),
+      0 18px 34px rgba(24,49,107,.09)!important;
+  }
+}
+
+/* Mobile */
+@media(max-width:600px){
+  [data-mode="capitals"]{
+    grid-template-columns:56px minmax(0,1fr)!important;
+    gap:13px!important;
+    min-height:112px!important;
+    padding:15px 16px!important;
+    border-radius:20px!important;
+  }
+
+  [data-mode="capitals"] .mode-ic{
+    width:56px!important;
+    height:56px!important;
+    min-width:56px!important;
+    border-radius:17px!important;
+  }
+
+  [data-mode="capitals"] .mode-t{
+    padding-right:0!important;
+  }
+
+  [data-mode="capitals"] .mode-t b{
+    padding-right:64px!important;
+    font-size:1rem!important;
+  }
+
+  [data-mode="capitals"] .mode-t small{
+    font-size:.82rem!important;
+  }
+
+  [data-mode="capitals"] .tag{
+    top:12px!important;
+    right:12px!important;
+    padding:5px 8px!important;
+    font-size:.64rem!important;
+  }
+}
+</style>
+
+
+
+<style id="castellum-remove-capital-pole">
+.capital-flag-stage .flag-pole{
+  display:none!important;
+}
+.capital-flag-fabric{
+  left:14%!important;
+}
+@media(max-width:700px){
+  .capital-flag-fabric{
+    left:12%!important;
+    width:76%!important;
+  }
+}
+</style>
+
+
+
+
+
+
+
+
+
+<style id="castellum-capitals-same-shape-final">
+/* ==========================================================
+   CASTELLUM · CAPITALES
+   Tous les drapeaux ont exactement la même forme
+   ========================================================== */
+
+.capital-flag-stage{
+  position:relative!important;
+  width:min(100%,760px)!important;
+  height:420px!important;
+  margin:0 auto 12px!important;
+  padding:24px!important;
+  box-sizing:border-box!important;
+
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+
+  overflow:hidden!important;
+
+  border-radius:30px!important;
+  background:linear-gradient(180deg,#10275f 0%,#07173f 100%)!important;
+  box-shadow:0 18px 42px rgba(5,15,43,.18)!important;
+}
+
+/* Plus aucun mât, texte ou effet de tissu. */
+.capital-flag-stage .flag-pole,
+.flag-pole,
+.capital-flag-hint{
+  display:none!important;
+}
+
+/* Cadre intérieur strictement identique pour tous les pays. */
+.capital-flag-fabric{
+  position:relative!important;
+  inset:auto!important;
+  left:auto!important;
+  top:auto!important;
+
+  width:86%!important;
+  height:auto!important;
+  aspect-ratio:3 / 2!important;
+
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+
+  margin:0!important;
+  padding:0!important;
+
+  overflow:hidden!important;
+
+  border-radius:20px!important;
+  background:transparent!important;
+  box-shadow:none!important;
+
+  transform:none!important;
+  animation:none!important;
+  transition:none!important;
+  perspective:none!important;
+  will-change:auto!important;
+}
+
+/* Aucun faux pli / overlay. */
+.capital-flag-fabric::before,
+.capital-flag-fabric::after{
+  display:none!important;
+  content:none!important;
+}
+
+/*
+   Tous les drapeaux remplissent exactement le même rectangle.
+   "fill" conserve tout le drapeau à l'écran et donne la même forme visuelle.
+*/
+.capital-flag-img{
+  position:absolute!important;
+  inset:0!important;
+
+  width:100%!important;
+  height:100%!important;
+  max-width:none!important;
+  max-height:none!important;
+
+  display:block!important;
+
+  object-fit:fill!important;
+  object-position:center!important;
+
+  margin:0!important;
+  padding:0!important;
+
+  border:0!important;
+  border-radius:20px!important;
+  background:transparent!important;
+  box-shadow:none!important;
+
+  transform:none!important;
+  animation:none!important;
+  transition:none!important;
+  filter:none!important;
+
+  clip-path:none!important;
+  -webkit-clip-path:none!important;
+
+  user-select:none!important;
+  -webkit-user-drag:none!important;
+  pointer-events:none!important;
+
+  z-index:2!important;
+}
+
+/* Fallback emoji seulement si l'image ne charge pas. */
+.capital-flag-fallback{
+  position:absolute!important;
+  inset:0!important;
+  display:none;
+  place-items:center!important;
+  font-size:4rem!important;
+  line-height:1!important;
+  background:transparent!important;
+}
+
+/* Neutralise les anciens états de vent. */
+.capital-flag-stage.wind-strong .capital-flag-fabric,
+.capital-flag-stage.wind-soft .capital-flag-fabric{
+  transform:none!important;
+  animation:none!important;
+}
+
+/* Desktop */
+@media(min-width:901px){
+  .capital-flag-stage{
+    height:420px!important;
+    max-width:760px!important;
+  }
+
+  .capital-flag-fabric{
+    width:82%!important;
+    max-width:620px!important;
+  }
+}
+
+/* Tablette */
+@media(max-width:900px){
+  .capital-flag-stage{
+    height:360px!important;
+    border-radius:26px!important;
+    padding:20px!important;
+  }
+
+  .capital-flag-fabric{
+    width:86%!important;
+  }
+}
+
+/* Mobile */
+@media(max-width:600px){
+  .capital-flag-stage{
+    height:270px!important;
+    border-radius:24px!important;
+    padding:16px!important;
+  }
+
+  .capital-flag-fabric{
+    width:90%!important;
+    border-radius:16px!important;
+  }
+
+  .capital-flag-img{
+    border-radius:16px!important;
+  }
+}
+
+@media(max-width:430px){
+  .capital-flag-stage{
+    height:235px!important;
+    padding:14px!important;
+  }
+
+  .capital-flag-fabric{
+    width:92%!important;
+  }
+}
+</style>
+
+<script id="castellum-capitals-same-shape-final-js">
+(function(){
+  function normalizeFlags(){
+    document.querySelectorAll('.capital-flag-stage').forEach(stage=>{
+      stage.classList.remove('wind-strong','wind-soft');
+
+      stage.querySelectorAll('.flag-pole,.capital-flag-hint').forEach(el=>el.remove());
+
+      const fabric=stage.querySelector('.capital-flag-fabric');
+      if(fabric){
+        [
+          'left','top','width','height','max-width','transform','animation',
+          'transition','perspective','background','box-shadow','padding'
+        ].forEach(prop=>fabric.style.removeProperty(prop));
+      }
+
+      const img=stage.querySelector('.capital-flag-img');
+      if(img){
+        [
+          'width','height','max-width','max-height','object-fit','object-position',
+          'transform','animation','transition','filter','clip-path','border-radius',
+          'box-shadow','background'
+        ].forEach(prop=>img.style.removeProperty(prop));
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded',normalizeFlags);
+  window.addEventListener('load',normalizeFlags);
+
+  const observer=new MutationObserver(normalizeFlags);
+  observer.observe(document.documentElement,{childList:true,subtree:true});
 })();
 </script>
 
