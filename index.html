@@ -114140,13 +114140,53 @@ finish = function(){
 
 /* =================== CASTELLUM SPECTACULAR · SAFE FEATURE PACK =================== */
 const CASTLE_STYLE_DATA={
-  occidental:{name:"Occidental",icon:"🦁",motto:"Élégance & tradition",stages:["Manoir","Château","Palais","Cité royale"],arts:["🏡","🏰","🏛️","🌉"]},
-  medieval:{name:"Médiéval",icon:"🏰",motto:"Puissance & défense",stages:["Tour fortifiée","Donjon","Forteresse","Citadelle"],arts:["🗼","🏰","🏯","🛡️"]},
-  oriental:{name:"Oriental",icon:"🕌",motto:"Raffinement & splendeur",stages:["Pavillon","Palais oriental","Forteresse orientale","Cité impériale"],arts:["🌴","🕌","🏯","✨"]},
-  romain:{name:"Romain",icon:"🏛️",motto:"Ordre & grandeur",stages:["Villa fortifiée","Castrum","Palais romain","Complexe impérial"],arts:["🏡","🛡️","🏛️","🦅"]},
-  grec:{name:"Grec",icon:"🏺",motto:"Harmonie & savoir",stages:["Maison noble","Acropole fortifiée","Palais hellénique","Cité sacrée"],arts:["🏠","⛰️","🏛️","🏺"]}
+  occidental:{name:"Occidental",icon:"🦁",motto:"Élégance & tradition",
+    stages:["Manoir","Château résidentiel","Château noble","Palais","Domaine royal","Château princier","Cité royale","Capitale royale"],
+    arts:["🏡","🏰","🏰","🏛️","🌳","👑","🌉","✨"]},
+  medieval:{name:"Médiéval",icon:"🏰",motto:"Puissance & défense",
+    stages:["Tour de guet","Tour fortifiée","Donjon","Château fort","Forteresse","Grande forteresse","Citadelle","Cité fortifiée"],
+    arts:["🗼","🛡️","🏰","⚔️","🏯","🧱","🏰","👑"]},
+  oriental:{name:"Oriental",icon:"🕌",motto:"Raffinement & splendeur",
+    stages:["Pavillon","Jardin palatial","Palais oriental","Palais royal","Forteresse orientale","Cité impériale","Complexe impérial","Capitale impériale"],
+    arts:["🌴","⛲","🕌","👑","🏯","🌆","✨","🌙"]},
+  romain:{name:"Romain",icon:"🏛️",motto:"Ordre & grandeur",
+    stages:["Villa fortifiée","Castrum","Fort militaire","Domaine patricien","Palais romain","Forum impérial","Complexe impérial","Rome impériale"],
+    arts:["🏡","🛡️","⚔️","🏺","🏛️","🏟️","🦅","👑"]},
+  grec:{name:"Grec",icon:"🏺",motto:"Harmonie & savoir",
+    stages:["Maison noble","Temple fortifié","Acropole","Palais hellénique","Sanctuaire monumental","Cité sacrée","Métropole hellénique","Capitale des dieux"],
+    arts:["🏠","🏛️","⛰️","🏺","🗿","✨","🌊","⚡"]},
+  byzantin:{name:"Byzantin",icon:"☦️",motto:"Or, mosaïques & empire",
+    stages:["Maison impériale","Chapelle fortifiée","Palais à mosaïques","Citadelle byzantine","Grand palais","Quartier impérial","Cité aux coupoles","Constantinople impériale"],
+    arts:["🏠","⛪","🟨","🏰","👑","🏛️","🌆","✨"]},
+  ottoman:{name:"Ottoman",icon:"🌙",motto:"Jardins, coupoles & puissance",
+    stages:["Konak","Pavillon du palais","Palais ottoman","Forteresse du sultan","Grand sérail","Complexe royal","Cité des coupoles","Capitale du sultan"],
+    arts:["🏡","🌿","🕌","🏰","👑","⛲","🌆","🌙"]},
+  andalou:{name:"Andalou / Mauresque",icon:"🌺",motto:"Patios, eau & arabesques",
+    stages:["Maison à patio","Riad fortifié","Alcázar","Palais mauresque","Forteresse d'Al-Andalus","Jardins royaux","Cité palatiale","Alhambra légendaire"],
+    arts:["🏠","🌿","🏰","🕌","🛡️","⛲","🌆","✨"]},
+  nordique:{name:"Nordique",icon:"🪓",motto:"Bois, pierre & mers du Nord",
+    stages:["Longhouse","Hall du jarl","Fort de bois","Forteresse nordique","Domaine du jarl","Grande citadelle","Cité du fjord","Capitale des rois du Nord"],
+    arts:["🛖","🔥","🪵","🏰","🪓","🛡️","🌊","👑"]},
+  celtique:{name:"Celtique",icon:"☘️",motto:"Collines, pierres & traditions",
+    stages:["Hameau fortifié","Fort de colline","Dun celtique","Sanctuaire de pierre","Citadelle tribale","Domaine druidique","Cité celtique","Capitale des clans"],
+    arts:["🛖","⛰️","🪨","☘️","🏰","🌳","🌆","✨"]},
+  renaissance:{name:"Renaissance",icon:"🎨",motto:"Art, science & élégance",
+    stages:["Villa marchande","Palazzo","Villa princière","Palais Renaissance","Domaine ducal","Palais des arts","Cité princière","Capitale de la Renaissance"],
+    arts:["🏡","🏛️","🌿","🎨","👑","🖼️","🌆","✨"]},
+  gothique:{name:"Gothique",icon:"🕯️",motto:"Hauteur, pierre & mystère",
+    stages:["Manoir gothique","Tour à flèche","Château gothique","Forteresse à pinacles","Palais gothique","Grande citadelle","Cité des cathédrales","Capitale gothique"],
+    arts:["🏚️","🗼","🏰","🛡️","🕯️","⛪","🌆","🌙"]},
+  japonais:{name:"Japonais",icon:"🏯",motto:"Équilibre, honneur & stratégie",
+    stages:["Yashiki","Tour de garde","Petit château féodal","Château de daimyo","Forteresse shogunale","Grand château japonais","Cité du shogun","Capitale impériale"],
+    arts:["🏡","🗼","🏯","⚔️","🛡️","🏯","🌸","👑"]},
+  persan:{name:"Persan",icon:"🟦",motto:"Jardins, iwans & majesté",
+    stages:["Maison-jardin","Pavillon persan","Palais à iwan","Citadelle royale","Grand palais persan","Jardin impérial","Cité royale","Capitale des Shahs"],
+    arts:["🌿","🏡","🕌","🏰","👑","⛲","🌆","✨"]},
+  fantasy:{name:"Fantasy / Légendaire",icon:"🐉",motto:"Magie, mythes & merveilles",
+    stages:["Tour enchantée","Château des brumes","Forteresse magique","Palais des dragons","Citadelle céleste","Cité flottante","Royaume légendaire","Castellum éternel"],
+    arts:["🔮","🌫️","🏰","🐉","☁️","🌌","👑","💎"]}
 };
-const CASTLE_STAGE_XP=[0,500,4000,25000];
+const CASTLE_STAGE_XP=[0,250,750,1500,3000,6000,12000,25000];
 function castleStyleKey(p){return (p?.castle_style||p?.settings?.castleStyle||S.castleStyle||"medieval") in CASTLE_STYLE_DATA?(p?.castle_style||p?.settings?.castleStyle||S.castleStyle||"medieval"):"medieval"}
 function castleV2ForXP(xp,styleKey){xp=Math.max(0,Number(xp)||0);const key=(styleKey&&CASTLE_STYLE_DATA[styleKey])?styleKey:"medieval",style=CASTLE_STYLE_DATA[key];let i=0;for(let j=0;j<CASTLE_STAGE_XP.length;j++)if(xp>=CASTLE_STAGE_XP[j])i=j;return {key,style,index:i,xp:CASTLE_STAGE_XP[i],next:CASTLE_STAGE_XP[i+1]??null,n:style.stages[i],e:style.arts[i]}}
 castleLevelForXP=function(xp,styleKey){return castleV2ForXP(xp,styleKey||S.castleStyle)};
