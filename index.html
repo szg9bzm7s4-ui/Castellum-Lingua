@@ -11446,19 +11446,7 @@ Osef de ses stories, sérieux|Chissene delle sue storie, davvero|Paso de sus sto
 Ce son, c'est une dinguerie|Questo pezzo è una bomba|Este tema es una locura|Esta música é brutal|This track is fire|Der Song ist krass|Dit nummer is ziek|Had l-ghonya nar
 Il m'a ghosté après deux rendez-vous|Mi ha ghostato dopo due appuntamenti|Me hizo ghosting después de dos citas|Fez-me ghosting depois de dois encontros|He ghosted me after two dates|Er hat mich nach zwei Dates geghostet|Hij heeft me na twee dates geghost|Dar liya ghosting mn ba3d jouj rendez-vous
 Pas de spoil, je n'ai pas encore vu la fin !|Niente spoiler, non ho ancora visto il finale!|¡Nada de spoilers, que aún no he visto el final!|Nada de spoilers, ainda não vi o final!|No spoilers, I haven't seen the ending yet!|Keine Spoiler, ich hab das Ende noch nicht gesehen!|Geen spoilers, ik heb het einde nog niet gezien!|Bla spoiler, mazal ma chft l-akhir!`},
-{n:"Expressions régionales",d:"Belgique, Suisse, Québec et Midi : le français d'ailleurs",h:48,rows:`
-Il drache|Piove a catinelle|Llueve a cántaros|Está a chover a potes|It's bucketing down|Es schüttet|Het giet|Ch-chta kattsebb bezzaf
-septante|settanta|setenta|setenta|seventy|siebzig|zeventig|sb3in
-À tantôt !|A più tardi!|¡Hasta luego!|Até logo!|See you later!|Bis später!|Tot straks!|Mn b3d!
-magasiner|fare shopping|ir de tiendas|ir às compras|to go shopping|shoppen gehen|gaan shoppen|ndour f l-7wanet
-Viens une fois ici, que je te montre|Vieni un attimo qui che ti faccio vedere|Ven un momento, que te enseño una cosa|Anda cá um bocadinho, que eu mostro-te|Come here a sec, let me show you|Komm mal her, ich zeig dir was|Kom eens hier, dan laat ik het je zien|Aji chwiya nwerrik
-Elle a nonante ans et elle fait encore son marché|Ha novant'anni e fa ancora la spesa al mercato|Tiene noventa años y todavía va sola al mercado|Tem noventa anos e ainda vai sozinha ao mercado|She's ninety and still does her own shopping at the market|Sie ist neunzig und geht noch selbst auf den Markt|Ze is negentig en doet nog zelf haar boodschappen op de markt|3ndha tes3in 3am w mazal katmchi l-souk b rasha
-Peuchère, il a encore raté son train !|Poverino, ha perso di nuovo il treno!|¡Pobrecillo, ha vuelto a perder el tren!|Coitado, perdeu outra vez o comboio!|Poor thing, he's missed his train again!|Der Arme, er hat schon wieder seinen Zug verpasst!|Die arme jongen, hij heeft weer zijn trein gemist!|Meskin, fatou t-tran 3awtani!
-C'est plate, il pleut tout le week-end|Che noia, piove tutto il weekend|Qué rollo, llueve todo el fin de semana|Que seca, chove o fim de semana todo|What a drag, it's raining all weekend|So öde, es regnet das ganze Wochenende|Balen, het regent het hele weekend|Mmel hadchi, ch-chta l-weekend kamel
-Je vais chercher ma blonde en char ce soir|Stasera passo a prendere la mia ragazza in macchina|Esta noche voy a buscar a mi novia en coche|Hoje à noite vou buscar a minha namorada de carro|I'm picking up my girlfriend in the car tonight|Heute Abend hol ich meine Freundin mit dem Auto ab|Vanavond haal ik mijn vriendin op met de auto|Had l-3chiya ghadi ndouz 3la sa7bti b t-tomobil
-Il fait un cagnard pas possible, reste à l'ombre|C'è un sole che spacca, stai all'ombra|Cae un sol de justicia, quédate a la sombra|Está um calor de rachar, fica à sombra|It's absolutely scorching, stay in the shade|Die Sonne knallt, bleib im Schatten|Het is bloedheet, blijf in de schaduw|Ch-chems 7amya bezzaf, b9a f d-dell
-Il est où, le cornet ? Je n'ai plus de place dans mon sac|Dov'è il sacchetto? Non ho più posto nella borsa|¿Dónde está la bolsa? Ya no me cabe nada en el bolso|Onde está o saco? Já não tenho espaço na mala|Where's the carrier bag? There's no room left in my bag|Wo ist die Tüte? In meiner Tasche ist kein Platz mehr|Waar is het zakje? Er past niks meer in mijn tas|Fin l-mika? Ma b9atch l-blasa f sak dyali
-Il fait frette à matin, mets ta tuque !|Stamattina fa un freddo cane, mettiti il berretto!|¡Esta mañana hace un frío que pela, ponte el gorro!|Está um frio de rachar esta manhã, põe o gorro!|It's freezing this morning, put your beanie on!|Heute Morgen ist es saukalt, setz deine Mütze auf!|Het is ijskoud vanochtend, zet je muts op!|L-bard 9ari7 had s-sba7, lbes t-ta9iya dyalek!`},
+
 {n:"Double sens et jeux de mots",d:"Sous-entendus, ambiguïtés et calembours",h:160,rows:`
 un jeu de mots|un gioco di parole|un juego de palabras|um trocadilho|a pun|ein Wortspiel|een woordgrap|la3b b l-klam
 le double sens|il doppio senso|el doble sentido|o duplo sentido|a double meaning|die Doppeldeutigkeit|de dubbele betekenis|ma3na b jouj
@@ -113540,21 +113528,21 @@ async function startMode(mode){
 
 /* =================== LISTES =================== */
 function listsView(){
-  const card=(s)=>{const d=setData(s.id),m=d?mastery(d):0,n=d?.length||s.items.length;
+  const card=(s)=>{const d=setData(s.id),m=d?mastery(d):0,n=s.items.length;
     return `<button class="list-card" data-openlist="${s.id}" style="--h:${s.h}"><span class="lc-ic" data-noi18n>${s.kind==="unit"?s.lv:esc(tr(s.n).split(" ").pop().slice(0,2).toUpperCase())}</span>
-      <span class="lc-t"><b>${esc(s.n)}</b><small>${n} mots et phrases${d?"":s.gen?" · contenu local":" · contenu hors ligne"}</small><span class="qbar"><i style="width:${m/n*100}%;background:hsl(${s.h} 62% 50%)"></i></span></span></button>`};
-  return `<div class="section-head"><div><span class="eyebrow">${[...HANDSETS,...THEMES].reduce((a,s)=>a+(setData(s.id)?.length||s.items.length),0)} mots et phrases écrits à la main</span><h1>Listes de vocabulaire</h1><p class="muted">Ouvre une liste pour la lire, l'écouter, l'enregistrer ou jouer avec.</p></div></div>
+      <span class="lc-t"><b>${esc(s.n)}</b><small>${n} mots et phrases${d?"":s.gen?" · créée par Claude à la demande":" · traduite par Claude"}</small><span class="qbar"><i style="width:${m/n*100}%;background:hsl(${s.h} 62% 50%)"></i></span></span></button>`};
+  return `<div class="section-head"><div><span class="eyebrow">${[...HANDSETS,...THEMES].reduce((a,s)=>a+s.items.length,0)} mots et phrases · contenu original préservé</span><h1>Listes de vocabulaire</h1><p class="muted">Aucun remplissage automatique : chaque liste garde uniquement ses entrées d'origine et son propre thème.</p></div></div>
   <h3>Listes thématiques</h3><div class="list-grid">${THEMES.map(card).join("")}</div>
   ${LEVEL_INFO.map(x=>`<h3>Niveau ${x.id} · ${esc(x.n)}</h3><div class="list-grid">${lvUnits(x.id).map(card).join("")}</div>`).join("")}`}
 function listView(){
   const s=SETMAP[curList];if(!s)return listsView();const d=setData(s.id);const hasV=canSpeak(S.tgt);
-  const head=`<div class="section-head"><div><button class="back" data-go="lists">← Toutes les listes</button><span class="eyebrow">${s.kind==="unit"?"Niveau "+s.lv+" · unité du parcours":"Liste thématique"} · ${d.length} entrées</span><h1>${esc(s.n)}</h1><p class="muted">${esc(s.d)}</p></div></div>`;
+  const head=`<div class="section-head"><div><button class="back" data-go="lists">← Toutes les listes</button><span class="eyebrow">${s.kind==="unit"?"Niveau "+s.lv+" · unité du parcours":"Liste thématique"} · ${s.items.length} entrées</span><h1>${esc(s.n)}</h1><p class="muted">${esc(s.d)}</p></div></div>`;
   if(!d)return head+`<div class="card empty">${busy["set:"+s.id]?`<div class="spinner"></div><p>Claude traduit la liste en ${esc(L[S.tgt].n.toLowerCase())}…</p>`:`${mascot()}<p>${s.gen?`Claude crée cette unité de niveau ${s.lv} à la demande.`:`Cette liste n'existe pas encore en ${esc(L[S.tgt].n.toLowerCase())}.`}</p><button class="btn" data-act="genlist">${sz(SPARK,18)} Créer avec Claude</button>`}</div>`;
   const m=mastery(d);
   return head+`<div class="card" style="display:flex;flex-direction:column;gap:12px"><div class="qbar"><i style="width:${m/d.length*100}%"></i><small>${m} / ${d.length} déjà réussis</small></div>
     <div class="list-cta"><button class="btn good" data-learnlist="${s.id}">${sz(STAR,18)} Apprendre cette liste</button><span class="muted">6 nouveaux mots à la fois, présentés puis pratiqués</span></div>
     <div class="chips">${MODES.filter(x=>x.id!=="review").map(x=>`<button class="chip" data-listmode="${x.id}" ${x.voice&&!hasV?"disabled":""}>${x.n}</button>`).join("")}</div></div>
-  ${!handmade()&&RARE.has(S.tgt)?`<p class="muted">Langue rare ou ancienne : vérifie les formes sensibles avec une source spécialisée.</p>`:""}
+  ${!handmade()&&RARE.has(S.tgt)?`<p class="muted">Traductions créées par Claude pour une langue rare : vérifie-les avec une source spécialisée.</p>`:""}
   <div class="card"><div class="list">${d.map((it,i)=>{const sv=S.saved.some(w=>w.t===it.t&&w.lang===S.tgt),k=S.known[knownKey(it)]||0;
     return `<div class="li">${bars(strengthOf(it))}<div class="txt"><b lang="${S.tgt}">${esc(it.t)}</b><span>${esc(it.s)}${it.p?" · "+esc(it.p):""}</span></div>
     ${hasV?`<button class="icon-btn" data-lspeak="${i}" aria-label="Écouter">${SPEAK}</button>`:""}<button class="icon-btn ${sv?"on":""}" data-lsave="${i}" aria-label="Enregistrer">${sv?"★":"☆"}</button></div>`}).join("")}</div></div>`}
@@ -115694,253 +115682,27 @@ document.addEventListener('error',function(e){
   .lw-castle-landmark img,.lw-castle-landmark .fallback{height:52px!important}
 }
 </style>
+<style>
+/* CASTELLUM SAFE CASTLE UI OVERRIDE */
+.castle-safe{display:grid;gap:15px;padding:14px}.castle-safe-main{display:grid;grid-template-columns:1.08fr .92fr;gap:14px}.castle-safe-visual{position:relative;min-height:280px;border:0;padding:0;border-radius:22px;overflow:hidden;background:#0a1634;cursor:pointer}.castle-safe-visual img{width:100%;height:100%;object-fit:cover;display:block}.castle-safe-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,10,26,.04),rgba(4,10,26,.72))}.castle-safe-badge{position:absolute;z-index:2;left:14px;top:14px;background:rgba(5,16,43,.84);border:1px solid rgba(255,255,255,.16);color:white;border-radius:999px;padding:8px 12px;font-size:.74rem;font-weight:900}.castle-safe-title{position:absolute;z-index:2;left:16px;right:16px;bottom:15px;color:white}.castle-safe-title h2{font-family:Georgia,serif;font-size:1.65rem;margin:4px 0}.castle-safe-title small{color:#dce6ff}.castle-safe-side{display:grid;gap:12px}.castle-safe-box{border:1px solid var(--line);border-radius:18px;padding:14px;background:var(--card)}.castle-safe-xprow{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}.castle-safe-xprow span{color:var(--muted);font-size:.84rem}.castle-safe-road{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}.castle-safe-step{border:1px solid var(--line);border-radius:15px;padding:10px;background:var(--card);display:grid;gap:5px}.castle-safe-step b{font-size:.8rem;line-height:1.15}.castle-safe-step small{color:var(--muted);font-size:.7rem}.castle-safe-step.current{border-color:rgba(255,184,59,.6);background:rgba(255,184,59,.1)}.castle-safe-step.done{border-color:rgba(30,170,110,.35);background:rgba(30,170,110,.07)}.castle-safe-styles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.castle-safe-style{border:1px solid var(--line);border-radius:18px;padding:9px;background:var(--card);display:grid;gap:8px;text-align:left}.castle-safe-style.sel{border-color:rgba(255,184,59,.55)}.castle-safe-thumb{aspect-ratio:16/9;border-radius:13px;overflow:hidden;background:#08132f}.castle-safe-thumb img{width:100%;height:100%;object-fit:cover;display:block}.castle-safe-style b{display:block}.castle-safe-style small{color:var(--muted);font-size:.73rem}.castle-safe-choice{font-size:.7rem;font-weight:900;background:var(--soft);border-radius:999px;padding:6px 8px;text-align:center}@media(max-width:850px){.castle-safe-main{grid-template-columns:1fr}.castle-safe-styles{grid-template-columns:repeat(2,minmax(0,1fr))}.castle-safe-road{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:520px){.castle-safe-styles,.castle-safe-road{grid-template-columns:1fr}.castle-safe-visual{min-height:235px}}
+</style>
 <script>
-/* ===== CASTELLUM · CONTENU HORS LIGNE ENRICHI ===== */
 (function(){
-  const THEME_CLUSTERS=[
-    ["t0","t8","t48","t5"],
-    ["t1","t6","t27","t33","t35"],
-    ["t2","t32","t44","t38","t37"],
-    ["t3","t10","t21","t22","t23"],
-    ["t4","t15","t24","t25","t26","t39"],
-    ["t11","t12","t13","t14","t18","t19","t20","t47","t49"],
-    ["t7","t17","t22","t29","t34"],
-    ["t9","t16","t36","t42","t45"],
-    ["t28","t40","t43","t50","t53","t54"],
-    ["t30","t31","t41","t46","t57"],
-    ["t50","t51","t52","t53","t54","t55","t56","t57"]
-  ];
-  const clusterById={};
-  THEME_CLUSTERS.forEach(g=>g.forEach(id=>{if(!clusterById[id])clusterById[id]=g}));
-  const __baseSetData=setData;
-  function dedupe50(items){
-    const out=[],seen=new Set();
-    for(const it of items||[]){
-      if(!it?.s||!it?.t)continue;
-      const k=norm(it.s)+"|"+norm(it.t);
-      if(seen.has(k))continue;
-      seen.add(k);out.push(it);
-      if(out.length>=50)break;
-    }
-    return out;
-  }
-  function expandedThemeData(id){
-    const set=SETMAP[id],base=__baseSetData(id);
-    if(!set||set.kind!=="theme"||!base)return base;
-    const pool=[...base],grp=clusterById[id]||[];
-    for(const other of grp){
-      if(other===id)continue;
-      const d=__baseSetData(other);
-      if(d)pool.push(...d);
-      if(dedupe50(pool).length>=50)break;
-    }
-    if(dedupe50(pool).length<50){
-      for(const t of THEMES){
-        if(t.id===id||grp.includes(t.id))continue;
-        const d=__baseSetData(t.id);if(d)pool.push(...d);
-        if(dedupe50(pool).length>=50)break;
-      }
-    }
-    return dedupe50(pool);
-  }
-  setData=function(id){
-    const s=SETMAP[id];
-    return s?.kind==="theme"?expandedThemeData(id):__baseSetData(id);
+  if(typeof castleProgressCard!=='function'||typeof CASTLE_STYLE_DATA==='undefined')return;
+  const __castleSafeOriginal=castleProgressCard;
+  castleProgressCard=function(){
+    try{
+      const xp=Math.max(0,Math.max(S.xp,Cloud.profile?.total_xp||0));
+      const key=castleStyleKey(),c=castleV2ForXP(xp,key),next=c.next,base=CASTLE_STAGE_XP[c.index]||0;
+      const pct=next?Math.max(0,Math.min(100,Math.round((xp-base)/(next-base)*100))):100;
+      const hero=CASTLE_VISUALS[key]||castleStageVisual(key,c.index);
+      const road=c.style.stages.map((name,i)=>`<div class="castle-safe-step ${i<c.index?'done':i===c.index?'current':''}"><b>${esc(name)}</b><small>${i<c.index?'✓ Débloqué':i===c.index?'Niveau actuel':CASTLE_STAGE_XP[i].toLocaleString('fr-FR')+' XP'}</small></div>`).join('');
+      const styles=Object.entries(CASTLE_STYLE_DATA).map(([k,v])=>{const pic=CASTLE_VISUALS[k]||castleStageVisual(k,7);return `<button class="castle-safe-style ${k===key?'sel':''}" data-castle-style="${k}"><div class="castle-safe-thumb">${pic?`<img src="${pic}" alt="">`:''}</div><div><b>${esc(v.name)}</b><small>${esc(v.motto)}</small></div><span class="castle-safe-choice">${k===key?'✓ Actif':'Choisir'}</span></button>`}).join('');
+      return `<section class="card castle-safe"><div class="castle-safe-main"><button class="castle-safe-visual" data-castle-open="1">${hero?`<img src="${hero}" alt="${esc(c.style.name)} · ${esc(c.n)}">`:''}<span class="castle-safe-badge">${c.style.icon} ${esc(c.style.name)} · Niveau ${c.index+1}/8</span><span class="castle-safe-title"><small>MON CHÂTEAU</small><h2>${esc(c.n)}</h2><small>${esc(c.style.motto)}</small></span></button><div class="castle-safe-side"><div class="castle-safe-box"><div class="castle-safe-xprow"><b>${xp.toLocaleString('fr-FR')} XP</b><span>${next?`${(next-xp).toLocaleString('fr-FR')} XP avant ${esc(c.style.stages[c.index+1])}`:'Niveau maximal atteint'}</span></div><div class="qbar" style="margin-top:12px"><i style="width:${pct}%"></i></div></div><div class="castle-safe-box"><h3 style="margin:0 0 9px">Évolution</h3><div class="castle-safe-road">${road}</div></div></div></div><div><h3>Choisir mon style</h3><div class="castle-safe-styles">${styles}</div></div></section>`;
+    }catch(e){console.error('Castle safe UI',e);return __castleSafeOriginal()}
   };
-
-  // Keep vocabulary lesson gameplay on the enriched 50-entry thematic lists.
-  const __startListLesson=startListLesson;
-  startListLesson=function(id){
-    const s=SETMAP[id];
-    if(s?.kind!=="theme")return __startListLesson(id);
-    const items=setData(id);if(!items)return;
-    const unseen=items.filter(it=>!S.seen[S.tgt+it.t]);
-    if(unseen.length<3){toast("Tu as déjà vu tous ces mots : place à la révision !");openLx();startGame("review",items,allAvailableItems());return}
-    const fresh=unseen.slice(0,6),voice=canSpeak(S.tgt),steps=[];
-    fresh.forEach((it,i)=>{steps.push({k:"intro",it});steps.push(makeStep(i%2?"rev":"mc",it,items))});
-    steps.push({k:"match",its:shuffle(fresh).slice(0,5)});
-    shuffle(fresh).forEach((it,i)=>steps.push(varied(it,items,i,voice)));
-    openLx();begin({mode:"game",game:"learnlist",items,steps});
-  };
-
-  // -------- Grammaire 100 % locale --------
-  const LOCAL_GRAMMAR_NOTES={"A1": {"Les articles et le genre": "Les articles accompagnent le nom et indiquent souvent le genre et le nombre. Observe les formes utilisées devant les noms et apprends-les avec le mot, plutôt que séparément.", "Le pluriel": "Le pluriel modifie généralement le nom et parfois l'article ou l'adjectif. Repère les marques régulières, puis mémorise les formes irrégulières rencontrées dans les exemples.", "La négation": "La négation sert à nier une action, un état ou une information. Sa place dépend de la langue : observe surtout la position du marqueur négatif autour du verbe.", "Poser une question": "Une question peut être signalée par l'intonation, l'ordre des mots, un auxiliaire ou un mot interrogatif. Apprends les structures les plus fréquentes comme des modèles complets.", "Les pronoms personnels": "Les pronoms personnels remplacent les personnes ou groupes déjà connus. Leur présence, leur forme et leur place peuvent changer selon la langue et le registre.", "Les adjectifs": "Les adjectifs décrivent un nom. Selon la langue, ils peuvent s'accorder en genre et en nombre, et leur position par rapport au nom peut changer.", "Les possessifs": "Les possessifs indiquent à qui appartient une chose. Ils peuvent s'accorder avec le possesseur, avec l'objet possédé, ou avec les deux selon la langue.", "Les prépositions de lieu": "Les prépositions de lieu indiquent une position ou un déplacement. Elles s'apprennent efficacement avec des groupes complets : à la maison, dans la ville, vers la gare."}, "A2": {"Le passé": "Le passé sert à raconter une action terminée ou une situation antérieure. Distingue les formes utilisées pour les événements ponctuels de celles qui décrivent le contexte ou l'habitude.", "Le futur proche": "Le futur proche exprime une intention ou un événement attendu bientôt. Il se construit souvent avec un verbe de mouvement ou un auxiliaire suivi d'une forme verbale.", "Les comparatifs": "Le comparatif sert à comparer deux éléments : supériorité, égalité ou infériorité. Apprends aussi les formes irrégulières les plus fréquentes.", "Les pronoms compléments": "Les pronoms compléments remplacent ce qui reçoit directement ou indirectement l'action. Leur position par rapport au verbe est une difficulté importante à automatiser.", "Les verbes pronominaux": "Les verbes pronominaux se construisent avec un pronom lié au sujet. Ils sont fréquents pour les routines, les changements d'état et certaines expressions idiomatiques.", "Les adverbes de fréquence": "Les adverbes de fréquence précisent à quelle fréquence une action se produit. Leur place est souvent fixe ou très préférentielle dans la phrase."}, "B1": {"L'imparfait et le passé": "On oppose souvent un temps descriptif ou habituel à un temps qui présente les événements achevés. Le contraste entre les deux organise le récit.", "Le conditionnel": "Le conditionnel sert notamment à exprimer une hypothèse, une demande polie, un souhait ou une conséquence dépendant d'une condition.", "Les pronoms relatifs": "Les pronoms relatifs relient deux propositions et évitent de répéter un nom. Choisis-les selon la fonction du mot remplacé : sujet, objet, lieu, possession.", "Le discours indirect": "Le discours indirect rapporte les paroles de quelqu'un sans les citer exactement. Les pronoms, les repères temporels et parfois les temps verbaux peuvent changer.", "Exprimer le souhait et la volonté": "Pour exprimer désir, préférence ou volonté, certaines constructions exigent un infinitif, d'autres une proposition complète ou un mode verbal particulier.", "Les connecteurs logiques": "Les connecteurs organisent le raisonnement : cause, conséquence, opposition, addition, exemple, conclusion. Leur maîtrise rend le discours beaucoup plus naturel."}, "B2": {"Le subjonctif": "Le subjonctif apparaît dans de nombreuses langues romanes après certaines expressions de volonté, doute, émotion, nécessité ou jugement. Son emploi dépend fortement de la construction.", "La voix passive": "La voix passive met l'accent sur ce qui subit l'action plutôt que sur celui qui l'accomplit. Elle se construit souvent avec un auxiliaire et un participe.", "Les hypothèses au passé": "Les hypothèses au passé parlent d'une condition qui ne s'est pas réalisée ou dont on imagine une conséquence différente. Elles combinent généralement deux temps du passé.", "La concordance des temps": "La concordance des temps maintient une relation logique entre plusieurs actions dans une phrase complexe. Elle dépend du moment de référence choisi par le locuteur.", "Exprimer la concession": "La concession oppose deux faits sans annuler le second : malgré, bien que, même si, pourtant. Le registre et le mode verbal changent selon la structure.", "Les participes et le gérondif": "Les participes et formes proches du gérondif permettent de condenser une proposition et d'exprimer simultanéité, manière, cause ou résultat."}, "C1": {"Les registres de langue": "Le registre varie selon la relation entre les interlocuteurs, le contexte et le média. Compare les formes familières, neutres et soutenues plutôt que de chercher une seule 'bonne' formulation.", "La mise en relief": "La mise en relief sert à attirer l'attention sur un élément de la phrase. On peut modifier l'ordre, répéter, détacher ou employer une construction dédiée.", "Les connecteurs complexes": "Les connecteurs complexes structurent un raisonnement nuancé : concession, restriction, conséquence inattendue, reformulation ou transition argumentative.", "L'ordre des mots stylistique": "À niveau avancé, l'ordre des mots peut servir à créer un rythme, une emphase ou un contraste, même lorsque plusieurs ordres restent grammaticalement possibles.", "La nominalisation": "La nominalisation transforme une action ou une qualité en nom. Elle est fréquente dans les textes formels, universitaires, administratifs et journalistiques.", "Les nuances de modalité": "La modalité exprime le degré de certitude, obligation, possibilité, distance ou attitude du locuteur. Elle se construit avec verbes, adverbes, modes et tournures idiomatiques."}, "C2": {"L'argot et la langue familière": "L'argot et le familier dépendent fortement de l'âge, du milieu, de la région et de l'époque. Apprends toujours une expression avec son contexte social et son niveau de politesse.", "Les expressions figées": "Une expression figée ne se comprend pas toujours mot à mot. Sa forme est souvent peu modifiable et son emploi dépend du contexte pragmatique.", "Les temps littéraires": "Certains temps sont surtout employés dans la littérature, les récits historiques ou un registre très soutenu. Il faut surtout les reconnaître avant de chercher à les produire.", "L'ironie et les sous-entendus": "L'ironie et les sous-entendus reposent sur le contexte, l'intonation et un écart entre les mots et l'intention réelle. Leur interprétation exige des indices pragmatiques.", "Les variations régionales": "Une même langue varie selon les régions : vocabulaire, prononciation, grammaire et registre. Une forme régionale n'est pas nécessairement incorrecte.", "Les faux amis subtils": "Les faux amis subtils ont une forme proche mais des usages, connotations ou collocations différents. Compare toujours plusieurs exemples authentiques."}};
-  const __handmadeOwnFiches=ownFiches;
-  function localCorpus(lv=S.level){
-    const out=[];
-    for(const U of lvUnits(lv)){
-      const d=setData(U.id);if(d)out.push(...d);
-    }
-    if(out.length<20)out.push(...allAvailableItems());
-    return out.filter(x=>x?.t&&x?.s);
-  }
-  function localGrammarQuiz(pool){
-    const phrases=pool.filter(x=>String(x.t).trim().split(/\s+/).length>=3);
-    const wordPool=[...new Set(phrases.flatMap(x=>String(x.t).replace(/[.,!?;:()«»“”]/g," ").split(/\s+/))
-      .filter(w=>w.length>=2&&w.length<=18))];
-    const qs=[];
-    for(let i=0;i<phrases.length&&qs.length<6;i++){
-      const it=phrases[(i*3)%phrases.length];
-      const toks=String(it.t).split(/\s+/),cands=toks.map((w,j)=>({w:w.replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}'-]+$/gu,""),j}))
-        .filter(x=>x.w.length>=2&&x.w.length<=18);
-      if(!cands.length)continue;
-      const ch=cands[Math.min(cands.length-1,Math.floor(cands.length/2))];
-      const answer=ch.w;
-      const q=toks.map((w,j)=>j===ch.j?w.replace(answer,"___"):w).join(" ");
-      const dist=wordPool.filter(w=>norm(w)!==norm(answer)).slice((i*7)%Math.max(1,wordPool.length),((i*7)%Math.max(1,wordPool.length))+8);
-      const opts=[answer,...dist].filter((v,j,a)=>a.findIndex(x=>norm(x)===norm(v))===j).slice(0,4);
-      while(opts.length<4)opts.push(["de","et","que","pour"][opts.length]||"de");
-      qs.push({q,ans:answer,opts:shuffle(opts)});
-    }
-    return qs;
-  }
-  function localGrammarFiche(topic,lv=S.level){
-    const pool=localCorpus(lv);
-    const examples=pool.filter(x=>String(x.t).split(/\s+/).length>=3).slice(0,4)
-      .map(x=>`${x.t} · ${x.s}`);
-    const note=LOCAL_GRAMMAR_NOTES[lv]?.[topic]||
-      `Cette fiche explique le point « ${topic} » à partir des exemples intégrés dans Castellum Lingua. Observe la forme, la place des mots et les contrastes entre les phrases.`;
-    return {t:topic,e:note,x:examples.length?examples:["Exemples disponibles dans les unités de ce niveau."],quiz:localGrammarQuiz(pool),local:true};
-  }
-  ownFiches=function(){
-    const handmade=__handmadeOwnFiches()||[];
-    const topics=LEVEL_GTOPICS[S.level]||[];
-    const extra=topics.map(t=>localGrammarFiche(t,S.level));
-    const all=[...handmade,...extra],out=[],seen=new Set();
-    for(const f of all){
-      const k=norm(f.t);if(seen.has(k))continue;seen.add(k);out.push(f);
-    }
-    return out;
-  };
-  openFiche=function(f){
-    if(!f)return;
-    openSheet(`<div class="section-head"><div><span class="eyebrow">${f.local?"Fiche intégrée hors ligne":"Fiche de grammaire"}</span><h2>${esc(f.t)}</h2></div><button class="icon-btn" data-act="closesheet" aria-label="Fermer">${XS}</button></div>
-      <p class="lead">${esc(f.e)}</p>
-      <div class="examples">${(f.x||[]).map(x=>{const [a,b]=String(x).split(" · ");return `<div class="ex"><b lang="${S.tgt}">${esc(a)}</b>${b?`<span>${esc(b)}</span>`:""}</div>`}).join("")}</div>
-      <button class="btn good block" data-act="gramquiz">S'entraîner · ${(f.quiz||f.q||[]).length} questions</button>`);
-    openFiche.cur=f;
-  };
-  const __grammarViewOriginal=grammarView;
-  grammarView=function(){
-    const tabs=`<div class="seg tabs"><button data-gtab="grammar" aria-pressed="${gTab==="grammar"}">Grammaire</button><button data-gtab="conj" aria-pressed="${gTab==="conj"}">Conjugaison</button></div>`;
-    const head=`<div class="section-head"><div><span class="eyebrow">${esc(L[S.tgt].n)} · contenu hors ligne</span><h1>${gTab==="grammar"?"Grammaire":"Conjugaison"}</h1></div>${tabs}</div>`;
-    const lvChips=`<div class="seg lvchips">${LEVEL_INFO.map(x=>`<button data-glevel="${x.id}" aria-pressed="${S.level===x.id}">${x.id}</button>`).join("")}</div>`;
-    if(gTab==="grammar"){
-      const cards=ownFiches();
-      return head+lvChips+`<div class="list-grid">${cards.map((f,i)=>`<button class="gcard" data-gram="${i}"><span class="tag ok">Hors ligne</span><b>${esc(f.t)}</b><small class="clamp3">${esc(f.e)}</small><span class="gq">${(f.quiz||f.q||[]).length} questions</span></button>`).join("")}</div>`;
-    }
-    if(!CONJ.verbs[S.tgt])return head+lvChips+`<div class="card empty">${mascot()}<h3>Conjugaison hors ligne partielle</h3><p>Les tableaux complets ne sont pas encore intégrés pour cette langue. Aucun appel externe n'est effectué.</p></div>`;
-    const verbs=CVERBS.filter(v=>CONJ.verbs[S.tgt]?.[v]);
-    if(!verbs.includes(cVerb))cVerb=verbs[0]||"être";
-    const availTenses=["Présent","Passé"];
-    if(!availTenses.includes(cTense))cTense="Présent";
-    const c=conjData(cVerb,cTense),hasV=canSpeak(S.tgt);
-    return head+lvChips+`<div class="card" style="display:flex;flex-direction:column;gap:14px">
-      <div class="field"><label>Verbe</label><div class="chips">${verbs.map(v=>`<button class="chip ${cVerb===v?"sel":""}" data-verb="${v}">${v}</button>`).join("")}</div></div>
-      <div class="field"><label>Temps disponibles hors ligne</label><div class="seg">${availTenses.map(t=>`<button data-tense="${t}" aria-pressed="${cTense===t}">${t}</button>`).join("")}</div></div>
-      <p class="muted" style="font-size:.85rem">Ces tableaux sont intégrés directement dans l'application : aucune génération externe.</p></div>
-      ${c?`<div class="card" style="display:flex;flex-direction:column;gap:12px"><div class="section-head"><div><span class="eyebrow">${esc(cVerb)} · ${esc(cTense.toLowerCase())}</span><h2 lang="${S.tgt}">${esc(c.inf)}</h2></div><button class="btn good sm" data-act="conjquiz">S'entraîner</button></div>
-      <table class="conj"><tbody>${c.pron.map((p,i)=>`<tr><td class="muted" lang="${S.tgt}">${esc(p)}</td><td lang="${S.tgt}"><b>${esc(c.forms[i])}</b></td><td>${hasV?`<button class="icon-btn" data-say="${esc((c.pron[i].split(" /")[0].replace(/\(.*\)/,""))+" "+c.forms[i].replace(/\(.*\)/,""))}" aria-label="Écouter">${SPEAK}</button>`:""}</td></tr>`).join("")}</tbody></table>${c.note?`<p class="note-box">${esc(c.note)}</p>`:""}</div>`:
-      `<div class="card empty">${mascot()}<p>Cette forme n'est pas encore intégrée hors ligne.</p></div>`}`;
-  };
-
-  // -------- Professeur IA local / sans Claude --------
-  function tutorSearch(q){
-    const nq=norm(q),pool=allAvailableItems(),hits=[];
-    for(const it of pool){
-      const sc=Math.max(dice(nq,norm(it.s)),dice(nq,norm(it.t)));
-      if(sc>.34)hits.push([sc,it]);
-    }
-    hits.sort((a,b)=>b[0]-a[0]);
-    const out=[],seen=new Set();
-    for(const [,it] of hits){
-      const k=norm(it.s)+"|"+norm(it.t);if(seen.has(k))continue;seen.add(k);out.push(it);
-      if(out.length>=5)break;
-    }
-    return out;
-  }
-  function tutorTopic(q){
-    const nq=norm(q);let best=null,score=0;
-    for(const [lv,topics] of Object.entries(LEVEL_GTOPICS)){
-      for(const t of topics){
-        const s=dice(nq,norm(t));if(s>score){score=s;best={lv,t}}
-        for(const w of norm(t).split(" "))if(w.length>4&&nq.includes(w)&&score<.72){score=.72;best={lv,t}}
-      }
-    }
-    return score>.38?best:null;
-  }
-  function tutorConjugation(q){
-    const nq=norm(q),verbs=CVERBS.filter(v=>nq.includes(norm(v)));
-    const v=verbs[0];if(!v)return null;
-    const c=conjData(v,"Présent");if(!c)return null;
-    return `${c.inf} — présent : `+c.pron.map((p,i)=>`${p.split(" /")[0]} ${c.forms[i]}`).join(" · ");
-  }
-  function tutorRoleplay(setId,intro){
-    const d=setData(setId)||allAvailableItems();
-    const q=d.find(x=>String(x.t).includes("?"))||d.find(x=>String(x.t).split(/\s+/).length>=4)||d[0];
-    if(!q)return intro;
-    return `${intro}\n\n${q.t}\n(${q.s})\n\nRéponds dans la langue que tu apprends.`;
-  }
-  function localTutorReply(txt){
-    const q=String(txt||"").trim(),nq=norm(q);
-    if(!q)return "Écris une question et je t'aide avec le contenu intégré dans Castellum Lingua.";
-    if(/mini[- ]?test|quiz|teste[- ]?moi|test/.test(nq)){
-      const d=allAvailableItems().filter(x=>x?.s&&x?.t).slice(0,3);
-      return `Mini-test :\n1. Comment dit-on « ${d[0]?.s||"bonjour"} » ?\n2. Comment dit-on « ${d[1]?.s||"merci"} » ?\n3. Traduis : « ${d[2]?.t||"Ciao"} »`;
-    }
-    if(/cafe|restaurant|commande/.test(nq))return tutorRoleplay("t21","Je joue le serveur. On commence :");
-    if(/football|foot|match/.test(nq))return tutorRoleplay("t36","Parlons football.");
-    const conj=tutorConjugation(q);
-    if(conj&&/conjug|verbe|present/.test(nq))return conj+"\n\nEssaie maintenant d'écrire une phrase avec ce verbe.";
-    const topic=tutorTopic(q);
-    if(topic&&/gramma|regle|explique|pourquoi|subjonct|conditionnel|pluriel|negation|article|pronom|adjectif|passif|relatif|temps/.test(nq)){
-      const f=localGrammarFiche(topic.t,topic.lv),ex=(f.x||[]).slice(0,2).join(" | ");
-      return `${topic.t} : ${f.e}\n\nExemples : ${ex}\n\nJe peux aussi te faire un petit exercice sur ce point.`;
-    }
-    const hits=tutorSearch(q);
-    if(hits.length){
-      const exact=hits[0],lines=hits.slice(0,4).map(it=>`${it.s} → ${it.t}`).join("\n");
-      if(/corrige|correction|correct/.test(nq))return `Je fonctionne hors ligne et je ne peux pas garantir une correction libre comme un grand modèle. La formulation la plus proche dans mon corpus est :\n${exact.t}\n(${exact.s})\n\nFormulations proches :\n${lines}`;
-      return `J'ai trouvé dans mon corpus local :\n${lines}\n\nTu peux toucher les mots dans les listes pour les écouter et les pratiquer.`;
-    }
-    return `Je fonctionne ici sans Claude ni API externe. Je peux utiliser la grammaire, les conjugaisons, le dictionnaire et le vocabulaire déjà intégrés. Essaie par exemple : « explique le conditionnel », « conjugue être », « corrige cette phrase », « mini-test » ou donne-moi un mot précis.`;
-  }
-  teacherView=function(){
-    const msgs=chat.length?chat.map(m=>m.role==="user"?`<div class="msg me">${esc(m.content)}</div>`:`<div class="msg-ai">${mascot()}<div class="msg ai">${esc(m.content)}</div></div>`).join(""):
-      `<div class="empty">${mascot()}<h3>Professeur IA local</h3><p>Je fonctionne directement avec le contenu de Castellum Lingua : vocabulaire, grammaire, conjugaisons et exercices. Aucun compte Claude ni API externe nécessaire.</p></div>`;
-    return `<div class="section-head"><div><span class="eyebrow">100 % hors ligne · sans Claude</span><h1>Professeur IA</h1></div>${chat.length?`<button class="btn sm ghost" data-act="clearchat">Nouvelle conversation</button>`:""}</div>
-      <section class="card" style="display:flex;flex-direction:column;gap:14px">
-      <div class="chat" id="chat">${msgs}</div>
-      <div class="chips">
-        <button class="chip" data-prompt="Simule une conversation au café avec moi.">Simuler un café</button>
-        <button class="chip" data-prompt="Corrige cette phrase : ">Corriger une phrase</button>
-        <button class="chip" data-prompt="Explique-moi une règle de grammaire.">Expliquer une règle</button>
-        <button class="chip" data-prompt="Conjugue être au présent.">Conjugaison</button>
-        <button class="chip" data-prompt="Fais-moi un mini-test.">Mini-test</button>
-        <button class="chip" data-prompt="Parlons football.">Parler foot</button>
-      </div>
-      <form class="composer" id="composer"><textarea id="chatInput" rows="1" placeholder="Écris ton message…"></textarea><button class="btn" type="submit">Envoyer</button></form>
-      <p class="muted" style="font-size:.75rem">Le professeur local est rapide et privé, mais moins ouvert qu'un grand modèle génératif : il répond à partir du contenu intégré dans l'application.</p>
-      </section>`;
-  };
-
-  // Capture the teacher form before the old Claude submit handler.
-  document.addEventListener("submit",function(e){
-    if(e.target.id!=="composer")return;
-    e.preventDefault();e.stopImmediatePropagation();
-    const i=document.getElementById("chatInput"),txt=i?.value?.trim();if(!txt)return;
-    chat.push({role:"user",content:txt});
-    chat.push({role:"assistant",content:localTutorReply(txt)});
-    const d=day();d.xp+=1;addXP(1);save();
-    render();
-  },true);
-
-  // Remove Claude wording from course badges where possible.
-  levelSource=function(lv=S.level){
-    return offlineLv(S.tgt,lv)?`<span class="tag ok">Cours intégré hors ligne</span>${!handmade()&&REVIEW.has(S.tgt)?` <span class="tag ai">À faire vérifier par un locuteur</span>`:""}`:`<span class="tag ai">Contenu hors ligne partiel</span>`;
-  };
-
-  // Refresh current view with the new offline data layer.
-  try{render()}catch(e){console.warn("Castellum offline enrichment",e)}
+  try{if(typeof render==='function')render()}catch(e){console.error('Castle safe rerender',e)}
 })();
 </script>
+
+>
