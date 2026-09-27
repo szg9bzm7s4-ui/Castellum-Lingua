@@ -112301,6 +112301,140 @@ const Cloud = {
 };
 
 
+
+/* =================== CASTELLUM · NOUVEAUX PACKS HORS LIGNE =================== */
+const THEMES4=[
+{id:"t50",n:"Histoire & civilisations",d:"Empires, chronologie et patrimoine",h:36,g:"🏺",rows:`
+l'empire|l'impero|el imperio|o império|the empire|das Reich|het rijk|l-imbaratoriya
+la dynastie|la dinastia|la dinastía|a dinastia|the dynasty|die Dynastie|de dynastie|s-silala
+le royaume|il regno|el reino|o reino|the kingdom|das Königreich|het koninkrijk|l-mamlaka
+la cité|la città|la ciudad|a cidade|the city-state|der Stadtstaat|de stadstaat|l-mdina
+la conquête|la conquista|la conquista|a conquista|the conquest|die Eroberung|de verovering|l-fte7
+le traité|il trattato|el tratado|o tratado|the treaty|der Vertrag|het verdrag|l-mo3ahada
+la frontière|il confine|la frontera|a fronteira|the border|die Grenze|de grens|l-7doud
+le patrimoine|il patrimonio|el patrimonio|o património|heritage|das Kulturerbe|het erfgoed|t-tourat
+les ruines|le rovine|las ruinas|as ruínas|the ruins|die Ruinen|de ruïnes|l-atlal
+un manuscrit|un manoscritto|un manuscrito|um manuscrito|a manuscript|eine Handschrift|een manuscript|makhtouta
+une inscription|un'iscrizione|una inscripción|uma inscrição|an inscription|eine Inschrift|een inscriptie|na9ch
+Cette civilisation a duré plusieurs siècles|Questa civiltà è durata diversi secoli|Esta civilización duró varios siglos|Esta civilização durou vários séculos|This civilization lasted several centuries|Diese Zivilisation bestand mehrere Jahrhunderte|Deze beschaving bestond eeuwenlang|Had l-7adara damet 9roun
+L'empire s'étendait jusqu'à la mer|L'impero si estendeva fino al mare|El imperio se extendía hasta el mar|O império estendia-se até ao mar|The empire stretched as far as the sea|Das Reich reichte bis ans Meer|Het rijk strekte zich uit tot aan zee|L-imbaratoriya kanet wasla 7tta l-b7er
+Les archéologues ont découvert un nouveau site|Gli archeologi hanno scoperto un nuovo sito|Los arqueólogos descubrieron un nuevo yacimiento|Os arqueólogos descobriram um novo sítio|Archaeologists discovered a new site|Archäologen entdeckten eine neue Fundstätte|Archeologen ontdekten een nieuwe site|L-atariyin l9aw maw9i3 jdid
+Il faut distinguer le mythe de la source historique|Bisogna distinguere il mito dalla fonte storica|Hay que distinguir el mito de la fuente histórica|É preciso distinguir o mito da fonte histórica|We must distinguish myth from historical evidence|Man muss Mythos und historische Quelle unterscheiden|Je moet mythe en historische bron onderscheiden|Khass nfer9o bin l-ostoura w l-masdar t-tarikhi`},
+{id:"t51",n:"Philosophie & idées",d:"Raisonner, argumenter et nuancer",h:260,g:"🧠",rows:`
+la vérité|la verità|la verdad|a verdade|truth|die Wahrheit|de waarheid|l-7a9i9a
+la liberté|la libertà|la libertad|a liberdade|freedom|die Freiheit|de vrijheid|l-7orriya
+la justice|la giustizia|la justicia|a justiça|justice|die Gerechtigkeit|de rechtvaardigheid|l-3adala
+la vertu|la virtù|la virtud|a virtude|virtue|die Tugend|de deugd|l-fadila
+la conscience|la coscienza|la conciencia|a consciência|consciousness|das Bewusstsein|het bewustzijn|d-damir
+le doute|il dubbio|la duda|a dúvida|doubt|der Zweifel|de twijfel|ch-chek
+un argument|un argomento|un argumento|um argumento|an argument|ein Argument|een argument|7ojja
+une contradiction|una contraddizione|una contradicción|uma contradição|a contradiction|ein Widerspruch|een tegenspraak|tana9od
+une conséquence|una conseguenza|una consecuencia|uma consequência|a consequence|eine Folge|een gevolg|natija
+un principe|un principio|un principio|um princípio|a principle|ein Prinzip|een principe|mabda2
+Je ne suis pas convaincu par ce raisonnement|Non sono convinto da questo ragionamento|No me convence este razonamiento|Este raciocínio não me convence|I'm not convinced by this line of reasoning|Diese Argumentation überzeugt mich nicht|Deze redenering overtuigt me niet|Had t-tafkir ma 9na3nich
+Cela dépend de ce qu'on entend par liberté|Dipende da cosa intendiamo per libertà|Depende de lo que entendamos por libertad|Depende do que entendemos por liberdade|It depends on what we mean by freedom|Es hängt davon ab, was wir unter Freiheit verstehen|Het hangt ervan af wat we onder vrijheid verstaan|Kayt3elle9 b chno kan9sdo b l-7orriya
+Il faut distinguer cause et corrélation|Bisogna distinguere causa e correlazione|Hay que distinguir causa y correlación|É preciso distinguir causa e correlação|We must distinguish causation from correlation|Man muss Ursache und Korrelation unterscheiden|Je moet oorzaak en correlatie onderscheiden|Khass nfer9o bin s-sabab w t-tarabot
+Je comprends l'objection, mais elle ne répond pas au fond|Capisco l'obiezione, ma non risponde al punto centrale|Entiendo la objeción, pero no responde al fondo|Percebo a objeção, mas não responde ao essencial|I understand the objection, but it misses the main point|Ich verstehe den Einwand, aber er trifft den Kern nicht|Ik begrijp het bezwaar, maar het raakt de kern niet|Fhemt l-i3tirad walakin ma kayjawbch 3la l-jawhar
+Cette idée mérite d'être examinée sans caricature|Questa idea merita di essere esaminata senza caricature|Esta idea merece analizarse sin caricaturas|Esta ideia merece ser analisada sem caricaturas|This idea deserves to be examined without caricature|Diese Idee verdient eine sachliche Prüfung|Dit idee verdient onderzoek zonder karikatuur|Had l-fikra khassha ttdres bla tcharbik`},
+{id:"t52",n:"Mythologie & légendes",d:"Dieux, héros et récits fondateurs",h:286,g:"⚡",rows:`
+un dieu|un dio|un dios|um deus|a god|ein Gott|een god|ilah
+une déesse|una dea|una diosa|uma deusa|a goddess|eine Göttin|een godin|ilaha
+un héros|un eroe|un héroe|um herói|a hero|ein Held|een held|batal
+un oracle|un oracolo|un oráculo|um oráculo|an oracle|ein Orakel|een orakel|3erraf
+un temple|un tempio|un templo|um templo|a temple|ein Tempel|een tempel|ma3bad
+le destin|il destino|el destino|o destino|fate|das Schicksal|het lot|l-maktoub
+un monstre|un mostro|un monstruo|um monstro|a monster|ein Monster|een monster|wa7ch
+une prophétie|una profezia|una profecía|uma profecia|a prophecy|eine Prophezeiung|een voorspelling|nبوءة
+un sacrifice|un sacrificio|un sacrificio|um sacrifício|a sacrifice|ein Opfer|een offer|9orban
+le monde souterrain|gli inferi|el inframundo|o submundo|the underworld|die Unterwelt|de onderwereld|3alam ta7t l-ard
+Le héros doit accomplir une épreuve|L'eroe deve superare una prova|El héroe debe superar una prueba|O herói tem de superar uma prova|The hero must complete a trial|Der Held muss eine Prüfung bestehen|De held moet een beproeving doorstaan|L-batal khasso ydouz mn imti7an
+Selon la légende, la ville fut fondée par deux frères|Secondo la leggenda, la città fu fondata da due fratelli|Según la leyenda, la ciudad fue fundada por dos hermanos|Segundo a lenda, a cidade foi fundada por dois irmãos|According to legend, the city was founded by two brothers|Der Legende nach wurde die Stadt von zwei Brüdern gegründet|Volgens de legende werd de stad door twee broers gesticht|7sab l-ostoura l-mdina bnahا jouj khout
+Les mythes expliquaient souvent l'origine du monde|I miti spiegavano spesso l'origine del mondo|Los mitos explicaban a menudo el origen del mundo|Os mitos explicavam muitas vezes a origem do mundo|Myths often explained the origin of the world|Mythen erklärten oft den Ursprung der Welt|Mythen verklaarden vaak het ontstaan van de wereld|L-asatir kanou kaychra7o mnin ja l-3alam
+Cette histoire existe sous plusieurs versions|Questa storia esiste in diverse versioni|Esta historia existe en varias versiones|Esta história existe em várias versões|This story exists in several versions|Diese Geschichte existiert in mehreren Fassungen|Dit verhaal bestaat in verschillende versies|Had l-7kaya 3andha بزاف d n-nsakh
+Ce symbole avait une fonction religieuse et politique|Questo simbolo aveva una funzione religiosa e politica|Este símbolo tenía una función religiosa y política|Este símbolo tinha uma função religiosa e política|This symbol had both a religious and political function|Dieses Symbol hatte eine religiöse und politische Funktion|Dit symbool had een religieuze en politieke functie|Had r-ramz kan 3ando dawور dini w siyasi`},
+{id:"t53",n:"Musée & patrimoine",d:"Comprendre une œuvre et visiter un site",h:28,g:"🖼️",rows:`
+une exposition|una mostra|una exposición|uma exposição|an exhibition|eine Ausstellung|een tentoonstelling|ma3rad
+une sculpture|una scultura|una escultura|uma escultura|a sculpture|eine Skulptur|een beeldhouwwerk|na7t
+une fresque|un affresco|un fresco|um fresco|a fresco|ein Fresko|een fresco|jدارية
+une mosaïque|un mosaico|un mosaico|um mosaico|a mosaic|ein Mosaik|een mozaïek|فسيفساء
+une poterie|una ceramica|una cerámica|uma cerâmica|pottery|Keramik|aardewerk|fekhar
+une pièce de monnaie|una moneta|una moneda|uma moeda|a coin|eine Münze|een munt|9et3a na9diya
+une époque|un'epoca|una época|uma época|an era|eine Epoche|een tijdperk|3asr
+une restauration|un restauro|una restauración|um restauro|restoration|eine Restaurierung|een restauratie|ترميم
+le guide|la guida|el guía|o guia|the guide|der Führer|de gids|morchid
+l'entrée|l'ingresso|la entrada|a entrada|the entrance|der Eingang|de ingang|d-dkhoul
+De quelle époque date cette œuvre ?|Di che epoca è quest'opera?|¿De qué época es esta obra?|De que época é esta obra?|What period is this work from?|Aus welcher Epoche stammt dieses Werk?|Uit welke periode komt dit werk?|Mn ay 3asr had l-3amal?
+Cette salle est consacrée à l'Antiquité|Questa sala è dedicata all'Antichità|Esta sala está dedicada a la Antigüedad|Esta sala é dedicada à Antiguidade|This room is devoted to Antiquity|Dieser Saal ist der Antike gewidmet|Deze zaal is gewijd aan de oudheid|Had s-sala mخصصa l-l3osour l-9dima
+La restauration a révélé les couleurs originales|Il restauro ha rivelato i colori originali|La restauración reveló los colores originales|O restauro revelou as cores originais|The restoration revealed the original colours|Die Restaurierung zeigte die ursprünglichen Farben|De restauratie onthulde de oorspronkelijke kleuren|T-tarmim بان bih l-alwan l-asliya
+Peut-on prendre des photos sans flash ?|Si possono fare foto senza flash?|¿Se pueden hacer fotos sin flash?|Podemos tirar fotografias sem flash?|Can we take photos without flash?|Darf man ohne Blitz fotografieren?|Mogen we foto's maken zonder flits?|Momkin ntswرو bla flash?
+Le site est classé au patrimoine mondial|Il sito è patrimonio mondiale|El sitio es patrimonio mundial|O sítio é património mundial|The site is a World Heritage Site|Die Stätte gehört zum Welterbe|De site is werelderfgoed|Had l-maw9i3 mn t-tourat l-3alami`},
+{id:"t54",n:"Diplomatie & relations internationales",d:"Négocier, coopérer et analyser",h:210,g:"🌍",rows:`
+un ambassadeur|un ambasciatore|un embajador|um embaixador|an ambassador|ein Botschafter|een ambassadeur|safir
+une alliance|un'alleanza|una alianza|uma aliança|an alliance|ein Bündnis|een alliantie|ta7alof
+un cessez-le-feu|un cessate il fuoco|un alto el fuego|um cessar-fogo|a ceasefire|ein Waffenstillstand|een staakt-het-vuren|wa9f itla9 n-nar
+une négociation|un negoziato|una negociación|uma negociação|a negotiation|eine Verhandlung|een onderhandeling|mofawadat
+un sommet|un vertice|una cumbre|uma cimeira|a summit|ein Gipfeltreffen|een top|9imma
+une résolution|una risoluzione|una resolución|uma resolução|a resolution|eine Resolution|een resolutie|9arar
+un partenaire|un partner|un socio|um parceiro|a partner|ein Partner|een partner|charik
+une tension|una tensione|una tensión|uma tensão|tension|eine Spannung|spanning|tawattor
+un compromis|un compromesso|un compromiso|um compromisso|a compromise|ein Kompromiss|een compromis|حل وسط
+la souveraineté|la sovranità|la soberanía|a soberania|sovereignty|die Souveränität|de soevereiniteit|siyada
+Les deux parties ont repris les négociations|Le due parti hanno ripreso i negoziati|Las dos partes reanudaron las negociaciones|As duas partes retomaram as negociações|The two sides resumed negotiations|Beide Seiten nahmen die Verhandlungen wieder auf|Beide partijen hervatten de onderhandelingen|Jouj l-atraf رجعو l-mofawadat
+Il faut trouver un compromis acceptable|Bisogna trovare un compromesso accettabile|Hay que encontrar un compromiso aceptable|É preciso encontrar um compromisso aceitável|We need to find an acceptable compromise|Wir müssen einen akzeptablen Kompromiss finden|We moeten een aanvaardbaar compromis vinden|Khassna nl9aw حل وسط ma9boul
+Le sommet aura lieu le mois prochain|Il vertice si terrà il mese prossimo|La cumbre tendrá lugar el mes que viene|A cimeira terá lugar no próximo mês|The summit will take place next month|Der Gipfel findet nächsten Monat statt|De top vindt volgende maand plaats|L-9imma ghadi tkoun ch-chher jay
+La déclaration commune reste volontairement vague|La dichiarazione congiunta resta volutamente vaga|La declaración conjunta sigue siendo deliberadamente vaga|A declaração conjunta continua deliberadamente vaga|The joint statement remains deliberately vague|Die gemeinsame Erklärung bleibt bewusst vage|De gezamenlijke verklaring blijft bewust vaag|L-bayan l-moshtarak ba9i 3amdan غامض
+La confiance se construit sur le long terme|La fiducia si costruisce nel lungo periodo|La confianza se construye a largo plazo|A confiança constrói-se a longo prazo|Trust is built over the long term|Vertrauen entsteht langfristig|Vertrouwen bouw je op lange termijn op|T-ti9a katbna 3la l-moda t-twila`},
+{id:"t55",n:"Littérature & style",d:"Lire, commenter et écrire avec nuance",h:330,g:"📜",rows:`
+un roman|un romanzo|una novela|um romance|a novel|ein Roman|een roman|riwaya
+un poème|una poesia|un poema|um poema|a poem|ein Gedicht|een gedicht|9asida
+un narrateur|un narratore|un narrador|um narrador|a narrator|ein Erzähler|een verteller|rawi
+une métaphore|una metafora|una metáfora|uma metáfora|a metaphor|eine Metapher|een metafoor|isti3ara
+un personnage|un personaggio|un personaje|uma personagem|a character|eine Figur|een personage|chakhsia
+une intrigue|una trama|una trama|um enredo|a plot|eine Handlung|een plot|7abaka
+le ton|il tono|el tono|o tom|the tone|der Ton|de toon|n-nabra
+le rythme|il ritmo|el ritmo|o ritmo|the rhythm|der Rhythmus|het ritme|l-i9a3
+un sous-entendu|un sottinteso|un sobreentendido|um subentendido|an implication|eine Andeutung|een toespeling|ma3na mkhbi
+une citation|una citazione|una cita|uma citação|a quotation|ein Zitat|een citaat|i9tibas
+Le narrateur n'est pas forcément fiable|Il narratore non è necessariamente affidabile|El narrador no es necesariamente fiable|O narrador não é necessariamente fiável|The narrator is not necessarily reliable|Der Erzähler ist nicht unbedingt zuverlässig|De verteller is niet noodzakelijk betrouwbaar|R-rawi machi darori ykoun موثوق
+Cette image revient comme un motif tout au long du texte|Questa immagine ritorna come motivo lungo tutto il testo|Esta imagen vuelve como motivo a lo largo del texto|Esta imagem regressa como motivo ao longo do texto|This image returns as a motif throughout the text|Dieses Bild kehrt als Motiv im ganzen Text wieder|Dit beeld keert als motief terug doorheen de tekst|Had s-sora kat3awed f n-nass kaml
+Le style est volontairement sobre et précis|Lo stile è volutamente sobrio e preciso|El estilo es deliberadamente sobrio y preciso|O estilo é deliberadamente sóbrio e preciso|The style is deliberately restrained and precise|Der Stil ist bewusst nüchtern und präzise|De stijl is bewust sober en precies|L-osloub 3amdan basit w da9i9
+Je préfère cette traduction, elle garde mieux le rythme|Preferisco questa traduzione, conserva meglio il ritmo|Prefiero esta traducción, conserva mejor el ritmo|Prefiro esta tradução, mantém melhor o ritmo|I prefer this translation; it preserves the rhythm better|Ich bevorzuge diese Übersetzung, sie bewahrt den Rhythmus besser|Ik verkies deze vertaling; ze bewaart het ritme beter|Kanfdal had t-tarjama hit kat7fed 3la l-i9a3
+Le dernier paragraphe change complètement notre lecture|L'ultimo paragrafo cambia completamente la nostra lettura|El último párrafo cambia por completo nuestra lectura|O último parágrafo muda completamente a nossa leitura|The final paragraph completely changes our reading|Der letzte Absatz verändert unsere Lesart völlig|De laatste alinea verandert onze lezing volledig|L-fa9ra l-akhira katbdel l-fahm kaml`},
+{id:"t56",n:"Étymologie & racines",d:"Comprendre comment les mots voyagent",h:172,g:"🌱",rows:`
+une racine|una radice|una raíz|uma raiz|a root|eine Wortwurzel|een woordstam|jذر
+un préfixe|un prefisso|un prefijo|um prefixo|a prefix|ein Präfix|een voorvoegsel|سابقة
+un suffixe|un suffisso|un sufijo|um sufixo|a suffix|ein Suffix|een achtervoegsel|لاحقة
+un emprunt|un prestito|un préstamo|um empréstimo|a loanword|ein Lehnwort|een leenwoord|kalma mستعارة
+un cognat|un termine affine|un cognado|um cognato|a cognate|ein verwandtes Wort|een verwant woord|kalma qriba
+le sens|il significato|el significado|o significado|meaning|die Bedeutung|de betekenis|l-ma3na
+l'évolution|l'evoluzione|la evolución|a evolução|evolution|die Entwicklung|de evolutie|t-tatawwor
+le latin|il latino|el latín|o latim|Latin|Latein|Latijn|latiniya
+le grec ancien|il greco antico|el griego antiguo|o grego antigo|Ancient Greek|Altgriechisch|Oudgrieks|l-younaniya l-9dima
+une famille de mots|una famiglia di parole|una familia de palabras|uma família de palavras|a word family|eine Wortfamilie|een woordfamilie|3a2ila dyal l-kalimat
+Ces deux mots viennent de la même racine|Queste due parole vengono dalla stessa radice|Estas dos palabras vienen de la misma raíz|Estas duas palavras vêm da mesma raiz|These two words come from the same root|Diese beiden Wörter haben dieselbe Wurzel|Deze twee woorden komen uit dezelfde stam|Had jouj l-kalimat jayyin mn nafs j-jder
+Ce mot est entré dans la langue par l'arabe|Questa parola è entrata nella lingua attraverso l'arabo|Esta palabra entró en la lengua a través del árabe|Esta palavra entrou na língua através do árabe|This word entered the language through Arabic|Dieses Wort kam über das Arabische in die Sprache|Dit woord kwam via het Arabisch in de taal|Had l-kalma dkhlat l-logha mn l-3arbiya
+Le sens a changé au fil des siècles|Il significato è cambiato nel corso dei secoli|El significado cambió a lo largo de los siglos|O significado mudou ao longo dos séculos|The meaning changed over the centuries|Die Bedeutung hat sich im Laufe der Jahrhunderte verändert|De betekenis veranderde door de eeuwen heen|L-ma3na تبدل m3a l-9roun
+On retrouve cette racine dans plusieurs langues|Ritroviamo questa radice in diverse lingue|Esta raíz aparece en varias lenguas|Esta raiz aparece em várias línguas|This root appears in several languages|Diese Wurzel findet sich in mehreren Sprachen|Deze stam komt in meerdere talen voor|Kanl9aw had j-jder f بزاف d l-loghat
+L'étymologie aide à mémoriser le vocabulaire|L'etimologia aiuta a memorizzare il vocabolario|La etimología ayuda a memorizar vocabulario|A etimologia ajuda a memorizar vocabulário|Etymology helps you remember vocabulary|Etymologie hilft beim Vokabellernen|Etymologie helpt woordenschat onthouden|L-etimologia kat3awn 3la 7fed l-kalimat`},
+{id:"t57",n:"Curiosités linguistiques",d:"Faux amis, registres et expressions",h:52,g:"🧩",rows:`
+un faux ami|un falso amico|un falso amigo|um falso amigo|a false friend|ein falscher Freund|een valse vriend|kalma katghlet
+un dialecte|un dialetto|un dialecto|um dialeto|a dialect|ein Dialekt|een dialect|lahja
+un registre soutenu|un registro formale|un registro formal|um registo formal|formal register|gehobene Sprache|formeel register|osloub رسمي
+un mot familier|una parola colloquiale|una palabra coloquial|uma palavra coloquial|a colloquial word|ein umgangssprachliches Wort|een informeel woord|kalma darija
+une expression idiomatique|un'espressione idiomatica|una expresión idiomática|uma expressão idiomática|an idiom|eine Redewendung|een uitdrukking|ta3bir
+la prononciation|la pronuncia|la pronunciación|a pronúncia|pronunciation|die Aussprache|de uitspraak|n-no9
+l'accent|l'accento|el acento|o sotaque|the accent|der Akzent|het accent|l-lahja
+une nuance|una sfumatura|un matiz|uma nuance|a nuance|eine Nuance|een nuance|far9 sghir
+un proverbe|un proverbio|un refrán|um provérbio|a proverb|ein Sprichwort|een spreekwoord|mtal
+une traduction littérale|una traduzione letterale|una traducción literal|uma tradução literal|a literal translation|eine wörtliche Übersetzung|een letterlijke vertaling|tarjama 7arfiya
+Cette expression ne se traduit pas mot à mot|Questa espressione non si traduce parola per parola|Esta expresión no se traduce palabra por palabra|Esta expressão não se traduz palavra por palavra|This expression cannot be translated word for word|Diese Wendung lässt sich nicht Wort für Wort übersetzen|Deze uitdrukking kun je niet woord voor woord vertalen|Had t-ta3bir ma kayttrjamch kalma b kalma
+Le sens dépend beaucoup du contexte|Il significato dipende molto dal contesto|El significado depende mucho del contexto|O significado depende muito do contexto|Meaning depends heavily on context|Die Bedeutung hängt stark vom Kontext ab|De betekenis hangt sterk af van de context|L-ma3na kayt3elle9 بزاف b s-siya9
+Ce mot sonne plus naturel à l'oral|Questa parola suona più naturale nel parlato|Esta palabra suena más natural al hablar|Esta palavra soa mais natural na fala|This word sounds more natural in speech|Dieses Wort klingt mündlich natürlicher|Dit woord klinkt natuurlijker in spreektaal|Had l-kalma katji tabi3iya aktar f l-hdra
+Attention : ce mot est poli dans un pays et familier dans un autre|Attenzione: questa parola è cortese in un paese e colloquiale in un altro|Ojo: esta palabra es cortés en un país y coloquial en otro|Atenção: esta palavra é educada num país e informal noutro|Careful: this word is polite in one country and informal in another|Achtung: Dieses Wort ist in einem Land höflich und in einem anderen umgangssprachlich|Let op: dit woord is in het ene land beleefd en in het andere informeel|Rdd bal: had l-kalma m7trma f blad w 3adiya f blad akhor
+Les langues changent constamment|Le lingue cambiano continuamente|Las lenguas cambian constantemente|As línguas mudam constantemente|Languages are constantly changing|Sprachen verändern sich ständig|Talen veranderen voortdurend|L-loghat kaytbddlou dima`}
+];
+THEMES.push(...THEMES4);
+
 THEMES.push(...THEMES2,...THEMES3);
 const BUILT={};Object.entries(EXTRA_A1).forEach(([lang,txt])=>{const lines=txt.trim().split("\n").map(l=>{const [t,p]=l.split("|");return {t:t.trim(),p:(p||"").trim()}});for(let u=0;u<10;u++)BUILT[`${lang}>u${u}`]=lines.slice(u*12,u*12+12)});
 Object.entries(TR).forEach(([lang,sets])=>Object.entries(sets).forEach(([id,txt])=>{BUILT[`${lang}>${id}`]=txt.trim().split("\n").map(l=>{const i=l.indexOf("|");return i<0?{t:l.trim(),p:""}:{t:l.slice(0,i).trim(),p:l.slice(i+1).trim()}})}));
@@ -112324,7 +112458,7 @@ const SETMAP=Object.fromEntries(SETS.map(s=>[s.id,s]));
 const KEY="castellum-lingua-v2";
 const dk=d=>d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
 const todayKey=()=>dk(new Date());
-const DEF={onboarded:false,src:"fr",tgt:"it",goal:20,xp:0,hearts:5,heartsAt:Date.now(),days:{},saved:[],packs:{},done:{},sound:true,lessons:0,seen:{},known:{},best:{},playSet:"learned",level:"A1",srs:{},tips:{},xpBy:{},lvBy:{},resume:{}};
+const DEF={onboarded:false,src:"fr",tgt:"it",goal:20,xp:0,hearts:5,heartsAt:Date.now(),days:{},saved:[],packs:{},done:{},sound:true,lessons:0,seen:{},known:{},best:{},playSet:"learned",level:"A1",castleStyle:"medieval",srs:{},tips:{},xpBy:{},lvBy:{},resume:{}};
 let S=(()=>{try{const r=localStorage.getItem(KEY);return r?Object.assign(structuredClone(DEF),JSON.parse(r)):structuredClone(DEF)}catch(e){return structuredClone(DEF)}})();
 if(!S.xpBy)S.xpBy={};if(!S.lvBy)S.lvBy={};if(!S.resume)S.resume={};
 if(!Object.keys(S.xpBy).length&&S.xp)S.xpBy[S.tgt]=S.xp;if(!S.lvBy[S.tgt])S.lvBy[S.tgt]=S.level;
@@ -113628,7 +113762,7 @@ function vocabRows(state){const out=[];Object.entries(state.srs||{}).forEach(([k
   out.push({language_id:lang,source_language:src,word_id:t.slice(0,300),prompt:(e.s||"").slice(0,300)||null,translit:(e.p||"").slice(0,300)||null,mastery_level:Math.min(6,Math.max(0,e.b|0)),
     correct_answers:known,wrong_answers:e.err||0,last_reviewed_at:new Date(Math.max(0,due-(SRS_INT[e.b]||0))).toISOString(),next_review_at:new Date(due).toISOString(),sig:`${e.b|0}|${due}|${e.err||0}|${known}`})});return out}
 function savedRows(state){return (state.saved||[]).map(w=>({language_id:w.lang,word:String(w.t).slice(0,300),translation:w.s?String(w.s).slice(0,300):null,translit:w.p?String(w.p).slice(0,300):null}))}
-function settingsOf(state){return {src:state.src,goal:state.goal,sound:state.sound,tgt:state.tgt,onboarded:!!state.onboarded}}
+function settingsOf(state){return {src:state.src,goal:state.goal,sound:state.sound,tgt:state.tgt,onboarded:!!state.onboarded,castleStyle:state.castleStyle||"medieval"}}
 function cloudLocalState(){const levels={...S.lvBy};levels[S.tgt]=S.level;return {settings:settingsOf(S),levels,saved:savedRows(S),vocab:vocabRows(S)}}
 window.cloudLocalState=cloudLocalState;
 function cloudAfterSave(){if(Cloud.signedIn&&!hydrating)Cloud.schedule()}
@@ -113639,7 +113773,7 @@ function hydrate(snap){hydrating=true;try{
   const uid=Cloud.user.id,cache=loadState(KEY+":"+uid);const guest=S;
   const p=snap.profile||{},set=p.settings||{};
   const base=cache||Object.assign(structuredClone(DEF),{src:guest.src,tgt:guest.tgt,goal:guest.goal,sound:guest.sound});
-  if(set.src)base.src=set.src;if(set.goal)base.goal=set.goal;if(typeof set.sound==="boolean")base.sound=set.sound;
+  if(set.src)base.src=set.src;if(set.goal)base.goal=set.goal;if(typeof set.sound==="boolean")base.sound=set.sound;if(set.castleStyle)base.castleStyle=set.castleStyle;
   base.xp=p.total_xp||0;base.xpBy={};base.lvBy={};
   const langs=[...snap.languages].sort((a,b)=>String(b.updated_at).localeCompare(String(a.updated_at)));
   langs.forEach(r=>{base.xpBy[r.language_id]=r.xp;base.lvBy[r.language_id]=r.current_level});
@@ -114002,6 +114136,54 @@ finish = function(){
   }
 };
 /* === END SAFE PATCH === */
+
+
+/* =================== CASTELLUM SPECTACULAR · SAFE FEATURE PACK =================== */
+const CASTLE_STYLE_DATA={
+  occidental:{name:"Occidental",icon:"🦁",motto:"Élégance & tradition",stages:["Manoir","Château","Palais","Cité royale"],arts:["🏡","🏰","🏛️","🌉"]},
+  medieval:{name:"Médiéval",icon:"🏰",motto:"Puissance & défense",stages:["Tour fortifiée","Donjon","Forteresse","Citadelle"],arts:["🗼","🏰","🏯","🛡️"]},
+  oriental:{name:"Oriental",icon:"🕌",motto:"Raffinement & splendeur",stages:["Pavillon","Palais oriental","Forteresse orientale","Cité impériale"],arts:["🌴","🕌","🏯","✨"]},
+  romain:{name:"Romain",icon:"🏛️",motto:"Ordre & grandeur",stages:["Villa fortifiée","Castrum","Palais romain","Complexe impérial"],arts:["🏡","🛡️","🏛️","🦅"]},
+  grec:{name:"Grec",icon:"🏺",motto:"Harmonie & savoir",stages:["Maison noble","Acropole fortifiée","Palais hellénique","Cité sacrée"],arts:["🏠","⛰️","🏛️","🏺"]}
+};
+const CASTLE_STAGE_XP=[0,500,4000,25000];
+function castleStyleKey(p){return (p?.castle_style||p?.settings?.castleStyle||S.castleStyle||"medieval") in CASTLE_STYLE_DATA?(p?.castle_style||p?.settings?.castleStyle||S.castleStyle||"medieval"):"medieval"}
+function castleV2ForXP(xp,styleKey){xp=Math.max(0,Number(xp)||0);const key=(styleKey&&CASTLE_STYLE_DATA[styleKey])?styleKey:"medieval",style=CASTLE_STYLE_DATA[key];let i=0;for(let j=0;j<CASTLE_STAGE_XP.length;j++)if(xp>=CASTLE_STAGE_XP[j])i=j;return {key,style,index:i,xp:CASTLE_STAGE_XP[i],next:CASTLE_STAGE_XP[i+1]??null,n:style.stages[i],e:style.arts[i]}}
+castleLevelForXP=function(xp,styleKey){return castleV2ForXP(xp,styleKey||S.castleStyle)};
+castleProgressCard=function(){
+  const xp=Math.max(S.xp,Cloud.profile?.total_xp||0),key=castleStyleKey(),c=castleV2ForXP(xp,key),next=c.next,base=CASTLE_STAGE_XP[c.index],pct=next?Math.max(0,Math.min(100,Math.round((xp-base)/(next-base)*100))):100;
+  const styles=Object.entries(CASTLE_STYLE_DATA).map(([k,v])=>`<button class="castle-style ${k===key?'sel':''}" data-castle-style="${k}"><span class="cs-icon">${v.icon}</span><b>${v.name}</b><small>${v.motto}</small></button>`).join('');
+  const road=c.style.stages.map((n,i)=>`<div class="castle-stage ${i===c.index?'current':''} ${xp<CASTLE_STAGE_XP[i]?'locked':''}"><span class="stage-art">${c.style.arts[i]}</span><b>${n}</b><small>${CASTLE_STAGE_XP[i].toLocaleString('fr-FR')} XP</small></div>`).join('');
+  return `<section class="card castle-v2"><div class="castle-v2-top"><div class="castle-v2-emblem">${c.e}</div><div class="castle-v2-main"><span class="eyebrow">Mon château · ${c.style.name}</span><h2>${c.n}</h2><p class="muted">${c.style.motto}. Choisis l'univers architectural que tu veux faire évoluer.</p><div class="castle-v2-bar"><i style="width:${pct}%"></i></div><div class="castle-v2-xp"><b>${xp.toLocaleString('fr-FR')} XP</b><span>${next?`encore ${(next-xp).toLocaleString('fr-FR')} XP → ${c.style.stages[c.index+1]}`:'Domaine au niveau maximum 👑'}</span></div></div></div><details class="castle-style-picker"><summary>🏰 Choisir mon style de château <span>⌄</span></summary><div class="castle-style-grid">${styles}</div><div class="castle-stage-road">${road}</div></details></section>`;
+};
+
+// Make the league reflect the chosen architecture when the dashboard provides castle_style.
+const __socialTabViewCastle=socialTabView;
+socialTabView=function(tab,D){
+  if(tab!=='league')return __socialTabViewCastle(tab,D);
+  const friends=D.friends||[],me={id:Cloud.user?.id,display_name:Cloud.profile?.display_name||'Moi',username:Cloud.profile?.username||'',avatar_url:Cloud.profile?.avatar_url||'',weekly_xp:D.me_weekly_xp||0,total_xp:Cloud.profile?.total_xp||S.xp,current_streak:Cloud.profile?.current_streak||streak(),castle_style:S.castleStyle||'medieval',is_me:true};
+  const rows=[me,...friends].sort((a,b)=>(b.weekly_xp||0)-(a.weekly_xp||0));
+  return `<section class="card"><div class="section-head"><div><h2>🏆 Ligue des amis</h2><p class="muted">XP depuis lundi · style et évolution du château visibles</p></div><button class="btn sm ghost" data-social="refresh">↻</button></div><div>${rows.map((p,i)=>{const key=(p.castle_style&&CASTLE_STYLE_DATA[p.castle_style])?p.castle_style:'medieval',c=castleV2ForXP(p.total_xp||0,key);return `<div class="rank-row"><div class="rank-pos">${i<3?['🥇','🥈','🥉'][i]:i+1}</div>${socialAvatar(p,38)}<div>${socialName(p)}<span class="fr-meta">${c.e} ${c.style.name} · ${c.n} · 🔥 ${p.current_streak||0} · ⚡ ${p.total_xp||0} XP${p.is_me?' · toi':''}</span></div><div class="rank-xp"><b>${p.weekly_xp||0}</b><small>XP semaine</small></div></div>`}).join('')}</div>${friends.length===0?`<p class="social-note">Ajoute au moins un ami pour créer ta propre ligue privée.</p>`:''}</section>`;
+};
+
+// Capitales du monde: standalone, no dependency on the current language pack.
+const CAPITALS_WORLD=[
+ ['🇫🇷','France','Paris'],['🇮🇹','Italie','Rome'],['🇪🇸','Espagne','Madrid'],['🇵🇹','Portugal','Lisbonne'],['🇧🇪','Belgique','Bruxelles'],['🇳🇱','Pays-Bas','Amsterdam'],['🇩🇪','Allemagne','Berlin'],['🇦🇹','Autriche','Vienne'],['🇨🇭','Suisse','Berne'],['🇬🇧','Royaume-Uni','Londres'],['🇮🇪','Irlande','Dublin'],['🇳🇴','Norvège','Oslo'],['🇸🇪','Suède','Stockholm'],['🇩🇰','Danemark','Copenhague'],['🇫🇮','Finlande','Helsinki'],['🇮🇸','Islande','Reykjavik'],['🇵🇱','Pologne','Varsovie'],['🇨🇿','Tchéquie','Prague'],['🇸🇰','Slovaquie','Bratislava'],['🇭🇺','Hongrie','Budapest'],['🇷🇴','Roumanie','Bucarest'],['🇧🇬','Bulgarie','Sofia'],['🇬🇷','Grèce','Athènes'],['🇭🇷','Croatie','Zagreb'],['🇸🇮','Slovénie','Ljubljana'],['🇷🇸','Serbie','Belgrade'],['🇦🇱','Albanie','Tirana'],['🇺🇦','Ukraine','Kyiv'],['🇱🇹','Lituanie','Vilnius'],['🇱🇻','Lettonie','Riga'],['🇪🇪','Estonie','Tallinn'],['🇹🇷','Turquie','Ankara'],['🇲🇦','Maroc','Rabat'],['🇩🇿','Algérie','Alger'],['🇹🇳','Tunisie','Tunis'],['🇪🇬','Égypte','Le Caire'],['🇸🇳','Sénégal','Dakar'],['🇳🇬','Nigeria','Abuja'],['🇰🇪','Kenya','Nairobi'],['🇪🇹','Éthiopie','Addis-Abeba'],['🇿🇦','Afrique du Sud','Pretoria'],['🇸🇦','Arabie saoudite','Riyad'],['🇦🇪','Émirats arabes unis','Abou Dabi'],['🇮🇱','Israël','Jérusalem'],['🇯🇴','Jordanie','Amman'],['🇱🇧','Liban','Beyrouth'],['🇮🇷','Iran','Téhéran'],['🇮🇶','Irak','Bagdad'],['🇮🇳','Inde','New Delhi'],['🇵🇰','Pakistan','Islamabad'],['🇧🇩','Bangladesh','Dacca'],['🇳🇵','Népal','Katmandou'],['🇨🇳','Chine','Pékin'],['🇯🇵','Japon','Tokyo'],['🇰🇷','Corée du Sud','Séoul'],['🇲🇳','Mongolie','Oulan-Bator'],['🇹🇭','Thaïlande','Bangkok'],['🇻🇳','Vietnam','Hanoï'],['🇵🇭','Philippines','Manille'],['🇮🇩','Indonésie','Jakarta'],['🇲🇾','Malaisie','Kuala Lumpur'],['🇸🇬','Singapour','Singapour'],['🇦🇺','Australie','Canberra'],['🇳🇿','Nouvelle-Zélande','Wellington'],['🇺🇸','États-Unis','Washington'],['🇨🇦','Canada','Ottawa'],['🇲🇽','Mexique','Mexico'],['🇨🇺','Cuba','La Havane'],['🇯🇲','Jamaïque','Kingston'],['🇭🇹','Haïti','Port-au-Prince'],['🇩🇴','République dominicaine','Saint-Domingue'],['🇧🇷','Brésil','Brasília'],['🇦🇷','Argentine','Buenos Aires'],['🇨🇱','Chili','Santiago'],['🇵🇪','Pérou','Lima'],['🇨🇴','Colombie','Bogota'],['🇻🇪','Venezuela','Caracas'],['🇪🇨','Équateur','Quito'],['🇧🇴','Bolivie','Sucre'],['🇵🇾','Paraguay','Asunción'],['🇺🇾','Uruguay','Montevideo']
+];
+if(!MODES.some(m=>m.id==='capitals'))MODES.push({id:'capitals',n:'Capitales du monde',d:'Reconnais le drapeau et trouve la capitale. Culture générale + vitesse.',c:'#1B5AAD',i:'<span style="font-size:29px">🌍</span>',tag:'Nouveau'});
+function capitalSteps(){const rows=shuffle(CAPITALS_WORLD).slice(0,12),all=CAPITALS_WORLD.map(x=>x[2]);return rows.map(([flag,country,capital])=>{const distract=shuffle(all.filter(x=>x!==capital)).slice(0,3);return {k:'capital',flag,country,ans:capital,opts:shuffle([capital,...distract]),retry:true}})}
+const __buildGameCapital=buildGame;buildGame=function(mode,items,extra){if(mode==='capitals')return capitalSteps();return __buildGameCapital(mode,items,extra)};
+const __startModeCapital=startMode;startMode=async function(mode){if(mode!=='capitals')return __startModeCapital(mode);if(busy.mode)return;busy.mode=true;try{openLx();begin({mode:'game',game:'capitals',items:[],steps:capitalSteps()})}finally{busy.mode=false}};
+const __stepHTMLCapital=stepHTML;stepHTML=function(st){if(st.k==='capital')return `<div class="q-title">Quelle est la capitale de ce pays ?</div><div class="capital-flag" aria-hidden="true">${st.flag}</div><div class="capital-country">${esc(st.country)}</div><div class="capital-sub">Choisis la bonne capitale</div><div class="opts two">${st.opts.map((o,i)=>`<button class="opt" data-opt="${i}"><kbd>${i+1}</kbd><span>${esc(o)}</span></button>`).join('')}</div>`;return __stepHTMLCapital(st)};
+
+// Accessibility: "Je ne peux pas entendre" converts audio questions into visual ones without losing hearts.
+function noHearTransform(){if(!LX||!LX.steps)return;S.noHearUntil=Date.now()+15*60000;const pool=(LX.items&&LX.items.length?LX.items:allAvailableItems());for(let i=LX.i;i<LX.steps.length;i++){const st=LX.steps[i];if((st.k==='listen'||st.k==='dictee')&&st.it){const repl=makeStep(i%2?'mc':'rev',st.it,pool);repl.retry=!!st.retry;LX.steps[i]=repl}}save();renderStep();toast('🔇 Aucun cœur perdu · exercices audio remplacés pendant 15 min')}
+const __renderFootHear=renderFoot;renderFoot=function(extra){__renderFootHear(extra);if(!LX||!LX.steps||LX.state!=='idle')return;const st=LX.steps[LX.i];if(!['listen','dictee'].includes(st?.k))return;const f=$('#lxFoot .foot-in'),left=f?.querySelector('.foot-left');if(left&&!left.querySelector('[data-lx="nohear"]'))left.insertAdjacentHTML('afterbegin','<button class="btn ghost nohear-btn" data-lx="nohear">🔇 Je ne peux pas entendre</button>');else if(f&&!f.querySelector('[data-lx="nohear"]'))f.insertAdjacentHTML('afterbegin','<button class="btn ghost nohear-btn" data-lx="nohear">🔇 Je ne peux pas entendre</button>')};
+document.addEventListener('click',e=>{const b=e.target.closest?.('[data-lx="nohear"]');if(!b)return;e.preventDefault();e.stopImmediatePropagation();noHearTransform()},true);
+
+// Castle style selection: local immediately, cloud through the already-existing profile.settings sync.
+document.addEventListener('click',e=>{const b=e.target.closest?.('[data-castle-style]');if(!b)return;e.preventDefault();const k=b.dataset.castleStyle;if(!CASTLE_STYLE_DATA[k])return;S.castleStyle=k;save();toast(`🏰 Style ${CASTLE_STYLE_DATA[k].name} sélectionné`);render()},true);
+/* ================= FIN CASTELLUM SPECTACULAR ================= */
 
 /* =================== DÉMARRAGE =================== */
 setInterval(()=>{if(!LX){syncHearts();$("#rail").innerHTML=railHTML()}},60000);
