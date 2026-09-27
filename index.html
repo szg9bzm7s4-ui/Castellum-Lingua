@@ -115638,8 +115638,161 @@ document.addEventListener('error',function(e){
 }
 </style>
 
+<style id="castellum-simple-castle-v3">
+/* Château simple : aucune galerie, aucun sélecteur, aucune vue compliquée. */
+.simple-castle-v3{
+  overflow:hidden;
+  padding:0!important;
+}
+.simple-castle-v3-inner{
+  display:grid;
+  grid-template-columns:320px minmax(0,1fr);
+  min-height:220px;
+}
+.simple-castle-v3-art{
+  position:relative;
+  background:linear-gradient(180deg,#9cc3ea 0%,#d9e8f4 52%,#91b86f 53%,#6f9c55 100%);
+  overflow:hidden;
+}
+.simple-castle-v3-art svg{
+  width:100%;
+  height:100%;
+  min-height:220px;
+  display:block;
+}
+.simple-castle-v3-tag{
+  position:absolute;
+  left:12px;
+  top:12px;
+  padding:7px 10px;
+  border-radius:999px;
+  background:rgba(10,24,61,.82);
+  color:#fff;
+  font-size:.72rem;
+  font-weight:900;
+}
+.simple-castle-v3-copy{
+  padding:18px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:11px;
+}
+.simple-castle-v3-copy h2{
+  font-family:Georgia,serif;
+  margin:1px 0 0;
+  font-size:1.55rem;
+}
+.simple-castle-v3-copy p{
+  margin:0;
+  color:var(--muted);
+}
+.simple-castle-v3-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+  font-size:.86rem;
+}
+.simple-castle-v3-row b{font-size:.96rem}
+.simple-castle-v3-bar{
+  height:12px;
+  border-radius:999px;
+  background:var(--soft);
+  overflow:hidden;
+}
+.simple-castle-v3-bar i{
+  display:block;
+  height:100%;
+  border-radius:inherit;
+  background:linear-gradient(90deg,#efb23d,#ffd772);
+}
+.simple-castle-v3-next{
+  padding:10px 12px;
+  border-radius:13px;
+  background:var(--soft);
+  color:var(--ink);
+  font-size:.82rem;
+}
+/* Le château reste volontairement simple : pas de landmark/immersion dans le parcours. */
+.lw-castle-landmark{display:none!important}
+@media(max-width:700px){
+  .simple-castle-v3-inner{grid-template-columns:1fr}
+  .simple-castle-v3-art{min-height:190px}
+  .simple-castle-v3-art svg{min-height:190px}
+}
+</style>
+<script>
+(function(){
+  /* On garde les fonctions/données originales intactes et on remplace seulement l'affichage. */
+  if(typeof castleV2ForXP!=="function" || typeof CASTLE_STAGE_XP==="undefined") return;
 
+  function simpleCastleDrawing(level){
+    const n=Math.max(1,Math.min(8,Number(level)||1));
+    const towerH=70+n*7;
+    const centerH=85+n*8;
+    const wallW=138+n*5;
+    return `<svg viewBox="0 0 420 250" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="342" cy="45" r="24" fill="#fff1b2" opacity=".95"/>
+      <ellipse cx="82" cy="48" rx="44" ry="14" fill="#fff" opacity=".75"/>
+      <ellipse cx="121" cy="54" rx="33" ry="12" fill="#fff" opacity=".7"/>
+      <path d="M0 196 Q95 168 180 192 T420 184 V250 H0Z" fill="#6f9c55"/>
+      <g transform="translate(210 197)">
+        <rect x="${-wallW/2}" y="-64" width="${wallW}" height="64" rx="3" fill="#e2cfaa" stroke="#bda679" stroke-width="3"/>
+        <rect x="${-wallW/2-35}" y="${-towerH}" width="54" height="${towerH}" rx="3" fill="#dbc79f" stroke="#bda679" stroke-width="3"/>
+        <rect x="${wallW/2-19}" y="${-towerH}" width="54" height="${towerH}" rx="3" fill="#dbc79f" stroke="#bda679" stroke-width="3"/>
+        <rect x="-38" y="${-centerH}" width="76" height="${centerH}" rx="3" fill="#ead8b2" stroke="#bda679" stroke-width="3"/>
+        <polygon points="-45,${-centerH} 0,${-centerH-43} 45,${-centerH}" fill="#a8483e"/>
+        <polygon points="${-wallW/2-41},${-towerH} ${-wallW/2-8},${-towerH-32} ${-wallW/2+25},${-towerH}" fill="#a8483e"/>
+        <polygon points="${wallW/2-25},${-towerH} ${wallW/2+8},${-towerH-32} ${wallW/2+41},${-towerH}" fill="#a8483e"/>
+        <path d="M-18 0 v-35 q18-23 36 0 V0Z" fill="#594029"/>
+        <rect x="-12" y="${-centerH+24}" width="24" height="33" rx="10" fill="#416bb1"/>
+        <rect x="${-wallW/2-22}" y="${-towerH+26}" width="17" height="27" rx="7" fill="#416bb1"/>
+        <rect x="${wallW/2+5}" y="${-towerH+26}" width="17" height="27" rx="7" fill="#416bb1"/>
+        ${n>=4?`<rect x="${-wallW/2-72}" y="-46" width="42" height="46" fill="#d7c397" stroke="#b49e72" stroke-width="3"/><rect x="${wallW/2+30}" y="-46" width="42" height="46" fill="#d7c397" stroke="#b49e72" stroke-width="3"/>`:``}
+        ${n>=6?`<rect x="-4" y="${-centerH-61}" width="8" height="20" fill="#243f89"/><path d="M4 ${-centerH-61} q30 8 0 23z" fill="#ffd15d"/>`:``}
+      </g>
+    </svg>`;
+  }
 
+  castleProgressCard=function(){
+    const xp=Math.max(0,Number(Cloud?.profile?.total_xp ?? S.xp ?? 0)||0);
+    const key=castleStyleKey();
+    const c=castleV2ForXP(xp,key);
+    const base=CASTLE_STAGE_XP[c.index]||0;
+    const next=c.next;
+    const pct=next?Math.max(0,Math.min(100,Math.round((xp-base)/(next-base)*100))):100;
+    const nextName=next?c.style.stages[c.index+1]:c.n;
+    return `<section class="card simple-castle-v3">
+      <div class="simple-castle-v3-inner">
+        <div class="simple-castle-v3-art">
+          <span class="simple-castle-v3-tag">🏰 Mon château · Niveau ${c.index+1}/8</span>
+          ${simpleCastleDrawing(c.index+1)}
+        </div>
+        <div class="simple-castle-v3-copy">
+          <div>
+            <span class="eyebrow">${esc(c.style.name)}</span>
+            <h2>${esc(c.n)}</h2>
+            <p>Ton château évolue simplement avec l'XP gagnée.</p>
+          </div>
+          <div class="simple-castle-v3-row">
+            <b>⚡ ${xp.toLocaleString("fr-FR")} XP</b>
+            <span>${next?`${next.toLocaleString("fr-FR")} XP pour le niveau suivant`:"Niveau maximum"}</span>
+          </div>
+          <div class="simple-castle-v3-bar"><i style="width:${pct}%"></i></div>
+          <div class="simple-castle-v3-next">
+            ${next?`Encore <b>${Math.max(0,next-xp).toLocaleString("fr-FR")} XP</b> pour débloquer <b>${esc(nextName)}</b>.`:`🏆 Ton château a atteint son dernier niveau.`}
+          </div>
+        </div>
+      </div>
+    </section>`;
+  };
+
+  /* Force un rerender seulement après que toute l'application est chargée. */
+  try{ if(typeof render==="function") render(); }catch(e){ console.warn("Simple castle render skipped",e); }
+})();
+</script>
 
 
 
@@ -116263,280 +116416,627 @@ document.addEventListener('error',function(e){
 
 
 
-<style id="castellum-single-castle-progression">
-.single-castle{
-  overflow:hidden;
-  padding:0!important;
-  border-radius:26px!important;
+<style id="castellum-kingdom-system-css">
+/* =========================================================
+   CASTELLUM LINGUA · ROYAUMES 1–100
+   Additif visuel, sans toucher au moteur d'apprentissage.
+   ========================================================= */
+.kingdom-home{overflow:hidden;padding:0!important;border:1px solid rgba(220,180,85,.24)!important;background:#0b1637!important;color:#fff!important}
+.kingdom-home-hero{position:relative;min-height:310px;overflow:hidden;background:linear-gradient(135deg,#102653,#07142f)}
+.kingdom-home-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.kingdom-home-scrim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,13,34,.94) 0%,rgba(5,13,34,.74) 38%,rgba(5,13,34,.12) 78%),linear-gradient(0deg,rgba(5,13,34,.72),transparent 52%)}
+.kingdom-home-copy{position:relative;z-index:2;max-width:62%;padding:24px 22px}
+.kingdom-kicker{display:block;color:#e9be61;font-size:.73rem;font-weight:950;letter-spacing:.12em;text-transform:uppercase;margin-bottom:7px}
+.kingdom-home h2,.kingdom-page h1,.kingdom-page h2{font-family:Georgia,serif}
+.kingdom-home h2{font-size:2rem;line-height:1.04;margin:0 0 7px;color:#fff}
+.kingdom-home-copy p{color:#d8e1f8;margin:0 0 15px;line-height:1.45}
+.kingdom-home-stats{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.kingdom-pill{display:inline-flex;gap:6px;align-items:center;padding:7px 10px;border-radius:999px;background:rgba(9,24,61,.82);border:1px solid rgba(255,255,255,.13);font-size:.74rem;font-weight:850;color:#f5f7ff}
+.kingdom-progress{height:11px;border-radius:999px;background:rgba(255,255,255,.14);overflow:hidden;margin:7px 0 8px}
+.kingdom-progress i{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#d89f37,#f5ce6d)}
+.kingdom-home-actions{display:flex;gap:9px;flex-wrap:wrap}
+.kingdom-home-actions button{border-radius:13px!important}
+.kingdom-home-foot{padding:13px 16px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:#bec9e5;font-size:.78rem}
+.kingdom-home-foot b{color:#fff}
+
+.kingdom-page{display:grid;gap:16px}
+.kingdom-page .khero{position:relative;min-height:390px;border-radius:26px;overflow:hidden;background:#08142f;border:1px solid rgba(218,177,77,.27);box-shadow:0 18px 45px rgba(5,12,33,.20)}
+.kingdom-page .khero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.kingdom-page .khero-scrim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,12,31,.93),rgba(4,12,31,.68) 40%,rgba(4,12,31,.06) 78%),linear-gradient(0deg,rgba(4,12,31,.6),transparent 55%)}
+.kingdom-page .khero-copy{position:relative;z-index:2;max-width:58%;padding:28px 26px;color:#fff}
+.kingdom-page .khero h1{font-size:2.45rem;line-height:1.02;margin:5px 0 9px}
+.kingdom-page .khero p{color:#dbe4f8;line-height:1.48}
+.kingdom-titleline{display:flex;gap:9px;align-items:center;flex-wrap:wrap}
+.kingdom-era{display:inline-flex;padding:6px 9px;border-radius:999px;background:rgba(235,190,84,.15);border:1px solid rgba(235,190,84,.45);color:#ffd878;font-size:.68rem;font-weight:900;letter-spacing:.07em;text-transform:uppercase}
+
+.kingdom-statgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.kingdom-stat{border:1px solid var(--line);background:var(--card);border-radius:18px;padding:14px;display:grid;gap:5px}
+.kingdom-stat small{color:var(--muted)}
+.kingdom-stat b{font-size:1.15rem}
+
+.kingdom-section{border:1px solid var(--line);background:var(--card);border-radius:22px;padding:16px;display:grid;gap:13px}
+.kingdom-section-head{display:flex;justify-content:space-between;gap:10px;align-items:flex-end;flex-wrap:wrap}
+.kingdom-section-head h2,.kingdom-section-head h3{margin:0}
+.kingdom-section-head small{color:var(--muted)}
+
+.kingdom-era-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px}
+.kingdom-era-card{border:1px solid var(--line);border-radius:15px;padding:10px;background:var(--soft);display:grid;gap:4px;min-height:86px}
+.kingdom-era-card.current{border-color:rgba(219,169,59,.66);background:rgba(219,169,59,.1)}
+.kingdom-era-card.done{border-color:rgba(31,166,108,.34);background:rgba(31,166,108,.07)}
+.kingdom-era-card b{font-size:.79rem}.kingdom-era-card small{font-size:.66rem;color:var(--muted)}
+
+.kingdom-style-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.kingdom-style-card{position:relative;border:1px solid var(--line);border-radius:17px;padding:12px;background:var(--card);text-align:left;display:grid;gap:6px;min-height:116px}
+.kingdom-style-card.active{border-color:rgba(219,169,59,.68);box-shadow:0 0 0 2px rgba(219,169,59,.09)}
+.kingdom-style-card.locked{opacity:.52}
+.kingdom-style-card .ico{font-size:1.55rem}
+.kingdom-style-card b{font-size:.86rem}.kingdom-style-card small{font-size:.68rem;color:var(--muted);line-height:1.3}
+.kingdom-style-state{font-size:.65rem;font-weight:900;color:#b27d12}
+
+.kingdom-spec-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.kingdom-spec{border:1px solid var(--line);border-radius:17px;background:var(--soft);padding:12px;text-align:left;display:grid;gap:5px}
+.kingdom-spec.active{border-color:rgba(219,169,59,.65);background:rgba(219,169,59,.1)}
+.kingdom-spec b{font-size:.82rem}.kingdom-spec small{font-size:.68rem;color:var(--muted);line-height:1.35}
+
+.kingdom-gallery{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.kingdom-shot{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:17px;background:#0a1535;min-height:145px}
+.kingdom-shot img{width:100%;height:105px;object-fit:cover;display:block}
+.kingdom-shot.locked img{filter:brightness(.45) saturate(.55)}
+.kingdom-shot-copy{padding:9px;color:var(--ink);background:var(--card);display:grid;gap:2px}
+.kingdom-shot-copy b{font-size:.75rem}.kingdom-shot-copy small{font-size:.65rem;color:var(--muted)}
+
+.kingdom-achievements{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.kingdom-ach{border:1px solid var(--line);border-radius:15px;padding:10px;background:var(--soft);display:flex;gap:9px;align-items:center}
+.kingdom-ach.locked{opacity:.48}.kingdom-ach .aico{font-size:1.4rem}.kingdom-ach b{display:block;font-size:.78rem}.kingdom-ach small{color:var(--muted);font-size:.66rem}
+
+.kingdom-map{position:relative;min-height:330px;border-radius:22px;overflow:hidden;background:radial-gradient(circle at 28% 36%,#314f76 0 10%,transparent 11%),radial-gradient(circle at 62% 26%,#3a5b79 0 12%,transparent 13%),radial-gradient(circle at 73% 62%,#2f5471 0 11%,transparent 12%),linear-gradient(160deg,#07152f,#102b4e);border:1px solid rgba(113,145,208,.25)}
+.kingdom-map::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:36px 36px}
+.kingdom-pin{position:absolute;transform:translate(-50%,-50%);background:rgba(8,19,49,.92);color:#fff;border:1px solid rgba(232,190,86,.45);padding:8px 10px;border-radius:13px;max-width:150px;box-shadow:0 8px 22px rgba(0,0,0,.22)}
+.kingdom-pin b{font-size:.72rem;display:block}.kingdom-pin small{font-size:.61rem;color:#bec9e5}
+.kingdom-pin.locked{opacity:.38;filter:grayscale(1)}
+
+.kingdom-settings{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.kingdom-setting{display:flex;justify-content:space-between;gap:10px;align-items:center;border:1px solid var(--line);border-radius:14px;padding:11px;background:var(--soft)}
+.kingdom-setting b{font-size:.8rem}.kingdom-setting small{display:block;color:var(--muted);font-size:.66rem}
+
+.kingdom-mini-btn{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:7px 10px;font-weight:850;font-size:.7rem}
+.kingdom-mini-btn.on{background:#172b63;color:#fff;border-color:#3153a6}
+
+.kingdom-custom-row{display:flex;gap:9px;flex-wrap:wrap}
+.kingdom-custom-row button{font-size:.75rem}
+.kingdom-color{width:44px;height:34px;border:0;border-radius:9px;background:none;padding:0;overflow:hidden}
+
+.kingdom-locked-note{padding:10px 12px;border-radius:13px;background:rgba(153,116,34,.09);border:1px solid rgba(153,116,34,.18);font-size:.76rem;color:var(--muted)}
+.kingdom-next{padding:11px 13px;border-radius:14px;background:var(--soft);font-size:.78rem;line-height:1.4}
+
+@media(max-width:1000px){
+ .kingdom-style-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .kingdom-era-grid,.kingdom-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .kingdom-statgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .kingdom-spec-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
-.single-castle-hero{
-  position:relative;
-  min-height:330px;
-  background:#0b173a;
-  overflow:hidden;
+@media(max-width:700px){
+ .kingdom-home-hero{min-height:330px}
+ .kingdom-home-copy{max-width:none;padding:190px 16px 18px;background:linear-gradient(0deg,rgba(5,13,34,.94) 0%,rgba(5,13,34,.73) 48%,transparent 100%)}
+ .kingdom-home-scrim{background:linear-gradient(0deg,rgba(5,13,34,.82),transparent 68%)}
+ .kingdom-home h2{font-size:1.65rem}
+ .kingdom-page .khero{min-height:420px}
+ .kingdom-page .khero-copy{max-width:none;padding:210px 17px 18px;background:linear-gradient(0deg,rgba(4,12,31,.96),rgba(4,12,31,.66) 55%,transparent)}
+ .kingdom-page .khero-scrim{background:linear-gradient(0deg,rgba(4,12,31,.88),transparent 70%)}
+ .kingdom-page .khero h1{font-size:2rem}
+ .kingdom-style-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .kingdom-era-grid,.kingdom-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .kingdom-achievements{grid-template-columns:1fr 1fr}
+ .kingdom-settings{grid-template-columns:1fr}
 }
-.single-castle-hero img{
-  width:100%;
-  height:100%;
-  min-height:330px;
-  object-fit:cover;
-  display:block;
+@media(max-width:440px){
+ .kingdom-statgrid,.kingdom-achievements,.kingdom-spec-grid{grid-template-columns:1fr 1fr}
+ .kingdom-style-grid{grid-template-columns:1fr 1fr}
 }
-.single-castle-overlay{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(180deg,rgba(4,11,28,.04) 40%,rgba(4,11,28,.72) 100%);
-}
-.single-castle-badge{
-  position:absolute;
-  top:16px;
-  left:16px;
-  display:inline-flex;
-  align-items:center;
-  gap:7px;
-  padding:9px 13px;
-  border-radius:999px;
-  background:rgba(8,20,55,.84);
-  border:1px solid rgba(255,255,255,.12);
-  color:#fff;
-  font-size:.78rem;
-  font-weight:900;
-}
-.single-castle-title{
-  position:absolute;
-  left:20px;
-  right:20px;
-  bottom:18px;
-  color:#fff;
-}
-.single-castle-title span{
-  display:block;
-  margin-bottom:5px;
-  color:#ffd568;
-  font-size:.75rem;
-  font-weight:900;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-}
-.single-castle-title h2{
-  margin:0;
-  font-family:Georgia,serif;
-  font-size:2rem;
-  line-height:1.05;
-}
-.single-castle-body{
-  padding:18px;
-  display:grid;
-  gap:16px;
-}
-.single-castle-xprow{
-  display:flex;
-  justify-content:space-between;
-  gap:12px;
-  flex-wrap:wrap;
-  align-items:center;
-}
-.single-castle-xprow b{
-  font-size:1.05rem;
-}
-.single-castle-xprow span{
-  color:var(--muted);
-  font-size:.88rem;
-}
-.single-castle-bar{
-  height:12px;
-  border-radius:999px;
-  background:var(--soft);
-  overflow:hidden;
-}
-.single-castle-bar i{
-  display:block;
-  height:100%;
-  border-radius:inherit;
-  background:linear-gradient(90deg,#f5b83f,#ffd66c);
-}
-.single-castle-next{
-  border-radius:15px;
-  padding:12px 14px;
-  background:var(--soft);
-  color:var(--ink);
-  font-size:.87rem;
-}
-.single-castle-section-head{
-  display:flex;
-  justify-content:space-between;
-  gap:10px;
-  align-items:end;
-  flex-wrap:wrap;
-}
-.single-castle-section-head h3{
-  margin:0;
-  font-size:1rem;
-}
-.single-castle-section-head small{
-  color:var(--muted);
-}
-.single-castle-road{
-  display:grid;
-  grid-template-columns:repeat(4,minmax(0,1fr));
-  gap:10px;
-}
-.single-castle-stage{
-  position:relative;
-  overflow:hidden;
-  min-height:155px;
-  border:1px solid var(--line);
-  border-radius:18px;
-  background:var(--card);
-}
-.single-castle-stage img{
-  width:100%;
-  height:92px;
-  object-fit:cover;
-  display:block;
-}
-.single-castle-stage-copy{
-  padding:9px 10px 10px;
-  display:grid;
-  gap:3px;
-}
-.single-castle-stage-copy b{
-  font-size:.78rem;
-  line-height:1.15;
-}
-.single-castle-stage-copy small{
-  color:var(--muted);
-  font-size:.68rem;
-}
-.single-castle-stage.current{
-  border-color:rgba(245,184,63,.72);
-  box-shadow:0 0 0 2px rgba(245,184,63,.11);
-}
-.single-castle-stage.done{
-  border-color:rgba(29,169,109,.36);
-}
-.single-castle-stage.locked img{
-  filter:saturate(.72) brightness(.78);
-}
-.single-castle-stage-state{
-  position:absolute;
-  top:8px;
-  left:8px;
-  padding:5px 7px;
-  border-radius:999px;
-  background:rgba(7,17,45,.82);
-  color:#fff;
-  font-size:.6rem;
-  font-weight:900;
-}
-@media(max-width:760px){
-  .single-castle-hero,
-  .single-castle-hero img{
-    min-height:270px;
-  }
-  .single-castle-road{
-    grid-template-columns:repeat(2,minmax(0,1fr));
-  }
-}
-@media(max-width:430px){
-  .single-castle-hero,
-  .single-castle-hero img{
-    min-height:235px;
-  }
-  .single-castle-title h2{
-    font-size:1.6rem;
-  }
-  .single-castle-body{
-    padding:14px;
-  }
-}
+.kingdom-ambient.anim-on .kingdom-flag{animation:kingdomFlag 2.6s ease-in-out infinite;transform-origin:left center}
+@keyframes kingdomFlag{0%,100%{transform:skewY(0)}50%{transform:skewY(5deg)}}
+.kingdom-ambient .kingdom-flag{position:absolute;right:18px;top:16px;z-index:3;font-size:1.4rem;filter:drop-shadow(0 2px 5px rgba(0,0,0,.4))}
+.kingdom-night .khero img,.kingdom-night.kingdom-home-hero img{filter:brightness(.62) saturate(.85)}
+.kingdom-evening .khero img,.kingdom-evening.kingdom-home-hero img{filter:sepia(.1) saturate(1.05)}
 </style>
 
-<script id="castellum-single-castle-progression-js">
+<script id="castellum-kingdom-system-js">
 (function(){
-  const SINGLE_CASTLE_NAMES=[
-    "Tour fortifiée",
-    "Donjon",
-    "Fort militaire",
-    "Domaine fortifié",
-    "Château noble",
-    "Grande forteresse",
-    "Citadelle royale",
-    "Castellum impérial"
+  /* ---------------- Configuration centrale ---------------- */
+  const KS_VERSION=1;
+  const KINGDOM_ERAS=[
+    {min:1,max:10,name:"Fondation"},
+    {min:11,max:20,name:"Domaine"},
+    {min:21,max:30,name:"Forteresse"},
+    {min:31,max:40,name:"Seigneurie"},
+    {min:41,max:50,name:"Cité"},
+    {min:51,max:60,name:"Royaume"},
+    {min:61,max:70,name:"Grande puissance"},
+    {min:71,max:80,name:"Empire"},
+    {min:81,max:90,name:"Âge d’or"},
+    {min:91,max:100,name:"Apogée"}
   ];
 
-  function stageForXP(xp){
-    let index=0;
-    for(let i=0;i<CASTLE_STAGE_XP.length;i++){
-      if(xp>=CASTLE_STAGE_XP[i]) index=i;
-    }
-    return index;
-  }
+  const CASTLE_STYLES={
+    occidental:{name:"Occidental",icon:"🏰",desc:"Pierre claire, donjons, ponts, jardins et palais Renaissance.",region:"Europe occidentale",pos:[27,31]},
+    medieval:{name:"Médiéval militaire",icon:"🛡️",desc:"Forteresses, murailles, tours, garnisons et ponts-levis.",region:"Europe centrale",pos:[40,24]},
+    roman:{name:"Romain",icon:"🏛️",desc:"Castrums, colonnes, forums, villas et palais impériaux.",region:"Méditerranée",pos:[43,48]},
+    greek:{name:"Grec / hellénistique",icon:"🏺",desc:"Marbre, acropoles, temples et palais hellénistiques.",region:"Égée",pos:[51,49]},
+    byzantine:{name:"Byzantin",icon:"🟣",desc:"Murailles épaisses, coupoles, mosaïques et architecture impériale.",region:"Constantinople",pos:[57,43]},
+    andalusian:{name:"Andalou / mauresque",icon:"🌙",desc:"Alcázars, patios, fontaines, jardins et arches mauresques.",region:"Al-Andalus",pos:[34,52]},
+    arabic:{name:"Arabe / oriental",icon:"🕌",desc:"Qasr, citadelles, cours intérieures et architecture du désert.",region:"Arabie",pos:[61,58]},
+    persian:{name:"Persan",icon:"🔷",desc:"Briques, jardins, bassins, arcs et coupoles turquoise.",region:"Perse",pos:[67,49]},
+    ottoman:{name:"Ottoman",icon:"☾",desc:"Grands palais, pavillons, jardins, forteresses et coupoles.",region:"Anatolie",pos:[59,41]},
+    russian:{name:"Slave / russe",icon:"🧅",desc:"Kremlins, tours et palais monumentaux russes.",region:"Europe orientale",pos:[62,25]},
+    japanese:{name:"Japonais",icon:"🏯",desc:"Yamajiro, tenshu, enceintes, jardins et toits traditionnels.",region:"Japon",pos:[84,43]},
+    chinese:{name:"Chinois",icon:"🧧",desc:"Palais impériaux, murailles, cours et pavillons.",region:"Chine",pos:[77,37]},
+    indian:{name:"Indien",icon:"🪷",desc:"Forts rajputs, palais moghols, marbre et grès rouge.",region:"Inde",pos:[71,61]},
+    nordic:{name:"Nordique",icon:"🪓",desc:"Bois, pierre, fjords et forteresses scandinaves.",region:"Scandinavie",pos:[46,12]},
+    caucasian:{name:"Caucasien",icon:"⛰️",desc:"Tours de montagne, citadelles et pierre sombre.",region:"Caucase",pos:[64,36]},
+    african:{name:"Africain",icon:"☀️",desc:"Fortifications sahéliennes, architecture berbère, éthiopienne, terre et pierre.",region:"Afrique",pos:[48,72]}
+  };
+  const STYLE_ORDER=Object.keys(CASTLE_STYLES);
 
-  castleProgressCard=function(){
-    const xp=Math.max(0,Number(Cloud?.profile?.total_xp ?? S.xp ?? 0)||0);
-    const index=stageForXP(xp);
-    const next=CASTLE_STAGE_XP[index+1] ?? null;
-    const base=CASTLE_STAGE_XP[index] || 0;
-    const pct=next ? Math.max(0,Math.min(100,Math.round((xp-base)/(next-base)*100))) : 100;
-
-    const visuals=(typeof CASTLE_STAGE_VISUALS!=="undefined" && CASTLE_STAGE_VISUALS.romain) ? CASTLE_STAGE_VISUALS.romain : [];
-    const hero=visuals[index] || (typeof CASTLE_VISUALS!=="undefined" ? CASTLE_VISUALS.romain : "");
-
-    const road=SINGLE_CASTLE_NAMES.map((name,i)=>{
-      const state=i<index?"done":i===index?"current":"locked";
-      const label=i<index?"✓ Débloqué":i===index?"Niveau actuel":"🔒 À débloquer";
-      const pic=visuals[i] || hero;
-      return `<div class="single-castle-stage ${state}">
-        ${pic?`<img src="${pic}" alt="${esc(name)}">`:""}
-        <span class="single-castle-stage-state">${label}</span>
-        <div class="single-castle-stage-copy">
-          <b>${esc(name)}</b>
-          <small>${CASTLE_STAGE_XP[i].toLocaleString("fr-FR")} XP</small>
-        </div>
-      </div>`;
-    }).join("");
-
-    return `<section class="card single-castle">
-      <div class="single-castle-hero">
-        ${hero?`<img src="${hero}" alt="${esc(SINGLE_CASTLE_NAMES[index])}">`:""}
-        <div class="single-castle-overlay"></div>
-        <div class="single-castle-badge">🏰 Mon château · Niveau ${index+1}/8</div>
-        <div class="single-castle-title">
-          <span>Progression du domaine</span>
-          <h2>${esc(SINGLE_CASTLE_NAMES[index])}</h2>
-        </div>
-      </div>
-
-      <div class="single-castle-body">
-        <div class="single-castle-xprow">
-          <b>⚡ ${xp.toLocaleString("fr-FR")} XP</b>
-          <span>${next?`${next.toLocaleString("fr-FR")} XP pour le niveau suivant`:"Niveau maximum atteint"}</span>
-        </div>
-
-        <div class="single-castle-bar"><i style="width:${pct}%"></i></div>
-
-        <div class="single-castle-next">
-          ${next
-            ? `Encore <b>${Math.max(0,next-xp).toLocaleString("fr-FR")} XP</b> pour débloquer <b>${esc(SINGLE_CASTLE_NAMES[index+1])}</b>.`
-            : `👑 Tu as atteint <b>${esc(SINGLE_CASTLE_NAMES[index])}</b>, le dernier niveau du château.`}
-        </div>
-
-        <div class="single-castle-section-head">
-          <h3>Les 8 étapes de ton château</h3>
-          <small>Une seule progression, sans styles à choisir</small>
-        </div>
-
-        <div class="single-castle-road">${road}</div>
-      </div>
-    </section>`;
+  const LANG_STYLE={
+    fr:["occidental","medieval"],en:["occidental","medieval"],it:["roman","occidental"],es:["occidental","andalusian"],
+    el:["greek","byzantine"],tr:["ottoman"],ar:["arabic"],ary:["arabic","andalusian"],fa:["persian"],ru:["russian"],
+    ja:["japanese"],zh:["chinese"],hi:["indian"],sv:["nordic"],no:["nordic"],da:["nordic"]
   };
 
-  try{
-    if(typeof render==="function") render();
-  }catch(e){
-    console.warn("Castle progression render skipped",e);
+  const PLAYER_TITLES=[
+    {min:1,max:9,male:"Voyageur",female:"Voyageuse",neutral:"Explorateur du royaume"},
+    {min:10,max:19,male:"Écuyer",female:"Écuyère",neutral:"Gardien du domaine"},
+    {min:20,max:29,male:"Chevalier",female:"Chevalière",neutral:"Protecteur du royaume"},
+    {min:30,max:39,male:"Seigneur",female:"Dame",neutral:"Seigneur du domaine"},
+    {min:40,max:49,male:"Baron",female:"Baronne",neutral:"Baron du royaume"},
+    {min:50,max:59,male:"Comte",female:"Comtesse",neutral:"Comte du royaume"},
+    {min:60,max:69,male:"Duc",female:"Duchesse",neutral:"Duc du royaume"},
+    {min:70,max:79,male:"Prince",female:"Princesse",neutral:"Prince du royaume"},
+    {min:80,max:89,male:"Roi",female:"Reine",neutral:"Souverain"},
+    {min:90,max:99,male:"Empereur",female:"Impératrice",neutral:"Souverain impérial"},
+    {min:100,max:100,male:"Maître de Castellum",female:"Maîtresse de Castellum",neutral:"Souverain de Castellum"}
+  ];
+
+  const SPECIALIZATIONS={
+    military:{name:"Voie militaire",icon:"🛡️",desc:"Murailles, tours, garnisons, douves et ponts-levis."},
+    royal:{name:"Voie royale",icon:"👑",desc:"Palais, jardins, statues, fontaines et grandes façades."},
+    cultural:{name:"Voie culturelle",icon:"📚",desc:"Bibliothèques, académies, observatoires, temples et théâtres."},
+    merchant:{name:"Voie marchande",icon:"⚓",desc:"Marchés, ports, quais, guildes, routes et entrepôts."}
+  };
+
+  const MILESTONES=[
+    {level:10,name:"Premier donjon"},
+    {level:25,name:"Grande fortification"},
+    {level:50,name:"Palais principal"},
+    {level:75,name:"Grande cité"},
+    {level:90,name:"Monument emblématique"},
+    {level:100,name:"Merveille ultime"}
+  ];
+
+  const ACHIEVEMENTS=[
+    ["first_word","Premier mot","🗝️",()=>knownCount()>=1],
+    ["100_words","100 mots maîtrisés","📜",()=>knownCount()>=100],
+    ["1000_words","1 000 mots maîtrisés","📚",()=>knownCount()>=1000],
+    ["week","Première semaine","🔥",()=>streak()>=7],
+    ["30days","30 jours de série","🏅",()=>streak()>=30],
+    ["100days","100 jours","👑",()=>streak()>=100],
+    ["a2","Premier niveau A2","A2",()=>cefrRank()>=2],
+    ["b1","Premier niveau B1","B1",()=>cefrRank()>=3],
+    ["b2","Première langue B2","B2",()=>Object.values(S.lvBy||{}).some(v=>["B2","C1","C2"].includes(v))],
+    ["2kingdoms","Deux royaumes construits","🏰",()=>unlockedStyles().length>=2],
+    ["5kingdoms","Cinq royaumes construits","🏯",()=>unlockedStyles().length>=5],
+    ["palace","Premier palais","🏛️",()=>activeKingdomLevel()>=50],
+    ["empire","Premier empire","🌍",()=>activeKingdomLevel()>=80],
+    ["lv100","Castellum niveau 100","✨",()=>castellumLevel(S.xp)>=100]
+  ];
+
+  const ADDITIONS=["nouvelle tour","pont renforcé","nouvelle maison","fontaine","marché","nouveau jardin","statue","deuxième enceinte","porte monumentale","transformation majeure"];
+
+  function initKingdomState(){
+    if(!S.kingdomProfile)S.kingdomProfile={gender:"neutral",customTitle:"",name:"Mon royaume"};
+    if(!S.kingdomSettings)S.kingdomSettings={animations:false,dayNight:true,seasons:true};
+    if(!S.kingdoms)S.kingdoms={};
+    let first=S.activeKingdom;
+    if(!first||!CASTLE_STYLES[first]){
+      first=(LANG_STYLE[S.tgt]||[])[0] || (S.castleStyle==="romain"?"roman":S.castleStyle==="medieval"?"medieval":"occidental");
+      if(!CASTLE_STYLES[first])first="occidental";
+      S.activeKingdom=first;
+    }
+    if(!S.kingdoms[first]){
+      S.kingdoms[first]={style:first,xp:Math.max(0,S.xp||0),name:S.kingdomProfile.name||"Mon royaume",specialization:null,banner:"#1b3f7a",flag:"⚜️",createdAt:Date.now()};
+    }
+    if(!S.kingdomSystemVersion)S.kingdomSystemVersion=KS_VERSION;
   }
+
+  function xpForLevel(level){
+    if(level<=1)return 0;
+    return Math.round(50*Math.pow(level-1,1.65));
+  }
+  function castellumLevel(xp){
+    xp=Math.max(0,+xp||0);
+    let lo=1,hi=100;
+    while(lo<hi){const mid=Math.ceil((lo+hi)/2);if(xp>=xpForLevel(mid))lo=mid;else hi=mid-1}
+    return lo;
+  }
+  function kingdomObj(style=S.activeKingdom){initKingdomState();return S.kingdoms[style]||null}
+  function activeKingdomXP(){const k=kingdomObj();return k?.xp||0}
+  function activeKingdomLevel(){return castellumLevel(activeKingdomXP())}
+  function eraFor(level){return KINGDOM_ERAS.find(e=>level>=e.min&&level<=e.max)||KINGDOM_ERAS[9]}
+  function cefrRank(){return Math.max(1,["A1","A2","B1","B2","C1","C2"].indexOf(S.level)+1)}
+  function knownCount(){return Object.keys(S.known||{}).length}
+  function titleFor(level){
+    const row=PLAYER_TITLES.find(x=>level>=x.min&&level<=x.max)||PLAYER_TITLES[0];
+    const g=S.kingdomProfile?.gender||"neutral";
+    if(g==="custom"&&S.kingdomProfile.customTitle)return S.kingdomProfile.customTitle;
+    return row[g]||row.neutral;
+  }
+  function prestige(){
+    const lessons=Object.keys(S.done||{}).length;
+    const langs=Math.max(1,startedLangs().length);
+    const achievements=ACHIEVEMENTS.filter(a=>{try{return a[3]()}catch(e){return false}}).length;
+    return Math.round(activeKingdomXP()*.14 + streak()*25 + knownCount()*3 + lessons*5 + cefrRank()*250 + langs*150 + achievements*100);
+  }
+  const POP_ANCHORS=[[1,23],[10,175],[20,650],[30,2500],[40,8000],[50,25000],[60,60000],[70,120000],[80,250000],[90,500000],[100,1050000]];
+  function population(level){
+    for(let i=0;i<POP_ANCHORS.length-1;i++){
+      const [l1,p1]=POP_ANCHORS[i],[l2,p2]=POP_ANCHORS[i+1];
+      if(level>=l1&&level<=l2){
+        const t=(level-l1)/(l2-l1);
+        return Math.round(p1*Math.pow(p2/p1,t));
+      }
+    }
+    return level>=100?1050000:23;
+  }
+  function unlockCount(){return Math.min(STYLE_ORDER.length,1+Math.floor((castellumLevel(S.xp)-1)/6))}
+  function unlockedStyles(){return STYLE_ORDER.slice(0,unlockCount())}
+  function styleUnlocked(style){return unlockedStyles().includes(style)||!!S.kingdoms[style]}
+  function nextLevelInfo(){
+    const level=activeKingdomLevel(),xp=activeKingdomXP(),next=Math.min(100,level+1);
+    return {level,next,xp,need:next>level?xpForLevel(next):xp,pct:level>=100?100:Math.max(0,Math.min(100,Math.round((xp-xpForLevel(level))/(xpForLevel(next)-xpForLevel(level))*100)))};
+  }
+  function nextMilestone(level){return MILESTONES.find(m=>m.level>level)||MILESTONES[MILESTONES.length-1]}
+  function nextAddition(level){const next=Math.min(100,level+1);return ADDITIONS[(next-1)%10]}
+  function imageLevel(level){return Math.max(1,Math.min(100,level))}
+  function seasonKey(){
+    const m=new Date().getMonth()+1;
+    return [12,1,2].includes(m)?"winter":[3,4,5].includes(m)?"spring":[6,7,8].includes(m)?"summer":"autumn";
+  }
+  function dayKey(){
+    if(!S.kingdomSettings?.dayNight)return "day";
+    const h=new Date().getHours();
+    return h<7||h>=21?"night":h<11?"morning":h<18?"day":"evening";
+  }
+  function imageCandidates(style,level,size="medium"){
+    const k=kingdomObj(style),spec=k?.specialization||"base",n=String(imageLevel(level)).padStart(3,"0"),day=dayKey(),season=seasonKey();
+    const base=`assets/castles/${style}`;
+    return [
+      `${base}/${spec}/${season}/${day}/${size}/level-${n}.webp`,
+      `${base}/${spec}/${size}/level-${n}.webp`,
+      `${base}/${size}/level-${n}.webp`,
+      `${base}/level-${n}.webp`,
+      `${base}/level-${String(Math.ceil(level/10)*10).padStart(3,"0")}.webp`
+    ];
+  }
+  function fallbackImage(style,level){
+    try{
+      const oldKey=style==="roman"?"romain":style==="medieval"?"medieval":style==="occidental"?"occidental":style;
+      if(typeof castleStageVisual==="function"){
+        const ix=Math.max(0,Math.min(7,Math.floor((level-1)/13)));
+        return castleStageVisual(oldKey,ix)||"";
+      }
+    }catch(e){}
+    return "";
+  }
+  function imgTag(style,level,size="medium",cls="",loading="lazy"){
+    const c=imageCandidates(style,level,size),fb=fallbackImage(style,level);
+    const all=[...c,fb].filter(Boolean);
+    if(!all.length)return `<div class="${cls}" style="background:linear-gradient(135deg,#1a315f,#09152f)"></div>`;
+    return `<img class="${cls}" src="${esc(all[0])}" data-kimg='${esc(JSON.stringify(all))}' data-kidx="0" loading="${loading}" alt="${esc(CASTLE_STYLES[style]?.name||"Royaume")} niveau ${level}">`;
+  }
+  function fmt(n){return Math.round(n).toLocaleString("fr-FR")}
+  function styleSuggested(style){return (LANG_STYLE[S.tgt]||[]).includes(style)}
+
+  function saveKingdom(){
+    save();
+    try{if(typeof render==="function")render()}catch(e){}
+  }
+
+  /* L'XP gagnée nourrit aussi le royaume actif. */
+  const oldAddXP=addXP;
+  addXP=function(n){
+    oldAddXP(n);
+    initKingdomState();
+    const k=kingdomObj();
+    k.xp=Math.max(0,(k.xp||0)+n);
+  };
+
+  /* Sauvegarde cloud sans nouvelle table : dans profile.settings JSON. */
+  if(typeof settingsOf==="function"){
+    const oldSettingsOf=settingsOf;
+    settingsOf=function(state){
+      const out=oldSettingsOf(state);
+      out.kingdomSystem={
+        version:KS_VERSION,
+        kingdoms:state.kingdoms||{},
+        activeKingdom:state.activeKingdom||null,
+        kingdomProfile:state.kingdomProfile||{},
+        kingdomSettings:state.kingdomSettings||{}
+      };
+      return out;
+    };
+  }
+  if(typeof hydrate==="function"){
+    const oldHydrate=hydrate;
+    hydrate=function(snap){
+      oldHydrate(snap);
+      const ks=snap?.profile?.settings?.kingdomSystem;
+      if(ks){
+        S.kingdoms=ks.kingdoms||S.kingdoms||{};
+        S.activeKingdom=ks.activeKingdom||S.activeKingdom;
+        S.kingdomProfile=Object.assign(S.kingdomProfile||{},ks.kingdomProfile||{});
+        S.kingdomSettings=Object.assign(S.kingdomSettings||{},ks.kingdomSettings||{});
+        try{localStorage.setItem(STORE_KEY,JSON.stringify(S))}catch(e){}
+      }
+      initKingdomState();
+    };
+  }
+
+  function kingdomHomeCard(){
+    initKingdomState();
+    const style=S.activeKingdom,k=kingdomObj(),level=activeKingdomLevel(),globalLevel=castellumLevel(S.xp),era=eraFor(level),ni=nextLevelInfo(),title=titleFor(globalLevel),pop=population(level),pre=prestige();
+    const ambient=S.kingdomSettings.animations?"anim-on":"";
+    return `<section class="card kingdom-home">
+      <div class="kingdom-home-hero kingdom-ambient kingdom-${dayKey()} ${ambient}">
+        ${imgTag(style,level,"medium","","eager")}
+        <span class="kingdom-flag">${esc(k.flag||"⚜️")}</span>
+        <div class="kingdom-home-scrim"></div>
+        <div class="kingdom-home-copy">
+          <span class="kingdom-kicker">${esc(era.name)} · Castellum ${globalLevel}/100</span>
+          <h2>${esc(k.name||"Mon royaume")}</h2>
+          <p>${esc(title)} · ${esc(CASTLE_STYLES[style].name)} · ${esc(S.level)}</p>
+          <div class="kingdom-home-stats">
+            <span class="kingdom-pill">⚡ ${fmt(k.xp)} XP</span>
+            <span class="kingdom-pill">✨ ${fmt(pre)} prestige</span>
+            <span class="kingdom-pill">👥 ${fmt(pop)} habitants</span>
+          </div>
+          <div class="kingdom-progress"><i style="width:${ni.pct}%"></i></div>
+          <div class="kingdom-home-actions">
+            <button class="btn sm" data-go="kingdom">🏰 Royaume</button>
+            <button class="btn sm ghost" data-kingdom-act="learn">Apprendre</button>
+          </div>
+        </div>
+      </div>
+      <div class="kingdom-home-foot">
+        <span><b>Niveau du royaume ${level}</b> · ${esc(era.name)}</span>
+        <span>${level<100?`${fmt(ni.need-k.xp)} XP avant niveau ${ni.next}`:"Apogée atteinte"}</span>
+      </div>
+    </section>`;
+  }
+
+  function castleProgressReplacement(){
+    return kingdomHomeCard();
+  }
+
+  function civilizationCards(){
+    const unlocked=unlockedStyles();
+    return STYLE_ORDER.map((key,i)=>{
+      const s=CASTLE_STYLES[key],active=key===S.activeKingdom,open=styleUnlocked(key),suggested=styleSuggested(key);
+      return `<button class="kingdom-style-card ${active?"active":""} ${open?"":"locked"}" data-kingdom-style="${key}">
+        <span class="ico">${s.icon}</span>
+        <b>${esc(s.name)}</b>
+        <small>${esc(s.desc)}</small>
+        <span class="kingdom-style-state">${active?"✓ Royaume actif":open?(S.kingdoms[key]?"Ouvrir le royaume":"Créer ce royaume"):`🔒 Déblocage Castellum ${1+i*6}`}${suggested?" · suggéré":""}</span>
+      </button>`;
+    }).join("");
+  }
+
+  function specializationCards(level){
+    if(level<25)return `<div class="kingdom-locked-note">🔒 Les spécialisations se débloquent au niveau 25 du royaume.</div>`;
+    const k=kingdomObj();
+    return `<div class="kingdom-spec-grid">${Object.entries(SPECIALIZATIONS).map(([key,s])=>`<button class="kingdom-spec ${k.specialization===key?"active":""}" data-kingdom-spec="${key}">
+      <b>${s.icon} ${esc(s.name)}</b><small>${esc(s.desc)}</small>
+    </button>`).join("")}</div>`;
+  }
+
+  function eraTimeline(level){
+    return KINGDOM_ERAS.map(e=>`<div class="kingdom-era-card ${level>e.max?"done":level>=e.min?"current":""}">
+      <small>Niveaux ${e.min}–${e.max}</small><b>${esc(e.name)}</b>
+    </div>`).join("");
+  }
+
+  function gallery(style,level){
+    return [1,10,20,30,40,50,60,70,80,90,100].map(l=>{
+      const unlocked=l<=level;
+      return `<div class="kingdom-shot ${unlocked?"":"locked"}">
+        ${imgTag(style,l,"thumbnail","","lazy")}
+        <div class="kingdom-shot-copy"><b>Niveau ${l}</b><small>${esc(eraFor(l).name)}${unlocked?"":" · verrouillé"}</small></div>
+      </div>`;
+    }).join("");
+  }
+
+  function achievementsHTML(){
+    return ACHIEVEMENTS.map(a=>{
+      let ok=false;try{ok=a[3]()}catch(e){}
+      return `<div class="kingdom-ach ${ok?"":"locked"}"><span class="aico">${a[2]}</span><div><b>${esc(a[1])}</b><small>${ok?"Débloqué":"À accomplir"}</small></div></div>`;
+    }).join("");
+  }
+
+  function mapHTML(){
+    return `<div class="kingdom-map">${STYLE_ORDER.map(key=>{
+      const s=CASTLE_STYLES[key],open=styleUnlocked(key),k=S.kingdoms[key],lv=k?castellumLevel(k.xp||0):0;
+      return `<div class="kingdom-pin ${open?"":"locked"}" style="left:${s.pos[0]}%;top:${s.pos[1]}%">
+        <b>${s.icon} ${esc(s.region)}</b><small>${k?`${esc(s.name)} · niv. ${lv}`:open?"territoire découvert":"territoire inconnu"}</small>
+      </div>`;
+    }).join("")}</div>`;
+  }
+
+  function kingdomView(){
+    initKingdomState();
+    const style=S.activeKingdom,k=kingdomObj(),s=CASTLE_STYLES[style],level=activeKingdomLevel(),globalLevel=castellumLevel(S.xp),era=eraFor(level),ni=nextLevelInfo(),pre=prestige(),pop=population(level),title=titleFor(globalLevel),mil=nextMilestone(level);
+    const ambient=S.kingdomSettings.animations?"anim-on":"";
+    return `<div class="kingdom-page">
+      <div class="section-head"><div><span class="eyebrow">Mon royaume</span><h1>${esc(k.name||"Mon royaume")}</h1></div><button class="btn sm ghost" data-go="learn">← Apprendre</button></div>
+
+      <section class="khero kingdom-ambient kingdom-${dayKey()} ${ambient}">
+        ${imgTag(style,level,"full","","eager")}
+        <span class="kingdom-flag">${esc(k.flag||"⚜️")}</span>
+        <div class="khero-scrim"></div>
+        <div class="khero-copy">
+          <div class="kingdom-titleline"><span class="kingdom-era">${esc(era.name)}</span><span class="kingdom-era">${esc(s.name)}</span></div>
+          <h1>${esc(title)}</h1>
+          <p>Niveau Castellum <b>${globalLevel}/100</b> · Royaume <b>${level}/100</b> · ${esc(L[S.tgt]?.n||S.tgt)} ${esc(S.level)}</p>
+          <div class="kingdom-home-stats">
+            <span class="kingdom-pill">⚡ ${fmt(k.xp)} XP royaume</span>
+            <span class="kingdom-pill">✨ ${fmt(pre)} prestige</span>
+            <span class="kingdom-pill">👥 ${fmt(pop)} habitants</span>
+          </div>
+          <div class="kingdom-progress"><i style="width:${ni.pct}%"></i></div>
+          <small>${level<100?`${fmt(ni.need-k.xp)} XP avant le niveau ${ni.next}`:"Apogée atteinte"}</small>
+        </div>
+      </section>
+
+      <div class="kingdom-statgrid">
+        <div class="kingdom-stat"><small>Niveau Castellum</small><b>${globalLevel}/100</b></div>
+        <div class="kingdom-stat"><small>Niveau de langue</small><b>${esc(S.level)}</b></div>
+        <div class="kingdom-stat"><small>Prestige</small><b>${fmt(pre)}</b></div>
+        <div class="kingdom-stat"><small>Population</small><b>${fmt(pop)}</b></div>
+      </div>
+
+      <section class="kingdom-section">
+        <div class="kingdom-section-head"><div><span class="eyebrow">Progression 1–100</span><h2>${esc(era.name)}</h2></div><small>Transformation majeure tous les 10 niveaux</small></div>
+        <div class="kingdom-next"><b>Prochaine amélioration :</b> ${esc(nextAddition(level))} au niveau ${Math.min(100,level+1)}.<br><b>Prochaine récompense majeure :</b> ${esc(mil.name)} au niveau ${mil.level}.</div>
+        <div class="kingdom-era-grid">${eraTimeline(level)}</div>
+      </section>
+
+      <section class="kingdom-section">
+        <div class="kingdom-section-head"><div><span class="eyebrow">Spécialisation</span><h2>Façonne ton royaume</h2></div><small>À partir du niveau 25</small></div>
+        ${specializationCards(level)}
+      </section>
+
+      <section class="kingdom-section">
+        <div class="kingdom-section-head"><div><span class="eyebrow">Galerie</span><h2>Évolution du royaume</h2></div><small>Les étapes futures restent obscurcies</small></div>
+        <div class="kingdom-gallery">${gallery(style,level)}</div>
+      </section>
+
+      <section class="kingdom-section">
+        <div class="kingdom-section-head"><div><span class="eyebrow">Mes royaumes</span><h2>Civilisations</h2></div><small>${unlockedStyles().length}/${STYLE_ORDER.length} territoires découverts</small></div>
+        <div class="kingdom-style-grid">${civilizationCards()}</div>
+      </section>
+
+      <section class="kingdom-section">
+        <div class="kingdom-section-head"><div><span class="eyebrow">Mon empire</span><h2>Carte des royaumes</h2></div><small>Les territoires inconnus sont verrouillés</small></div>
+        ${mapHTML()}
+      </section>
+
+      <section class="kingdom-section">
+        <div class="kingdom-section-head"><div><span class="eyebrow">Succès</span><h2>Prestige et récompenses</h2></div></div>
+        <div class="kingdom-achievements">${achievementsHTML()}</div>
+      </section>
+
+      <section class="kingdom-section">
+        <div class="kingdom-section-head"><div><span class="eyebrow">Personnalisation</span><h2>Identité du royaume</h2></div></div>
+        <div class="kingdom-custom-row">
+          <button class="btn sm ghost" data-kingdom-act="rename">✏️ Renommer</button>
+          <button class="btn sm ghost" data-kingdom-act="flag">🚩 Drapeau ${esc(k.flag||"⚜️")}</button>
+          <label class="kingdom-setting"><span><b>Couleur secondaire</b><small>Bannières et détails</small></span><input class="kingdom-color" type="color" value="${esc(k.banner||"#1b3f7a")}" data-kingdom-color></label>
+        </div>
+        <div class="kingdom-custom-row">
+          ${["male","female","neutral","custom"].map(g=>`<button class="kingdom-mini-btn ${S.kingdomProfile.gender===g?"on":""}" data-kingdom-gender="${g}">${g==="male"?"Masculin":g==="female"?"Féminin":g==="neutral"?"Neutre":"Personnalisé"}</button>`).join("")}
+        </div>
+      </section>
+
+      <section class="kingdom-section">
+        <div class="kingdom-section-head"><div><span class="eyebrow">Ambiance</span><h2>Vie du royaume</h2></div></div>
+        <div class="kingdom-settings">
+          <div class="kingdom-setting"><span><b>Animations discrètes</b><small>Drapeaux et détails vivants</small></span><button class="kingdom-mini-btn ${S.kingdomSettings.animations?"on":""}" data-kingdom-toggle="animations">${S.kingdomSettings.animations?"ON":"OFF"}</button></div>
+          <div class="kingdom-setting"><span><b>Cycle jour / nuit</b><small>Selon l'heure de l'appareil</small></span><button class="kingdom-mini-btn ${S.kingdomSettings.dayNight?"on":""}" data-kingdom-toggle="dayNight">${S.kingdomSettings.dayNight?"ON":"OFF"}</button></div>
+          <div class="kingdom-setting"><span><b>Saisons</b><small>Prévu pour les assets HD saisonniers</small></span><button class="kingdom-mini-btn ${S.kingdomSettings.seasons?"on":""}" data-kingdom-toggle="seasons">${S.kingdomSettings.seasons?"ON":"OFF"}</button></div>
+          <div class="kingdom-setting"><span><b>Images HD</b><small>/assets/castles/${esc(style)}/… · WebP/AVIF</small></span><span class="kingdom-mini-btn on">PRÊT</span></div>
+        </div>
+      </section>
+    </div>`;
+  }
+
+  /* Image progressive fallback. */
+  document.addEventListener("error",function(e){
+    const img=e.target;
+    if(!(img instanceof HTMLImageElement)||!img.dataset.kimg)return;
+    let arr=[];try{arr=JSON.parse(img.dataset.kimg||"[]")}catch(_){}
+    const i=(+img.dataset.kidx||0)+1;
+    if(i<arr.length){img.dataset.kidx=String(i);img.src=arr[i]}else{img.style.display="none"}
+  },true);
+
+  /* Vue Royaume sans toucher aux autres vues. */
+  const oldRender=render;
+  render=function(){
+    if(view!=="kingdom")return oldRender();
+    $("#sideNav").innerHTML=navHTML(false);
+    $("#bottomNav").innerHTML=navHTML(true);
+    $("#rail").innerHTML=railHTML();
+    $("#view").className="wrap wide";
+    $("#view").innerHTML=`<div class="topbar">${statsChips()}</div>`+kingdomView();
+  };
+
+  /* Le château du dashboard devient le cœur du royaume. */
+  castleProgressCard=castleProgressReplacement;
+
+  document.addEventListener("click",function(e){
+    const learn=e.target.closest?.('[data-kingdom-act="learn"]');
+    if(learn){e.preventDefault();go("learn");return}
+
+    const st=e.target.closest?.("[data-kingdom-style]");
+    if(st){
+      e.preventDefault();
+      const key=st.dataset.kingdomStyle;
+      if(!styleUnlocked(key)){toast("Ce territoire n'est pas encore débloqué.");return}
+      if(!S.kingdoms[key])S.kingdoms[key]={style:key,xp:0,name:`Royaume ${CASTLE_STYLES[key].name}`,specialization:null,banner:"#1b3f7a",flag:"⚜️",createdAt:Date.now()};
+      S.activeKingdom=key;S.castleStyle=key==="roman"?"romain":key;
+      saveKingdom();toast(`Royaume ${CASTLE_STYLES[key].name} activé`);return
+    }
+
+    const spec=e.target.closest?.("[data-kingdom-spec]");
+    if(spec){
+      e.preventDefault();
+      if(activeKingdomLevel()<25){toast("Spécialisation disponible au niveau 25.");return}
+      kingdomObj().specialization=spec.dataset.kingdomSpec;saveKingdom();return
+    }
+
+    const gen=e.target.closest?.("[data-kingdom-gender]");
+    if(gen){
+      e.preventDefault();S.kingdomProfile.gender=gen.dataset.kingdomGender;
+      if(gen.dataset.kingdomGender==="custom"){
+        const t=prompt("Ton titre personnalisé :",S.kingdomProfile.customTitle||"");
+        if(t!=null)S.kingdomProfile.customTitle=t.trim().slice(0,40);
+      }
+      saveKingdom();return
+    }
+
+    const act=e.target.closest?.("[data-kingdom-act]");
+    if(act){
+      const a=act.dataset.kingdomAct;
+      if(a==="rename"){
+        const k=kingdomObj(),n=prompt("Nom de ton royaume :",k.name||"Mon royaume");
+        if(n!=null&&n.trim()){k.name=n.trim().slice(0,40);S.kingdomProfile.name=k.name;saveKingdom()}
+      }else if(a==="flag"){
+        const k=kingdomObj(),f=prompt("Emoji ou symbole du drapeau :",k.flag||"⚜️");
+        if(f!=null&&f.trim()){k.flag=f.trim().slice(0,8);saveKingdom()}
+      }
+    }
+
+    const tog=e.target.closest?.("[data-kingdom-toggle]");
+    if(tog){
+      e.preventDefault();const k=tog.dataset.kingdomToggle;S.kingdomSettings[k]=!S.kingdomSettings[k];saveKingdom();return
+    }
+  },true);
+
+  document.addEventListener("input",function(e){
+    if(e.target.matches?.("[data-kingdom-color]")){
+      kingdomObj().banner=e.target.value;save();
+    }
+  });
+
+  initKingdomState();
+  try{save()}catch(e){}
 })();
 </script>
 
