@@ -115682,27 +115682,160 @@ document.addEventListener('error',function(e){
   .lw-castle-landmark img,.lw-castle-landmark .fallback{height:52px!important}
 }
 </style>
-<style>
-/* CASTELLUM SAFE CASTLE UI OVERRIDE */
-.castle-safe{display:grid;gap:15px;padding:14px}.castle-safe-main{display:grid;grid-template-columns:1.08fr .92fr;gap:14px}.castle-safe-visual{position:relative;min-height:280px;border:0;padding:0;border-radius:22px;overflow:hidden;background:#0a1634;cursor:pointer}.castle-safe-visual img{width:100%;height:100%;object-fit:cover;display:block}.castle-safe-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,10,26,.04),rgba(4,10,26,.72))}.castle-safe-badge{position:absolute;z-index:2;left:14px;top:14px;background:rgba(5,16,43,.84);border:1px solid rgba(255,255,255,.16);color:white;border-radius:999px;padding:8px 12px;font-size:.74rem;font-weight:900}.castle-safe-title{position:absolute;z-index:2;left:16px;right:16px;bottom:15px;color:white}.castle-safe-title h2{font-family:Georgia,serif;font-size:1.65rem;margin:4px 0}.castle-safe-title small{color:#dce6ff}.castle-safe-side{display:grid;gap:12px}.castle-safe-box{border:1px solid var(--line);border-radius:18px;padding:14px;background:var(--card)}.castle-safe-xprow{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}.castle-safe-xprow span{color:var(--muted);font-size:.84rem}.castle-safe-road{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}.castle-safe-step{border:1px solid var(--line);border-radius:15px;padding:10px;background:var(--card);display:grid;gap:5px}.castle-safe-step b{font-size:.8rem;line-height:1.15}.castle-safe-step small{color:var(--muted);font-size:.7rem}.castle-safe-step.current{border-color:rgba(255,184,59,.6);background:rgba(255,184,59,.1)}.castle-safe-step.done{border-color:rgba(30,170,110,.35);background:rgba(30,170,110,.07)}.castle-safe-styles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.castle-safe-style{border:1px solid var(--line);border-radius:18px;padding:9px;background:var(--card);display:grid;gap:8px;text-align:left}.castle-safe-style.sel{border-color:rgba(255,184,59,.55)}.castle-safe-thumb{aspect-ratio:16/9;border-radius:13px;overflow:hidden;background:#08132f}.castle-safe-thumb img{width:100%;height:100%;object-fit:cover;display:block}.castle-safe-style b{display:block}.castle-safe-style small{color:var(--muted);font-size:.73rem}.castle-safe-choice{font-size:.7rem;font-weight:900;background:var(--soft);border-radius:999px;padding:6px 8px;text-align:center}@media(max-width:850px){.castle-safe-main{grid-template-columns:1fr}.castle-safe-styles{grid-template-columns:repeat(2,minmax(0,1fr))}.castle-safe-road{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:520px){.castle-safe-styles,.castle-safe-road{grid-template-columns:1fr}.castle-safe-visual{min-height:235px}}
+
+<style id="castellum-simple-castle-v3">
+/* Château simple : aucune galerie, aucun sélecteur, aucune vue compliquée. */
+.simple-castle-v3{
+  overflow:hidden;
+  padding:0!important;
+}
+.simple-castle-v3-inner{
+  display:grid;
+  grid-template-columns:320px minmax(0,1fr);
+  min-height:220px;
+}
+.simple-castle-v3-art{
+  position:relative;
+  background:linear-gradient(180deg,#9cc3ea 0%,#d9e8f4 52%,#91b86f 53%,#6f9c55 100%);
+  overflow:hidden;
+}
+.simple-castle-v3-art svg{
+  width:100%;
+  height:100%;
+  min-height:220px;
+  display:block;
+}
+.simple-castle-v3-tag{
+  position:absolute;
+  left:12px;
+  top:12px;
+  padding:7px 10px;
+  border-radius:999px;
+  background:rgba(10,24,61,.82);
+  color:#fff;
+  font-size:.72rem;
+  font-weight:900;
+}
+.simple-castle-v3-copy{
+  padding:18px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:11px;
+}
+.simple-castle-v3-copy h2{
+  font-family:Georgia,serif;
+  margin:1px 0 0;
+  font-size:1.55rem;
+}
+.simple-castle-v3-copy p{
+  margin:0;
+  color:var(--muted);
+}
+.simple-castle-v3-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+  font-size:.86rem;
+}
+.simple-castle-v3-row b{font-size:.96rem}
+.simple-castle-v3-bar{
+  height:12px;
+  border-radius:999px;
+  background:var(--soft);
+  overflow:hidden;
+}
+.simple-castle-v3-bar i{
+  display:block;
+  height:100%;
+  border-radius:inherit;
+  background:linear-gradient(90deg,#efb23d,#ffd772);
+}
+.simple-castle-v3-next{
+  padding:10px 12px;
+  border-radius:13px;
+  background:var(--soft);
+  color:var(--ink);
+  font-size:.82rem;
+}
+/* Le château reste volontairement simple : pas de landmark/immersion dans le parcours. */
+.lw-castle-landmark{display:none!important}
+@media(max-width:700px){
+  .simple-castle-v3-inner{grid-template-columns:1fr}
+  .simple-castle-v3-art{min-height:190px}
+  .simple-castle-v3-art svg{min-height:190px}
+}
 </style>
 <script>
 (function(){
-  if(typeof castleProgressCard!=='function'||typeof CASTLE_STYLE_DATA==='undefined')return;
-  const __castleSafeOriginal=castleProgressCard;
+  /* On garde les fonctions/données originales intactes et on remplace seulement l'affichage. */
+  if(typeof castleV2ForXP!=="function" || typeof CASTLE_STAGE_XP==="undefined") return;
+
+  function simpleCastleDrawing(level){
+    const n=Math.max(1,Math.min(8,Number(level)||1));
+    const towerH=70+n*7;
+    const centerH=85+n*8;
+    const wallW=138+n*5;
+    return `<svg viewBox="0 0 420 250" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="342" cy="45" r="24" fill="#fff1b2" opacity=".95"/>
+      <ellipse cx="82" cy="48" rx="44" ry="14" fill="#fff" opacity=".75"/>
+      <ellipse cx="121" cy="54" rx="33" ry="12" fill="#fff" opacity=".7"/>
+      <path d="M0 196 Q95 168 180 192 T420 184 V250 H0Z" fill="#6f9c55"/>
+      <g transform="translate(210 197)">
+        <rect x="${-wallW/2}" y="-64" width="${wallW}" height="64" rx="3" fill="#e2cfaa" stroke="#bda679" stroke-width="3"/>
+        <rect x="${-wallW/2-35}" y="${-towerH}" width="54" height="${towerH}" rx="3" fill="#dbc79f" stroke="#bda679" stroke-width="3"/>
+        <rect x="${wallW/2-19}" y="${-towerH}" width="54" height="${towerH}" rx="3" fill="#dbc79f" stroke="#bda679" stroke-width="3"/>
+        <rect x="-38" y="${-centerH}" width="76" height="${centerH}" rx="3" fill="#ead8b2" stroke="#bda679" stroke-width="3"/>
+        <polygon points="-45,${-centerH} 0,${-centerH-43} 45,${-centerH}" fill="#a8483e"/>
+        <polygon points="${-wallW/2-41},${-towerH} ${-wallW/2-8},${-towerH-32} ${-wallW/2+25},${-towerH}" fill="#a8483e"/>
+        <polygon points="${wallW/2-25},${-towerH} ${wallW/2+8},${-towerH-32} ${wallW/2+41},${-towerH}" fill="#a8483e"/>
+        <path d="M-18 0 v-35 q18-23 36 0 V0Z" fill="#594029"/>
+        <rect x="-12" y="${-centerH+24}" width="24" height="33" rx="10" fill="#416bb1"/>
+        <rect x="${-wallW/2-22}" y="${-towerH+26}" width="17" height="27" rx="7" fill="#416bb1"/>
+        <rect x="${wallW/2+5}" y="${-towerH+26}" width="17" height="27" rx="7" fill="#416bb1"/>
+        ${n>=4?`<rect x="${-wallW/2-72}" y="-46" width="42" height="46" fill="#d7c397" stroke="#b49e72" stroke-width="3"/><rect x="${wallW/2+30}" y="-46" width="42" height="46" fill="#d7c397" stroke="#b49e72" stroke-width="3"/>`:``}
+        ${n>=6?`<rect x="-4" y="${-centerH-61}" width="8" height="20" fill="#243f89"/><path d="M4 ${-centerH-61} q30 8 0 23z" fill="#ffd15d"/>`:``}
+      </g>
+    </svg>`;
+  }
+
   castleProgressCard=function(){
-    try{
-      const xp=Math.max(0,Math.max(S.xp,Cloud.profile?.total_xp||0));
-      const key=castleStyleKey(),c=castleV2ForXP(xp,key),next=c.next,base=CASTLE_STAGE_XP[c.index]||0;
-      const pct=next?Math.max(0,Math.min(100,Math.round((xp-base)/(next-base)*100))):100;
-      const hero=CASTLE_VISUALS[key]||castleStageVisual(key,c.index);
-      const road=c.style.stages.map((name,i)=>`<div class="castle-safe-step ${i<c.index?'done':i===c.index?'current':''}"><b>${esc(name)}</b><small>${i<c.index?'✓ Débloqué':i===c.index?'Niveau actuel':CASTLE_STAGE_XP[i].toLocaleString('fr-FR')+' XP'}</small></div>`).join('');
-      const styles=Object.entries(CASTLE_STYLE_DATA).map(([k,v])=>{const pic=CASTLE_VISUALS[k]||castleStageVisual(k,7);return `<button class="castle-safe-style ${k===key?'sel':''}" data-castle-style="${k}"><div class="castle-safe-thumb">${pic?`<img src="${pic}" alt="">`:''}</div><div><b>${esc(v.name)}</b><small>${esc(v.motto)}</small></div><span class="castle-safe-choice">${k===key?'✓ Actif':'Choisir'}</span></button>`}).join('');
-      return `<section class="card castle-safe"><div class="castle-safe-main"><button class="castle-safe-visual" data-castle-open="1">${hero?`<img src="${hero}" alt="${esc(c.style.name)} · ${esc(c.n)}">`:''}<span class="castle-safe-badge">${c.style.icon} ${esc(c.style.name)} · Niveau ${c.index+1}/8</span><span class="castle-safe-title"><small>MON CHÂTEAU</small><h2>${esc(c.n)}</h2><small>${esc(c.style.motto)}</small></span></button><div class="castle-safe-side"><div class="castle-safe-box"><div class="castle-safe-xprow"><b>${xp.toLocaleString('fr-FR')} XP</b><span>${next?`${(next-xp).toLocaleString('fr-FR')} XP avant ${esc(c.style.stages[c.index+1])}`:'Niveau maximal atteint'}</span></div><div class="qbar" style="margin-top:12px"><i style="width:${pct}%"></i></div></div><div class="castle-safe-box"><h3 style="margin:0 0 9px">Évolution</h3><div class="castle-safe-road">${road}</div></div></div></div><div><h3>Choisir mon style</h3><div class="castle-safe-styles">${styles}</div></div></section>`;
-    }catch(e){console.error('Castle safe UI',e);return __castleSafeOriginal()}
+    const xp=Math.max(0,Number(Cloud?.profile?.total_xp ?? S.xp ?? 0)||0);
+    const key=castleStyleKey();
+    const c=castleV2ForXP(xp,key);
+    const base=CASTLE_STAGE_XP[c.index]||0;
+    const next=c.next;
+    const pct=next?Math.max(0,Math.min(100,Math.round((xp-base)/(next-base)*100))):100;
+    const nextName=next?c.style.stages[c.index+1]:c.n;
+    return `<section class="card simple-castle-v3">
+      <div class="simple-castle-v3-inner">
+        <div class="simple-castle-v3-art">
+          <span class="simple-castle-v3-tag">🏰 Mon château · Niveau ${c.index+1}/8</span>
+          ${simpleCastleDrawing(c.index+1)}
+        </div>
+        <div class="simple-castle-v3-copy">
+          <div>
+            <span class="eyebrow">${esc(c.style.name)}</span>
+            <h2>${esc(c.n)}</h2>
+            <p>Ton château évolue simplement avec l'XP gagnée.</p>
+          </div>
+          <div class="simple-castle-v3-row">
+            <b>⚡ ${xp.toLocaleString("fr-FR")} XP</b>
+            <span>${next?`${next.toLocaleString("fr-FR")} XP pour le niveau suivant`:"Niveau maximum"}</span>
+          </div>
+          <div class="simple-castle-v3-bar"><i style="width:${pct}%"></i></div>
+          <div class="simple-castle-v3-next">
+            ${next?`Encore <b>${Math.max(0,next-xp).toLocaleString("fr-FR")} XP</b> pour débloquer <b>${esc(nextName)}</b>.`:`🏆 Ton château a atteint son dernier niveau.`}
+          </div>
+        </div>
+      </div>
+    </section>`;
   };
-  try{if(typeof render==='function')render()}catch(e){console.error('Castle safe rerender',e)}
+
+  /* Force un rerender seulement après que toute l'application est chargée. */
+  try{ if(typeof render==="function") render(); }catch(e){ console.warn("Simple castle render skipped",e); }
 })();
 </script>
 
->
