@@ -116643,3 +116643,180 @@ document.addEventListener('error',function(e){
 })();
 </script>
 
+
+<!-- ================================================================
+     CASTELLUM LINGUA · DOMAINE 50 NIVEAUX
+     Progression longue durée : 5 ères, 50 améliorations, titres,
+     transformations architecturales et personnalisation séparée.
+     ================================================================ -->
+<style id="castellum-domain-50-css">
+.domain50-card{overflow:hidden;padding:0!important;border-radius:26px!important}
+.domain50-hero{position:relative;min-height:360px;background:#091633;overflow:hidden;cursor:pointer}
+.domain50-hero img{width:100%;height:390px;object-fit:cover;display:block;filter:saturate(.98) contrast(1.03);transition:transform .45s ease}
+.domain50-hero:hover img{transform:scale(1.012)}
+.domain50-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,15,40,.04) 34%,rgba(5,15,40,.9) 100%);pointer-events:none}
+.domain50-top{position:absolute;z-index:2;left:16px;right:16px;top:16px;display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.domain50-pill,.domain50-customize{border:1px solid rgba(255,255,255,.2);background:rgba(8,20,54,.84);backdrop-filter:blur(10px);color:#fff;border-radius:999px;padding:9px 13px;font-size:.72rem;font-weight:900;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+.domain50-customize{cursor:pointer;font:inherit;font-size:.72rem;font-weight:900}
+.domain50-caption{position:absolute;z-index:2;left:20px;right:20px;bottom:18px;color:#fff;display:grid;gap:6px}
+.domain50-kicker{font-size:.72rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;opacity:.82}
+.domain50-caption h2{margin:0;font-family:Georgia,serif;font-size:clamp(1.85rem,4vw,2.65rem);line-height:1}
+.domain50-caption p{margin:0;max-width:670px;font-size:.88rem;color:rgba(255,255,255,.86)}
+.domain50-body{padding:18px;display:grid;gap:15px}
+.domain50-status{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:start}
+.domain50-title{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.domain50-title strong{font-size:1.05rem}
+.domain50-rank{display:inline-flex;align-items:center;gap:5px;border-radius:999px;padding:6px 9px;background:var(--soft);font-size:.7rem;font-weight:900}
+.domain50-xp{text-align:right;padding:9px 11px;border-radius:14px;background:var(--soft)}
+.domain50-xp b{display:block;font-size:.95rem}.domain50-xp small{color:var(--muted);font-size:.64rem}
+.domain50-progress-head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.78rem;color:var(--muted)}
+.domain50-progress-head b{color:var(--ink)}
+.domain50-bar{height:13px;background:var(--soft);border-radius:999px;overflow:hidden;box-shadow:inset 0 1px 2px rgba(0,0,0,.06)}
+.domain50-bar i{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#d89b2b,#ffd86c);position:relative;transition:width .55s ease}
+.domain50-bar i:after{content:"";position:absolute;right:0;top:0;bottom:0;width:18px;background:rgba(255,255,255,.35);filter:blur(5px)}
+.domain50-next{padding:13px 14px;border-radius:16px;background:linear-gradient(135deg,rgba(227,166,51,.12),rgba(227,166,51,.04));border:1px solid rgba(227,166,51,.25);display:grid;grid-template-columns:auto 1fr;gap:11px;align-items:center}
+.domain50-next-icon{font-size:1.65rem}.domain50-next b{font-size:.88rem}.domain50-next small{display:block;margin-top:2px;color:var(--muted);font-size:.72rem}
+.domain50-eras{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px}
+.domain50-era{border:1px solid var(--line);border-radius:14px;padding:9px 7px;text-align:center;display:grid;gap:3px;background:var(--card);min-width:0}
+.domain50-era span{font-size:1.05rem}.domain50-era b{font-size:.65rem;line-height:1.1}.domain50-era small{font-size:.56rem;color:var(--muted)}
+.domain50-era.done{background:rgba(38,165,107,.07)}.domain50-era.current{border-color:#e0a22f;box-shadow:0 0 0 2px rgba(224,162,47,.11)}.domain50-era.locked{opacity:.48}
+.domain50-upgrades{display:flex;gap:7px;overflow:auto;padding-bottom:2px;scrollbar-width:none}.domain50-upgrades::-webkit-scrollbar{display:none}
+.domain50-upgrade{white-space:nowrap;border:1px solid var(--line);background:var(--soft);border-radius:999px;padding:7px 10px;font-size:.68rem;font-weight:800}.domain50-upgrade.current{background:rgba(227,166,51,.15);border-color:rgba(227,166,51,.35)}
+.domain50-actions{display:flex;gap:9px;flex-wrap:wrap}.domain50-actions button{border:0;border-radius:13px;padding:10px 13px;font:inherit;font-size:.76rem;font-weight:900;cursor:pointer}.domain50-actions .primary{background:#13224f;color:#fff}.domain50-actions .soft{background:var(--soft);color:var(--ink)}
+
+.domain50-modal{position:fixed;inset:0;z-index:99999;background:rgba(3,8,24,.78);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:center;padding:18px}
+.domain50-modal[hidden]{display:none!important}.domain50-dialog{width:min(980px,100%);max-height:min(90vh,900px);overflow:auto;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:26px;box-shadow:0 30px 90px rgba(0,0,0,.4)}
+.domain50-dialog-head{position:sticky;top:0;z-index:3;background:color-mix(in srgb,var(--card) 94%,transparent);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 17px;border-bottom:1px solid var(--line)}
+.domain50-dialog-head h2{margin:0;font-family:Georgia,serif;font-size:1.35rem}.domain50-close{border:0;background:var(--soft);color:var(--ink);border-radius:999px;width:38px;height:38px;font-size:1.2rem;cursor:pointer}
+.domain50-timeline{padding:18px;display:grid;gap:8px}.domain50-step{display:grid;grid-template-columns:46px 1fr auto;gap:11px;align-items:center;padding:10px 11px;border:1px solid var(--line);border-radius:15px;background:var(--card)}
+.domain50-step-num{width:38px;height:38px;border-radius:12px;background:var(--soft);display:grid;place-items:center;font-size:.72rem;font-weight:950}.domain50-step b{display:block;font-size:.82rem}.domain50-step small{display:block;color:var(--muted);font-size:.65rem;margin-top:2px}.domain50-step-xp{font-size:.66rem;color:var(--muted);text-align:right}.domain50-step.done{background:rgba(38,165,107,.055)}.domain50-step.current{border-color:#e0a22f;box-shadow:0 0 0 2px rgba(224,162,47,.09)}.domain50-step.locked{opacity:.55}
+.domain50-style-grid{padding:18px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}.domain50-style{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:18px;overflow:hidden;text-align:left;cursor:pointer;padding:0}.domain50-style.on{border-color:#e0a22f;box-shadow:0 0 0 2px rgba(224,162,47,.13)}.domain50-style img{width:100%;height:118px;object-fit:cover;display:block}.domain50-style-fallback{height:118px;display:grid;place-items:center;background:var(--soft);font-size:2.2rem}.domain50-style-copy{padding:11px}.domain50-style-copy b{display:block;font-size:.82rem}.domain50-style-copy small{display:block;color:var(--muted);font-size:.64rem;margin-top:3px}.domain50-style-check{display:inline-block;margin-top:8px;font-size:.61rem;font-weight:900;color:#8b6417}
+@media(max-width:760px){.domain50-hero,.domain50-hero img{height:300px;min-height:300px}.domain50-eras{grid-template-columns:repeat(5,130px);overflow:auto}.domain50-style-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.domain50-status{grid-template-columns:1fr}.domain50-xp{text-align:left;width:max-content}.domain50-step{grid-template-columns:42px 1fr}.domain50-step-xp{grid-column:2;text-align:left}}
+@media(max-width:430px){.domain50-hero,.domain50-hero img{height:245px;min-height:245px}.domain50-caption{left:14px;right:14px;bottom:14px}.domain50-caption h2{font-size:1.72rem}.domain50-body{padding:14px}.domain50-top{left:10px;right:10px;top:10px}.domain50-pill,.domain50-customize{padding:7px 9px;font-size:.63rem}.domain50-style-grid{grid-template-columns:1fr 1fr;gap:8px}.domain50-style img,.domain50-style-fallback{height:96px}.domain50-dialog{border-radius:20px}}
+</style>
+<script id="castellum-domain-50-js">
+(function(){
+  if(typeof CASTLE_STYLE_DATA==='undefined') return;
+
+  const DOMAIN50_MAX_XP=500000;
+  const DOMAIN50_NAMES=[
+    'Fondations du domaine','Campement fortifié','Palissade','Première tour','Porte fortifiée',
+    'Petit donjon','Mur d’enceinte','Tour d’angle','Cour intérieure','Domaine fortifié',
+    'Écuries','Atelier des bâtisseurs','Caserne','Deuxième tour','Sanctuaire',
+    'Grande porte','Marché du domaine','Quartier des artisans','Muraille renforcée','Château seigneurial',
+    'Jardins du domaine','Bibliothèque','Tour maîtresse','Arsenal','Deuxième enceinte',
+    'Grand hall','Quartier résidentiel','Pont monumental','Garnison royale','Grande forteresse',
+    'Place centrale','Académie','Monument du royaume','Quartier marchand','Citadelle',
+    'Palais souverain','Grande bibliothèque','Grand sanctuaire','Avenue royale','Cité royale',
+    'Remparts extérieurs','Tours monumentales','Jardins royaux','Palais agrandi','Quartier diplomatique',
+    'Grande cité','Complexe impérial','Capitale du royaume','Capitale impériale','Castellum éternel'
+  ];
+  const DOMAIN50_ICONS=['🪨','⛺','🪵','🗼','🚪','🏰','🧱','🗼','🏘️','🛡️','🐎','🔨','⚔️','🗼','🏛️','🚪','🛒','⚒️','🧱','🏰','🌿','📚','🏯','🛡️','🧱','👑','🏘️','🌉','⚔️','🏰','⛲','📜','🗿','🛍️','🏯','👑','📚','🏛️','🛣️','🌆','🧱','🗼','🌳','🏛️','🤝','🌇','✨','👑','🌃','💎'];
+  const DOMAIN50_ERAS=[
+    {from:1,to:8,name:'Fondation',icon:'🪨'},
+    {from:9,to:16,name:'Seigneurie',icon:'🛡️'},
+    {from:17,to:26,name:'Royaume',icon:'👑'},
+    {from:27,to:38,name:'Empire',icon:'🦅'},
+    {from:39,to:50,name:'Légende',icon:'✨'}
+  ];
+  const DOMAIN50_RANKS=[
+    [0,'Voyageur / Voyageuse'],[500,'Écuyer / Écuyère'],[1500,'Seigneur / Dame'],[4000,'Baron / Baronne'],[10000,'Comte / Comtesse'],[25000,'Duc / Duchesse'],[60000,'Prince / Princesse'],[120000,'Roi / Reine'],[250000,'Empereur / Impératrice'],[500000,'Souverain / Souveraine de Castellum']
+  ];
+  // Une courbe douce : progression rapide au début, prestigieuse sur la durée.
+  const DOMAIN50_XP=Array.from({length:50},(_,i)=>i===0?0:Math.round((DOMAIN50_MAX_XP*Math.pow(i/49,2.05))/50)*50);
+  DOMAIN50_XP[49]=DOMAIN50_MAX_XP;
+
+  function totalXP(){
+    const cloud=(typeof Cloud!=='undefined'&&Cloud?.profile?.total_xp!=null)?Number(Cloud.profile.total_xp):0;
+    return Math.max(0,Number(S?.xp||0),cloud||0);
+  }
+  function levelIndexForXP(xp){let ix=0;for(let i=0;i<DOMAIN50_XP.length;i++)if(xp>=DOMAIN50_XP[i])ix=i;return ix}
+  function rankForXP(xp){let r=DOMAIN50_RANKS[0][1];for(const [need,name] of DOMAIN50_RANKS)if(xp>=need)r=name;return r}
+  function eraForLevel(level){return DOMAIN50_ERAS.findIndex(e=>level>=e.from&&level<=e.to)}
+  function architectureIndex(level){return Math.min(7,Math.floor((level-1)*8/50))}
+  function currentStyleKey(){return (S?.castleStyle&&CASTLE_STYLE_DATA[S.castleStyle])?S.castleStyle:'medieval'}
+  function progressData(){
+    const xp=totalXP(),ix=levelIndexForXP(xp),level=ix+1,next=DOMAIN50_XP[ix+1]??null,base=DOMAIN50_XP[ix],pct=next?Math.max(0,Math.min(100,Math.round((xp-base)/(next-base)*100))):100;
+    const key=currentStyleKey(),style=CASTLE_STYLE_DATA[key],arch=architectureIndex(level),image=(typeof castleStageVisual==='function'?castleStageVisual(key,arch):'');
+    return {xp,ix,level,next,base,pct,key,style,arch,image,rank:rankForXP(xp),era:eraForLevel(level),name:DOMAIN50_NAMES[ix],icon:DOMAIN50_ICONS[ix]};
+  }
+  function nextTransformationLevel(level){
+    const now=architectureIndex(level);for(let l=level+1;l<=50;l++)if(architectureIndex(l)>now)return l;return null;
+  }
+  function eraHTML(level){
+    const ei=eraForLevel(level);
+    return DOMAIN50_ERAS.map((e,i)=>`<div class="domain50-era ${i<ei?'done':i===ei?'current':'locked'}"><span>${e.icon}</span><b>${e.name}</b><small>Niv. ${e.from}–${e.to}</small></div>`).join('');
+  }
+  function nearbyUpgrades(ix){
+    const start=Math.max(0,ix-2),end=Math.min(49,ix+4);let out='';
+    for(let i=start;i<=end;i++)out+=`<span class="domain50-upgrade ${i===ix?'current':''}">${i<ix?'✓ ':i===ix?'⚒️ ':'🔒 '}${i+1}. ${esc(DOMAIN50_NAMES[i])}</span>`;
+    return out;
+  }
+
+  castleProgressCard=function(){
+    const d=progressData();
+    const remaining=d.next==null?0:Math.max(0,d.next-d.xp);
+    const transformAt=nextTransformationLevel(d.level);
+    const macroName=d.style.stages?.[d.arch]||d.style.name;
+    return `<section class="card domain50-card">
+      <div class="domain50-hero" data-domain-open="timeline" role="button" tabindex="0" aria-label="Voir l'évolution complète de mon domaine">
+        ${d.image?`<img src="${d.image}" alt="${esc(d.style.name)} · ${esc(macroName)}">`:`<div style="height:390px;display:grid;place-items:center;font-size:5rem">${d.style.icon}</div>`}
+        <div class="domain50-top"><span class="domain50-pill">${d.style.icon} ${esc(d.style.name)} · Niveau ${d.level}/50</span><button class="domain50-customize" type="button" data-domain-open="styles">⚜️ Personnaliser</button></div>
+        <div class="domain50-caption"><span class="domain50-kicker">${DOMAIN50_ERAS[d.era].icon} Ère ${d.era+1} · ${DOMAIN50_ERAS[d.era].name}</span><h2>${esc(d.name)}</h2><p>${esc(macroName)} · Ton domaine conserve son architecture et grandit avec chacune de tes leçons.</p></div>
+      </div>
+      <div class="domain50-body">
+        <div class="domain50-status"><div><div class="domain50-title"><strong>${d.icon} ${esc(d.name)}</strong><span class="domain50-rank">🎖️ ${esc(d.rank)}</span></div></div><div class="domain50-xp"><b>⚡ ${d.xp.toLocaleString('fr-FR')} XP</b><small>XP totale</small></div></div>
+        <div class="domain50-progress-head"><b>Progression du niveau ${d.level}</b><span>${d.next?`${d.next.toLocaleString('fr-FR')} XP pour atteindre le niveau ${d.level+1}`:'Prestige maximal atteint'}</span></div>
+        <div class="domain50-bar"><i style="width:${d.pct}%"></i></div>
+        <div class="domain50-next"><span class="domain50-next-icon">${d.next?DOMAIN50_ICONS[d.ix+1]:'👑'}</span><div>${d.next?`<b>Prochaine amélioration : ${esc(DOMAIN50_NAMES[d.ix+1])}</b><small>Encore ${remaining.toLocaleString('fr-FR')} XP.${transformAt&&transformAt===d.level+1?' Cette amélioration transformera aussi visuellement ton château.':''}</small>`:`<b>Castellum éternel</b><small>Tu as atteint le dernier niveau du domaine.</small>`}</div></div>
+        <div class="domain50-eras">${eraHTML(d.level)}</div>
+        <div class="domain50-upgrades">${nearbyUpgrades(d.ix)}</div>
+        <div class="domain50-actions"><button class="primary" type="button" data-domain-open="timeline">🏰 Voir les 50 niveaux</button><button class="soft" type="button" data-domain-open="styles">⚜️ Choisir mon architecture</button></div>
+      </div>
+    </section>`;
+  };
+
+  function ensureModal(){
+    let m=document.getElementById('domain50Modal');
+    if(!m){m=document.createElement('div');m.id='domain50Modal';m.className='domain50-modal';m.hidden=true;document.body.appendChild(m)}
+    return m;
+  }
+  function openTimeline(){
+    const d=progressData(),m=ensureModal();
+    const rows=DOMAIN50_NAMES.map((name,i)=>{const state=i<d.ix?'done':i===d.ix?'current':'locked',era=DOMAIN50_ERAS[eraForLevel(i+1)];return `<div class="domain50-step ${state}" ${i===d.ix?'data-domain-current="1"':''}><span class="domain50-step-num">${i+1}</span><div><b>${DOMAIN50_ICONS[i]} ${esc(name)}</b><small>${era.icon} ${era.name}${i===d.ix?' · niveau actuel':''}</small></div><span class="domain50-step-xp">${DOMAIN50_XP[i].toLocaleString('fr-FR')} XP</span></div>`}).join('');
+    m.innerHTML=`<div class="domain50-dialog"><div class="domain50-dialog-head"><div><small class="eyebrow">Progression complète</small><h2>Ton domaine · 50 niveaux</h2></div><button class="domain50-close" data-domain-close aria-label="Fermer">×</button></div><div class="domain50-timeline">${rows}</div></div>`;
+    m.hidden=false;document.documentElement.style.overflow='hidden';setTimeout(()=>m.querySelector('[data-domain-current]')?.scrollIntoView({block:'center'}),40);
+  }
+  function openStyles(){
+    const d=progressData(),m=ensureModal();
+    const cards=Object.entries(CASTLE_STYLE_DATA).map(([k,v])=>{const img=(typeof castleStageVisual==='function'?castleStageVisual(k,architectureIndex(d.level)):'');return `<button class="domain50-style ${k===d.key?'on':''}" type="button" data-domain-style="${k}">${img?`<img src="${img}" alt="${esc(v.name)}">`:`<span class="domain50-style-fallback">${v.icon}</span>`}<span class="domain50-style-copy"><b>${v.icon} ${esc(v.name)}</b><small>${esc(v.motto)}</small><span class="domain50-style-check">${k===d.key?'✓ Architecture actuelle':'Choisir ce royaume'}</span></span></button>`}).join('');
+    m.innerHTML=`<div class="domain50-dialog"><div class="domain50-dialog-head"><div><small class="eyebrow">Ton royaume</small><h2>Choisis ton architecture</h2><small style="color:var(--muted)">Ton XP et tes 50 niveaux ne changent jamais quand tu changes de style.</small></div><button class="domain50-close" data-domain-close aria-label="Fermer">×</button></div><div class="domain50-style-grid">${cards}</div></div>`;
+    m.hidden=false;document.documentElement.style.overflow='hidden';
+  }
+  function closeModal(){const m=document.getElementById('domain50Modal');if(m)m.hidden=true;document.documentElement.style.overflow=''}
+
+  document.addEventListener('click',function(e){
+    const open=e.target.closest?.('[data-domain-open]');
+    if(open){e.preventDefault();e.stopImmediatePropagation();open.dataset.domainOpen==='styles'?openStyles():openTimeline();return}
+    const style=e.target.closest?.('[data-domain-style]');
+    if(style){e.preventDefault();const k=style.dataset.domainStyle;if(!CASTLE_STYLE_DATA[k])return;S.castleStyle=k;save();closeModal();toast(`🏰 Royaume ${CASTLE_STYLE_DATA[k].name} sélectionné`);render();return}
+    if(e.target.closest?.('[data-domain-close]')||e.target.id==='domain50Modal'){e.preventDefault();closeModal();return}
+  },true);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();if((e.key==='Enter'||e.key===' ')&&document.activeElement?.matches?.('[data-domain-open="timeline"]')){e.preventDefault();openTimeline()}},true);
+
+  // La ligue affiche désormais le niveau de domaine 1–50 au lieu de l'ancien palier 1–8.
+  if(typeof socialTabView==='function'){
+    const previousSocialTabView=socialTabView;
+    socialTabView=function(tab,D){
+      if(tab!=='league')return previousSocialTabView(tab,D);
+      const friends=D.friends||[],me={id:Cloud.user?.id,display_name:Cloud.profile?.display_name||'Moi',username:Cloud.profile?.username||'',avatar_url:Cloud.profile?.avatar_url||'',weekly_xp:D.me_weekly_xp||0,total_xp:Cloud.profile?.total_xp||S.xp,current_streak:Cloud.profile?.current_streak||streak(),castle_style:S.castleStyle||'medieval',is_me:true};
+      const rows=[me,...friends].sort((a,b)=>(b.weekly_xp||0)-(a.weekly_xp||0));
+      return `<section class="card"><div class="section-head"><div><h2>🏆 Ligue des amis</h2><p class="muted">XP depuis lundi · domaine sur 50 niveaux</p></div><button class="btn sm ghost" data-social="refresh">↻</button></div><div>${rows.map((p,i)=>{const px=Number(p.total_xp||0),li=levelIndexForXP(px),key=(p.castle_style&&CASTLE_STYLE_DATA[p.castle_style])?p.castle_style:'medieval',st=CASTLE_STYLE_DATA[key];return `<div class="rank-row"><div class="rank-pos">${i<3?['🥇','🥈','🥉'][i]:i+1}</div>${socialAvatar(p,38)}<div>${socialName(p)}<span class="fr-meta">${st.icon} ${esc(st.name)} · niveau ${li+1}/50 · ${esc(DOMAIN50_NAMES[li])} · 🔥 ${p.current_streak||0} · ⚡ ${px} XP${p.is_me?' · toi':''}</span></div><div class="rank-xp"><b>${p.weekly_xp||0}</b><small>XP semaine</small></div></div>`}).join('')}</div>${friends.length===0?`<p class="social-note">Ajoute au moins un ami pour créer ta propre ligue privée.</p>`:''}</section>`;
+    };
+  }
+
+  // Expose uniquement ce qui peut être utile ailleurs dans l'application.
+  window.CastellumDomain50={thresholds:DOMAIN50_XP,names:DOMAIN50_NAMES,progress:progressData};
+  try{if(typeof render==='function')render()}catch(err){console.warn('Domain 50 render skipped',err)}
+})();
+</script>
