@@ -116684,8 +116684,8 @@ document.addEventListener('error',function(e){
 .domain50-upgrade{white-space:nowrap;border:1px solid var(--line);background:var(--soft);border-radius:999px;padding:7px 10px;font-size:.68rem;font-weight:800}.domain50-upgrade.current{background:rgba(227,166,51,.15);border-color:rgba(227,166,51,.35)}
 .domain50-actions{display:flex;gap:9px;flex-wrap:wrap}.domain50-actions button{border:0;border-radius:13px;padding:10px 13px;font:inherit;font-size:.76rem;font-weight:900;cursor:pointer}.domain50-actions .primary{background:#13224f;color:#fff}.domain50-actions .soft{background:var(--soft);color:var(--ink)}
 
-.domain50-modal{position:fixed;inset:0;z-index:99999;background:rgba(3,8,24,.78);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:center;padding:18px}
-.domain50-modal[hidden]{display:none!important}.domain50-dialog{width:min(980px,100%);max-height:min(90vh,900px);overflow:auto;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:26px;box-shadow:0 30px 90px rgba(0,0,0,.4)}
+.domain50-modal{position:fixed!important;inset:0!important;z-index:2147483647!important;background:rgba(3,8,24,.88)!important;backdrop-filter:blur(14px);display:flex!important;align-items:center!important;justify-content:center!important;padding:18px!important;visibility:visible!important;opacity:1!important}
+.domain50-modal[hidden]{display:none!important;visibility:hidden!important;opacity:0!important}.domain50-dialog{width:min(980px,100%);max-height:min(90vh,900px);overflow:auto;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:26px;box-shadow:0 30px 90px rgba(0,0,0,.4)}
 .domain50-dialog-head{position:sticky;top:0;z-index:3;background:color-mix(in srgb,var(--card) 94%,transparent);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 17px;border-bottom:1px solid var(--line)}
 .domain50-dialog-head h2{margin:0;font-family:Georgia,serif;font-size:1.35rem}.domain50-close{border:0;background:var(--soft);color:var(--ink);border-radius:999px;width:38px;height:38px;font-size:1.2rem;cursor:pointer}
 .domain50-timeline{padding:18px;display:grid;gap:8px}.domain50-step{display:grid;grid-template-columns:46px 1fr auto;gap:11px;align-items:center;padding:10px 11px;border:1px solid var(--line);border-radius:15px;background:var(--card)}
@@ -116693,6 +116693,23 @@ document.addEventListener('error',function(e){
 .domain50-style-grid{padding:18px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}.domain50-style{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:18px;overflow:hidden;text-align:left;cursor:pointer;padding:0}.domain50-style.on{border-color:#e0a22f;box-shadow:0 0 0 2px rgba(224,162,47,.13)}.domain50-style img{width:100%;height:118px;object-fit:cover;display:block}.domain50-style-fallback{height:118px;display:grid;place-items:center;background:var(--soft);font-size:2.2rem}.domain50-style-copy{padding:11px}.domain50-style-copy b{display:block;font-size:.82rem}.domain50-style-copy small{display:block;color:var(--muted);font-size:.64rem;margin-top:3px}.domain50-style-check{display:inline-block;margin-top:8px;font-size:.61rem;font-weight:900;color:#8b6417}
 @media(max-width:760px){.domain50-hero,.domain50-hero img{height:300px;min-height:300px}.domain50-eras{grid-template-columns:repeat(5,130px);overflow:auto}.domain50-style-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.domain50-status{grid-template-columns:1fr}.domain50-xp{text-align:left;width:max-content}.domain50-step{grid-template-columns:42px 1fr}.domain50-step-xp{grid-column:2;text-align:left}}
 @media(max-width:430px){.domain50-hero,.domain50-hero img{height:245px;min-height:245px}.domain50-caption{left:14px;right:14px;bottom:14px}.domain50-caption h2{font-size:1.72rem}.domain50-body{padding:14px}.domain50-top{left:10px;right:10px;top:10px}.domain50-pill,.domain50-customize{padding:7px 9px;font-size:.63rem}.domain50-style-grid{grid-template-columns:1fr 1fr;gap:8px}.domain50-style img,.domain50-style-fallback{height:96px}.domain50-dialog{border-radius:20px}}
+</style>
+
+<style id="castellum-domain-50-fix-css">
+/* Correctif : château vectoriel net + panneaux toujours visibles. */
+.domain50-hero{min-height:340px!important;background:linear-gradient(180deg,#89b9e8 0%,#d8e7f2 58%,#718d55 59%,#496e3c 100%)!important}
+.domain50-hero-art{position:absolute;inset:0;display:block;overflow:hidden}
+.domain50-hero-art svg{width:100%;height:100%;display:block;filter:drop-shadow(0 18px 18px rgba(4,12,35,.18))}
+.domain50-hero:after{background:linear-gradient(180deg,rgba(5,15,40,.02) 28%,rgba(5,15,40,.12) 58%,rgba(5,15,40,.91) 100%)!important}
+.domain50-style-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+.domain50-style-preview{height:118px;display:grid;place-items:center;background:linear-gradient(180deg,#edf4ff,#f8f3e4);font-size:2.55rem;position:relative;overflow:hidden}
+.domain50-style-preview:after{content:"";position:absolute;left:0;right:0;bottom:0;height:34%;background:linear-gradient(180deg,#92b16e,#66884f);clip-path:polygon(0 45%,18% 22%,34% 42%,51% 13%,70% 40%,86% 20%,100% 38%,100% 100%,0 100%)}
+.domain50-style-preview span{position:relative;z-index:2;filter:drop-shadow(0 4px 4px rgba(0,0,0,.14))}
+.domain50-dialog{display:block!important;position:relative!important;background:#fff!important;color:#101d3f!important;min-height:220px!important}
+.domain50-dialog-head{background:rgba(255,255,255,.96)!important}
+.domain50-timeline,.domain50-style-grid{visibility:visible!important;opacity:1!important}
+@media(max-width:760px){.domain50-style-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.domain50-hero{min-height:300px!important}}
+@media(max-width:430px){.domain50-style-grid{grid-template-columns:1fr 1fr!important}.domain50-style-preview{height:96px}.domain50-hero{min-height:260px!important}}
 </style>
 <script id="castellum-domain-50-js">
 (function(){
@@ -116735,9 +116752,35 @@ document.addEventListener('error',function(e){
   function eraForLevel(level){return DOMAIN50_ERAS.findIndex(e=>level>=e.from&&level<=e.to)}
   function architectureIndex(level){return Math.min(7,Math.floor((level-1)*8/50))}
   function currentStyleKey(){return (S?.castleStyle&&CASTLE_STYLE_DATA[S.castleStyle])?S.castleStyle:'medieval'}
+  function domain50CastleSVG(styleKey,level){
+    const lv=Math.max(1,Math.min(50,Number(level)||1));
+    const style=CASTLE_STYLE_DATA[styleKey]||CASTLE_STYLE_DATA.medieval;
+    const extra=Math.min(5,Math.floor((lv-1)/10));
+    const isRoman=styleKey==='romain'||styleKey==='grec';
+    const isOrient=['japonais','oriental','ottoman','persan','andalou','byzantin'].includes(styleKey);
+    const isNord=['nordique','celtique'].includes(styleKey);
+    const roof=isOrient?'#b2493d':isNord?'#5d4938':'#9d4039';
+    const stone=isRoman?'#ead9b6':isOrient?'#e4cfac':'#d9c7a4';
+    const dark=isRoman?'#bda77f':'#a58f6b';
+    const accent=styleKey==='japonais'?'#be2f36':styleKey==='ottoman'?'#2a7d67':styleKey==='persan'?'#2d6da8':'#244c91';
+    let extras='';
+    if(lv>=6) extras+=`<rect x="88" y="222" width="54" height="58" rx="3" fill="${stone}" stroke="${dark}" stroke-width="4"/><polygon points="84,222 115,191 146,222" fill="${roof}"/>`;
+    if(lv>=12) extras+=`<rect x="458" y="222" width="54" height="58" rx="3" fill="${stone}" stroke="${dark}" stroke-width="4"/><polygon points="454,222 485,191 516,222" fill="${roof}"/>`;
+    if(lv>=18) extras+=`<path d="M58 282 Q300 236 542 282" fill="none" stroke="${dark}" stroke-width="12" stroke-linecap="round" opacity=".9"/>`;
+    if(lv>=24) extras+=`<rect x="175" y="242" width="48" height="38" rx="3" fill="${stone}" stroke="${dark}" stroke-width="3"/><rect x="377" y="242" width="48" height="38" rx="3" fill="${stone}" stroke="${dark}" stroke-width="3"/>`;
+    if(lv>=30) extras+=`<circle cx="300" cy="289" r="26" fill="#78a45e"/><circle cx="300" cy="289" r="14" fill="#96c976"/>`;
+    if(lv>=38) extras+=`<path d="M42 306 Q300 260 558 306" fill="none" stroke="#9bb7d7" stroke-width="16" opacity=".85"/>`;
+    if(lv>=44) extras+=`<g opacity=".95"><rect x="28" y="245" width="44" height="35" fill="${stone}" stroke="${dark}" stroke-width="3"/><rect x="528" y="245" width="44" height="35" fill="${stone}" stroke="${dark}" stroke-width="3"/></g>`;
+    const crown=lv>=48?`<path d="M280 78 l12 13 8-20 8 20 12-13 -4 27 h-32z" fill="#f1bd49"/>`:'';
+    const flag=lv>=10?`<rect x="296" y="67" width="5" height="52" fill="#23355c"/><path d="M301 70 q38 8 0 25z" fill="${accent}"/>`:'';
+    const roman=isRoman?`<g fill="${stone}" stroke="${dark}" stroke-width="3"><rect x="238" y="150" width="124" height="130"/><rect x="224" y="136" width="152" height="20"/><polygon points="220,136 300,92 380,136" fill="${roof}"/>${[252,278,304,330].map(x=>`<rect x="${x}" y="166" width="15" height="88"/>`).join('')}</g>`:'';
+    const oriental=isOrient?`<g><rect x="235" y="145" width="130" height="135" rx="5" fill="${stone}" stroke="${dark}" stroke-width="4"/><path d="M218 152 Q300 117 382 152 Q365 126 300 105 Q235 126 218 152Z" fill="${roof}"/><path d="M245 116 Q300 88 355 116 Q341 92 300 76 Q259 92 245 116Z" fill="${roof}"/><rect x="284" y="218" width="32" height="62" rx="16" fill="#5d4532"/></g>`:'';
+    const medieval=(!isRoman&&!isOrient)?`<g><rect x="220" y="145" width="160" height="135" rx="4" fill="${stone}" stroke="${dark}" stroke-width="4"/><rect x="170" y="180" width="62" height="100" rx="4" fill="${stone}" stroke="${dark}" stroke-width="4"/><rect x="368" y="180" width="62" height="100" rx="4" fill="${stone}" stroke="${dark}" stroke-width="4"/><polygon points="164,180 201,142 238,180" fill="${roof}"/><polygon points="362,180 399,142 436,180" fill="${roof}"/><polygon points="210,145 300,95 390,145" fill="${roof}"/><path d="M283 280 v-54 q17-24 34 0 v54z" fill="#594029"/></g>`:'';
+    return `<svg viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg" aria-label="${esc(style.name)} niveau ${lv}"><defs><linearGradient id="sky50" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8fc2ed"/><stop offset="1" stop-color="#e5edf5"/></linearGradient></defs><rect width="600" height="340" fill="url(#sky50)"/><circle cx="500" cy="61" r="31" fill="#fff1af" opacity=".95"/><g fill="#fff" opacity=".76"><ellipse cx="96" cy="67" rx="58" ry="18"/><ellipse cx="143" cy="74" rx="40" ry="14"/></g><path d="M0 272 Q120 225 240 264 T600 254 V340 H0Z" fill="#6f9656"/><path d="M0 296 Q132 251 257 292 T600 281 V340 H0Z" fill="#527d48"/>${extras}${roman||oriental||medieval}${flag}${crown}</svg>`;
+  }
   function progressData(){
     const xp=totalXP(),ix=levelIndexForXP(xp),level=ix+1,next=DOMAIN50_XP[ix+1]??null,base=DOMAIN50_XP[ix],pct=next?Math.max(0,Math.min(100,Math.round((xp-base)/(next-base)*100))):100;
-    const key=currentStyleKey(),style=CASTLE_STYLE_DATA[key],arch=architectureIndex(level),image=(typeof castleStageVisual==='function'?castleStageVisual(key,arch):'');
+    const key=currentStyleKey(),style=CASTLE_STYLE_DATA[key],arch=architectureIndex(level),image='';
     return {xp,ix,level,next,base,pct,key,style,arch,image,rank:rankForXP(xp),era:eraForLevel(level),name:DOMAIN50_NAMES[ix],icon:DOMAIN50_ICONS[ix]};
   }
   function nextTransformationLevel(level){
@@ -116760,7 +116803,7 @@ document.addEventListener('error',function(e){
     const macroName=d.style.stages?.[d.arch]||d.style.name;
     return `<section class="card domain50-card">
       <div class="domain50-hero" data-domain-open="timeline" role="button" tabindex="0" aria-label="Voir l'évolution complète de mon domaine">
-        ${d.image?`<img src="${d.image}" alt="${esc(d.style.name)} · ${esc(macroName)}">`:`<div style="height:390px;display:grid;place-items:center;font-size:5rem">${d.style.icon}</div>`}
+        <div class="domain50-hero-art">${domain50CastleSVG(d.key,d.level)}</div>
         <div class="domain50-top"><span class="domain50-pill">${d.style.icon} ${esc(d.style.name)} · Niveau ${d.level}/50</span><button class="domain50-customize" type="button" data-domain-open="styles">⚜️ Personnaliser</button></div>
         <div class="domain50-caption"><span class="domain50-kicker">${DOMAIN50_ERAS[d.era].icon} Ère ${d.era+1} · ${DOMAIN50_ERAS[d.era].name}</span><h2>${esc(d.name)}</h2><p>${esc(macroName)} · Ton domaine conserve son architecture et grandit avec chacune de tes leçons.</p></div>
       </div>
@@ -116785,21 +116828,21 @@ document.addEventListener('error',function(e){
     const d=progressData(),m=ensureModal();
     const rows=DOMAIN50_NAMES.map((name,i)=>{const state=i<d.ix?'done':i===d.ix?'current':'locked',era=DOMAIN50_ERAS[eraForLevel(i+1)];return `<div class="domain50-step ${state}" ${i===d.ix?'data-domain-current="1"':''}><span class="domain50-step-num">${i+1}</span><div><b>${DOMAIN50_ICONS[i]} ${esc(name)}</b><small>${era.icon} ${era.name}${i===d.ix?' · niveau actuel':''}</small></div><span class="domain50-step-xp">${DOMAIN50_XP[i].toLocaleString('fr-FR')} XP</span></div>`}).join('');
     m.innerHTML=`<div class="domain50-dialog"><div class="domain50-dialog-head"><div><small class="eyebrow">Progression complète</small><h2>Ton domaine · 50 niveaux</h2></div><button class="domain50-close" data-domain-close aria-label="Fermer">×</button></div><div class="domain50-timeline">${rows}</div></div>`;
-    m.hidden=false;document.documentElement.style.overflow='hidden';setTimeout(()=>m.querySelector('[data-domain-current]')?.scrollIntoView({block:'center'}),40);
+    m.hidden=false;m.removeAttribute('hidden');m.style.display='flex';document.documentElement.style.overflow='hidden';setTimeout(()=>m.querySelector('[data-domain-current]')?.scrollIntoView({block:'center'}),60);
   }
   function openStyles(){
     const d=progressData(),m=ensureModal();
-    const cards=Object.entries(CASTLE_STYLE_DATA).map(([k,v])=>{const img=(typeof castleStageVisual==='function'?castleStageVisual(k,architectureIndex(d.level)):'');return `<button class="domain50-style ${k===d.key?'on':''}" type="button" data-domain-style="${k}">${img?`<img src="${img}" alt="${esc(v.name)}">`:`<span class="domain50-style-fallback">${v.icon}</span>`}<span class="domain50-style-copy"><b>${v.icon} ${esc(v.name)}</b><small>${esc(v.motto)}</small><span class="domain50-style-check">${k===d.key?'✓ Architecture actuelle':'Choisir ce royaume'}</span></span></button>`}).join('');
+    const cards=Object.entries(CASTLE_STYLE_DATA).map(([k,v])=>`<button class="domain50-style ${k===d.key?'on':''}" type="button" data-domain-style="${k}"><span class="domain50-style-preview"><span>${v.icon}</span></span><span class="domain50-style-copy"><b>${v.icon} ${esc(v.name)}</b><small>${esc(v.motto)}</small><span class="domain50-style-check">${k===d.key?'✓ Architecture actuelle':'Choisir ce royaume'}</span></span></button>`).join('');
     m.innerHTML=`<div class="domain50-dialog"><div class="domain50-dialog-head"><div><small class="eyebrow">Ton royaume</small><h2>Choisis ton architecture</h2><small style="color:var(--muted)">Ton XP et tes 50 niveaux ne changent jamais quand tu changes de style.</small></div><button class="domain50-close" data-domain-close aria-label="Fermer">×</button></div><div class="domain50-style-grid">${cards}</div></div>`;
-    m.hidden=false;document.documentElement.style.overflow='hidden';
+    m.hidden=false;m.removeAttribute('hidden');m.style.display='flex';document.documentElement.style.overflow='hidden';
   }
-  function closeModal(){const m=document.getElementById('domain50Modal');if(m)m.hidden=true;document.documentElement.style.overflow=''}
+  function closeModal(){const m=document.getElementById('domain50Modal');if(m){m.hidden=true;m.setAttribute('hidden','');m.style.display='none'}document.documentElement.style.overflow=''}
 
   document.addEventListener('click',function(e){
     const open=e.target.closest?.('[data-domain-open]');
     if(open){e.preventDefault();e.stopImmediatePropagation();open.dataset.domainOpen==='styles'?openStyles():openTimeline();return}
     const style=e.target.closest?.('[data-domain-style]');
-    if(style){e.preventDefault();const k=style.dataset.domainStyle;if(!CASTLE_STYLE_DATA[k])return;S.castleStyle=k;save();closeModal();toast(`🏰 Royaume ${CASTLE_STYLE_DATA[k].name} sélectionné`);render();return}
+    if(style){e.preventDefault();e.stopImmediatePropagation();const k=style.dataset.domainStyle;if(!CASTLE_STYLE_DATA[k])return;S.castleStyle=k;if(S.settings)S.settings.castleStyle=k;save();closeModal();toast(`🏰 Royaume ${CASTLE_STYLE_DATA[k].name} sélectionné`);render();return}
     if(e.target.closest?.('[data-domain-close]')||e.target.id==='domain50Modal'){e.preventDefault();closeModal();return}
   },true);
   document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();if((e.key==='Enter'||e.key===' ')&&document.activeElement?.matches?.('[data-domain-open="timeline"]')){e.preventDefault();openTimeline()}},true);
