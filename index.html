@@ -117821,7 +117821,7 @@ document.addEventListener('error',function(e){
   }
 
   // Expose uniquement ce qui peut être utile ailleurs dans l'application.
-  window.CastellumDomain50={thresholds:DOMAIN50_XP,names:DOMAIN50_NAMES,progress:progressData};
+  window.CastellumDomain50={thresholds:DOMAIN50_XP,names:DOMAIN50_NAMES,icons:DOMAIN50_ICONS,eras:DOMAIN50_ERAS,progress:progressData};
   try{if(typeof render==='function')render()}catch(err){console.warn('Domain 50 render skipped',err)}
 })();
 </script>
@@ -118624,5 +118624,137 @@ window.CASTELLUM_ILLUS={"occidental": {"from": [1, 13, 26, 39], "stages": [{"img
   },true);
   document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&document.activeElement?.matches?.('.learn2 [data-u2]')){e.preventDefault();toggle(document.activeElement)}},true);
   try{if(typeof render==='function'&&typeof view!=='undefined'&&view==='learn')render()}catch(e){}
+})();
+</script>
+
+<!-- ================================================================
+     CASTELLUM LINGUA · ROYAUME REDESSINÉ (accueil + 50 niveaux)
+     Grande image immersive, prochaine amélioration mise en avant,
+     frise des 5 ères, fenêtre « 50 niveaux » groupée par ère.
+     ================================================================ -->
+<style id="castellum-kingdom2-css">
+.rk-card{padding:0!important;overflow:hidden;border-radius:28px!important;border:0!important;background:var(--surface);box-shadow:0 24px 50px -28px rgba(12,26,70,.55),inset 0 0 0 1px var(--line)}
+.rk-hero{position:relative;aspect-ratio:16/10;max-height:440px;width:100%;overflow:hidden;cursor:pointer;background:#1b2b5e}
+.rk-art,.rk-art>*{position:absolute;inset:0;width:100%;height:100%}
+.rk-art img,.rk-art svg{width:100%;height:100%;object-fit:cover;transition:transform 6s ease}
+.rk-hero:hover .rk-art img{transform:scale(1.04)}
+.rk-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,14,40,.45) 0%,rgba(6,14,40,0) 26%,rgba(6,14,40,0) 45%,rgba(6,14,40,.88) 100%);pointer-events:none}
+.rk-top{position:absolute;z-index:2;top:14px;left:14px;right:14px;display:flex;justify-content:space-between;gap:8px}
+.rk-chip{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,.16);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:#fff;border:1px solid rgba(255,255,255,.28);font:inherit;font-size:.74rem;font-weight:900;white-space:nowrap}
+button.rk-chip{cursor:pointer}
+button.rk-chip:hover{background:rgba(255,255,255,.26)}
+.rk-cap{position:absolute;z-index:2;left:18px;right:18px;bottom:16px;color:#fff;display:grid;gap:6px}
+.rk-era{font-size:.7rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.rk-cap h2{margin:0;font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.7rem,6vw,2.6rem);line-height:1.02;color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.35)}
+.rk-meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.rk-lvl{display:inline-flex;align-items:baseline;gap:2px;padding:5px 11px;border-radius:999px;background:linear-gradient(135deg,#f6c453,#e09a2b);color:#3a2300;font-weight:950;font-size:.82rem;box-shadow:0 6px 16px -6px rgba(224,154,43,.8)}
+.rk-lvl small{font-size:.68rem;opacity:.75}
+.rk-rank{border:0;cursor:pointer}
+.rk-body{padding:16px;display:grid;gap:14px}
+.rk-next{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center;padding:14px;border-radius:20px;background:linear-gradient(135deg,rgba(246,196,83,.16),rgba(246,196,83,.04));border:1px solid rgba(224,154,43,.28)}
+.rk-next-ic{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;font-size:1.7rem;background:var(--surface);box-shadow:0 8px 18px -10px rgba(120,80,10,.5)}
+.rk-next small{display:block;font-size:.66rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#b0741a}
+.rk-next b{display:block;font-size:1.02rem;margin:1px 0 7px}
+.rk-bar{height:10px;border-radius:999px;background:rgba(224,154,43,.18);overflow:hidden}
+.rk-bar i{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#e09a2b,#ffd66b);box-shadow:0 0 12px rgba(255,200,80,.7);transition:width .6s ease}
+.rk-xp{display:flex;justify-content:space-between;gap:8px;margin-top:6px;font-size:.72rem;font-weight:800;color:var(--ink-2)}
+.rk-xp b{display:inline;margin:0;font-size:.72rem;color:var(--ink)}
+.rk-eras{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding:4px 4px 0}
+.rk-eras:before{content:"";position:absolute;left:24px;right:24px;top:22px;height:3px;border-radius:3px;background:var(--line)}
+.rk-eras .rk-fill{position:absolute;left:24px;top:22px;height:3px;border-radius:3px;background:linear-gradient(90deg,#e09a2b,#ffd66b)}
+.rk-era-dot{position:relative;z-index:1;display:grid;justify-items:center;gap:5px;flex:1;min-width:0}
+.rk-era-dot span{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-size:1.1rem;background:var(--surface);border:2px solid var(--line)}
+.rk-era-dot b{font-size:.6rem;text-align:center;line-height:1.15;color:var(--ink-2);max-width:100%;overflow:hidden;text-overflow:ellipsis;padding:0 2px}
+.rk-era-dot.done span{border-color:#e09a2b;background:#fff7e3}
+.rk-era-dot.current span{border-color:#e09a2b;box-shadow:0 0 0 5px rgba(224,154,43,.18);transform:scale(1.1)}
+.rk-era-dot.current b{color:var(--ink)}
+.rk-era-dot.locked span{filter:grayscale(1);opacity:.55}
+.rk-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.rk-actions button{min-height:50px;border-radius:16px;font:inherit;font-weight:900;font-size:.86rem;cursor:pointer;border:0}
+.rk-actions .rk-primary{background:linear-gradient(135deg,#1b2b5e,#34488f);color:#fff;box-shadow:0 12px 22px -12px #1b2b5e}
+.rk-actions .rk-secondary{background:var(--bg);color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+@media(min-width:900px){.rk-hero{aspect-ratio:21/9}}
+@media(max-width:430px){.rk-era-dot span{width:36px;height:36px;font-size:1rem}.rk-eras:before,.rk-eras .rk-fill{top:20px}.rk-actions button{font-size:.8rem}.rk-body{padding:14px}}
+@media(max-width:340px){.rk-actions{grid-template-columns:1fr}}
+/* ----- Fenêtre « 50 niveaux » ----- */
+.domain50-dialog{border-radius:28px!important;border:0!important}
+.domain50-dialog-head{padding:18px 20px!important}
+.domain50-dialog-head h2{font-size:1.45rem!important}
+.domain50-close{width:42px!important;height:42px!important}
+.rk-tl{padding:6px 16px 20px;display:grid;gap:18px}
+.rk-tl-era{display:grid;gap:8px}
+.rk-tl-era-head{display:flex;align-items:center;gap:10px;position:sticky;top:0}
+.rk-tl-era-head .ic{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-size:1.2rem;background:#fff7e3;box-shadow:inset 0 0 0 1px rgba(224,154,43,.3)}
+.rk-tl-era-head b{display:block;font-size:1rem}
+.rk-tl-era-head small{font-size:.72rem;color:var(--ink-2);font-weight:800}
+.rk-tl-era-head .count{margin-left:auto;font-size:.72rem;font-weight:900;color:#b0741a;background:#fff7e3;border-radius:999px;padding:4px 10px}
+.rk-tl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:8px}
+.rk-tl-item{display:grid;grid-template-columns:36px 1fr;gap:8px;align-items:center;padding:9px 10px;border-radius:16px;background:var(--bg);box-shadow:inset 0 0 0 1px var(--line);min-width:0}
+.rk-tl-item .ic{width:36px;height:36px;border-radius:12px;display:grid;place-items:center;font-size:1.25rem;background:var(--surface);position:relative}
+.rk-tl-item .ic em{position:absolute;right:-5px;bottom:-5px;font-style:normal;font-size:.55rem;font-weight:950;background:#1b2b5e;color:#fff;border-radius:999px;padding:2px 5px}
+.rk-tl-item b{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;font-size:.8rem;line-height:1.2;overflow:hidden}
+.rk-tl-item small{font-size:.68rem;color:var(--ink-2);font-weight:800}
+.rk-tl-item.done .ic{background:#fff7e3}
+.rk-tl-item.done small{color:#2f9e5e}
+.rk-tl-item.current{background:linear-gradient(135deg,#fff3d6,#fffaf0);box-shadow:inset 0 0 0 2px #e09a2b,0 10px 20px -14px #e09a2b}
+.rk-tl-item.current small{color:#b0741a}
+.rk-tl-item.locked{opacity:.55}
+.rk-tl-item.locked .ic{filter:grayscale(1)}
+</style>
+<script id="castellum-kingdom2-js">
+(function(){
+  const D=window.CastellumDomain50;
+  if(!D||typeof castleProgressCard!=='function'||typeof CASTLE_STYLE_DATA==='undefined')return;
+  const fmt=n=>Number(n||0).toLocaleString('fr-FR');
+  const eraOf=level=>Math.max(0,D.eras.findIndex(e=>level>=e.from&&level<=e.to));
+  const art=(key,level,label)=>typeof window.royaumeSVG==='function'?window.royaumeSVG(key,level,label):'';
+
+  castleProgressCard=function(){
+    const d=D.progress(),key=(S.castleStyle&&CASTLE_STYLE_DATA[S.castleStyle])?S.castleStyle:'medieval',st=CASTLE_STYLE_DATA[key];
+    const ei=eraOf(d.level),era=D.eras[ei];
+    const title=typeof window.castellumTitle==='function'?window.castellumTitle():d.rank;
+    const hasNext=d.next!=null,done=d.xp-d.base,span=hasNext?d.next-d.base:1,rest=hasNext?Math.max(0,d.next-d.xp):0;
+    const fillPct=Math.round((ei+(d.level-era.from)/Math.max(1,era.to-era.from+1))/(D.eras.length-1)*100);
+    const eras=D.eras.map((e,i)=>`<div class="rk-era-dot ${i<ei?'done':i===ei?'current':'locked'}"><span>${e.icon}</span><b>${esc(e.name)}</b></div>`).join('');
+    return `<section class="card rk-card">
+      <div class="rk-hero" data-domain-open="timeline" role="button" tabindex="0" aria-label="Voir l'évolution de mon royaume">
+        <div class="rk-art">${art(key,d.level,`${st.name} · niveau ${d.level}`)}</div>
+        <div class="rk-top"><span class="rk-chip">${st.icon} ${esc(st.name)}</span><button type="button" class="rk-chip" data-domain-open="styles">⚜️ Architecture</button></div>
+        <div class="rk-cap">
+          <span class="rk-era">${era.icon} Ère ${ei+1} · ${esc(era.name)}</span>
+          <h2>${esc(d.name)}</h2>
+          <div class="rk-meta"><span class="rk-lvl">Niveau ${d.level}<small>/50</small></span><button type="button" class="rk-chip rk-rank" data-domain-open="styles" aria-label="Changer mon titre">🎖️ ${esc(title)}</button></div>
+        </div>
+      </div>
+      <div class="rk-body">
+        <div class="rk-next">
+          <div class="rk-next-ic">${hasNext?(D.icons[d.ix+1]||'🏰'):'👑'}</div>
+          <div><small>${hasNext?'Prochaine amélioration':'Prestige maximal'}</small><b>${hasNext?esc(D.names[d.ix+1]):'Castellum éternel'}</b>
+            <div class="rk-bar"><i style="width:${hasNext?d.pct:100}%"></i></div>
+            <div class="rk-xp"><span><b>${fmt(done)}</b> / ${fmt(span)} XP</span><span>${hasNext?`encore ${fmt(rest)} XP`:'👑 Tout est débloqué'}</span></div></div>
+        </div>
+        <div class="rk-eras" aria-label="Ères du royaume"><i class="rk-fill" style="width:calc((100% - 48px) * ${Math.min(100,fillPct)/100})"></i>${eras}</div>
+        <div class="rk-actions"><button type="button" class="rk-primary" data-domain-open="timeline">🏰 Évolution</button><button type="button" class="rk-secondary" data-domain-open="styles">⚜️ Architecture</button></div>
+      </div>
+    </section>`;
+  };
+
+  // Fenêtre « 50 niveaux » : niveaux groupés par ère, en cartes compactes.
+  function rebuildTimeline(m){
+    const tl=m.querySelector('.domain50-timeline');if(!tl||tl.dataset.rk)return;
+    tl.dataset.rk='1';tl.classList.add('rk-tl');tl.classList.remove('domain50-timeline');
+    const d=D.progress();
+    tl.innerHTML=D.eras.map((e,ei)=>{
+      const lv=[];for(let l=e.from;l<=e.to;l++)lv.push(l);
+      const got=lv.filter(l=>l<=d.level).length;
+      return `<section class="rk-tl-era"><div class="rk-tl-era-head"><span class="ic">${e.icon}</span><div><b>Ère ${ei+1} · ${esc(e.name)}</b><small>Niveaux ${e.from} à ${e.to}</small></div><span class="count">${got}/${lv.length}</span></div>
+        <div class="rk-tl-grid">${lv.map(l=>{const i=l-1,state=i<d.ix?'done':i===d.ix?'current':'locked';
+          return `<div class="rk-tl-item ${state}" ${state==='current'?'data-domain-current="1"':''}><span class="ic">${D.icons[i]||'🏰'}<em>${l}</em></span><div><b>${esc(D.names[i])}</b><small>${state==='done'?'✓ Débloqué':state==='current'?'⚒️ Tu es ici':fmt(D.thresholds[i])+' XP'}</small></div></div>`}).join('')}</div></section>`;
+    }).join('');
+  }
+  function watch(){const m=document.getElementById('domain50Modal');if(!m||m.dataset.rkWatch)return;m.dataset.rkWatch='1';new MutationObserver(()=>rebuildTimeline(m)).observe(m,{childList:true,subtree:true});rebuildTimeline(m)}
+  new MutationObserver(watch).observe(document.body,{childList:true});watch();
+  document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&document.activeElement?.classList?.contains('rk-hero')){e.preventDefault();document.activeElement.click()}},true);
+  try{if(typeof render==='function')render()}catch(e){}
 })();
 </script>
