@@ -118554,7 +118554,17 @@ window.CASTELLUM_ILLUS={"occidental": {"from": [1, 13, 26, 39], "stages": [{"img
 .learn2 .node .sec-ic{font-size:1.35rem}
 .learn2 .node-lab{margin-top:7px;font-size:.64rem}
 .learn2 .start-tip{border-radius:12px;border-width:1.5px;box-shadow:0 8px 18px -10px rgba(0,0,0,.35)}
-.learn2 .path-mascot{width:78px}
+.learn2 .path-mascot{display:none}
+/* Mascotte à côté de l'étape en cours, du côté libre du chemin */
+.learn2 .node-wrap2{position:relative}
+.learn2 .l2-mascot{position:absolute;top:50%;width:74px;transform:translateY(-58%);pointer-events:none;z-index:2;animation:l2bob 3s ease-in-out infinite}
+.learn2 .l2-mascot .mascot{width:74px;height:auto;display:block;filter:drop-shadow(0 6px 10px rgba(20,40,110,.18))}
+.learn2 .l2-mascot.right{left:calc(100% + 14px)}
+.learn2 .l2-mascot.left{right:calc(100% + 14px)}
+.learn2 .node.cur~.node-lab{display:none}
+.learn2 .l2-bubble{position:absolute;top:calc(100% + 2px);left:50%;transform:translateX(-50%);white-space:nowrap;background:var(--surface);color:var(--ink);border:1.5px solid var(--line);border-radius:12px;padding:4px 9px;font-size:.66rem;font-weight:900;box-shadow:0 6px 14px -8px rgba(0,0,0,.35)}
+@keyframes l2bob{0%,100%{transform:translateY(-58%)}50%{transform:translateY(-64%)}}
+@media (prefers-reduced-motion:reduce){.learn2 .l2-mascot{animation:none}}
 .learn2 .checkpoint{border-radius:24px}
 /* Bandeau compte invité plus discret */
 .save-banner{padding:10px 14px!important;border-radius:18px!important}
@@ -118582,6 +118592,20 @@ window.CASTELLUM_ILLUS={"occidental": {"from": [1, 13, 26, 39], "stages": [{"img
           .replace('</p></div>',`</p><div class="u2-prog" aria-hidden="true"><i style="width:${pct}%"></i></div><small class="u2-count">${label}</small></div>`)
           .replace('</header>',`<span class="u2-chev" aria-hidden="true">▾</span></header>`)
           .replace('<header class="unit-head big"',`<header class="unit-head big" data-u2="${u}" role="button" tabindex="0" aria-expanded="${open}"`);
+      }
+      // Mascotte : juste à côté de l'étape en cours, du côté opposé au décalage du chemin.
+      for(let i=1;i<parts.length;i++){
+        const ci=parts[i].indexOf(' cur"');if(ci<0)continue;
+        const ws=parts[i].lastIndexOf('<div class="node-wrap2"',ci),ns=parts[i].indexOf('<div class="nodes">');
+        if(ws<0||ns<0||ws<ns)continue;
+        const idx=parts[i].slice(ns,ws).split('<div class="node-wrap2"').length-1;
+        const side=idx%4===1?'left':'right';
+        const boss=/node[^"]*boss[^"]*cur"/.test(parts[i].slice(ws,ci+5));
+        const first=!/\bdone\b/.test(parts[i].slice(ns,ws));
+        const say=boss?'Courage pour le boss !':first?"C'est parti !":'À toi de jouer !';
+        const mood=(typeof S!=='undefined'&&S.hearts<=0)?'sad':(typeof streak==='function'&&streak()>=3)?'cheer':'happy';
+        const tagEnd=parts[i].indexOf('>',ws)+1;
+        parts[i]=parts[i].slice(0,tagEnd)+`<div class="l2-mascot ${side}" aria-hidden="true"><span class="l2-bubble">${say}</span>${typeof mascot==='function'?mascot(mood):''}</div>`+parts[i].slice(tagEnd);
       }
       html=parts.join('<section class="unit ');
     }catch(e){console.warn('learn2',e)}
