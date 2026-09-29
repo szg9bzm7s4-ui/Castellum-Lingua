@@ -118480,3 +118480,121 @@ window.CASTELLUM_ILLUS={"occidental": {"from": [1, 13, 26, 39], "stages": [{"img
   },false);
 })();
 </script>
+
+<!-- ================================================================
+     CASTELLUM LINGUA · APPRENDRE MODERNISÉ
+     Couche visuelle au-dessus du parcours existant (aucune logique
+     de progression modifiée) : en-tête compact, niveaux en pastilles,
+     carte « Aujourd'hui », unités en cartes repliables avec
+     progression, boutons d'étape plus légers.
+     ================================================================ -->
+<style id="castellum-learn2-css">
+.learn2{display:flex;flex-direction:column;gap:16px}
+/* En-tête langue */
+.learn2 .path-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:2px 2px 0}
+.learn2 .ph-lang{display:flex;align-items:center;gap:10px;border:0;background:none;padding:0;cursor:pointer;text-align:left}
+.learn2 .ph-lang b{font-size:1.25rem;line-height:1.1}
+.learn2 .ph-lang small{font-size:.78rem}
+/* Niveaux : pastilles défilantes */
+.learn2 .levels{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px 2px 4px;margin:0 -2px;scroll-snap-type:x proximity}
+.learn2 .levels::-webkit-scrollbar{display:none}
+.learn2 .lvl{flex:0 0 auto;min-width:112px;scroll-snap-align:start;flex-direction:column;gap:3px;border:1.5px solid var(--line);background:var(--surface);border-radius:16px;padding:9px 12px 10px;box-shadow:none}
+.learn2 .lvl b{font-size:1.05rem}
+.learn2 .lvl span{font-size:.72rem;white-space:nowrap}
+.learn2 .lvl i{display:block;width:100%;height:5px;border-radius:99px;background:var(--line);overflow:hidden;margin-top:4px}
+.learn2 .lvl i em{display:block;height:100%;border-radius:inherit;background:var(--accent)}
+.learn2 .lvl.on{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 9%,var(--surface));box-shadow:0 6px 16px -10px var(--accent)}
+.learn2 .level-info{border:0;background:none;padding:0 4px;margin-top:-6px}
+.learn2 .level-info b{font-size:.92rem}
+.learn2 .level-info p{display:none}
+/* Aujourd'hui */
+.learn2 .today{border:0;border-radius:24px;padding:16px;background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 10%,var(--surface)),var(--surface));box-shadow:0 10px 30px -18px rgba(20,40,110,.45),inset 0 0 0 1px var(--line)}
+.learn2 .today-actions{grid-template-columns:1fr 1fr!important;gap:10px}
+.learn2 .today-btn{border:1.5px solid var(--line);border-radius:18px;box-shadow:none;padding:12px;min-height:56px}
+.learn2 .today-btn:active{transform:scale(.98);box-shadow:none}
+.learn2 .today-btn.main{grid-column:1/-1;min-height:68px;border:0;background:linear-gradient(135deg,var(--accent),color-mix(in srgb,var(--accent) 70%,#7b2cbf));box-shadow:0 12px 24px -12px var(--accent)}
+.learn2 .today-btn.main b{font-size:1.15rem}
+.learn2 .today-btn:not(.main) b{font-size:.95rem;white-space:nowrap}
+/* Cartes d'unité */
+.learn2 .unit{gap:0;background:var(--surface);border-radius:24px;box-shadow:0 10px 28px -20px rgba(20,40,110,.5),inset 0 0 0 1px var(--line);overflow:visible}
+.learn2 .unit-head,.learn2 .unit-head.big{filter:none;opacity:1;min-height:0;background:transparent;color:var(--ink);box-shadow:none;border-radius:24px;padding:14px 14px 14px 12px;gap:12px;cursor:pointer;justify-content:flex-start}
+.learn2 .unit-head .u-emoji{flex:0 0 52px;width:52px;height:52px;border-radius:16px;display:grid;place-items:center;font-size:1.6rem;background:hsl(var(--h) 70% 50% / .14)}
+.learn2 .unit-head .eyebrow{color:hsl(var(--h) 55% 42%);font-size:.66rem;letter-spacing:.08em}
+.learn2 .unit-head h2{color:var(--ink);font-size:1.12rem!important;line-height:1.2;margin:2px 0 0}
+.learn2 .unit-head p{display:none}
+.learn2 .unit-head .guide{border:1.5px solid var(--line);background:var(--bg);color:var(--ink-2);border-radius:12px;padding:8px 9px;flex:0 0 auto}
+.learn2 .u2-prog{height:6px;border-radius:99px;background:var(--line);overflow:hidden;margin-top:8px}
+.learn2 .u2-prog i{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,hsl(var(--h) 70% 48%),hsl(calc(var(--h) + 30) 75% 55%))}
+.learn2 .u2-count{display:block;margin-top:4px;font-size:.7rem;font-weight:800;color:var(--ink-2)}
+.learn2 .u2-chev{flex:0 0 auto;font-size:.9rem;color:var(--ink-2);transition:transform .2s}
+.learn2 .unit.open .u2-chev{transform:rotate(180deg)}
+.learn2 .unit.finished .u2-prog i{background:var(--gold)}
+.learn2 .unit.locked{opacity:.62}
+.learn2 .unit.locked .unit-head .u-emoji{filter:grayscale(1)}
+.learn2 .unit:not(.open) .nodes{display:none}
+.learn2 .unit.open{box-shadow:0 18px 40px -22px hsl(var(--h) 60% 40% / .7),inset 0 0 0 2px hsl(var(--h) 70% 50% / .35)}
+/* Étapes */
+.learn2 .nodes{gap:40px;padding:34px 0 26px}
+.learn2 .start-tip{font-size:.72rem;padding:5px 10px}
+.learn2 .node-wrap2:nth-child(4n+1){transform:translateX(0)!important}
+.learn2 .node-wrap2:nth-child(4n+2){transform:translateX(52px)!important}
+.learn2 .node-wrap2:nth-child(4n+3){transform:translateX(0)!important}
+.learn2 .node-wrap2:nth-child(4n+4){transform:translateX(-52px)!important}
+.learn2 .node{width:64px;height:64px;background:linear-gradient(160deg,color-mix(in srgb,var(--c) 78%,#fff),var(--c));box-shadow:0 4px 0 var(--d),0 14px 22px -12px var(--d)}
+.learn2 .node:active{transform:translateY(3px);box-shadow:0 1px 0 var(--d)}
+.learn2 .node.locked{box-shadow:0 3px 0 var(--d)}
+.learn2 .node.boss{width:78px;height:74px;border-radius:24px}
+.learn2 .node.chest{width:62px;height:58px;border-radius:18px;font-size:1.6rem}
+.learn2 .node.cur{box-shadow:0 4px 0 var(--d),0 0 0 8px hsl(var(--h) 70% 50% / .18);animation:learn2pulse 2s ease-in-out infinite}
+@keyframes learn2pulse{0%,100%{box-shadow:0 4px 0 var(--d),0 0 0 6px hsl(var(--h) 70% 50% / .22)}50%{box-shadow:0 4px 0 var(--d),0 0 0 13px hsl(var(--h) 70% 50% / .06)}}
+.learn2 .node .sec-ic{font-size:1.35rem}
+.learn2 .node-lab{margin-top:7px;font-size:.64rem}
+.learn2 .start-tip{border-radius:12px;border-width:1.5px;box-shadow:0 8px 18px -10px rgba(0,0,0,.35)}
+.learn2 .path-mascot{width:78px}
+.learn2 .checkpoint{border-radius:24px}
+/* Bandeau compte invité plus discret */
+.save-banner{padding:10px 14px!important;border-radius:18px!important}
+.save-banner small{font-size:.74rem!important;line-height:1.3!important}
+@media (prefers-reduced-motion:reduce){.learn2 .node.cur{animation:none}}
+</style>
+<script id="castellum-learn2-js">
+(function(){
+  if(typeof pathView!=='function'||typeof LORDER==='undefined')return;
+  const OPEN=new Set(),CLOSED=new Set();
+  const prev=pathView;
+  pathView=function(){
+    let html=prev.apply(this,arguments);
+    if(typeof html!=='string')return html;
+    try{
+      const parts=html.split('<section class="unit ');
+      for(let i=1;i<parts.length;i++){
+        const u=i-1,cls=parts[i].slice(0,parts[i].indexOf('"'));
+        const finished=/\bfinished\b/.test(cls),locked=/\blocked\b/.test(cls);
+        const isCurrent=!finished&&!locked;
+        const open=OPEN.has(u)||(isCurrent&&!CLOSED.has(u));
+        const n=LORDER.filter(l=>stepDone(u,l)).length,pct=Math.round(n/LORDER.length*100);
+        const label=finished?'✓ Unité terminée':locked?'🔒 À débloquer':`${n}/${LORDER.length} étapes`;
+        parts[i]=(open?'open ':'')+parts[i]
+          .replace('</p></div>',`</p><div class="u2-prog" aria-hidden="true"><i style="width:${pct}%"></i></div><small class="u2-count">${label}</small></div>`)
+          .replace('</header>',`<span class="u2-chev" aria-hidden="true">▾</span></header>`)
+          .replace('<header class="unit-head big"',`<header class="unit-head big" data-u2="${u}" role="button" tabindex="0" aria-expanded="${open}"`);
+      }
+      html=parts.join('<section class="unit ');
+    }catch(e){console.warn('learn2',e)}
+    return `<div class="learn2">${html}</div>`;
+  };
+  function toggle(h){
+    const u=+h.dataset.u2,sec=h.closest('.unit');if(!sec)return;
+    const open=!sec.classList.contains('open');
+    sec.classList.toggle('open',open);h.setAttribute('aria-expanded',open);
+    if(open){OPEN.add(u);CLOSED.delete(u)}else{OPEN.delete(u);CLOSED.add(u)}
+    if(open)requestAnimationFrame(()=>sec.scrollIntoView({block:'nearest',behavior:'smooth'}));
+  }
+  document.addEventListener('click',e=>{
+    const h=e.target.closest?.('.learn2 [data-u2]');if(!h||e.target.closest('.guide,button'))return;
+    e.preventDefault();toggle(h);
+  },true);
+  document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&document.activeElement?.matches?.('.learn2 [data-u2]')){e.preventDefault();toggle(document.activeElement)}},true);
+  try{if(typeof render==='function'&&typeof view!=='undefined'&&view==='learn')render()}catch(e){}
+})();
+</script>
