@@ -114452,7 +114452,7 @@ function listsView(){
     return `<button class="list-card" data-openlist="${s.id}" style="--h:${s.h}"><span class="lc-ic" data-noi18n>${s.kind==="unit"?s.lv:esc(tr(s.n).split(" ").pop().slice(0,2).toUpperCase())}</span>
       <span class="lc-t"><b>${esc(s.n)}</b><small>${n} mots et phrases${d?"":s.gen?" · créée à la demande":" · traduction automatique"}</small><span class="qbar"><i style="width:${m/n*100}%;background:hsl(${s.h} 62% 50%)"></i></span></span></button>`};
   return `<div class="section-head"><div><span class="eyebrow">${[...HANDSETS,...THEMES].reduce((a,s)=>a+s.items.length,0)} mots et phrases · contenu original préservé</span><h1>Listes de vocabulaire</h1><p class="muted">Aucun remplissage automatique : chaque liste garde uniquement ses entrées d'origine et son propre thème.</p></div></div>
-  <h3>Listes thématiques</h3><div class="list-grid">${THEMES.map(card).join("")}</div>
+  <h3>Listes thématiques</h3><div class="list-grid">${THEMES.filter(t=>setData(t.id)).map(card).join("")}</div>
   ${LEVEL_INFO.map(x=>`<h3>Niveau ${x.id} · ${esc(x.n)}</h3><div class="list-grid">${lvUnits(x.id).map(card).join("")}</div>`).join("")}`}
 function listView(){
   const s=SETMAP[curList];if(!s)return listsView();const d=setData(s.id);const hasV=canSpeak(S.tgt);
@@ -118807,6 +118807,23 @@ window.GRAM_FULL={"it": {"A1": [{"topic": "Poser une question", "t": "Poser une 
     openFiche=function(f){const r=prevOpen.apply(this,arguments);const eb=document.querySelector('#sheetRoot .eyebrow');if(eb&&/Claude/.test(eb.textContent))eb.textContent='Fiche de grammaire';openFiche.cur=f;return r};
   }
   try{if(typeof view!=='undefined'&&view==='grammar')render()}catch(e){}
+})();
+</script>
+<script id="castellum-coverage-js">
+/* Parcours sans impasse : pour une langue, seules les unités qui ont réellement du contenu hors ligne
+   apparaissent. Les unités manquantes sont toutes en fin de niveau : les indices (et donc la progression
+   sauvegardée) ne changent pas. */
+(function(){
+  if(typeof LEVELS==="undefined")return;
+  const avail=(set,lang)=>COLS.includes(lang)||!!((S.packs||{})[lang+">"+set.id]||BUILT[lang+">"+set.id]);
+  const cache={};
+  Object.keys(LEVELS).forEach(lv=>{
+    const all=LEVELS[lv].units.slice();LEVELS[lv].allUnits=all;
+    Object.defineProperty(LEVELS[lv],"units",{configurable:true,get(){
+      const lang=S.tgt,k=lang+"|"+Object.keys(S.packs||{}).length,c=cache[lv]||(cache[lv]={});
+      if(c[k])return c[k];let n=all.length;while(n>1&&!avail(all[n-1],lang))n--;return c[k]=all.slice(0,n)}});
+  });
+  try{if(typeof render==="function")render()}catch(e){}
 })();
 </script>
 <style id="castellum-world-css">
