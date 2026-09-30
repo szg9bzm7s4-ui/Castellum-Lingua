@@ -116229,8 +116229,20 @@ document.addEventListener('click',function(e){
     sr:'sr-RS',bg:'bg-BG',ro:'ro-RO',hu:'hu-HU',el:'el-GR',tr:'tr-TR',
     ar:'ar-SA',he:'he-IL',fa:'fa-IR',hi:'hi-IN',bn:'bn-BD',zh:'zh-CN',
     ja:'ja-JP',ko:'ko-KR',vi:'vi-VN',sv:'sv-SE',no:'nb-NO',da:'da-DK',
-    fi:'fi-FI',ca:'ca-ES'
+    fi:'fi-FI',ca:'ca-ES',
+    la:'it-IT' /* latin lu par une voix italienne : prononciation ecclésiastique */
   };
+  /* Réécrit le latin pour qu'une voix italienne le prononce à l'ecclésiastique. */
+  function latinForItalianVoice(t){
+    return String(t||'').normalize('NFD').replace(/[\u0304\u0306]/g,'').normalize('NFC')
+      .replace(/æ/g,'e').replace(/Æ/g,'E').replace(/œ/g,'e').replace(/Œ/g,'E')
+      .replace(/ae/g,'e').replace(/Ae|AE/g,'E').replace(/oe/g,'e').replace(/Oe|OE/g,'E')
+      .replace(/([^stx])ti([aeiouAEIOU])/g,'$1zi$2')
+      .replace(/ph/g,'f').replace(/Ph/g,'F').replace(/th/g,'t').replace(/Th/g,'T').replace(/rh/g,'r')
+      .replace(/y/g,'i').replace(/Y/g,'I').replace(/j/g,'i').replace(/J/g,'I')
+      .replace(/\b([Mm])ihi\b/g,'$1ichi').replace(/\b([Nn])ihil/g,'$1ichil')
+      .replace(/\bh/g,'').replace(/\bH/g,'');
+  }
   function localeFor(code){
     return L[code]?.t||LOCALE_FALLBACK[code]||code;
   }
@@ -116268,7 +116280,9 @@ document.addEventListener('click',function(e){
       const v=voiceFor(code),want=localeFor(code);
       if(!v)return false;
       speechSynthesis.cancel();
-      const u=new SpeechSynthesisUtterance(String(text||'').replace(/\s*\(.*?\)/g,'').trim());
+      let say=String(text||'').replace(/\s*\(.*?\)/g,'').trim();
+      if(code==='la')say=latinForItalianVoice(say);
+      const u=new SpeechSynthesisUtterance(say);
       u.voice=v;
       u.lang=v.lang||want;
       const preferred=Number(AP.rate)||.92;
