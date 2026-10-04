@@ -120339,6 +120339,7 @@ Tu quoque, mi fili?|Toi aussi, mon fils ?|Tradition, d'après Suétone`;
       if(final.stop_reason==="refusal")throw new Error("refus");
       return snap;
     }catch(err){
+      if(Anthropic.APIConnectionError&&err instanceof Anthropic.APIConnectionError)throw new Error(navigator.onLine===false?"Pas de connexion internet pour le moment.":"Impossible de joindre Anthropic : vérifie ta connexion internet.");
       if(err instanceof Anthropic.AuthenticationError)throw new Error("Clé refusée : vérifie ta clé Anthropic dans les réglages.");
       if(err instanceof Anthropic.RateLimitError)throw new Error("Trop de demandes pour le moment : réessaie dans un instant.");
       if(err instanceof Anthropic.APIError)throw new Error(`Le service a répondu par une erreur (${err.status}).`);
@@ -120349,8 +120350,9 @@ Tu quoque, mi fili?|Toi aussi, mon fils ?|Tradition, d'après Suétone`;
   async function viaCloud(onText){
     const {data}=await Cloud.client.auth.getSession();const tok=data?.session?.access_token;if(!tok)throw new Error("Reconnecte-toi pour discuter avec l'IA.");
     const url=cfg().supabaseUrl.replace(/\/$/,"")+"/functions/v1/"+(cfg().aiChatFunction||"castellum-chat");
-    const res=await fetch(url,{method:"POST",headers:{"Content-Type":"application/json",Authorization:"Bearer "+tok,apikey:cfg().supabaseAnonKey||""},body:JSON.stringify({lang:S.tgt,langName:langName(S.tgt),srcName:langName(S.src),level:S.level||"A1",scenario:st.scen,correct:st.correct,messages:apiMessages()})});
-    if(res.status===404)throw new Error("La conversation IA n'est pas encore activée sur le serveur.");
+    if(navigator.onLine===false)throw new Error("Pas de connexion internet pour le moment.");
+    let res;try{res=await fetch(url,{method:"POST",headers:{"Content-Type":"application/json",Authorization:"Bearer "+tok,apikey:cfg().supabaseAnonKey||""},body:JSON.stringify({lang:S.tgt,langName:langName(S.tgt),srcName:langName(S.src),level:S.level||"A1",scenario:st.scen,correct:st.correct,messages:apiMessages()})})}catch(e){throw new Error("NOSERVER")}
+    if(res.status===404)throw new Error("NOSERVER");
     if(!res.ok||!res.body)throw new Error(`Le serveur a répondu par une erreur (${res.status}).`);
     const rd=res.body.getReader(),dec=new TextDecoder();let txt="";
     for(;;){const {value,done}=await rd.read();if(done)break;txt+=dec.decode(value,{stream:true});onText(txt.replace(/\n?\[\[(refus|erreur[^\]]*)\]\]$/,""))}
@@ -120372,7 +120374,7 @@ Tu quoque, mi fili?|Toi aussi, mon fils ?|Tradition, d'après Suétone`;
       if(!m.content)throw new Error("Réponse vide : réessaie.");
       try{addXP(2);day().xp+=2;save()}catch(e){}
       if(st.auto)speakReply(m.content);
-    }catch(err){st.msgs.pop();if(err.message==="NOCONF"){st.settings=true}else st.err=err.message||"Erreur inattendue."}
+    }catch(err){st.msgs.pop();if(err.message==="NOCONF"){st.settings=true;st.notice=""}else if(err.message==="NOSERVER"){st.settings=true;st.notice="La conversation IA n'est pas encore activée sur le serveur Castellum. En attendant, tu peux utiliser ta propre clé Anthropic ci-dessous."}else st.err=/^(Load failed|Failed to fetch|NetworkError)/i.test(err.message||"")?"Connexion impossible : vérifie ta connexion internet et réessaie.":(err.message||"Erreur inattendue.")}
     st.busy=false;draw();
   }
   const mainText=t=>String(t||"").split("\n").filter(l=>!/^\s*(✏️|🔤)/.test(l)).join(" ").trim();
@@ -120424,11 +120426,11 @@ Tu quoque, mi fili?|Toi aussi, mon fils ?|Tradition, d'après Suétone`;
 .ac-entry{display:flex;gap:12px;align-items:center;text-align:left;width:100%;border:2px solid var(--accent,#3b6);background:var(--accent-soft,#e8f0ff);color:inherit;border-radius:18px;padding:14px;margin:0 0 12px}
 .ac-entry b{display:block;font-size:1.02rem}.ac-entry small{color:var(--ink-2,#666)}.ac-entry .ac-ico{font-size:1.8rem}
 `;document.head.appendChild(s)}
-  function openChat(){css();if(st.lang!==S.tgt){st.lang=S.tgt;st.msgs=[];st.err=""}st.open=true;st.settings=false;root=document.getElementById("aiChatRoot");if(!root){root=document.createElement("div");root.id="aiChatRoot";document.body.appendChild(root)}document.body.style.overflow="hidden";draw();if(!st.msgs.length&&!st.settings)mode().then(m=>{if(m)ask();else{st.settings=true;draw()}})}
+  function openChat(){css();if(st.lang!==S.tgt){st.lang=S.tgt;st.msgs=[];st.err=""}st.open=true;st.settings=false;st.notice="";root=document.getElementById("aiChatRoot");if(!root){root=document.createElement("div");root.id="aiChatRoot";document.body.appendChild(root)}document.body.style.overflow="hidden";draw();if(!st.msgs.length&&!st.settings)mode().then(m=>{if(m)ask();else{st.settings=true;draw()}})}
   function closeChat(){st.open=false;try{rec&&rec.stop()}catch(e){}if(root)root.innerHTML="";document.body.style.overflow="";try{speechSynthesis.cancel()}catch(e){}}
   function settingsV(){
     const k=getKey(),signed=cloudReady();
-    return `<div class="ac-msgs"><div class="ac-card"><b>Comment se connecter à l'IA</b>
+    return `<div class="ac-msgs">${st.notice?`<div class="ac-err">${E(st.notice)}</div>`:""}<div class="ac-card"><b>Comment se connecter à l'IA</b>
       <p class="ac-note">La conversation utilise Claude, une IA d'Anthropic, qui demande une connexion internet. Deux possibilités :</p>
       <p class="ac-note">1. <b>Avec ton compte Castellum</b> ${signed?"✅ tu es connecté : la conversation passe par le serveur de l'appli, si son administrateur l'a activée.":"(connecte-toi depuis l'écran Compte) : la conversation passe par le serveur de l'appli, si son administrateur l'a activée."}</p>
       <p class="ac-note">2. <b>Avec ta propre clé Anthropic</b> (créée sur platform.claude.com, facturée sur ton compte Anthropic). Elle reste uniquement sur cet appareil et sert seulement à parler à Claude.</p>
