@@ -116232,8 +116232,36 @@ document.addEventListener('click',function(e){
     fi:'fi-FI',ca:'ca-ES',
     la:'it-IT' /* latin lu par une voix italienne : prononciation ecclésiastique */
   };
+  /* Accent tonique latin : pénultième si elle est longue (voyelle longue, diphtongue, ou suivie de deux consonnes), sinon antépénultième. */
+  function latinStressPos(w){
+    const lw=w.toLowerCase(),V=/[aeiouyāēīōūȳ]/,nuc=[];
+    for(let i=0;i<lw.length;i++){const c=lw[i];if(!V.test(c))continue;
+      if(c==="u"&&i>0&&(lw[i-1]==="q"||(lw[i-1]==="g"&&lw[i-2]==="n"))&&V.test(lw[i+1]||""))continue;
+      if((c==="i"||c==="j")&&((i===0&&V.test(lw[1]||""))||(i>0&&V.test(lw[i-1])&&V.test(lw[i+1]||""))))continue;
+      if(/^(ae|au|oe)$/.test(lw.slice(i,i+2))){nuc.push({s:i,e:i+2,L:true});i++;continue}
+      nuc.push({s:i,e:i+1,L:/[āēīōūȳ]/.test(c)});}
+    if(nuc.length<2)return -1;
+    if(nuc.length===2)return nuc[0].s;
+    const pen=nuc[nuc.length-2],nx=nuc[nuc.length-1];
+    let cons=lw.slice(pen.e,nx.s).replace(/qu/g,"q").replace(/[cpt]h/g,"t").replace(/h/g,"");
+    if(/^[bcdgpt][lr]$/.test(cons))cons="x";else cons=cons.replace(/[xz]/g,"cc");
+    if(pen.L||cons.length>=2)return pen.s;
+    if(/[āēīōūȳ]/.test(lw))return nuc[nuc.length-3].s;
+    return -1;
+  }
+  /* Prononciation restituée (classique) lue par une voix italienne : c et g durs, v = w, ae = aï, accent tonique latin. */
+  function latinClassicalForItalianVoice(t){
+    let out=String(t||"").normalize("NFC").replace(/[A-Za-zĀĒĪŌŪȲāēīōūȳ]+/g,w=>{const i=latinStressPos(w);return i<0?w:w.slice(0,i+1)+"\u0300"+w.slice(i+1)});
+    out=out.normalize("NFD").replace(/[\u0304\u0306]/g,"").toLowerCase()
+      .replace(/a(\u0300?)e/g,"a$1i").replace(/o(\u0300?)e/g,"o$1i")
+      .replace(/ph/g,"p").replace(/th/g,"t").replace(/rh/g,"r").replace(/ch/g,"c")
+      .replace(/c(?=[eiy])/g,"ch").replace(/g(?=[eiy])/g,"gh").replace(/gn/g,"ghn")
+      .replace(/v/g,"u").replace(/j/g,"i").replace(/y/g,"i");
+    return out.normalize("NFC");
+  }
   /* Réécrit le latin pour qu'une voix italienne le prononce à l'ecclésiastique. */
   function latinForItalianVoice(t){
+    try{if(((typeof S!=="undefined"&&S.latin&&S.latin.pron)||"classique")!=="eglise")return latinClassicalForItalianVoice(t)}catch(e){}
     return String(t||'').normalize('NFD').replace(/[\u0304\u0306]/g,'').normalize('NFC')
       .replace(/æ/g,'e').replace(/Æ/g,'E').replace(/œ/g,'e').replace(/Œ/g,'E')
       .replace(/ae/g,'e').replace(/Ae|AE/g,'E').replace(/oe/g,'e').replace(/Oe|OE/g,'E')
@@ -120047,6 +120075,10 @@ Tu quoque, mi fili?|Toi aussi, mon fils ?|Tradition, d'après Suétone`;
     return html;
   }
 
+  const pronMode=()=>{try{return (S.latin&&S.latin.pron)||"classique"}catch(e){return "classique"}};
+  function togglePron(){const p=P();p.pron=pronMode()==="eglise"?"classique":"eglise";try{save()}catch(e){}
+    try{toast(p.pron==="eglise"?"Prononciation d'église (à l'italienne) : Cicero = « tchitchero »":"Prononciation classique (restituée) : Cicero = « kikero »")}catch(e){}
+    say("Gaius Iulius Caesar Ciceroni salutem dicit.")}
   /* =================== INTERFACE =================== */
   const st={tab:"tables",sel:"rosa",drill:null,qc:null,text:null,tok:null,quiz:null};
   let root=null;
@@ -120099,7 +120131,7 @@ Tu quoque, mi fili?|Toi aussi, mon fils ?|Tradition, d'après Suétone`;
   const TABS=[["tables","Tables"],["drill","Formes"],["cases","Cas"],["texts","Textes"],["roots","Racines"],["verses","Vers"],["rome","Rome"]];
   function draw(){
     const body={tables:tablesV,drill:drillV,cases:casesV,texts:textsV,roots:rootsV,verses:versesV,rome:romeV}[st.tab]();
-    root.innerHTML=`<div class="lw-bg" data-lw="bg"><div class="lw" role="dialog" aria-label="Atelier latin"><div class="lw-head"><h2>🏛️ Atelier latin</h2><button class="lw-tag" data-lw="tab" data-k="rome" style="border:0;background:var(--gold-soft,#ffefb0);color:var(--ink,#111);border-radius:999px;padding:6px 10px">${rankOf(P().g).r.e} ${rankOf(P().g).r.n}</button><button class="lw-x" data-lw="close" aria-label="Fermer">✕</button></div><div class="lw-tabs">${TABS.map(([k,n])=>`<button data-lw="tab" data-k="${k}" aria-pressed="${st.tab===k}">${n}</button>`).join("")}</div><div class="lw-body">${body}</div></div></div>`;
+    root.innerHTML=`<div class="lw-bg" data-lw="bg"><div class="lw" role="dialog" aria-label="Atelier latin"><div class="lw-head"><h2>🏛️ Atelier latin</h2><button class="lw-tag" data-lw="pron" title="Changer de prononciation" style="border:0;background:var(--surface-2,#eee);color:var(--ink,#111);border-radius:999px;padding:6px 10px">🔊 ${pronMode()==="eglise"?"Église":"Classique"}</button><button class="lw-tag" data-lw="tab" data-k="rome" style="border:0;background:var(--gold-soft,#ffefb0);color:var(--ink,#111);border-radius:999px;padding:6px 10px">${rankOf(P().g).r.e} ${rankOf(P().g).r.n}</button><button class="lw-x" data-lw="close" aria-label="Fermer">✕</button></div><div class="lw-tabs">${TABS.map(([k,n])=>`<button data-lw="tab" data-k="${k}" aria-pressed="${st.tab===k}">${n}</button>`).join("")}</div><div class="lw-body">${body}</div></div></div>`;
     const inp=root.querySelector("#lwAns");if(inp)inp.focus();
   }
   /* ---- Tables ---- */
@@ -120175,6 +120207,8 @@ Tu quoque, mi fili?|Toi aussi, mon fils ?|Tradition, d'après Suétone`;
 
   /* ---- Événements ---- */
   document.addEventListener("click",e=>{
+    const lp=e.target.closest&&e.target.closest("[data-latpron]");
+    if(lp){e.preventDefault();e.stopImmediatePropagation();togglePron();try{render()}catch(_){}return}
     const ent=e.target.closest&&e.target.closest("[data-latws]");
     if(ent){e.preventDefault();e.stopImmediatePropagation();open(ent.dataset.latws);return}
     if(!root||!root.contains(e.target))return;
@@ -120183,6 +120217,7 @@ Tu quoque, mi fili?|Toi aussi, mon fils ?|Tradition, d'après Suétone`;
     e.stopPropagation();
     if(a==="close"){close();return}
     if(a==="say"){say(b.dataset.t);return}
+    if(a==="pron"){togglePron();draw();return}
     if(a==="tab"){st.tab=k;}
     else if(a==="dk"){st.dk=k}else if(a==="dl"){st.dl=+k}
     else if(a==="dstart"){drillStart()}
@@ -120219,7 +120254,7 @@ Tu quoque, mi fili?|Toi aussi, mon fils ?|Tradition, d'après Suétone`;
   document.addEventListener("keydown",e=>{if(e.key==="Escape"&&root&&root.innerHTML){e.stopImmediatePropagation();close()}},true);
 
   /* ---- Points d'entrée : Grammaire et Jeux, seulement pour le latin ---- */
-  const entry=()=>`<div class="lw-entries">${[["tables","📚","Atelier latin : tables","Déclinaisons, pronoms et conjugaisons complètes"],["drill","✍️","S'entraîner aux formes","10 formes à écrire, avec série et XP"],["cases","🎯","Jeu « Quel cas ? »","Trouve le cas et la fonction d'un mot"],["texts","📜","Textes authentiques","Phèdre, César, Catulle, Cicéron, Virgile… analysés mot à mot"],["roots","🌳","Racines latines","Le latin caché dans le français, l'italien, l'espagnol, l'anglais…"],["verses","🎼","Scander les vers","Longues, brèves et rythme de l'hexamètre de Virgile"],["rome","🦅","Quêtes et rangs romains","Citation du jour, quêtes, insignes : de Tiro à Imperator"]].map(([k,i,t,d])=>`<button class="lw-entry" data-latws="${k}"><span class="lw-ico">${i}</span><span><b>${t}</b><small>${d}</small></span></button>`).join("")}</div>`;
+  const entry=()=>`<div class="lw-entries">${[["tables","📚","Atelier latin : tables","Déclinaisons, pronoms et conjugaisons complètes"],["drill","✍️","S'entraîner aux formes","10 formes à écrire, avec série et XP"],["cases","🎯","Jeu « Quel cas ? »","Trouve le cas et la fonction d'un mot"],["texts","📜","Textes authentiques","Phèdre, César, Catulle, Cicéron, Virgile… analysés mot à mot"],["roots","🌳","Racines latines","Le latin caché dans le français, l'italien, l'espagnol, l'anglais…"],["verses","🎼","Scander les vers","Longues, brèves et rythme de l'hexamètre de Virgile"],["rome","🦅","Quêtes et rangs romains","Citation du jour, quêtes, insignes : de Tiro à Imperator"]].map(([k,i,t,d])=>`<button class="lw-entry" data-latws="${k}"><span class="lw-ico">${i}</span><span><b>${t}</b><small>${d}</small></span></button>`).join("")}<button class="lw-entry" data-latpron="1"><span class="lw-ico">🔊</span><span><b>Prononciation : ${pronMode()==="eglise"?"d'église (à l'italienne)":"classique (celle de Cicéron)"}</b><small>Touche pour passer à la prononciation ${pronMode()==="eglise"?"classique : Cicero = « kikero »":"d'église : Cicero = « tchitchero »"}</small></span></button></div>`;
   try{
     const pg=grammarView;grammarView=function(){const h=pg.apply(this,arguments);if(S.tgt!=="la")return h;css();const i=h.indexOf('<div class="seg tabs">');if(i<0)return entry()+h;const j=h.indexOf("</div>",i)+6;return h.slice(0,j)+entry()+h.slice(j)};
   }catch(e){}
