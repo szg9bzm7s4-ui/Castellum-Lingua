@@ -119928,6 +119928,119 @@ ferrum|le fer|fer|ferreux, ferroviaire|ferro|hierro|ferro|ferrous|Hierro : encor
   function playRhythm(v){try{actx=actx||new (window.AudioContext||window.webkitAudioContext)();let t=actx.currentTime+.05;let p=0;
     v.ft.forEach(n=>{for(let j=0;j<n;j++,p++){const L=v.q[p]==="L",dur=L?.36:.18;const o=actx.createOscillator(),g=actx.createGain();o.type="triangle";o.frequency.value=j===0?660:440;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(j===0?.35:.2,t+.01);g.gain.exponentialRampToValueAtTime(.001,t+dur*.9);o.connect(g);g.connect(actx.destination);o.start(t);o.stop(t+dur);t+=dur+.04}t+=.08})}catch(e){}}
 
+  /* =================== ROME : RANGS, INSIGNES, QUÊTES, CITATION DU JOUR =================== */
+  const P=()=>{const s=(typeof S!=="undefined"&&S)||{};if(!s.latin||typeof s.latin!=="object")s.latin={};const p=s.latin;p.g=p.g||0;["b","texts","verses","quests"].forEach(k=>{if(!p[k]||typeof p[k]!=="object")p[k]={}});p.daily=p.daily||{last:"",n:0,streak:0};return p};
+  const RANKS=[
+    {g:0,n:"Tiro",e:"🪖",d:"la recrue"},{g:25,n:"Miles",e:"🛡️",d:"le soldat"},{g:70,n:"Legionarius",e:"⚔️",d:"le légionnaire"},
+    {g:140,n:"Decurio",e:"🐎",d:"le décurion (chef de dix cavaliers)"},{g:240,n:"Centurio",e:"🦅",d:"le centurion"},{g:380,n:"Tribunus",e:"📜",d:"le tribun"},
+    {g:560,n:"Legatus",e:"🏺",d:"le légat"},{g:800,n:"Consul",e:"🏛️",d:"le consul"},{g:1100,n:"Imperator",e:"👑",d:"le général victorieux, l'empereur"}
+  ];
+  const rankOf=g=>{let r=RANKS[0],i=0;RANKS.forEach((x,k)=>{if(g>=x.g){r=x;i=k}});return {r,i,next:RANKS[i+1]||null}};
+  const BADGES=[
+    {id:"primus",n:"Primus gradus",e:"👣",d:"Faire une première activité dans l'atelier"},
+    {id:"grammaticus",n:"Grammaticus",e:"✍️",d:"10 / 10 aux formes, niveau Expert"},
+    {id:"iudex",n:"Iudex",e:"⚖️",d:"Partie parfaite au jeu « Quel cas ? »"},
+    {id:"lector",n:"Lector",e:"📜",d:"Terminer le quiz des 9 textes"},
+    {id:"poeta",n:"Poeta",e:"🎼",d:"Scander parfaitement les 7 vers"},
+    {id:"etymologus",n:"Etymologus",e:"🌳",d:"10 / 10 au jeu des racines"},
+    {id:"viator",n:"Viator",e:"🗺️",d:"Achever les 3 quêtes romaines"},
+    {id:"diligens",n:"Diligens",e:"📅",d:"Répondre à 7 citations du jour"}
+  ];
+  function badge(id){const p=P();if(p.b[id])return;p.b[id]=todayK();const b=BADGES.find(x=>x.id===id);try{if(typeof save==="function")save();if(b&&typeof toast==="function")toast(`${b.e} Insigne débloqué : ${b.n} !`)}catch(e){}}
+  const todayK=()=>{try{if(typeof todayKey==="function")return todayKey()}catch(e){}const d=new Date();return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate()};
+  function gloria(n){const p=P(),before=rankOf(p.g).i;p.g+=n;badge("primus");const after=rankOf(p.g);if(after.i>before){try{toast(`${after.r.e} Nouveau rang : ${after.r.n} (${after.r.d}) !`)}catch(e){}}}
+
+  const QUOTES_RAW=`Carpe diem|Cueille le jour|Horace, Odes, I, 11
+Veni, vidi, vici|Je suis venu, j'ai vu, j'ai vaincu|César, selon Suétone
+Alea iacta est|Le sort en est jeté|César, selon Suétone
+Errare humanum est|L'erreur est humaine|Proverbe, d'après Sénèque
+Dum spiro, spero|Tant que je respire, j'espère|Devise
+Festina lente|Hâte-toi lentement|Auguste, selon Suétone
+Memento mori|Souviens-toi que tu vas mourir|Formule
+Panem et circenses|Du pain et des jeux|Juvénal, Satires, X
+Mens sana in corpore sano|Un esprit sain dans un corps sain|Juvénal, Satires, X
+O tempora, o mores!|Ô temps, ô mœurs !|Cicéron, Catilinaires
+Cogito, ergo sum|Je pense, donc je suis|Descartes
+Lupus est homo homini|L'homme est un loup pour l'homme|Plaute, La Comédie des ânes
+Per aspera ad astra|Par des chemins ardus jusqu'aux étoiles|Devise
+Audentes fortuna iuvat|La fortune sourit aux audacieux|Virgile, Énéide, X
+Fugit irreparabile tempus|Le temps fuit sans retour|Virgile, Géorgiques, III
+Omnia vincit amor|L'amour triomphe de tout|Virgile, Bucoliques, X
+Si vis pacem, para bellum|Si tu veux la paix, prépare la guerre|D'après Végèce
+Nosce te ipsum|Connais-toi toi-même|Traduction de l'inscription de Delphes
+Vae victis!|Malheur aux vaincus !|Brennus, selon Tite-Live
+In vino veritas|La vérité est dans le vin|Proverbe
+Verba volant, scripta manent|Les paroles s'envolent, les écrits restent|Proverbe
+Ars longa, vita brevis|L'art est long, la vie est brève|D'après Hippocrate
+Fortes fortuna adiuvat|La fortune aide les courageux|Térence, Phormion
+Gutta cavat lapidem|La goutte d'eau creuse la pierre|Ovide, Pontiques
+Ubi bene, ibi patria|Là où l'on est bien, là est la patrie|Proverbe
+Nihil novi sub sole|Rien de nouveau sous le soleil|Vulgate, Ecclésiaste
+Sic transit gloria mundi|Ainsi passe la gloire du monde|Formule du couronnement pontifical
+Docendo discimus|C'est en enseignant que nous apprenons|D'après Sénèque
+Primum non nocere|D'abord, ne pas nuire|Principe de la médecine
+Ave, Caesar, morituri te salutant|Salut, César, ceux qui vont mourir te saluent|Suétone, Vie de Claude
+Odi et amo|Je hais et j'aime|Catulle, 85
+Labor omnia vicit improbus|Un travail acharné est venu à bout de tout|Virgile, Géorgiques, I
+Quis custodiet ipsos custodes?|Qui gardera les gardiens eux-mêmes ?|Juvénal, Satires, VI
+Fiat lux|Que la lumière soit|Vulgate, Genèse
+Non scholae, sed vitae discimus|Nous n'apprenons pas pour l'école, mais pour la vie|D'après Sénèque
+Dulce et decorum est pro patria mori|Il est doux et glorieux de mourir pour la patrie|Horace, Odes, III, 2
+Aurea mediocritas|Le juste milieu est d'or|Horace, Odes, II, 10
+Natura non facit saltus|La nature ne fait pas de sauts|Formule de Leibniz et Linné
+Timeo Danaos et dona ferentes|Je crains les Grecs, même quand ils font des cadeaux|Virgile, Énéide, II
+Tu quoque, mi fili?|Toi aussi, mon fils ?|Tradition, d'après Suétone`;
+  const QUOTES=QUOTES_RAW.split("\n").map(l=>{const a=l.split("|");return {la:a[0],fr:a[1],src:a[2]}});
+  const dayIndex=()=>{const d=new Date();return Math.floor(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate())/864e5)};
+  function dailyQ(){const i=dayIndex()%QUOTES.length,q=QUOTES[i];const others=shuffle(QUOTES.filter((_,k)=>k!==i)).slice(0,2).map(x=>x.fr);const seed=dayIndex()%3;const opts=[...others];opts.splice(seed,0,q.fr);return {q,opts,ok:seed}}
+
+  // Quêtes : étapes [récit, question, bonne réponse, mauvaises…, explication]
+  const QUESTS=[
+    {id:"dies",n:"Une journée à Rome",e:"☀️",lv:"A1–A2",d:"De la visite du matin au dîner du soir, débrouille-toi en latin.",steps:[
+      ["À l'aube, tu rends visite à ton patron, comme tout bon client romain. L'esclave qui garde la porte te demande : « Quis es? »","Que réponds-tu pour donner ton nom ?","Mihi nomen est Lucius.","Ubi est Lucius?","Lucium video.","« Mihi nomen est… » : à moi (datif) est le nom… C'est la façon courante de se présenter."],
+      ["Au forum, un marchand crie : « Panem bonum vendo! »","Que vend-il ?","du bon pain","du bon vin","de bons poissons","panis (accusatif panem) : le pain ; vendo : je vends."],
+      ["Tu demandes le prix : « Quanti constat? » Il répond : « Duos asses. »","Combien dois-tu payer ?","deux as","dix as","douze as","duo, duae, duo : deux ; l'as (as, assis) est une petite pièce de bronze."],
+      ["Aux thermes, le gardien t'explique : « Aqua calida in caldario est, aqua frigida in frigidario. »","Où trouves-tu l'eau froide ?","dans le frigidarium","dans le caldarium","au forum","frigidus : froid ; calidus : chaud. Les thermes passaient du tepidarium (tiède) au caldarium et au frigidarium."],
+      ["En rentrant, tu passes devant une maison de Pompéi. Sur la mosaïque de l'entrée, on lit : « CAVE CANEM ».","Que signifie l'inscription ?","Attention au chien","Le chien dort","Achète un chien","cave : impératif de cavere (prendre garde) ; canem : accusatif de canis."],
+      ["Le soir, à la cena, ton hôte te demande : « Visne vinum? »","Que veut-il savoir ?","Veux-tu du vin ?","As-tu vu le vin ?","Où est le vin ?","vis : tu veux (de volo) + -ne : la particule de question."]]},
+    {id:"lapides",n:"Les pierres parlent",e:"🏛️",lv:"B1",d:"Déchiffre les inscriptions du Panthéon, des arcs et des routes.",steps:[
+      ["Tu arrives devant le Panthéon. Sur le fronton : « M·AGRIPPA·L·F·COS·TERTIVM·FECIT ».","Que signifie L·F ?","fils de Lucius (Lucii filius)","libre et franc","Lucius l'a fait","Les Romains se nomment avec le prénom de leur père : M. Agrippa L. f. = Marcus Agrippa, fils de Lucius."],
+      ["Toujours sur le Panthéon : « COS·TERTIVM ».","Que veut dire cette mention ?","consul pour la troisième fois","trois fois chef de cohorte","troisième consul de l'année","COS. abrège consul ; tertium : pour la troisième fois."],
+      ["Sur l'arc de Titus : « SENATVS POPVLVSQVE ROMANVS DIVO TITO ».","À quel cas est DIVO TITO, et pourquoi ?","datif : l'arc est dédié au divin Titus","ablatif : l'arc a été bâti par Titus","génitif : c'est l'arc de Titus","Le datif indique à qui l'on dédie le monument."],
+      ["Le long de la via Appia, une tombe porte : « D·M ».","À qui la pierre est-elle consacrée ?","aux dieux Mânes (Dis Manibus)","au divin maître","à Marcus le défunt","Les Mânes sont les esprits des morts ; D·M ouvre presque toutes les épitaphes."],
+      ["Une borne milliaire indique : « M·P·XII ».","Que signifie-t-elle ?","douze milles (milia passuum XII)","le douzième jour de mai","douze pierres","Un mille romain = mille pas doubles, environ 1,48 km."],
+      ["Sur un cadran solaire, une devise : « VLTIMA LATET ».","Que veut dire cette devise ?","La dernière (heure) est cachée","La dernière heure arrive vite","La lumière ultime brille","ultima (sous-entendu hora) ; latet : de latere, être caché. On ne sait pas quelle sera notre dernière heure."]]},
+    {id:"senatus",n:"Au Sénat avec Cicéron",e:"⚖️",lv:"C1",d:"Novembre 63 av. J.-C. : assiste au discours contre Catilina.",steps:[
+      ["Cicéron se lève au Sénat et lance : « Quo usque tandem abutere, Catilina, patientia nostra? »","Qu'est-ce que « abutere » ?","le futur de abutor, 2e pers. sing.","un infinitif présent actif","un impératif","Les déponents ont un futur en -beris / -eris, souvent abrégé en -re : abutere = abuteris."],
+      ["Il poursuit : « O tempora, o mores! »","À quel cas sont ces mots ?","à l'accusatif (exclamatif)","au vocatif","à l'ablatif","L'accusatif s'emploie dans les exclamations ; tempora et mores sont des pluriels (neutre et masculin)."],
+      ["« Senatus haec intellegit, consul videt ; hic tamen vivit. »","Qui désigne « hic » ?","Catilina, celui qui est là","le consul","le Sénat","hic : celui-ci, la personne présente sous nos yeux."],
+      ["« Vivit? Immo vero etiam in senatum venit. »","Que signifie « immo vero » ?","bien plus, et même","pourtant","c'est pourquoi","immo corrige et renchérit : non seulement il vit, mais encore il vient au Sénat !"],
+      ["Les sénateurs se taisent. Cicéron s'écrie : « Cum tacent, clamant. »","Que veut-il dire ?","Par leur silence, ils crient (leur accord)","Quand ils crient, ils se taisent","Ils se taisent devant Catilina","Le paradoxe montre que le silence du Sénat vaut approbation."],
+      ["Catilina a fui Rome. Le lendemain, Cicéron proclame : « Abiit, excessit, evasit, erupit. »","Quelle figure de style reconnais-tu ?","une gradation de verbes (accumulation)","un chiasme","une litote","Quatre parfaits de plus en plus forts : il est parti, sorti, s'est échappé, a fait irruption au dehors."]]}
+  ];
+
+  function romeV(){
+    const p=P(),R=rankOf(p.g);
+    if(st.quest){
+      const qs=QUESTS.find(x=>x.id===st.quest.id),q=st.quest,step=qs.steps[q.i];
+      const ans=q.ans;let html=`<button class="lw-btn alt" data-lw="qback" style="align-self:flex-start">← Quitter la quête</button><div class="lw-stat"><span>${qs.e} ${E(qs.n)}</span><span>Étape ${q.i+1} / ${qs.steps.length}</span><span>⭐ ${q.score}</span></div>`;
+      if(q.done){return html+`<div class="lw-card"><h3 style="margin:0 0 6px">Quête achevée !</h3><p class="lw-muted">${q.score} / ${qs.steps.length} bonnes réponses · +${q.score*2} gloria</p></div><button class="lw-btn" data-lw="qback">Retour à Rome</button>`}
+      html+=`<div class="lw-card"><p style="margin:0;font-size:1.05rem;line-height:1.5">${E(step[0])}</p></div><div class="lw-card"><b>${E(step[1])}</b><div class="lw-row" style="margin-top:8px">${q.order.map(k=>`<button class="lw-opt ${ans!=null?(k===2?"ok":ans===k?"ko":""):""}" style="flex:1 1 100%" data-lw="qans" data-k="${k}" ${ans!=null?"disabled":""}>${E(step[k])}</button>`).join("")}</div></div>`;
+      if(ans!=null)html+=`<div class="lw-fb ${ans===2?"ok":"ko"}">${ans===2?"Bene !":"Non."} <span style="font-weight:600">${E(step[5])}</span></div><button class="lw-btn" data-lw="qnext2">Continuer</button>`;
+      return html;
+    }
+    const pct=R.next?Math.round((p.g-R.r.g)/(R.next.g-R.r.g)*100):100;
+    const dq=dailyQ(),done=p.daily.last===dayIndex();
+    let html=`<div class="lw-card" style="display:flex;gap:14px;align-items:center"><div style="font-size:2.6rem">${R.r.e}</div><div style="flex:1"><span class="lw-tag">Ton rang</span><div class="lw-big">${R.r.n}</div><p class="lw-muted">${E(R.r.d)} · ${p.g} gloria</p>
+      <div style="height:10px;border-radius:99px;background:var(--surface-2,#eee);margin-top:8px;overflow:hidden"><div style="height:100%;width:${pct}%;background:var(--gold,#e6b800)"></div></div><p class="lw-muted" style="margin-top:4px;font-size:.8rem">${R.next?`Encore ${R.next.g-p.g} gloria pour devenir ${R.next.n}`:"Rang suprême atteint : Ave, Imperator !"}</p></div></div>`;
+    html+=`<div class="lw-card"><span class="lw-tag">📅 Citation du jour${p.daily.streak>1?` · série de ${p.daily.streak} jours`:""}</span><div class="lw-big" style="margin:6px 0">${E(dq.q.la)} <button class="lw-x" style="width:30px;height:30px;font-size:.8rem" data-lw="say" data-t="${E(dq.q.la)}">🔊</button></div>
+      ${done?`${p.daily.ok?`<div class="lw-fb ok" style="margin-bottom:6px">Bene ! +3 gloria</div>`:`<div class="lw-fb ko" style="margin-bottom:6px">Pas cette fois : voici la bonne traduction.</div>`}<p style="margin:0"><b>${E(dq.q.fr)}</b></p><p class="lw-muted">${E(dq.q.src)} · reviens demain pour une nouvelle citation !</p>`:`<b>Que signifie-t-elle ?</b><div class="lw-row" style="margin-top:8px">${dq.opts.map((o,k)=>`<button class="lw-opt" style="flex:1 1 100%" data-lw="dq" data-k="${k}">${E(o)}</button>`).join("")}</div>`}</div>`;
+    html+=`<h3 style="margin:6px 2px 0">Quêtes</h3>`+QUESTS.map(q=>`<button class="lw-entry" data-lw="qopen" data-k="${q.id}"><span class="lw-ico">${q.e}</span><span style="flex:1"><b>${E(q.n)} ${p.quests[q.id]?"✅":""}</b><small>${E(q.d)} · niveau ${q.lv}</small></span></button>`).join("");
+    html+=`<h3 style="margin:6px 2px 0">Insignes (${Object.keys(p.b).length} / ${BADGES.length})</h3><div class="lw-grid">${BADGES.map(b=>`<div class="lw-card" style="${p.b[b.id]?"":"opacity:.45;filter:grayscale(1)"}"><div style="font-size:1.6rem">${b.e}</div><b>${E(b.n)}</b><p class="lw-muted">${E(b.d)}</p></div>`).join("")}</div>`;
+    html+=`<h3 style="margin:6px 2px 0">Le cursus honorum</h3><div class="lw-card"><table class="lw-tbl">${RANKS.map((r,i)=>`<tr style="${i===R.i?"background:var(--gold-soft,#ffefb0)":""}"><th>${r.e} ${r.g}</th><td class="f">${r.n}</td><td class="lw-muted">${E(r.d)}</td></tr>`).join("")}</table><p class="lw-muted" style="margin-top:8px">Chaque bonne réponse dans l'atelier rapporte de la gloria : formes, cas, textes, racines, vers, quêtes et citation du jour.</p></div>`;
+    return html;
+  }
+
   /* =================== INTERFACE =================== */
   const st={tab:"tables",sel:"rosa",drill:null,qc:null,text:null,tok:null,quiz:null};
   let root=null;
@@ -119939,8 +120052,8 @@ ferrum|le fer|fer|ferreux, ferroviaire|ferro|hierro|ferro|ferrous|Hierro : encor
 #latRoot .lw-head{display:flex;align-items:center;gap:10px;padding:14px 16px 8px}
 #latRoot .lw-head h2{margin:0;font-size:1.15rem;flex:1}
 #latRoot .lw-x{border:0;background:var(--surface-2,#eee);color:inherit;border-radius:12px;width:38px;height:38px;font-size:1.1rem;font-weight:900}
-#latRoot .lw-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:0 16px 10px}
-@media(min-width:620px){#latRoot .lw-tabs{grid-template-columns:repeat(6,1fr)}}
+#latRoot .lw-tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;padding:0 16px 10px}
+@media(min-width:680px){#latRoot .lw-tabs{grid-template-columns:repeat(7,1fr)}}
 #latRoot .lw-tabs button{flex:1 0 auto;border:2px solid var(--line,#ddd);background:var(--surface,#fff);color:inherit;border-radius:999px;padding:7px 8px;font-weight:800;font-size:.8rem;white-space:nowrap}
 #latRoot .lw-tabs button[aria-pressed=true]{background:var(--accent,#3b6);color:var(--accent-ink,#fff);border-color:var(--accent,#3b6)}
 #latRoot .lw-body{flex:1;overflow-y:auto;padding:4px 16px 24px;display:flex;flex-direction:column;gap:12px}
@@ -119976,11 +120089,11 @@ ferrum|le fer|fer|ferreux, ferroviaire|ferro|hierro|ferro|ferrous|Hierro : encor
   function open(tab){css();if(tab)st.tab=tab;root=document.getElementById("latRoot");if(!root){root=document.createElement("div");root.id="latRoot";document.body.appendChild(root)}draw();document.body.style.overflow="hidden"}
   function close(){if(root)root.innerHTML="";document.body.style.overflow="";try{speechSynthesis.cancel()}catch(e){}}
   function say(t){try{if(typeof speak==="function")speak(t,"la")}catch(e){}}
-  function award(n){try{if(typeof addXP==="function")addXP(n);if(typeof day==="function")day().xp+=n;if(typeof save==="function")save()}catch(e){}}
-  const TABS=[["tables","Tables"],["drill","Formes"],["cases","Cas"],["texts","Textes"],["roots","Racines"],["verses","Vers"]];
+  function award(n){try{gloria(n)}catch(e){}try{if(typeof addXP==="function")addXP(n);if(typeof day==="function")day().xp+=n;if(typeof save==="function")save()}catch(e){}}
+  const TABS=[["tables","Tables"],["drill","Formes"],["cases","Cas"],["texts","Textes"],["roots","Racines"],["verses","Vers"],["rome","Rome"]];
   function draw(){
-    const body={tables:tablesV,drill:drillV,cases:casesV,texts:textsV,roots:rootsV,verses:versesV}[st.tab]();
-    root.innerHTML=`<div class="lw-bg" data-lw="bg"><div class="lw" role="dialog" aria-label="Atelier latin"><div class="lw-head"><h2>🏛️ Atelier latin</h2><button class="lw-x" data-lw="close" aria-label="Fermer">✕</button></div><div class="lw-tabs">${TABS.map(([k,n])=>`<button data-lw="tab" data-k="${k}" aria-pressed="${st.tab===k}">${n}</button>`).join("")}</div><div class="lw-body">${body}</div></div></div>`;
+    const body={tables:tablesV,drill:drillV,cases:casesV,texts:textsV,roots:rootsV,verses:versesV,rome:romeV}[st.tab]();
+    root.innerHTML=`<div class="lw-bg" data-lw="bg"><div class="lw" role="dialog" aria-label="Atelier latin"><div class="lw-head"><h2>🏛️ Atelier latin</h2><button class="lw-tag" data-lw="tab" data-k="rome" style="border:0;background:var(--gold-soft,#ffefb0);color:var(--ink,#111);border-radius:999px;padding:6px 10px">${rankOf(P().g).r.e} ${rankOf(P().g).r.n}</button><button class="lw-x" data-lw="close" aria-label="Fermer">✕</button></div><div class="lw-tabs">${TABS.map(([k,n])=>`<button data-lw="tab" data-k="${k}" aria-pressed="${st.tab===k}">${n}</button>`).join("")}</div><div class="lw-body">${body}</div></div></div>`;
     const inp=root.querySelector("#lwAns");if(inp)inp.focus();
   }
   /* ---- Tables ---- */
@@ -120018,7 +120131,7 @@ ferrum|le fer|fer|ferreux, ferroviaire|ferro|hierro|ferro|ferrous|Hierro : encor
   }
   function drillStart(){const pool=shuffle(drillPool(st.dk||"all",st.dl||1));st.drill={pool,i:0,n:10,ok:0,streak:0,best:0,cur:pool[0],fb:null,hint:0};}
   function drillCheck(v){const d=st.drill;const ok=answers(d.cur.a).includes(plain(v));d.fb={ok,v};if(ok){d.ok++;d.streak++;d.best=Math.max(d.best,d.streak);award(1);say(d.cur.a.split(" / ")[0])}else d.streak=0}
-  function drillNext(){const d=st.drill;d.i++;d.fb=null;d.hint=0;if(d.i>=d.n){d.done=true;return}d.cur=d.pool[d.i%d.pool.length]}
+  function drillNext(){const d=st.drill;d.i++;d.fb=null;d.hint=0;if(d.i>=d.n){d.done=true;if(d.ok===d.n&&(st.dl||1)===3)badge("grammaticus");return}d.cur=d.pool[d.i%d.pool.length]}
   /* ---- Quel cas ? ---- */
   function casesV(){
     const g=st.qc;
@@ -120072,21 +120185,26 @@ ferrum|le fer|fer|ferreux, ferroviaire|ferro|hierro|ferro|ferrous|Hierro : encor
     else if(a==="ql"){st.ql=+k}else if(a==="qstart"){qcStart()}
     else if(a==="qcase"){const g=st.qc;g.caseOk=k===g.cur[2];if(g.caseOk)g.score++;g.fopts=qcFnOpts(g.cur[3]);g.step=1}
     else if(a==="qfn"){const g=st.qc;g.fnOk=+k===g.cur[3];if(g.fnOk)g.score++;g.step=2;award((g.caseOk?1:0)+(g.fnOk?1:0));say(g.cur[0])}
-    else if(a==="qnext"){const g=st.qc;g.i++;if(g.i>=g.n){g.done=true}else{g.cur=g.pool[g.i];g.step=0}}
+    else if(a==="qnext"){const g=st.qc;g.i++;if(g.i>=g.n){g.done=true;if(g.score===g.n*2)badge("iudex")}else{g.cur=g.pool[g.i];g.step=0}}
     else if(a==="topen"){st.text=k;st.tok=null;st.showTr=false;st.quiz={};st.qorder=TEXTS.find(t=>t.id===k).q.map(()=>shuffle([1,2,3]))}
     else if(a==="tback"){st.text=null}
     else if(a==="tok"){st.tok=+k;const t=TEXTS.find(x=>x.id===st.text);const x=tok(t.w[+k]);if(x.w)say(x.w)}
     else if(a==="ttr"){st.showTr=!st.showTr}
     else if(a==="rstart"){rootsStart()}
     else if(a==="rans"){const g=st.rg;if(g.ans==null){g.ans=+k;if(+k===g.cur.ok){g.score++;award(1)}say(g.cur.r.la.split(/[ ,/]/)[0])}}
-    else if(a==="rnext"){const g=st.rg;g.i++;g.ans=null;if(g.i>=g.n)g.done=true;else g.cur=g.list[g.i]}
+    else if(a==="rnext"){const g=st.rg;g.i++;g.ans=null;if(g.i>=g.n){g.done=true;if(g.score===g.n)badge("etymologus")}else g.cur=g.list[g.i]}
     else if(a==="vsyl"){if(st.vchk)st.vchk=false;const v=st.vans;v[+k]=v[+k]===""?"L":v[+k]==="L"?"S":""}
-    else if(a==="vcheck"){if(!st.vchk){st.vchk=true;const V=VERSES[st.vi||0];const n=V.s.filter((_,p)=>p===V.s.length-1?st.vans[p]!=="":st.vans[p]===V.q[p]).length;if(n===V.s.length){award(5)}}}
+    else if(a==="vcheck"){if(!st.vchk){st.vchk=true;const V=VERSES[st.vi||0];const n=V.s.filter((_,p)=>p===V.s.length-1?st.vans[p]!=="":st.vans[p]===V.q[p]).length;if(n===V.s.length){award(5);const pp=P();pp.verses[st.vi||0]=1;if(VERSES.every((_,i)=>pp.verses[i]))badge("poeta");try{save()}catch(e){}}}}
     else if(a==="vnext"){st.vi=((st.vi||0)+1)%VERSES.length;st.vans=null;st.vchk=false}
     else if(a==="vplay"){playRhythm(VERSES[st.vi||0]);return}
-    else if(a==="tq"){const qi=+b.dataset.q;if(st.quiz[qi]==null){st.quiz[qi]=+k;if(+k===1)award(1)}}
+    else if(a==="qopen"){st.quest={id:k,i:0,score:0,ans:null,order:shuffle([2,3,4])}}
+    else if(a==="qback"){st.quest=null}
+    else if(a==="qans"){const q=st.quest;if(q.ans==null){q.ans=+k;if(+k===2){q.score++;award(2)}}}
+    else if(a==="qnext2"){const q=st.quest,qs=QUESTS.find(x=>x.id===q.id);q.i++;q.ans=null;q.order=shuffle([2,3,4]);if(q.i>=qs.steps.length){q.done=true;q.i=qs.steps.length-1;const pp=P();pp.quests[q.id]=1;if(QUESTS.every(x=>pp.quests[x.id]))badge("viator");try{save()}catch(e){}}}
+    else if(a==="dq"){const pp=P(),di=dayIndex();if(pp.daily.last!==di){const ok=+k===dailyQ().ok;pp.daily.streak=pp.daily.last===di-1?(pp.daily.streak||0)+1:1;pp.daily.last=di;pp.daily.ok=ok;pp.daily.n=(pp.daily.n||0)+1;if(ok)award(3);if(pp.daily.n>=7)badge("diligens");try{save()}catch(e){}}}
+    else if(a==="tq"){const qi=+b.dataset.q;if(st.quiz[qi]==null){st.quiz[qi]=+k;if(+k===1)award(1);const t=TEXTS.find(x=>x.id===st.text);if(t&&t.q.every((_,i)=>st.quiz[i]!=null)){const pp=P();pp.texts[t.id]=1;if(TEXTS.every(x=>pp.texts[x.id]))badge("lector");try{save()}catch(e){}}}}
     else return;
-    const sc=root.querySelector(".lw-body")?.scrollTop||0;draw();if(["tok","tq","ttr","say","vsyl","vcheck","rans"].includes(a)){const bd=root.querySelector(".lw-body");if(bd)bd.scrollTop=sc}
+    const sc=root.querySelector(".lw-body")?.scrollTop||0;draw();if(["tok","tq","ttr","say","vsyl","vcheck","rans","dq","qans"].includes(a)){const bd=root.querySelector(".lw-body");if(bd)bd.scrollTop=sc}
   },true);
   document.addEventListener("submit",e=>{if(!root||!root.contains(e.target))return;const f=e.target.closest('[data-lw="dform"]');if(!f)return;e.preventDefault();const v=f.querySelector("#lwAns").value;if(!v.trim())return;drillCheck(v);draw()},true);
   document.addEventListener("change",e=>{if(!root||!root.contains(e.target))return;if(e.target.matches('[data-lw="sel"]')){st.sel=e.target.value;draw()}if(e.target.matches('[data-lw="vsel"]')){st.vi=+e.target.value;st.vans=null;st.vchk=false;draw()}},true);
@@ -120094,14 +120212,14 @@ ferrum|le fer|fer|ferreux, ferroviaire|ferro|hierro|ferro|ferrous|Hierro : encor
   document.addEventListener("keydown",e=>{if(e.key==="Escape"&&root&&root.innerHTML){e.stopImmediatePropagation();close()}},true);
 
   /* ---- Points d'entrée : Grammaire et Jeux, seulement pour le latin ---- */
-  const entry=()=>`<div class="lw-entries">${[["tables","📚","Atelier latin : tables","Déclinaisons, pronoms et conjugaisons complètes"],["drill","✍️","S'entraîner aux formes","10 formes à écrire, avec série et XP"],["cases","🎯","Jeu « Quel cas ? »","Trouve le cas et la fonction d'un mot"],["texts","📜","Textes authentiques","Phèdre, César, Catulle, Cicéron, Virgile… analysés mot à mot"],["roots","🌳","Racines latines","Le latin caché dans le français, l'italien, l'espagnol, l'anglais…"],["verses","🎼","Scander les vers","Longues, brèves et rythme de l'hexamètre de Virgile"]].map(([k,i,t,d])=>`<button class="lw-entry" data-latws="${k}"><span class="lw-ico">${i}</span><span><b>${t}</b><small>${d}</small></span></button>`).join("")}</div>`;
+  const entry=()=>`<div class="lw-entries">${[["tables","📚","Atelier latin : tables","Déclinaisons, pronoms et conjugaisons complètes"],["drill","✍️","S'entraîner aux formes","10 formes à écrire, avec série et XP"],["cases","🎯","Jeu « Quel cas ? »","Trouve le cas et la fonction d'un mot"],["texts","📜","Textes authentiques","Phèdre, César, Catulle, Cicéron, Virgile… analysés mot à mot"],["roots","🌳","Racines latines","Le latin caché dans le français, l'italien, l'espagnol, l'anglais…"],["verses","🎼","Scander les vers","Longues, brèves et rythme de l'hexamètre de Virgile"],["rome","🦅","Quêtes et rangs romains","Citation du jour, quêtes, insignes : de Tiro à Imperator"]].map(([k,i,t,d])=>`<button class="lw-entry" data-latws="${k}"><span class="lw-ico">${i}</span><span><b>${t}</b><small>${d}</small></span></button>`).join("")}</div>`;
   try{
     const pg=grammarView;grammarView=function(){const h=pg.apply(this,arguments);if(S.tgt!=="la")return h;css();const i=h.indexOf('<div class="seg tabs">');if(i<0)return entry()+h;const j=h.indexOf("</div>",i)+6;return h.slice(0,j)+entry()+h.slice(j)};
   }catch(e){}
   try{
     const pp=playView;playView=function(){const h=pp.apply(this,arguments);if(S.tgt!=="la")return h;css();return entry()+h};
   }catch(e){}
-  window.CastellumLatin={open,state:st,ROOTS,VERSES,NOUNS,PRONS,VERBS,QC,TEXTS,drillPool};
+  window.CastellumLatin={open,state:st,QUOTES,QUESTS,BADGES,RANKS,P,dailyQ,ROOTS,VERSES,NOUNS,PRONS,VERBS,QC,TEXTS,drillPool};
 })();
 
 </script>
