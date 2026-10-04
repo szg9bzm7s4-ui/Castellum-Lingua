@@ -119515,4 +119515,429 @@ window.CASTELLUM_ANCIENT_FILL={"akk": {"t0": "arnabum|arnabum\nasum|asum\nbarbar
   window.CastellumTutorReply=reply;
 })();
 </script>
+<script id="castellum-latin-workshop">
+/* Atelier latin : tables de déclinaison et de conjugaison, entraînement, jeu « Quel cas ? », textes authentiques analysés mot à mot. */
+(function(){
+  if(typeof render!=='function')return;
+  const E=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const plain=s=>String(s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase().replace(/j/g,"i").replace(/\s+/g," ").trim();
+  const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+  const rnd=a=>a[Math.floor(Math.random()*a.length)];
 
+  /* =================== MORPHOLOGIE =================== */
+  const CASES=["Nominatif","Vocatif","Accusatif","Génitif","Datif","Ablatif"];
+  const d1=s=>[s+"a",s+"a",s+"am",s+"ae",s+"ae",s+"ā",s+"ae",s+"ae",s+"ās",s+"ārum",s+"īs",s+"īs"];
+  const d2m=(s,nom,voc)=>[nom,voc,s+"um",s+"ī",s+"ō",s+"ō",s+"ī",s+"ī",s+"ōs",s+"ōrum",s+"īs",s+"īs"];
+  const d2n=s=>[s+"um",s+"um",s+"um",s+"ī",s+"ō",s+"ō",s+"a",s+"a",s+"a",s+"ōrum",s+"īs",s+"īs"];
+  const d3=(nom,s,gp)=>[nom,nom,s+"em",s+"is",s+"ī",s+"e",s+"ēs",s+"ēs",s+"ēs",s+(gp||"um"),s+"ibus",s+"ibus"];
+  const d3n=(nom,s)=>[nom,nom,nom,s+"is",s+"ī",s+"e",s+"a",s+"a",s+"a",s+"um",s+"ibus",s+"ibus"];
+  const d4=s=>[s+"us",s+"us",s+"um",s+"ūs",s+"uī",s+"ū",s+"ūs",s+"ūs",s+"ūs",s+"uum",s+"ibus",s+"ibus"];
+  const NOUNS=[
+    {id:"rosa",h:"rosa, rosae (f.) — la rose",d:"1re déclinaison",lv:1,f:d1("ros")},
+    {id:"puella",h:"puella, puellae (f.) — la jeune fille",d:"1re déclinaison",lv:1,f:d1("puell")},
+    {id:"dominus",h:"dominus, dominī (m.) — le maître",d:"2e déclinaison (masculin en -us)",lv:1,f:d2m("domin","dominus","domine")},
+    {id:"puer",h:"puer, puerī (m.) — l'enfant, le garçon",d:"2e déclinaison (masculin en -er)",lv:1,f:d2m("puer","puer","puer")},
+    {id:"ager",h:"ager, agrī (m.) — le champ",d:"2e déclinaison (masculin en -er, e qui tombe)",lv:1,f:d2m("agr","ager","ager")},
+    {id:"templum",h:"templum, templī (n.) — le temple",d:"2e déclinaison (neutre)",lv:1,f:d2n("templ")},
+    {id:"rex",h:"rēx, rēgis (m.) — le roi",d:"3e déclinaison",lv:2,f:d3("rēx","rēg")},
+    {id:"pater",h:"pater, patris (m.) — le père",d:"3e déclinaison",lv:2,f:d3("pater","patr")},
+    {id:"civis",h:"cīvis, cīvis (m.) — le citoyen",d:"3e déclinaison (thème en -i : génitif pluriel -ium)",lv:2,f:d3("cīvis","cīv","ium")},
+    {id:"corpus",h:"corpus, corporis (n.) — le corps",d:"3e déclinaison (neutre)",lv:2,f:d3n("corpus","corpor")},
+    {id:"nomen",h:"nōmen, nōminis (n.) — le nom",d:"3e déclinaison (neutre)",lv:2,f:d3n("nōmen","nōmin")},
+    {id:"manus",h:"manus, manūs (f.) — la main",d:"4e déclinaison",lv:2,f:d4("man")},
+    {id:"res",h:"rēs, reī (f.) — la chose",d:"5e déclinaison",lv:2,f:["rēs","rēs","rem","reī","reī","rē","rēs","rēs","rēs","rērum","rēbus","rēbus"]},
+    {id:"dies",h:"diēs, diēī (m.) — le jour",d:"5e déclinaison",lv:2,f:["diēs","diēs","diem","diēī","diēī","diē","diēs","diēs","diēs","diērum","diēbus","diēbus"]}
+  ];
+  // Pronoms : 5 cas (pas de vocatif), colonnes par genre
+  const PCASES=["Nominatif","Accusatif","Génitif","Datif","Ablatif"];
+  const PRONS=[
+    {id:"ego",h:"ego, tū — je, tu (pronoms personnels)",cols:["ego (je)","tū (tu)"],lv:1,sg:[["ego","tū"],["mē","tē"],["meī","tuī"],["mihi","tibi"],["mē","tē"]],pl:[["nōs","vōs"],["nōs","vōs"],["nostrum / nostrī","vestrum / vestrī"],["nōbīs","vōbīs"],["nōbīs","vōbīs"]]},
+    {id:"is",h:"is, ea, id — il, elle ; ce (rappel)",cols:["masculin","féminin","neutre"],lv:2,sg:[["is","ea","id"],["eum","eam","id"],["eius","eius","eius"],["eī","eī","eī"],["eō","eā","eō"]],pl:[["eī / iī","eae","ea"],["eōs","eās","ea"],["eōrum","eārum","eōrum"],["eīs / iīs","eīs / iīs","eīs / iīs"],["eīs / iīs","eīs / iīs","eīs / iīs"]]},
+    {id:"hic",h:"hic, haec, hoc — celui-ci",cols:["masculin","féminin","neutre"],lv:2,sg:[["hic","haec","hoc"],["hunc","hanc","hoc"],["huius","huius","huius"],["huic","huic","huic"],["hōc","hāc","hōc"]],pl:[["hī","hae","haec"],["hōs","hās","haec"],["hōrum","hārum","hōrum"],["hīs","hīs","hīs"],["hīs","hīs","hīs"]]},
+    {id:"ille",h:"ille, illa, illud — celui-là",cols:["masculin","féminin","neutre"],lv:2,sg:[["ille","illa","illud"],["illum","illam","illud"],["illīus","illīus","illīus"],["illī","illī","illī"],["illō","illā","illō"]],pl:[["illī","illae","illa"],["illōs","illās","illa"],["illōrum","illārum","illōrum"],["illīs","illīs","illīs"],["illīs","illīs","illīs"]]},
+    {id:"qui",h:"quī, quae, quod — qui (relatif)",cols:["masculin","féminin","neutre"],lv:2,sg:[["quī","quae","quod"],["quem","quam","quod"],["cuius","cuius","cuius"],["cui","cui","cui"],["quō","quā","quō"]],pl:[["quī","quae","quae"],["quōs","quās","quae"],["quōrum","quārum","quōrum"],["quibus","quibus","quibus"],["quibus","quibus","quibus"]]}
+  ];
+
+  const PERS=["1re pers. sing. (je)","2e pers. sing. (tu)","3e pers. sing. (il, elle)","1re pers. plur. (nous)","2e pers. plur. (vous)","3e pers. plur. (ils, elles)"];
+  const perfAct=(P)=>({"Parfait":[P+"ī",P+"istī",P+"it",P+"imus",P+"istis",P+"ērunt"],"Plus-que-parfait":[P+"eram",P+"erās",P+"erat",P+"erāmus",P+"erātis",P+"erant"],"Futur antérieur":[P+"erō",P+"eris",P+"erit",P+"erimus",P+"eritis",P+"erint"]});
+  const perfSubj=(P)=>({"Parfait":[P+"erim",P+"eris",P+"erit",P+"erimus",P+"eritis",P+"erint"],"Plus-que-parfait":[P+"issem",P+"issēs",P+"isset",P+"issēmus",P+"issētis",P+"issent"]});
+  const withAux=(pt,aux)=>[pt+"us "+aux[0],pt+"us "+aux[1],pt+"us "+aux[2],pt+"ī "+aux[3],pt+"ī "+aux[4],pt+"ī "+aux[5]];
+  const SUM=["sum","es","est","sumus","estis","sunt"],ERAM=["eram","erās","erat","erāmus","erātis","erant"],ERO=["erō","eris","erit","erimus","eritis","erunt"],SIM=["sim","sīs","sit","sīmus","sītis","sint"],ESSEM=["essem","essēs","esset","essēmus","essētis","essent"];
+  const perfPass=pt=>({"Parfait":withAux(pt,SUM),"Plus-que-parfait":withAux(pt,ERAM),"Futur antérieur":withAux(pt,ERO)});
+  const perfPassSubj=pt=>({"Parfait":withAux(pt,SIM),"Plus-que-parfait":withAux(pt,ESSEM)});
+  function regular(c,s,P,pt){
+    const A={},Ps={},SA={},SP={};
+    const presA={c1:["ō","ās","at","āmus","ātis","ant"],c2:["eō","ēs","et","ēmus","ētis","ent"],c3:["ō","is","it","imus","itis","unt"],c3i:["iō","is","it","imus","itis","iunt"],c4:["iō","īs","it","īmus","ītis","iunt"]}[c];
+    const presP={c1:["or","āris","ātur","āmur","āminī","antur"],c2:["eor","ēris","ētur","ēmur","ēminī","entur"],c3:["or","eris","itur","imur","iminī","untur"],c3i:["ior","eris","itur","imur","iminī","iuntur"],c4:["ior","īris","ītur","īmur","īminī","iuntur"]}[c];
+    const X=s+{c1:"āb",c2:"ēb",c3:"ēb",c3i:"iēb",c4:"iēb"}[c];
+    A["Présent"]=presA.map(e=>s+e);Ps["Présent"]=presP.map(e=>s+e);
+    A["Imparfait"]=["am","ās","at","āmus","ātis","ant"].map(e=>X+e);Ps["Imparfait"]=["ar","āris","ātur","āmur","āminī","antur"].map(e=>X+e);
+    if(c==="c1"||c==="c2"){A["Futur"]=["ō","is","it","imus","itis","unt"].map(e=>X+e);Ps["Futur"]=["or","eris","itur","imur","iminī","untur"].map(e=>X+e)}
+    else{const Z=s+(c==="c3"?"":"i");A["Futur"]=["am","ēs","et","ēmus","ētis","ent"].map(e=>Z+e);Ps["Futur"]=["ar","ēris","ētur","ēmur","ēminī","entur"].map(e=>Z+e)}
+    const W=s+{c1:"",c2:"e",c3:"",c3i:"i",c4:"i"}[c],v=c==="c1"?"e":"a",V=c==="c1"?"ē":"ā";
+    SA["Présent"]=[W+v+"m",W+V+"s",W+v+"t",W+V+"mus",W+V+"tis",W+v+"nt"];SP["Présent"]=[W+v+"r",W+V+"ris",W+V+"tur",W+V+"mur",W+V+"minī",W+v+"ntur"];
+    const inf=s+{c1:"āre",c2:"ēre",c3:"ere",c3i:"ere",c4:"īre"}[c],R=inf,Rl=inf.slice(0,-1)+"ē";
+    SA["Imparfait"]=[R+"m",Rl+"s",R+"t",Rl+"mus",Rl+"tis",R+"nt"];SP["Imparfait"]=[R+"r",Rl+"ris",Rl+"tur",Rl+"mur",Rl+"minī",R+"ntur"];
+    if(P){Object.assign(A,perfAct(P));Object.assign(SA,perfSubj(P))}
+    if(pt){Object.assign(Ps,perfPass(pt));Object.assign(SP,perfPassSubj(pt))}
+    const imp={c1:["ā","āte"],c2:["ē","ēte"],c3:["e","ite"],c3i:["e","ite"],c4:["ī","īte"]}[c].map(e=>s+e);
+    const impD={c1:["āre","āminī"],c2:["ēre","ēminī"],c3:["ere","iminī"],c3i:["ere","iminī"],c4:["īre","īminī"]}[c].map(e=>s+e);
+    const infP=s+{c1:"ārī",c2:"ērī",c3:"ī",c3i:"ī",c4:"īrī"}[c];
+    const pp=s+{c1:"āns",c2:"ēns",c3:"ēns",c3i:"iēns",c4:"iēns"}[c];
+    return {A,Ps,SA,SP,imp,impD,inf,infP,pp};
+  }
+  function verbTables(v){
+    const g=[];
+    if(v.hand){return v.hand}
+    const r=regular(v.c,v.s,v.P,v.pt);
+    if(v.dep){
+      g.push({m:"Indicatif (formes passives, sens actif)",t:r.Ps});
+      g.push({m:"Subjonctif (formes passives, sens actif)",t:r.SP});
+      g.push({m:"Impératif",t:{"Présent":[["2e pers. sing.",r.impD[0]],["2e pers. plur.",r.impD[1]]]}});
+      g.push({m:"Infinitifs et participes",t:{"Formes nominales":[["Infinitif présent",r.infP],["Infinitif parfait",v.pt+"us esse"],["Participe présent",r.pp],["Participe parfait (sens actif)",v.pt+"us, -a, -um"],["Participe futur",v.pt+"ūrus, -a, -um"]]}});
+      return g;
+    }
+    g.push({m:"Indicatif actif",t:r.A});
+    if(!v.noPass)g.push({m:"Indicatif passif",t:r.Ps});
+    g.push({m:"Subjonctif actif",t:r.SA});
+    if(!v.noPass)g.push({m:"Subjonctif passif",t:r.SP});
+    g.push({m:"Impératif",t:{"Présent":[["2e pers. sing.",r.imp[0]],["2e pers. plur.",r.imp[1]]]}});
+    const nf=[["Infinitif présent actif",r.inf]];
+    if(!v.noPass)nf.push(["Infinitif présent passif",r.infP]);
+    nf.push(["Infinitif parfait actif",v.P+"isse"]);
+    if(v.pt&&!v.noPass)nf.push(["Infinitif parfait passif",v.pt+"us esse"]);
+    if(v.fut)nf.push(["Infinitif futur actif",v.fut+"ūrus esse"]);
+    nf.push(["Participe présent",r.pp]);
+    if(v.pt&&!v.noPass)nf.push(["Participe parfait passif",v.pt+"us, -a, -um"]);
+    if(v.fut)nf.push(["Participe futur",v.fut+"ūrus, -a, -um"]);
+    g.push({m:"Infinitifs et participes",t:{"Formes nominales":nf}});
+    return g;
+  }
+  const H=(m,t)=>({m,t});
+  const VERBS=[
+    {id:"amo",h:"amō, amās, amāre, amāvī, amātum — aimer",d:"1re conjugaison",lv:1,c:"c1",s:"am",P:"amāv",pt:"amāt",fut:"amāt"},
+    {id:"video",h:"videō, vidēs, vidēre, vīdī, vīsum — voir",d:"2e conjugaison",lv:1,c:"c2",s:"vid",P:"vīd",pt:"vīs",fut:"vīs"},
+    {id:"moneo",h:"moneō, monēs, monēre, monuī, monitum — avertir",d:"2e conjugaison",lv:2,c:"c2",s:"mon",P:"monu",pt:"monit",fut:"monit"},
+    {id:"lego",h:"legō, legis, legere, lēgī, lēctum — lire",d:"3e conjugaison",lv:1,c:"c3",s:"leg",P:"lēg",pt:"lēct",fut:"lēct"},
+    {id:"mitto",h:"mittō, mittis, mittere, mīsī, missum — envoyer",d:"3e conjugaison",lv:2,c:"c3",s:"mitt",P:"mīs",pt:"miss",fut:"miss"},
+    {id:"capio",h:"capiō, capis, capere, cēpī, captum — prendre",d:"3e conjugaison mixte (en -iō)",lv:2,c:"c3i",s:"cap",P:"cēp",pt:"capt",fut:"capt"},
+    {id:"audio",h:"audiō, audīs, audīre, audīvī, audītum — entendre",d:"4e conjugaison",lv:1,c:"c4",s:"aud",P:"audīv",pt:"audīt",fut:"audīt"},
+    {id:"venio",h:"veniō, venīs, venīre, vēnī, ventum — venir",d:"4e conjugaison (intransitif : pas de passif personnel)",lv:2,c:"c4",s:"ven",P:"vēn",noPass:true,fut:"vent"},
+    {id:"hortor",h:"hortor, hortāris, hortārī, hortātus sum — exhorter",d:"Déponent de la 1re conjugaison",lv:3,c:"c1",s:"hort",pt:"hortāt",dep:true},
+    {id:"loquor",h:"loquor, loqueris, loquī, locūtus sum — parler",d:"Déponent de la 3e conjugaison",lv:3,c:"c3",s:"loqu",pt:"locūt",dep:true},
+    {id:"sum",h:"sum, es, esse, fuī — être",d:"Verbe irrégulier",lv:1,hand:[
+      H("Indicatif",{"Présent":SUM,"Imparfait":ERAM,"Futur":ERO,"Parfait":["fuī","fuistī","fuit","fuimus","fuistis","fuērunt"],"Plus-que-parfait":["fueram","fuerās","fuerat","fuerāmus","fuerātis","fuerant"],"Futur antérieur":["fuerō","fueris","fuerit","fuerimus","fueritis","fuerint"]}),
+      H("Subjonctif",{"Présent":SIM,"Imparfait":ESSEM,"Parfait":["fuerim","fueris","fuerit","fuerimus","fueritis","fuerint"],"Plus-que-parfait":["fuissem","fuissēs","fuisset","fuissēmus","fuissētis","fuissent"]}),
+      H("Impératif",{"Présent":[["2e pers. sing.","es"],["2e pers. plur.","este"]]}),
+      H("Infinitifs et participes",{"Formes nominales":[["Infinitif présent","esse"],["Infinitif parfait","fuisse"],["Infinitif futur","futūrus esse / fore"],["Participe futur","futūrus, -a, -um"]]})]},
+    {id:"possum",h:"possum, potes, posse, potuī — pouvoir",d:"Verbe irrégulier (pot- + sum)",lv:2,hand:[
+      H("Indicatif",{"Présent":["possum","potes","potest","possumus","potestis","possunt"],"Imparfait":["poteram","poterās","poterat","poterāmus","poterātis","poterant"],"Futur":["poterō","poteris","poterit","poterimus","poteritis","poterunt"],...perfAct("potu")}),
+      H("Subjonctif",{"Présent":["possim","possīs","possit","possīmus","possītis","possint"],"Imparfait":["possem","possēs","posset","possēmus","possētis","possent"],...perfSubj("potu")}),
+      H("Infinitifs et participes",{"Formes nominales":[["Infinitif présent","posse"],["Infinitif parfait","potuisse"],["Participe présent (adjectif)","potēns, potentis"]]})]},
+    {id:"eo",h:"eō, īs, īre, iī (īvī), itum — aller",d:"Verbe irrégulier",lv:2,hand:[
+      H("Indicatif",{"Présent":["eō","īs","it","īmus","ītis","eunt"],"Imparfait":["ībam","ībās","ībat","ībāmus","ībātis","ībant"],"Futur":["ībō","ībis","ībit","ībimus","ībitis","ībunt"],"Parfait":["iī","īstī","iit","iimus","īstis","iērunt"],"Plus-que-parfait":["ieram","ierās","ierat","ierāmus","ierātis","ierant"],"Futur antérieur":["ierō","ieris","ierit","ierimus","ieritis","ierint"]}),
+      H("Subjonctif",{"Présent":["eam","eās","eat","eāmus","eātis","eant"],"Imparfait":["īrem","īrēs","īret","īrēmus","īrētis","īrent"],"Parfait":["ierim","ieris","ierit","ierimus","ieritis","ierint"],"Plus-que-parfait":["īssem","īssēs","īsset","īssēmus","īssētis","īssent"]}),
+      H("Impératif",{"Présent":[["2e pers. sing.","ī"],["2e pers. plur.","īte"]]}),
+      H("Infinitifs et participes",{"Formes nominales":[["Infinitif présent","īre"],["Infinitif parfait","īsse"],["Infinitif futur","itūrus esse"],["Participe présent","iēns, euntis"],["Participe futur","itūrus, -a, -um"]]})]},
+    {id:"volo",h:"volō, vīs, velle, voluī — vouloir",d:"Verbe irrégulier",lv:2,hand:[
+      H("Indicatif",{"Présent":["volō","vīs","vult","volumus","vultis","volunt"],"Imparfait":["volēbam","volēbās","volēbat","volēbāmus","volēbātis","volēbant"],"Futur":["volam","volēs","volet","volēmus","volētis","volent"],...perfAct("volu")}),
+      H("Subjonctif",{"Présent":["velim","velīs","velit","velīmus","velītis","velint"],"Imparfait":["vellem","vellēs","vellet","vellēmus","vellētis","vellent"],...perfSubj("volu")}),
+      H("Infinitifs et participes",{"Formes nominales":[["Infinitif présent","velle"],["Infinitif parfait","voluisse"],["Participe présent","volēns, volentis"],["Remarque","pas d'impératif : on emploie nōlī / nōlīte (de nōlō) pour défendre"]]})]},
+    {id:"fero",h:"ferō, fers, ferre, tulī, lātum — porter",d:"Verbe irrégulier",lv:3,hand:[
+      H("Indicatif actif",{"Présent":["ferō","fers","fert","ferimus","fertis","ferunt"],"Imparfait":["ferēbam","ferēbās","ferēbat","ferēbāmus","ferēbātis","ferēbant"],"Futur":["feram","ferēs","feret","ferēmus","ferētis","ferent"],...perfAct("tul")}),
+      H("Indicatif passif",{"Présent":["feror","ferris","fertur","ferimur","feriminī","feruntur"],"Imparfait":["ferēbar","ferēbāris","ferēbātur","ferēbāmur","ferēbāminī","ferēbantur"],"Futur":["ferar","ferēris","ferētur","ferēmur","ferēminī","ferentur"],...perfPass("lāt")}),
+      H("Subjonctif actif",{"Présent":["feram","ferās","ferat","ferāmus","ferātis","ferant"],"Imparfait":["ferrem","ferrēs","ferret","ferrēmus","ferrētis","ferrent"],...perfSubj("tul")}),
+      H("Subjonctif passif",{"Présent":["ferar","ferāris","ferātur","ferāmur","ferāminī","ferantur"],"Imparfait":["ferrer","ferrēris","ferrētur","ferrēmur","ferrēminī","ferrentur"],...perfPassSubj("lāt")}),
+      H("Impératif",{"Présent":[["2e pers. sing.","fer"],["2e pers. plur.","ferte"]]}),
+      H("Infinitifs et participes",{"Formes nominales":[["Infinitif présent actif","ferre"],["Infinitif présent passif","ferrī"],["Infinitif parfait actif","tulisse"],["Infinitif parfait passif","lātus esse"],["Participe présent","ferēns, ferentis"],["Participe parfait passif","lātus, -a, -um"],["Participe futur","lātūrus, -a, -um"]]})]}
+  ];
+  VERBS.forEach(v=>v.g=verbTables(v));
+
+  /* Questions d'entraînement tirées des tables */
+  const LVN={1:"Débutant",2:"Intermédiaire",3:"Expert"};
+  const BASIC_T=["Présent","Imparfait","Futur"];
+  function drillPool(kind,lv){
+    const out=[];
+    if(kind!=="verb"){
+      NOUNS.filter(n=>n.lv<=lv).forEach(n=>n.f.forEach((f,i)=>{if(i%6===1&&lv<2)return;out.push({p:`<b>${E(n.h)}</b>`,q:`${CASES[i%6]} ${i<6?"singulier":"pluriel"}`,a:f,src:n.d})}));
+      if(lv>=2)PRONS.forEach(p=>PCASES.forEach((c,ci)=>p.cols.forEach((col,k)=>{out.push({p:`<b>${E(p.h)}</b>`,q:`${c} singulier · ${col}`,a:p.sg[ci][k],src:"Pronom"});out.push({p:`<b>${E(p.h)}</b>`,q:`${c} pluriel · ${col}`,a:p.pl[ci][k],src:"Pronom"})})));
+    }
+    if(kind!=="noun"){
+      VERBS.filter(v=>v.lv<=lv).forEach(v=>v.g.forEach(gr=>Object.entries(gr.t).forEach(([tn,forms])=>{
+        if(lv<2&&(!BASIC_T.includes(tn)||!/Indicatif( actif)?$/.test(gr.m)))return;
+        if(lv<3&&/Subjonctif passif|Plus-que-parfait|Futur antérieur/.test(gr.m+" "+tn))return;
+        forms.forEach((f,i)=>{
+          if(Array.isArray(f)){if(/Remarque|Participe parfait|Participe futur|Infinitif futur/.test(f[0]))return;out.push({p:`<b>${E(v.h)}</b>`,q:`${E(gr.m)} · ${f[0]}`,a:f[1],src:v.d})}
+          else out.push({p:`<b>${E(v.h)}</b>`,q:`${E(gr.m)} · ${tn} · ${PERS[i]}`,a:f,src:v.d});
+        });
+      })));
+    }
+    return out;
+  }
+  const answers=a=>a.split(" / ").map(x=>plain(x.replace(/\(.*?\)/g,"")));
+
+  /* =================== JEU « QUEL CAS ? » =================== */
+  const FN=["sujet","attribut du sujet","complément d'objet direct","complément du nom","complément d'attribution (à qui ?)","complément de moyen","complément de manière","complément de cause","complément de temps (moment)","complément de temps (durée)","complément de lieu (où l'on est)","complément de lieu (où l'on va)","complément de lieu (d'où l'on vient)","complément d'agent","complément d'accompagnement","apostrophe (on interpelle)","ablatif absolu","sujet d'une proposition infinitive","complément du comparatif","datif de possession","datif d'agent (avec l'adjectif verbal)","génitif partitif"];
+  const CC={nom:"Nominatif",voc:"Vocatif",acc:"Accusatif",gen:"Génitif",dat:"Datif",abl:"Ablatif"};
+  // [phrase, mot, cas, fonction, traduction, explication, niveau]
+  const QC=[
+    ["Puella rosam amat","Puella","nom",0,"La jeune fille aime la rose","puella : nominatif singulier (1re décl.), sujet de amat.",1],
+    ["Puella rosam amat","rosam","acc",2,"La jeune fille aime la rose","rosam : accusatif singulier en -am, COD de amat.",1],
+    ["Marce, veni!","Marce","voc",15,"Marcus, viens !","Marce : vocatif de Marcus (les noms en -us font -e au vocatif).",1],
+    ["Liber pueri","pueri","gen",3,"Le livre du garçon","pueri : génitif singulier de puer, il complète liber.",1],
+    ["Poeta puellis fabulam narrat","puellis","dat",4,"Le poète raconte une histoire aux jeunes filles","puellis : datif pluriel (1re décl.) : à qui raconte-t-il ?",1],
+    ["Poeta puellis fabulam narrat","fabulam","acc",2,"Le poète raconte une histoire aux jeunes filles","fabulam : accusatif singulier, COD de narrat.",1],
+    ["Agricola gladio pugnat","gladio","abl",5,"Le paysan combat avec une épée","gladio : ablatif singulier sans préposition : l'instrument.",1],
+    ["Roma magna est","magna","nom",1,"Rome est grande","magna : nominatif féminin, attribut du sujet Roma par l'intermédiaire de est.",1],
+    ["Rosae pulchrae sunt","Rosae","nom",0,"Les roses sont belles","rosae peut être génitif, datif ou nominatif pluriel : ici le verbe sunt (pluriel) demande un sujet au nominatif pluriel.",1],
+    ["Puella nautae rosam dat","nautae","dat",4,"La jeune fille donne une rose au marin","nautae : datif singulier ; le sujet est déjà puella, et rosam est le COD : nautae dit à qui l'on donne.",1],
+    ["Templa deorum","deorum","gen",3,"Les temples des dieux","deorum : génitif pluriel de deus.",1],
+    ["Dominus servos vocat","servos","acc",2,"Le maître appelle les esclaves","servos : accusatif pluriel en -os.",1],
+    ["Servi a domino vocantur","domino","abl",13,"Les esclaves sont appelés par le maître","a + ablatif avec un verbe passif : complément d'agent (une personne).",2],
+    ["Prima luce venit","luce","abl",8,"Il vient au point du jour","luce : ablatif de lux ; l'ablatif seul situe un moment.",2],
+    ["Magna voce clamat","voce","abl",6,"Il crie à haute voix","voce : ablatif de vox, accompagné d'un adjectif : la manière.",2],
+    ["Fame moriuntur","Fame","abl",7,"Ils meurent de faim","fame : ablatif de fames : la cause.",2],
+    ["In urbe habito","urbe","abl",10,"J'habite dans la ville","in + ablatif : lieu où l'on est, sans mouvement.",1],
+    ["In urbem venio","urbem","acc",11,"Je viens en ville","in + accusatif : mouvement vers un lieu.",1],
+    ["Urbe capta, hostes fugerunt","Urbe","abl",16,"La ville prise, les ennemis s'enfuirent","urbe capta : nom + participe à l'ablatif, détachés de la phrase.",3],
+    ["Marcus Paulo altior est","Paulo","abl",18,"Marcus est plus grand que Paul","après un comparatif, le second terme peut être à l'ablatif (au lieu de quam).",2],
+    ["Dico te errare","te","acc",17,"Je dis que tu te trompes","proposition infinitive : sujet à l'accusatif, verbe à l'infinitif.",3],
+    ["Caesar consul fuit","consul","nom",1,"César fut consul","consul : nominatif, attribut du sujet Caesar.",1],
+    ["Mihi nomen est Marcus","Mihi","dat",19,"Je m'appelle Marcus (à moi est le nom Marcus)","datif + esse : la possession (« il y a à moi »).",2],
+    ["Et tu, Brute?","Brute","voc",15,"Toi aussi, Brutus ?","Brute : vocatif de Brutus.",1],
+    ["Leges civitatis","civitatis","gen",3,"Les lois de la cité","civitatis : génitif singulier de civitas (3e décl.).",2],
+    ["Pater filio librum dat","filio","dat",4,"Le père donne un livre à son fils","filio : datif singulier (2e décl.).",1],
+    ["Hostes gladiis pugnant","gladiis","abl",5,"Les ennemis combattent avec des épées","gladiis : ablatif pluriel, instrument.",1],
+    ["Cum amicis ceno","amicis","abl",14,"Je dîne avec des amis","cum + ablatif : avec qui.",1],
+    ["Hieme nives cadunt","Hieme","abl",8,"En hiver, les neiges tombent","hieme : ablatif de hiems : quand ?",2],
+    ["Ad forum eo","forum","acc",11,"Je vais au forum","ad + accusatif : direction.",1],
+    ["Rex regi epistulam mittit","regi","dat",4,"Le roi envoie une lettre à un roi","rex est le sujet (nominatif), regi le datif (-i).",2],
+    ["Regis filia pulchra est","Regis","gen",3,"La fille du roi est belle","regis : génitif singulier (-is), complète filia.",2],
+    ["Multos annos vixit","annos","acc",9,"Il a vécu de nombreuses années","l'accusatif sans préposition exprime la durée.",2],
+    ["Sole oriente, profecti sumus","Sole","abl",16,"Au lever du soleil, nous sommes partis","sole oriente : nom + participe présent à l'ablatif.",3],
+    ["Carthago delenda est","Carthago","nom",0,"Carthage doit être détruite","Carthago : nominatif, sujet.",2],
+    ["Nobis legendum est","Nobis","dat",20,"Nous devons lire","avec l'adjectif verbal (-ndus) + esse, la personne qui doit agir est au datif.",3],
+    ["Scio Marcum venisse","Marcum","acc",17,"Je sais que Marcus est venu","Marcum : accusatif, sujet de l'infinitif venisse.",3],
+    ["Pars militum fugit","militum","gen",21,"Une partie des soldats s'enfuit","militum : génitif pluriel : le tout dont on prend une partie.",2],
+    ["Puellae rosas dedimus","Puellae","dat",4,"Nous avons donné des roses à la jeune fille","le sujet est « nous » (dedimus) : puellae ne peut pas être sujet, c'est un datif.",2],
+    ["Silvae magnae sunt","Silvae","nom",0,"Les forêts sont grandes","sunt (pluriel) : silvae est un nominatif pluriel sujet.",1],
+    ["Gladio vulneratus est","Gladio","abl",5,"Il a été blessé par une épée","avec un passif, une chose (non une personne) est à l'ablatif seul : le moyen.",2],
+    ["Roma venio","Roma","abl",12,"Je viens de Rome","avec les noms de villes, l'ablatif seul marque le point de départ.",2],
+    ["Domine, audi nos","Domine","voc",15,"Seigneur, écoute-nous","domine : vocatif de dominus.",1],
+    ["Ave, Caesar","Caesar","voc",15,"Salut, César","à la 3e déclinaison, le vocatif a la même forme que le nominatif : c'est le sens qui tranche.",2],
+    ["Arma virumque cano","virum","acc",2,"Je chante les armes et l'homme","virum (+ -que) : accusatif singulier de vir, COD de cano.",2],
+    ["Mens sana in corpore sano","corpore","abl",10,"Un esprit sain dans un corps sain","in + ablatif : lieu où l'on est.",2],
+    ["Arma virumque cano","Arma","acc",2,"Je chante les armes et l'homme","arma : neutre pluriel ; nominatif et accusatif sont identiques, mais le sujet est « je » (cano) : c'est un COD.",3],
+    ["Ubi est templum Iovis?","Iovis","gen",3,"Où est le temple de Jupiter ?","Iovis : génitif irrégulier de Iuppiter.",3]
+  ];
+
+  /* =================== TEXTES =================== */
+  const LEX={"et":"et : et|conjonction de coordination","est":"sum, esse : être|présent, 3e pers. sing. : « est »","in":"in : dans (+ ablatif), vers / en (+ accusatif)|préposition","non":"non : ne… pas|négation","aut":"aut… aut : ou… ou|conjonction","sed":"sed : mais|conjonction","possum":"possum, posse : pouvoir|présent, 1re pers. sing.","dicere":"dico, -ere : dire|infinitif présent","amo":"amo, -are : aimer|présent, 1re pers. sing.","te":"tu : toi|accusatif, COD","lupus":"lupus, -i (m.) : loup|nominatif singulier, sujet","agnus":"agnus, -i (m.) : agneau|nominatif singulier, sujet","marcus":"Marcus|nominatif singulier, sujet","iulia":"Iulia|nominatif singulier, sujet"};
+  // Chaque jeton : "forme|lemme : sens|analyse" ; un mot seul est cherché dans LEX ; une ponctuation est affichée telle quelle.
+  const TEXTS=[
+    {id:"villa",t:"Marcus et Iulia",a:"Texte d'initiation",lv:"A1",intro:"Un premier texte très simple pour lire des phrases complètes : repère les nominatifs (sujets) et les accusatifs (COD).",
+     w:["Marcus","et","Iulia","in","villa|villa, -ae (f.) : villa, maison de campagne|ablatif singulier après in : lieu où l'on est","habitant|habito, -are : habiter|présent, 3e pers. plur.",".","Villa|villa, -ae (f.)|nominatif singulier, sujet","magna|magnus, -a, -um : grand|nominatif féminin singulier, attribut","et","pulchra|pulcher, -chra, -chrum : beau|nominatif féminin singulier, attribut","est",".","Marcus","puer|puer, pueri (m.) : garçon|nominatif singulier, attribut","Romanus|Romanus, -a, -um : romain|nominatif masculin singulier, s'accorde avec puer","est",";","Iulia","puella|puella, -ae (f.) : jeune fille|nominatif singulier, attribut","est",".","Iulia","rosas|rosa, -ae (f.) : rose|accusatif pluriel, COD","amat|amo, -are : aimer|présent, 3e pers. sing.","et","cantat|canto, -are : chanter|présent, 3e pers. sing.",".","Marcus","in","horto|hortus, -i (m.) : jardin|ablatif singulier après in : lieu où l'on est","ludit|ludo, -ere : jouer|présent, 3e pers. sing.","."],
+     tr:"Marcus et Julia habitent dans une villa. La villa est grande et belle. Marcus est un garçon romain ; Julia est une jeune fille. Julia aime les roses et chante. Marcus joue dans le jardin.",
+     q:[["Où habitent Marcus et Julia ?","dans une villa","dans une ville","au bord de la mer"],["Que fait Marcus ?","il joue dans le jardin","il chante","il lit"],["Quel est le cas de « rosas » ?","accusatif pluriel","nominatif pluriel","ablatif pluriel"]]},
+    {id:"martial",t:"Non amo te",a:"Martial, Épigrammes, I, 32",lv:"A2",intro:"Une épigramme célèbre, imitée en français (« Je ne vous aime pas, Hylas… ») et en anglais. Remarque le vocatif.",
+     w:["Non","amo","te",",","Sabidi|Sabidius, -ii (m.)|vocatif : on interpelle Sabidius",",","nec|nec : et ne… pas|conjonction négative","possum","dicere","quare|quare : pourquoi|adverbe interrogatif",":","hoc|hic, haec, hoc : ceci|accusatif neutre singulier, COD","tantum|tantum : seulement|adverbe","possum","dicere",":","non","amo","te","."],
+     tr:"Je ne t'aime pas, Sabidius, et je ne peux pas dire pourquoi ; je peux seulement dire ceci : je ne t'aime pas.",
+     q:[["À quel cas est « Sabidi » ?","vocatif","génitif","datif"],["Que peut dire le poète ?","seulement qu'il ne l'aime pas","pourquoi il ne l'aime pas","qu'il l'aime"],["« quare » signifie…","pourquoi","comment","quand"]]},
+    {id:"vulpes",t:"Le renard et les raisins",a:"Phèdre, Fables, IV, 3",lv:"A2",intro:"La fable que La Fontaine a reprise. Phèdre écrit en vers ; l'ordre des mots est libre, fie-toi aux terminaisons.",
+     w:["Fame|fames, -is (f.) : faim|ablatif singulier : la cause","coacta|cogo, -ere, coegi, coactum : forcer|participe parfait passif, nominatif féminin singulier : « poussée »","vulpes|vulpes, -is (f.) : renard (en latin, féminin)|nominatif singulier, sujet","alta|altus, -a, -um : haut|ablatif féminin singulier, s'accorde avec vinea (séparé : hyperbate)","in","vinea|vinea, -ae (f.) : vigne|ablatif singulier : lieu où l'on est","uvam|uva, -ae (f.) : grappe de raisin|accusatif singulier, COD","appetebat|appeto, -ere : chercher à atteindre|imparfait, 3e pers. sing.",",","summis|summus, -a, -um : extrême, le plus grand|ablatif pluriel, s'accorde avec viribus","saliens|salio, -ire : sauter|participe présent, nominatif singulier : « en sautant »","viribus|vis (f.), pluriel vires : force|ablatif pluriel : le moyen (« de toutes ses forces »)",".","Quam|qui, quae, quod|relatif de liaison, accusatif féminin : « elle » (la grappe), COD de tangere","tangere|tango, -ere, tetigi, tactum : toucher|infinitif présent, complément de potuit","ut|ut + indicatif : comme, lorsque|conjonction de temps","non","potuit|possum, posse, potui : pouvoir|parfait, 3e pers. sing.",",","discedens|discedo, -ere : s'éloigner|participe présent, nominatif singulier : « en s'éloignant »","ait|aio : dire|3e pers. sing. : « dit-elle »",":","«","Nondum|nondum : pas encore|adverbe","matura|maturus, -a, -um : mûr|nominatif féminin singulier, attribut (sujet sous-entendu : uva)","est",";","nolo|nolo, nolle : ne pas vouloir|présent, 1re pers. sing.","acerbam|acerbus, -a, -um : aigre, vert|accusatif féminin singulier (uvam sous-entendu)","sumere|sumo, -ere : prendre|infinitif présent, complément de nolo",".","»"],
+     tr:"Poussée par la faim, une renarde cherchait à atteindre une grappe de raisin dans une haute vigne, en sautant de toutes ses forces. Comme elle ne put la toucher, elle dit en s'éloignant : « Elle n'est pas encore mûre ; je ne veux pas la prendre verte. »",
+     q:[["Pourquoi le renard veut-il la grappe ?","il a faim","il veut la vendre","il veut l'offrir"],["« viribus » est à l'ablatif car il exprime…","le moyen","le lieu","le temps"],["Que prétend le renard à la fin ?","les raisins ne sont pas mûrs","les raisins sont trop hauts","il n'aime pas le raisin"]]},
+    {id:"lupus",t:"Le loup et l'agneau",a:"Phèdre, Fables, I, 1",lv:"B1",intro:"Le début de la fable : la mise en place des personnages. Observe le plus-que-parfait et les comparatifs superior / inferior.",
+     w:["Ad|ad : vers, à|préposition + accusatif (direction)","rivum|rivus, -i (m.) : ruisseau|accusatif singulier, après ad","eundem|idem, eadem, idem : le même|accusatif masculin singulier, s'accorde avec rivum","lupus","et","agnus","venerant|venio, -ire, veni, ventum : venir|plus-que-parfait, 3e pers. plur. : « étaient venus »",",","siti|sitis, -is (f.) : soif|ablatif singulier : la cause","compulsi|compello, -ere, -puli, -pulsum : pousser|participe parfait passif, nominatif masculin pluriel : « poussés »",".","Superior|superior, -ius : plus haut|comparatif, nominatif masculin singulier : « en amont »","stabat|sto, stare : se tenir|imparfait, 3e pers. sing.","lupus",",","longeque|longe : loin + -que : et|adverbe + conjonction collée : « et bien »","inferior|inferior, -ius : plus bas|comparatif, nominatif : « en aval » (stabat sous-entendu)","agnus",".","Tunc|tunc : alors|adverbe de temps","fauce|faux, faucis (f.) : gosier, gueule|ablatif singulier : la cause","improba|improbus, -a, -um : insatiable, méchant|ablatif féminin singulier, s'accorde avec fauce","latro|latro, -onis (m.) : brigand|nominatif singulier, sujet (le loup)","incitatus|incito, -are : exciter|participe parfait passif, nominatif masculin singulier","iurgii|iurgium, -ii (n.) : querelle|génitif singulier, complément de causam","causam|causa, -ae (f.) : cause, prétexte|accusatif singulier, COD","intulit|infero, inferre, intuli, illatum : apporter, susciter|parfait, 3e pers. sing. : « chercha (un prétexte) »","."],
+     tr:"Un loup et un agneau étaient venus au même ruisseau, poussés par la soif. Le loup se tenait en amont, et l'agneau bien plus bas. Alors, poussé par sa gueule insatiable, le brigand chercha un prétexte de querelle.",
+     q:[["Pourquoi les deux animaux sont-ils venus ?","ils avaient soif","ils avaient faim","ils fuyaient"],["Qui est appelé « latro » ?","le loup","l'agneau","le berger"],["« venerant » est au…","plus-que-parfait","parfait","imparfait"]]},
+    {id:"gallia",t:"La Gaule divisée en trois",a:"César, La Guerre des Gaules, I, 1",lv:"B1",intro:"La phrase d'ouverture la plus célèbre de la prose latine. Repère le relatif quarum et les verbes sous-entendus.",
+     w:["Gallia|Gallia, -ae (f.) : la Gaule|nominatif singulier, sujet","est","omnis|omnis, -e : tout, dans son ensemble|nominatif féminin singulier, s'accorde avec Gallia","divisa|divido, -ere, divisi, divisum : diviser|participe parfait passif : est divisa = « est divisée »","in|in + accusatif : en|préposition (résultat d'une division)","partes|pars, partis (f.) : partie|accusatif pluriel, après in","tres|tres, tria : trois|accusatif féminin pluriel",",","quarum|qui, quae, quod|relatif, génitif féminin pluriel (antécédent partes) : « dont »","unam|unus, -a, -um : un|accusatif féminin singulier, COD : « l'une »","incolunt|incolo, -ere : habiter|présent, 3e pers. plur.","Belgae|Belgae, -arum : les Belges|nominatif pluriel, sujet",",","aliam|alius, -a, -ud : autre|accusatif féminin singulier : « une autre » (incolunt sous-entendu)","Aquitani|Aquitani, -orum : les Aquitains|nominatif pluriel, sujet",",","tertiam|tertius, -a, -um : troisième|accusatif féminin singulier : « la troisième »","qui|qui, quae, quod|relatif, nominatif masculin pluriel, sujet de appellantur (antécédent sous-entendu : ceux)","ipsorum|ipse, -a, -um : eux-mêmes|génitif masculin pluriel : « leur propre »","lingua|lingua, -ae (f.) : langue|ablatif singulier : le moyen",",","Celtae|Celtae, -arum : les Celtes|nominatif pluriel, attribut",",","nostra|noster, -tra, -trum : notre|ablatif féminin singulier (lingua sous-entendu) : « dans la nôtre »","Galli|Galli, -orum : les Gaulois|nominatif pluriel, attribut","appellantur|appello, -are : appeler, nommer|présent passif, 3e pers. plur. : « sont appelés »","."],
+     tr:"La Gaule dans son ensemble est divisée en trois parties : l'une est habitée par les Belges, une autre par les Aquitains, la troisième par ceux qui, dans leur propre langue, s'appellent Celtes et, dans la nôtre, Gaulois.",
+     q:[["En combien de parties la Gaule est-elle divisée ?","trois","deux","quatre"],["Comment les Gaulois s'appellent-ils dans leur propre langue ?","Celtes","Belges","Aquitains"],["« appellantur » est…","un présent passif","un parfait actif","un subjonctif"]]},
+    {id:"odi",t:"Odi et amo",a:"Catulle, Poèmes, 85",lv:"B2",intro:"Deux vers parmi les plus célèbres de la poésie amoureuse. Remarque le subjonctif de l'interrogation indirecte et la proposition infinitive.",
+     w:["Odi|odi, odisse : haïr|parfait à sens de présent, 1re pers. sing. : « je hais »","et","amo",".","Quare|quare : pourquoi|adverbe interrogatif (interrogation indirecte)","id|is, ea, id : cela|accusatif neutre singulier, COD","faciam|facio, -ere : faire|subjonctif présent, 1re pers. sing. : subjonctif de l'interrogation indirecte",",","fortasse|fortasse : peut-être|adverbe","requiris|requiro, -ere : demander|présent, 2e pers. sing.",".","Nescio|nescio, -ire : ne pas savoir|présent, 1re pers. sing.",",","sed","fieri|fio, fieri : arriver, se produire|infinitif présent : « que cela arrive » (proposition infinitive, sujet id sous-entendu)","sentio|sentio, -ire : sentir|présent, 1re pers. sing.","et","excrucior|excrucio, -are : torturer|présent passif, 1re pers. sing. : « je suis torturé »","."],
+     tr:"Je hais et j'aime. Comment est-ce possible, demandes-tu peut-être. Je ne sais pas, mais je sens que cela arrive, et je suis à la torture.",
+     q:[["« Odi » est un parfait qui a le sens…","d'un présent","d'un futur","d'un imparfait"],["Pourquoi « faciam » est-il au subjonctif ?","interrogation indirecte","proposition de but","ordre"],["Comment se sent le poète ?","torturé","apaisé","indifférent"]]},
+    {id:"catilina",t:"Quo usque tandem…",a:"Cicéron, Première Catilinaire, 1",lv:"C1",intro:"L'ouverture fracassante du discours de Cicéron contre Catilina, en 63 av. J.-C. Trois questions oratoires de plus en plus fortes.",
+     w:["Quo usque|quo usque : jusqu'à quand|locution interrogative","tandem|tandem : enfin, donc|adverbe d'insistance","abutere|abutor, abuti, abusus sum : abuser de (+ ablatif)|déponent, futur, 2e pers. sing. (-re = -ris)",",","Catilina|Catilina, -ae (m.)|vocatif : apostrophe",",","patientia|patientia, -ae (f.) : patience|ablatif singulier, complément de abutor (qui se construit avec l'ablatif)","nostra|noster, -tra, -trum : notre|ablatif féminin singulier","?","Quam diu|quam diu : combien de temps|locution interrogative","etiam|etiam : encore|adverbe","furor|furor, -oris (m.) : folie, fureur|nominatif singulier, sujet","iste|iste, ista, istud : ce… -là (péjoratif)|nominatif masculin singulier","tuus|tuus, -a, -um : ton|nominatif masculin singulier","nos|nos : nous|accusatif, COD","eludet|eludo, -ere : se jouer de|futur, 3e pers. sing.","?","Quem|qui, quae, quod (interrogatif) : quel|accusatif masculin singulier, s'accorde avec finem","ad|ad + accusatif : jusqu'à|préposition","finem|finis, -is (m.) : fin, limite|accusatif singulier","sese|se : soi|accusatif réfléchi renforcé, COD","effrenata|effrenatus, -a, -um : déchaîné|nominatif féminin singulier, s'accorde avec audacia (hyperbate)","iactabit|iacto, -are : agiter ; se iactare : se déchaîner|futur, 3e pers. sing.","audacia|audacia, -ae (f.) : audace|nominatif singulier, sujet rejeté à la fin","?"],
+     tr:"Jusqu'à quand enfin, Catilina, abuseras-tu de notre patience ? Combien de temps encore ta folie se jouera-t-elle de nous ? Jusqu'où ira ton audace déchaînée ?",
+     q:[["À quel cas est « patientia » ?","ablatif (complément de abutor)","nominatif","accusatif"],["« abutere » est…","un futur de déponent","un infinitif","un impératif"],["Quel est le sujet de « iactabit » ?","audacia","Catilina","furor"]]},
+    {id:"seneca",t:"Vindica te tibi",a:"Sénèque, Lettres à Lucilius, 1, 1",lv:"C1",intro:"La première lettre de Sénèque, sur le bon usage du temps. Repère les impératifs et le relatif quod.",
+     w:["Ita|ita : ainsi|adverbe","fac|facio, -ere : faire|impératif présent, 2e pers. sing. (forme courte)",",","mi|meus, -a, -um : mon|vocatif masculin singulier (forme mi)","Lucili|Lucilius, -ii (m.)|vocatif : apostrophe",":","vindica|vindico, -are : revendiquer, libérer|impératif présent, 2e pers. sing.","te","tibi|tu : à toi|datif : « pour toi »",",","et","tempus|tempus, -oris (n.) : temps|accusatif singulier, COD de collige et serva","quod|qui, quae, quod|relatif, nominatif neutre singulier, sujet (antécédent tempus)","adhuc|adhuc : jusqu'ici|adverbe","aut","auferebatur|aufero, auferre : enlever|imparfait passif, 3e pers. sing. : « était enlevé »","aut","subripiebatur|subripio, -ere : dérober|imparfait passif, 3e pers. sing. : « était dérobé »","aut","excidebat|excido, -ere : tomber, échapper|imparfait, 3e pers. sing. : « s'échappait »","collige|colligo, -ere : rassembler|impératif présent, 2e pers. sing.","et","serva|servo, -are : garder|impératif présent, 2e pers. sing.","."],
+     tr:"Fais ainsi, mon cher Lucilius : revendique-toi pour toi-même, et le temps qui jusqu'ici t'était enlevé, dérobé ou t'échappait, rassemble-le et garde-le.",
+     q:[["De quoi parle Sénèque ?","du temps","de l'argent","de la guerre"],["« collige » et « serva » sont…","des impératifs","des infinitifs","des participes"],["« mi Lucili » est au…","vocatif","génitif","datif"]]},
+    {id:"aeneis",t:"Arma virumque cano",a:"Virgile, Énéide, I, 1-3",lv:"C2",intro:"Les premiers vers de l'Énéide, en hexamètres dactyliques. Observe l'accusatif de direction sans préposition, propre à la poésie.",
+     w:["Arma|arma, -orum (n. pl.) : les armes|accusatif neutre pluriel, COD","virumque|vir, viri (m.) : homme + -que : et|accusatif singulier, COD : « et l'homme »","cano|cano, -ere : chanter|présent, 1re pers. sing.",",","Troiae|Troia, -ae (f.) : Troie|génitif singulier, complément de oris","qui|qui, quae, quod|relatif, nominatif masculin singulier, sujet de venit (antécédent virum)","primus|primus, -a, -um : premier|nominatif masculin singulier : « le premier »","ab|a, ab + ablatif : de, depuis|préposition (point de départ)","oris|ora, -ae (f.) : rivage|ablatif pluriel, après ab","Italiam|Italia, -ae (f.) : Italie|accusatif sans préposition : lieu où l'on va (usage poétique)",",","fato|fatum, -i (n.) : destin|ablatif singulier : la cause","profugus|profugus, -a, -um : exilé|nominatif masculin singulier, apposé à qui",",","Laviniaque|Lavinius, -a, -um : de Lavinium + -que : et|accusatif neutre pluriel, s'accorde avec litora","venit|venio, -ire, veni : venir|parfait, 3e pers. sing. : « vint »","litora|litus, -oris (n.) : rivage|accusatif neutre pluriel : lieu où l'on va","."],
+     tr:"Je chante les armes et l'homme qui, le premier, venu des rivages de Troie, exilé par le destin, atteignit l'Italie et les rivages de Lavinium.",
+     q:[["Qui est « l'homme » chanté ?","Énée","Ulysse","César"],["« Italiam » est un accusatif de…","lieu où l'on va","durée","COD de cano"],["Le vers de l'Énéide est un…","hexamètre dactylique","alexandrin","pentamètre iambique"]]}
+  ];
+
+  /* =================== INTERFACE =================== */
+  const st={tab:"tables",sel:"rosa",drill:null,qc:null,text:null,tok:null,quiz:null};
+  let root=null;
+  function css(){if(document.getElementById("latws-css"))return;const s=document.createElement("style");s.id="latws-css";s.textContent=`
+#latRoot .lw-bg{position:fixed;inset:0;background:rgba(10,14,30,.55);z-index:80;display:flex;align-items:flex-end;justify-content:center}
+@media(min-width:760px){#latRoot .lw-bg{align-items:center}}
+#latRoot .lw{background:var(--bg,#fff);color:var(--ink,#111);width:100%;max-width:820px;height:94vh;border-radius:22px 22px 0 0;display:flex;flex-direction:column;overflow:hidden}
+@media(min-width:760px){#latRoot .lw{border-radius:22px;height:88vh}}
+#latRoot .lw-head{display:flex;align-items:center;gap:10px;padding:14px 16px 8px}
+#latRoot .lw-head h2{margin:0;font-size:1.15rem;flex:1}
+#latRoot .lw-x{border:0;background:var(--surface-2,#eee);color:inherit;border-radius:12px;width:38px;height:38px;font-size:1.1rem;font-weight:900}
+#latRoot .lw-tabs{display:flex;gap:4px;padding:0 16px 10px;overflow-x:auto}
+#latRoot .lw-tabs button{flex:1 0 auto;border:2px solid var(--line,#ddd);background:var(--surface,#fff);color:inherit;border-radius:999px;padding:7px 8px;font-weight:800;font-size:.8rem;white-space:nowrap}
+#latRoot .lw-tabs button[aria-pressed=true]{background:var(--accent,#3b6);color:var(--accent-ink,#fff);border-color:var(--accent,#3b6)}
+#latRoot .lw-body{flex:1;overflow-y:auto;padding:4px 16px 24px;display:flex;flex-direction:column;gap:12px}
+#latRoot .lw-card{background:var(--surface,#fff);border:2px solid var(--line,#ddd);border-radius:16px;padding:14px}
+#latRoot .lw-muted{color:var(--ink-2,#666);font-size:.9rem;margin:0}
+#latRoot select,#latRoot input[type=text]{width:100%;font:inherit;padding:11px 12px;border-radius:12px;border:2px solid var(--line,#ddd);background:var(--surface,#fff);color:inherit}
+#latRoot .lw-tbl{width:100%;border-collapse:collapse;font-size:.95rem}
+#latRoot .lw-tbl th,#latRoot .lw-tbl td{border-bottom:1px solid var(--line,#ddd);padding:6px 6px;text-align:left;vertical-align:top}
+#latRoot .lw-tbl th{color:var(--ink-2,#666);font-weight:800;font-size:.8rem}
+#latRoot .lw-tbl td.f{font-weight:800}
+#latRoot .lw-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+#latRoot .lw-btn{border:0;border-radius:14px;padding:12px 16px;font-weight:900;background:var(--accent,#3b6);color:var(--accent-ink,#fff);box-shadow:0 3px 0 var(--accent-dark,#285);font-size:.95rem}
+#latRoot .lw-btn.alt{background:var(--surface-2,#eee);color:var(--ink,#111);box-shadow:0 3px 0 var(--line,#ccc)}
+#latRoot .lw-row{display:flex;gap:8px;flex-wrap:wrap}
+#latRoot .lw-opt{flex:1 1 45%;border:2px solid var(--line,#ddd);background:var(--surface,#fff);color:inherit;border-radius:14px;padding:11px;font-weight:800;text-align:left}
+#latRoot .lw-opt.ok{border-color:var(--good,#2a2);background:var(--good-soft,#dfd)}
+#latRoot .lw-opt.ko{border-color:var(--bad,#c33);background:var(--bad-soft,#fdd)}
+#latRoot .lw-big{font-size:1.35rem;font-weight:900;line-height:1.4}
+#latRoot .lw-hl{background:var(--gold-soft,#ffe9a8);border-radius:6px;padding:0 4px}
+#latRoot .lw-stat{display:flex;gap:10px;flex-wrap:wrap;font-weight:900}
+#latRoot .lw-stat span{background:var(--surface-2,#eee);border-radius:999px;padding:5px 12px}
+#latRoot .lw-text{font-size:1.2rem;line-height:2.1}
+#latRoot .lw-w{border:0;background:transparent;color:inherit;font:inherit;padding:1px 2px;border-radius:6px;border-bottom:2px dotted var(--accent,#3b6);cursor:pointer}
+#latRoot .lw-w.on{background:var(--accent-soft,#def)}
+#latRoot .lw-fb{border-radius:14px;padding:12px;font-weight:700}
+#latRoot .lw-fb.ok{background:var(--good-soft,#dfd);color:var(--good-ink,#060)}
+#latRoot .lw-fb.ko{background:var(--bad-soft,#fdd);color:var(--bad-ink,#600)}
+#latRoot .lw-tag{display:inline-block;font-size:.72rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2,#666)}
+.lw-entry{display:flex;gap:12px;align-items:center;text-align:left;width:100%;border:2px solid var(--line,#ddd);background:var(--surface,#fff);color:inherit;border-radius:18px;padding:14px;margin:0 0 12px}
+.lw-entry b{display:block;font-size:1.02rem}.lw-entry small{color:var(--ink-2,#666)}
+.lw-entry .lw-ico{font-size:1.8rem}
+`;document.head.appendChild(s)}
+  function open(tab){css();if(tab)st.tab=tab;root=document.getElementById("latRoot");if(!root){root=document.createElement("div");root.id="latRoot";document.body.appendChild(root)}draw();document.body.style.overflow="hidden"}
+  function close(){if(root)root.innerHTML="";document.body.style.overflow="";try{speechSynthesis.cancel()}catch(e){}}
+  function say(t){try{if(typeof speak==="function")speak(t,"la")}catch(e){}}
+  function award(n){try{if(typeof addXP==="function")addXP(n);if(typeof day==="function")day().xp+=n;if(typeof save==="function")save()}catch(e){}}
+  const TABS=[["tables","Tables"],["drill","S'entraîner"],["cases","Quel cas ?"],["texts","Textes"]];
+  function draw(){
+    const body={tables:tablesV,drill:drillV,cases:casesV,texts:textsV}[st.tab]();
+    root.innerHTML=`<div class="lw-bg" data-lw="bg"><div class="lw" role="dialog" aria-label="Atelier latin"><div class="lw-head"><h2>🏛️ Atelier latin</h2><button class="lw-x" data-lw="close" aria-label="Fermer">✕</button></div><div class="lw-tabs">${TABS.map(([k,n])=>`<button data-lw="tab" data-k="${k}" aria-pressed="${st.tab===k}">${n}</button>`).join("")}</div><div class="lw-body">${body}</div></div></div>`;
+    const inp=root.querySelector("#lwAns");if(inp)inp.focus();
+  }
+  /* ---- Tables ---- */
+  function tablesV(){
+    const opt=(x)=>`<option value="${x.id}" ${st.sel===x.id?"selected":""}>${E(x.h.split(" — ")[0])} — ${E(x.h.split(" — ")[1]||"")}</option>`;
+    let html=`<div class="lw-card"><p class="lw-muted">Choisis un modèle. Les voyelles longues sont marquées (ā, ē…) ; dans les exercices, tu peux les écrire sans macron.</p><select data-lw="sel"><optgroup label="Noms">${NOUNS.map(opt).join("")}</optgroup><optgroup label="Pronoms">${PRONS.map(opt).join("")}</optgroup><optgroup label="Verbes">${VERBS.map(opt).join("")}</optgroup></select></div>`;
+    const n=NOUNS.find(x=>x.id===st.sel),p=PRONS.find(x=>x.id===st.sel),v=VERBS.find(x=>x.id===st.sel);
+    if(n){html+=`<div class="lw-card"><span class="lw-tag">${E(n.d)}</span><h3 style="margin:4px 0 10px">${E(n.h)}</h3><table class="lw-tbl"><tr><th>Cas</th><th>Singulier</th><th>Pluriel</th></tr>${CASES.map((c,i)=>`<tr><th>${c}</th><td class="f">${say1(n.f[i])}</td><td class="f">${say1(n.f[i+6])}</td></tr>`).join("")}</table><p class="lw-muted" style="margin-top:8px">${nounTip(n)}</p></div>`}
+    if(p){const row=(arr)=>arr.map((r,ci)=>`<tr><th>${PCASES[ci]}</th>${r.map(f=>`<td class="f">${say1(f)}</td>`).join("")}</tr>`).join("");
+      html+=`<div class="lw-card"><span class="lw-tag">Pronom</span><h3 style="margin:4px 0 10px">${E(p.h)}</h3><table class="lw-tbl"><tr><th>Singulier</th>${p.cols.map(c=>`<th>${E(c)}</th>`).join("")}</tr>${row(p.sg)}<tr><th>Pluriel</th>${p.cols.map(()=>"<th></th>").join("")}</tr>${row(p.pl)}</table></div>`}
+    if(v){html+=`<div class="lw-card"><span class="lw-tag">${E(v.d)}</span><h3 style="margin:4px 0 0">${E(v.h)}</h3></div>`;
+      v.g.forEach(gr=>{html+=`<div class="lw-card"><h3 style="margin:0 0 8px">${E(gr.m)}</h3><div class="lw-grid">${Object.entries(gr.t).map(([tn,forms])=>`<div><b>${E(tn)}</b><table class="lw-tbl">${forms.map((f,i)=>Array.isArray(f)?`<tr><th>${E(f[0])}</th><td class="f">${say1(f[1])}</td></tr>`:`<tr><th>${["1s","2s","3s","1p","2p","3p"][i]}</th><td class="f">${say1(f)}</td></tr>`).join("")}</table></div>`).join("")}</div></div>`});
+      if(v.dep)html+=`<div class="lw-card"><p class="lw-muted">Un verbe déponent n'a que des formes passives, mais son sens est actif : « hortor » = j'exhorte. Il garde trois formes actives : le participe présent, le participe futur et le gérondif.</p></div>`;
+    }
+    return html;
+  }
+  const say1=f=>`<span>${E(f)}</span> <button class="lw-x" style="width:28px;height:28px;font-size:.8rem;display:inline-flex;align-items:center;justify-content:center" data-lw="say" data-t="${E(f.split(" / ")[0])}" aria-label="Écouter">🔊</button>`;
+  function nounTip(n){return {rosa:"À retenir : l'ablatif singulier a un a long (rosā) ; -ae peut être génitif ou datif singulier, ou nominatif pluriel : le contexte tranche.",puella:"Même modèle que rosa : presque tous les noms en -a sont féminins.",dominus:"Le vocatif en -e (domine) n'existe que pour les masculins en -us de la 2e déclinaison.",puer:"Les noms en -er gardent le e (puer, pueri) ou le perdent (ager, agri) : le génitif te le dit.",ager:"ager perd son e au génitif (agri) : apprends toujours le génitif !",templum:"Règle d'or du neutre : nominatif = vocatif = accusatif, et le pluriel est en -a.",rex:"À la 3e déclinaison, le génitif (regis) donne le radical (reg-) ; le nominatif est imprévisible.",pater:"Génitif pluriel en -um (patrum) : c'est un thème en consonne.",civis:"Les thèmes en -i (même nombre de syllabes au nominatif et au génitif) ont un génitif pluriel en -ium.",corpus:"Neutre de la 3e : corpus au nominatif et à l'accusatif, corpora au pluriel.",nomen:"Comme corpus : les neutres en -men font -minis au génitif.",manus:"manus est féminin malgré son -us. Attention : manus peut être nominatif singulier, génitif singulier ou pluriel.",res:"res publica, « la chose publique », a donné république.",dies:"diēs est masculin (sauf pour une date fixée, parfois féminin) ; carpe diem !"}[n.id]||""}
+  /* ---- Entraînement ---- */
+  function drillV(){
+    const d=st.drill;
+    if(!d||d.done){
+      const res=d&&d.done?`<div class="lw-card"><h3 style="margin:0">Série terminée : ${d.ok} / ${d.n}</h3><p class="lw-muted">Meilleure série : ${d.best} bonnes réponses d'affilée · +${d.ok} XP</p></div>`:"";
+      return res+`<div class="lw-card"><h3 style="margin:0 0 6px">Entraînement aux formes</h3><p class="lw-muted">10 formes à écrire. Les macrons ne sont pas obligatoires (rosā = rosa).</p></div>
+      <div class="lw-card"><b>Quoi ?</b><div class="lw-row" style="margin-top:8px">${[["all","Tout"],["noun","Déclinaisons et pronoms"],["verb","Conjugaisons"]].map(([k,n])=>`<button class="lw-opt" data-lw="dk" data-k="${k}" style="flex:1 1 30%;${(st.dk||"all")===k?"border-color:var(--accent,#3b6)":""}">${n}</button>`).join("")}</div>
+      <b style="display:block;margin-top:12px">Niveau</b><div class="lw-row" style="margin-top:8px">${[1,2,3].map(l=>`<button class="lw-opt" data-lw="dl" data-k="${l}" style="flex:1 1 30%;${(st.dl||1)===l?"border-color:var(--accent,#3b6)":""}">${LVN[l]}</button>`).join("")}</div>
+      <p class="lw-muted" style="margin-top:10px">Débutant : 1re et 2e déclinaisons, présent / imparfait / futur. Intermédiaire : toutes les déclinaisons, pronoms, parfait, passif, subjonctif. Expert : tout, y compris déponents et verbes irréguliers.</p>
+      <button class="lw-btn" style="margin-top:12px;width:100%" data-lw="dstart">Commencer</button></div>`;
+    }
+    const q=d.cur;
+    return `<div class="lw-stat"><span>Question ${d.i+1} / ${d.n}</span><span>✅ ${d.ok}</span><span>🔥 ${d.streak}</span></div>
+    <div class="lw-card"><span class="lw-tag">${E(q.src)}</span><div style="margin:6px 0">${q.p}</div><div class="lw-big">${q.q}</div></div>
+    ${d.fb?`<div class="lw-fb ${d.fb.ok?"ok":"ko"}">${d.fb.ok?"Bravo ! ":"Réponse : "}<b>${E(q.a)}</b>${d.fb.ok?"":` <span style="font-weight:600">(tu as écrit « ${E(d.fb.v)} »)</span>`}</div><button class="lw-btn" data-lw="dnext">Continuer</button>`
+      :`<form data-lw="dform" class="lw-row"><input id="lwAns" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Écris la forme…" style="flex:1 1 100%"><button class="lw-btn" type="submit" style="flex:1">Valider</button><button class="lw-btn alt" type="button" data-lw="dhint" style="flex:1">${d.hint?E(q.a.slice(0,d.hint))+"…":"Indice"}</button></form>`}`;
+  }
+  function drillStart(){const pool=shuffle(drillPool(st.dk||"all",st.dl||1));st.drill={pool,i:0,n:10,ok:0,streak:0,best:0,cur:pool[0],fb:null,hint:0};}
+  function drillCheck(v){const d=st.drill;const ok=answers(d.cur.a).includes(plain(v));d.fb={ok,v};if(ok){d.ok++;d.streak++;d.best=Math.max(d.best,d.streak);award(1);say(d.cur.a.split(" / ")[0])}else d.streak=0}
+  function drillNext(){const d=st.drill;d.i++;d.fb=null;d.hint=0;if(d.i>=d.n){d.done=true;return}d.cur=d.pool[d.i%d.pool.length]}
+  /* ---- Quel cas ? ---- */
+  function casesV(){
+    const g=st.qc;
+    if(!g||g.done){
+      const res=g&&g.done?`<div class="lw-card"><h3 style="margin:0">Partie terminée : ${g.score} / ${g.n*2} points</h3><p class="lw-muted">1 point pour le bon cas, 1 point pour la bonne fonction · +${g.score} XP</p></div>`:"";
+      return res+`<div class="lw-card"><h3 style="margin:0 0 6px">Quel cas ?</h3><p class="lw-muted">Un mot est surligné dans une phrase latine. Trouve d'abord son cas, puis sa fonction. C'est la compétence clé pour lire le latin : la terminaison dit le rôle du mot.</p></div>
+      <div class="lw-card"><b>Niveau</b><div class="lw-row" style="margin-top:8px">${[1,2,3].map(l=>`<button class="lw-opt" data-lw="ql" data-k="${l}" style="flex:1 1 30%;${(st.ql||1)===l?"border-color:var(--accent,#3b6)":""}">${LVN[l]}</button>`).join("")}</div><button class="lw-btn" style="margin-top:12px;width:100%" data-lw="qstart">Jouer (10 phrases)</button></div>`;
+    }
+    const it=g.cur,[s,w,c,f,tr,ex]=it;
+    const i=s.indexOf(w);const sent=E(s.slice(0,i))+`<span class="lw-hl">${E(w)}</span>`+E(s.slice(i+w.length));
+    let html=`<div class="lw-stat"><span>Phrase ${g.i+1} / ${g.n}</span><span>⭐ ${g.score}</span></div><div class="lw-card"><div class="lw-big">${sent} <button class="lw-x" style="width:30px;height:30px;font-size:.8rem" data-lw="say" data-t="${E(s)}" aria-label="Écouter">🔊</button></div></div>`;
+    if(g.step===0){html+=`<div class="lw-card"><b>1. Quel est le cas de « ${E(w)} » ?</b><div class="lw-row" style="margin-top:8px">${Object.entries(CC).map(([k,n])=>`<button class="lw-opt" data-lw="qcase" data-k="${k}">${n}</button>`).join("")}</div></div>`}
+    else if(g.step===1){html+=`<div class="lw-fb ${g.caseOk?"ok":"ko"}">${g.caseOk?"Bon cas !":"Non : c'est un "+CC[c].toLowerCase()+"."}</div><div class="lw-card"><b>2. Quelle est sa fonction ?</b><div class="lw-row" style="margin-top:8px">${g.fopts.map(k=>`<button class="lw-opt" data-lw="qfn" data-k="${k}" style="flex:1 1 100%">${E(FN[k])}</button>`).join("")}</div></div>`}
+    else{html+=`<div class="lw-fb ${g.caseOk&&g.fnOk?"ok":"ko"}">Cas : <b>${CC[c]}</b> ${g.caseOk?"✓":"✗"} · Fonction : <b>${E(FN[f])}</b> ${g.fnOk?"✓":"✗"}</div><div class="lw-card"><p style="margin:0 0 6px"><b>Traduction :</b> ${E(tr)}</p><p class="lw-muted">${E(ex)}</p></div><button class="lw-btn" data-lw="qnext">Continuer</button>`}
+    return html;
+  }
+  function qcStart(){const lv=st.ql||1;let pool=QC.filter(x=>x[6]<=lv);if(lv>1)pool=pool.filter(x=>x[6]>=lv-1);pool=shuffle(pool);st.qc={pool,i:0,n:Math.min(10,pool.length),score:0,cur:pool[0],step:0};}
+  function qcFnOpts(f){return shuffle([f,...shuffle(FN.map((_,k)=>k).filter(k=>k!==f)).slice(0,3)])}
+  /* ---- Textes ---- */
+  function tok(x){if(/^[.,;:?!«»]$/.test(x))return {p:x};const a=x.split("|");if(a.length===1){const l=LEX[a[0].toLowerCase()];return l?{w:a[0],l:l.split("|")[0],a:l.split("|")[1]}:{w:a[0],l:"",a:""}}return {w:a[0],l:a[1],a:a[2]||""}}
+  function textsV(){
+    if(!st.text){return `<div class="lw-card"><h3 style="margin:0 0 6px">Textes authentiques</h3><p class="lw-muted">Du texte d'initiation à Virgile. Touche un mot pour voir son analyse et son sens ; écoute le texte ; vérifie ta compréhension.</p></div>`+TEXTS.map(t=>`<button class="lw-entry" data-lw="topen" data-k="${t.id}"><span class="lw-ico">📜</span><span><b>${E(t.t)}</b><small>${E(t.a)} · niveau ${t.lv}</small></span></button>`).join("")}
+    const t=TEXTS.find(x=>x.id===st.text),T=t.w.map(tok);
+    const sentence=T.map(x=>x.p?x.p:x.w).join(" ").replace(/ ([.,;:?!»])/g,"$1").replace(/« /g,"« ");
+    let txt="";T.forEach((x,i)=>{if(x.p){txt+=(x.p==="«"?" ":"")+E(x.p)+(x.p==="«"?"":"");return}txt+=(i&&T[i-1].p!=="«"?" ":"")+`<button class="lw-w ${st.tok===i?"on":""}" data-lw="tok" data-k="${i}">${E(x.w)}</button>`});
+    const cur=st.tok!=null&&T[st.tok]&&!T[st.tok].p?T[st.tok]:null;
+    let html=`<button class="lw-btn alt" data-lw="tback" style="align-self:flex-start">← Tous les textes</button><div class="lw-card"><span class="lw-tag">${E(t.a)} · niveau ${t.lv}</span><h3 style="margin:4px 0 6px">${E(t.t)}</h3><p class="lw-muted">${E(t.intro)}</p></div>
+    <div class="lw-card"><div class="lw-text">${txt}</div><div class="lw-row" style="margin-top:10px"><button class="lw-btn alt" data-lw="say" data-t="${E(sentence)}">🔊 Écouter</button><button class="lw-btn alt" data-lw="ttr">${st.showTr?"Masquer":"Voir"} la traduction</button></div></div>`;
+    html+=cur?`<div class="lw-card" style="border-color:var(--accent,#3b6)"><div class="lw-big">${E(cur.w)} <button class="lw-x" style="width:30px;height:30px;font-size:.8rem" data-lw="say" data-t="${E(cur.w)}">🔊</button></div>${cur.l?`<p style="margin:6px 0 2px"><b>${E(cur.l)}</b></p>`:""}${cur.a?`<p class="lw-muted">${E(cur.a)}</p>`:""}</div>`:`<p class="lw-muted">👆 Touche un mot souligné pour l'analyser.</p>`;
+    if(st.showTr)html+=`<div class="lw-card"><b>Traduction</b><p style="margin:6px 0 0">${E(t.tr)}</p></div>`;
+    const qz=st.quiz;
+    html+=`<div class="lw-card"><h3 style="margin:0 0 8px">Compréhension</h3>${t.q.map((q,qi)=>{const ans=qz&&qz[qi];const opts=(st.qorder&&st.qorder[qi])||[1,2,3];return `<p style="margin:10px 0 6px"><b>${qi+1}. ${E(q[0])}</b></p><div class="lw-row">${opts.map(k=>`<button class="lw-opt ${ans!=null?(k===1?"ok":ans===k?"ko":""):""}" data-lw="tq" data-q="${qi}" data-k="${k}" ${ans!=null?"disabled":""}>${E(q[k])}</button>`).join("")}</div>`}).join("")}</div>`;
+    return html;
+  }
+
+  /* ---- Événements ---- */
+  document.addEventListener("click",e=>{
+    const ent=e.target.closest&&e.target.closest("[data-latws]");
+    if(ent){e.preventDefault();e.stopImmediatePropagation();open(ent.dataset.latws);return}
+    if(!root||!root.contains(e.target))return;
+    const b=e.target.closest("[data-lw]");if(!b)return;const a=b.dataset.lw,k=b.dataset.k;
+    if(a==="bg"){if(e.target===b)close();return}
+    e.stopPropagation();
+    if(a==="close"){close();return}
+    if(a==="say"){say(b.dataset.t);return}
+    if(a==="tab"){st.tab=k;}
+    else if(a==="dk"){st.dk=k}else if(a==="dl"){st.dl=+k}
+    else if(a==="dstart"){drillStart()}
+    else if(a==="dnext"){drillNext()}
+    else if(a==="dhint"){const d=st.drill;d.hint=Math.min((d.hint||0)+2,d.cur.a.length-1)}
+    else if(a==="ql"){st.ql=+k}else if(a==="qstart"){qcStart()}
+    else if(a==="qcase"){const g=st.qc;g.caseOk=k===g.cur[2];if(g.caseOk)g.score++;g.fopts=qcFnOpts(g.cur[3]);g.step=1}
+    else if(a==="qfn"){const g=st.qc;g.fnOk=+k===g.cur[3];if(g.fnOk)g.score++;g.step=2;award((g.caseOk?1:0)+(g.fnOk?1:0));say(g.cur[0])}
+    else if(a==="qnext"){const g=st.qc;g.i++;if(g.i>=g.n){g.done=true}else{g.cur=g.pool[g.i];g.step=0}}
+    else if(a==="topen"){st.text=k;st.tok=null;st.showTr=false;st.quiz={};st.qorder=TEXTS.find(t=>t.id===k).q.map(()=>shuffle([1,2,3]))}
+    else if(a==="tback"){st.text=null}
+    else if(a==="tok"){st.tok=+k;const t=TEXTS.find(x=>x.id===st.text);const x=tok(t.w[+k]);if(x.w)say(x.w)}
+    else if(a==="ttr"){st.showTr=!st.showTr}
+    else if(a==="tq"){const qi=+b.dataset.q;if(st.quiz[qi]==null){st.quiz[qi]=+k;if(+k===1)award(1)}}
+    else return;
+    const sc=root.querySelector(".lw-body")?.scrollTop||0;draw();if(["tok","tq","ttr","say"].includes(a)){const bd=root.querySelector(".lw-body");if(bd)bd.scrollTop=sc}
+  },true);
+  document.addEventListener("submit",e=>{if(!root||!root.contains(e.target))return;const f=e.target.closest('[data-lw="dform"]');if(!f)return;e.preventDefault();const v=f.querySelector("#lwAns").value;if(!v.trim())return;drillCheck(v);draw()},true);
+  document.addEventListener("change",e=>{if(!root||!root.contains(e.target))return;if(e.target.matches('[data-lw="sel"]')){st.sel=e.target.value;draw()}},true);
+  document.addEventListener("keydown",e=>{if(e.key==="Escape"&&root&&root.innerHTML){e.stopImmediatePropagation();close()}},true);
+
+  /* ---- Points d'entrée : Grammaire et Jeux, seulement pour le latin ---- */
+  const entry=()=>`<div class="lw-entries">${[["tables","📚","Atelier latin : tables","Déclinaisons, pronoms et conjugaisons complètes"],["drill","✍️","S'entraîner aux formes","10 formes à écrire, avec série et XP"],["cases","🎯","Jeu « Quel cas ? »","Trouve le cas et la fonction d'un mot"],["texts","📜","Textes authentiques","Phèdre, César, Catulle, Cicéron, Virgile… analysés mot à mot"]].map(([k,i,t,d])=>`<button class="lw-entry" data-latws="${k}"><span class="lw-ico">${i}</span><span><b>${t}</b><small>${d}</small></span></button>`).join("")}</div>`;
+  try{
+    const pg=grammarView;grammarView=function(){const h=pg.apply(this,arguments);if(S.tgt!=="la")return h;css();const i=h.indexOf('<div class="seg tabs">');if(i<0)return entry()+h;const j=h.indexOf("</div>",i)+6;return h.slice(0,j)+entry()+h.slice(j)};
+  }catch(e){}
+  try{
+    const pp=playView;playView=function(){const h=pp.apply(this,arguments);if(S.tgt!=="la")return h;css();return entry()+h};
+  }catch(e){}
+  window.CastellumLatin={open,state:st,NOUNS,PRONS,VERBS,QC,TEXTS,drillPool};
+})();
+
+</script>
