@@ -119773,6 +119773,161 @@ window.CASTELLUM_ANCIENT_FILL={"akk": {"t0": "arnabum|arnabum\nasum|asum\nbarbar
      q:[["Qui est « l'homme » chanté ?","Énée","Ulysse","César"],["« Italiam » est un accusatif de…","lieu où l'on va","durée","COD de cano"],["Le vers de l'Énéide est un…","hexamètre dactylique","alexandrin","pentamètre iambique"]]}
   ];
 
+  /* =================== RACINES LATINES =================== */
+  // latin|sens|français populaire|français savant|italien|espagnol|portugais|anglais|anecdote
+  const ROOTS_RAW=`aqua|l'eau|eau|aquarium, aquatique|acqua|agua|água|aquatic, aquarium|Le français a tellement usé le mot qu'il ne reste que trois lettres prononcées « o ».
+pater|le père|père|paternel, patrie|padre|padre|pai|paternal|
+mater|la mère|mère|maternel, matrice|madre|madre|mãe|maternal|
+frater|le frère|frère|fraternel, fraternité|fratello|fraterno|fraterno|fraternal, friar|L'espagnol hermano et le portugais irmão viennent d'un autre mot latin : germanus (« de la même souche »).
+caput|la tête|chef|capital, capitaine|capo|cabeza|cabeça|capital, captain, chief|« Chef » voulait d'abord dire « tête » en ancien français : on le retrouve dans « couvre-chef ».
+manus|la main|main|manuel, manuscrit|mano|mano|mão|manual, manuscript|« Manuscrit » : écrit à la main ; « manufacture » : fait à la main.
+pes, pedis|le pied|pied|pédestre, piéton|piede|pie|pé|pedestrian, pedal|
+oculus|l'œil|œil|oculaire, oculiste|occhio|ojo|olho|ocular|
+dens, dentis|la dent|dent|dentiste, dentaire|dente|diente|dente|dentist, dental|
+cor, cordis|le cœur|cœur|cordial|cuore|corazón|coração|cordial|« Cordial » : qui vient du cœur.
+nox, noctis|la nuit|nuit|nocturne|notte|noche|noite|nocturnal|
+dies|le jour|(lun)di, (mi)di|diurne, quotidien|dì|día|dia|diary, diurnal|Lundi = le jour de la Lune (lunae dies), mardi = le jour de Mars.
+sol|le soleil|soleil|solaire|sole|sol|sol|solar|« Soleil » vient d'un diminutif populaire, soliculus, « le petit soleil ».
+luna|la lune|lune|lunaire|luna|luna|lua|lunar|
+terra|la terre|terre|terrestre, territoire|terra|tierra|terra|terrestrial, territory|
+mare|la mer|mer|marin, maritime|mare|mar|mar|marine, maritime|
+focus|le foyer|feu|focal, foyer|fuoco|fuego|fogo|focus, focal|En latin classique, le feu se disait ignis ; focus, le foyer de la maison, a pris sa place dans la langue parlée.
+panis|le pain|pain|panifier|pane|pan|pão|pantry|
+vinum|le vin|vin|vinicole|vino|vino|vinho|wine, vine|Les Germains ont emprunté vinum très tôt : c'est l'ancêtre de l'anglais wine et de l'allemand Wein.
+lac, lactis|le lait|lait|lacté, lactose|latte|leche|leite|lactose|
+caballus|le cheval (de trait)|cheval|cavalier, cavalerie|cavallo|caballo|cavalo|cavalry|Le mot noble était equus : il a donné « équitation » et « équestre ».
+canis|le chien|chien|canin|cane|can|cão|canine|
+lupus|le loup|loup|lupin|lupo|lobo|lobo|lupine|
+avis|l'oiseau|(oiseau)|aviation, aviaire|uccello|ave|ave|aviation, aviary|« Oiseau » vient d'avicellus, « petit oiseau ».
+arbor|l'arbre|arbre|arboricole|albero|árbol|árvore|arboretum|
+flos, floris|la fleur|fleur|floral, flore|fiore|flor|flor|flower, floral|
+schola|l'école|école|scolaire|scuola|escuela|escola|school, scholar|Le latin l'avait emprunté au grec skholè, qui voulait dire… le loisir !
+liber, libri|le livre|livre|librairie, libraire|libro|libro|livro|library|Faux ami : l'anglais library est une bibliothèque, pas une librairie.
+scribere|écrire|écrire|scribe, script|scrivere|escribir|escrever|scribe, script|
+legere|lire|lire|lecture, légende|leggere|leer|ler|lecture, legible|« Légende » : ce qui doit être lu.
+videre|voir|voir|vision, vidéo, évident|vedere|ver|ver|video, vision|« Video » est la 1re personne du présent : « je vois ».
+audire|entendre|ouïr|audition, auditeur|udire|oír|ouvir|audio, audience|« Audio » : « j'entends ».
+dicere|dire|dire|diction, dictionnaire|dire|decir|dizer|dictionary, dictate|
+facere|faire|faire|facile, fabrique|fare|hacer|fazer|fact, factory|En espagnol, le f latin est devenu h : facere → hacer, filius → hijo.
+dormire|dormir|dormir|dortoir|dormire|dormir|dormir|dormitory, dormant|
+cantare|chanter|chanter|cantate|cantare|cantar|cantar|chant, cantata|
+amare|aimer|aimer|amateur, amour|amare|amar|amar|amateur, amorous|Un « amateur » est d'abord quelqu'un qui aime ce qu'il fait.
+tempus|le temps|temps|temporel, temporaire|tempo|tiempo|tempo|temporary, tempo|
+annus|l'année|an|annuel, anniversaire|anno|año|ano|annual, anniversary|
+mensis|le mois|mois|mensuel|mese|mes|mês|semester|Semester : six mois (sex menses).
+domus|la maison|(dôme)|domestique, domicile|duomo|doméstico|doméstico|domestic, dome|Le mot courant pour la maison a été remplacé : casa (la cabane) en italien, espagnol et portugais, mansio (« maison ») en français.
+villa|le domaine rural|ville|village|villa|villa|vila|village, villa|Une villa était une ferme : le mot a fini par désigner la ville elle-même.
+civitas|la cité|cité|civique, citoyen|città|ciudad|cidade|city, civic|
+rex, regis|le roi|roi|royal, régner|re|rey|rei|royal, regal, reign|
+lex, legis|la loi|loi|légal, législatif|legge|ley|lei|legal, loyal|« Loyal » et « légal » sont des doublets : le même mot latin, entré deux fois.
+bellum|la guerre|(belliqueux)|belliqueux, rebelle|guerra|guerra|guerra|bellicose, rebel|Le mot populaire a été remplacé par le germanique werra : guerre, guerra, war.
+pax, pacis|la paix|paix|pacifique|pace|paz|paz|peace, pacify|
+vox, vocis|la voix|voix|vocal, vocabulaire|voce|voz|voz|voice, vocal|
+nomen|le nom|nom|nominal, nommer|nome|nombre|nome|noun, nominal|
+verbum|la parole, le mot|verbe|verbal|verbo|verbo|verbo|verb, verbal|
+littera|la lettre|lettre|littéraire, littéral|lettera|letra|letra|letter, literal|
+numerus|le nombre|nombre|numérique, numéro|numero|número|número|number, numeral|
+populus|le peuple|peuple|populaire|popolo|pueblo|povo|people, popular|
+homo, hominis|l'être humain|homme|homicide, hominidé|uomo|hombre|homem|homicide|L'espagnol hombre garde un b ajouté entre m et r : hom(i)nem → hombre.
+femina|la femme|femme|féminin|femmina|hembra|fêmea|feminine|Femme se dit donna en italien, de domina, « la maîtresse de maison ».
+iuvenis|jeune|jeune|juvénile|giovane|joven|jovem|juvenile, junior|
+senex, senior|vieux, plus âgé|sire, seigneur|sénile, sénat|signore|señor|senhor|senate, senior|Le Sénat était le conseil des anciens.
+bonus|bon|bon|bonté, bonus|buono|bueno|bom|bonus, bounty|
+malus|mauvais|mal|maléfique|male|malo|mau|malice, malign|
+novus|nouveau|neuf|novice, innover|nuovo|nuevo|novo|novel, novice|
+altus|haut|haut|altitude|alto|alto|alto|altitude, alto|Le h de « haut » vient du germanique hoh, qui a croisé le mot latin.
+fortis|fort, courageux|fort|fortifier|forte|fuerte|forte|fort, fortitude|
+clarus|clair, célèbre|clair|clarté, clarifier|chiaro|claro|claro|clear, clarity|
+liber|libre|libre|liberté, libéral|libero|libre|livre|liberty, liberal|Attention : deux mots différents en latin, liber (libre) et liber (le livre).
+tres|trois|trois|trio, triple|tre|tres|três|triple, trio|
+centum|cent|cent|centaine, centime|cento|cien|cem|cent, century|
+mille|mille|mille|millénaire, million|mille|mil|mil|mile, millennium|Le mile romain mesurait mille pas (mille passus).
+septem|sept|sept|septembre|sette|siete|sete|September|Septembre était le 7e mois de l'année romaine, qui commençait en mars.
+decem|dix|dix|décimal, décembre|dieci|diez|dez|decimal, December|
+deus|le dieu|dieu|divin, déité|dio|dios|deus|deity, divine|
+sanctus|saint|saint|sanctuaire, sanctifier|santo|santo|santo|saint, sanctuary|
+gratia|la reconnaissance, la grâce|grâce|gratuit, gratitude|grazia|gracias|graça|grace, gratitude|Merci se dit grazie et gracias : les « grâces » qu'on rend.
+fabula|le récit|fable|fabuleux|favola|hablar|falar|fable, fabulous|Le verbe fabulari (bavarder) est devenu « parler » : hablar en espagnol, falar en portugais.
+computare|calculer|compter, conter|comptable, computer|contare|contar|contar|count, computer|Compter et conter sont le même mot : raconter, c'était énumérer.
+salarium|la ration de sel|salaire|salarié|salario|salario|salário|salary|Les soldats recevaient une indemnité pour acheter du sel.
+candidatus|vêtu de blanc|candidat|candide|candidato|candidato|candidato|candidate|Les candidats aux élections portaient une toge blanchie à la craie.
+virus|le poison|virus|viral|virus|virus|vírus|virus, viral|
+caelum|le ciel|ciel|céleste|cielo|cielo|céu|celestial|
+mons, montis|la montagne|mont|montagne, monter|monte|monte|monte|mount, mountain|
+fluvius / flumen|le fleuve|fleuve|fluvial|fiume|(río)|(rio)|fluvial|
+insula|l'île|île|insulaire, isoler|isola|isla|ilha|isle, insular, isolate|
+porta|la porte|porte|portail, portier|porta|puerta|porta|portal, porter|
+via|la route|voie|viaduc, via|via|vía|via|via, viaduct|
+aurum|l'or|or|aurifère|oro|oro|ouro|aureate|Le symbole chimique de l'or, Au, vient d'aurum.
+ferrum|le fer|fer|ferreux, ferroviaire|ferro|hierro|ferro|ferrous|Hierro : encore le f latin devenu h en espagnol.`;
+  const ROOTS=ROOTS_RAW.split("\n").map(l=>{const a=l.split("|");return {la:a[0],s:a[1],fr:a[2],frs:a[3],it:a[4],es:a[5],pt:a[6],en:a[7],n:a[8]||""}});
+  const RL=[["fr","🇫🇷 français"],["it","🇮🇹 italien"],["es","🇪🇸 espagnol"],["pt","🇵🇹 portugais"],["en","🇬🇧 anglais"]];
+
+  /* =================== VERS : SCANSION DE L'HEXAMÈTRE =================== */
+  // syllabes (avec ’ pour l'élision), quantités L / S (dernière : anceps), longueurs des pieds
+  const VERSES=[
+    {src:"Virgile, Énéide, I, 1",tr:"Je chante les armes et l'homme qui, le premier, des rivages de Troie…",syl:"Ar ma vi rum que ca no Tro iae qui pri mus ab o ris",q:"LSSLSSLLLLLSSLL",ft:[3,3,2,2,3,2],why:"ar : long par position (r + m) · rum : long par position (m + q) · Trō- et ō- : longs par nature · iae : diphtongue · ab : brève (b + voyelle)"},
+    {src:"Virgile, Bucoliques, I, 1",tr:"Tityre, toi, couché sous la voûte d'un large hêtre…",syl:"Ti ty re tu pa tu lae re cu bans sub teg mi ne fa gi",q:"LSSLSSLSSLLLSSLL",ft:[3,3,3,2,3,2],why:"lae : diphtongue ae · bans : long par position (n + s) · sub : long par position (b + t) · teg : long par position (g + m)"},
+    {src:"Ovide, Métamorphoses, I, 1",tr:"Mon esprit me porte à dire les formes changées en de nouveaux corps…",syl:"In no va fert a ni mus mu ta tas di ce re for mas",q:"LSSLSSLLLLLSSLL",ft:[3,3,2,2,3,2],why:"in : long par position (n + n) · fert : long par position · mus : long par position (s + m) · mū-tā-tās : longs par nature"},
+    {src:"Virgile, Énéide, I, 33",tr:"Tant c'était une lourde tâche de fonder la nation romaine.",syl:"Tan tae mo lis e rat Ro ma nam con de re gen tem",q:"LLLSSLLLLLSSLL",ft:[2,3,2,2,3,2],why:"tae : diphtongue · mō- : long par nature · rat : long par position (t + R) · nam, con, gen : longs par position"},
+    {src:"Virgile, Énéide, IV, 1",tr:"Mais la reine, depuis longtemps blessée d'un cruel souci…",syl:"At re gi na gra vi iam du dum sau ci a cu ra",q:"LLLSSLLLLLSSLL",ft:[2,3,2,2,3,2],why:"at : long par position (t + r) · rē-gī- : longs par nature · gra : brève (g + r : muette + liquide) · vī : ablatif, long · sau : diphtongue"},
+    {src:"Lucrèce, De la nature, I, 1",tr:"Mère des descendants d'Énée, volupté des hommes et des dieux…",syl:"Ae ne a dum ge ne trix ho mi num di vum que vo lup tas",q:"LSSLSSLSSLLLSSLL",ft:[3,3,3,2,3,2],why:"ae : diphtongue · trix : long (x = deux consonnes) · num : long par position (m + d) · dī- : long par nature · lup : long par position"},
+    {src:"Virgile, Énéide, VI, 851",tr:"Toi, Romain, souviens-toi de gouverner les peuples sous ton autorité.",syl:"Tu re ge r’im pe ri o po pu los Ro ma ne me men to",q:"LSSLSSLSSLLLSSLL",ft:[3,3,3,2,3,2],why:"regere imperiō : le e final de regere s'élide devant i (r’im) · tū, ō, lōs, Rō-mā- : longs par nature · men : long par position"}
+  ];
+  VERSES.forEach(v=>{v.s=v.syl.split(" ");if(v.s.length!==v.q.length)console.warn("vers",v.src)});
+
+  /* ---- Vues ---- */
+  function rootsV(){
+    const g=st.rg;
+    let html="";
+    if(g&&!g.done){
+      const it=g.cur;
+      html+=`<div class="lw-stat"><span>Question ${g.i+1} / ${g.n}</span><span>⭐ ${g.score}</span></div>`;
+      if(it.type==="up"){html+=`<div class="lw-card"><b>Quel mot latin se cache derrière cette famille ?</b><div style="margin-top:8px">${RL.map(([k,n])=>`<div class="lw-muted">${n} : <b style="color:var(--ink,#111)">${E(k==="fr"?it.r.fr:it.r[k])}</b></div>`).join("")}</div></div>`}
+      else{html+=`<div class="lw-card"><b>Quel mot français descend directement de…</b><div class="lw-big" style="margin-top:6px">${E(it.r.la)} <span class="lw-muted" style="font-size:.95rem">(${E(it.r.s)})</span></div></div>`}
+      html+=`<div class="lw-row">${it.opts.map((o,k)=>`<button class="lw-opt ${g.ans!=null?(k===it.ok?"ok":g.ans===k?"ko":""):""}" data-lw="rans" data-k="${k}" ${g.ans!=null?"disabled":""}>${E(o)}</button>`).join("")}</div>`;
+      if(g.ans!=null)html+=`<div class="lw-card">${rootCard(it.r)}</div><button class="lw-btn" data-lw="rnext">Continuer</button>`;
+      return html;
+    }
+    if(g&&g.done)html+=`<div class="lw-card"><h3 style="margin:0">Résultat : ${g.score} / ${g.n}</h3><p class="lw-muted">+${g.score} XP</p></div>`;
+    html+=`<div class="lw-card"><h3 style="margin:0 0 6px">Les racines latines</h3><p class="lw-muted">Le latin vit dans le français, l'italien, l'espagnol, le portugais… et dans une grande partie de l'anglais. Connaître la racine, c'est reconnaître des dizaines de mots d'un coup.</p><button class="lw-btn" style="margin-top:10px;width:100%" data-lw="rstart">Jouer : retrouve les familles (10 questions)</button></div>
+    <input type="text" data-lw="rq" placeholder="Chercher un mot (latin, français, anglais…)" value="${E(st.rq||"")}" autocomplete="off">`;
+    const q=plain(st.rq||"");
+    const list=ROOTS.filter(r=>!q||plain(Object.values(r).join(" ")).includes(q));
+    html+=list.length?list.map(r=>`<div class="lw-card">${rootCard(r)}</div>`).join(""):`<p class="lw-muted">Aucun mot trouvé.</p>`;
+    return html;
+  }
+  function rootCard(r){return `<div style="display:flex;align-items:baseline;gap:8px;flex-wrap:wrap"><span class="lw-big">${E(r.la)}</span><span class="lw-muted">${E(r.s)}</span><button class="lw-x" style="width:28px;height:28px;font-size:.8rem" data-lw="say" data-t="${E(r.la.split(/[ ,/]/)[0])}">🔊</button></div>
+    <table class="lw-tbl" style="margin-top:6px">${RL.map(([k,n])=>`<tr><th style="width:38%">${n}</th><td class="f">${E(k==="fr"?r.fr:r[k])}${k==="fr"&&r.frs?`<span class="lw-muted" style="font-weight:600"> · mots savants : ${E(r.frs)}</span>`:""}</td></tr>`).join("")}</table>${r.n?`<p class="lw-muted" style="margin-top:8px">💡 ${E(r.n)}</p>`:""}`}
+  function rootsStart(){const pick=shuffle(ROOTS).slice(0,10);st.rg={n:pick.length,i:0,score:0,ans:null,list:pick.map((r,i)=>mkRootQ(r,i%2?"down":"up"))};st.rg.cur=st.rg.list[0]}
+  function mkRootQ(r,type){
+    const clean=s=>s.replace(/[()]/g,"").split(",")[0].trim();
+    let right,pool;
+    if(type==="up"){right=r.la;pool=ROOTS.filter(x=>x!==r).map(x=>x.la)}
+    else{if(/^\(/.test(r.fr))type="up";right=type==="up"?r.la:clean(r.fr);pool=ROOTS.filter(x=>x!==r&&!/^\(/.test(x.fr)).map(x=>type==="up"?x.la:clean(x.fr))}
+    const opts=shuffle([right,...shuffle(pool.filter(x=>x!==right)).slice(0,3)]);
+    return {r,type,opts,ok:opts.indexOf(right)};
+  }
+  function versesV(){
+    const vi=st.vi||0,v=VERSES[vi],ans=st.vans||(st.vans=v.s.map(()=>""));
+    const checked=st.vchk;
+    const mark=x=>x==="L"?"—":x==="S"?"∪":"?";
+    let syl="",p=0;v.ft.forEach((n,fi)=>{syl+=`<span style="display:inline-flex;gap:2px;padding:0 4px;${fi?"border-left:2px solid var(--line,#ccc)":""}">`;for(let j=0;j<n;j++,p++){const want=v.q[p],last=p===v.s.length-1;const ok=checked&&(last?ans[p]!=="":ans[p]===want);
+      syl+=`<button class="lw-opt" data-lw="vsyl" data-k="${p}" style="flex:0 0 auto;min-width:44px;padding:6px 6px;text-align:center;${checked?(ok?"border-color:var(--good,#2a2);background:var(--good-soft,#dfd)":"border-color:var(--bad,#c33);background:var(--bad-soft,#fdd)"):""}"><span style="display:block;font-size:1.05rem">${mark(checked&&!ok?want:ans[p])}</span><span style="font-weight:700">${E(v.s[p])}</span></button>`}syl+="</span>"});
+    const feet=v.ft.map((n,fi)=>{const s=v.q.slice(v.ft.slice(0,fi).reduce((a,b)=>a+b,0),v.ft.slice(0,fi).reduce((a,b)=>a+b,0)+n);return n===3?"dactyle":"spondée"});
+    const nOk=checked?v.s.filter((_,p)=>p===v.s.length-1?ans[p]!=="":ans[p]===v.q[p]).length:0;
+    return `<div class="lw-card"><h3 style="margin:0 0 6px">Scander un hexamètre</h3><p class="lw-muted">Touche chaque syllabe pour indiquer si elle est longue (—) ou brève (∪). Les barres séparent les six pieds. La dernière syllabe peut être longue ou brève (syllabe « indifférente »).</p>
+      <select data-lw="vsel" style="margin-top:8px">${VERSES.map((x,i)=>`<option value="${i}" ${i===vi?"selected":""}>${E(x.src)}</option>`).join("")}</select></div>
+    <div class="lw-card"><div style="display:flex;flex-wrap:wrap;gap:6px 0;align-items:flex-start">${syl}</div><p class="lw-muted" style="margin-top:10px">${E(v.tr)}</p>
+      <div class="lw-row" style="margin-top:10px"><button class="lw-btn" data-lw="vcheck" style="flex:1">Vérifier</button><button class="lw-btn alt" data-lw="vplay" style="flex:1">🥁 Rythme</button><button class="lw-btn alt" data-lw="say" data-t="${E(v.s.join(" ").replace(/ ’/g,"’"))}" style="flex:1">🔊 Lire</button></div></div>
+    ${checked?`<div class="lw-fb ${nOk===v.s.length?"ok":"ko"}">${nOk===v.s.length?"Parfait ! Scansion exacte.":`${nOk} / ${v.s.length} syllabes justes. Les corrections sont affichées en rouge.`}</div>
+      <div class="lw-card"><b>Les pieds :</b> ${feet.join(" · ")}<p class="lw-muted" style="margin-top:6px">${E(v.why)}</p><button class="lw-btn alt" data-lw="vnext" style="margin-top:10px;width:100%">Vers suivant →</button></div>`:""}
+    <div class="lw-card"><b>Les règles à connaître</b><p class="lw-muted" style="margin-top:6px">• Longue par nature : voyelle longue (ā, ē, ī, ō, ū) ou diphtongue (ae, au, oe).<br>• Longue par position : voyelle suivie de deux consonnes, même dans le mot suivant (x et z comptent pour deux).<br>• Exception : une muette (b, p, d, t, g, c) suivie de l ou r peut laisser la syllabe brève.<br>• Élision : une voyelle finale (ou -m final) disparaît devant une voyelle ou un h.<br>• Hexamètre : six pieds ; dactyle — ∪ ∪ ou spondée — — ; le 5e pied est presque toujours un dactyle, le 6e a deux syllabes.</p></div>`;
+  }
+  let actx=null;
+  function playRhythm(v){try{actx=actx||new (window.AudioContext||window.webkitAudioContext)();let t=actx.currentTime+.05;let p=0;
+    v.ft.forEach(n=>{for(let j=0;j<n;j++,p++){const L=v.q[p]==="L",dur=L?.36:.18;const o=actx.createOscillator(),g=actx.createGain();o.type="triangle";o.frequency.value=j===0?660:440;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(j===0?.35:.2,t+.01);g.gain.exponentialRampToValueAtTime(.001,t+dur*.9);o.connect(g);g.connect(actx.destination);o.start(t);o.stop(t+dur);t+=dur+.04}t+=.08})}catch(e){}}
+
   /* =================== INTERFACE =================== */
   const st={tab:"tables",sel:"rosa",drill:null,qc:null,text:null,tok:null,quiz:null};
   let root=null;
@@ -119784,7 +119939,8 @@ window.CASTELLUM_ANCIENT_FILL={"akk": {"t0": "arnabum|arnabum\nasum|asum\nbarbar
 #latRoot .lw-head{display:flex;align-items:center;gap:10px;padding:14px 16px 8px}
 #latRoot .lw-head h2{margin:0;font-size:1.15rem;flex:1}
 #latRoot .lw-x{border:0;background:var(--surface-2,#eee);color:inherit;border-radius:12px;width:38px;height:38px;font-size:1.1rem;font-weight:900}
-#latRoot .lw-tabs{display:flex;gap:4px;padding:0 16px 10px;overflow-x:auto}
+#latRoot .lw-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:0 16px 10px}
+@media(min-width:620px){#latRoot .lw-tabs{grid-template-columns:repeat(6,1fr)}}
 #latRoot .lw-tabs button{flex:1 0 auto;border:2px solid var(--line,#ddd);background:var(--surface,#fff);color:inherit;border-radius:999px;padding:7px 8px;font-weight:800;font-size:.8rem;white-space:nowrap}
 #latRoot .lw-tabs button[aria-pressed=true]{background:var(--accent,#3b6);color:var(--accent-ink,#fff);border-color:var(--accent,#3b6)}
 #latRoot .lw-body{flex:1;overflow-y:auto;padding:4px 16px 24px;display:flex;flex-direction:column;gap:12px}
@@ -119821,9 +119977,9 @@ window.CASTELLUM_ANCIENT_FILL={"akk": {"t0": "arnabum|arnabum\nasum|asum\nbarbar
   function close(){if(root)root.innerHTML="";document.body.style.overflow="";try{speechSynthesis.cancel()}catch(e){}}
   function say(t){try{if(typeof speak==="function")speak(t,"la")}catch(e){}}
   function award(n){try{if(typeof addXP==="function")addXP(n);if(typeof day==="function")day().xp+=n;if(typeof save==="function")save()}catch(e){}}
-  const TABS=[["tables","Tables"],["drill","S'entraîner"],["cases","Quel cas ?"],["texts","Textes"]];
+  const TABS=[["tables","Tables"],["drill","Formes"],["cases","Cas"],["texts","Textes"],["roots","Racines"],["verses","Vers"]];
   function draw(){
-    const body={tables:tablesV,drill:drillV,cases:casesV,texts:textsV}[st.tab]();
+    const body={tables:tablesV,drill:drillV,cases:casesV,texts:textsV,roots:rootsV,verses:versesV}[st.tab]();
     root.innerHTML=`<div class="lw-bg" data-lw="bg"><div class="lw" role="dialog" aria-label="Atelier latin"><div class="lw-head"><h2>🏛️ Atelier latin</h2><button class="lw-x" data-lw="close" aria-label="Fermer">✕</button></div><div class="lw-tabs">${TABS.map(([k,n])=>`<button data-lw="tab" data-k="${k}" aria-pressed="${st.tab===k}">${n}</button>`).join("")}</div><div class="lw-body">${body}</div></div></div>`;
     const inp=root.querySelector("#lwAns");if(inp)inp.focus();
   }
@@ -119921,23 +120077,31 @@ window.CASTELLUM_ANCIENT_FILL={"akk": {"t0": "arnabum|arnabum\nasum|asum\nbarbar
     else if(a==="tback"){st.text=null}
     else if(a==="tok"){st.tok=+k;const t=TEXTS.find(x=>x.id===st.text);const x=tok(t.w[+k]);if(x.w)say(x.w)}
     else if(a==="ttr"){st.showTr=!st.showTr}
+    else if(a==="rstart"){rootsStart()}
+    else if(a==="rans"){const g=st.rg;if(g.ans==null){g.ans=+k;if(+k===g.cur.ok){g.score++;award(1)}say(g.cur.r.la.split(/[ ,/]/)[0])}}
+    else if(a==="rnext"){const g=st.rg;g.i++;g.ans=null;if(g.i>=g.n)g.done=true;else g.cur=g.list[g.i]}
+    else if(a==="vsyl"){if(st.vchk)st.vchk=false;const v=st.vans;v[+k]=v[+k]===""?"L":v[+k]==="L"?"S":""}
+    else if(a==="vcheck"){if(!st.vchk){st.vchk=true;const V=VERSES[st.vi||0];const n=V.s.filter((_,p)=>p===V.s.length-1?st.vans[p]!=="":st.vans[p]===V.q[p]).length;if(n===V.s.length){award(5)}}}
+    else if(a==="vnext"){st.vi=((st.vi||0)+1)%VERSES.length;st.vans=null;st.vchk=false}
+    else if(a==="vplay"){playRhythm(VERSES[st.vi||0]);return}
     else if(a==="tq"){const qi=+b.dataset.q;if(st.quiz[qi]==null){st.quiz[qi]=+k;if(+k===1)award(1)}}
     else return;
-    const sc=root.querySelector(".lw-body")?.scrollTop||0;draw();if(["tok","tq","ttr","say"].includes(a)){const bd=root.querySelector(".lw-body");if(bd)bd.scrollTop=sc}
+    const sc=root.querySelector(".lw-body")?.scrollTop||0;draw();if(["tok","tq","ttr","say","vsyl","vcheck","rans"].includes(a)){const bd=root.querySelector(".lw-body");if(bd)bd.scrollTop=sc}
   },true);
   document.addEventListener("submit",e=>{if(!root||!root.contains(e.target))return;const f=e.target.closest('[data-lw="dform"]');if(!f)return;e.preventDefault();const v=f.querySelector("#lwAns").value;if(!v.trim())return;drillCheck(v);draw()},true);
-  document.addEventListener("change",e=>{if(!root||!root.contains(e.target))return;if(e.target.matches('[data-lw="sel"]')){st.sel=e.target.value;draw()}},true);
+  document.addEventListener("change",e=>{if(!root||!root.contains(e.target))return;if(e.target.matches('[data-lw="sel"]')){st.sel=e.target.value;draw()}if(e.target.matches('[data-lw="vsel"]')){st.vi=+e.target.value;st.vans=null;st.vchk=false;draw()}},true);
+  document.addEventListener("input",e=>{if(!root||!root.contains(e.target)||!e.target.matches('[data-lw="rq"]'))return;st.rq=e.target.value;const pos=e.target.selectionStart;draw();const i=root.querySelector('[data-lw="rq"]');if(i){i.focus();try{i.setSelectionRange(pos,pos)}catch(_){}}},true);
   document.addEventListener("keydown",e=>{if(e.key==="Escape"&&root&&root.innerHTML){e.stopImmediatePropagation();close()}},true);
 
   /* ---- Points d'entrée : Grammaire et Jeux, seulement pour le latin ---- */
-  const entry=()=>`<div class="lw-entries">${[["tables","📚","Atelier latin : tables","Déclinaisons, pronoms et conjugaisons complètes"],["drill","✍️","S'entraîner aux formes","10 formes à écrire, avec série et XP"],["cases","🎯","Jeu « Quel cas ? »","Trouve le cas et la fonction d'un mot"],["texts","📜","Textes authentiques","Phèdre, César, Catulle, Cicéron, Virgile… analysés mot à mot"]].map(([k,i,t,d])=>`<button class="lw-entry" data-latws="${k}"><span class="lw-ico">${i}</span><span><b>${t}</b><small>${d}</small></span></button>`).join("")}</div>`;
+  const entry=()=>`<div class="lw-entries">${[["tables","📚","Atelier latin : tables","Déclinaisons, pronoms et conjugaisons complètes"],["drill","✍️","S'entraîner aux formes","10 formes à écrire, avec série et XP"],["cases","🎯","Jeu « Quel cas ? »","Trouve le cas et la fonction d'un mot"],["texts","📜","Textes authentiques","Phèdre, César, Catulle, Cicéron, Virgile… analysés mot à mot"],["roots","🌳","Racines latines","Le latin caché dans le français, l'italien, l'espagnol, l'anglais…"],["verses","🎼","Scander les vers","Longues, brèves et rythme de l'hexamètre de Virgile"]].map(([k,i,t,d])=>`<button class="lw-entry" data-latws="${k}"><span class="lw-ico">${i}</span><span><b>${t}</b><small>${d}</small></span></button>`).join("")}</div>`;
   try{
     const pg=grammarView;grammarView=function(){const h=pg.apply(this,arguments);if(S.tgt!=="la")return h;css();const i=h.indexOf('<div class="seg tabs">');if(i<0)return entry()+h;const j=h.indexOf("</div>",i)+6;return h.slice(0,j)+entry()+h.slice(j)};
   }catch(e){}
   try{
     const pp=playView;playView=function(){const h=pp.apply(this,arguments);if(S.tgt!=="la")return h;css();return entry()+h};
   }catch(e){}
-  window.CastellumLatin={open,state:st,NOUNS,PRONS,VERBS,QC,TEXTS,drillPool};
+  window.CastellumLatin={open,state:st,ROOTS,VERSES,NOUNS,PRONS,VERBS,QC,TEXTS,drillPool};
 })();
 
 </script>
