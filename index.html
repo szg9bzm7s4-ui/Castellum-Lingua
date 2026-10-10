@@ -116343,6 +116343,17 @@ document.addEventListener('click',function(e){
     return out.join('').replace(/\s+/g,' ').trim();
   }
   window.arabiziToArabic=arabiziToArabic;
+  /* Micro en darija : le navigateur écoute en arabe marocain (ar-MA) et rend du texte en lettres
+     arabes ; on le compare à la phrase attendue réécrite en lettres arabes. */
+  [['ary','ar-MA'],['arq','ar-DZ'],['aeb','ar-TN']].forEach(([c,t])=>{try{if(L[c]&&!L[c].t)L[c].t=t}catch(e){}});
+  function arNorm(t){return String(t||'').replace(/[ً-ْٰـ]/g,'').replace(/[أإآٱ]/g,'ا').replace(/ة/g,'ه').replace(/ى/g,'ي')
+    .replace(/ؤ/g,'و').replace(/ئ/g,'ي').replace(/[ڭگ]/g,'ك').replace(/ڤ/g,'ف').replace(/[^ء-ي\s]/g,' ').replace(/\s+/g,' ').trim()}
+  function arScore(heard,expected){
+    const a=arNorm(heard),b=arNorm(expected);if(!a||!b)return 0;
+    const sk=t=>t.replace(/[اويه\s]/g,'').replace(/^ال/,'');
+    return Math.max(dice(a,b),dice(sk(a),sk(b))*.95);
+  }
+  window.castellumArScore=arScore;
 
   /* Accent tonique latin : pénultième si elle est longue (voyelle longue, diphtongue, ou suivie de deux consonnes), sinon antépénultième. */
   function latinStressPos(w){
@@ -116546,6 +116557,7 @@ document.addEventListener('click',function(e){
       for(const res of e.results)for(const alt of res){
         any=any||alt.transcript;
         let sc=phraseScore(alt.transcript,target);
+        if(ARABIZI_CODES.has(S.tgt))sc=Math.max(sc,arScore(alt.transcript,arabiziToArabic(target,S.tgt)));
         if(translit)sc=Math.max(sc,phraseScore(alt.transcript,translit));
         if(Number.isFinite(alt.confidence)&&alt.confidence>0)sc=Math.min(1,sc*.9+alt.confidence*.1);
         if(sc>bestSc){bestSc=sc;best=alt.transcript}
