@@ -116355,6 +116355,52 @@ document.addEventListener('click',function(e){
   }
   window.castellumArScore=arScore;
 
+  /* Vraie voix marocaine : la fonction Supabase « castellum-tts » (voix neuronales Azure Mouna / Jamal)
+     lit le texte réécrit en lettres arabes. Utilisée quand on est connecté et que le serveur est configuré ;
+     sinon, ou en cas d'erreur, l'appli reprend la voix arabe de l'appareil. Les fichiers déjà entendus
+     sont gardés sur l'appareil pour ne pas les redemander. */
+  const CT={off:false,audio:null,cache:new Map(),seq:0};
+  const CT_NAMES={ary:['Mouna','Jamal'],arq:['Amina','Ismael'],aeb:['Reem','Hedi']};
+  function ctAvailable(){try{return !CT.off&&AP.cloudVoice!==false&&typeof Cloud!=='undefined'&&!!Cloud.user&&!!Cloud.client&&!!window.CASTELLUM_CONFIG?.supabaseUrl&&navigator.onLine!==false}catch(e){return false}}
+  function ctAudio(){if(!CT.audio){CT.audio=new Audio();CT.audio.preload='auto'}return CT.audio}
+  function silentURL(){const n=400,b=new ArrayBuffer(44+n),v=new DataView(b),w=(o,t)=>{for(let i=0;i<t.length;i++)v.setUint8(o+i,t.charCodeAt(i))};
+    w(0,'RIFF');v.setUint32(4,36+n,true);w(8,'WAVE');w(12,'fmt ');v.setUint32(16,16,true);v.setUint16(20,1,true);v.setUint16(22,1,true);
+    v.setUint32(24,8000,true);v.setUint32(28,8000,true);v.setUint16(32,1,true);v.setUint16(34,8,true);w(36,'data');v.setUint32(40,n,true);
+    for(let i=0;i<n;i++)v.setUint8(44+i,128);return URL.createObjectURL(new Blob([b],{type:'audio/wav'}))}
+  // iPhone : le lecteur audio doit être « débloqué » par un premier toucher avant de pouvoir parler tout seul.
+  let ctUnlocked=false;
+  ['pointerdown','touchend','keydown'].forEach(ev=>document.addEventListener(ev,()=>{
+    if(ctUnlocked||typeof S==='undefined'||!ARABIZI_CODES.has(S.tgt))return;ctUnlocked=true;
+    try{const a=ctAudio();a.src=silentURL();const p=a.play();if(p&&p.catch)p.catch(()=>{})}catch(e){}},{capture:true,passive:true}));
+  async function ctFetch(text,code,slow){
+    const key=code+'|'+(slow?1:0)+'|'+(AP.cloudMale?1:0)+'|'+text;
+    if(CT.cache.has(key))return CT.cache.get(key);
+    const cacheReq='https://castellum-tts.local/'+encodeURIComponent(key);
+    let blob=null;
+    try{const c=await caches.open('castellum-tts-v1');const hit=await c.match(cacheReq);if(hit)blob=await hit.blob()}catch(e){}
+    if(!blob){
+      const {data}=await Cloud.client.auth.getSession();const tok=data?.session?.access_token;if(!tok)throw new Error('nosession');
+      const cfg=window.CASTELLUM_CONFIG,url=cfg.supabaseUrl.replace(/\/$/,'')+'/functions/v1/'+(cfg.ttsFunction||'castellum-tts');
+      const ctl=new AbortController(),to=setTimeout(()=>ctl.abort(),5000);let res;
+      try{res=await fetch(url,{method:'POST',signal:ctl.signal,headers:{'Content-Type':'application/json',Authorization:'Bearer '+tok,apikey:cfg.supabaseAnonKey||''},body:JSON.stringify({text,lang:code,slow:!!slow,male:!!AP.cloudMale})})}finally{clearTimeout(to)}
+      if(res.status===404||res.status===503){CT.off=true;throw new Error('noserver')}
+      if(!res.ok)throw new Error('http '+res.status);
+      blob=await res.blob();if(!blob.size)throw new Error('empty');
+      try{const c=await caches.open('castellum-tts-v1');await c.put(cacheReq,new Response(blob,{headers:{'Content-Type':'audio/mpeg'}}))}catch(e){}
+    }
+    const u=URL.createObjectURL(blob);
+    if(CT.cache.size>150){const [k0,u0]=CT.cache.entries().next().value;URL.revokeObjectURL(u0);CT.cache.delete(k0)}
+    CT.cache.set(key,u);return u;
+  }
+  function ctStop(){CT.seq++;try{if(CT.audio&&!CT.audio.paused)CT.audio.pause()}catch(e){}}
+  function ctSpeak(text,code,slow,fallback){
+    const id=++CT.seq;
+    ctFetch(text,code,slow).then(u=>{if(id!==CT.seq)return;const a=ctAudio();a.src=u;return a.play()})
+      .catch(()=>{if(id===CT.seq)fallback()});
+  }
+  try{const ss=window.speechSynthesis;if(ss&&!ss.__ctPatched){const orig=ss.cancel.bind(ss);ss.cancel=function(){ctStop();return orig()};ss.__ctPatched=true}}catch(e){}
+  window.castellumCloudVoice={available:ctAvailable,names:CT_NAMES,state:CT};
+
   /* Accent tonique latin : pénultième si elle est longue (voyelle longue, diphtongue, ou suivie de deux consonnes), sinon antépénultième. */
   function latinStressPos(w){
     const lw=w.toLowerCase(),V=/[aeiouyāēīōūȳ]/,nuc=[];
@@ -116424,16 +116470,18 @@ document.addEventListener('click',function(e){
 
   // Override only TTS selection/playback; existing callers continue to work.
   voiceFor=function(code){return window.castellumVoiceFor(code)};
-  canSpeak=code=>!!voiceFor(code);
+  canSpeak=code=>!!voiceFor(code)||(ARABIZI_CODES.has(code)&&ctAvailable());
   speak=function(text,code=S.tgt,slow=false){
     try{
       if(!('speechSynthesis' in window))return false;
       const v=voiceFor(code),want=localeFor(code);
-      if(!v)return false;
+      const cloud=ARABIZI_CODES.has(code)&&ctAvailable();
+      if(!v&&!cloud)return false;
       speechSynthesis.cancel();
       let say=String(text||'').replace(/\s*\(.*?\)/g,'').trim();
       if(code==='la')say=latinForItalianVoice(say);
       else if(ARABIZI_CODES.has(code))say=arabiziToArabic(say,code);
+      if(cloud){const sv=say,rt=Number(AP.rate)||.92;ctSpeak(sv,code,slow,()=>{if(!v)return;try{const u2=new SpeechSynthesisUtterance(sv);u2.voice=v;u2.lang=v.lang||want;u2.rate=slow?Math.min(.68,rt*.72):rt;speechSynthesis.speak(u2)}catch(e){}});return true}
       const u=new SpeechSynthesisUtterance(say);
       u.voice=v;
       u.lang=v.lang||want;
@@ -116490,7 +116538,7 @@ document.addEventListener('click',function(e){
       <button type="button" data-audio-rate>⚙️ ${rateName()}</button>
       <button type="button" data-audio-voice>🎙️ Voix</button>
       <button type="button" data-audio-wordtoggle class="${AP.wordByWord?'on':''}">🔠 Mot à mot</button>
-      <span class="audio-voice-note">${v?`Voix : ${esc(v.name)} · ${esc(v.lang)}`:'Aucune voix système disponible pour cette langue'}</span>
+      <span class="audio-voice-note">${(ARABIZI_CODES.has(S.tgt)&&ctAvailable())?`Voix : ${CT_NAMES[S.tgt][AP.cloudMale?1:0]} · ${esc(localeFor(S.tgt))}`:v?`Voix : ${esc(v.name)} · ${esc(v.lang)}`:'Aucune voix système disponible pour cette langue'}</span>
       ${buildWordBar(text)}`;
     host.prepend(bar);
     bar.dataset.text=text;
@@ -116513,6 +116561,9 @@ document.addEventListener('click',function(e){
         rate.textContent='⚙️ '+rateName();
         toast('Vitesse audio : '+rateName());
         speak(text,S.tgt,false);return
+      }
+      if(vbtn&&ARABIZI_CODES.has(S.tgt)&&ctAvailable()){
+        AP.cloudMale=!AP.cloudMale;saveAP();const nm=CT_NAMES[S.tgt][AP.cloudMale?1:0];toast('Voix : '+nm);const nt=bar?.querySelector('.audio-voice-note');if(nt)nt.textContent='Voix : '+nm+' · '+localeFor(S.tgt);renderFoot();speak(text,S.tgt,false);return
       }
       if(vbtn){
         const nv=cycleVoice(S.tgt);
