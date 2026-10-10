@@ -116274,8 +116274,76 @@ document.addEventListener('click',function(e){
     ar:'ar-SA',he:'he-IL',fa:'fa-IR',hi:'hi-IN',bn:'bn-BD',zh:'zh-CN',
     ja:'ja-JP',ko:'ko-KR',vi:'vi-VN',sv:'sv-SE',no:'nb-NO',da:'da-DK',
     fi:'fi-FI',ca:'ca-ES',
-    la:'it-IT' /* latin lu par une voix italienne : prononciation ecclésiastique */
+    la:'it-IT', /* latin lu par une voix italienne : prononciation ecclésiastique */
+    ary:'ar-MA',arq:'ar-DZ',aeb:'ar-TN' /* darijas : voix arabe, marocaine si l'appareil en a une */
   };
+  /* Darija : le contenu est écrit en arabizi (lettres latines + chiffres). Pour qu'une voix arabe
+     le lise, on le réécrit en lettres arabes juste avant de parler (l'écran ne change pas). */
+  const ARABIZI_CODES=new Set(['ary','arq','aeb']);
+  const AZ_WORDS={salam:'سلام',slam:'سلام',chokran:'شكرا',bezzaf:'بزاف',bzzaf:'بزاف','3afak':'عافاك',iyeh:'إيه',ah:'آه',la:'لا',wakha:'واخا',
+    labas:'لاباس',l7amdoulillah:'الحمد لله',hamdoulillah:'الحمد لله',bslama:'بسلامة',mzyan:'مزيان',mezyan:'مزيان',mzyana:'مزيانة',zwin:'زوين',zwina:'زوينة',
+    kifach:'كيفاش',chno:'شنو',chnou:'شنو',ach:'آش',fin:'فين',mnin:'منين',imta:'إمتى',fou9ach:'فوقاش','3lach':'علاش',chkoun:'شكون',wach:'واش',
+    ch7al:'شحال',bch7al:'بشحال',hna:'هنا',lhih:'لهيه',daba:'دابا',ghedda:'غدا',lbare7:'البارح',ana:'أنا',nta:'نتا',nti:'نتي',houwa:'هو',hiya:'هي',
+    '7na':'حنا',ntouma:'نتوما',homa:'هوما',dyal:'ديال',dyali:'ديالي',dyalek:'ديالك',dyalou:'ديالو',dyalha:'ديالها',dyalna:'ديالنا',dyalkom:'ديالكم',
+    m3a:'مع','3la':'على',mn:'من',men:'من',ma:'ما',machi:'ماشي',walou:'والو',chwiya:'شوية',yallah:'يالله',bravo:'برافو',atay:'أتاي',
+    '3ndi':'عندي','3ndek':'عندك',smiti:'سميتي',smitek:'سميتك',kayn:'كاين',kayna:'كاينة',hadchi:'هادشي',hada:'هادا',hadi:'هادي',
+    walakin:'ولكن','7it':'حيت',ila:'إلا',ghir:'غير',dima:'ديما',bach:'باش',kolchi:'كلشي',kol:'كل',sme7li:'سمح لي',inchallah:'إن شاء الله',
+    sba7:'صباح',msa:'مسا',nchoufek:'نشوفك',nichan:'نيشان',safi:'صافي',yak:'ياك',baraka:'بركة',flous:'فلوس',khoya:'خويا',khouya:'خويا',fiya:'فيا',mmi:'مي',bba:'بّا',sghir:'صغير',sghira:'صغيرة'};
+  const AZ_DIG=[['ch','ش'],['sh','ش'],['kh','خ'],['gh','غ'],['dj','ج'],['ou','و'],
+    ['3','ع'],['7','ح'],['9','ق'],['2','ء'],['5','خ'],['8','ه'],
+    ['b','ب'],['t','ت'],['j','ج'],['d','د'],['r','ر'],['z','ز'],['s','س'],['f','ف'],['q','ق'],['k','ك'],['g','ك'],['l','ل'],
+    ['m','م'],['n','ن'],['h','ه'],['w','و'],['y','ي'],['v','ف'],['p','ب'],['x','كس'],['c','ك'],
+    ['a','ا'],['â','ا'],['à','ا'],['i','ي'],['î','ي'],['é','ي'],['è','ي'],['ê','ي'],['o','و'],['ô','و'],['u','و'],['û','و'],['e','']];
+  const AZ_VOW=/^[aâàeiîéèêoôuû]$/;
+  function azUnits(w,code){
+    const u=[];let i=0;
+    while(i<w.length){let hit=null;
+      for(const [lat,ar] of AZ_DIG){if(lat==='dj'&&code==='ary')continue;if(w.startsWith(lat,i)){hit=[lat,ar];break}}
+      if(!hit)hit=[w[i],w[i]];
+      u.push({l:hit[0],a:hit[1],v:hit[0]==='ou'||AZ_VOW.test(hit[0])});i+=hit[0].length}
+    return u;
+  }
+  function azPlain(w,code,afterArticle){
+    if(AZ_WORDS[w])return AZ_WORDS[w];
+    const u=azUnits(w,code);if(!u.length)return '';
+    let out='';
+    u.forEach((x,k)=>{
+      if(!x.v){out+=x.a;return}
+      if(k===0){out+=afterArticle?(x.a||'ا'):/^(ou|o|ô|u|û)$/.test(x.l)?'أو':/^(i|î|é|è|ê)$/.test(x.l)?'إي':'ا';return}
+      if(k===u.length-1){out+=/^[aâà]$/.test(x.l)?(u.length>=4&&!/^[nh]$/.test(u[k-1].l)?'ة':'ا'):x.a;return}
+      // voyelle courte devant deux consonnes (syllabe fermée) : elle ne s'écrit pas
+      if(/^[aâàoô]$/.test(x.l)&&u[k+1]&&!u[k+1].v&&u[k+2]&&!u[k+2].v)return;
+      out+=x.a;
+    });
+    return out.replace(/([^ا])\1+/g,'$1').replace(/ا{2,}/g,'ا');
+  }
+  function azWord(w,code){
+    const lw=w.toLowerCase();
+    if(AZ_WORDS[lw])return AZ_WORDS[lw];
+    const m=/^([a-z]{1,2})-(.+)$/.exec(lw);
+    if(m){
+      if(m[1]==='l'||m[2].startsWith(m[1]))return 'ال'+azPlain(m[2],code,true);
+      return azPlain(m[1],code)+azPlain(m[2],code);
+    }
+    if(lw.includes('-'))return lw.split('-').map(x=>azPlain(x,code)).join('');
+    return azPlain(lw,code);
+  }
+  function arabiziToArabic(text,code){
+    const toks=String(text||'').split(/([^\p{L}\p{N}'’-]+)/u);
+    const out=[];let glue='';
+    for(const t of toks){
+      if(!t)continue;
+      if(glue&&/^\s+$/.test(t))continue;
+      if(!/[\p{L}\p{N}]/u.test(t)){out.push(glue+t.replace(/\?/g,'؟').replace(/,/g,'،').replace(/;/g,'؛'));glue='';continue}
+      const lw=t.toLowerCase();
+      if(/^[flbwd]$/.test(lw)){glue+=({f:'ف',l:'ل',b:'ب',w:'و',d:'د'})[lw];continue}
+      out.push(glue+azWord(t,code));glue='';
+    }
+    if(glue)out.push(glue);
+    return out.join('').replace(/\s+/g,' ').trim();
+  }
+  window.arabiziToArabic=arabiziToArabic;
+
   /* Accent tonique latin : pénultième si elle est longue (voyelle longue, diphtongue, ou suivie de deux consonnes), sinon antépénultième. */
   function latinStressPos(w){
     const lw=w.toLowerCase(),V=/[aeiouyāēīōūȳ]/,nuc=[];
@@ -116354,6 +116422,7 @@ document.addEventListener('click',function(e){
       speechSynthesis.cancel();
       let say=String(text||'').replace(/\s*\(.*?\)/g,'').trim();
       if(code==='la')say=latinForItalianVoice(say);
+      else if(ARABIZI_CODES.has(code))say=arabiziToArabic(say,code);
       const u=new SpeechSynthesisUtterance(say);
       u.voice=v;
       u.lang=v.lang||want;
