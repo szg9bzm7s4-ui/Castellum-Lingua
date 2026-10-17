@@ -114753,7 +114753,6 @@ function langsView(){
     <div class="field"><label>Mon niveau</label><div class="seg">${LEVEL_INFO.map(x=>`<button data-glevel="${x.id}" aria-pressed="${S.level===x.id}">${x.id} · ${x.n}</button>`).join("")}</div></div>
     <div class="field"><label>Objectif quotidien</label><div class="seg">${[[10,"Tranquille"],[20,"Normal"],[30,"Sérieux"],[50,"Intense"]].map(([g,n])=>`<button data-goal="${g}" aria-pressed="${S.goal===g}">${n} · ${g} XP</button>`).join("")}</div></div>
     <div class="field"><label>Effets sonores</label><div class="seg"><button data-sound="1" aria-pressed="${S.sound}">Activés</button><button data-sound="0" aria-pressed="${!S.sound}">Coupés</button></div></div>
-    <div class="field"><label>Voix de la mascotte</label><div class="seg"><button data-mvoice="1" aria-pressed="${S.mvoice!==false}">Activée</button><button data-mvoice="0" aria-pressed="${S.mvoice===false}">Coupée</button></div></div>
   </section>
   ${coursesHTML()}<h2>Choisir une langue</h2>${langGrid("langSearch")}`;
 }
@@ -115350,7 +115349,8 @@ function mqPick(a){const ok=a.filter(x=>mqLine(x));return pick(ok.length?ok:a)}
 /* La mascotte prononce sa phrase dans la langue étudiée. Elle attend la fin de l'audio
    en cours (mot de l'exercice) au lieu de le couper, et se tait si on passe à autre chose. */
 let mqSeq=0;
-function mqSpeak(fr,delay=250){try{
+function mqSpeak(fr,delay=250){return; // Les encouragements restent écrits : lus à voix haute, on les confondait avec l'audio de l'exercice.
+  try{
   if(S.mvoice===false||!("speechSynthesis" in window)||typeof speak!=="function")return;
   const q=mqLine(fr);if(!q||typeof canSpeak!=="function"||!canSpeak(S.tgt))return;
   const t=q.t.replace(/^\S{1,8}…\s*/,"").replace(/[\u{1F300}-\u{1FAFF}]/gu,"").trim();if(!t)return;
@@ -115359,7 +115359,6 @@ function mqSpeak(fr,delay=250){try{
     if(speechSynthesis.speaking||speechSynthesis.pending){if(Date.now()-t0<3000)setTimeout(go,200);return}
     speak(t,S.tgt)};
   setTimeout(go,delay)}catch(e){}}
-document.addEventListener("click",e=>{const m=e.target.closest&&e.target.closest(".l2-mascot[data-say]");if(m)mqSpeak(m.dataset.say,0)});
 
 /* Popup de réaction : la mascotte surgit avec une bulle */
 function react(mood,text,ms=1400){const old=document.querySelector(".react");if(old)old.remove();
@@ -118912,7 +118911,7 @@ window.CASTELLUM_ILLUS={"occidental": {"from": [1, 13, 26, 39], "stages": [{"img
 .learn2 .path-mascot{display:none}
 /* Mascotte à côté de l'étape en cours, du côté libre du chemin */
 .learn2 .node-wrap2{position:relative}
-.learn2 .l2-mascot{position:absolute;top:50%;width:74px;transform:translateY(-58%);pointer-events:auto;cursor:pointer;z-index:2;animation:l2bob 3s ease-in-out infinite}
+.learn2 .l2-mascot{position:absolute;top:50%;width:74px;transform:translateY(-58%);pointer-events:none;z-index:2;animation:l2bob 3s ease-in-out infinite}
 .learn2 .l2-mascot .mascot{width:74px;height:auto;display:block;filter:drop-shadow(0 6px 10px rgba(20,40,110,.18))}
 .learn2 .l2-mascot.right{left:calc(100% + 14px)}
 .learn2 .l2-mascot.left{right:calc(100% + 14px)}
