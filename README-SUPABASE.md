@@ -11,6 +11,7 @@
 | `netlify.toml` | Commande de build Netlify et en-têtes de sécurité |
 | `.env.example` | Liste des variables à définir |
 | `supabase/schema.sql` | Tout le SQL à exécuter dans Supabase |
+| `supabase/castle_gifts.sql` | Cadeaux entre amis dans la section Château (optionnel, voir section 7) |
 
 Sans configuration, l'app marche exactement comme avant, en local, sans comptes.
 
@@ -75,8 +76,17 @@ Netlify → ton site → **Site configuration → Environment variables** : ajou
    Chaque compte doit avoir ses propres lignes.
 4. Reconnecte A sur un autre appareil : il retrouve exactement ses XP, ses leçons, ses mots enregistrés et sa langue en cours.
 
+## 7. Cadeaux entre amis (section Château, optionnel)
+À faire après `schema.sql` et le SQL des amis (ligue, défis), déjà installés.
+1. Dans **SQL Editor**, **New query** : colle tout le contenu de `supabase/castle_gifts.sql` et clique sur **Run**. Le script peut être relancé sans risque.
+2. Dans l'appli, en visitant le royaume d'un ami : bouton **🎁 Offrir 10 pièces**. Un cadeau par ami et par jour, 5 cadeaux par jour au maximum, uniquement entre amis acceptés.
+3. Ton ami reçoit ses cadeaux la prochaine fois qu'il ouvre l'onglet 🏰 Château.
+
+Tant que ce script n'est pas installé, le bouton n'apparaît pas et le reste de l'appli fonctionne normalement.
+
 ## Sécurité en bref
 - La Row Level Security est activée sur toutes les tables, et chaque politique compare `auth.uid()` au propriétaire de la ligne.
 - Les XP, les séries, les leçons terminées et l'activité quotidienne ne s'écrivent que via les fonctions `complete_lesson`, `record_activity`, `unlock_achievement` et `import_local_progress`. Ces fonctions utilisent `auth.uid()` et plafonnent les XP à 100 par étape et 60 par partie.
 - Le profil n'expose en écriture que `username`, `display_name`, `avatar_url` et `settings`.
 - La migration de la progression locale ne peut avoir lieu qu'une fois par compte (`local_migrated_at`).
+- Cadeaux entre amis : personne ne peut écrire dans `castle_gifts` directement ; tout passe par `castle_send_gift`, `castle_claim_gifts` et `castle_gift_status`, qui vérifient l'amitié, la limite quotidienne et `auth.uid()`. Chacun ne voit que les cadeaux qu'il a envoyés ou reçus.
