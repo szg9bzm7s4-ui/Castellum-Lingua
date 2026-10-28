@@ -21,17 +21,16 @@ Cet audit est une relecture technique et linguistique interne. Il ne remplace pa
 | Problème | Avant | Après | Correction |
 |---|---|---|---|
 | QCM ambigus : un distracteur est aussi acceptable (« Ciao » / « Ciao, che si dice? », « Merci beaucoup » / « Merci ») | 76 sur 419 (18 %) | 0 | Filtre des distracteurs (`castellum-quality-js`). |
-| QCM réussissables par élimination (la bonne réponse est la seule de sa longueur) | 28 (7 %) | 13 (3 %) | Effet du même filtre. |
-| Distracteurs hors du niveau A1 (« Je tousse beaucoup », « sauter ») | 336 (80 %) | 319 (76 %) | ⏳ Choix assumé du moteur (pièges proches à l'écrit). À limiter au niveau en cours pour les débutants. |
+| QCM réussissables par élimination (la bonne réponse est la seule de sa longueur) | 28 (7 %) | 24 (5,7 %) | Effet du même filtre ; légère hausse due aux distracteurs du niveau (moins de « pièges » proches). |
+| Distracteurs hors du niveau A1 (« Je tousse beaucoup », « sauter ») | 336 (80 %) | 0 | En A1 et A2, les mauvaises réponses viennent du niveau en cours (`castellum-quality2-js`). |
 | Trois exercices du même type d'affilée | fréquent | 0 | Rééquilibrage des leçons (étape 5). |
 | Peu de production (QCM majoritaires) | 1 à 2 par leçon | 3 à 4 minimum | QCM sur mots déjà vus transformés en « construis » / « écris ». |
 | Erreurs sans explication | toujours | jamais | Ligne « Pourquoi ? » sous chaque erreur. |
-| « Passer » un exercice oral compte comme une erreur | oui | non, dans les situations | ⏳ À étendre aux leçons classiques. |
+| « Passer » un exercice oral compte comme une erreur | oui | non | L'oral est facultatif partout. |
 
 ## 3. Recommandations, par priorité
 
 1. Faire relire les 48 éléments et la situation « Au bar, à Naples » par un locuteur natif de Naples (registres, naturel, prix réaliste).
 2. Ajouter les formes de politesse manquantes et indiquer le registre de chaque élément dans les données (champ `reg` : standard, familier, régional, dialectal, vulgaire).
 3. Construire une situation par unité sur le modèle de `CastellumSituations` : dialogue, compréhension, usage, exercice guidé, production libre, bilan.
-4. Limiter les distracteurs au niveau en cours pendant les deux premières semaines.
-5. Enregistrer l'audio natif des 66 phrases listées dans `audio/sources/it-a-enregistrer.csv`.
+4. Enregistrer l'audio natif des 66 phrases listées dans `audio/sources/it-a-enregistrer.csv`.
