@@ -113433,12 +113433,23 @@ function tr(s){const d=I18N[S.src];if(!d||!s)return s;const t=s.trim();if(!t||t.
   if(r==null)for(const sep of [" · "," : ",", "," — "]){if(t.includes(sep)){const parts=t.split(sep);const out=parts.map(p=>{const q=p.trim();return q?(i18nLook(q,d)??(q.includes(" · ")||q.includes(" : ")?tr(q):null)):p});if(out.some((x,i)=>x!=null&&x!==parts[i].trim())){r=out.map((x,i)=>x??parts[i]).join(sep);break}}}
   return r==null?s:s.replace(t,r)}
 const I18N_ATTR=["placeholder","aria-label","title"];
-function i18nSkip(el){for(let e=el;e&&e!==document.body;e=e.parentElement){if(e.nodeType!==1)continue;if(e.tagName==="SCRIPT"||e.tagName==="STYLE"||e.tagName==="TEXTAREA")return true;const lg=e.getAttribute("lang");if(lg&&lg!=="fr")return true;if(e.dataset&&e.dataset.noi18n!=null)return true}return false}
-function i18nNode(n){if(n.nodeType===3){const p=n.parentElement;if(!p||i18nSkip(p))return;const v=tr(n.nodeValue);if(v!==n.nodeValue)n.nodeValue=v;return}
+function i18nSkip(el){for(let e=el;e&&e!==document.body;e=e.parentElement){if(e.nodeType!==1)continue;if(e.tagName==="SCRIPT"||e.tagName==="STYLE"||e.tagName==="TEXTAREA")return true;const lg=e.getAttribute("lang");if(lg&&(lg!=="fr"||S.tgt==="fr"))return true;if(e.dataset&&e.dataset.noi18n!=null)return true}return false}
+/* Le contenu de la langue apprise ne doit jamais être traduit (sinon, en apprenant le français, « Bonjour » devenait « Hola »).
+   On ne traduit pas : un texte identique à un mot ou une phrase du cours (partout si on apprend le français, sinon dans les
+   exercices), ni les réponses, tuiles et phrases de l'exercice en cours. */
+let I18N_CT={k:"",set:null};
+function i18nContentSet(){const k=S.src+">"+S.tgt;if(I18N_CT.k!==k){const set=new Set();try{for(const x of SETS){const d=setData(x.id);(Array.isArray(d)?d:[]).forEach(it=>{if(it&&it.t)set.add(String(it.t).trim())})}}catch(e){}I18N_CT={k,set}}return I18N_CT.set}
+function i18nStepContent(){try{if(typeof LX==="undefined"||!LX||!LX.steps)return null;const st=LX.steps[LX.i];if(!st)return null;const out=new Set(),add=v=>{if(typeof v==="string"&&v.trim()){out.add(v.trim());v.split(/\s+/).forEach(w=>{const c=w.replace(/^[¿¡«"“'(]+|[?!.,;:»"”')…]+$/g,"");if(c)out.add(c)})}};
+  (st.opts||[]).forEach(add);(st.bank||[]).forEach(add);add(st.it&&st.it.t);add(st.full);add(st.ans);if(st.q)add(String(st.q).replace(/_{2,}/g," "));(st.its||[]).forEach(it=>add(it&&it.t));(st.lines||[]).forEach(l=>add(typeof l==="string"?l:l&&(l.t||l.text)));return out}catch(e){return null}}
+function i18nIsContent(v,p){const t=String(v||"").trim();if(!t)return false;const inLx=!!(p&&p.closest&&p.closest("#lxRoot"));
+  if((S.tgt==="fr"||inLx)&&i18nContentSet().has(t))return true;
+  if(inLx){const sc=i18nStepContent();if(sc&&sc.has(t)&&!(p.closest(".q-title,.hint-line,.foot-msg b,.roman-toggle,.roman-help")))return true}
+  return false}
+function i18nNode(n){if(n.nodeType===3){const p=n.parentElement;if(!p||i18nSkip(p)||i18nIsContent(n.nodeValue,p))return;const v=tr(n.nodeValue);if(v!==n.nodeValue)n.nodeValue=v;return}
   if(n.nodeType!==1||i18nSkip(n))return;
   for(const a of I18N_ATTR){const v=n.getAttribute(a);if(v){const t=tr(v);if(t!==v)n.setAttribute(a,t)}}
   if(n.tagName==="OPTION"||n.tagName==="OPTGROUP"){const l=n.getAttribute("label");if(l){const t=tr(l);if(t!==l)n.setAttribute("label",t)}}
-  const w=document.createTreeWalker(n,NodeFilter.SHOW_TEXT|NodeFilter.SHOW_ELEMENT);let c;while((c=w.nextNode())){if(c.nodeType===3)i18nNode(c);else if(c.nodeType===1){if(c.getAttribute("lang")&&c.getAttribute("lang")!=="fr"){continue}for(const a of I18N_ATTR){const v=c.getAttribute(a);if(v){const t=tr(v);if(t!==v)c.setAttribute(a,t)}}if(c.tagName==="OPTGROUP"){const l=c.getAttribute("label");if(l){const t=tr(l);if(t!==l)c.setAttribute("label",t)}}}}}
+  const w=document.createTreeWalker(n,NodeFilter.SHOW_TEXT|NodeFilter.SHOW_ELEMENT);let c;while((c=w.nextNode())){if(c.nodeType===3)i18nNode(c);else if(c.nodeType===1){const cl=c.getAttribute("lang");if(cl&&(cl!=="fr"||S.tgt==="fr")){continue}for(const a of I18N_ATTR){const v=c.getAttribute(a);if(v){const t=tr(v);if(t!==v)c.setAttribute(a,t)}}if(c.tagName==="OPTGROUP"){const l=c.getAttribute("label");if(l){const t=tr(l);if(t!==l)c.setAttribute("label",t)}}}}}
 let i18nBusy=false;
 const i18nObs=new MutationObserver(ms=>{if(i18nBusy||!I18N[S.src])return;i18nBusy=true;try{for(const m of ms){if(m.type==="characterData")i18nNode(m.target);else m.addedNodes.forEach(i18nNode)}}finally{i18nBusy=false}});
 function i18nStart(){document.documentElement.lang=S.src;i18nObs.disconnect();if(I18N[S.src]){i18nBusy=true;try{i18nNode(document.body)}finally{i18nBusy=false}}i18nObs.observe(document.body,{childList:true,subtree:true,characterData:true})}
@@ -114657,7 +114668,7 @@ function startReview(kind){const items=reviewPool(kind);
   if(items.length<4){toast(kind==="errors"?"Aucune erreur à revoir : bravo !":"Fais d'abord une leçon : les mots appris arriveront ici");return}
   openLx();startGame("review",items,allAvailableItems());if(LX)LX.reviewKind=kind}
 function nextLessonInfo(){const cur=firstUndone();if(cur>=totalNodes())return null;const u=Math.floor(cur/LPU),l=LORDER[cur%LPU];return {u,l,U:lvUnits()[u]}}
-function resumeBtn(){const r=S.resume[S.tgt];if(!r||r.lv!==S.level)return "";const U=lvUnits()[r.u];if(!U)return "";const pc=Math.round(r.i/r.steps.length*100);
+function resumeBtn(){const r=S.resume[S.tgt];if(!r||r.lv!==S.level||r.src!==S.src)return "";const U=lvUnits()[r.u];if(!U)return "";const pc=Math.round(r.i/r.steps.length*100);
   return `<button class="today-btn main" data-node="${r.u},${r.l}"><span class="tb-ic">${STAR}</span><span><b>Reprendre</b><small>${esc(U.n)} · ${lessonLabel(r.l)} · ${pc}% fait</small></span></button>`}
 function coursesHTML(){const ls=startedLangs().sort((a,b)=>(S.xpBy[b]||0)-(S.xpBy[a]||0));
   return `<section class="card" style="display:flex;flex-direction:column;gap:6px"><div class="section-head"><div><span class="eyebrow">Tout est sauvegardé sur cet appareil</span><h2>Mes cours</h2></div></div>
@@ -114954,7 +114965,8 @@ async function startLesson(u,l){
   syncHearts();
   if(S.hearts<=0){openLx();LX={mode:"lesson",u,l};renderNoHearts();return}
   const R0=S.resume[S.tgt];
-  if(R0&&R0.lv===S.level&&R0.u===u&&R0.l===l&&R0.i>0&&R0.i<R0.steps.length){openLx();begin({mode:"lesson",u,l,items:R0.items,steps:R0.steps,i:R0.i,right:R0.right||0,graded:R0.graded||0,maxCombo:R0.maxCombo||0,t0:Date.now()-(R0.sec||0)*1000});toast("On reprend là où tu t'étais arrêté");return}
+  if(R0&&R0.src!==S.src)delete S.resume[S.tgt];
+  if(R0&&R0.src===S.src&&R0.lv===S.level&&R0.u===u&&R0.l===l&&R0.i>0&&R0.i<R0.steps.length){openLx();begin({mode:"lesson",u,l,items:R0.items,steps:R0.steps,i:R0.i,right:R0.right||0,graded:R0.graded||0,maxCombo:R0.maxCombo||0,t0:Date.now()-(R0.sec||0)*1000});toast("On reprend là où tu t'étais arrêté");return}
   openLx();LX={mode:"lesson",u,l,loading:true};
   const U=lvUnits()[u];let items=setData(U.id);
   if(!items){renderLoadingMsg(U.gen?`Préparation de l'unité « ${U.n} » (niveau ${U.lv}) en ${L[S.tgt].n.toLowerCase()}…`:`Traduction de l'unité « ${U.n} » en ${L[S.tgt].n.toLowerCase()}…`);try{items=await ensureSet(U.id)}catch(e){renderError(e.message);return}}
@@ -115022,7 +115034,7 @@ function stepHTML(st){
   }
 }
 function renderStep(){
-  if(LX.mode==="lesson"){try{S.resume[S.tgt]={lv:S.level,u:LX.u,l:LX.l,i:LX.i,right:LX.right,graded:LX.graded,maxCombo:LX.maxCombo,sec:Math.round((Date.now()-LX.t0)/1000),steps:JSON.parse(JSON.stringify(LX.steps)),items:LX.items};save()}catch(e){}}
+  if(LX.mode==="lesson"){try{S.resume[S.tgt]={src:S.src,lv:S.level,u:LX.u,l:LX.l,i:LX.i,right:LX.right,graded:LX.graded,maxCombo:LX.maxCombo,sec:Math.round((Date.now()-LX.t0)/1000),steps:JSON.parse(JSON.stringify(LX.steps)),items:LX.items};save()}catch(e){}}
   const st=LX.steps[LX.i];LX.state="idle";LX.sel=null;setBar();
   $("#lxBody").innerHTML=`<div class="lx-inner" id="lxInner">${LX.game==="chrono"?"":tipHTML(st)}<div id="lxStep">${stepHTML(st)}</div></div>`;$("#lxBody").closest(".lx-body").scrollTop=0;
   renderFoot();
