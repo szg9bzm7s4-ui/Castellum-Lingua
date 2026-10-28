@@ -116387,6 +116387,14 @@ document.addEventListener('click',function(e){
     return Math.max(dice(a,b),dice(sk(a),sk(b))*.95);
   }
   window.castellumArScore=arScore;
+  /* Micro en latin : le navigateur écoute en italien (prononciation la plus proche) ; on compare après avoir
+     ramené latin et transcription italienne à la même forme sonore (h muet, ae = e, ti + voyelle = zi, cq = q,
+     m final avalé, lettres doublées…). */
+  try{if(L.la&&!L.la.t)L.la.t='it-IT'}catch(e){}
+  function laKey(t){return norm(t).replace(/[^a-z\s]/g,' ').replace(/ph/g,'f').replace(/th/g,'t').replace(/ch/g,'c').replace(/h/g,'').replace(/ae|oe/g,'e')
+    .replace(/y/g,'i').replace(/j/g,'i').replace(/u(?=[aeio])/g,'v').replace(/k/g,'c').replace(/x/g,'s').replace(/cq|qu/g,'q').replace(/ti(?=[aeiou])/g,'zi').replace(/z+/g,'z')
+    .replace(/m\b/g,'').replace(/([a-z])\1+/g,'$1').replace(/\s+/g,' ').trim()}
+  window.castellumLaKey=laKey;
 
   /* Vraie voix marocaine : la fonction Supabase « castellum-tts » (voix neuronales Azure Mouna / Jamal)
      lit le texte réécrit en lettres arabes. Utilisée quand on est connecté et que le serveur est configuré ;
@@ -116642,6 +116650,7 @@ document.addEventListener('click',function(e){
         any=any||alt.transcript;
         let sc=phraseScore(alt.transcript,target);
         if(ARABIZI_CODES.has(S.tgt))sc=Math.max(sc,arScore(alt.transcript,arabiziToArabic(target,S.tgt)));
+        if(S.tgt==='la')sc=Math.max(sc,phraseScore(laKey(alt.transcript),laKey(target)));
         if(translit)sc=Math.max(sc,phraseScore(alt.transcript,translit));
         if(Number.isFinite(alt.confidence)&&alt.confidence>0)sc=Math.min(1,sc*.9+alt.confidence*.1);
         if(sc>bestSc){bestSc=sc;best=alt.transcript}
