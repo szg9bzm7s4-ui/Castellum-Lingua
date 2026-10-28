@@ -1,4 +1,6 @@
-// Fonction Supabase « castellum-tts » : voix neuronales marocaine, algérienne et tunisienne (Microsoft Azure).
+// Fonction Supabase « castellum-tts » : voix neuronales Microsoft Azure.
+// - Darija marocaine, algérienne et tunisienne (texte déjà réécrit en lettres arabes par l'application).
+// - Italien, espagnol, français, portugais, anglais, allemand et néerlandais (texte tel quel).
 // La clé Azure reste côté serveur (secrets AZURE_SPEECH_KEY et AZURE_SPEECH_REGION) ; seuls les
 // utilisateurs connectés peuvent appeler la fonction (vérification du jeton Supabase, activée par défaut).
 // L'application envoie le texte déjà réécrit en lettres arabes et reçoit un fichier MP3.
@@ -14,6 +16,13 @@ const VOICES: Record<string, { locale: string; voices: [string, string] }> = {
   ary: { locale: "ar-MA", voices: ["ar-MA-MounaNeural", "ar-MA-JamalNeural"] },
   arq: { locale: "ar-DZ", voices: ["ar-DZ-AminaNeural", "ar-DZ-IsmaelNeural"] },
   aeb: { locale: "ar-TN", voices: ["ar-TN-ReemNeural", "ar-TN-HediNeural"] },
+  it: { locale: "it-IT", voices: ["it-IT-ElsaNeural", "it-IT-DiegoNeural"] },
+  es: { locale: "es-ES", voices: ["es-ES-ElviraNeural", "es-ES-AlvaroNeural"] },
+  fr: { locale: "fr-FR", voices: ["fr-FR-DeniseNeural", "fr-FR-HenriNeural"] },
+  pt: { locale: "pt-PT", voices: ["pt-PT-RaquelNeural", "pt-PT-DuarteNeural"] },
+  en: { locale: "en-GB", voices: ["en-GB-SoniaNeural", "en-GB-RyanNeural"] },
+  de: { locale: "de-DE", voices: ["de-DE-KatjaNeural", "de-DE-ConradNeural"] },
+  nl: { locale: "nl-NL", voices: ["nl-NL-FennaNeural", "nl-NL-MaartenNeural"] },
 };
 const MAX_CHARS = 400;
 

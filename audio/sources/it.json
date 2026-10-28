@@ -1,0 +1,402 @@
+{
+ "lang": "it",
+ "note": "Phrases à enregistrer en priorité (première semaine du parcours italien pour francophones). La clé est calculée sur « it|texte » : voir scripts/make-audio.mjs.",
+ "items": [
+  {
+   "key": "32b9a2a6",
+   "text": "Buongiorno! Cosa prende?",
+   "fr": "Bonjour ! Qu'est-ce que vous prenez ?",
+   "where": "Au bar, à Naples · dialogue"
+  },
+  {
+   "key": "e58e5278",
+   "text": "Buongiorno! Un caffè, per favore.",
+   "fr": "Bonjour ! Un café, s'il vous plaît.",
+   "where": "Au bar, à Naples · dialogue"
+  },
+  {
+   "key": "34c6d76b",
+   "text": "Ecco a lei.",
+   "fr": "Voilà pour vous.",
+   "where": "Au bar, à Naples · dialogue"
+  },
+  {
+   "key": "c391cb93",
+   "text": "Grazie. Quant'è?",
+   "fr": "Merci. C'est combien ?",
+   "where": "Au bar, à Naples · dialogue"
+  },
+  {
+   "key": "696e0521",
+   "text": "Un euro e venti.",
+   "fr": "Un euro vingt.",
+   "where": "Au bar, à Naples · dialogue"
+  },
+  {
+   "key": "e088dd29",
+   "text": "Grazie, arrivederci!",
+   "fr": "Merci, au revoir !",
+   "where": "Au bar, à Naples · dialogue"
+  },
+  {
+   "key": "ba787bb3",
+   "text": "Arrivederci, buona giornata!",
+   "fr": "Au revoir, bonne journée !",
+   "where": "Au bar, à Naples · dialogue"
+  },
+  {
+   "key": "796777be",
+   "text": "Buongiorno",
+   "fr": "Bonjour (poli)",
+   "where": "Au bar, à Naples"
+  },
+  {
+   "key": "7cf47b75",
+   "text": "Salve",
+   "fr": "Bonjour (neutre)",
+   "where": "Au bar, à Naples"
+  },
+  {
+   "key": "24fb1970",
+   "text": "Ciao",
+   "fr": "Salut (familier)",
+   "where": "Au bar, à Naples"
+  },
+  {
+   "key": "4c395569",
+   "text": "Un caffè, per favore.",
+   "fr": "Un café, s'il vous plaît.",
+   "where": "Au bar, à Naples"
+  },
+  {
+   "key": "786f0605",
+   "text": "Quant'è?",
+   "fr": "C'est combien ?",
+   "where": "Au bar, à Naples"
+  },
+  {
+   "key": "f2564052",
+   "text": "Buonasera",
+   "fr": "",
+   "where": "Au bar, à Naples · exercices"
+  },
+  {
+   "key": "67a0646a",
+   "text": "Ciao, Luca!",
+   "fr": "",
+   "where": "Au bar, à Naples · exercices"
+  },
+  {
+   "key": "08de253c",
+   "text": "Salve!",
+   "fr": "",
+   "where": "Au bar, à Naples · exercices"
+  },
+  {
+   "key": "bce14f4d",
+   "text": "Buongiorno!",
+   "fr": "",
+   "where": "Au bar, à Naples · exercices"
+  },
+  {
+   "key": "8848da83",
+   "text": "Ciao!",
+   "fr": "",
+   "where": "Au bar, à Naples · exercices"
+  },
+  {
+   "key": "3d0431ba",
+   "text": "Buonanotte!",
+   "fr": "",
+   "where": "Au bar, à Naples · exercices"
+  },
+  {
+   "key": "e02b2fd1",
+   "text": "Arrivederci!",
+   "fr": "",
+   "where": "Au bar, à Naples · exercices"
+  },
+  {
+   "key": "eed1164e",
+   "text": "Un cappuccino, per favore.",
+   "fr": "",
+   "where": "Au bar, à Naples · exercices"
+  },
+  {
+   "key": "c73d1c7d",
+   "text": "Cosa prende?",
+   "fr": "",
+   "where": "Au bar, à Naples · exercices"
+  },
+  {
+   "key": "9b3577aa",
+   "text": "Arrivederci",
+   "fr": "Au revoir",
+   "where": "A1 · unité 1 · Salutations"
+  },
+  {
+   "key": "212aa6d0",
+   "text": "Grazie",
+   "fr": "Merci",
+   "where": "A1 · unité 1 · Salutations"
+  },
+  {
+   "key": "294912cd",
+   "text": "Grazie mille",
+   "fr": "Merci beaucoup",
+   "where": "A1 · unité 1 · Salutations"
+  },
+  {
+   "key": "30b75cb2",
+   "text": "Per favore",
+   "fr": "S'il te plaît",
+   "where": "A1 · unité 1 · Salutations"
+  },
+  {
+   "key": "f9faa55b",
+   "text": "Sì",
+   "fr": "Oui",
+   "where": "A1 · unité 1 · Salutations"
+  },
+  {
+   "key": "7adb1cc3",
+   "text": "No",
+   "fr": "Non",
+   "where": "A1 · unité 1 · Salutations"
+  },
+  {
+   "key": "69195369",
+   "text": "Scusa",
+   "fr": "Pardon",
+   "where": "A1 · unité 1 · Salutations"
+  },
+  {
+   "key": "4630394e",
+   "text": "Come stai?",
+   "fr": "Comment ça va ?",
+   "where": "A1 · unité 1 · Salutations"
+  },
+  {
+   "key": "43a077e4",
+   "text": "Sto bene, grazie",
+   "fr": "Ça va bien, merci",
+   "where": "A1 · unité 1 · Salutations"
+  },
+  {
+   "key": "191ef2f5",
+   "text": "Mi chiamo Marco",
+   "fr": "Je m'appelle Marco",
+   "where": "A1 · unité 2 · Se présenter"
+  },
+  {
+   "key": "0f7b75cf",
+   "text": "Come ti chiami?",
+   "fr": "Comment tu t'appelles ?",
+   "where": "A1 · unité 2 · Se présenter"
+  },
+  {
+   "key": "25756837",
+   "text": "Piacere",
+   "fr": "Enchanté",
+   "where": "A1 · unité 2 · Se présenter"
+  },
+  {
+   "key": "4ae92056",
+   "text": "Sono belga",
+   "fr": "Je suis belge",
+   "where": "A1 · unité 2 · Se présenter"
+  },
+  {
+   "key": "207c91e4",
+   "text": "Abito a Bruxelles",
+   "fr": "J'habite à Bruxelles",
+   "where": "A1 · unité 2 · Se présenter"
+  },
+  {
+   "key": "ab4823a3",
+   "text": "Di dove sei?",
+   "fr": "D'où viens-tu ?",
+   "where": "A1 · unité 2 · Se présenter"
+  },
+  {
+   "key": "85628dc5",
+   "text": "Ho trent'anni",
+   "fr": "J'ai trente ans",
+   "where": "A1 · unité 2 · Se présenter"
+  },
+  {
+   "key": "74b05c32",
+   "text": "Lavoro nelle vendite",
+   "fr": "Je travaille dans la vente",
+   "where": "A1 · unité 2 · Se présenter"
+  },
+  {
+   "key": "51d85e41",
+   "text": "Parlo francese",
+   "fr": "Je parle français",
+   "where": "A1 · unité 2 · Se présenter"
+  },
+  {
+   "key": "eb06e1e3",
+   "text": "Parlo un po'",
+   "fr": "Je parle un peu",
+   "where": "A1 · unité 2 · Se présenter"
+  },
+  {
+   "key": "09f2bed1",
+   "text": "Non capisco",
+   "fr": "Je ne comprends pas",
+   "where": "A1 · unité 2 · Se présenter"
+  },
+  {
+   "key": "afe18bd2",
+   "text": "Puoi ripetere?",
+   "fr": "Tu peux répéter ?",
+   "where": "A1 · unité 2 · Se présenter"
+  },
+  {
+   "key": "ca4c0148",
+   "text": "uno",
+   "fr": "un",
+   "where": "A1 · unité 3 · Les nombres"
+  },
+  {
+   "key": "7a52eb9e",
+   "text": "due",
+   "fr": "deux",
+   "where": "A1 · unité 3 · Les nombres"
+  },
+  {
+   "key": "37c99659",
+   "text": "tre",
+   "fr": "trois",
+   "where": "A1 · unité 3 · Les nombres"
+  },
+  {
+   "key": "9fd2f686",
+   "text": "quattro",
+   "fr": "quatre",
+   "where": "A1 · unité 3 · Les nombres"
+  },
+  {
+   "key": "4cdb2fe7",
+   "text": "cinque",
+   "fr": "cinq",
+   "where": "A1 · unité 3 · Les nombres"
+  },
+  {
+   "key": "522eddfb",
+   "text": "sei",
+   "fr": "six",
+   "where": "A1 · unité 3 · Les nombres"
+  },
+  {
+   "key": "4c3b9fd7",
+   "text": "sette",
+   "fr": "sept",
+   "where": "A1 · unité 3 · Les nombres"
+  },
+  {
+   "key": "0433f7fa",
+   "text": "otto",
+   "fr": "huit",
+   "where": "A1 · unité 3 · Les nombres"
+  },
+  {
+   "key": "01ca1d1e",
+   "text": "nove",
+   "fr": "neuf",
+   "where": "A1 · unité 3 · Les nombres"
+  },
+  {
+   "key": "68e8ef06",
+   "text": "dieci",
+   "fr": "dix",
+   "where": "A1 · unité 3 · Les nombres"
+  },
+  {
+   "key": "0c17e8be",
+   "text": "venti",
+   "fr": "vingt",
+   "where": "A1 · unité 3 · Les nombres"
+  },
+  {
+   "key": "42ffa04f",
+   "text": "cento",
+   "fr": "cent",
+   "where": "A1 · unité 3 · Les nombres"
+  },
+  {
+   "key": "4a323bb2",
+   "text": "mia madre",
+   "fr": "ma mère",
+   "where": "A1 · unité 4 · La famille"
+  },
+  {
+   "key": "eefb1b6b",
+   "text": "mio padre",
+   "fr": "mon père",
+   "where": "A1 · unité 4 · La famille"
+  },
+  {
+   "key": "30795288",
+   "text": "mio fratello",
+   "fr": "mon frère",
+   "where": "A1 · unité 4 · La famille"
+  },
+  {
+   "key": "f1b711d7",
+   "text": "mia sorella",
+   "fr": "ma sœur",
+   "where": "A1 · unité 4 · La famille"
+  },
+  {
+   "key": "0e3ab177",
+   "text": "mio figlio",
+   "fr": "mon fils",
+   "where": "A1 · unité 4 · La famille"
+  },
+  {
+   "key": "55ef3dc7",
+   "text": "mia figlia",
+   "fr": "ma fille",
+   "where": "A1 · unité 4 · La famille"
+  },
+  {
+   "key": "2a9eebe2",
+   "text": "mia moglie",
+   "fr": "ma femme",
+   "where": "A1 · unité 4 · La famille"
+  },
+  {
+   "key": "b499e6ef",
+   "text": "mio marito",
+   "fr": "mon mari",
+   "where": "A1 · unité 4 · La famille"
+  },
+  {
+   "key": "c1ef9462",
+   "text": "i miei genitori",
+   "fr": "mes parents",
+   "where": "A1 · unité 4 · La famille"
+  },
+  {
+   "key": "13efbe77",
+   "text": "mio nonno",
+   "fr": "mon grand-père",
+   "where": "A1 · unité 4 · La famille"
+  },
+  {
+   "key": "c2659203",
+   "text": "mia nonna",
+   "fr": "ma grand-mère",
+   "where": "A1 · unité 4 · La famille"
+  },
+  {
+   "key": "0bef936e",
+   "text": "Ho due fratelli",
+   "fr": "J'ai deux frères",
+   "where": "A1 · unité 4 · La famille"
+  }
+ ]
+}

@@ -1,4 +1,42 @@
-# Castellum Lingua : la vraie voix marocaine
+# Castellum Lingua : l'audio
+
+L'appli cherche l'audio dans cet ordre, phrase par phrase :
+
+| Ordre | Source | Disponible | Ce qu'il faut |
+|---|---|---|---|
+| 1 | 📦 **Audio intégré** : fichiers MP3 servis avec l'appli (`audio/`) | Hors ligne, une fois chargés | Générer ou enregistrer les fichiers (section A) |
+| 2 | ☁️ **Voix en ligne** : fonction Supabase `castellum-tts` (voix neuronales Azure) | Comptes connectés, connexion requise | Déployer la fonction avec la clé Azure (sections 1 à 3 ci-dessous) |
+| 3 | 📱 **Voix de l'appareil** | Hors ligne, selon les voix installées | Rien |
+
+Si aucune source ne marche, l'exercice l'indique clairement (« Aucune voix pour cette langue sur cet appareil »), propose « Réessayer » et la transcription reste affichée. Aucune clé n'est jamais placée dans le navigateur.
+
+## A. Audio intégré (prioritaire pour les premières leçons)
+
+Les 66 phrases de la première semaine d'italien et de la situation « Au bar, à Naples » sont listées dans :
+- `audio/sources/it.json` (utilisé par le script) ;
+- `audio/sources/it-a-enregistrer.csv` (à ouvrir dans un tableur pour une séance d'enregistrement).
+
+**Enregistrements natifs (recommandé).** Fais enregistrer chaque phrase par un locuteur natif, en MP3, en nommant le fichier d'après la colonne `cle` (par exemple `32b9a2a6.mp3`). Puis :
+
+```bash
+node scripts/make-audio.mjs it --native dossier/des/enregistrements
+```
+
+**En attendant : voix neuronales Azure.** Sur ton ordinateur (la clé ne quitte pas ta machine et n'est jamais écrite dans le dépôt) :
+
+```bash
+AZURE_SPEECH_KEY=ta-clé AZURE_SPEECH_REGION=westeurope node scripts/make-audio.mjs it
+```
+
+Le script écrit `audio/it/<cle>.mp3` et met à jour `audio/manifest.json`. Un enregistrement natif remplace toujours la voix de synthèse pour la même phrase, et l'appli l'affiche « Enregistrement natif ». Pour une autre langue, crée `audio/sources/<langue>.json` sur le même modèle.
+
+## B. Voix en ligne
+
+La fonction `castellum-tts` lit désormais l'italien, l'espagnol, le français, le portugais, l'anglais, l'allemand et le néerlandais, en plus des trois darijas. Elle se déploie comme expliqué ci-dessous ; si elle était déjà déployée, redéploie-la pour ajouter les nouvelles langues.
+
+---
+
+# Voix marocaine et voix en ligne (détails)
 
 Les téléphones et les ordinateurs n'ont presque jamais de voix marocaine. Sans serveur, l'appli lit donc la darija avec la voix arabe de l'appareil. Cette voix a un accent d'arabe standard (Maged sur iPhone, la voix arabe Google sur Android).
 
