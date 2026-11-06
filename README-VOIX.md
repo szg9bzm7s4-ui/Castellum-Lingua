@@ -22,7 +22,15 @@ Les 66 phrases de la première semaine d'italien et de la situation « Au bar, �
 node scripts/make-audio.mjs it --native dossier/des/enregistrements
 ```
 
-**En attendant : voix neuronales Azure.** Sur ton ordinateur (la clé ne quitte pas ta machine et n'est jamais écrite dans le dépôt) :
+**Déjà fait : voix neuronale libre Kokoro.** Les 66 phrases de la première semaine d'italien sont intégrées (`audio/it/`), générées sans clé avec la voix « if_sara » de Kokoro (licence Apache 2.0). Pour régénérer ou faire une autre langue (fr, es, pt, en) :
+
+```bash
+python3 scripts/make-audio-kokoro.py it --model kokoro-q8.onnx --voices chemin/voices
+```
+
+(L'en-tête du script explique où trouver le modèle et les voix.) L'appli affiche « Voix de synthèse intégrée » : ce n'est pas un enregistrement natif.
+
+**Autre possibilité : voix neuronales Azure.** Sur ton ordinateur (la clé ne quitte pas ta machine et n'est jamais écrite dans le dépôt) :
 
 ```bash
 AZURE_SPEECH_KEY=ta-clé AZURE_SPEECH_REGION=westeurope node scripts/make-audio.mjs it

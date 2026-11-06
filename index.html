@@ -14667,7 +14667,7 @@ Tu quoque, mi fili?|Toi aussi, mon fils ?|Tradition, d'après Suétone`;
     const s=sourceFor(S.tgt,text||A.text);
     if(!s)return `⚠️ <span>Aucune voix pour cette langue sur cet appareil.</span>${CLOUD_LANGS.has(S.tgt)&&!(typeof Cloud!=='undefined'&&Cloud.user)?' <span>Connecte-toi pour utiliser la voix en ligne.</span>':''} <span>Lis la transcription.</span>`;
     const native=s==='file'&&(fileFor(S.tgt,text||A.text)||{}).src==='native';
-    return `${SRC[s][0]} <span>${native?'Enregistrement natif · fonctionne hors ligne':SRC[s][1]}</span>`}
+    return `${SRC[s][0]} <span>${native?'Enregistrement natif · fonctionne hors ligne':s==='file'?'Voix de synthèse intégrée · fonctionne hors ligne':SRC[s][1]}</span>`}
   A.statusHTML=statusHTML;
   function refresh(){
     document.querySelectorAll('[data-a2-status]').forEach(el=>{el.innerHTML=statusHTML(el.dataset.a2Status||'')});

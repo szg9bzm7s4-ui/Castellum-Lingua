@@ -1,4 +1,337 @@
 {
  "version": 1,
- "files": {}
+ "files": {
+  "it": {
+   "32b9a2a6": {
+    "f": "it/32b9a2a6.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "e58e5278": {
+    "f": "it/e58e5278.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "34c6d76b": {
+    "f": "it/34c6d76b.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "c391cb93": {
+    "f": "it/c391cb93.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "696e0521": {
+    "f": "it/696e0521.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "e088dd29": {
+    "f": "it/e088dd29.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "ba787bb3": {
+    "f": "it/ba787bb3.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "796777be": {
+    "f": "it/796777be.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "7cf47b75": {
+    "f": "it/7cf47b75.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "24fb1970": {
+    "f": "it/24fb1970.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "4c395569": {
+    "f": "it/4c395569.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "786f0605": {
+    "f": "it/786f0605.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "f2564052": {
+    "f": "it/f2564052.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "67a0646a": {
+    "f": "it/67a0646a.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "08de253c": {
+    "f": "it/08de253c.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "bce14f4d": {
+    "f": "it/bce14f4d.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "8848da83": {
+    "f": "it/8848da83.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "3d0431ba": {
+    "f": "it/3d0431ba.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "e02b2fd1": {
+    "f": "it/e02b2fd1.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "eed1164e": {
+    "f": "it/eed1164e.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "c73d1c7d": {
+    "f": "it/c73d1c7d.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "9b3577aa": {
+    "f": "it/9b3577aa.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "212aa6d0": {
+    "f": "it/212aa6d0.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "294912cd": {
+    "f": "it/294912cd.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "30b75cb2": {
+    "f": "it/30b75cb2.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "f9faa55b": {
+    "f": "it/f9faa55b.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "7adb1cc3": {
+    "f": "it/7adb1cc3.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "69195369": {
+    "f": "it/69195369.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "4630394e": {
+    "f": "it/4630394e.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "43a077e4": {
+    "f": "it/43a077e4.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "191ef2f5": {
+    "f": "it/191ef2f5.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "0f7b75cf": {
+    "f": "it/0f7b75cf.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "25756837": {
+    "f": "it/25756837.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "2a6ab66f": {
+    "f": "it/2a6ab66f.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "bb971aaa": {
+    "f": "it/bb971aaa.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "ab4823a3": {
+    "f": "it/ab4823a3.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "85628dc5": {
+    "f": "it/85628dc5.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "74b05c32": {
+    "f": "it/74b05c32.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "51d85e41": {
+    "f": "it/51d85e41.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "eb06e1e3": {
+    "f": "it/eb06e1e3.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "09f2bed1": {
+    "f": "it/09f2bed1.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "afe18bd2": {
+    "f": "it/afe18bd2.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "ca4c0148": {
+    "f": "it/ca4c0148.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "7a52eb9e": {
+    "f": "it/7a52eb9e.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "37c99659": {
+    "f": "it/37c99659.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "9fd2f686": {
+    "f": "it/9fd2f686.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "4cdb2fe7": {
+    "f": "it/4cdb2fe7.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "522eddfb": {
+    "f": "it/522eddfb.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "4c3b9fd7": {
+    "f": "it/4c3b9fd7.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "0433f7fa": {
+    "f": "it/0433f7fa.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "01ca1d1e": {
+    "f": "it/01ca1d1e.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "68e8ef06": {
+    "f": "it/68e8ef06.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "0c17e8be": {
+    "f": "it/0c17e8be.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "42ffa04f": {
+    "f": "it/42ffa04f.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "4a323bb2": {
+    "f": "it/4a323bb2.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "eefb1b6b": {
+    "f": "it/eefb1b6b.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "30795288": {
+    "f": "it/30795288.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "f1b711d7": {
+    "f": "it/f1b711d7.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "0e3ab177": {
+    "f": "it/0e3ab177.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "55ef3dc7": {
+    "f": "it/55ef3dc7.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "2a9eebe2": {
+    "f": "it/2a9eebe2.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "b499e6ef": {
+    "f": "it/b499e6ef.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "c1ef9462": {
+    "f": "it/c1ef9462.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "13efbe77": {
+    "f": "it/13efbe77.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "c2659203": {
+    "f": "it/c2659203.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   },
+   "0bef936e": {
+    "f": "it/0bef936e.mp3",
+    "src": "tts",
+    "voice": "kokoro-if_sara"
+   }
+  }
+ }
 }
