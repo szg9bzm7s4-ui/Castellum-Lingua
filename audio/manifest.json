@@ -5,6 +5,14 @@
   "it": {
    "n": 3249,
    "voice": "kokoro-if_sara"
+  },
+  "fr": {
+   "n": 3262,
+   "voice": "kokoro-ff_siwis"
+  },
+  "es": {
+   "n": 3219,
+   "voice": "kokoro-ef_dora"
   }
  }
 }
