@@ -5385,12 +5385,6 @@
    "where": "b1u23"
   },
   {
-   "key": "8a59e927",
-   "text": "Ho orari sfalsati",
-   "fr": "J'ai des horaires décalés",
-   "where": "b1u23"
-  },
-  {
    "key": "aeb688ff",
    "text": "Cerco un lavoro per pagarmi gli studi",
    "fr": "Je cherche un job pour payer mes études",
@@ -5640,12 +5634,6 @@
    "key": "26cf0f76",
    "text": "Mi commuove molto",
    "fr": "Ça me touche beaucoup",
-   "where": "b2u3"
-  },
-  {
-   "key": "7dea2c55",
-   "text": "Ne ho abbastanza",
-   "fr": "J'en ai marre",
    "where": "b2u3"
   },
   {
@@ -7275,12 +7263,6 @@
    "where": "c1u1"
   },
   {
-   "key": "7118fa4d",
-   "text": "Bisogna constatare che…",
-   "fr": "Force est de constater que…",
-   "where": "c1u2"
-  },
-  {
    "key": "5bf0c80e",
    "text": "Va sottolineato che…",
    "fr": "Il convient de souligner que…",
@@ -7818,12 +7800,6 @@
    "key": "9efbb68c",
    "text": "Quest'estate torno al paese",
    "fr": "Cet été, je rentre au bled",
-   "where": "c1u9"
-  },
-  {
-   "key": "78f64b68",
-   "text": "Dai, sei una palla!",
-   "fr": "Arrête, t'es trop relou !",
    "where": "c1u9"
   },
   {
@@ -9024,12 +9000,6 @@
    "key": "083e7199",
    "text": "Tutto a posto?",
    "fr": "Ça roule ?",
-   "where": "c2u0"
-  },
-  {
-   "key": "5145e904",
-   "text": "un compare",
-   "fr": "un pote",
    "where": "c2u0"
   },
   {
@@ -10587,21 +10557,9 @@
    "where": "c2u22"
   },
   {
-   "key": "cb62a640",
-   "text": "Beviamo l'ultimo bicchiere da me?",
-   "fr": "On prend un dernier verre chez moi ?",
-   "where": "c2u22"
-  },
-  {
    "key": "912f6eed",
    "text": "Era solo un'avventura",
    "fr": "Ce n'était qu'une aventure",
-   "where": "c2u22"
-  },
-  {
-   "key": "a53f1cf6",
-   "text": "Mi ha dato buca",
-   "fr": "Elle m'a mis un vent",
    "where": "c2u22"
   },
   {
@@ -11670,12 +11628,6 @@
    "key": "7a7edc2f",
    "text": "il taxi",
    "fr": "le taxi",
-   "where": "t7"
-  },
-  {
-   "key": "b841d2b9",
-   "text": "la nave",
-   "fr": "le bateau",
    "where": "t7"
   },
   {
@@ -14277,12 +14229,6 @@
    "where": "t27"
   },
   {
-   "key": "45b3ad42",
-   "text": "permaloso",
-   "fr": "rancunier",
-   "where": "t27"
-  },
-  {
    "key": "cab0e39b",
    "text": "Ha un buon carattere",
    "fr": "Elle a bon caractère",
@@ -14574,12 +14520,6 @@
    "key": "56432f6d",
    "text": "i panni",
    "fr": "les fringues",
-   "where": "t30"
-  },
-  {
-   "key": "cdf7db40",
-   "text": "i compari",
-   "fr": "les potes",
    "where": "t30"
   },
   {
@@ -16455,12 +16395,6 @@
    "where": "t45"
   },
   {
-   "key": "4db10019",
-   "text": "il joystick",
-   "fr": "la manette",
-   "where": "t45"
-  },
-  {
    "key": "a89ca10b",
    "text": "le bocce",
    "fr": "la pétanque",
@@ -18099,12 +18033,6 @@
    "where": "t58"
   },
   {
-   "key": "acabb576",
-   "text": "Cosa ti porto?",
-   "fr": "Qu'est-ce que je vous sers ?",
-   "where": "t58"
-  },
-  {
    "key": "d4e296f4",
    "text": "Lo stesso, per favore",
    "fr": "La même chose, s'il vous plaît",
@@ -19495,6 +19423,84 @@
    "text": "Sono felice per la squadra",
    "fr": "Je suis heureux pour le groupe",
    "where": "t68"
+  },
+  {
+   "key": "43bf404e",
+   "text": "Faccio orari scomodi",
+   "fr": "J'ai des horaires décalés",
+   "where": "b1u23"
+  },
+  {
+   "key": "e09a4b24",
+   "text": "Sono stufo",
+   "fr": "J'en ai marre",
+   "where": "b2u3"
+  },
+  {
+   "key": "141cff70",
+   "text": "Bisogna prendere atto che…",
+   "fr": "Force est de constater que…",
+   "where": "c1u2"
+  },
+  {
+   "key": "94421dbe",
+   "text": "Dai, sei troppo pesante!",
+   "fr": "Arrête, t'es trop relou !",
+   "where": "c1u9"
+  },
+  {
+   "key": "5ae324f8",
+   "text": "un amico",
+   "fr": "un pote",
+   "where": "c2u0"
+  },
+  {
+   "key": "a8759e5e",
+   "text": "Beviamo un ultimo bicchiere da me?",
+   "fr": "On prend un dernier verre chez moi ?",
+   "where": "c2u22"
+  },
+  {
+   "key": "420d1f1f",
+   "text": "Mi ha dato il due di picche",
+   "fr": "Elle m'a mis un vent",
+   "where": "c2u22"
+  },
+  {
+   "key": "2cb6fa42",
+   "text": "la barca",
+   "fr": "le bateau",
+   "where": "t7"
+  },
+  {
+   "key": "cc5f8eeb",
+   "text": "in fretta",
+   "fr": "vite",
+   "where": "t20"
+  },
+  {
+   "key": "4f927c22",
+   "text": "rancoroso",
+   "fr": "rancunier",
+   "where": "t27"
+  },
+  {
+   "key": "4697947b",
+   "text": "gli amici",
+   "fr": "les potes",
+   "where": "t30"
+  },
+  {
+   "key": "3cc9007f",
+   "text": "il controller",
+   "fr": "la manette",
+   "where": "t45"
+  },
+  {
+   "key": "85625698",
+   "text": "Cosa vi porto?",
+   "fr": "Qu'est-ce que je vous sers ?",
+   "where": "t58"
   }
  ]
 }

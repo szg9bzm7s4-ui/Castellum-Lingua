@@ -28,7 +28,29 @@ Cet audit est une relecture technique et linguistique interne. Il ne remplace pa
 | Erreurs sans explication | toujours | jamais | Ligne « Pourquoi ? » sous chaque erreur. |
 | « Passer » un exercice oral compte comme une erreur | oui | non | L'oral est facultatif partout. |
 
-## 3. Recommandations, par priorité
+## 3. Relecture complète du cours (6 novembre 2026)
+
+Les 3 384 paires français ↔ italien du cours (A1 à C2) ont été relues une à une. Le contenu est globalement juste et naturel. 14 corrections :
+
+| Français | Avant | Après | Raison |
+|---|---|---|---|
+| rancunier | permaloso | rancoroso | *permaloso* = susceptible |
+| vite | presto | in fretta | *presto* = tôt / bientôt (déjà utilisés) : QCM ambigus |
+| le bateau | la nave | la barca | *nave* = navire |
+| Qu'est-ce que je vous sers ? | Cosa ti porto? | Cosa vi porto? | « vous » rendu par « tu » |
+| Elle m'a mis un vent | Mi ha dato buca | Mi ha dato il due di picche | *dare buca* = poser un lapin |
+| J'en ai marre | Ne ho abbastanza | Sono stufo | plus naturel |
+| J'ai des horaires décalés | Ho orari sfalsati | Faccio orari scomodi | *sfalsati* = échelonnés |
+| Force est de constater que… | Bisogna constatare che… | Bisogna prendere atto che… | calque du français |
+| Arrête, t'es trop relou ! | Dai, sei una palla! | Dai, sei troppo pesante! | *palla* = ennuyeux, pas agaçant |
+| un pote / les potes | un compare / i compari | un amico / gli amici | *compare* : régional et vieilli |
+| On prend un dernier verre chez moi ? | Beviamo l'ultimo bicchiere… | Beviamo un ultimo bicchiere… | plus naturel |
+| la manette | il joystick | il controller | le *joystick* est le manche |
+| prendre rendez-vous à la commune | — | prendre rendez-vous à la mairie | belgicisme côté français |
+
+Restent à faire valider par un locuteur natif : « Lavoro nelle vendite », l'argot régional (*magnare*, *sbatti*, *fratè*), et les registres (*tu* / *Lei*).
+
+## 4. Recommandations, par priorité
 
 1. Faire relire les 48 éléments et la situation « Au bar, à Naples » par un locuteur natif de Naples (registres, naturel, prix réaliste).
 2. Ajouter les formes de politesse manquantes et indiquer le registre de chaque élément dans les données (champ `reg` : standard, familier, régional, dialectal, vulgaire).

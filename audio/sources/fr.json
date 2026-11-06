@@ -5834,12 +5834,6 @@
    "where": "b2u7"
   },
   {
-   "key": "df9737ac",
-   "text": "prendre rendez-vous à la commune",
-   "it": "prendere un appuntamento in comune",
-   "where": "b2u7"
-  },
-  {
    "key": "948e77c2",
    "text": "une réclamation",
    "it": "un reclamo",
@@ -19572,6 +19566,12 @@
    "text": "Je suis heureux pour le groupe",
    "it": "Sono felice per la squadra",
    "where": "t68"
+  },
+  {
+   "key": "4fc31f75",
+   "text": "prendre rendez-vous à la mairie",
+   "it": "prendere un appuntamento in comune",
+   "where": "b2u7"
   }
  ],
  "note": "Toutes les phrases du cours (générées depuis l’appli). La clé est calculée sur « langue|texte » : voir scripts/make-audio.mjs."
