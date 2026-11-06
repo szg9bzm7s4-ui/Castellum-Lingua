@@ -13,9 +13,14 @@ Le latin a son propre parcours, pensé pour **lire les Romains** : on apprend la
 - **Voyelles longues** : notées (ā, ē, ī…) en A1, A2 et B1, comme dans les manuels. Les textes d'auteurs suivent l'usage des éditions, sans ces signes. La correction ignore ces signes : taper « rosa » pour « rosā » est juste.
 - **Formes à retenir** : entre parenthèses (« rēx (rēgis) ») ; seule la forme principale est demandée.
 - **Grammaire** : les 36 fiches de `GRAM_FULL.la` (A1 à C2) et l'Atelier latin existaient déjà ; s'y ajoutent une fiche de prononciation, la 1re conjugaison et les tableaux de conjugaison (esse, habēre, īre, facere, loquī ; présent et parfait).
-- **Depuis l'italien** : tout est traduit en italien, c'est-à-dire les phrases du parcours, les titres d'unités, les 38 fiches de grammaire et l'Atelier latin (onglets, tables, exercices, jeu « Quel cas ? », racines, vers, quêtes, citations du jour). Ces traductions ne s'appliquent que lorsqu'on apprend le latin. Les 32 textes d'auteurs de l'Atelier aussi : sens des mots, analyses, traductions et questions.
-- **Autres langues sources** : pour le parcours, consignes en anglais ; fiches et Atelier en français.
+- **Langues de l'apprenant** : tout est traduit en italien, anglais, espagnol, portugais, allemand et néerlandais. Cela couvre les phrases du parcours, les titres d'unités, les 38 fiches de grammaire et l'Atelier latin : onglets, tables, exercices, jeu « Quel cas ? », racines, vers, quêtes, citations du jour, ainsi que les 32 textes d'auteurs avec le sens des mots, les analyses, les traductions et les questions. Ces traductions ne s'appliquent que lorsqu'on apprend le latin.
+- **Chargement à la demande** : les traductions sont dans `data/lang/la-ui-<langue>.js`, environ 300 Ko par langue. Le fichier n'est chargé que si l'on apprend le latin depuis cette langue.
+- **Prononciations** : les transcriptions sont adaptées à chaque langue. Par exemple, la prononciation d'église de Cicero s'écrit « Chichero » en anglais, « chíchero » en espagnol, « Tschitschero » en allemand et « Tsjitsjero » en néerlandais.
+- **Darija** : l'apprenant qui parle darija a le contenu latin en français.
+- **Onglet Racines** : il compare toujours le latin au français et aux autres langues romanes (drapeau 🇫🇷, « mots savants »). Les explications, elles, sont traduites.
 - **Progression** : les clés enregistrées ne changent pas. Un apprenant qui avait terminé des unités de l'ancien parcours les voit comme terminées dans le nouveau, au même rang.
 - **Code** : module `castellum-latin-js` à la fin de `index.html`.
 
-À faire relire par un latiniste : les traductions françaises et anglaises des textes de C2 et les voyelles longues.
+À faire relire :
+- par un latiniste : les traductions françaises et anglaises des textes de C2, et les voyelles longues ;
+- par des locuteurs natifs : les traductions en espagnol, portugais, allemand et néerlandais (terminologie grammaticale scolaire de chaque pays).
