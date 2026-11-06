@@ -14602,8 +14602,15 @@ Tu quoque, mi fili?|Toi aussi, mon fils ?|Tradition, d'après Suétone`;
   const clean=t=>String(t||'').replace(/\s*\(.*?\)/g,'').normalize('NFC').trim().replace(/\s+/g,' ');
   function key(code,text){const s=code+'|'+clean(text);let h=0x811c9dc5;for(const ch of s){h^=ch.codePointAt(0);h=Math.imul(h,0x01000193)>>>0}return ('0000000'+h.toString(16)).slice(-8)}
   A.key=key;
-  if(location.protocol!=='file:')fetch('audio/manifest.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).then(m=>{if(m&&m.files)A.manifest=m;refresh()}).catch(()=>{});
-  const fileFor=(code,text)=>{const f=A.manifest&&A.manifest.files&&A.manifest.files[code];return f?f[key(code,text)]||null:null};
+  /* audio/manifest.json : « langs » liste les langues dont l'index (audio/<langue>/index.json) est chargé
+     seulement quand on en a besoin ; « files » garde les entrées détaillées (format 1). */
+  const idxLoading=new Set();
+  function loadIndex(code){const m=A.manifest;if(!m||!m.langs||!m.langs[code]||idxLoading.has(code))return;idxLoading.add(code);
+    fetch(`audio/${code}/index.json`,{cache:'no-cache'}).then(r=>r.ok?r.json():null).then(ix=>{if(!ix)return;const f=(m.files=m.files||{})[code]=m.files[code]||{};
+      for(const k in ix)if(!f[k])f[k]={f:`${code}/${k}.mp3`,src:ix[k]==='n'?'native':'tts'};refresh()}).catch(()=>{idxLoading.delete(code)})}
+  A.loadIndex=loadIndex;
+  if(location.protocol!=='file:')fetch('audio/manifest.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).then(m=>{if(m&&(m.files||m.langs)){A.manifest=m;m.files=m.files||{};try{if(typeof S!=='undefined'&&S.tgt)loadIndex(S.tgt)}catch(e){}}refresh()}).catch(()=>{});
+  const fileFor=(code,text)=>{const m=A.manifest;if(!m)return null;if(m.langs&&m.langs[code])loadIndex(code);const f=m.files&&m.files[code];return f?f[key(code,text)]||null:null};
   const rate=()=>{try{return Number(JSON.parse(localStorage.getItem('castellumAudioPrefsV2')||'{}').rate)||.92}catch(e){return .92}};
   const cloudReady=code=>!A.cloudOff&&CLOUD_LANGS.has(code)&&typeof Cloud!=='undefined'&&!!Cloud.user&&!!Cloud.client&&!!(window.CASTELLUM_CONFIG||{}).supabaseUrl&&navigator.onLine!==false;
   const deviceVoice=code=>{try{return !!voiceFor(code)}catch(e){return false}};
@@ -14911,7 +14918,7 @@ Tu quoque, mi fili?|Toi aussi, mon fils ?|Tradition, d'après Suétone`;
   LEVEL_INFO.forEach(x=>{if(LV[x.id]){x.n=LV[x.id][0];x.d=LV[x.id][1]}});
 
   /* ---------- 2. Couverture du catalogue (≠ progression) ---------- */
-  const audioLangs=()=>{const m=window.CastellumAudio&&window.CastellumAudio.manifest;return new Set(Object.keys((m&&m.files)||{}).filter(k=>Object.keys(m.files[k]).length))};
+  const audioLangs=()=>{const m=window.CastellumAudio&&window.CastellumAudio.manifest;return new Set(Object.keys((m&&m.files)||{}).filter(k=>Object.keys(m.files[k]).length).concat(Object.keys((m&&m.langs)||{})))};
   function coverageText(lang){const lv=typeof offlineLevels==='function'?offlineLevels(lang):[];
     if(lv.length===6)return 'A1 → C2 intégrés';if(lv.length>1)return `${lv[0]} → ${lv[lv.length-1]} intégrés`;if(lv.length===1)return `${lv[0]} intégré · suite générée en ligne`;return 'Leçons générées en ligne'}
   covBadge=function(lang,big){const rev=typeof REVIEW!=='undefined'&&REVIEW.has(lang);const au=audioLangs().has(lang);
