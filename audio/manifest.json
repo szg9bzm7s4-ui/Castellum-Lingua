@@ -13,6 +13,18 @@
   "es": {
    "n": 3219,
    "voice": "kokoro-ef_dora"
+  },
+  "en": {
+   "n": 3236,
+   "voice": "kokoro-bf_emma"
+  },
+  "pt": {
+   "n": 3223,
+   "voice": "kokoro-pf_dora"
+  },
+  "hi": {
+   "n": 3224,
+   "voice": "kokoro-hf_alpha"
   }
  }
 }

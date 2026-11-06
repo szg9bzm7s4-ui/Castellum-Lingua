@@ -22,10 +22,10 @@ Les 66 phrases de la première semaine d'italien et de la situation « Au bar, �
 node scripts/make-audio.mjs it --native dossier/des/enregistrements
 ```
 
-**Déjà fait : voix neuronale libre Kokoro.** Les 66 phrases de la première semaine d'italien sont intégrées (`audio/it/`), générées sans clé avec la voix « if_sara » de Kokoro (licence Apache 2.0). Pour régénérer ou faire une autre langue (fr, es, pt, en) :
+**Déjà fait : voix neuronale libre Kokoro.** Toutes les phrases du cours (A1 à C2, environ 3 200 par langue) sont intégrées pour l'italien, le français, l'espagnol, l'anglais, le portugais et l'hindi (`audio/<langue>/`), générées sans clé avec Kokoro (licence Apache 2.0). L'appli ne télécharge que l'index de la langue apprise (`audio/<langue>/index.json`), puis chaque phrase quand on l'écoute. Pas de voix Kokoro pour l'allemand, le néerlandais, la darija et la plupart des autres langues : elles utilisent la voix en ligne ou celle de l'appareil. Le portugais est lu par une voix brésilienne avec la prononciation européenne : à faire écouter. Pour régénérer une langue :
 
 ```bash
-python3 scripts/make-audio-kokoro.py it --model kokoro-q8.onnx --voices chemin/voices
+python3 scripts/make-audio-kokoro.py it --workers 4 --model kokoro-q8.onnx --voices chemin/voices
 ```
 
 (L'en-tête du script explique où trouver le modèle et les voix.) L'appli affiche « Voix de synthèse intégrée » : ce n'est pas un enregistrement natif.
