@@ -13,7 +13,8 @@ Le latin a son propre parcours, pensé pour **lire les Romains** : on apprend la
 - **Voyelles longues** : notées (ā, ē, ī…) en A1, A2 et B1, comme dans les manuels. Les textes d'auteurs suivent l'usage des éditions, sans ces signes. La correction ignore ces signes : taper « rosa » pour « rosā » est juste.
 - **Formes à retenir** : entre parenthèses (« rēx (rēgis) ») ; seule la forme principale est demandée.
 - **Grammaire** : les 36 fiches de `GRAM_FULL.la` (A1 à C2) et l'Atelier latin existaient déjà ; s'y ajoutent une fiche de prononciation, la 1re conjugaison et les tableaux de conjugaison (esse, habēre, īre, facere, loquī ; présent et parfait).
-- **Consignes** : en français ; pour les autres langues sources, en anglais.
+- **Depuis l'italien** : tout est traduit en italien, c'est-à-dire les phrases du parcours, les titres d'unités, les 38 fiches de grammaire et l'Atelier latin (onglets, tables, exercices, jeu « Quel cas ? », racines, vers, quêtes, citations du jour). Ces traductions ne s'appliquent que lorsqu'on apprend le latin. Seuls les 32 textes d'auteurs de l'Atelier (gloses mot à mot, traductions et questions) restent en français.
+- **Autres langues sources** : pour le parcours, consignes en anglais ; fiches et Atelier en français.
 - **Progression** : les clés enregistrées ne changent pas. Un apprenant qui avait terminé des unités de l'ancien parcours les voit comme terminées dans le nouveau, au même rang.
 - **Code** : module `castellum-latin-js` à la fin de `index.html`.
 
