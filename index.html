@@ -1849,7 +1849,7 @@ it:[
  {t:"La négation",e:"On place simplement « non » devant le verbe. Il n'y a pas de deuxième mot comme le « pas » du français. Pour répondre « non » tout court, on dit « no ».",x:["Non parlo tedesco. · Je ne parle pas allemand.","Non capisco. · Je ne comprends pas.","No, grazie. · Non, merci."],
   q:[["Io ___ parlo inglese.","non","no","ne","nessuno"],["Lei ___ è italiana.","non","no","nulla","ne"],["Vuoi un caffè? ___, grazie.","No","Non","Ne","Nulla"],["Marco non ___ la pasta.","mangia","mangio","mangi","mangiamo"],["Noi non ___ stanchi.","siamo","sono","sei","siete"]]}],
 es:[
- {t:"Ser ou estar ?",e:"Les deux veulent dire « être ». Ser sert pour l'identité, l'origine, le métier et le caractère. Estar sert pour le lieu, un état passager et l'humeur.",x:["Soy belga. · Je suis belge.","Estoy cansado. · Je suis fatigué.","Madrid está en España. · Madrid est en Espagne."],
+ {t:"Ser ou estar ?",e:"Les deux veulent dire « être ». Ser sert pour l'identité, l'origine, le métier et le caractère. Estar sert pour le lieu, un état passager et l'humeur.",x:["Soy de Francia. · Je viens de France.","Estoy cansado. · Je suis fatigué.","Madrid está en España. · Madrid est en Espagne."],
   q:[["Yo ___ belga.","soy","estoy","es","está"],["Madrid ___ en España.","está","es","son","están"],["Hoy ___ muy cansada.","estoy","soy","es","eres"],["Mi padre ___ médico.","es","está","son","están"],["¿Cómo ___ tú?","estás","eres","es","está"]]},
  {t:"Les articles",e:"Articles définis : el (masculin), la (féminin), los, las (pluriel). Articles indéfinis : un, una, unos, unas. Les mots en -o sont souvent masculins, ceux en -a féminins.",x:["el libro · le livre","la casa · la maison","los libros · les livres","una hermana · une sœur"],
   q:[["___ casa","la","el","los","las"],["___ libros","los","las","el","la"],["___ mesas","las","los","la","el"],["___ coche","el","la","las","los"],["Tengo ___ hermana.","una","un","uno","unas"]]},
@@ -1858,7 +1858,7 @@ es:[
 pt:[
  {t:"Articles et contractions",e:"Articles : o, a, os, as. Ils se collent aux prépositions em (dans) et de (de) : em + o = no, em + a = na, de + o = do, de + a = da.",x:["Moro no Porto. · J'habite à Porto.","Estou na praia. · Je suis à la plage.","O livro da Maria. · Le livre de Maria."],
   q:[["Moro ___ Porto.","no","na","em","do"],["Estou ___ praia.","na","no","em","da"],["O livro ___ Maria.","da","do","de","na"],["___ casas são grandes.","As","Os","A","O"],["Venho ___ trabalho.","do","da","no","de"]]},
- {t:"Ser ou estar ?",e:"Ser : identité, origine, métier, caractère. Estar : état passager, humeur, où l'on se trouve à un moment donné.",x:["Sou belga. · Je suis belge.","Estou cansado. · Je suis fatigué.","Onde estás? · Où es-tu ?"],
+ {t:"Ser ou estar ?",e:"Ser : identité, origine, métier, caractère. Estar : état passager, humeur, où l'on se trouve à un moment donné.",x:["Sou de França. · Je viens de France.","Estou cansado. · Je suis fatigué.","Onde estás? · Où es-tu ?"],
   q:[["Eu ___ belga.","sou","estou","é","está"],["Hoje eu ___ cansado.","estou","sou","é","está"],["A minha mãe ___ professora.","é","está","são","sou"],["Onde ___ tu?","estás","és","está","é"],["Nós ___ portugueses.","somos","estamos","são","é"]]},
  {t:"La négation",e:"« Não » se place devant le verbe. Avec nada (rien), nunca (jamais) et ninguém (personne), on garde « não » devant le verbe.",x:["Não falo alemão. · Je ne parle pas allemand.","Não tenho nada. · Je n'ai rien.","Não conheço ninguém. · Je ne connais personne."],
   q:[["Eu ___ falo alemão.","não","nem","nada","no"],["Não tenho ___.","nada","algo","sim","alguém"],["Ele ___ come carne.","não","nada","ninguém","sem"],["Não conheço ___.","ninguém","nada","nunca","não"],["Ela não ___ café.","bebe","bebo","bebes","bebem"]]}],
@@ -15350,5 +15350,46 @@ ${dark.replace(/(^|\})\s*([^{}]+)\{/g,(m,a,sel)=>a+sel.split(',').map(s=>':root[
       return ensure(S.tgt).then(()=>{showLoading(false);return f.apply(self,args)})};
     eval(fn+'=wrapped')}catch(e){}});
   const css=document.createElement('style');css.id='castellum-packs-css';css.textContent=`#packLoading{position:fixed;left:50%;top:14px;transform:translateX(-50%);z-index:120;background:var(--surface);color:var(--ink);border:2px solid var(--line);border-radius:99px;padding:8px 14px;font-weight:800;display:flex;gap:8px;align-items:center;box-shadow:0 8px 24px rgba(0,0,0,.15)}`;document.head.appendChild(css);
+})();
+</script>
+<script id="castellum-origin-js">
+/* « Se présenter » adapté à l'apprenant : le pays et la ville suivent la langue qu'il parle
+   (francophone → France, Paris ; hispanophone → Espagne, Madrid…), au lieu de « Je suis belge / J'habite à Bruxelles ».
+   Concerne les 8 langues principales ; les autres gardent les phrases d'origine (traductions non relues sinon). */
+(function(){
+  if(typeof setData!=='function'||typeof COLS==='undefined')return;
+  const ORIG={fr:['Je suis belge',"J'habite à Bruxelles"],it:['Sono belga','Abito a Bruxelles'],es:['Soy belga','Vivo en Bruselas'],pt:['Sou belga','Moro em Bruxelas'],
+    en:["I'm Belgian",'I live in Brussels'],de:['Ich bin Belgier','Ich wohne in Brüssel'],nl:['Ik ben Belg','Ik woon in Brussel'],ary:['Ana beljiki','Ana saken f Bruxelles']};
+  // pays d'origine (selon la langue parlée) → [« je viens de… », « j'habite à… »] dans chaque langue
+  const O=['fr','it','es','pt','en','de','nl','ary'];
+  const FROM={
+    fr:['Je viens de France',"Je viens d'Italie","Je viens d'Espagne",'Je viens du Portugal','Je viens du Royaume-Uni',"Je viens d'Allemagne",'Je viens des Pays-Bas','Je viens du Maroc'],
+    it:['Vengo dalla Francia',"Vengo dall'Italia",'Vengo dalla Spagna','Vengo dal Portogallo','Vengo dal Regno Unito','Vengo dalla Germania','Vengo dai Paesi Bassi','Vengo dal Marocco'],
+    es:['Soy de Francia','Soy de Italia','Soy de España','Soy de Portugal','Soy del Reino Unido','Soy de Alemania','Soy de los Países Bajos','Soy de Marruecos'],
+    pt:['Sou de França','Sou de Itália','Sou de Espanha','Sou de Portugal','Sou do Reino Unido','Sou da Alemanha','Sou dos Países Baixos','Sou de Marrocos'],
+    en:["I'm from France","I'm from Italy","I'm from Spain","I'm from Portugal","I'm from the UK","I'm from Germany","I'm from the Netherlands","I'm from Morocco"],
+    de:['Ich komme aus Frankreich','Ich komme aus Italien','Ich komme aus Spanien','Ich komme aus Portugal','Ich komme aus Großbritannien','Ich komme aus Deutschland','Ich komme aus den Niederlanden','Ich komme aus Marokko'],
+    nl:['Ik kom uit Frankrijk','Ik kom uit Italië','Ik kom uit Spanje','Ik kom uit Portugal','Ik kom uit het Verenigd Koninkrijk','Ik kom uit Duitsland','Ik kom uit Nederland','Ik kom uit Marokko'],
+    ary:['Ana mn Fransa','Ana mn Italia','Ana mn Sbanya','Ana mn l-Portugal','Ana mn Britanya','Ana mn Alamanya','Ana mn Holanda','Ana mn l-Meghrib']};
+  const CITY={
+    fr:["J'habite à Paris","J'habite à Rome","J'habite à Madrid","J'habite à Lisbonne","J'habite à Londres","J'habite à Berlin","J'habite à Amsterdam","J'habite à Casablanca"],
+    it:['Abito a Parigi','Abito a Roma','Abito a Madrid','Abito a Lisbona','Abito a Londra','Abito a Berlino','Abito ad Amsterdam','Abito a Casablanca'],
+    es:['Vivo en París','Vivo en Roma','Vivo en Madrid','Vivo en Lisboa','Vivo en Londres','Vivo en Berlín','Vivo en Ámsterdam','Vivo en Casablanca'],
+    pt:['Moro em Paris','Moro em Roma','Moro em Madrid','Moro em Lisboa','Moro em Londres','Moro em Berlim','Moro em Amesterdão','Moro em Casablanca'],
+    en:['I live in Paris','I live in Rome','I live in Madrid','I live in Lisbon','I live in London','I live in Berlin','I live in Amsterdam','I live in Casablanca'],
+    de:['Ich wohne in Paris','Ich wohne in Rom','Ich wohne in Madrid','Ich wohne in Lissabon','Ich wohne in London','Ich wohne in Berlin','Ich wohne in Amsterdam','Ich wohne in Casablanca'],
+    nl:['Ik woon in Parijs','Ik woon in Rome','Ik woon in Madrid','Ik woon in Lissabon','Ik woon in Londen','Ik woon in Berlijn','Ik woon in Amsterdam','Ik woon in Casablanca'],
+    ary:['Ana saken f Paris','Ana saken f Roma','Ana saken f Madrid','Ana saken f Lichbona','Ana saken f London','Ana saken f Berlin','Ana saken f Amsterdam','Ana saken f Dar l-Bida']};
+  const prev=setData;
+  setData=function(id){const r=prev.apply(this,arguments);
+    try{if(!Array.isArray(r)||!COLS.includes(S.tgt)||!ORIG[S.src]||!ORIG[S.tgt])return r;
+      const o=O.indexOf(S.src);if(o<0)return r;
+      const iFrom=r.findIndex(x=>x&&x.t===ORIG[S.tgt][0]),iCity=r.findIndex(x=>x&&x.t===ORIG[S.tgt][1]);
+      if(iFrom<0&&iCity<0)return r;
+      const out=r.slice();
+      if(iFrom>=0)out[iFrom]=Object.assign({},r[iFrom],{s:FROM[S.src][o],t:FROM[S.tgt][o]});
+      if(iCity>=0)out[iCity]=Object.assign({},r[iCity],{s:CITY[S.src][o],t:CITY[S.tgt][o]});
+      return out}catch(e){return r}};
+  window.CastellumOrigin={FROM,CITY,O};
 })();
 </script>
