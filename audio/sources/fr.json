@@ -21562,6 +21562,2631 @@
    "text": "Super. Avec ça, je pourrai payer mes études.",
    "fr": "Super. Avec ça, je pourrai payer mes études.",
    "where": "Scène B1 b1u23"
+  },
+  {
+   "text": "Interdire les voitures en centre-ville, c'est une excellente idée.",
+   "fr": "Interdire les voitures en centre-ville, c'est une excellente idée.",
+   "where": "Scène B2 b2u0"
+  },
+  {
+   "text": "Je comprends ton point de vue, mais pense aux gens qui habitent loin.",
+   "fr": "Je comprends ton point de vue, mais pense aux gens qui habitent loin.",
+   "where": "Scène B2 b2u0"
+  },
+  {
+   "text": "Il y a les transports en commun. Au contraire, ça les obligerait à s'améliorer.",
+   "fr": "Il y a les transports en commun. Au contraire, ça les obligerait à s'améliorer.",
+   "where": "Scène B2 b2u0"
+  },
+  {
+   "text": "Je te l'accorde, mais en attendant, les commerçants vont perdre des clients.",
+   "fr": "Je te l'accorde, mais en attendant, les commerçants vont perdre des clients.",
+   "where": "Scène B2 b2u0"
+  },
+  {
+   "text": "Ça ne prouve rien. Dans les villes qui l'ont fait, les commerces se portent mieux.",
+   "fr": "Ça ne prouve rien. Dans les villes qui l'ont fait, les commerces se portent mieux.",
+   "where": "Scène B2 b2u0"
+  },
+  {
+   "text": "Il n'en reste pas moins qu'il faut une période de transition. Tu exagères un peu.",
+   "fr": "Il n'en reste pas moins qu'il faut une période de transition. Tu exagères un peu.",
+   "where": "Scène B2 b2u0"
+  },
+  {
+   "text": "Tu as vu les informations ce matin ? Il y a une grève des transports jeudi.",
+   "fr": "Tu as vu les informations ce matin ? Il y a une grève des transports jeudi.",
+   "where": "Scène B2 b2u1"
+  },
+  {
+   "text": "Oui, d'après les médias, ça va durer plusieurs jours.",
+   "fr": "Oui, d'après les médias, ça va durer plusieurs jours.",
+   "where": "Scène B2 b2u1"
+  },
+  {
+   "text": "Le ministre a annoncé une réforme des retraites, c'est pour ça.",
+   "fr": "Le ministre a annoncé une réforme des retraites, c'est pour ça.",
+   "where": "Scène B2 b2u1"
+  },
+  {
+   "text": "Et en plus, les prix ont fortement augmenté. Les gens sont en colère.",
+   "fr": "Et en plus, les prix ont fortement augmenté. Les gens sont en colère.",
+   "where": "Scène B2 b2u1"
+  },
+  {
+   "text": "Il y aura une manifestation samedi. Tu y vas ?",
+   "fr": "Il y aura une manifestation samedi. Tu y vas ?",
+   "where": "Scène B2 b2u1"
+  },
+  {
+   "text": "Peut-être. Mais d'abord, il faut que je trouve comment venir au bureau jeudi !",
+   "fr": "Peut-être. Mais d'abord, il faut que je trouve comment venir au bureau jeudi !",
+   "where": "Scène B2 b2u1"
+  },
+  {
+   "text": "Ce canapé me plaît, mais il est un peu cher.",
+   "fr": "Ce canapé me plaît, mais il est un peu cher.",
+   "where": "Scène B2 b2u2"
+  },
+  {
+   "text": "Je comprends votre inquiétude. Quel est votre budget ?",
+   "fr": "Je comprends votre inquiétude. Quel est votre budget ?",
+   "where": "Scène B2 b2u2"
+  },
+  {
+   "text": "Je pensais à huit cents euros, pas plus.",
+   "fr": "Je pensais à huit cents euros, pas plus.",
+   "where": "Scène B2 b2u2"
+  },
+  {
+   "text": "Le rapport qualité-prix est excellent. Je peux vous faire une remise de dix pour cent.",
+   "fr": "Le rapport qualité-prix est excellent. Je peux vous faire une remise de dix pour cent.",
+   "where": "Scène B2 b2u2"
+  },
+  {
+   "text": "Et la livraison, elle est comprise ?",
+   "fr": "Et la livraison, elle est comprise ?",
+   "where": "Scène B2 b2u2"
+  },
+  {
+   "text": "Si vous signez aujourd'hui, la livraison est offerte. C'est notre dernière offre.",
+   "fr": "Si vous signez aujourd'hui, la livraison est offerte. C'est notre dernière offre.",
+   "where": "Scène B2 b2u2"
+  },
+  {
+   "text": "Bon… On peut trouver un accord. Je le prends.",
+   "fr": "Bon… On peut trouver un accord. Je le prends.",
+   "where": "Scène B2 b2u2"
+  },
+  {
+   "text": "Ça y est, j'ai les résultats… J'ai réussi !",
+   "fr": "Ça y est, j'ai les résultats… J'ai réussi !",
+   "where": "Scène B2 b2u3"
+  },
+  {
+   "text": "Je ne m'y attendais pas du tout… Enfin si, mais bravo ! Je suis fier de toi.",
+   "fr": "Je ne m'y attendais pas du tout… Enfin si, mais bravo ! Je suis fier de toi.",
+   "where": "Scène B2 b2u3"
+  },
+  {
+   "text": "Merci ! Je suis tellement soulagée. J'avais honte d'avoir raté la première fois.",
+   "fr": "Merci ! Je suis tellement soulagée. J'avais honte d'avoir raté la première fois.",
+   "where": "Scène B2 b2u3"
+  },
+  {
+   "text": "Tu n'avais pas à avoir honte. Tu as énormément travaillé.",
+   "fr": "Tu n'avais pas à avoir honte. Tu as énormément travaillé.",
+   "where": "Scène B2 b2u3"
+  },
+  {
+   "text": "Ça me touche beaucoup que tu dises ça. Par contre, Paul a échoué. Je suis déçue pour lui.",
+   "fr": "Ça me touche beaucoup que tu dises ça. Par contre, Paul a échoué. Je suis déçue pour lui.",
+   "where": "Scène B2 b2u3"
+  },
+  {
+   "text": "Il retentera l'année prochaine. Ce soir, on fête ça !",
+   "fr": "Il retentera l'année prochaine. Ce soir, on fête ça !",
+   "where": "Scène B2 b2u3"
+  },
+  {
+   "text": "Alors, ce film ? Moi, la fin m'a déçu.",
+   "fr": "Alors, ce film ? Moi, la fin m'a déçu.",
+   "where": "Scène B2 b2u4"
+  },
+  {
+   "text": "Ah bon ? Moi, j'ai trouvé l'intrigue passionnante jusqu'au bout.",
+   "fr": "Ah bon ? Moi, j'ai trouvé l'intrigue passionnante jusqu'au bout.",
+   "where": "Scène B2 b2u4"
+  },
+  {
+   "text": "Le réalisateur a du talent, mais l'acteur principal ne m'a pas convaincu.",
+   "fr": "Le réalisateur a du talent, mais l'acteur principal ne m'a pas convaincu.",
+   "where": "Scène B2 b2u4"
+  },
+  {
+   "text": "C'est vrai qu'il en fait trop. Tu as lu le roman ?",
+   "fr": "C'est vrai qu'il en fait trop. Tu as lu le roman ?",
+   "where": "Scène B2 b2u4"
+  },
+  {
+   "text": "Non. Ça vaut le coup ?",
+   "fr": "Non. Ça vaut le coup ?",
+   "where": "Scène B2 b2u4"
+  },
+  {
+   "text": "Je te le conseille vivement. C'est bien meilleur que le film !",
+   "fr": "Je te le conseille vivement. C'est bien meilleur que le film !",
+   "where": "Scène B2 b2u4"
+  },
+  {
+   "text": "Écoute ça : des chercheurs ont découvert un nouvel antibiotique grâce à l'intelligence artificielle.",
+   "fr": "Écoute ça : des chercheurs ont découvert un nouvel antibiotique grâce à l'intelligence artificielle.",
+   "where": "Scène B2 b2u5"
+  },
+  {
+   "text": "C'est une avancée majeure ! Comment ça marche ?",
+   "fr": "C'est une avancée majeure ! Comment ça marche ?",
+   "where": "Scène B2 b2u5"
+  },
+  {
+   "text": "Le logiciel a analysé des millions de molécules en quelques jours.",
+   "fr": "Le logiciel a analysé des millions de molécules en quelques jours.",
+   "where": "Scène B2 b2u5"
+  },
+  {
+   "text": "Impressionnant. Mais qui contrôle les données utilisées ?",
+   "fr": "Impressionnant. Mais qui contrôle les données utilisées ?",
+   "where": "Scène B2 b2u5"
+  },
+  {
+   "text": "Bonne question. D'après l'article, le système a été conçu pour aider les chercheurs, pas pour les remplacer.",
+   "fr": "Bonne question. D'après l'article, le système a été conçu pour aider les chercheurs, pas pour les remplacer.",
+   "where": "Scène B2 b2u5"
+  },
+  {
+   "text": "Tant mieux. Il faudra quand même des années de tests avant d'avoir un médicament.",
+   "fr": "Tant mieux. Il faudra quand même des années de tests avant d'avoir un médicament.",
+   "where": "Scène B2 b2u5"
+  },
+  {
+   "text": "Vous avez l'air épuisé. Vous dormez combien d'heures par nuit ?",
+   "fr": "Vous avez l'air épuisé. Vous dormez combien d'heures par nuit ?",
+   "where": "Scène B2 b2u6"
+  },
+  {
+   "text": "Cinq heures, à peine. Je travaille énormément en ce moment, je suis au bord du burn-out.",
+   "fr": "Cinq heures, à peine. Je travaille énormément en ce moment, je suis au bord du burn-out.",
+   "where": "Scène B2 b2u6"
+  },
+  {
+   "text": "Il faut que vous dormiez davantage, et que vous ralentissiez.",
+   "fr": "Il faut que vous dormiez davantage, et que vous ralentissiez.",
+   "where": "Scène B2 b2u6"
+  },
+  {
+   "text": "Bien que je fasse du sport, je n'arrive pas à me détendre.",
+   "fr": "Bien que je fasse du sport, je n'arrive pas à me détendre.",
+   "where": "Scène B2 b2u6"
+  },
+  {
+   "text": "Le sport, c'est bien, mais pas le soir. Et coupez les écrans une heure avant de dormir.",
+   "fr": "Le sport, c'est bien, mais pas le soir. Et coupez les écrans une heure avant de dormir.",
+   "where": "Scène B2 b2u6"
+  },
+  {
+   "text": "D'accord. Je vais essayer de trouver un meilleur équilibre entre vie pro et vie perso.",
+   "fr": "D'accord. Je vais essayer de trouver un meilleur équilibre entre vie pro et vie perso.",
+   "where": "Scène B2 b2u6"
+  },
+  {
+   "text": "Bonjour. C'est pour quelle démarche ?",
+   "fr": "Bonjour. C'est pour quelle démarche ?",
+   "where": "Scène B2 b2u7"
+  },
+  {
+   "text": "Il faut que je renouvelle ma carte d'identité. J'ai rempli le formulaire en ligne.",
+   "fr": "Il faut que je renouvelle ma carte d'identité. J'ai rempli le formulaire en ligne.",
+   "where": "Scène B2 b2u7"
+  },
+  {
+   "text": "Voyons votre dossier… Il manque une pièce justificative : un justificatif de domicile.",
+   "fr": "Voyons votre dossier… Il manque une pièce justificative : un justificatif de domicile.",
+   "where": "Scène B2 b2u7"
+  },
+  {
+   "text": "Ah ! J'ai une facture d'électricité sur mon téléphone, ça suffit ?",
+   "fr": "Ah ! J'ai une facture d'électricité sur mon téléphone, ça suffit ?",
+   "where": "Scène B2 b2u7"
+  },
+  {
+   "text": "Il faut une version imprimée, de moins de trois mois.",
+   "fr": "Il faut une version imprimée, de moins de trois mois.",
+   "where": "Scène B2 b2u7"
+  },
+  {
+   "text": "D'accord. Et quel est le délai ?",
+   "fr": "D'accord. Et quel est le délai ?",
+   "where": "Scène B2 b2u7"
+  },
+  {
+   "text": "Environ trois semaines. Je vous donne un nouveau rendez-vous.",
+   "fr": "Environ trois semaines. Je vous donne un nouveau rendez-vous.",
+   "where": "Scène B2 b2u7"
+  },
+  {
+   "text": "Ils jouent en 4-3-3 avec un pressing très haut. Ça étouffe l'adversaire !",
+   "fr": "Ils jouent en 4-3-3 avec un pressing très haut. Ça étouffe l'adversaire !",
+   "where": "Scène B2 b2u8"
+  },
+  {
+   "text": "Oui, mais attention aux contre-attaques… Regarde, but !",
+   "fr": "Oui, mais attention aux contre-attaques… Regarde, but !",
+   "where": "Scène B2 b2u8"
+  },
+  {
+   "text": "Non ! Le but a été refusé pour hors-jeu.",
+   "fr": "Non ! Le but a été refusé pour hors-jeu.",
+   "where": "Scène B2 b2u8"
+  },
+  {
+   "text": "Quoi ? Il n'était pas hors-jeu, l'arbitre a besoin de lunettes !",
+   "fr": "Quoi ? Il n'était pas hors-jeu, l'arbitre a besoin de lunettes !",
+   "where": "Scène B2 b2u8"
+  },
+  {
+   "text": "C'est la vidéo qui a décidé. Au fait, tu as vu le mercato ? Leur attaquant a été transféré pour quatre-vingts millions.",
+   "fr": "C'est la vidéo qui a décidé. Au fait, tu as vu le mercato ? Leur attaquant a été transféré pour quatre-vingts millions.",
+   "where": "Scène B2 b2u8"
+  },
+  {
+   "text": "Quatre-vingts millions ? À ce prix-là, il devrait marquer à chaque match !",
+   "fr": "Quatre-vingts millions ? À ce prix-là, il devrait marquer à chaque match !",
+   "where": "Scène B2 b2u8"
+  },
+  {
+   "text": "Regarde, j'ai partagé cet article : le chocolat guérit le rhume !",
+   "fr": "Regarde, j'ai partagé cet article : le chocolat guérit le rhume !",
+   "where": "Scène B2 b2u9"
+  },
+  {
+   "text": "Maman… C'est une fake news. Il faut toujours vérifier la source avant de partager.",
+   "fr": "Maman… C'est une fake news. Il faut toujours vérifier la source avant de partager.",
+   "where": "Scène B2 b2u9"
+  },
+  {
+   "text": "Mais je l'ai vu partout sur mon fil d'actualité !",
+   "fr": "Mais je l'ai vu partout sur mon fil d'actualité !",
+   "where": "Scène B2 b2u9"
+  },
+  {
+   "text": "C'est normal : l'algorithme ne te montre que ce que tu veux voir.",
+   "fr": "C'est normal : l'algorithme ne te montre que ce que tu veux voir.",
+   "where": "Scène B2 b2u9"
+  },
+  {
+   "text": "Et cette influenceuse qui recommande une crème, elle est sincère ?",
+   "fr": "Et cette influenceuse qui recommande une crème, elle est sincère ?",
+   "where": "Scène B2 b2u9"
+  },
+  {
+   "text": "Regarde en bas : c'est une collaboration rémunérée, pas un vrai avis.",
+   "fr": "Regarde en bas : c'est une collaboration rémunérée, pas un vrai avis.",
+   "where": "Scène B2 b2u9"
+  },
+  {
+   "text": "Ça craint, on a raté le dernier train !",
+   "fr": "Ça craint, on a raté le dernier train !",
+   "where": "Scène B2 b2u10"
+  },
+  {
+   "text": "Je t'avais dit que c'était un plan foireux de partir si tard.",
+   "fr": "Je t'avais dit que c'était un plan foireux de partir si tard.",
+   "where": "Scène B2 b2u10"
+  },
+  {
+   "text": "Bon, on fait comment ? Je bosse demain matin, c'est la galère.",
+   "fr": "Bon, on fait comment ? Je bosse demain matin, c'est la galère.",
+   "where": "Scène B2 b2u10"
+  },
+  {
+   "text": "On prend un taxi à deux. Sinon, on peut dormir chez mon cousin.",
+   "fr": "On prend un taxi à deux. Sinon, on peut dormir chez mon cousin.",
+   "where": "Scène B2 b2u10"
+  },
+  {
+   "text": "Ton cousin ? Celui qui s'incruste toujours à nos soirées ?",
+   "fr": "Ton cousin ? Celui qui s'incruste toujours à nos soirées ?",
+   "where": "Scène B2 b2u10"
+  },
+  {
+   "text": "Lui-même. Tu préfères marcher trois heures ?",
+   "fr": "Lui-même. Tu préfères marcher trois heures ?",
+   "where": "Scène B2 b2u10"
+  },
+  {
+   "text": "Alors, vous avez trouvé l'appartement de vos rêves ?",
+   "fr": "Alors, vous avez trouvé l'appartement de vos rêves ?",
+   "where": "Scène B2 b2u11"
+  },
+  {
+   "text": "Oui, mais on hésite entre louer et acheter. Notre loyer est de neuf cents euros, charges comprises.",
+   "fr": "Oui, mais on hésite entre louer et acheter. Notre loyer est de neuf cents euros, charges comprises.",
+   "where": "Scène B2 b2u11"
+  },
+  {
+   "text": "Pour un crédit immobilier, la banque exige un apport de vingt pour cent.",
+   "fr": "Pour un crédit immobilier, la banque exige un apport de vingt pour cent.",
+   "where": "Scène B2 b2u11"
+  },
+  {
+   "text": "Ça fait quarante mille euros… On a un peu moins.",
+   "fr": "Ça fait quarante mille euros… On a un peu moins.",
+   "where": "Scène B2 b2u11"
+  },
+  {
+   "text": "Il faudrait que le prix baisse un peu, ou que vous empruntiez sur vingt-cinq ans.",
+   "fr": "Il faudrait que le prix baisse un peu, ou que vous empruntiez sur vingt-cinq ans.",
+   "where": "Scène B2 b2u11"
+  },
+  {
+   "text": "On va négocier avec le vendeur. Je reviens vers vous la semaine prochaine.",
+   "fr": "On va négocier avec le vendeur. Je reviens vers vous la semaine prochaine.",
+   "where": "Scène B2 b2u11"
+  },
+  {
+   "text": "On jette encore beaucoup trop de nourriture à la maison.",
+   "fr": "On jette encore beaucoup trop de nourriture à la maison.",
+   "where": "Scène B2 b2u12"
+  },
+  {
+   "text": "C'est vrai. Il faudrait faire une liste avant d'aller faire les courses.",
+   "fr": "C'est vrai. Il faudrait faire une liste avant d'aller faire les courses.",
+   "where": "Scène B2 b2u12"
+  },
+  {
+   "text": "Et acheter en vrac, pour avoir moins d'emballages.",
+   "fr": "Et acheter en vrac, pour avoir moins d'emballages.",
+   "where": "Scène B2 b2u12"
+  },
+  {
+   "text": "Bonne idée. Au fait, les emballages en carton, ils vont dans quelle poubelle ?",
+   "fr": "Bonne idée. Au fait, les emballages en carton, ils vont dans quelle poubelle ?",
+   "where": "Scène B2 b2u12"
+  },
+  {
+   "text": "Dans la poubelle jaune. Et avant d'acheter du neuf, je regarde toujours d'occasion.",
+   "fr": "Dans la poubelle jaune. Et avant d'acheter du neuf, je regarde toujours d'occasion.",
+   "where": "Scène B2 b2u12"
+  },
+  {
+   "text": "Moi aussi, maintenant. Mon vélo, je l'ai trouvé d'occasion pour cinquante euros !",
+   "fr": "Moi aussi, maintenant. Mon vélo, je l'ai trouvé d'occasion pour cinquante euros !",
+   "where": "Scène B2 b2u12"
+  },
+  {
+   "text": "Avec l'inflation, mon salaire ne suit plus. J'ai du mal à joindre les deux bouts.",
+   "fr": "Avec l'inflation, mon salaire ne suit plus. J'ai du mal à joindre les deux bouts.",
+   "where": "Scène B2 b2u13"
+  },
+  {
+   "text": "Moi aussi, j'étais à découvert chaque fin de mois.",
+   "fr": "Moi aussi, j'étais à découvert chaque fin de mois.",
+   "where": "Scène B2 b2u13"
+  },
+  {
+   "text": "Et maintenant ?",
+   "fr": "Et maintenant ?",
+   "where": "Scène B2 b2u13"
+  },
+  {
+   "text": "Depuis que je tiens un budget, je sais enfin où part mon argent.",
+   "fr": "Depuis que je tiens un budget, je sais enfin où part mon argent.",
+   "where": "Scène B2 b2u13"
+  },
+  {
+   "text": "Tu arrives à mettre de l'argent de côté ?",
+   "fr": "Tu arrives à mettre de l'argent de côté ?",
+   "where": "Scène B2 b2u13"
+  },
+  {
+   "text": "Un peu. Je me fixe un petit objectif chaque mois, et je le place sans risque.",
+   "fr": "Un peu. Je me fixe un petit objectif chaque mois, et je le place sans risque.",
+   "where": "Scène B2 b2u13"
+  },
+  {
+   "text": "Votre fils est un élève brillant, mais il manque de confiance en lui.",
+   "fr": "Votre fils est un élève brillant, mais il manque de confiance en lui.",
+   "where": "Scène B2 b2u14"
+  },
+  {
+   "text": "Il dit qu'on lui met une pression énorme depuis le collège.",
+   "fr": "Il dit qu'on lui met une pression énorme depuis le collège.",
+   "where": "Scène B2 b2u14"
+  },
+  {
+   "text": "Je comprends. Les notes ne reflètent pas toujours son vrai niveau.",
+   "fr": "Je comprends. Les notes ne reflètent pas toujours son vrai niveau.",
+   "where": "Scène B2 b2u14"
+  },
+  {
+   "text": "Et pour l'orientation ? Il ne sait pas du tout quoi faire après le bac.",
+   "fr": "Et pour l'orientation ? Il ne sait pas du tout quoi faire après le bac.",
+   "where": "Scène B2 b2u14"
+  },
+  {
+   "text": "C'est normal. À dix-sept ans, on n'a souvent aucune idée de son avenir.",
+   "fr": "C'est normal. À dix-sept ans, on n'a souvent aucune idée de son avenir.",
+   "where": "Scène B2 b2u14"
+  },
+  {
+   "text": "Alors on va prendre le temps. Une grande école, ce n'est pas la seule voie.",
+   "fr": "Alors on va prendre le temps. Une grande école, ce n'est pas la seule voie.",
+   "where": "Scène B2 b2u14"
+  },
+  {
+   "text": "Tu as l'air énervé. Ça s'est mal passé, la réunion ?",
+   "fr": "Tu as l'air énervé. Ça s'est mal passé, la réunion ?",
+   "where": "Scène B2 b2u15"
+  },
+  {
+   "text": "C'est Marc. Il s'attribue toujours le mérite du travail des autres.",
+   "fr": "C'est Marc. Il s'attribue toujours le mérite du travail des autres.",
+   "where": "Scène B2 b2u15"
+  },
+  {
+   "text": "Avec lui, j'ai l'impression de marcher sur des œufs.",
+   "fr": "Avec lui, j'ai l'impression de marcher sur des œufs.",
+   "where": "Scène B2 b2u15"
+  },
+  {
+   "text": "Il vaudrait mieux mettre les choses à plat avec lui, non ?",
+   "fr": "Il vaudrait mieux mettre les choses à plat avec lui, non ?",
+   "where": "Scène B2 b2u15"
+  },
+  {
+   "text": "Oui, mais calmement. Fais-lui un retour constructif.",
+   "fr": "Oui, mais calmement. Fais-lui un retour constructif.",
+   "where": "Scène B2 b2u15"
+  },
+  {
+   "text": "Tu as raison. Je lui en parle demain, en tête-à-tête.",
+   "fr": "Tu as raison. Je lui en parle demain, en tête-à-tête.",
+   "where": "Scène B2 b2u15"
+  },
+  {
+   "text": "Service client, bonjour. Que puis-je faire pour vous ?",
+   "fr": "Service client, bonjour. Que puis-je faire pour vous ?",
+   "where": "Scène B2 b2u16"
+  },
+  {
+   "text": "Bonjour. J'ai commandé un aspirateur, et il est arrivé défectueux.",
+   "fr": "Bonjour. J'ai commandé un aspirateur, et il est arrivé défectueux.",
+   "where": "Scène B2 b2u16"
+  },
+  {
+   "text": "Je suis désolée. Il est encore sous garantie ?",
+   "fr": "Je suis désolée. Il est encore sous garantie ?",
+   "where": "Scène B2 b2u16"
+  },
+  {
+   "text": "Oui. Et en plus, on m'a facturé deux fois. Ça fait trois semaines que j'attends une réponse.",
+   "fr": "Oui. Et en plus, on m'a facturé deux fois. Ça fait trois semaines que j'attends une réponse.",
+   "where": "Scène B2 b2u16"
+  },
+  {
+   "text": "Je vois votre dossier. Je lance le remboursement du deuxième paiement tout de suite.",
+   "fr": "Je vois votre dossier. Je lance le remboursement du deuxième paiement tout de suite.",
+   "where": "Scène B2 b2u16"
+  },
+  {
+   "text": "Et pour l'aspirateur ? Je voudrais un échange, pas une réparation.",
+   "fr": "Et pour l'aspirateur ? Je voudrais un échange, pas une réparation.",
+   "where": "Scène B2 b2u16"
+  },
+  {
+   "text": "C'est noté. Un transporteur passera le récupérer jeudi.",
+   "fr": "C'est noté. Un transporteur passera le récupérer jeudi.",
+   "where": "Scène B2 b2u16"
+  },
+  {
+   "text": "Pas de téléphone à table, s'il te plaît.",
+   "fr": "Pas de téléphone à table, s'il te plaît.",
+   "where": "Scène B2 b2u17"
+  },
+  {
+   "text": "Mais chez mes copines, tout le monde a le droit !",
+   "fr": "Mais chez mes copines, tout le monde a le droit !",
+   "where": "Scène B2 b2u17"
+  },
+  {
+   "text": "Ici, on fixe des limites. Tu as déjà passé trois heures devant un écran aujourd'hui.",
+   "fr": "Ici, on fixe des limites. Tu as déjà passé trois heures devant un écran aujourd'hui.",
+   "where": "Scène B2 b2u17"
+  },
+  {
+   "text": "C'est pas juste ! Je fais jamais rien de mal.",
+   "fr": "C'est pas juste ! Je fais jamais rien de mal.",
+   "where": "Scène B2 b2u17"
+  },
+  {
+   "text": "Je ne dis pas ça. Après le dîner, tu ranges ta chambre, et tu pourras le reprendre.",
+   "fr": "Je ne dis pas ça. Après le dîner, tu ranges ta chambre, et tu pourras le reprendre.",
+   "where": "Scène B2 b2u17"
+  },
+  {
+   "text": "Bon… d'accord. Mais trente minutes, alors.",
+   "fr": "Bon… d'accord. Mais trente minutes, alors.",
+   "where": "Scène B2 b2u17"
+  },
+  {
+   "text": "Bonsoir… Excusez-moi, vous pourriez baisser la musique ? Il est minuit.",
+   "fr": "Bonsoir… Excusez-moi, vous pourriez baisser la musique ? Il est minuit.",
+   "where": "Scène B2 b2u18"
+  },
+  {
+   "text": "Oh, pardon ! On fête un anniversaire, je n'ai pas vu l'heure.",
+   "fr": "Oh, pardon ! On fête un anniversaire, je n'ai pas vu l'heure.",
+   "where": "Scène B2 b2u18"
+  },
+  {
+   "text": "Ce n'est pas grave. Au fait, il y a une fuite chez moi : ça vient peut-être de chez vous.",
+   "fr": "Ce n'est pas grave. Au fait, il y a une fuite chez moi : ça vient peut-être de chez vous.",
+   "where": "Scène B2 b2u18"
+  },
+  {
+   "text": "Je vais vérifier tout de suite, et je préviens le syndic demain.",
+   "fr": "Je vais vérifier tout de suite, et je préviens le syndic demain.",
+   "where": "Scène B2 b2u18"
+  },
+  {
+   "text": "Merci. Et on organise une fête des voisins en juin. Vous venez ?",
+   "fr": "Merci. Et on organise une fête des voisins en juin. Vous venez ?",
+   "where": "Scène B2 b2u18"
+  },
+  {
+   "text": "Avec plaisir ! Et cette fois, c'est moi qui apporte la musique… pas trop fort.",
+   "fr": "Avec plaisir ! Et cette fois, c'est moi qui apporte la musique… pas trop fort.",
+   "where": "Scène B2 b2u18"
+  },
+  {
+   "text": "Cette veste vous va comme un gant !",
+   "fr": "Cette veste vous va comme un gant !",
+   "where": "Scène B2 b2u19"
+  },
+  {
+   "text": "Vous trouvez ? D'habitude, ce n'est pas trop mon style.",
+   "fr": "Vous trouvez ? D'habitude, ce n'est pas trop mon style.",
+   "where": "Scène B2 b2u19"
+  },
+  {
+   "text": "Elle est d'occasion, mais en parfait état. Et c'est une marque éthique.",
+   "fr": "Elle est d'occasion, mais en parfait état. Et c'est une marque éthique.",
+   "where": "Scène B2 b2u19"
+  },
+  {
+   "text": "De toute façon, je m'habille surtout en seconde main.",
+   "fr": "De toute façon, je m'habille surtout en seconde main.",
+   "where": "Scène B2 b2u19"
+  },
+  {
+   "text": "Avec un pantalon noir, ce sera parfait. Ce n'est pas du tout démodé.",
+   "fr": "Avec un pantalon noir, ce sera parfait. Ce n'est pas du tout démodé.",
+   "where": "Scène B2 b2u19"
+  },
+  {
+   "text": "Vendu ! Au mariage, tout le monde va dire que j'ai un look d'enfer.",
+   "fr": "Vendu ! Au mariage, tout le monde va dire que j'ai un look d'enfer.",
+   "where": "Scène B2 b2u19"
+  },
+  {
+   "text": "Je n'en peux plus… Trois séries de dix, c'est déjà beaucoup.",
+   "fr": "Je n'en peux plus… Trois séries de dix, c'est déjà beaucoup.",
+   "where": "Scène B2 b2u20"
+  },
+  {
+   "text": "Tu veux prendre du muscle, oui ou non ?",
+   "fr": "Tu veux prendre du muscle, oui ou non ?",
+   "where": "Scène B2 b2u20"
+  },
+  {
+   "text": "Oui, mais pas me casser le dos.",
+   "fr": "Oui, mais pas me casser le dos.",
+   "where": "Scène B2 b2u20"
+  },
+  {
+   "text": "Garde le dos droit, alors. Bravo ! Maintenant, vingt minutes de tapis de course.",
+   "fr": "Garde le dos droit, alors. Bravo ! Maintenant, vingt minutes de tapis de course.",
+   "where": "Scène B2 b2u20"
+  },
+  {
+   "text": "Vingt minutes ? Tu me pousses à fond, toi !",
+   "fr": "Vingt minutes ? Tu me pousses à fond, toi !",
+   "where": "Scène B2 b2u20"
+  },
+  {
+   "text": "On part tôt demain, pour éviter la chaleur. Le dénivelé est important.",
+   "fr": "On part tôt demain, pour éviter la chaleur. Le dénivelé est important.",
+   "where": "Scène B2 b2u21"
+  },
+  {
+   "text": "D'accord. Il reste combien de kilomètres jusqu'au refuge ?",
+   "fr": "D'accord. Il reste combien de kilomètres jusqu'au refuge ?",
+   "where": "Scène B2 b2u21"
+  },
+  {
+   "text": "Environ six. Mais le balisage n'est pas clair après le lac.",
+   "fr": "Environ six. Mais le balisage n'est pas clair après le lac.",
+   "where": "Scène B2 b2u21"
+  },
+  {
+   "text": "On prendra la carte. Et j'ai déjà rempli les gourdes.",
+   "fr": "On prendra la carte. Et j'ai déjà rempli les gourdes.",
+   "where": "Scène B2 b2u21"
+  },
+  {
+   "text": "Parfait. Attention, ils annoncent de l'orage dans l'après-midi.",
+   "fr": "Parfait. Attention, ils annoncent de l'orage dans l'après-midi.",
+   "where": "Scène B2 b2u21"
+  },
+  {
+   "text": "Alors on se dépêche. La vue d'en haut vaut vraiment le coup !",
+   "fr": "Alors on se dépêche. La vue d'en haut vaut vraiment le coup !",
+   "where": "Scène B2 b2u21"
+  },
+  {
+   "text": "C'était incroyable ! L'ambiance était électrique.",
+   "fr": "C'était incroyable ! L'ambiance était électrique.",
+   "where": "Scène B2 b2u22"
+  },
+  {
+   "text": "Il a chanté tous ses tubes ! Et le rappel, à la fin…",
+   "fr": "Il a chanté tous ses tubes ! Et le rappel, à la fin…",
+   "where": "Scène B2 b2u22"
+  },
+  {
+   "text": "J'ai encore du mal à croire qu'on était au premier rang.",
+   "fr": "J'ai encore du mal à croire qu'on était au premier rang.",
+   "where": "Scène B2 b2u22"
+  },
+  {
+   "text": "Pourtant, les places sont parties en dix minutes. On a eu de la chance.",
+   "fr": "Pourtant, les places sont parties en dix minutes. On a eu de la chance.",
+   "where": "Scène B2 b2u22"
+  },
+  {
+   "text": "Et la première partie, tu as aimé ?",
+   "fr": "Et la première partie, tu as aimé ?",
+   "where": "Scène B2 b2u22"
+  },
+  {
+   "text": "Pas trop… Mais pour lui, j'y retournerais demain s'il le fallait !",
+   "fr": "Pas trop… Mais pour lui, j'y retournerais demain s'il le fallait !",
+   "where": "Scène B2 b2u22"
+  },
+  {
+   "text": "Tu veux venir avec moi samedi ? Je donne un coup de main à la banque alimentaire.",
+   "fr": "Tu veux venir avec moi samedi ? Je donne un coup de main à la banque alimentaire.",
+   "where": "Scène B2 b2u23"
+  },
+  {
+   "text": "Avec plaisir. Tu fais du bénévolat depuis longtemps ?",
+   "fr": "Avec plaisir. Tu fais du bénévolat depuis longtemps ?",
+   "where": "Scène B2 b2u23"
+  },
+  {
+   "text": "Deux ans. De plus en plus de familles viennent. L'écart entre riches et pauvres se creuse.",
+   "fr": "Deux ans. De plus en plus de familles viennent. L'écart entre riches et pauvres se creuse.",
+   "where": "Scène B2 b2u23"
+  },
+  {
+   "text": "C'est triste. Tout le monde n'a pas les mêmes chances.",
+   "fr": "C'est triste. Tout le monde n'a pas les mêmes chances.",
+   "where": "Scène B2 b2u23"
+  },
+  {
+   "text": "Oui. Et l'hiver, l'association aide aussi les sans-abri.",
+   "fr": "Oui. Et l'hiver, l'association aide aussi les sans-abri.",
+   "where": "Scène B2 b2u23"
+  },
+  {
+   "text": "Compte sur moi. Il faut agir, pas seulement en parler.",
+   "fr": "Compte sur moi. Il faut agir, pas seulement en parler.",
+   "where": "Scène B2 b2u23"
+  },
+  {
+   "text": "Tu as l'air d'avoir le cafard. Qu'est-ce qui se passe ?",
+   "fr": "Tu as l'air d'avoir le cafard. Qu'est-ce qui se passe ?",
+   "where": "Scène C1 c1u0"
+  },
+  {
+   "text": "Marc m'a posé un lapin hier soir. Et le restaurant m'a coûté les yeux de la tête.",
+   "fr": "Marc m'a posé un lapin hier soir. Et le restaurant m'a coûté les yeux de la tête.",
+   "where": "Scène C1 c1u0"
+  },
+  {
+   "text": "Il est toujours dans la lune, celui-là. Il a dû oublier.",
+   "fr": "Il est toujours dans la lune, celui-là. Il a dû oublier.",
+   "where": "Scène C1 c1u0"
+  },
+  {
+   "text": "Peut-être. Mais il me casse les pieds avec ses excuses.",
+   "fr": "Peut-être. Mais il me casse les pieds avec ses excuses.",
+   "where": "Scène C1 c1u0"
+  },
+  {
+   "text": "Allez, ce n'est pas la mer à boire. Appelle-le et dis-lui ce que tu penses.",
+   "fr": "Allez, ce n'est pas la mer à boire. Appelle-le et dis-lui ce que tu penses.",
+   "where": "Scène C1 c1u0"
+  },
+  {
+   "text": "Tu as raison. Mais sans mettre les pieds dans le plat, cette fois.",
+   "fr": "Tu as raison. Mais sans mettre les pieds dans le plat, cette fois.",
+   "where": "Scène C1 c1u0"
+  },
+  {
+   "text": "Cabinet Moreau, bonjour. Que puis-je pour vous ?",
+   "fr": "Cabinet Moreau, bonjour. Que puis-je pour vous ?",
+   "where": "Scène C1 c1u1"
+  },
+  {
+   "text": "Bonjour, madame. Je me permets de vous contacter au sujet de ma candidature.",
+   "fr": "Bonjour, madame. Je me permets de vous contacter au sujet de ma candidature.",
+   "where": "Scène C1 c1u1"
+  },
+  {
+   "text": "Bien sûr. Vous avez envoyé votre dossier par courriel ?",
+   "fr": "Bien sûr. Vous avez envoyé votre dossier par courriel ?",
+   "where": "Scène C1 c1u1"
+  },
+  {
+   "text": "Tout à fait, la semaine dernière. Je vous saurais gré de bien vouloir m'en confirmer la bonne réception.",
+   "fr": "Tout à fait, la semaine dernière. Je vous saurais gré de bien vouloir m'en confirmer la bonne réception.",
+   "where": "Scène C1 c1u1"
+  },
+  {
+   "text": "Je vérifie… Oui, nous l'avons bien reçu. Monsieur Moreau vous répondra d'ici vendredi.",
+   "fr": "Je vérifie… Oui, nous l'avons bien reçu. Monsieur Moreau vous répondra d'ici vendredi.",
+   "where": "Scène C1 c1u1"
+  },
+  {
+   "text": "Je vous remercie infiniment. Dans l'attente de sa réponse, je vous souhaite une excellente journée.",
+   "fr": "Je vous remercie infiniment. Dans l'attente de sa réponse, je vous souhaite une excellente journée.",
+   "where": "Scène C1 c1u1"
+  },
+  {
+   "text": "Selon toi, la semaine de quatre jours, c'est l'avenir ?",
+   "fr": "Selon toi, la semaine de quatre jours, c'est l'avenir ?",
+   "where": "Scène C1 c1u2"
+  },
+  {
+   "text": "Dans une certaine mesure. Force est de constater que les salariés sont plus motivés.",
+   "fr": "Dans une certaine mesure. Force est de constater que les salariés sont plus motivés.",
+   "where": "Scène C1 c1u2"
+  },
+  {
+   "text": "Néanmoins, certaines entreprises ne peuvent pas se le permettre.",
+   "fr": "Néanmoins, certaines entreprises ne peuvent pas se le permettre.",
+   "where": "Scène C1 c1u2"
+  },
+  {
+   "text": "C'est vrai. Il serait naïf de croire que c'est possible partout.",
+   "fr": "C'est vrai. Il serait naïf de croire que c'est possible partout.",
+   "where": "Scène C1 c1u2"
+  },
+  {
+   "text": "Autrement dit, il faudrait l'adapter à chaque secteur ?",
+   "fr": "Autrement dit, il faudrait l'adapter à chaque secteur ?",
+   "where": "Scène C1 c1u2"
+  },
+  {
+   "text": "Exactement. En fin de compte, il faut avancer, sans pour autant imposer un modèle unique.",
+   "fr": "Exactement. En fin de compte, il faut avancer, sans pour autant imposer un modèle unique.",
+   "where": "Scène C1 c1u2"
+  },
+  {
+   "text": "Le gouvernement annonce une nouvelle réforme des impôts.",
+   "fr": "Le gouvernement annonce une nouvelle réforme des impôts.",
+   "where": "Scène C1 c1u3"
+  },
+  {
+   "text": "Encore ? Avec l'inflation, le pouvoir d'achat a déjà beaucoup baissé.",
+   "fr": "Encore ? Avec l'inflation, le pouvoir d'achat a déjà beaucoup baissé.",
+   "where": "Scène C1 c1u3"
+  },
+  {
+   "text": "Ils disent que ça va relancer la croissance et réduire le chômage.",
+   "fr": "Ils disent que ça va relancer la croissance et réduire le chômage.",
+   "where": "Scène C1 c1u3"
+  },
+  {
+   "text": "Peut-être, mais le déficit public continue d'augmenter.",
+   "fr": "Peut-être, mais le déficit public continue d'augmenter.",
+   "where": "Scène C1 c1u3"
+  },
+  {
+   "text": "Le Parlement vote la semaine prochaine. Ça va être serré.",
+   "fr": "Le Parlement vote la semaine prochaine. Ça va être serré.",
+   "where": "Scène C1 c1u3"
+  },
+  {
+   "text": "On verra bien. Moi, j'attends surtout des mesures pour les petites entreprises.",
+   "fr": "On verra bien. Moi, j'attends surtout des mesures pour les petites entreprises.",
+   "where": "Scène C1 c1u3"
+  },
+  {
+   "text": "Merci d'être venue. J'aimerais te faire un retour sur le trimestre.",
+   "fr": "Merci d'être venue. J'aimerais te faire un retour sur le trimestre.",
+   "where": "Scène C1 c1u4"
+  },
+  {
+   "text": "Bien sûr. J'espère que ce n'est pas trop mauvais…",
+   "fr": "Bien sûr. J'espère que ce n'est pas trop mauvais…",
+   "where": "Scène C1 c1u4"
+  },
+  {
+   "text": "Au contraire : tes chiffres sont en hausse. Bon travail, continue comme ça.",
+   "fr": "Au contraire : tes chiffres sont en hausse. Bon travail, continue comme ça.",
+   "where": "Scène C1 c1u4"
+  },
+  {
+   "text": "Merci ! Ça fait plaisir à entendre.",
+   "fr": "Merci ! Ça fait plaisir à entendre.",
+   "where": "Scène C1 c1u4"
+  },
+  {
+   "text": "Je te confie le dossier du nouveau client. Qu'est-ce qui t'aiderait à progresser ?",
+   "fr": "Je te confie le dossier du nouveau client. Qu'est-ce qui t'aiderait à progresser ?",
+   "where": "Scène C1 c1u4"
+  },
+  {
+   "text": "Une formation en négociation, et des objectifs clairs.",
+   "fr": "Une formation en négociation, et des objectifs clairs.",
+   "where": "Scène C1 c1u4"
+  },
+  {
+   "text": "Très bien. Fixons-les ensemble. Je compte sur toi.",
+   "fr": "Très bien. Fixons-les ensemble. Je compte sur toi.",
+   "where": "Scène C1 c1u4"
+  },
+  {
+   "text": "Depuis mon licenciement, je suis dans le brouillard total.",
+   "fr": "Depuis mon licenciement, je suis dans le brouillard total.",
+   "where": "Scène C1 c1u5"
+  },
+  {
+   "text": "Je comprends. Mais il est peut-être temps de tourner la page.",
+   "fr": "Je comprends. Mais il est peut-être temps de tourner la page.",
+   "where": "Scène C1 c1u5"
+  },
+  {
+   "text": "Facile à dire… Mon ex-chef continue de jeter de l'huile sur le feu sur les réseaux.",
+   "fr": "Facile à dire… Mon ex-chef continue de jeter de l'huile sur le feu sur les réseaux.",
+   "where": "Scène C1 c1u5"
+  },
+  {
+   "text": "Ne réponds pas. Ton secteur a le vent en poupe, tu vas vite retrouver.",
+   "fr": "Ne réponds pas. Ton secteur a le vent en poupe, tu vas vite retrouver.",
+   "where": "Scène C1 c1u5"
+  },
+  {
+   "text": "Tu crois ? J'ai l'impression d'être au pied du mur.",
+   "fr": "Tu crois ? J'ai l'impression d'être au pied du mur.",
+   "where": "Scène C1 c1u5"
+  },
+  {
+   "text": "C'est dans ces moments-là qu'on se révèle. Tu vas rebondir.",
+   "fr": "C'est dans ces moments-là qu'on se révèle. Tu vas rebondir.",
+   "where": "Scène C1 c1u5"
+  },
+  {
+   "text": "Avant de signer le contrat, lisez bien chaque clause.",
+   "fr": "Avant de signer le contrat, lisez bien chaque clause.",
+   "where": "Scène C1 c1u6"
+  },
+  {
+   "text": "Justement, je ne comprends pas celle-ci : « résiliation avec préavis d'un mois ».",
+   "fr": "Justement, je ne comprends pas celle-ci : « résiliation avec préavis d'un mois ».",
+   "where": "Scène C1 c1u6"
+  },
+  {
+   "text": "Chaque partie peut mettre fin au contrat en prévenant un mois à l'avance.",
+   "fr": "Chaque partie peut mettre fin au contrat en prévenant un mois à l'avance.",
+   "where": "Scène C1 c1u6"
+  },
+  {
+   "text": "Et si le propriétaire ne respecte pas ses obligations ?",
+   "fr": "Et si le propriétaire ne respecte pas ses obligations ?",
+   "where": "Scène C1 c1u6"
+  },
+  {
+   "text": "En cas de litige, nous essaierons d'abord de régler les choses à l'amiable.",
+   "fr": "En cas de litige, nous essaierons d'abord de régler les choses à l'amiable.",
+   "where": "Scène C1 c1u6"
+  },
+  {
+   "text": "Et sinon ?",
+   "fr": "Et sinon ?",
+   "where": "Scène C1 c1u6"
+  },
+  {
+   "text": "Sinon, nous saisirons le tribunal. Mais n'en arrivons pas là.",
+   "fr": "Sinon, nous saisirons le tribunal. Mais n'en arrivons pas là.",
+   "where": "Scène C1 c1u6"
+  },
+  {
+   "text": "Alors, que penses-tu de ma présentation ?",
+   "fr": "Alors, que penses-tu de ma présentation ?",
+   "where": "Scène C1 c1u7"
+  },
+  {
+   "text": "Si je peux me permettre… elle est solide, il reste juste quelques points à revoir.",
+   "fr": "Si je peux me permettre… elle est solide, il reste juste quelques points à revoir.",
+   "where": "Scène C1 c1u7"
+  },
+  {
+   "text": "Lesquels ?",
+   "fr": "Lesquels ?",
+   "where": "Scène C1 c1u7"
+  },
+  {
+   "text": "La partie sur le budget. Je ne suis pas sûr que ce soit la meilleure façon de la présenter.",
+   "fr": "La partie sur le budget. Je ne suis pas sûr que ce soit la meilleure façon de la présenter.",
+   "where": "Scène C1 c1u7"
+  },
+  {
+   "text": "D'accord. Tu veux bien la retravailler avec moi ce soir ?",
+   "fr": "D'accord. Tu veux bien la retravailler avec moi ce soir ?",
+   "where": "Scène C1 c1u7"
+  },
+  {
+   "text": "C'est gentil, mais je vais décliner : j'ai un engagement. Demain matin, en revanche, avec plaisir.",
+   "fr": "C'est gentil, mais je vais décliner : j'ai un engagement. Demain matin, en revanche, avec plaisir.",
+   "where": "Scène C1 c1u7"
+  },
+  {
+   "text": "Il paraît que le directeur va démissionner.",
+   "fr": "Il paraît que le directeur va démissionner.",
+   "where": "Scène C1 c1u8"
+  },
+  {
+   "text": "À ce qu'il paraît… Moi, j'en doute fort.",
+   "fr": "À ce qu'il paraît… Moi, j'en doute fort.",
+   "where": "Scène C1 c1u8"
+  },
+  {
+   "text": "Pourtant, il a annulé toutes ses réunions de la semaine.",
+   "fr": "Pourtant, il a annulé toutes ses réunions de la semaine.",
+   "where": "Scène C1 c1u8"
+  },
+  {
+   "text": "Il se pourrait qu'il soit simplement en vacances.",
+   "fr": "Il se pourrait qu'il soit simplement en vacances.",
+   "where": "Scène C1 c1u8"
+  },
+  {
+   "text": "Et le contrat avec les Japonais ? Ils vont signer avant la fin du mois ?",
+   "fr": "Et le contrat avec les Japonais ? Ils vont signer avant la fin du mois ?",
+   "where": "Scène C1 c1u8"
+  },
+  {
+   "text": "Rien n'est moins sûr. Attendons d'avoir des faits avant de tirer des conclusions.",
+   "fr": "Rien n'est moins sûr. Attendons d'avoir des faits avant de tirer des conclusions.",
+   "where": "Scène C1 c1u8"
+  },
+  {
+   "text": "Je suis vénère ! Le prof m'a confisqué mon portable.",
+   "fr": "Je suis vénère ! Le prof m'a confisqué mon portable.",
+   "where": "Scène C1 c1u9"
+  },
+  {
+   "text": "Qu'est-ce que tu as fait ?",
+   "fr": "Qu'est-ce que tu as fait ?",
+   "where": "Scène C1 c1u9"
+  },
+  {
+   "text": "Rien ! Enfin… je parlais à un mec pendant le cours, et le prof a pété un câble devant tout le monde.",
+   "fr": "Rien ! Enfin… je parlais à un mec pendant le cours, et le prof a pété un câble devant tout le monde.",
+   "where": "Scène C1 c1u9"
+  },
+  {
+   "text": "Ah, je comprends mieux. Et la daronne, elle est au courant ?",
+   "fr": "Ah, je comprends mieux. Et la daronne, elle est au courant ?",
+   "where": "Scène C1 c1u9"
+  },
+  {
+   "text": "Pas encore. Elle va me tuer… C'est chelou, cette histoire, non ?",
+   "fr": "Pas encore. Elle va me tuer… C'est chelou, cette histoire, non ?",
+   "where": "Scène C1 c1u9"
+  },
+  {
+   "text": "Non, c'est logique. Arrête, t'es trop relou !",
+   "fr": "Non, c'est logique. Arrête, t'es trop relou !",
+   "where": "Scène C1 c1u9"
+  },
+  {
+   "text": "Tu as entendu ce que Paul m'a dit ? « Toujours en retard, comme d'habitude ! »",
+   "fr": "Tu as entendu ce que Paul m'a dit ? « Toujours en retard, comme d'habitude ! »",
+   "where": "Scène C1 c1u10"
+  },
+  {
+   "text": "Oui, c'était une pique. Mais tu as répondu du tac au tac !",
+   "fr": "Oui, c'était une pique. Mais tu as répondu du tac au tac !",
+   "where": "Scène C1 c1u10"
+  },
+  {
+   "text": "« Au moins, moi, quand j'arrive, les gens sont contents de me voir. »",
+   "fr": "« Au moins, moi, quand j'arrive, les gens sont contents de me voir. »",
+   "where": "Scène C1 c1u10"
+  },
+  {
+   "text": "Tu lui as cloué le bec ! Tout le monde a ri.",
+   "fr": "Tu lui as cloué le bec ! Tout le monde a ri.",
+   "where": "Scène C1 c1u10"
+  },
+  {
+   "text": "J'ai de la répartie quand on me cherche.",
+   "fr": "J'ai de la répartie quand on me cherche.",
+   "where": "Scène C1 c1u10"
+  },
+  {
+   "text": "Et lui qui a toujours le mot pour rire… sauf quand c'est contre lui !",
+   "fr": "Et lui qui a toujours le mot pour rire… sauf quand c'est contre lui !",
+   "where": "Scène C1 c1u10"
+  },
+  {
+   "text": "Quand j'ai quitté mon village, j'ai ressenti une immense nostalgie.",
+   "fr": "Quand j'ai quitté mon village, j'ai ressenti une immense nostalgie.",
+   "where": "Scène C1 c1u11"
+  },
+  {
+   "text": "Tu y penses encore ?",
+   "fr": "Tu y penses encore ?",
+   "where": "Scène C1 c1u11"
+  },
+  {
+   "text": "Tous les jours. Mais sans amertume : j'ai eu une belle vie ici.",
+   "fr": "Tous les jours. Mais sans amertume : j'ai eu une belle vie ici.",
+   "where": "Scène C1 c1u11"
+  },
+  {
+   "text": "Et ton frère ? Vous vous étiez fâchés, non ?",
+   "fr": "Et ton frère ? Vous vous étiez fâchés, non ?",
+   "where": "Scène C1 c1u11"
+  },
+  {
+   "text": "Pendant vingt ans. Puis on s'est réconciliés. Je ne garde jamais rancune.",
+   "fr": "Pendant vingt ans. Puis on s'est réconciliés. Je ne garde jamais rancune.",
+   "where": "Scène C1 c1u11"
+  },
+  {
+   "text": "Quel soulagement ça a dû être.",
+   "fr": "Quel soulagement ça a dû être.",
+   "where": "Scène C1 c1u11"
+  },
+  {
+   "text": "Oui. La vie est trop courte pour la rancune, tu sais.",
+   "fr": "Oui. La vie est trop courte pour la rancune, tu sais.",
+   "where": "Scène C1 c1u11"
+  },
+  {
+   "text": "Votre proposition est intéressante, mais le prix reste trop élevé.",
+   "fr": "Votre proposition est intéressante, mais le prix reste trop élevé.",
+   "where": "Scène C1 c1u12"
+  },
+  {
+   "text": "Nous sommes prêts à faire un geste sur le prix.",
+   "fr": "Nous sommes prêts à faire un geste sur le prix.",
+   "where": "Scène C1 c1u12"
+  },
+  {
+   "text": "De combien ?",
+   "fr": "De combien ?",
+   "where": "Scène C1 c1u12"
+  },
+  {
+   "text": "Cinq pour cent. En contrepartie, nous demandons un engagement sur trois ans.",
+   "fr": "Cinq pour cent. En contrepartie, nous demandons un engagement sur trois ans.",
+   "where": "Scène C1 c1u12"
+  },
+  {
+   "text": "Trois ans, c'est long. Je vous fais une contre-proposition : deux ans, et sept pour cent.",
+   "fr": "Trois ans, c'est long. Je vous fais une contre-proposition : deux ans, et sept pour cent.",
+   "where": "Scène C1 c1u12"
+  },
+  {
+   "text": "Je pense qu'on peut trouver un terrain d'entente : deux ans et demi, six pour cent.",
+   "fr": "Je pense qu'on peut trouver un terrain d'entente : deux ans et demi, six pour cent.",
+   "where": "Scène C1 c1u12"
+  },
+  {
+   "text": "Marché conclu.",
+   "fr": "Marché conclu.",
+   "where": "Scène C1 c1u12"
+  },
+  {
+   "text": "Tu as vu cette photo ? L'inondation d'hier, c'est terrible !",
+   "fr": "Tu as vu cette photo ? L'inondation d'hier, c'est terrible !",
+   "where": "Scène C1 c1u13"
+  },
+  {
+   "text": "Attends… Cette photo date de 2015 et n'a rien à voir avec l'événement.",
+   "fr": "Attends… Cette photo date de 2015 et n'a rien à voir avec l'événement.",
+   "where": "Scène C1 c1u13"
+  },
+  {
+   "text": "Sérieux ? Elle a été partagée des milliers de fois.",
+   "fr": "Sérieux ? Elle a été partagée des milliers de fois.",
+   "where": "Scène C1 c1u13"
+  },
+  {
+   "text": "Ce titre est fait pour générer des clics. Qui a publié ça ?",
+   "fr": "Ce titre est fait pour générer des clics. Qui a publié ça ?",
+   "where": "Scène C1 c1u13"
+  },
+  {
+   "text": "Un site que je ne connais pas.",
+   "fr": "Un site que je ne connais pas.",
+   "where": "Scène C1 c1u13"
+  },
+  {
+   "text": "Alors, recoupons l'information avec une source fiable avant d'y croire.",
+   "fr": "Alors, recoupons l'information avec une source fiable avant d'y croire.",
+   "where": "Scène C1 c1u13"
+  },
+  {
+   "text": "Alors, cette exposition ? Au premier abord, ça m'a laissée perplexe.",
+   "fr": "Alors, cette exposition ? Au premier abord, ça m'a laissée perplexe.",
+   "where": "Scène C1 c1u14"
+  },
+  {
+   "text": "Moi, ce tableau m'a profondément ému. Regarde la lumière.",
+   "fr": "Moi, ce tableau m'a profondément ému. Regarde la lumière.",
+   "where": "Scène C1 c1u14"
+  },
+  {
+   "text": "C'est vrai, on sent l'influence de l'impressionnisme dans sa touche.",
+   "fr": "C'est vrai, on sent l'influence de l'impressionnisme dans sa touche.",
+   "where": "Scène C1 c1u14"
+  },
+  {
+   "text": "Pourtant, la critique a descendu l'exposition en flèche.",
+   "fr": "Pourtant, la critique a descendu l'exposition en flèche.",
+   "where": "Scène C1 c1u14"
+  },
+  {
+   "text": "Les critiques n'aiment jamais ce qui est avant-gardiste.",
+   "fr": "Les critiques n'aiment jamais ce qui est avant-gardiste.",
+   "where": "Scène C1 c1u14"
+  },
+  {
+   "text": "Tant pis pour eux. Moi, j'achèterais bien celui-ci… si j'avais dix mille euros.",
+   "fr": "Tant pis pour eux. Moi, j'achèterais bien celui-ci… si j'avais dix mille euros.",
+   "where": "Scène C1 c1u14"
+  },
+  {
+   "text": "Pour finir le projet à temps, toute l'équipe a mouillé le maillot.",
+   "fr": "Pour finir le projet à temps, toute l'équipe a mouillé le maillot.",
+   "where": "Scène C1 c1u15"
+  },
+  {
+   "text": "Sauf Marc. En critiquant son chef devant le client, il a marqué contre son camp.",
+   "fr": "Sauf Marc. En critiquant son chef devant le client, il a marqué contre son camp.",
+   "where": "Scène C1 c1u15"
+  },
+  {
+   "text": "Et maintenant, il joue la montre pour rendre son rapport.",
+   "fr": "Et maintenant, il joue la montre pour rendre son rapport.",
+   "where": "Scène C1 c1u15"
+  },
+  {
+   "text": "À sa place, je ferais profil bas. Il est à deux doigts du carton rouge !",
+   "fr": "À sa place, je ferais profil bas. Il est à deux doigts du carton rouge !",
+   "where": "Scène C1 c1u15"
+  },
+  {
+   "text": "Le directeur lui laisse une dernière chance.",
+   "fr": "Le directeur lui laisse une dernière chance.",
+   "where": "Scène C1 c1u15"
+  },
+  {
+   "text": "Alors il a intérêt à revenir sur le terrain… et vite.",
+   "fr": "Alors il a intérêt à revenir sur le terrain… et vite.",
+   "where": "Scène C1 c1u15"
+  },
+  {
+   "text": "Votre produit est intéressant. Quel est votre chiffre d'affaires ?",
+   "fr": "Votre produit est intéressant. Quel est votre chiffre d'affaires ?",
+   "where": "Scène C1 c1u16"
+  },
+  {
+   "text": "Trois cent mille euros cette année. Nous sommes en pleine phase de croissance.",
+   "fr": "Trois cent mille euros cette année. Nous sommes en pleine phase de croissance.",
+   "where": "Scène C1 c1u16"
+  },
+  {
+   "text": "Vous avez déjà pivoté, je crois ?",
+   "fr": "Vous avez déjà pivoté, je crois ?",
+   "where": "Scène C1 c1u16"
+  },
+  {
+   "text": "Oui, au bout d'un an. Notre premier produit n'avait pas trouvé son marché.",
+   "fr": "Oui, au bout d'un an. Notre premier produit n'avait pas trouvé son marché.",
+   "where": "Scène C1 c1u16"
+  },
+  {
+   "text": "Et combien voulez-vous lever ?",
+   "fr": "Et combien voulez-vous lever ?",
+   "where": "Scène C1 c1u16"
+  },
+  {
+   "text": "Deux millions, pour recruter et nous lancer à l'étranger. Voici notre business plan.",
+   "fr": "Deux millions, pour recruter et nous lancer à l'étranger. Voici notre business plan.",
+   "where": "Scène C1 c1u16"
+  },
+  {
+   "text": "Il est solide. Nous allons étudier tout ça avec attention.",
+   "fr": "Il est solide. Nous allons étudier tout ça avec attention.",
+   "where": "Scène C1 c1u16"
+  },
+  {
+   "text": "Tu as suivi le procès du maire ?",
+   "fr": "Tu as suivi le procès du maire ?",
+   "where": "Scène C1 c1u17"
+  },
+  {
+   "text": "Oui. Il clame son innocence depuis le début.",
+   "fr": "Oui. Il clame son innocence depuis le début.",
+   "where": "Scène C1 c1u17"
+  },
+  {
+   "text": "Pourtant, un témoin dit l'avoir vu recevoir de l'argent.",
+   "fr": "Pourtant, un témoin dit l'avoir vu recevoir de l'argent.",
+   "where": "Scène C1 c1u17"
+  },
+  {
+   "text": "Il a écopé de deux ans ferme hier.",
+   "fr": "Il a écopé de deux ans ferme hier.",
+   "where": "Scène C1 c1u17"
+  },
+  {
+   "text": "Et son adjoint ? Il était en garde à vue la semaine dernière.",
+   "fr": "Et son adjoint ? Il était en garde à vue la semaine dernière.",
+   "where": "Scène C1 c1u17"
+  },
+  {
+   "text": "Il a été relâché faute de preuves. L'enquête suit son cours.",
+   "fr": "Il a été relâché faute de preuves. L'enquête suit son cours.",
+   "where": "Scène C1 c1u17"
+  },
+  {
+   "text": "Le quartier a complètement changé en dix ans.",
+   "fr": "Le quartier a complètement changé en dix ans.",
+   "where": "Scène C1 c1u18"
+  },
+  {
+   "text": "C'est vrai. Il y a des cafés branchés partout, maintenant.",
+   "fr": "C'est vrai. Il y a des cafés branchés partout, maintenant.",
+   "where": "Scène C1 c1u18"
+  },
+  {
+   "text": "Oui, mais les loyers flambent. Les habitants historiques ont été chassés.",
+   "fr": "Oui, mais les loyers flambent. Les habitants historiques ont été chassés.",
+   "where": "Scène C1 c1u18"
+  },
+  {
+   "text": "Et avec les travaux de la zone piétonne, c'est l'enfer.",
+   "fr": "Et avec les travaux de la zone piétonne, c'est l'enfer.",
+   "where": "Scène C1 c1u18"
+  },
+  {
+   "text": "Ce qui nous manque cruellement, ce sont des espaces verts.",
+   "fr": "Ce qui nous manque cruellement, ce sont des espaces verts.",
+   "where": "Scène C1 c1u18"
+  },
+  {
+   "text": "Il faudrait en parler à la mairie. La gentrification ne doit pas tout effacer.",
+   "fr": "Il faudrait en parler à la mairie. La gentrification ne doit pas tout effacer.",
+   "where": "Scène C1 c1u18"
+  },
+  {
+   "text": "Encore une canicule en juin. Elles sont de plus en plus fréquentes.",
+   "fr": "Encore une canicule en juin. Elles sont de plus en plus fréquentes.",
+   "where": "Scène C1 c1u19"
+  },
+  {
+   "text": "Il faut vraiment sortir des énergies fossiles.",
+   "fr": "Il faut vraiment sortir des énergies fossiles.",
+   "where": "Scène C1 c1u19"
+  },
+  {
+   "text": "Mon entreprise dit viser la neutralité carbone en 2030.",
+   "fr": "Mon entreprise dit viser la neutralité carbone en 2030.",
+   "where": "Scène C1 c1u19"
+  },
+  {
+   "text": "Avec des vols en jet privé ? C'est du greenwashing.",
+   "fr": "Avec des vols en jet privé ? C'est du greenwashing.",
+   "where": "Scène C1 c1u19"
+  },
+  {
+   "text": "C'est vrai… Moi, j'essaie de réduire mon empreinte carbone : plus de train, moins d'avion.",
+   "fr": "C'est vrai… Moi, j'essaie de réduire mon empreinte carbone : plus de train, moins d'avion.",
+   "where": "Scène C1 c1u19"
+  },
+  {
+   "text": "Et la sobriété énergétique commence chez soi : moins de chauffage, plus de pulls !",
+   "fr": "Et la sobriété énergétique commence chez soi : moins de chauffage, plus de pulls !",
+   "where": "Scène C1 c1u19"
+  },
+  {
+   "text": "Avec l'intelligence artificielle, certains métiers vont disparaître.",
+   "fr": "Avec l'intelligence artificielle, certains métiers vont disparaître.",
+   "where": "Scène C1 c1u20"
+  },
+  {
+   "text": "Et d'autres vont apparaître. Mais qui est responsable quand l'IA se trompe ?",
+   "fr": "Et d'autres vont apparaître. Mais qui est responsable quand l'IA se trompe ?",
+   "where": "Scène C1 c1u20"
+  },
+  {
+   "text": "Bonne question. Et nos données, qui les contrôle ?",
+   "fr": "Bonne question. Et nos données, qui les contrôle ?",
+   "where": "Scène C1 c1u20"
+  },
+  {
+   "text": "Après la fuite de données de l'an dernier, je me méfie.",
+   "fr": "Après la fuite de données de l'an dernier, je me méfie.",
+   "where": "Scène C1 c1u20"
+  },
+  {
+   "text": "On est tous enfermés dans une bulle à cause des algorithmes de recommandation.",
+   "fr": "On est tous enfermés dans une bulle à cause des algorithmes de recommandation.",
+   "where": "Scène C1 c1u20"
+  },
+  {
+   "text": "Raison de plus pour exiger un consentement éclairé.",
+   "fr": "Raison de plus pour exiger un consentement éclairé.",
+   "where": "Scène C1 c1u20"
+  },
+  {
+   "text": "Tu as toujours su ce que tu voulais faire ?",
+   "fr": "Tu as toujours su ce que tu voulais faire ?",
+   "where": "Scène C1 c1u21"
+  },
+  {
+   "text": "Non, j'ai longtemps cherché ma voie. J'ai changé trois fois d'études.",
+   "fr": "Non, j'ai longtemps cherché ma voie. J'ai changé trois fois d'études.",
+   "where": "Scène C1 c1u21"
+  },
+  {
+   "text": "Et tu le regrettes ?",
+   "fr": "Et tu le regrettes ?",
+   "where": "Scène C1 c1u21"
+  },
+  {
+   "text": "Avec le recul, je ne regrette rien. Chaque erreur m'a appris quelque chose.",
+   "fr": "Avec le recul, je ne regrette rien. Chaque erreur m'a appris quelque chose.",
+   "where": "Scène C1 c1u21"
+  },
+  {
+   "text": "Moi, je manque de confiance en moi. Je suis quelqu'un d'assez réservé.",
+   "fr": "Moi, je manque de confiance en moi. Je suis quelqu'un d'assez réservé.",
+   "where": "Scène C1 c1u21"
+  },
+  {
+   "text": "Moi aussi, avant. J'ai appris à lâcher prise. Ça m'a profondément changé.",
+   "fr": "Moi aussi, avant. J'ai appris à lâcher prise. Ça m'a profondément changé.",
+   "where": "Scène C1 c1u21"
+  },
+  {
+   "text": "Pour accompagner l'agneau, je vous conseille ce vin rouge.",
+   "fr": "Pour accompagner l'agneau, je vous conseille ce vin rouge.",
+   "where": "Scène C1 c1u22"
+  },
+  {
+   "text": "Il a du caractère. Il est très tannique, non ?",
+   "fr": "Il a du caractère. Il est très tannique, non ?",
+   "where": "Scène C1 c1u22"
+  },
+  {
+   "text": "Oui, c'est ce qui fait l'accord avec la viande. La cuisson vous convient ?",
+   "fr": "Oui, c'est ce qui fait l'accord avec la viande. La cuisson vous convient ?",
+   "where": "Scène C1 c1u22"
+  },
+  {
+   "text": "À point, parfait. Juste un peu trop salé à mon goût.",
+   "fr": "À point, parfait. Juste un peu trop salé à mon goût.",
+   "where": "Scène C1 c1u22"
+  },
+  {
+   "text": "Je le signale au chef. Tous nos produits viennent du terroir.",
+   "fr": "Je le signale au chef. Tous nos produits viennent du terroir.",
+   "where": "Scène C1 c1u22"
+  },
+  {
+   "text": "Ça se sent : les saveurs sont parfaitement équilibrées.",
+   "fr": "Ça se sent : les saveurs sont parfaitement équilibrées.",
+   "where": "Scène C1 c1u22"
+  },
+  {
+   "text": "Ça fait combien de temps que tu vis ici ?",
+   "fr": "Ça fait combien de temps que tu vis ici ?",
+   "where": "Scène C1 c1u23"
+  },
+  {
+   "text": "Deux ans. Au début, on se sent un peu perdu.",
+   "fr": "Deux ans. Au début, on se sent un peu perdu.",
+   "where": "Scène C1 c1u23"
+  },
+  {
+   "text": "Tu as eu un choc culturel ?",
+   "fr": "Tu as eu un choc culturel ?",
+   "where": "Scène C1 c1u23"
+  },
+  {
+   "text": "Oui ! Les codes sociaux sont très différents. Il faut du temps pour s'adapter.",
+   "fr": "Oui ! Les codes sociaux sont très différents. Il faut du temps pour s'adapter.",
+   "where": "Scène C1 c1u23"
+  },
+  {
+   "text": "Et le mal du pays ?",
+   "fr": "Et le mal du pays ?",
+   "where": "Scène C1 c1u23"
+  },
+  {
+   "text": "Parfois. Mais je me suis fait des amis du coin, et ça change tout.",
+   "fr": "Parfois. Mais je me suis fait des amis du coin, et ça change tout.",
+   "where": "Scène C1 c1u23"
+  },
+  {
+   "text": "Je vais être bref. Pour résumer, trois choses à retenir : la qualité, le prix, les délais.",
+   "fr": "Je vais être bref. Pour résumer, trois choses à retenir : la qualité, le prix, les délais.",
+   "where": "Scène C1 c1u24"
+  },
+  {
+   "text": "Merci. Pourquoi les délais ont-ils augmenté cette année ?",
+   "fr": "Merci. Pourquoi les délais ont-ils augmenté cette année ?",
+   "where": "Scène C1 c1u24"
+  },
+  {
+   "text": "C'est une excellente question. Permettez-moi de revenir sur ce point : notre fournisseur a changé.",
+   "fr": "C'est une excellente question. Permettez-moi de revenir sur ce point : notre fournisseur a changé.",
+   "where": "Scène C1 c1u24"
+  },
+  {
+   "text": "Et pour l'année prochaine, vous avez des prévisions ?",
+   "fr": "Et pour l'année prochaine, vous avez des prévisions ?",
+   "where": "Scène C1 c1u24"
+  },
+  {
+   "text": "Je n'ai pas la réponse aujourd'hui, mais je reviens vers vous cette semaine.",
+   "fr": "Je n'ai pas la réponse aujourd'hui, mais je reviens vers vous cette semaine.",
+   "where": "Scène C1 c1u24"
+  },
+  {
+   "text": "Pour ce genou, il faut voir un spécialiste.",
+   "fr": "Pour ce genou, il faut voir un spécialiste.",
+   "where": "Scène C1 c1u25"
+  },
+  {
+   "text": "J'ai essayé : il y a six mois d'attente pour un rendez-vous !",
+   "fr": "J'ai essayé : il y a six mois d'attente pour un rendez-vous !",
+   "where": "Scène C1 c1u25"
+  },
+  {
+   "text": "Je vais l'appeler moi-même. En attendant, je vous arrête une semaine.",
+   "fr": "Je vais l'appeler moi-même. En attendant, je vous arrête une semaine.",
+   "where": "Scène C1 c1u25"
+  },
+  {
+   "text": "Merci. Et l'IRM, elle est remboursée ?",
+   "fr": "Merci. Et l'IRM, elle est remboursée ?",
+   "where": "Scène C1 c1u25"
+  },
+  {
+   "text": "Oui, et votre mutuelle complétera. Si la douleur augmente, allez aux urgences.",
+   "fr": "Oui, et votre mutuelle complétera. Si la douleur augmente, allez aux urgences.",
+   "where": "Scène C1 c1u25"
+  },
+  {
+   "text": "Elles sont saturées en ce moment… J'espère ne pas en avoir besoin.",
+   "fr": "Elles sont saturées en ce moment… J'espère ne pas en avoir besoin.",
+   "where": "Scène C1 c1u25"
+  },
+  {
+   "text": "Ça roule ? T'as l'air crevé.",
+   "fr": "Ça roule ? T'as l'air crevé.",
+   "where": "Scène C2 c2u0"
+  },
+  {
+   "text": "Je suis mort. J'ai bossé toute la semaine pour trois fois rien.",
+   "fr": "Je suis mort. J'ai bossé toute la semaine pour trois fois rien.",
+   "where": "Scène C2 c2u0"
+  },
+  {
+   "text": "Ton patron est toujours aussi relou ?",
+   "fr": "Ton patron est toujours aussi relou ?",
+   "where": "Scène C2 c2u0"
+  },
+  {
+   "text": "Pire. Mais bon, faut bien gagner du fric.",
+   "fr": "Pire. Mais bon, faut bien gagner du fric.",
+   "where": "Scène C2 c2u0"
+  },
+  {
+   "text": "T'inquiète, ce soir on sort avec les potes. Ça va te changer les idées.",
+   "fr": "T'inquiète, ce soir on sort avec les potes. Ça va te changer les idées.",
+   "where": "Scène C2 c2u0"
+  },
+  {
+   "text": "Trop bien ! Je kiffe ce plan.",
+   "fr": "Trop bien ! Je kiffe ce plan.",
+   "where": "Scène C2 c2u0"
+  },
+  {
+   "text": "J'aimerais ouvrir un restaurant, mais j'ai peur d'échouer.",
+   "fr": "J'aimerais ouvrir un restaurant, mais j'ai peur d'échouer.",
+   "where": "Scène C2 c2u1"
+  },
+  {
+   "text": "Qui ne tente rien n'a rien, tu sais.",
+   "fr": "Qui ne tente rien n'a rien, tu sais.",
+   "where": "Scène C2 c2u1"
+  },
+  {
+   "text": "Mais je n'ai presque pas d'argent…",
+   "fr": "Mais je n'ai presque pas d'argent…",
+   "where": "Scène C2 c2u1"
+  },
+  {
+   "text": "Petit à petit, l'oiseau fait son nid. Commence par un petit stand.",
+   "fr": "Petit à petit, l'oiseau fait son nid. Commence par un petit stand.",
+   "where": "Scène C2 c2u1"
+  },
+  {
+   "text": "Et si ça marche, je pourrai déjà penser à un deuxième restaurant !",
+   "fr": "Et si ça marche, je pourrai déjà penser à un deuxième restaurant !",
+   "where": "Scène C2 c2u1"
+  },
+  {
+   "text": "Doucement. Il ne faut pas vendre la peau de l'ours avant de l'avoir tué.",
+   "fr": "Doucement. Il ne faut pas vendre la peau de l'ours avant de l'avoir tué.",
+   "where": "Scène C2 c2u1"
+  },
+  {
+   "text": "Super, il pleut pour notre pique-nique. Quelle surprise…",
+   "fr": "Super, il pleut pour notre pique-nique. Quelle surprise…",
+   "where": "Scène C2 c2u2"
+  },
+  {
+   "text": "Tu parles ! La météo l'annonçait depuis une semaine.",
+   "fr": "Tu parles ! La météo l'annonçait depuis une semaine.",
+   "where": "Scène C2 c2u2"
+  },
+  {
+   "text": "Et le chef qui disait : « Ne vous inquiétez pas, il fera beau. »",
+   "fr": "Et le chef qui disait : « Ne vous inquiétez pas, il fera beau. »",
+   "where": "Scène C2 c2u2"
+  },
+  {
+   "text": "Sans blague ? C'est la meilleure !",
+   "fr": "Sans blague ? C'est la meilleure !",
+   "where": "Scène C2 c2u2"
+  },
+  {
+   "text": "Il ne manquait plus que ça : la salle de réunion est réservée aussi.",
+   "fr": "Il ne manquait plus que ça : la salle de réunion est réservée aussi.",
+   "where": "Scène C2 c2u2"
+  },
+  {
+   "text": "Bon, pique-nique sous la pluie, alors. Je plaisante… mais à peine.",
+   "fr": "Bon, pique-nique sous la pluie, alors. Je plaisante… mais à peine.",
+   "where": "Scène C2 c2u2"
+  },
+  {
+   "text": "Lisez-nous la première phrase du roman, s'il vous plaît.",
+   "fr": "Lisez-nous la première phrase du roman, s'il vous plaît.",
+   "where": "Scène C2 c2u3"
+  },
+  {
+   "text": "« À l'aube, le silence régnait dans la maison. Elle contemplait la mer. »",
+   "fr": "« À l'aube, le silence régnait dans la maison. Elle contemplait la mer. »",
+   "where": "Scène C2 c2u3"
+  },
+  {
+   "text": "Merci. Qu'est-ce qui vous frappe dans ce début ?",
+   "fr": "Merci. Qu'est-ce qui vous frappe dans ce début ?",
+   "where": "Scène C2 c2u3"
+  },
+  {
+   "text": "Le temps semble s'être arrêté. Le narrateur nous fait attendre quelque chose.",
+   "fr": "Le temps semble s'être arrêté. Le narrateur nous fait attendre quelque chose.",
+   "where": "Scène C2 c2u3"
+  },
+  {
+   "text": "Exactement. Et le personnage principal, que savons-nous d'elle ?",
+   "fr": "Exactement. Et le personnage principal, que savons-nous d'elle ?",
+   "where": "Scène C2 c2u3"
+  },
+  {
+   "text": "Presque rien. Mais la mer est peut-être une métaphore de ce qu'elle a perdu.",
+   "fr": "Presque rien. Mais la mer est peut-être une métaphore de ce qu'elle a perdu.",
+   "where": "Scène C2 c2u3"
+  },
+  {
+   "text": "Très belle lecture. Au fil des chapitres, vous verrez si vous aviez raison.",
+   "fr": "Très belle lecture. Au fil des chapitres, vous verrez si vous aviez raison.",
+   "where": "Scène C2 c2u3"
+  },
+  {
+   "text": "Attends, attends… Tu sais pas ce qui m'est arrivé hier ?",
+   "fr": "Attends, attends… Tu sais pas ce qui m'est arrivé hier ?",
+   "where": "Scène C2 c2u4"
+  },
+  {
+   "text": "Non, raconte !",
+   "fr": "Non, raconte !",
+   "where": "Scène C2 c2u4"
+  },
+  {
+   "text": "Bon, bref, je sors du métro, et genre, je tombe sur mon ex.",
+   "fr": "Bon, bref, je sors du métro, et genre, je tombe sur mon ex.",
+   "where": "Scène C2 c2u4"
+  },
+  {
+   "text": "Non ! Et du coup ?",
+   "fr": "Non ! Et du coup ?",
+   "where": "Scène C2 c2u4"
+  },
+  {
+   "text": "Du coup, on a pris un café. Tu vois ce que je veux dire ?",
+   "fr": "Du coup, on a pris un café. Tu vois ce que je veux dire ?",
+   "where": "Scène C2 c2u4"
+  },
+  {
+   "text": "J'avoue… C'est clair que c'est pas un hasard !",
+   "fr": "J'avoue… C'est clair que c'est pas un hasard !",
+   "where": "Scène C2 c2u4"
+  },
+  {
+   "text": "Oh purée, j'ai oublié mes clés à l'intérieur !",
+   "fr": "Oh purée, j'ai oublié mes clés à l'intérieur !",
+   "where": "Scène C2 c2u5"
+  },
+  {
+   "text": "Mince alors ! Et le double est chez maman.",
+   "fr": "Mince alors ! Et le double est chez maman.",
+   "where": "Scène C2 c2u5"
+  },
+  {
+   "text": "Bon sang, quelle journée… Et en plus, j'ai raté le train de peu.",
+   "fr": "Bon sang, quelle journée… Et en plus, j'ai raté le train de peu.",
+   "where": "Scène C2 c2u5"
+  },
+  {
+   "text": "La vache, t'as vraiment pas de chance aujourd'hui.",
+   "fr": "La vache, t'as vraiment pas de chance aujourd'hui.",
+   "where": "Scène C2 c2u5"
+  },
+  {
+   "text": "Zut ! Il commence à pleuvoir.",
+   "fr": "Zut ! Il commence à pleuvoir.",
+   "where": "Scène C2 c2u5"
+  },
+  {
+   "text": "Nom d'un chien… Allez, viens, on va boire un café en attendant.",
+   "fr": "Nom d'un chien… Allez, viens, on va boire un café en attendant.",
+   "where": "Scène C2 c2u5"
+  },
+  {
+   "text": "Le peintre n'a toujours pas fini ? Il a un poil dans la main, celui-là.",
+   "fr": "Le peintre n'a toujours pas fini ? Il a un poil dans la main, celui-là.",
+   "where": "Scène C2 c2u6"
+  },
+  {
+   "text": "Et moi, je me suis fait rouler dans la farine : je l'ai payé d'avance.",
+   "fr": "Et moi, je me suis fait rouler dans la farine : je l'ai payé d'avance.",
+   "where": "Scène C2 c2u6"
+  },
+  {
+   "text": "Aïe. Tu lui as demandé quand il revient ?",
+   "fr": "Aïe. Tu lui as demandé quand il revient ?",
+   "where": "Scène C2 c2u6"
+  },
+  {
+   "text": "J'ai essayé de lui tirer les vers du nez, mais il reste vague.",
+   "fr": "J'ai essayé de lui tirer les vers du nez, mais il reste vague.",
+   "where": "Scène C2 c2u6"
+  },
+  {
+   "text": "Et aujourd'hui ?",
+   "fr": "Et aujourd'hui ?",
+   "where": "Scène C2 c2u6"
+  },
+  {
+   "text": "Aujourd'hui, j'ai fait le pied de grue devant chez moi pendant deux heures. Il n'est jamais venu.",
+   "fr": "Aujourd'hui, j'ai fait le pied de grue devant chez moi pendant deux heures. Il n'est jamais venu.",
+   "where": "Scène C2 c2u6"
+  },
+  {
+   "text": "Écoute ça ! Tout le stade chante d'une seule voix.",
+   "fr": "Écoute ça ! Tout le stade chante d'une seule voix.",
+   "where": "Scène C2 c2u7"
+  },
+  {
+   "text": "Et regarde le tifo du virage, il est magnifique !",
+   "fr": "Et regarde le tifo du virage, il est magnifique !",
+   "where": "Scène C2 c2u7"
+  },
+  {
+   "text": "J'ai mis mon maillot fétiche. On ne peut pas perdre.",
+   "fr": "J'ai mis mon maillot fétiche. On ne peut pas perdre.",
+   "where": "Scène C2 c2u7"
+  },
+  {
+   "text": "Pendant tout le match, on va chambrer leurs supporters.",
+   "fr": "Pendant tout le match, on va chambrer leurs supporters.",
+   "where": "Scène C2 c2u7"
+  },
+  {
+   "text": "Oh non ! Ils viennent de marquer… Où sont passés nos défenseurs ?",
+   "fr": "Oh non ! Ils viennent de marquer… Où sont passés nos défenseurs ?",
+   "where": "Scène C2 c2u7"
+  },
+  {
+   "text": "Pas de panique. Allez, chante plus fort !",
+   "fr": "Pas de panique. Allez, chante plus fort !",
+   "where": "Scène C2 c2u7"
+  },
+  {
+   "text": "T'es où ? Pk tu réponds pas ?",
+   "fr": "T'es où ? Pk tu réponds pas ?",
+   "where": "Scène C2 c2u8"
+  },
+  {
+   "text": "Dsl, j'étais sous la douche. Tkt, j'arrive dans 5 min.",
+   "fr": "Dsl, j'étais sous la douche. Tkt, j'arrive dans 5 min.",
+   "where": "Scène C2 c2u8"
+  },
+  {
+   "text": "Ok. Stp, achète du pain en passant.",
+   "fr": "Ok. Stp, achète du pain en passant.",
+   "where": "Scène C2 c2u8"
+  },
+  {
+   "text": "Pas de souci. Jsp s'il en reste à cette heure, je te dis.",
+   "fr": "Pas de souci. Jsp s'il en reste à cette heure, je te dis.",
+   "where": "Scène C2 c2u8"
+  },
+  {
+   "text": "Merci bcp, t'es un amour !",
+   "fr": "Merci bcp, t'es un amour !",
+   "where": "Scène C2 c2u8"
+  },
+  {
+   "text": "Mdr, je sais.",
+   "fr": "Mdr, je sais.",
+   "where": "Scène C2 c2u8"
+  },
+  {
+   "text": "Je cherche une librairie pour emprunter des livres.",
+   "fr": "Je cherche une librairie pour emprunter des livres.",
+   "where": "Scène C2 c2u9"
+  },
+  {
+   "text": "Attention : dans une librairie, on achète. Pour emprunter, il faut aller à la bibliothèque.",
+   "fr": "Attention : dans une librairie, on achète. Pour emprunter, il faut aller à la bibliothèque.",
+   "where": "Scène C2 c2u9"
+  },
+  {
+   "text": "Ah ! Je me suis encore trompé. Je suis vraiment gêné.",
+   "fr": "Ah ! Je me suis encore trompé. Je suis vraiment gêné.",
+   "where": "Scène C2 c2u9"
+  },
+  {
+   "text": "Ne t'en fais pas, c'est un piège classique.",
+   "fr": "Ne t'en fais pas, c'est un piège classique.",
+   "where": "Scène C2 c2u9"
+  },
+  {
+   "text": "Il y a d'autres pièges comme ça ?",
+   "fr": "Il y a d'autres pièges comme ça ?",
+   "where": "Scène C2 c2u9"
+  },
+  {
+   "text": "Plein ! On les appelle des faux amis : ils se ressemblent, mais ne veulent pas dire la même chose.",
+   "fr": "Plein ! On les appelle des faux amis : ils se ressemblent, mais ne veulent pas dire la même chose.",
+   "where": "Scène C2 c2u9"
+  },
+  {
+   "text": "Vas-y, répète ton discours. Je t'écoute.",
+   "fr": "Vas-y, répète ton discours. Je t'écoute.",
+   "where": "Scène C2 c2u10"
+  },
+  {
+   "text": "Mesdames et messieurs, si je suis ici ce soir, c'est grâce à vous.",
+   "fr": "Mesdames et messieurs, si je suis ici ce soir, c'est grâce à vous.",
+   "where": "Scène C2 c2u10"
+  },
+  {
+   "text": "Bonne entrée. Mais commence plutôt par une anecdote, ça capte l'attention.",
+   "fr": "Bonne entrée. Mais commence plutôt par une anecdote, ça capte l'attention.",
+   "where": "Scène C2 c2u10"
+  },
+  {
+   "text": "D'accord. Ensuite : « Posons-nous une question simple : que voulons-nous vraiment ? »",
+   "fr": "D'accord. Ensuite : « Posons-nous une question simple : que voulons-nous vraiment ? »",
+   "where": "Scène C2 c2u10"
+  },
+  {
+   "text": "Parfait. Et pour finir ?",
+   "fr": "Parfait. Et pour finir ?",
+   "where": "Scène C2 c2u10"
+  },
+  {
+   "text": "« En guise de conclusion, je ne vous dirai qu'une chose : osez. »",
+   "fr": "« En guise de conclusion, je ne vous dirai qu'une chose : osez. »",
+   "where": "Scène C2 c2u10"
+  },
+  {
+   "text": "Magnifique. Tu vas les mettre dans ta poche.",
+   "fr": "Magnifique. Tu vas les mettre dans ta poche.",
+   "where": "Scène C2 c2u10"
+  },
+  {
+   "text": "Bonjour, je suis Hélène, la nouvelle directrice financière.",
+   "fr": "Bonjour, je suis Hélène, la nouvelle directrice financière.",
+   "where": "Scène C2 c2u11"
+  },
+  {
+   "text": "Enchanté, madame. Je suis Sam, du service marketing.",
+   "fr": "Enchanté, madame. Je suis Sam, du service marketing.",
+   "where": "Scène C2 c2u11"
+  },
+  {
+   "text": "On peut se tutoyer, si vous voulez. Ici, tout le monde se tutoie.",
+   "fr": "On peut se tutoyer, si vous voulez. Ici, tout le monde se tutoie.",
+   "where": "Scène C2 c2u11"
+  },
+  {
+   "text": "Avec plaisir. Alors… tu as vu le projet de budget ?",
+   "fr": "Avec plaisir. Alors… tu as vu le projet de budget ?",
+   "where": "Scène C2 c2u11"
+  },
+  {
+   "text": "Oui. Je vais être cash : ce projet ne tient pas la route.",
+   "fr": "Oui. Je vais être cash : ce projet ne tient pas la route.",
+   "where": "Scène C2 c2u11"
+  },
+  {
+   "text": "Je t'arrête tout de suite : on y a travaillé trois mois. On peut en discuter calmement ?",
+   "fr": "Je t'arrête tout de suite : on y a travaillé trois mois. On peut en discuter calmement ?",
+   "where": "Scène C2 c2u11"
+  },
+  {
+   "text": "J'ai le seum, on a perdu en finale.",
+   "fr": "J'ai le seum, on a perdu en finale.",
+   "where": "Scène C2 c2u12"
+  },
+  {
+   "text": "Dommage… Et Lucas ? Il flex avec sa nouvelle montre toute la journée.",
+   "fr": "Dommage… Et Lucas ? Il flex avec sa nouvelle montre toute la journée.",
+   "where": "Scène C2 c2u12"
+  },
+  {
+   "text": "On s'en fiche de Lucas. Et en plus, il s'est fait ratio hier.",
+   "fr": "On s'en fiche de Lucas. Et en plus, il s'est fait ratio hier.",
+   "where": "Scène C2 c2u12"
+  },
+  {
+   "text": "Hein ? C'est quoi, « se faire ratio » ?",
+   "fr": "Hein ? C'est quoi, « se faire ratio » ?",
+   "where": "Scène C2 c2u12"
+  },
+  {
+   "text": "Quand une réponse a plus de likes que ton message. Franchement, t'es trop cringe avec tes questions.",
+   "fr": "Quand une réponse a plus de likes que ton message. Franchement, t'es trop cringe avec tes questions.",
+   "where": "Scène C2 c2u12"
+  },
+  {
+   "text": "Merci… Je suis en PLS, là.",
+   "fr": "Merci… Je suis en PLS, là.",
+   "where": "Scène C2 c2u12"
+  },
+  {
+   "text": "Mon chef m'a dit : « Ta présentation était… surprenante. » Je le prends comment ?",
+   "fr": "Mon chef m'a dit : « Ta présentation était… surprenante. » Je le prends comment ?",
+   "where": "Scène C2 c2u13"
+  },
+  {
+   "text": "Tout dépend du ton. Il l'a dit dans quel sens, au juste ?",
+   "fr": "Tout dépend du ton. Il l'a dit dans quel sens, au juste ?",
+   "where": "Scène C2 c2u13"
+  },
+  {
+   "text": "Avec un petit sourire. Je ne sais pas s'il faut le prendre comme un compliment.",
+   "fr": "Avec un petit sourire. Je ne sais pas s'il faut le prendre comme un compliment.",
+   "where": "Scène C2 c2u13"
+  },
+  {
+   "text": "Hum… Ça ressemble à une pique déguisée.",
+   "fr": "Hum… Ça ressemble à une pique déguisée.",
+   "where": "Scène C2 c2u13"
+  },
+  {
+   "text": "Ou alors il a de l'humour. Il adore les jeux de mots.",
+   "fr": "Ou alors il a de l'humour. Il adore les jeux de mots.",
+   "where": "Scène C2 c2u13"
+  },
+  {
+   "text": "Demande-lui directement. Au pire, tu sauras à quoi t'en tenir !",
+   "fr": "Demande-lui directement. Au pire, tu sauras à quoi t'en tenir !",
+   "where": "Scène C2 c2u13"
+  },
+  {
+   "text": "Ton discours commence fort : « Qui, parmi vous, n'a jamais douté ? »",
+   "fr": "Ton discours commence fort : « Qui, parmi vous, n'a jamais douté ? »",
+   "where": "Scène C2 c2u14"
+  },
+  {
+   "text": "C'est une question rhétorique : personne ne répond, mais tout le monde réfléchit.",
+   "fr": "C'est une question rhétorique : personne ne répond, mais tout le monde réfléchit.",
+   "where": "Scène C2 c2u14"
+  },
+  {
+   "text": "Et ensuite, tu répètes « Nous voulons… » trois fois.",
+   "fr": "Et ensuite, tu répètes « Nous voulons… » trois fois.",
+   "where": "Scène C2 c2u14"
+  },
+  {
+   "text": "La répétition martèle l'idée. Le public s'en souvient.",
+   "fr": "La répétition martèle l'idée. Le public s'en souvient.",
+   "where": "Scène C2 c2u14"
+  },
+  {
+   "text": "Et la chute ?",
+   "fr": "Et la chute ?",
+   "where": "Scène C2 c2u14"
+  },
+  {
+   "text": "Une formule choc : « Le changement ne se demande pas, il se fait. »",
+   "fr": "Une formule choc : « Le changement ne se demande pas, il se fait. »",
+   "where": "Scène C2 c2u14"
+  },
+  {
+   "text": "Ça va faire mouche.",
+   "fr": "Ça va faire mouche.",
+   "where": "Scène C2 c2u14"
+  },
+  {
+   "text": "… et c'est là que j'ai décidé de partir. Où est-ce que j'en étais ?",
+   "fr": "… et c'est là que j'ai décidé de partir. Où est-ce que j'en étais ?",
+   "where": "Scène C2 c2u15"
+  },
+  {
+   "text": "Tu parlais de l'Islande. Pour rebondir sur ce que tu disais, moi aussi j'y suis allé.",
+   "fr": "Tu parlais de l'Islande. Pour rebondir sur ce que tu disais, moi aussi j'y suis allé.",
+   "where": "Scène C2 c2u15"
+  },
+  {
+   "text": "Ah bon ? Ça me fait penser à une anecdote… Oh, je te coupe, pardon !",
+   "fr": "Ah bon ? Ça me fait penser à une anecdote… Oh, je te coupe, pardon !",
+   "where": "Scène C2 c2u15"
+  },
+  {
+   "text": "Vas-y, je t'en prie.",
+   "fr": "Vas-y, je t'en prie.",
+   "where": "Scène C2 c2u15"
+  },
+  {
+   "text": "Bref, pour faire court : j'ai raté l'avion du retour. On s'égare un peu, non ?",
+   "fr": "Bref, pour faire court : j'ai raté l'avion du retour. On s'égare un peu, non ?",
+   "where": "Scène C2 c2u15"
+  },
+  {
+   "text": "Un peu. Ceci dit, c'est comme ça que commencent les meilleures conversations.",
+   "fr": "Un peu. Ceci dit, c'est comme ça que commencent les meilleures conversations.",
+   "where": "Scène C2 c2u15"
+  },
+  {
+   "text": "Écoute ça : « Nous traversons une période de turbulences. »",
+   "fr": "Écoute ça : « Nous traversons une période de turbulences. »",
+   "where": "Scène C2 c2u16"
+  },
+  {
+   "text": "Traduction : l'entreprise va mal.",
+   "fr": "Traduction : l'entreprise va mal.",
+   "where": "Scène C2 c2u16"
+  },
+  {
+   "text": "« Une restructuration est envisagée. »",
+   "fr": "« Une restructuration est envisagée. »",
+   "where": "Scène C2 c2u16"
+  },
+  {
+   "text": "Autrement dit, des licenciements.",
+   "fr": "Autrement dit, des licenciements.",
+   "where": "Scène C2 c2u16"
+  },
+  {
+   "text": "« Nous prenons acte de vos remarques. »",
+   "fr": "« Nous prenons acte de vos remarques. »",
+   "where": "Scène C2 c2u16"
+  },
+  {
+   "text": "Ça veut dire : on ne changera rien. C'est de la langue de bois pure.",
+   "fr": "Ça veut dire : on ne changera rien. C'est de la langue de bois pure.",
+   "where": "Scène C2 c2u16"
+  },
+  {
+   "text": "On se cale un point demain ? Je te mets en copie du mail.",
+   "fr": "On se cale un point demain ? Je te mets en copie du mail.",
+   "where": "Scène C2 c2u17"
+  },
+  {
+   "text": "OK. Le nouveau dossier, c'est dans les tuyaux ?",
+   "fr": "OK. Le nouveau dossier, c'est dans les tuyaux ?",
+   "where": "Scène C2 c2u17"
+  },
+  {
+   "text": "Oui, mais on n'a pas la bande passante. On est sous l'eau.",
+   "fr": "Oui, mais on n'a pas la bande passante. On est sous l'eau.",
+   "where": "Scène C2 c2u17"
+  },
+  {
+   "text": "Il faudrait remonter l'info à la direction.",
+   "fr": "Il faudrait remonter l'info à la direction.",
+   "where": "Scène C2 c2u17"
+  },
+  {
+   "text": "Je m'en occupe. En attendant, trouve-moi un quick win avant la deadline.",
+   "fr": "Je m'en occupe. En attendant, trouve-moi un quick win avant la deadline.",
+   "where": "Scène C2 c2u17"
+  },
+  {
+   "text": "Bien reçu. Je vais challenger le process.",
+   "fr": "Bien reçu. Je vais challenger le process.",
+   "where": "Scène C2 c2u17"
+  },
+  {
+   "text": "La fin justifie-t-elle les moyens ?",
+   "fr": "La fin justifie-t-elle les moyens ?",
+   "where": "Scène C2 c2u18"
+  },
+  {
+   "text": "Tout dépend de ce qu'on entend par « fin ». Si c'est le bien commun…",
+   "fr": "Tout dépend de ce qu'on entend par « fin ». Si c'est le bien commun…",
+   "where": "Scène C2 c2u18"
+  },
+  {
+   "text": "Mais alors, on pourrait tout justifier !",
+   "fr": "Mais alors, on pourrait tout justifier !",
+   "where": "Scène C2 c2u18"
+  },
+  {
+   "text": "C'est vrai. Et le libre arbitre, dans tout ça ?",
+   "fr": "C'est vrai. Et le libre arbitre, dans tout ça ?",
+   "where": "Scène C2 c2u18"
+  },
+  {
+   "text": "Moi, je crois que le progrès n'est pas toujours synonyme de bonheur.",
+   "fr": "Moi, je crois que le progrès n'est pas toujours synonyme de bonheur.",
+   "where": "Scène C2 c2u18"
+  },
+  {
+   "text": "Je ne suis pas sûr de te suivre… mais il est trois heures. On en reparle demain ?",
+   "fr": "Je ne suis pas sûr de te suivre… mais il est trois heures. On en reparle demain ?",
+   "where": "Scène C2 c2u18"
+  },
+  {
+   "text": "Mon père a vécu la guerre. Il n'en parlait jamais.",
+   "fr": "Mon père a vécu la guerre. Il n'en parlait jamais.",
+   "where": "Scène C2 c2u19"
+  },
+  {
+   "text": "C'est pour ça que tu vas à la commémoration chaque année ?",
+   "fr": "C'est pour ça que tu vas à la commémoration chaque année ?",
+   "where": "Scène C2 c2u19"
+  },
+  {
+   "text": "Oui. C'est notre devoir de mémoire.",
+   "fr": "Oui. C'est notre devoir de mémoire.",
+   "where": "Scène C2 c2u19"
+  },
+  {
+   "text": "À l'école, on a étudié des archives de cette époque. Les choses étaient bien différentes.",
+   "fr": "À l'école, on a étudié des archives de cette époque. Les choses étaient bien différentes.",
+   "where": "Scène C2 c2u19"
+  },
+  {
+   "text": "Il ne faut pas réécrire l'histoire. Ce sont souvent les vainqueurs qui l'écrivent.",
+   "fr": "Il ne faut pas réécrire l'histoire. Ce sont souvent les vainqueurs qui l'écrivent.",
+   "where": "Scène C2 c2u19"
+  },
+  {
+   "text": "Alors raconte-moi ce que ton père t'a dit. Je veux m'en souvenir.",
+   "fr": "Alors raconte-moi ce que ton père t'a dit. Je veux m'en souvenir.",
+   "where": "Scène C2 c2u19"
+  },
+  {
+   "text": "Tu as vu la une ? Le gouvernement est sous le feu des critiques.",
+   "fr": "Tu as vu la une ? Le gouvernement est sous le feu des critiques.",
+   "where": "Scène C2 c2u20"
+  },
+  {
+   "text": "Oui, l'affaire a fait grand bruit. Selon des sources concordantes, le ministre va démissionner.",
+   "fr": "Oui, l'affaire a fait grand bruit. Selon des sources concordantes, le ministre va démissionner.",
+   "where": "Scène C2 c2u20"
+  },
+  {
+   "text": "Rien ne filtre pour l'instant. C'est peut-être un scoop.",
+   "fr": "Rien ne filtre pour l'instant. C'est peut-être un scoop.",
+   "where": "Scène C2 c2u20"
+  },
+  {
+   "text": "Tu as lu la tribune de l'ancien Premier ministre ?",
+   "fr": "Tu as lu la tribune de l'ancien Premier ministre ?",
+   "where": "Scène C2 c2u20"
+  },
+  {
+   "text": "Oui, le ton est volontairement polémique.",
+   "fr": "Oui, le ton est volontairement polémique.",
+   "where": "Scène C2 c2u20"
+  },
+  {
+   "text": "Il veut faire le buzz. Écrivons l'édito de demain là-dessus.",
+   "fr": "Il veut faire le buzz. Écrivons l'édito de demain là-dessus.",
+   "where": "Scène C2 c2u20"
+  },
+  {
+   "text": "Tu as encore mangé mon dessert ! Tu me cherches, là ?",
+   "fr": "Tu as encore mangé mon dessert ! Tu me cherches, là ?",
+   "where": "Scène C2 c2u21"
+  },
+  {
+   "text": "Calme-toi. Je pensais que c'était le mien.",
+   "fr": "Calme-toi. Je pensais que c'était le mien.",
+   "where": "Scène C2 c2u21"
+  },
+  {
+   "text": "Ne me prends pas pour une idiote ! J'en ai ras le bol.",
+   "fr": "Ne me prends pas pour une idiote ! J'en ai ras le bol.",
+   "where": "Scène C2 c2u21"
+  },
+  {
+   "text": "Là, tu dépasses les bornes. C'est juste un yaourt.",
+   "fr": "Là, tu dépasses les bornes. C'est juste un yaourt.",
+   "where": "Scène C2 c2u21"
+  },
+  {
+   "text": "Ce n'est pas la question. Ça ne se passera pas comme ça !",
+   "fr": "Ce n'est pas la question. Ça ne se passera pas comme ça !",
+   "where": "Scène C2 c2u21"
+  },
+  {
+   "text": "Bon… On s'est pris la tête pour rien. Je t'en rachète deux, et on en parle posément ?",
+   "fr": "Bon… On s'est pris la tête pour rien. Je t'en rachète deux, et on en parle posément ?",
+   "where": "Scène C2 c2u21"
+  },
+  {
+   "text": "Il y a ce garçon au bureau… Il me drague depuis une semaine.",
+   "fr": "Il y a ce garçon au bureau… Il me drague depuis une semaine.",
+   "where": "Scène C2 c2u22"
+  },
+  {
+   "text": "Et toi ? Il te plaît ?",
+   "fr": "Et toi ? Il te plaît ?",
+   "where": "Scène C2 c2u22"
+  },
+  {
+   "text": "Un peu. Hier, il m'a dit : « On prend un dernier verre ? »",
+   "fr": "Un peu. Hier, il m'a dit : « On prend un dernier verre ? »",
+   "where": "Scène C2 c2u22"
+  },
+  {
+   "text": "Et alors ?",
+   "fr": "Et alors ?",
+   "where": "Scène C2 c2u22"
+  },
+  {
+   "text": "J'ai dit non. Il souffle le chaud et le froid, je ne sais pas ce qu'il veut.",
+   "fr": "J'ai dit non. Il souffle le chaud et le froid, je ne sais pas ce qu'il veut.",
+   "where": "Scène C2 c2u22"
+  },
+  {
+   "text": "Méfie-toi. Mais si c'est un vrai coup de foudre, tu le sauras vite.",
+   "fr": "Méfie-toi. Mais si c'est un vrai coup de foudre, tu le sauras vite.",
+   "where": "Scène C2 c2u22"
+  },
+  {
+   "text": "Il fait un froid de canard ce matin !",
+   "fr": "Il fait un froid de canard ce matin !",
+   "where": "Scène C2 c2u23"
+  },
+  {
+   "text": "Et j'ai un chat dans la gorge depuis hier.",
+   "fr": "Et j'ai un chat dans la gorge depuis hier.",
+   "where": "Scène C2 c2u23"
+  },
+  {
+   "text": "Tu vas rester au lit, poule mouillée ?",
+   "fr": "Tu vas rester au lit, poule mouillée ?",
+   "where": "Scène C2 c2u23"
+  },
+  {
+   "text": "Tu sauras que j'ai une fièvre de cheval… enfin, presque.",
+   "fr": "Tu sauras que j'ai une fièvre de cheval… enfin, presque.",
+   "where": "Scène C2 c2u23"
+  },
+  {
+   "text": "Et la devinette d'hier, tu as trouvé ?",
+   "fr": "Et la devinette d'hier, tu as trouvé ?",
+   "where": "Scène C2 c2u23"
+  },
+  {
+   "text": "Non, je donne ma langue au chat. Tu as une mémoire d'éléphant, toi !",
+   "fr": "Non, je donne ma langue au chat. Tu as une mémoire d'éléphant, toi !",
+   "where": "Scène C2 c2u23"
+  },
+  {
+   "text": "Alors, cette réunion ?",
+   "fr": "Alors, cette réunion ?",
+   "where": "Scène C2 c2u24"
+  },
+  {
+   "text": "Franchement ? Je suis complètement lessivé. Et ce qu'ils ont fait à Marc, c'est dégueulasse.",
+   "fr": "Franchement ? Je suis complètement lessivé. Et ce qu'ils ont fait à Marc, c'est dégueulasse.",
+   "where": "Scène C2 c2u24"
+  },
+  {
+   "text": "Chut ! Le directeur arrive.",
+   "fr": "Chut ! Le directeur arrive.",
+   "where": "Scène C2 c2u24"
+  },
+  {
+   "text": "Alors, cette réunion s'est bien passée ?",
+   "fr": "Alors, cette réunion s'est bien passée ?",
+   "where": "Scène C2 c2u24"
+  },
+  {
+   "text": "Fort bien, monsieur. Je suis quelque peu las, mais elle fut fructueuse.",
+   "fr": "Fort bien, monsieur. Je suis quelque peu las, mais elle fut fructueuse.",
+   "where": "Scène C2 c2u24"
+  },
+  {
+   "text": "Tu changes de registre comme de chemise !",
+   "fr": "Tu changes de registre comme de chemise !",
+   "where": "Scène C2 c2u24"
+  },
+  {
+   "text": "Salut !",
+   "fr": "Salut !",
+   "where": "Registres 1 fam"
+  },
+  {
+   "text": "Bonjour !",
+   "fr": "Bonjour !",
+   "where": "Registres 1 cou"
+  },
+  {
+   "text": "Bonjour, madame. Comment allez-vous ?",
+   "fr": "Bonjour, madame. Comment allez-vous ?",
+   "where": "Registres 1 sou"
+  },
+  {
+   "text": "Salut, à plus !",
+   "fr": "Salut, à plus !",
+   "where": "Registres 2 fam"
+  },
+  {
+   "text": "Au revoir, bonne journée !",
+   "fr": "Au revoir, bonne journée !",
+   "where": "Registres 2 cou"
+  },
+  {
+   "text": "Au revoir, madame. Je vous souhaite une excellente journée.",
+   "fr": "Au revoir, madame. Je vous souhaite une excellente journée.",
+   "where": "Registres 2 sou"
+  },
+  {
+   "text": "Merci, c'est sympa !",
+   "fr": "Merci, c'est sympa !",
+   "where": "Registres 3 fam"
+  },
+  {
+   "text": "Merci beaucoup.",
+   "fr": "Merci beaucoup.",
+   "where": "Registres 3 cou"
+  },
+  {
+   "text": "Je vous remercie infiniment.",
+   "fr": "Je vous remercie infiniment.",
+   "where": "Registres 3 sou"
+  },
+  {
+   "text": "Oups, désolé !",
+   "fr": "Oups, désolé !",
+   "where": "Registres 4 fam"
+  },
+  {
+   "text": "Excusez-moi, je suis désolé.",
+   "fr": "Excusez-moi, je suis désolé.",
+   "where": "Registres 4 cou"
+  },
+  {
+   "text": "Je vous prie de bien vouloir m'excuser.",
+   "fr": "Je vous prie de bien vouloir m'excuser.",
+   "where": "Registres 4 sou"
+  },
+  {
+   "text": "Vous pouvez me passer le sel, s'il vous plaît ?",
+   "fr": "Vous pouvez me passer le sel, s'il vous plaît ?",
+   "where": "Registres 5 cou"
+  },
+  {
+   "text": "Auriez-vous l'amabilité de me passer le sel ?",
+   "fr": "Auriez-vous l'amabilité de me passer le sel ?",
+   "where": "Registres 5 sou"
+  },
+  {
+   "text": "Hein ? Quoi ?",
+   "fr": "Hein ? Quoi ?",
+   "where": "Registres 6 fam"
+  },
+  {
+   "text": "Pardon, vous pouvez répéter ?",
+   "fr": "Pardon, vous pouvez répéter ?",
+   "where": "Registres 6 cou"
+  },
+  {
+   "text": "Je vous demande pardon, pourriez-vous répéter, s'il vous plaît ?",
+   "fr": "Je vous demande pardon, pourriez-vous répéter, s'il vous plaît ?",
+   "where": "Registres 6 sou"
+  },
+  {
+   "text": "Carrément, j'arrive !",
+   "fr": "Carrément, j'arrive !",
+   "where": "Registres 7 fam"
+  },
+  {
+   "text": "Avec plaisir, merci !",
+   "fr": "Avec plaisir, merci !",
+   "where": "Registres 7 cou"
+  },
+  {
+   "text": "C'est avec grand plaisir que j'accepte votre invitation.",
+   "fr": "C'est avec grand plaisir que j'accepte votre invitation.",
+   "where": "Registres 7 sou"
+  },
+  {
+   "text": "Non, ça va, sans moi.",
+   "fr": "Non, ça va, sans moi.",
+   "where": "Registres 8 fam"
+  },
+  {
+   "text": "Merci, mais je ne peux pas.",
+   "fr": "Merci, mais je ne peux pas.",
+   "where": "Registres 8 cou"
+  },
+  {
+   "text": "Je vous remercie, mais je me vois contraint de décliner.",
+   "fr": "Je vous remercie, mais je me vois contraint de décliner.",
+   "where": "Registres 8 sou"
+  },
+  {
+   "text": "Grave !",
+   "fr": "Grave !",
+   "where": "Registres 9 fam"
+  },
+  {
+   "text": "Je suis d'accord.",
+   "fr": "Je suis d'accord.",
+   "where": "Registres 9 cou"
+  },
+  {
+   "text": "Je partage entièrement votre avis.",
+   "fr": "Je partage entièrement votre avis.",
+   "where": "Registres 9 sou"
+  },
+  {
+   "text": "N'importe quoi !",
+   "fr": "N'importe quoi !",
+   "where": "Registres 10 fam"
+  },
+  {
+   "text": "Je ne suis pas d'accord.",
+   "fr": "Je ne suis pas d'accord.",
+   "where": "Registres 10 cou"
+  },
+  {
+   "text": "Permettez-moi de ne pas partager votre point de vue.",
+   "fr": "Permettez-moi de ne pas partager votre point de vue.",
+   "where": "Registres 10 sou"
+  },
+  {
+   "text": "Tu peux me filer un coup de main ?",
+   "fr": "Tu peux me filer un coup de main ?",
+   "where": "Registres 11 fam"
+  },
+  {
+   "text": "Vous pouvez m'aider, s'il vous plaît ?",
+   "fr": "Vous pouvez m'aider, s'il vous plaît ?",
+   "where": "Registres 11 cou"
+  },
+  {
+   "text": "Pourriez-vous m'apporter votre aide, je vous prie ?",
+   "fr": "Pourriez-vous m'apporter votre aide, je vous prie ?",
+   "where": "Registres 11 sou"
+  },
+  {
+   "text": "Eh, toi !",
+   "fr": "Eh, toi !",
+   "where": "Registres 12 fam"
+  },
+  {
+   "text": "Excusez-moi, monsieur !",
+   "fr": "Excusez-moi, monsieur !",
+   "where": "Registres 12 cou"
+  },
+  {
+   "text": "Pardonnez-moi de vous déranger, monsieur…",
+   "fr": "Pardonnez-moi de vous déranger, monsieur…",
+   "where": "Registres 12 sou"
+  },
+  {
+   "text": "Moi, c'est Sam.",
+   "fr": "Moi, c'est Sam.",
+   "where": "Registres 13 fam"
+  },
+  {
+   "text": "Je m'appelle Sam.",
+   "fr": "Je m'appelle Sam.",
+   "where": "Registres 13 cou"
+  },
+  {
+   "text": "Permettez-moi de me présenter : Sam Martin.",
+   "fr": "Permettez-moi de me présenter : Sam Martin.",
+   "where": "Registres 13 sou"
+  },
+  {
+   "text": "Ça va ?",
+   "fr": "Ça va ?",
+   "where": "Registres 14 fam"
+  },
+  {
+   "text": "Comment allez-vous ?",
+   "fr": "Comment allez-vous ?",
+   "where": "Registres 14 sou"
+  },
+  {
+   "text": "Je suis crevé.",
+   "fr": "Je suis crevé.",
+   "where": "Registres 15 fam"
+  },
+  {
+   "text": "Je suis fatigué.",
+   "fr": "Je suis fatigué.",
+   "where": "Registres 15 cou"
+  },
+  {
+   "text": "Je suis quelque peu las.",
+   "fr": "Je suis quelque peu las.",
+   "where": "Registres 15 sou"
+  },
+  {
+   "text": "Sans blague ?!",
+   "fr": "Sans blague ?!",
+   "where": "Registres 16 fam"
+  },
+  {
+   "text": "Vraiment ?",
+   "fr": "Vraiment ?",
+   "where": "Registres 16 cou"
+  },
+  {
+   "text": "Voilà qui est fort surprenant.",
+   "fr": "Voilà qui est fort surprenant.",
+   "where": "Registres 16 sou"
+  },
+  {
+   "text": "C'est très bien.",
+   "fr": "C'est très bien.",
+   "where": "Registres 17 cou"
+  },
+  {
+   "text": "C'est remarquable.",
+   "fr": "C'est remarquable.",
+   "where": "Registres 17 sou"
+  },
+  {
+   "text": "J'en ai marre !",
+   "fr": "J'en ai marre !",
+   "where": "Registres 18 fam"
+  },
+  {
+   "text": "Ça ne va pas du tout.",
+   "fr": "Ça ne va pas du tout.",
+   "where": "Registres 18 cou"
+  },
+  {
+   "text": "Je tiens à vous faire part de mon mécontentement.",
+   "fr": "Je tiens à vous faire part de mon mécontentement.",
+   "where": "Registres 18 sou"
+  },
+  {
+   "text": "Pourriez-vous m'indiquer le prix, s'il vous plaît ?",
+   "fr": "Pourriez-vous m'indiquer le prix, s'il vous plaît ?",
+   "where": "Registres 19 sou"
+  },
+  {
+   "text": "Tu viens ce soir ?",
+   "fr": "Tu viens ce soir ?",
+   "where": "Registres 20 fam"
+  },
+  {
+   "text": "Ça te dirait de venir dîner ?",
+   "fr": "Ça te dirait de venir dîner ?",
+   "where": "Registres 20 cou"
+  },
+  {
+   "text": "Nous serions honorés de vous recevoir à dîner.",
+   "fr": "Nous serions honorés de vous recevoir à dîner.",
+   "where": "Registres 20 sou"
+  },
+  {
+   "text": "Bien joué !",
+   "fr": "Bien joué !",
+   "where": "Registres 21 fam"
+  },
+  {
+   "text": "Je vous adresse mes plus sincères félicitations.",
+   "fr": "Je vous adresse mes plus sincères félicitations.",
+   "where": "Registres 21 sou"
+  },
+  {
+   "text": "Lâche rien !",
+   "fr": "Lâche rien !",
+   "where": "Registres 22 fam"
+  },
+  {
+   "text": "Courage, tu vas y arriver !",
+   "fr": "Courage, tu vas y arriver !",
+   "where": "Registres 22 cou"
+  },
+  {
+   "text": "Je ne doute pas un instant de votre réussite.",
+   "fr": "Je ne doute pas un instant de votre réussite.",
+   "where": "Registres 22 sou"
+  },
+  {
+   "text": "Aucune idée.",
+   "fr": "Aucune idée.",
+   "where": "Registres 23 fam"
+  },
+  {
+   "text": "Je ne sais pas.",
+   "fr": "Je ne sais pas.",
+   "where": "Registres 23 cou"
+  },
+  {
+   "text": "Je crains de ne pas être en mesure de vous répondre.",
+   "fr": "Je crains de ne pas être en mesure de vous répondre.",
+   "where": "Registres 23 sou"
+  },
+  {
+   "text": "T'en penses quoi ?",
+   "fr": "T'en penses quoi ?",
+   "where": "Registres 24 fam"
+  },
+  {
+   "text": "Qu'est-ce que vous en pensez ?",
+   "fr": "Qu'est-ce que vous en pensez ?",
+   "where": "Registres 24 cou"
+  },
+  {
+   "text": "Quel est votre sentiment à ce sujet ?",
+   "fr": "Quel est votre sentiment à ce sujet ?",
+   "where": "Registres 24 sou"
   }
  ],
  "note": "Toutes les phrases du cours (générées depuis l’appli). La clé est calculée sur « langue|texte » : voir scripts/make-audio.mjs."
