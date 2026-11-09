@@ -19314,6 +19314,1996 @@
    "text": "Estoy contento por el equipo",
    "fr": "Je suis heureux pour le groupe",
    "where": "t68"
+  },
+  {
+   "text": "¡Buenos días! ¿Qué tal?",
+   "fr": "Bonjour ! Ça va ?",
+   "where": "Scène A1 u0"
+  },
+  {
+   "text": "¡Buenos días, señora! Muy bien, gracias. ¿Y usted?",
+   "fr": "Bonjour, madame ! Ça va bien, merci. Et vous ?",
+   "where": "Scène A1 u0"
+  },
+  {
+   "text": "Muy bien. ¡Que tengas un buen día!",
+   "fr": "Très bien. Bonne journée !",
+   "where": "Scène A1 u0"
+  },
+  {
+   "text": "Gracias, igualmente. ¡Adiós!",
+   "fr": "Merci, vous aussi. Au revoir !",
+   "where": "Scène A1 u0"
+  },
+  {
+   "text": "¡Hola! Me llamo Lea. ¿Y tú?",
+   "fr": "Salut ! Je m'appelle Léa. Et toi ?",
+   "where": "Scène A1 u1"
+  },
+  {
+   "text": "Yo soy Sam. ¡Encantado!",
+   "fr": "Moi, c'est Sam. Enchanté !",
+   "where": "Scène A1 u1"
+  },
+  {
+   "text": "Soy de Francia. ¿Y tú?",
+   "fr": "Je viens de France. Et toi ?",
+   "where": "Scène A1 u1"
+  },
+  {
+   "text": "Yo soy canadiense. Tengo veinticinco años.",
+   "fr": "Moi, je suis canadienne. J'ai vingt-cinq ans.",
+   "where": "Scène A1 u1"
+  },
+  {
+   "text": "¡Hola! ¿Cuánto cuestan las manzanas?",
+   "fr": "Bonjour ! Combien coûtent les pommes ?",
+   "where": "Scène A1 u2"
+  },
+  {
+   "text": "Dos euros el kilo.",
+   "fr": "Deux euros le kilo.",
+   "where": "Scène A1 u2"
+  },
+  {
+   "text": "Quería tres kilos, por favor.",
+   "fr": "Je voudrais trois kilos, s'il vous plaît.",
+   "where": "Scène A1 u2"
+  },
+  {
+   "text": "Aquí tiene. Son seis euros.",
+   "fr": "Voilà. Ça fait six euros.",
+   "where": "Scène A1 u2"
+  },
+  {
+   "text": "Aquí tiene diez euros.",
+   "fr": "Voici dix euros.",
+   "where": "Scène A1 u2"
+  },
+  {
+   "text": "Y cuatro euros de cambio. ¡Gracias!",
+   "fr": "Et quatre euros de monnaie. Merci !",
+   "where": "Scène A1 u2"
+  },
+  {
+   "text": "¿Quién es en esta foto?",
+   "fr": "C'est qui, sur cette photo ?",
+   "where": "Scène A1 u3"
+  },
+  {
+   "text": "Es mi madre, y al lado, mi padre.",
+   "fr": "C'est ma mère, et à côté, mon père.",
+   "where": "Scène A1 u3"
+  },
+  {
+   "text": "¿Tienes hermanos?",
+   "fr": "Tu as des frères et sœurs ?",
+   "where": "Scène A1 u3"
+  },
+  {
+   "text": "Sí, tengo un hermano y una hermana.",
+   "fr": "Oui, j'ai un frère et une sœur.",
+   "where": "Scène A1 u3"
+  },
+  {
+   "text": "¿Y este niño?",
+   "fr": "Et ce petit garçon ?",
+   "where": "Scène A1 u3"
+  },
+  {
+   "text": "Es mi sobrino, tiene cuatro años.",
+   "fr": "C'est mon neveu, il a quatre ans.",
+   "where": "Scène A1 u3"
+  },
+  {
+   "text": "¡Hola! ¿Qué le pongo?",
+   "fr": "Bonjour ! Qu'est-ce que je vous sers ?",
+   "where": "Scène A1 u4"
+  },
+  {
+   "text": "Un café y un cruasán, por favor.",
+   "fr": "Un café et un croissant, s'il vous plaît.",
+   "where": "Scène A1 u4"
+  },
+  {
+   "text": "¿Para tomar aquí o para llevar?",
+   "fr": "Sur place ou à emporter ?",
+   "where": "Scène A1 u4"
+  },
+  {
+   "text": "Para aquí. Y un vaso de agua, también.",
+   "fr": "Sur place. Et un verre d'eau, aussi.",
+   "where": "Scène A1 u4"
+  },
+  {
+   "text": "Muy bien. Son tres euros cincuenta.",
+   "fr": "Très bien. Ça fait trois euros cinquante.",
+   "where": "Scène A1 u4"
+  },
+  {
+   "text": "Perdone, ¿dónde está la estación, por favor?",
+   "fr": "Excusez-moi, où est la gare, s'il vous plaît ?",
+   "where": "Scène A1 u5"
+  },
+  {
+   "text": "Todo recto y luego a la izquierda.",
+   "fr": "C'est tout droit, puis à gauche.",
+   "where": "Scène A1 u5"
+  },
+  {
+   "text": "No, a cinco minutos andando.",
+   "fr": "Non, à cinq minutes à pied.",
+   "where": "Scène A1 u5"
+  },
+  {
+   "text": "¡Muchas gracias!",
+   "fr": "Merci beaucoup !",
+   "where": "Scène A1 u5"
+  },
+  {
+   "text": "¡De nada!",
+   "fr": "De rien !",
+   "where": "Scène A1 u5"
+  },
+  {
+   "text": "¡Hoy hace buen tiempo!",
+   "fr": "Il fait beau aujourd'hui !",
+   "where": "Scène A1 u6"
+  },
+  {
+   "text": "Sí, pero hay nubes allí.",
+   "fr": "Oui, mais il y a des nuages là-bas.",
+   "where": "Scène A1 u6"
+  },
+  {
+   "text": "¿Crees que va a llover?",
+   "fr": "Tu crois qu'il va pleuvoir ?",
+   "where": "Scène A1 u6"
+  },
+  {
+   "text": "Quizá por la tarde. Cojo un paraguas.",
+   "fr": "Peut-être cet après-midi. Je prends un parapluie.",
+   "where": "Scène A1 u6"
+  },
+  {
+   "text": "Buena idea. Hace veinte grados, es perfecto.",
+   "fr": "Bonne idée. Il fait vingt degrés, c'est parfait.",
+   "where": "Scène A1 u6"
+  },
+  {
+   "text": "¿Le puedo ayudar?",
+   "fr": "Je peux vous aider ?",
+   "where": "Scène A1 u7"
+  },
+  {
+   "text": "Sí, busco un jersey azul.",
+   "fr": "Oui, je cherche un pull bleu.",
+   "where": "Scène A1 u7"
+  },
+  {
+   "text": "Este es bonito y abriga mucho.",
+   "fr": "Celui-ci est joli, et il est chaud.",
+   "where": "Scène A1 u7"
+  },
+  {
+   "text": "Es un poco grande. ¿Lo tiene en negro?",
+   "fr": "Il est un peu grand. Vous l'avez en noir ?",
+   "where": "Scène A1 u7"
+  },
+  {
+   "text": "Sí, en negro y más pequeño. Aquí tiene.",
+   "fr": "Oui, en noir et plus petit. Voilà.",
+   "where": "Scène A1 u7"
+  },
+  {
+   "text": "¿A qué hora te levantas?",
+   "fr": "Tu te lèves à quelle heure ?",
+   "where": "Scène A1 u8"
+  },
+  {
+   "text": "A las siete. Me ducho y me tomo un café.",
+   "fr": "À sept heures. Je prends une douche et je bois un café.",
+   "where": "Scène A1 u8"
+  },
+  {
+   "text": "¿Y cómo vienes a la oficina?",
+   "fr": "Et tu viens au bureau comment ?",
+   "where": "Scène A1 u8"
+  },
+  {
+   "text": "En bici. Por la tarde hago la compra y cocino.",
+   "fr": "À vélo. Le soir, je fais les courses et je cuisine.",
+   "where": "Scène A1 u8"
+  },
+  {
+   "text": "¿Y te acuestas tarde?",
+   "fr": "Et tu te couches tard ?",
+   "where": "Scène A1 u8"
+  },
+  {
+   "text": "No, sobre las once.",
+   "fr": "Non, vers onze heures.",
+   "where": "Scène A1 u8"
+  },
+  {
+   "text": "¡Vamos! Tiro… ¡y gol!",
+   "fr": "Allez ! Tir… et but !",
+   "where": "Scène A1 u9"
+  },
+  {
+   "text": "¡Qué golazo! Uno a cero.",
+   "fr": "Quel but ! Ça fait un à zéro.",
+   "where": "Scène A1 u9"
+  },
+  {
+   "text": "Soy de este equipo de toda la vida.",
+   "fr": "Je suis supporter de cette équipe depuis toujours.",
+   "where": "Scène A1 u9"
+  },
+  {
+   "text": "¡Cuidado, el árbitro pita penalti!",
+   "fr": "Attention, l'arbitre siffle un penalty !",
+   "where": "Scène A1 u9"
+  },
+  {
+   "text": "¡Pasa! Este es el salón.",
+   "fr": "Entre ! Voici le salon.",
+   "where": "Scène A1 u10"
+  },
+  {
+   "text": "¡Qué luminoso! ¿Y la cocina?",
+   "fr": "C'est très lumineux ! Et la cuisine ?",
+   "where": "Scène A1 u10"
+  },
+  {
+   "text": "La cocina está a la derecha y mi habitación al fondo.",
+   "fr": "La cuisine est à droite, et ma chambre est au fond.",
+   "where": "Scène A1 u10"
+  },
+  {
+   "text": "¿Tienes balcón?",
+   "fr": "Tu as un balcon ?",
+   "where": "Scène A1 u10"
+  },
+  {
+   "text": "Sí, uno pequeño. ¿Quieres un té fuera?",
+   "fr": "Oui, un petit balcon. Tu veux un thé dehors ?",
+   "where": "Scène A1 u10"
+  },
+  {
+   "text": "¿Te gustan las películas de miedo?",
+   "fr": "Tu aimes les films d'horreur ?",
+   "where": "Scène A1 u11"
+  },
+  {
+   "text": "No, no me gustan nada. ¡Me dan miedo!",
+   "fr": "Non, je n'aime pas ça du tout. J'ai peur !",
+   "where": "Scène A1 u11"
+  },
+  {
+   "text": "¿Entonces una comedia?",
+   "fr": "Alors une comédie ?",
+   "where": "Scène A1 u11"
+  },
+  {
+   "text": "Sí, me encantan las comedias. ¿Y a ti?",
+   "fr": "Oui, j'adore les comédies. Et toi ?",
+   "where": "Scène A1 u11"
+  },
+  {
+   "text": "A mí también. ¡Y prefiero con palomitas!",
+   "fr": "Moi aussi. Et je préfère avec des pop-corn !",
+   "where": "Scène A1 u11"
+  },
+  {
+   "text": "Hola, ¿tiene leche?",
+   "fr": "Bonjour, vous avez du lait ?",
+   "where": "Scène A1 u12"
+  },
+  {
+   "text": "Sí, al fondo de la tienda, en la nevera.",
+   "fr": "Oui, au fond du magasin, dans le frigo.",
+   "where": "Scène A1 u12"
+  },
+  {
+   "text": "Gracias. Y una barra de pan, por favor.",
+   "fr": "Merci. Et une baguette, s'il vous plaît.",
+   "where": "Scène A1 u12"
+  },
+  {
+   "text": "Aquí tiene. ¿Paga con tarjeta?",
+   "fr": "Voilà. Vous payez par carte ?",
+   "where": "Scène A1 u12"
+  },
+  {
+   "text": "No, en efectivo. Tome.",
+   "fr": "Non, en espèces. Voilà.",
+   "where": "Scène A1 u12"
+  },
+  {
+   "text": "Bueno, ¡anoche fue genial!",
+   "fr": "Bon ben, hier soir, c'était super !",
+   "where": "Scène A1 u13"
+  },
+  {
+   "text": "¿Ah, sí? ¡Cuenta!",
+   "fr": "Ah bon ? Raconte !",
+   "where": "Scène A1 u13"
+  },
+  {
+   "text": "Bah, el restaurante regular, pero el concierto, ¡genial!",
+   "fr": "Bof, le resto était moyen, mais le concert, génial !",
+   "where": "Scène A1 u13"
+  },
+  {
+   "text": "¡Qué guay! ¿Y después?",
+   "fr": "Trop bien ! Et après ?",
+   "where": "Scène A1 u13"
+  },
+  {
+   "text": "Después, a dormir. ¡Estoy hecho polvo!",
+   "fr": "Après, dodo. Je suis crevé !",
+   "where": "Scène A1 u13"
+  },
+  {
+   "text": "¡Qué buenos mis tomates! ¡Pruebe!",
+   "fr": "Elles sont belles, mes tomates ! Goûtez !",
+   "where": "Scène A1 u14"
+  },
+  {
+   "text": "Mmm, riquísimos. Me llevo un kilo.",
+   "fr": "Mmm, délicieuses. J'en prends un kilo.",
+   "where": "Scène A1 u14"
+  },
+  {
+   "text": "¿Algo más?",
+   "fr": "Et avec ça ?",
+   "where": "Scène A1 u14"
+  },
+  {
+   "text": "Una lechuga y unas naranjas.",
+   "fr": "Une salade et des oranges.",
+   "where": "Scène A1 u14"
+  },
+  {
+   "text": "Venga, se lo dejo en cinco euros todo.",
+   "fr": "Allez, je vous fais un prix : cinq euros le tout.",
+   "where": "Scène A1 u14"
+  },
+  {
+   "text": "¿Tu perro es bueno?",
+   "fr": "Il est gentil, ton chien ?",
+   "where": "Scène A1 u15"
+  },
+  {
+   "text": "Sí, muy bueno. Puedes acariciarlo.",
+   "fr": "Oui, très gentil. Tu peux le caresser.",
+   "where": "Scène A1 u15"
+  },
+  {
+   "text": "¿Cómo se llama?",
+   "fr": "Comment il s'appelle ?",
+   "where": "Scène A1 u15"
+  },
+  {
+   "text": "Se llama Max. Tiene tres años.",
+   "fr": "Il s'appelle Max. Il a trois ans.",
+   "where": "Scène A1 u15"
+  },
+  {
+   "text": "Yo tengo un gato, ¡pero araña!",
+   "fr": "Moi, j'ai un chat, mais il griffe !",
+   "where": "Scène A1 u15"
+  },
+  {
+   "text": "Buenos días. ¿Qué le pasa?",
+   "fr": "Bonjour. Qu'est-ce qui ne va pas ?",
+   "where": "Scène A1 u16"
+  },
+  {
+   "text": "Me duele la cabeza y la garganta.",
+   "fr": "J'ai mal à la tête et à la gorge.",
+   "where": "Scène A1 u16"
+  },
+  {
+   "text": "¿Tiene fiebre?",
+   "fr": "Vous avez de la fièvre ?",
+   "where": "Scène A1 u16"
+  },
+  {
+   "text": "Un poco, treinta y ocho.",
+   "fr": "Un peu, trente-huit.",
+   "where": "Scène A1 u16"
+  },
+  {
+   "text": "Es un resfriado. Descanse y beba mucha agua.",
+   "fr": "C'est un rhume. Reposez-vous et buvez beaucoup d'eau.",
+   "where": "Scène A1 u16"
+  },
+  {
+   "text": "¡Buenos días a todos! Abrid los libros por la página diez.",
+   "fr": "Bonjour à tous ! Ouvrez vos livres page dix.",
+   "where": "Scène A1 u17"
+  },
+  {
+   "text": "Perdone, no tengo libro.",
+   "fr": "Pardon, je n'ai pas de livre.",
+   "where": "Scène A1 u17"
+  },
+  {
+   "text": "No pasa nada, mira con tu compañera.",
+   "fr": "Pas de problème, regarde avec ta voisine.",
+   "where": "Scène A1 u17"
+  },
+  {
+   "text": "¿Cómo se dice « pen » en este idioma?",
+   "fr": "Comment on dit « pen » dans cette langue ?",
+   "where": "Scène A1 u17"
+  },
+  {
+   "text": "¡Buena pregunta! Escríbelo en la pizarra.",
+   "fr": "Bonne question ! Écris-le au tableau.",
+   "where": "Scène A1 u17"
+  },
+  {
+   "text": "Perdone, ¿tiene hora?",
+   "fr": "Pardon, vous avez l'heure ?",
+   "where": "Scène A1 u18"
+  },
+  {
+   "text": "Sí, son las nueve menos cuarto.",
+   "fr": "Oui, il est neuf heures moins le quart.",
+   "where": "Scène A1 u18"
+  },
+  {
+   "text": "¡Uy, llego tarde! ¿A qué hora pasa el autobús?",
+   "fr": "Oh là là, je suis en retard ! Le bus passe à quelle heure ?",
+   "where": "Scène A1 u18"
+  },
+  {
+   "text": "Cada diez minutos, creo.",
+   "fr": "Toutes les dix minutes, je crois.",
+   "where": "Scène A1 u18"
+  },
+  {
+   "text": "¡Ah, ahí viene! ¡Gracias y buen día!",
+   "fr": "Ah, le voilà ! Merci et bonne journée !",
+   "where": "Scène A1 u18"
+  },
+  {
+   "text": "¿Qué vas a tomar?",
+   "fr": "Qu'est-ce que tu bois ?",
+   "where": "Scène A1 u19"
+  },
+  {
+   "text": "Un zumo de naranja bien fresquito, por favor.",
+   "fr": "Un jus d'orange bien frais, s'il te plaît.",
+   "where": "Scène A1 u19"
+  },
+  {
+   "text": "¿Con hielo?",
+   "fr": "Avec des glaçons ?",
+   "where": "Scène A1 u19"
+  },
+  {
+   "text": "Sí, gracias. Y una botella de agua para mi amiga.",
+   "fr": "Oui, merci. Et une bouteille d'eau pour mon amie.",
+   "where": "Scène A1 u19"
+  },
+  {
+   "text": "¿Sin gas o con gas?",
+   "fr": "Plate ou gazeuse ?",
+   "where": "Scène A1 u19"
+  },
+  {
+   "text": "¡Ven, hay pan, mantequilla y mermelada!",
+   "fr": "Viens, il y a du pain, du beurre et de la confiture !",
+   "where": "Scène A1 u20"
+  },
+  {
+   "text": "¡Genial! ¿También hay huevos?",
+   "fr": "Super ! Il y a aussi des œufs ?",
+   "where": "Scène A1 u20"
+  },
+  {
+   "text": "Sí, y fruta. ¿Quieres té o café?",
+   "fr": "Oui, et des fruits. Tu veux un thé ou un café ?",
+   "where": "Scène A1 u20"
+  },
+  {
+   "text": "Un té, con un poco de azúcar.",
+   "fr": "Un thé, avec un peu de sucre.",
+   "where": "Scène A1 u20"
+  },
+  {
+   "text": "¡Come bien, que el día es largo!",
+   "fr": "Mange bien, la journée est longue !",
+   "where": "Scène A1 u20"
+  },
+  {
+   "text": "¿Qué idiomas hablas?",
+   "fr": "Tu parles quelles langues ?",
+   "where": "Scène A1 u21"
+  },
+  {
+   "text": "Hablo francés, un poco de inglés, y estoy aprendiendo este idioma.",
+   "fr": "Je parle français, un peu d'anglais, et j'apprends cette langue.",
+   "where": "Scène A1 u21"
+  },
+  {
+   "text": "¡Bravo! ¡Hablas muy bien!",
+   "fr": "Bravo ! Tu parles très bien !",
+   "where": "Scène A1 u21"
+  },
+  {
+   "text": "¡Gracias, qué amable! ¿Y tú de qué país eres?",
+   "fr": "Merci, c'est gentil ! Et toi, tu viens de quel pays ?",
+   "where": "Scène A1 u21"
+  },
+  {
+   "text": "De Japón. Hablo japonés y alemán.",
+   "fr": "Du Japon. Je parle japonais et allemand.",
+   "where": "Scène A1 u21"
+  },
+  {
+   "text": "Hola, ¿este autobús va al centro?",
+   "fr": "Bonjour, ce bus va au centre-ville ?",
+   "where": "Scène A1 u22"
+  },
+  {
+   "text": "Sí, es la última parada.",
+   "fr": "Oui, c'est le terminus.",
+   "where": "Scène A1 u22"
+  },
+  {
+   "text": "Un billete, por favor. ¿Cuánto es?",
+   "fr": "Un ticket, s'il vous plaît. C'est combien ?",
+   "where": "Scène A1 u22"
+  },
+  {
+   "text": "Dos euros. Se baja dentro de cuatro paradas.",
+   "fr": "Deux euros. Vous descendez dans quatre arrêts.",
+   "where": "Scène A1 u22"
+  },
+  {
+   "text": "¡Gracias! ¿Me puede avisar?",
+   "fr": "Merci ! Vous pouvez me prévenir ?",
+   "where": "Scène A1 u22"
+  },
+  {
+   "text": "¿Qué haces el fin de semana?",
+   "fr": "Qu'est-ce que tu fais le week-end ?",
+   "where": "Scène A1 u23"
+  },
+  {
+   "text": "Los sábados juego al tenis. Los domingos leo.",
+   "fr": "Le samedi, je joue au tennis. Le dimanche, je lis.",
+   "where": "Scène A1 u23"
+  },
+  {
+   "text": "¿También te gusta la música?",
+   "fr": "Tu aimes la musique aussi ?",
+   "where": "Scène A1 u23"
+  },
+  {
+   "text": "Sí, toco la guitarra. ¿Y tú?",
+   "fr": "Oui, je joue de la guitare. Et toi ?",
+   "where": "Scène A1 u23"
+  },
+  {
+   "text": "Yo hago baile. ¿Salimos juntos el sábado?",
+   "fr": "Moi, je fais de la danse. On sort ensemble samedi ?",
+   "where": "Scène A1 u23"
+  },
+  {
+   "text": "Hola, soy la nueva contable.",
+   "fr": "Bonjour, je suis la nouvelle comptable.",
+   "where": "Scène A1 u24"
+  },
+  {
+   "text": "¡Bienvenida! Yo soy diseñador gráfico.",
+   "fr": "Bienvenue ! Moi, je suis graphiste.",
+   "where": "Scène A1 u24"
+  },
+  {
+   "text": "¿Trabajas aquí desde hace mucho?",
+   "fr": "Tu travailles ici depuis longtemps ?",
+   "where": "Scène A1 u24"
+  },
+  {
+   "text": "Desde hace dos años. Trabajo de nueve a cinco.",
+   "fr": "Depuis deux ans. Je travaille de neuf heures à cinq heures.",
+   "where": "Scène A1 u24"
+  },
+  {
+   "text": "Genial. ¿Comemos juntas a mediodía?",
+   "fr": "Super. On déjeune ensemble à midi ?",
+   "where": "Scène A1 u24"
+  },
+  {
+   "text": "¿Nos sentamos en el césped, debajo del árbol?",
+   "fr": "On s'assoit sur l'herbe, sous l'arbre ?",
+   "where": "Scène A1 u25"
+  },
+  {
+   "text": "Sí, hay sombra. ¡Mira los patos en el lago!",
+   "fr": "Oui, il y a de l'ombre. Regarde les canards sur le lac !",
+   "where": "Scène A1 u25"
+  },
+  {
+   "text": "¿Damos un paseo después?",
+   "fr": "On fait une promenade après ?",
+   "where": "Scène A1 u25"
+  },
+  {
+   "text": "Buena idea. ¡Y después, un helado!",
+   "fr": "Bonne idée. Et après, une glace !",
+   "where": "Scène A1 u25"
+  },
+  {
+   "text": "¡Vale, invito yo!",
+   "fr": "D'accord, c'est moi qui invite !",
+   "where": "Scène A1 u25"
+  },
+  {
+   "text": "¡Hola! ¿Qué tal el fin de semana?",
+   "fr": "Salut ! Tu as passé un bon week-end ?",
+   "where": "Scène A2 a2u0"
+  },
+  {
+   "text": "¡Sí! El sábado me levanté tarde e hice la compra.",
+   "fr": "Oui ! Samedi, je me suis levé tard et j'ai fait les courses.",
+   "where": "Scène A2 a2u0"
+  },
+  {
+   "text": "¿Y el domingo?",
+   "fr": "Et dimanche ?",
+   "where": "Scène A2 a2u0"
+  },
+  {
+   "text": "Fuimos al cine con unos amigos. ¿Y tú?",
+   "fr": "Nous sommes allés au cinéma avec des amis. Et toi ?",
+   "where": "Scène A2 a2u0"
+  },
+  {
+   "text": "Yo trabajé todo el día…",
+   "fr": "Moi, j'ai travaillé toute la journée…",
+   "where": "Scène A2 a2u0"
+  },
+  {
+   "text": "¡Hola! ¿Tiene la tarjeta de cliente?",
+   "fr": "Bonjour ! Vous avez la carte du magasin ?",
+   "where": "Scène A2 a2u1"
+  },
+  {
+   "text": "No, no la tengo. Quería también una bolsa, por favor.",
+   "fr": "Non, je ne l'ai pas. Je voudrais aussi un sac, s'il vous plaît.",
+   "where": "Scène A2 a2u1"
+  },
+  {
+   "text": "Claro. Son veintitrés euros con cincuenta.",
+   "fr": "Bien sûr. Ça fait vingt-trois euros cinquante.",
+   "where": "Scène A2 a2u1"
+  },
+  {
+   "text": "Sí. Aquí tiene el tique. ¡Que tenga un buen día!",
+   "fr": "Oui. Voici votre ticket de caisse. Bonne journée !",
+   "where": "Scène A2 a2u1"
+  },
+  {
+   "text": "Tengo fiebre y toso mucho.",
+   "fr": "J'ai de la fièvre et je tousse beaucoup.",
+   "where": "Scène A2 a2u2"
+  },
+  {
+   "text": "Desde hace dos días. También me duele la cabeza.",
+   "fr": "Depuis deux jours. J'ai aussi mal à la tête.",
+   "where": "Scène A2 a2u2"
+  },
+  {
+   "text": "No es grave. Aquí tiene la receta: una pastilla tres veces al día.",
+   "fr": "Ce n'est pas grave. Voici l'ordonnance : un comprimé trois fois par jour.",
+   "where": "Scène A2 a2u2"
+  },
+  {
+   "text": "¿Diga? Escuela Castellum, buenos días.",
+   "fr": "Allô, école Castellum, bonjour !",
+   "where": "Scène A2 a2u3"
+  },
+  {
+   "text": "Buenos días, quisiera hablar con la señora Rossi, por favor.",
+   "fr": "Bonjour, je voudrais parler à Madame Rossi, s'il vous plaît.",
+   "where": "Scène A2 a2u3"
+  },
+  {
+   "text": "¿De parte de quién?",
+   "fr": "C'est de la part de qui ?",
+   "where": "Scène A2 a2u3"
+  },
+  {
+   "text": "Soy Sam. Es por el curso de tarde.",
+   "fr": "C'est Sam. C'est pour le cours du soir.",
+   "where": "Scène A2 a2u3"
+  },
+  {
+   "text": "No cuelgue, ahora se la paso.",
+   "fr": "Ne quittez pas, je vous la passe.",
+   "where": "Scène A2 a2u3"
+  },
+  {
+   "text": "¿Qué vas a hacer este fin de semana?",
+   "fr": "Qu'est-ce que tu vas faire ce week-end ?",
+   "where": "Scène A2 a2u4"
+  },
+  {
+   "text": "Mañana me voy de viaje: me voy a la playa con mi hermana.",
+   "fr": "Demain, je vais voyager : je pars à la mer avec ma sœur.",
+   "where": "Scène A2 a2u4"
+  },
+  {
+   "text": "¡Qué bien! ¿Cuándo volvéis?",
+   "fr": "Super ! Vous rentrez quand ?",
+   "where": "Scène A2 a2u4"
+  },
+  {
+   "text": "El domingo por la noche. ¡Y el año que viene voy a aprender a hacer surf!",
+   "fr": "Dimanche soir. Et l'année prochaine, je vais apprendre à faire du surf !",
+   "where": "Scène A2 a2u4"
+  },
+  {
+   "text": "¡Pues buen fin de semana!",
+   "fr": "Bon week-end, alors !",
+   "where": "Scène A2 a2u4"
+  },
+  {
+   "text": "Este es el piso. Está en la tercera planta.",
+   "fr": "Voici l'appartement. Il est au troisième étage.",
+   "where": "Scène A2 a2u5"
+  },
+  {
+   "text": "¿Hay ascensor?",
+   "fr": "Il y a un ascenseur ?",
+   "where": "Scène A2 a2u5"
+  },
+  {
+   "text": "Sí. Y tiene dos dormitorios y un balcón.",
+   "fr": "Oui. Et il y a deux chambres et un balcon.",
+   "where": "Scène A2 a2u5"
+  },
+  {
+   "text": "¿Cuánto es el alquiler?",
+   "fr": "Le loyer est de combien ?",
+   "where": "Scène A2 a2u5"
+  },
+  {
+   "text": "Ochocientos euros al mes, gastos incluidos.",
+   "fr": "Huit cents euros par mois, charges comprises.",
+   "where": "Scène A2 a2u5"
+  },
+  {
+   "text": "¡Me lo quedo!",
+   "fr": "Je le prends !",
+   "where": "Scène A2 a2u5"
+  },
+  {
+   "text": "¿Estás libre el sábado por la noche? Hay un concierto en la plaza.",
+   "fr": "Tu es libre samedi soir ? Il y a un concert sur la place.",
+   "where": "Scène A2 a2u6"
+  },
+  {
+   "text": "¡Con mucho gusto! ¿Dónde quedamos?",
+   "fr": "Avec plaisir ! On se retrouve où ?",
+   "where": "Scène A2 a2u6"
+  },
+  {
+   "text": "Delante del bar, a las nueve.",
+   "fr": "Devant le café, à neuf heures.",
+   "where": "Scène A2 a2u6"
+  },
+  {
+   "text": "Perfecto. ¿Puedo ir con mi hermano?",
+   "fr": "Parfait. Je peux venir avec mon frère ?",
+   "where": "Scène A2 a2u6"
+  },
+  {
+   "text": "¡Claro! ¡Hasta el sábado!",
+   "fr": "Bien sûr ! À samedi !",
+   "where": "Scène A2 a2u6"
+  },
+  {
+   "text": "¡Bienvenido! ¿Haces deporte a menudo?",
+   "fr": "Bienvenue ! Tu fais souvent du sport ?",
+   "where": "Scène A2 a2u7"
+  },
+  {
+   "text": "Salgo a correr los domingos, nada más.",
+   "fr": "Je fais un footing le dimanche, c'est tout.",
+   "where": "Scène A2 a2u7"
+  },
+  {
+   "text": "Vale. Empezamos con el calentamiento: diez minutos de bici.",
+   "fr": "D'accord. On commence par l'échauffement : dix minutes de vélo.",
+   "where": "Scène A2 a2u7"
+  },
+  {
+   "text": "¿Y después?",
+   "fr": "Et après ?",
+   "where": "Scène A2 a2u7"
+  },
+  {
+   "text": "Después, ejercicios de piernas. ¡Mañana vas a tener agujetas!",
+   "fr": "Après, des exercices pour les jambes. Demain, tu vas avoir des courbatures !",
+   "where": "Scène A2 a2u7"
+  },
+  {
+   "text": "¿Has visto mi historia? Subí un vídeo anoche.",
+   "fr": "Tu as vu ma story ? J'ai posté une vidéo hier soir.",
+   "where": "Scène A2 a2u8"
+  },
+  {
+   "text": "¡Sí, le di a me gusta! ¿Cuántos seguidores tienes ahora?",
+   "fr": "Oui, je l'ai likée ! Tu as combien d'abonnés maintenant ?",
+   "where": "Scène A2 a2u8"
+  },
+  {
+   "text": "Doscientos. ¡Mi novia ya tiene diez mil seguidores!",
+   "fr": "Deux cents. Ma copine, elle a déjà dix mille abonnés !",
+   "where": "Scène A2 a2u8"
+  },
+  {
+   "text": "Pasas demasiado tiempo con el móvil.",
+   "fr": "Tu passes trop de temps sur ton téléphone, toi.",
+   "where": "Scène A2 a2u8"
+  },
+  {
+   "text": "Puede ser… ¡Pero suscríbete a mi canal igualmente!",
+   "fr": "Peut-être… Mais abonne-toi à ma chaîne quand même !",
+   "where": "Scène A2 a2u8"
+  },
+  {
+   "text": "Coge un paraguas, esta tarde va a llover.",
+   "fr": "Prends un parapluie, il va pleuvoir cet après-midi.",
+   "where": "Scène A2 a2u9"
+  },
+  {
+   "text": "¡Pero hace bueno! Hace sol.",
+   "fr": "Mais il fait beau ! Il y a du soleil.",
+   "where": "Scène A2 a2u9"
+  },
+  {
+   "text": "De momento. El tiempo anuncia un chaparrón hacia las cuatro.",
+   "fr": "Pour l'instant. La météo annonce une averse vers quatre heures.",
+   "where": "Scène A2 a2u9"
+  },
+  {
+   "text": "¿Y mañana?",
+   "fr": "Et demain ?",
+   "where": "Scène A2 a2u9"
+  },
+  {
+   "text": "Mañana va a hacer más frío que hoy. ¡Coge también la bufanda!",
+   "fr": "Demain, il va faire plus froid qu'aujourd'hui. Prends aussi ton écharpe !",
+   "where": "Scène A2 a2u9"
+  },
+  {
+   "text": "Corta las cebollas en trocitos.",
+   "fr": "Coupe les oignons en petits morceaux.",
+   "where": "Scène A2 a2u10"
+  },
+  {
+   "text": "Hecho. ¿Y ahora?",
+   "fr": "C'est fait. Et maintenant ?",
+   "where": "Scène A2 a2u10"
+  },
+  {
+   "text": "Calienta el aceite en una sartén y luego añade los tomates.",
+   "fr": "Fais chauffer l'huile dans une poêle, puis ajoute les tomates.",
+   "where": "Scène A2 a2u10"
+  },
+  {
+   "text": "¿Cuánto tiempo se cocina?",
+   "fr": "Ça cuit combien de temps ?",
+   "where": "Scène A2 a2u10"
+  },
+  {
+   "text": "Veinte minutos a fuego lento. Prueba: ¿está bien de sal?",
+   "fr": "Vingt minutes à feu doux. Goûte : elle est assez salée ?",
+   "where": "Scène A2 a2u10"
+  },
+  {
+   "text": "¡Mmm, está perfecta!",
+   "fr": "Mmm, c'est parfait !",
+   "where": "Scène A2 a2u10"
+  },
+  {
+   "text": "¡Estoy fatal, no tengo batería!",
+   "fr": "Je suis en galère, j'ai plus de batterie !",
+   "where": "Scène A2 a2u11"
+  },
+  {
+   "text": "Tranqui, coge mi cargador.",
+   "fr": "T'inquiète, prends mon chargeur.",
+   "where": "Scène A2 a2u11"
+  },
+  {
+   "text": "¡Gracias! Por cierto, ¡la peli de anoche fue una pasada!",
+   "fr": "Merci ! Au fait, le film hier soir, il était grave bien !",
+   "where": "Scène A2 a2u11"
+  },
+  {
+   "text": "¡Total! Y tus zapatillas son superchulas.",
+   "fr": "Trop ! Et tes baskets, elles sont trop stylées.",
+   "where": "Scène A2 a2u11"
+  },
+  {
+   "text": "¡Venga, vamos, que solo tenemos diez minutos!",
+   "fr": "Allez, on y va, c'est chaud, on n'a que dix minutes !",
+   "where": "Scène A2 a2u11"
+  },
+  {
+   "text": "¡Buenas tardes! ¿En qué puedo ayudarle?",
+   "fr": "Bonsoir ! Je peux vous aider ?",
+   "where": "Scène A2 a2u12"
+  },
+  {
+   "text": "Buenas tardes. He reservado una habitación a nombre de Martin, para tres noches.",
+   "fr": "Bonsoir. J'ai réservé une chambre au nom de Martin, pour trois nuits.",
+   "where": "Scène A2 a2u12"
+  },
+  {
+   "text": "Perfecto. Una habitación doble, desayuno incluido. Aquí tiene su tarjeta.",
+   "fr": "Parfait. Une chambre double, petit-déjeuner compris. Voici votre carte.",
+   "where": "Scène A2 a2u12"
+  },
+  {
+   "text": "De siete a diez. Hay que dejar la habitación antes de las doce.",
+   "fr": "De sept heures à dix heures. Il faut libérer la chambre avant midi.",
+   "where": "Scène A2 a2u12"
+  },
+  {
+   "text": "¡Buenas noches! Una mesa para cuatro, por favor.",
+   "fr": "Bonsoir ! Une table pour quatre, s'il vous plaît.",
+   "where": "Scène A2 a2u13"
+  },
+  {
+   "text": "Claro, síganme… ¿Ya saben qué van a tomar?",
+   "fr": "Bien sûr, suivez-moi… Vous avez choisi ?",
+   "where": "Scène A2 a2u13"
+  },
+  {
+   "text": "De primero, la sopa. Y de segundo, el pollo con patatas fritas.",
+   "fr": "En entrée, je vais prendre la soupe. Et comme plat, le poulet avec des frites.",
+   "where": "Scène A2 a2u13"
+  },
+  {
+   "text": "Muy bien. ¿Y para beber?",
+   "fr": "Très bien. Et pour boire ?",
+   "where": "Scène A2 a2u13"
+  },
+  {
+   "text": "Una jarra de agua. Ah, y soy alérgico a las nueces.",
+   "fr": "Une carafe d'eau. Ah, et je suis allergique aux noix.",
+   "where": "Scène A2 a2u13"
+  },
+  {
+   "text": "Apuntado, aviso al cocinero.",
+   "fr": "C'est noté, je préviens le chef.",
+   "where": "Scène A2 a2u13"
+  },
+  {
+   "text": "Perdone, ¿qué línea va a la estación?",
+   "fr": "Excusez-moi, quelle ligne va à la gare ?",
+   "where": "Scène A2 a2u14"
+  },
+  {
+   "text": "La línea dos. Pero hay que cambiar en la próxima estación.",
+   "fr": "La ligne deux. Mais il faut changer à la prochaine station.",
+   "where": "Scène A2 a2u14"
+  },
+  {
+   "text": "Vale. ¿Cuánto cuesta un billete?",
+   "fr": "D'accord. Un ticket, c'est combien ?",
+   "where": "Scène A2 a2u14"
+  },
+  {
+   "text": "Un euro con cincuenta. Si se queda un mes, sáquese un abono.",
+   "fr": "Un euro cinquante. Si vous restez un mois, prenez un abonnement.",
+   "where": "Scène A2 a2u14"
+  },
+  {
+   "text": "¡Gracias! Hay muchísima gente…",
+   "fr": "Merci ! Il y a beaucoup de monde…",
+   "where": "Scène A2 a2u14"
+  },
+  {
+   "text": "Es hora punta. ¡El metro va lleno a esta hora!",
+   "fr": "C'est l'heure de pointe. Le métro est bondé à cette heure-ci !",
+   "where": "Scène A2 a2u14"
+  },
+  {
+   "text": "¡Feliz cumpleaños! Toma, es para ti.",
+   "fr": "Bon anniversaire ! Tiens, c'est pour toi.",
+   "where": "Scène A2 a2u15"
+  },
+  {
+   "text": "¡Oh, gracias! ¡No tenías por qué!",
+   "fr": "Oh, merci ! Il ne fallait pas !",
+   "where": "Scène A2 a2u15"
+  },
+  {
+   "text": "¡Ábrelo! Lo envolví yo mismo.",
+   "fr": "Ouvre-le ! J'ai emballé le cadeau moi-même.",
+   "where": "Scène A2 a2u15"
+  },
+  {
+   "text": "¡Un libro de cocina! ¡Me encanta, gracias!",
+   "fr": "Un livre de cuisine ! Il est super, merci !",
+   "where": "Scène A2 a2u15"
+  },
+  {
+   "text": "¡Venga, sopla las velas!",
+   "fr": "Allez, souffle tes bougies !",
+   "where": "Scène A2 a2u15"
+  },
+  {
+   "text": "¿Qué tal el agua?",
+   "fr": "Alors, l'eau est bonne ?",
+   "where": "Scène A2 a2u16"
+  },
+  {
+   "text": "¡Está helada! Pero hay buenas olas.",
+   "fr": "Elle est gelée ! Mais il y a de belles vagues.",
+   "where": "Scène A2 a2u16"
+  },
+  {
+   "text": "Cuidado, ahora hay bandera roja.",
+   "fr": "Attention, le drapeau est rouge maintenant.",
+   "where": "Scène A2 a2u16"
+  },
+  {
+   "text": "Ah, sí… El socorrista está pitando. Pues me quedo en la arena.",
+   "fr": "Ah oui… Le maître-nageur siffle. Je reste sur le sable, alors.",
+   "where": "Scène A2 a2u16"
+  },
+  {
+   "text": "¡Ponte crema, que te vas a quemar! Voy a por unos helados.",
+   "fr": "Mets de la crème, tu vas brûler ! Je vais chercher des glaces.",
+   "where": "Scène A2 a2u16"
+  },
+  {
+   "text": "¡Hola! ¿Atienden sin cita?",
+   "fr": "Bonjour ! Vous prenez sans rendez-vous ?",
+   "where": "Scène A2 a2u17"
+  },
+  {
+   "text": "Sí, siéntese. ¿Qué le hacemos?",
+   "fr": "Oui, asseyez-vous. Qu'est-ce que je vous fais ?",
+   "where": "Scène A2 a2u17"
+  },
+  {
+   "text": "Un corte, pero no muy corto por los lados.",
+   "fr": "Une coupe, mais pas trop court sur les côtés.",
+   "where": "Scène A2 a2u17"
+  },
+  {
+   "text": "Vale… ¡Listo! ¿Le gusta?",
+   "fr": "D'accord… Et voilà ! Ça vous plaît ?",
+   "where": "Scène A2 a2u17"
+  },
+  {
+   "text": "¡Está perfecto, gracias! ¿Cuánto le debo?",
+   "fr": "C'est parfait, merci ! Ça fait combien ?",
+   "where": "Scène A2 a2u17"
+  },
+  {
+   "text": "¡Te toca fregar los platos!",
+   "fr": "C'est ton tour de faire la vaisselle !",
+   "where": "Scène A2 a2u18"
+  },
+  {
+   "text": "Vale, pero tú pasas la aspiradora.",
+   "fr": "D'accord, mais toi, tu passes l'aspirateur.",
+   "where": "Scène A2 a2u18"
+  },
+  {
+   "text": "Vale. ¿Y quién ha dejado los calcetines tirados en el salón?",
+   "fr": "Ça marche. Et qui a laissé traîner ses chaussettes dans le salon ?",
+   "where": "Scène A2 a2u18"
+  },
+  {
+   "text": "Eh… he sido yo. ¡Ahora los recojo!",
+   "fr": "Euh… c'est moi. Je les range !",
+   "where": "Scène A2 a2u18"
+  },
+  {
+   "text": "Y la nevera está vacía: luego hacemos la compra juntos.",
+   "fr": "Et le frigo est vide : après, on fait les courses ensemble.",
+   "where": "Scène A2 a2u18"
+  },
+  {
+   "text": "¡Hola! ¿Le puedo ayudar?",
+   "fr": "Bonjour ! Je peux vous aider ?",
+   "where": "Scène A2 a2u19"
+  },
+  {
+   "text": "Sí, ¿dónde están los probadores, por favor?",
+   "fr": "Oui, où sont les cabines, s'il vous plaît ?",
+   "where": "Scène A2 a2u19"
+  },
+  {
+   "text": "Al fondo, a la derecha… ¿Qué tal le queda?",
+   "fr": "Au fond, à droite… Alors, elle vous va ?",
+   "where": "Scène A2 a2u19"
+  },
+  {
+   "text": "Me queda demasiado estrecha. ¿La tiene en una talla más grande?",
+   "fr": "C'est trop serré. Vous l'avez en plus grand ?",
+   "where": "Scène A2 a2u19"
+  },
+  {
+   "text": "Sí, aquí tiene. Y hoy hay un descuento del veinte por ciento.",
+   "fr": "Oui, voilà. Et aujourd'hui, il y a une réduction de vingt pour cent.",
+   "where": "Scène A2 a2u19"
+  },
+  {
+   "text": "¡Genial, me la llevo! Es una ganga.",
+   "fr": "Super, je la prends ! C'est une bonne affaire.",
+   "where": "Scène A2 a2u19"
+  },
+  {
+   "text": "¡Buenos días! Dos entradas, por favor.",
+   "fr": "Bonjour ! Deux entrées, s'il vous plaît.",
+   "where": "Scène A2 a2u20"
+  },
+  {
+   "text": "¿Son estudiantes? Hay tarifa reducida.",
+   "fr": "Vous êtes étudiants ? Il y a un tarif réduit.",
+   "where": "Scène A2 a2u20"
+  },
+  {
+   "text": "No. ¿Hay alguna visita guiada esta mañana?",
+   "fr": "Non. Il y a une visite guidée ce matin ?",
+   "where": "Scène A2 a2u20"
+  },
+  {
+   "text": "Sí, a las once. Si no, está la audioguía.",
+   "fr": "Oui, à onze heures. Sinon, il y a l'audioguide.",
+   "where": "Scène A2 a2u20"
+  },
+  {
+   "text": "Sí, pero sin flash. El museo cierra a las seis. ¡Que disfruten de la visita!",
+   "fr": "Oui, mais sans flash. Le musée ferme à six heures. Bonne visite !",
+   "where": "Scène A2 a2u20"
+  },
+  {
+   "text": "¡Pasa, estás en tu casa!",
+   "fr": "Entre, fais comme chez toi !",
+   "where": "Scène A2 a2u21"
+  },
+  {
+   "text": "¡Gracias! Te he traído una cosita.",
+   "fr": "Merci ! Je t'ai apporté un petit quelque chose.",
+   "where": "Scène A2 a2u21"
+  },
+  {
+   "text": "¡Flores! Son preciosas. Siéntate, la cena está lista.",
+   "fr": "Des fleurs ! Elles sont magnifiques. Assieds-toi, le dîner est prêt.",
+   "where": "Scène A2 a2u21"
+  },
+  {
+   "text": "¡Estaba buenísimo, gracias por todo!",
+   "fr": "C'était délicieux, merci pour tout !",
+   "where": "Scène A2 a2u21"
+  },
+  {
+   "text": "¡De nada! Vuelve cuando quieras.",
+   "fr": "Avec plaisir ! Reviens quand tu veux.",
+   "where": "Scène A2 a2u21"
+  },
+  {
+   "text": "Ya es tarde, me voy. ¡Buenas noches!",
+   "fr": "Il est déjà tard, je vais y aller. Bonne nuit !",
+   "where": "Scène A2 a2u21"
+  },
+  {
+   "text": "¡Buenas tardes! ¿Montan la tienda aquí?",
+   "fr": "Bonsoir ! Vous plantez la tente ici ?",
+   "where": "Scène A2 a2u22"
+  },
+  {
+   "text": "Sí. ¿Hay duchas en el camping?",
+   "fr": "Oui. Il y a des douches au camping ?",
+   "where": "Scène A2 a2u22"
+  },
+  {
+   "text": "Sí, allí, al lado de la recepción. Cuidado, por la noche hace frío.",
+   "fr": "Oui, là-bas, à côté de l'accueil. Attention, il fait froid la nuit.",
+   "where": "Scène A2 a2u22"
+  },
+  {
+   "text": "Tenemos sacos de dormir. ¿Podemos hacer una hoguera?",
+   "fr": "On a des sacs de couchage. On peut faire un feu de camp ?",
+   "where": "Scène A2 a2u22"
+  },
+  {
+   "text": "No, en verano está prohibido. ¡Pero miren cuántas estrellas!",
+   "fr": "Non, c'est interdit en été. Mais regardez toutes ces étoiles !",
+   "where": "Scène A2 a2u22"
+  },
+  {
+   "text": "¡Llego tarde, perdona! No sonó el despertador.",
+   "fr": "Je suis en retard, désolé ! Le réveil n'a pas sonné.",
+   "where": "Scène A2 a2u23"
+  },
+  {
+   "text": "No pasa nada. Pero… ¡tienes café en el jersey!",
+   "fr": "Ce n'est pas grave. Mais… il y a du café sur ton pull !",
+   "where": "Scène A2 a2u23"
+  },
+  {
+   "text": "¡Oh, no! Y encima perdí el autobús y las llaves.",
+   "fr": "Oh non ! Et en plus, j'ai raté le bus et j'ai perdu mes clés.",
+   "where": "Scène A2 a2u23"
+  },
+  {
+   "text": "¡Qué día! Toma, tengo un jersey de repuesto en la taquilla.",
+   "fr": "Quelle journée ! Tiens, j'ai un pull de rechange dans mon casier.",
+   "where": "Scène A2 a2u23"
+  },
+  {
+   "text": "¡Gracias! Menos mal que estás aquí.",
+   "fr": "Merci ! Heureusement que tu es là.",
+   "where": "Scène A2 a2u23"
+  },
+  {
+   "text": "Dudo si dejar mi trabajo para dar la vuelta al mundo. ¿Tú qué opinas?",
+   "fr": "J'hésite à quitter mon travail pour faire le tour du monde. Qu'est-ce que tu en penses ?",
+   "where": "Scène B1 b1u0"
+  },
+  {
+   "text": "En mi opinión, es una buena idea. ¡Llevas años hablando de ello!",
+   "fr": "À mon avis, c'est une bonne idée. Tu en parles depuis des années !",
+   "where": "Scène B1 b1u0"
+  },
+  {
+   "text": "Sí, pero por un lado tengo ganas de irme y, por otro, me da miedo perderlo todo.",
+   "fr": "Oui, mais d'un côté j'ai envie de partir, de l'autre j'ai peur de tout perdre.",
+   "where": "Scène B1 b1u0"
+  },
+  {
+   "text": "Te entiendo. Depende: ¿tienes suficientes ahorros?",
+   "fr": "Je comprends. Ça dépend : tu as assez d'économies ?",
+   "where": "Scène B1 b1u0"
+  },
+  {
+   "text": "Para un año, sí. Pero mis padres no están nada de acuerdo.",
+   "fr": "Pour un an, oui. Mais mes parents ne sont pas du tout d'accord.",
+   "where": "Scène B1 b1u0"
+  },
+  {
+   "text": "Creo que es tu vida. Si no te vas ahora, te arrepentirás.",
+   "fr": "Je pense que c'est ta vie. Si tu ne pars pas maintenant, tu le regretteras.",
+   "where": "Scène B1 b1u0"
+  },
+  {
+   "text": "No te falta razón… Lo voy a pensar en serio.",
+   "fr": "Tu n'as pas tort… Je vais y réfléchir sérieusement.",
+   "where": "Scène B1 b1u0"
+  },
+  {
+   "text": "Buenos días, siéntese. Hábleme un poco de usted.",
+   "fr": "Bonjour, asseyez-vous. Parlez-moi un peu de vous.",
+   "where": "Scène B1 b1u1"
+  },
+  {
+   "text": "Tengo cinco años de experiencia en ventas y hablo tres idiomas.",
+   "fr": "J'ai cinq ans d'expérience dans la vente, et je parle trois langues.",
+   "where": "Scène B1 b1u1"
+  },
+  {
+   "text": "Muy bien. ¿Cuáles son sus puntos fuertes?",
+   "fr": "Très bien. Quels sont vos points forts ?",
+   "where": "Scène B1 b1u1"
+  },
+  {
+   "text": "Soy motivado y organizado, y me gusta trabajar en equipo.",
+   "fr": "Je suis motivé et organisé, et j'aime travailler en équipe.",
+   "where": "Scène B1 b1u1"
+  },
+  {
+   "text": "¿Y por qué quiere dejar su puesto actual?",
+   "fr": "Et pourquoi voulez-vous quitter votre poste actuel ?",
+   "where": "Scène B1 b1u1"
+  },
+  {
+   "text": "Busco nuevas responsabilidades, y su empresa me interesa mucho.",
+   "fr": "Je cherche de nouvelles responsabilités, et votre entreprise m'intéresse beaucoup.",
+   "where": "Scène B1 b1u1"
+  },
+  {
+   "text": "Perfecto. Le llamaremos antes del final de la semana.",
+   "fr": "Parfait. Nous vous rappellerons avant la fin de la semaine.",
+   "where": "Scène B1 b1u1"
+  },
+  {
+   "text": "Buenos días, he perdido mi maleta. No ha salido por la cinta.",
+   "fr": "Bonjour, j'ai perdu ma valise. Elle n'est pas arrivée sur le tapis.",
+   "where": "Scène B1 b1u2"
+  },
+  {
+   "text": "Lo siento. ¿Tiene el resguardo del equipaje?",
+   "fr": "Je suis désolé. Vous avez votre ticket de bagage ?",
+   "where": "Scène B1 b1u2"
+  },
+  {
+   "text": "Sí, aquí lo tiene. Iba en el vuelo de las ocho.",
+   "fr": "Oui, le voici. J'étais sur le vol de huit heures.",
+   "where": "Scène B1 b1u2"
+  },
+  {
+   "text": "Su maleta se ha quedado en el aeropuerto de salida. Llegará mañana por la mañana.",
+   "fr": "Votre valise est restée à l'aéroport de départ. Elle arrivera demain matin.",
+   "where": "Scène B1 b1u2"
+  },
+  {
+   "text": "¿Mañana? ¡Pero todas mis cosas están dentro! ¿Cuál es la solución?",
+   "fr": "Demain ? Mais toutes mes affaires sont dedans ! Quelle est la solution ?",
+   "where": "Scène B1 b1u2"
+  },
+  {
+   "text": "Se la llevamos a su hotel. Compre lo necesario y se lo reembolsaremos.",
+   "fr": "On vous la livre à votre hôtel. Achetez le nécessaire, on vous remboursera.",
+   "where": "Scène B1 b1u2"
+  },
+  {
+   "text": "Mira esta foto. Soy yo, a los diez años, delante de nuestra casa.",
+   "fr": "Regarde cette photo. C'est moi, à dix ans, devant notre maison.",
+   "where": "Scène B1 b1u3"
+  },
+  {
+   "text": "¿Vivías en el campo?",
+   "fr": "Tu habitais à la campagne ?",
+   "where": "Scène B1 b1u3"
+  },
+  {
+   "text": "Sí. Jugábamos en la calle todo el día, casi no había coches.",
+   "fr": "Oui. Nous jouions dans la rue toute la journée, il n'y avait presque pas de voitures.",
+   "where": "Scène B1 b1u3"
+  },
+  {
+   "text": "¡Y no teníais móviles!",
+   "fr": "Et vous n'aviez pas de téléphones portables !",
+   "where": "Scène B1 b1u3"
+  },
+  {
+   "text": "¡No! Por la noche, mi abuelo contaba historias junto al fuego.",
+   "fr": "Non ! Le soir, mon grand-père racontait des histoires au coin du feu.",
+   "where": "Scène B1 b1u3"
+  },
+  {
+   "text": "Debía de ser una época bonita.",
+   "fr": "Ça devait être une belle époque.",
+   "where": "Scène B1 b1u3"
+  },
+  {
+   "text": "Sí… Me acuerdo de cada verano que pasé allí.",
+   "fr": "Oui… Je me souviens de chaque été passé là-bas.",
+   "where": "Scène B1 b1u3"
+  },
+  {
+   "text": "Me han ofrecido un puesto en Montreal. ¿Tú qué harías?",
+   "fr": "On m'a proposé un poste à Montréal. Qu'est-ce que tu ferais, toi ?",
+   "where": "Scène B1 b1u4"
+  },
+  {
+   "text": "Si yo fuera tú, aceptaría enseguida.",
+   "fr": "Si j'étais toi, j'accepterais tout de suite !",
+   "where": "Scène B1 b1u4"
+  },
+  {
+   "text": "Pero si me fuera, no vería a mi familia.",
+   "fr": "Mais si je partais, je ne verrais plus ma famille.",
+   "where": "Scène B1 b1u4"
+  },
+  {
+   "text": "Podrías volver en vacaciones. Y sería una experiencia genial.",
+   "fr": "Tu pourrais revenir pour les vacances. Et ce serait une super expérience.",
+   "where": "Scène B1 b1u4"
+  },
+  {
+   "text": "Es verdad… Me gustaría vivir en el extranjero algún día.",
+   "fr": "C'est vrai… J'aimerais bien vivre à l'étranger un jour.",
+   "where": "Scène B1 b1u4"
+  },
+  {
+   "text": "Yo que tú, no lo dudaría. ¡Y yo iría a verte!",
+   "fr": "À ta place, je n'hésiterais pas. Et moi, je viendrais te voir !",
+   "where": "Scène B1 b1u4"
+  },
+  {
+   "text": "Hay cada vez más basura en el parque. Hay que hacer algo.",
+   "fr": "Il y a de plus en plus de déchets dans le parc. Il faut faire quelque chose.",
+   "where": "Scène B1 b1u5"
+  },
+  {
+   "text": "Estoy de acuerdo. Podríamos poner contenedores para reciclar.",
+   "fr": "Je suis d'accord. On pourrait installer des poubelles pour recycler.",
+   "where": "Scène B1 b1u5"
+  },
+  {
+   "text": "Buena idea. Y también habría que organizar un día de limpieza.",
+   "fr": "Bonne idée. Et il faudrait aussi organiser une journée de nettoyage.",
+   "where": "Scène B1 b1u5"
+  },
+  {
+   "text": "Podríamos proponérselo al colegio: a los niños les encanta.",
+   "fr": "On pourrait le proposer à l'école : les enfants adorent ça.",
+   "where": "Scène B1 b1u5"
+  },
+  {
+   "text": "Y además, hay que usar menos el coche. La contaminación aquí es terrible.",
+   "fr": "Et puis, il faut moins prendre la voiture. La pollution est terrible ici.",
+   "where": "Scène B1 b1u5"
+  },
+  {
+   "text": "Es verdad. Si el ayuntamiento mejorara el transporte público, sería más fácil.",
+   "fr": "C'est vrai. Si la mairie améliorait les transports en commun, ce serait plus facile.",
+   "where": "Scène B1 b1u5"
+  },
+  {
+   "text": "¿Y bien? ¿Qué tal fue?",
+   "fr": "Alors, comment ça s'est passé ?",
+   "where": "Scène B1 b1u6"
+  },
+  {
+   "text": "¡Estaba tan contenta de volver a verlo! Lloré en cuanto llegó.",
+   "fr": "J'étais tellement contente de le revoir ! J'ai pleuré dès qu'il est arrivé.",
+   "where": "Scène B1 b1u6"
+  },
+  {
+   "text": "No me extraña. Tres años es mucho tiempo.",
+   "fr": "Ça ne m'étonne pas. Trois ans, c'est long.",
+   "where": "Scène B1 b1u6"
+  },
+  {
+   "text": "Sí… Me sentía un poco sola sin él.",
+   "fr": "Oui… Je me sentais un peu seule sans lui.",
+   "where": "Scène B1 b1u6"
+  },
+  {
+   "text": "¿Y él estaba bien?",
+   "fr": "Et lui, il allait bien ?",
+   "where": "Scène B1 b1u6"
+  },
+  {
+   "text": "Parecía cansado, pero feliz. Me emocionó mucho.",
+   "fr": "Il avait l'air fatigué, mais heureux. Ça m'a vraiment touchée.",
+   "where": "Scène B1 b1u6"
+  },
+  {
+   "text": "Me alegro por ti. ¡Se nota, no puedes esconder tu alegría!",
+   "fr": "Je suis content pour toi. Ça se voit, tu n'arrives pas à cacher ta joie !",
+   "where": "Scène B1 b1u6"
+  },
+  {
+   "text": "Oye… siento lo de ayer. No quería hacerte daño.",
+   "fr": "Écoute… je suis désolé pour hier. Je ne voulais pas te blesser.",
+   "where": "Scène B1 b1u7"
+  },
+  {
+   "text": "Podrías haberme avisado de que no venías. ¡Te esperé una hora!",
+   "fr": "Tu aurais pu me prévenir que tu ne venais pas. Je t'ai attendu une heure !",
+   "where": "Scène B1 b1u7"
+  },
+  {
+   "text": "Tienes razón. Tenía el móvil sin batería, pero eso no es excusa.",
+   "fr": "Tu as raison. Mon téléphone était à plat, mais ce n'est pas une excuse.",
+   "where": "Scène B1 b1u7"
+  },
+  {
+   "text": "Bueno… En realidad, nos peleamos por una tontería.",
+   "fr": "Bon… On s'est disputés pour une bêtise, en fait.",
+   "where": "Scène B1 b1u7"
+  },
+  {
+   "text": "Sí, fue un malentendido. ¿Hacemos las paces?",
+   "fr": "Oui, c'était un malentendu. On fait la paix ?",
+   "where": "Scène B1 b1u7"
+  },
+  {
+   "text": "Vale, te perdono. ¡Pero no lo vuelvas a hacer!",
+   "fr": "D'accord, je te pardonne. Mais ne recommence pas !",
+   "where": "Scène B1 b1u7"
+  },
+  {
+   "text": "El sábado es el cumple de Lea. ¿Le preparamos una fiesta sorpresa?",
+   "fr": "Samedi, c'est l'anniversaire de Léa. On lui prépare une fête surprise ?",
+   "where": "Scène B1 b1u8"
+  },
+  {
+   "text": "¡Qué buena idea! La hacemos en mi casa, hay sitio.",
+   "fr": "Super idée ! On la fait chez moi, il y a de la place.",
+   "where": "Scène B1 b1u8"
+  },
+  {
+   "text": "Perfecto. Invito a sus amigos de la uni. Cada uno trae algo de beber.",
+   "fr": "Parfait. J'invite ses amis de la fac. Chacun apporte quelque chose à boire.",
+   "where": "Scène B1 b1u8"
+  },
+  {
+   "text": "Y yo me encargo de la tarta. Pero ¿cómo hacemos que venga sin que sospeche nada?",
+   "fr": "Et moi, je m'occupe du gâteau. Mais comment on la fait venir sans qu'elle se doute de rien ?",
+   "where": "Scène B1 b1u8"
+  },
+  {
+   "text": "¡Dile que necesitas ayuda con una mudanza!",
+   "fr": "Dis-lui que tu as besoin d'aide pour un déménagement !",
+   "where": "Scène B1 b1u8"
+  },
+  {
+   "text": "Genial. Sobre todo, ¡ni una palabra a nadie!",
+   "fr": "Génial. Surtout, pas un mot à personne !",
+   "where": "Scène B1 b1u8"
+  },
+  {
+   "text": "¡Vamos, solo quedan cinco minutos! ¡Lo vais a conseguir!",
+   "fr": "Allez, plus que cinq minutes ! Vous allez y arriver !",
+   "where": "Scène B1 b1u9"
+  },
+  {
+   "text": "Entrenador, creo que me he hecho daño en la rodilla…",
+   "fr": "Coach, je crois que je me suis blessé au genou…",
+   "where": "Scène B1 b1u9"
+  },
+  {
+   "text": "¿Todavía puedes correr? ¡Si ganamos este partido, seremos campeones!",
+   "fr": "Tu peux encore courir ? Si on gagne ce match, on sera champions !",
+   "where": "Scène B1 b1u9"
+  },
+  {
+   "text": "Estoy bien, sigo. No quiero rendirme ahora.",
+   "fr": "Ça va, je continue. Je ne veux pas lâcher maintenant.",
+   "where": "Scène B1 b1u9"
+  },
+  {
+   "text": "Se acabó… Hemos perdido por poco, pero habéis jugado bien. Estoy orgulloso de vosotros.",
+   "fr": "C'est fini… On a perdu de justesse, mais vous avez bien joué. Je suis fier de vous.",
+   "where": "Scène B1 b1u9"
+  },
+  {
+   "text": "El año que viene ganaremos. ¡Entrenaré tres veces por semana!",
+   "fr": "L'année prochaine, on gagnera. Je m'entraînerai trois fois par semaine !",
+   "where": "Scène B1 b1u9"
+  },
+  {
+   "text": "Tengo que contarte una cosa… He conocido a alguien.",
+   "fr": "Il faut que je te raconte un truc… J'ai rencontré quelqu'un.",
+   "where": "Scène B1 b1u10"
+  },
+  {
+   "text": "¡No! ¡Cuéntame! ¿Dónde os conocisteis?",
+   "fr": "Non ! Raconte ! Vous vous êtes rencontrés où ?",
+   "where": "Scène B1 b1u10"
+  },
+  {
+   "text": "En la uni. Me propuso tomar algo después de clase.",
+   "fr": "À la fac. Il m'a proposé de prendre un verre après le cours.",
+   "where": "Scène B1 b1u10"
+  },
+  {
+   "text": "¿Y qué? ¿Estáis saliendo?",
+   "fr": "Et alors ? Vous sortez ensemble ?",
+   "where": "Scène B1 b1u10"
+  },
+  {
+   "text": "Todavía no… No sé si me gusta de verdad. ¿Tú qué piensas?",
+   "fr": "Pas encore… Je ne sais pas s'il me plaît vraiment. Tu en penses quoi ?",
+   "where": "Scène B1 b1u10"
+  },
+  {
+   "text": "Tómate tu tiempo. Y ya sabes, puedes contar conmigo, aquí estoy.",
+   "fr": "Prends ton temps. Et tu sais, tu peux compter sur moi, je suis là.",
+   "where": "Scène B1 b1u10"
+  },
+  {
+   "text": "Me da una pereza fregar los platos…",
+   "fr": "J'ai la flemme de faire la vaisselle…",
+   "where": "Scène B1 b1u11"
+  },
+  {
+   "text": "Yo tampoco. ¿Los fregamos esta noche?",
+   "fr": "Moi non plus. On la fait ce soir ?",
+   "where": "Scène B1 b1u11"
+  },
+  {
+   "text": "Vale. Por cierto, ¿quedamos a comer con los demás el sábado que viene?",
+   "fr": "OK. Au fait, on se fait une bouffe avec les autres samedi prochain ?",
+   "where": "Scène B1 b1u11"
+  },
+  {
+   "text": "¡Claro que sí! Pero ¿viene Marcos? Siempre se pelea con todo el mundo.",
+   "fr": "Carrément ! Mais Marc vient ? Il se prend toujours la tête avec tout le monde.",
+   "where": "Scène B1 b1u11"
+  },
+  {
+   "text": "Que venga o no, me da completamente igual.",
+   "fr": "Qu'il vienne ou pas, je m'en fiche complètement.",
+   "where": "Scène B1 b1u11"
+  },
+  {
+   "text": "Bueno… ¡Date prisa, que llegamos tardísimo al cine!",
+   "fr": "Bon… Dépêche-toi, on est grave à la bourre pour le ciné !",
+   "where": "Scène B1 b1u11"
+  },
+  {
+   "text": "Buenos días, le llamo de la empresa Lumen. ¿Ha respondido a nuestra oferta de empleo?",
+   "fr": "Bonjour, ici la société Lumen. Vous avez répondu à notre offre d'emploi ?",
+   "where": "Scène B1 b1u12"
+  },
+  {
+   "text": "Sí, exacto. Envié mi candidatura la semana pasada.",
+   "fr": "Oui, tout à fait. J'ai envoyé ma candidature la semaine dernière.",
+   "where": "Scène B1 b1u12"
+  },
+  {
+   "text": "Su currículum nos interesa. Nos gustaría conocerle en una entrevista.",
+   "fr": "Votre CV nous intéresse. Nous aimerions vous rencontrer pour un entretien.",
+   "where": "Scène B1 b1u12"
+  },
+  {
+   "text": "¡Con mucho gusto! Aún no tengo mucha experiencia, pero aprendo rápido.",
+   "fr": "Avec plaisir ! Je n'ai pas encore beaucoup d'expérience, mais j'apprends vite.",
+   "where": "Scène B1 b1u12"
+  },
+  {
+   "text": "Es lo que buscamos: alguien motivado y autónomo. ¿Le va bien el jueves a las diez?",
+   "fr": "C'est ce qu'on cherche : quelqu'un de motivé et autonome. Jeudi à dix heures, ça vous va ?",
+   "where": "Scène B1 b1u12"
+  },
+  {
+   "text": "Perfecto, allí estaré. ¡Muchas gracias!",
+   "fr": "Parfait, je serai là. Merci beaucoup !",
+   "where": "Scène B1 b1u12"
+  },
+  {
+   "text": "¡Se me ha colgado el ordenador y no puedo hacer nada!",
+   "fr": "Mon ordinateur a planté et je ne peux plus rien faire !",
+   "where": "Scène B1 b1u13"
+  },
+  {
+   "text": "Sí… y ahora me pide una contraseña.",
+   "fr": "Oui… et maintenant il me demande un mot de passe.",
+   "where": "Scène B1 b1u13"
+  },
+  {
+   "text": "Es la que apuntaste en tu libreta, ¿no?",
+   "fr": "C'est celui que tu as noté dans ton carnet, non ?",
+   "where": "Scène B1 b1u13"
+  },
+  {
+   "text": "La he olvidado… por tercera vez esta semana.",
+   "fr": "Je l'ai oublié… pour la troisième fois cette semaine.",
+   "where": "Scène B1 b1u13"
+  },
+  {
+   "text": "Tranquilo, la restablecemos juntos.",
+   "fr": "Pas de panique, on va le réinitialiser ensemble.",
+   "where": "Scène B1 b1u13"
+  },
+  {
+   "text": "Buenos días. Su pasaporte, por favor. ¿Factura alguna maleta?",
+   "fr": "Bonjour. Votre passeport, s'il vous plaît. Vous avez un bagage en soute ?",
+   "where": "Scène B1 b1u14"
+  },
+  {
+   "text": "Sí, esta maleta. Quería un asiento de ventanilla, por favor.",
+   "fr": "Oui, cette valise. Je voudrais une place côté hublot, s'il vous plaît.",
+   "where": "Scène B1 b1u14"
+  },
+  {
+   "text": "Anotado. Pero su maleta pesa dos kilos de más.",
+   "fr": "C'est noté. Mais votre valise fait deux kilos de trop.",
+   "where": "Scène B1 b1u14"
+  },
+  {
+   "text": "Ah… ¿Puedo meter algunas cosas en la mochila?",
+   "fr": "Ah… Je peux mettre quelques affaires dans mon sac à dos ?",
+   "where": "Scène B1 b1u14"
+  },
+  {
+   "text": "Claro. Aquí tiene su tarjeta de embarque. El embarque es por la puerta 32 dentro de cuarenta minutos.",
+   "fr": "Bien sûr. Voici votre carte d'embarquement. L'embarquement se fait porte 32 dans quarante minutes.",
+   "where": "Scène B1 b1u14"
+  },
+  {
+   "text": "Gracias. Tengo una escala en Lisboa: ¡espero que no vayamos con retraso!",
+   "fr": "Merci. J'ai une correspondance à Lisbonne : j'espère qu'on ne sera pas en retard !",
+   "where": "Scène B1 b1u14"
+  },
+  {
+   "text": "Deberías ver esta serie, es genial. ¡Me vi toda la temporada en un fin de semana!",
+   "fr": "Tu devrais regarder cette série, elle est géniale. J'ai vu toute la saison en un week-end !",
+   "where": "Scène B1 b1u15"
+  },
+  {
+   "text": "¿De qué va? ¿De terror? Yo prefiero las comedias.",
+   "fr": "C'est quoi ? Un film d'horreur ? Moi, je préfère les comédies.",
+   "where": "Scène B1 b1u15"
+  },
+  {
+   "text": "No, es un thriller. Al principio hay un asesinato y, en realidad, el culpable es…",
+   "fr": "Non, c'est un thriller. Au début, il y a un meurtre, et en fait le coupable, c'est…",
+   "where": "Scène B1 b1u15"
+  },
+  {
+   "text": "¡Para! ¡No me hagas spoiler!",
+   "fr": "Stop ! Ne me spoile pas !",
+   "where": "Scène B1 b1u15"
+  },
+  {
+   "text": "Vale, vale. ¿Vemos el primer episodio juntos, en versión original?",
+   "fr": "D'accord, d'accord. On regarde le premier épisode ensemble, en VO ?",
+   "where": "Scène B1 b1u15"
+  },
+  {
+   "text": "Sí, con subtítulos. Pero si el final es malísimo, ¡friegas tú!",
+   "fr": "Oui, avec les sous-titres. Mais si la fin est nulle, c'est toi qui fais la vaisselle !",
+   "where": "Scène B1 b1u15"
+  },
+  {
+   "text": "Buenos días. Esta mañana el cajero se ha tragado mi tarjeta.",
+   "fr": "Bonjour. Ma carte a été avalée par le distributeur ce matin.",
+   "where": "Scène B1 b1u16"
+  },
+  {
+   "text": "Suele pasar. ¿Ha marcado un PIN incorrecto?",
+   "fr": "Ça arrive. Vous avez tapé un mauvais code PIN ?",
+   "where": "Scène B1 b1u16"
+  },
+  {
+   "text": "Sí, tres veces… Y hay un movimiento en mi cuenta que no reconozco.",
+   "fr": "Oui, trois fois… Et il y a une opération que je ne reconnais pas sur mon compte.",
+   "where": "Scène B1 b1u16"
+  },
+  {
+   "text": "Lo miro… Un pago de doscientos euros, anoche, en el extranjero.",
+   "fr": "Je regarde… Un paiement de deux cents euros, hier soir, à l'étranger.",
+   "where": "Scène B1 b1u16"
+  },
+  {
+   "text": "¡No he sido yo! Quiero bloquear la tarjeta.",
+   "fr": "Ce n'est pas moi ! Je voudrais faire opposition sur ma carte.",
+   "where": "Scène B1 b1u16"
+  },
+  {
+   "text": "Hecho. Recibirá una tarjeta nueva en cinco días, sin gastos.",
+   "fr": "C'est fait. Vous recevrez une nouvelle carte dans cinq jours, sans frais.",
+   "where": "Scène B1 b1u16"
+  },
+  {
+   "text": "Buenos días. Hay un testigo encendido en el salpicadero y los frenos hacen un ruido raro.",
+   "fr": "Bonjour. Il y a un voyant allumé sur le tableau de bord, et les freins font un drôle de bruit.",
+   "where": "Scène B1 b1u17"
+  },
+  {
+   "text": "A ver… Las pastillas de freno están gastadas. Hay que cambiarlas.",
+   "fr": "Je vais regarder… Les plaquettes de frein sont usées. Il faut les changer.",
+   "where": "Scène B1 b1u17"
+  },
+  {
+   "text": "De acuerdo. ¿Me puede hacer un presupuesto?",
+   "fr": "D'accord. Vous pouvez me faire un devis ?",
+   "where": "Scène B1 b1u17"
+  },
+  {
+   "text": "Ciento ochenta euros, con el cambio de aceite. Y la ITV le toca dentro de un mes.",
+   "fr": "Cent quatre-vingts euros, avec la vidange. Et votre contrôle technique est dans un mois.",
+   "where": "Scène B1 b1u17"
+  },
+  {
+   "text": "Mañana a última hora de la tarde. Le llamo cuando esté.",
+   "fr": "Demain en fin d'après-midi. Je vous appelle quand c'est fini.",
+   "where": "Scène B1 b1u17"
+  },
+  {
+   "text": "¡Buenos días! ¿Qué le pasa a este perro tan bonito?",
+   "fr": "Bonjour ! Qu'est-ce qui ne va pas avec ce beau chien ?",
+   "where": "Scène B1 b1u18"
+  },
+  {
+   "text": "No come desde ayer y cojea de la pata trasera.",
+   "fr": "Il ne mange plus depuis hier, et il boite de la patte arrière.",
+   "where": "Scène B1 b1u18"
+  },
+  {
+   "text": "A ver… Tiene una pequeña herida en la pata. No es grave.",
+   "fr": "Voyons ça… Il a une petite blessure à la patte. Ce n'est pas grave.",
+   "where": "Scène B1 b1u18"
+  },
+  {
+   "text": "¡Uf! ¿Y lo de la comida?",
+   "fr": "Ouf ! Et pour la nourriture ?",
+   "where": "Scène B1 b1u18"
+  },
+  {
+   "text": "Seguro que le duele. Le doy un medicamento. ¿Tiene su cartilla sanitaria?",
+   "fr": "Il a sûrement mal. Je vous donne un médicament. Vous avez son carnet de santé ?",
+   "where": "Scène B1 b1u18"
+  },
+  {
+   "text": "Sí, aquí está. Creo que también necesita desparasitarlo.",
+   "fr": "Oui, le voici. Il a aussi besoin d'un vermifuge, je crois.",
+   "where": "Scène B1 b1u18"
+  },
+  {
+   "text": "Lo apunto. Vuelva dentro de una semana si sigue cojeando.",
+   "fr": "Je le note. Revenez dans une semaine s'il boite encore.",
+   "where": "Scène B1 b1u18"
+  },
+  {
+   "text": "Dentro de dos horas. ¡Ya lo has preguntado hace cinco minutos!",
+   "fr": "Dans deux heures. Tu as déjà demandé il y a cinq minutes !",
+   "where": "Scène B1 b1u19"
+  },
+  {
+   "text": "Me aburro… ¿En el apartamento hay piscina para niños?",
+   "fr": "Je m'ennuie… Il y a une piscine pour les petits, à la location ?",
+   "where": "Scène B1 b1u19"
+  },
+  {
+   "text": "Sí, y una playa justo al lado. ¡Y mañana vamos al parque de atracciones!",
+   "fr": "Oui, et une plage juste à côté. Et demain, on va au parc d'attractions !",
+   "where": "Scène B1 b1u19"
+  },
+  {
+   "text": "¡Oh, no… Nos hemos olvidado el cargador de la tableta!",
+   "fr": "Oh non… On a oublié le chargeur de la tablette !",
+   "where": "Scène B1 b1u19"
+  },
+  {
+   "text": "No pasa nada. Jugamos a algo: cada uno elige una actividad para la semana.",
+   "fr": "Ce n'est pas grave. On joue à un jeu : chacun choisit une activité pour la semaine.",
+   "where": "Scène B1 b1u19"
+  },
+  {
+   "text": "Esta mañana me salté la clase… ¿Me pasas tus apuntes?",
+   "fr": "J'ai séché le cours ce matin… Tu peux me passer tes notes ?",
+   "where": "Scène B1 b1u20"
+  },
+  {
+   "text": "Vale, pero es la última vez. ¡Los exámenes son la semana que viene!",
+   "fr": "D'accord, mais c'est la dernière fois ! Les examens sont la semaine prochaine.",
+   "where": "Scène B1 b1u20"
+  },
+  {
+   "text": "Lo sé. Llevo estudiando toda la noche desde el lunes.",
+   "fr": "Je sais. Je révise toute la nuit depuis lundi.",
+   "where": "Scène B1 b1u20"
+  },
+  {
+   "text": "Deberías dormir un poco, si no, no te acordarás de nada.",
+   "fr": "Tu devrais dormir un peu, sinon tu ne retiendras rien.",
+   "where": "Scène B1 b1u20"
+  },
+  {
+   "text": "Tienes razón. ¿Y tú, qué tal el trabajo de fin de grado?",
+   "fr": "Tu as raison. Et toi, ton mémoire, ça avance ?",
+   "where": "Scène B1 b1u20"
+  },
+  {
+   "text": "Poco a poco… Hay que entregarlo en junio. Pero si apruebo el semestre, ¡me voy de Erasmus!",
+   "fr": "Doucement… Il est à rendre en juin. Mais si je valide mon semestre, je pars en Erasmus !",
+   "where": "Scène B1 b1u20"
+  },
+  {
+   "text": "Buenos días, quería enviar este paquete al extranjero.",
+   "fr": "Bonjour, je voudrais envoyer ce colis à l'étranger.",
+   "where": "Scène B1 b1u21"
+  },
+  {
+   "text": "¿Envío normal o certificado?",
+   "fr": "En envoi normal ou en recommandé ?",
+   "where": "Scène B1 b1u21"
+  },
+  {
+   "text": "Certificado. ¿En cuántos días llegará?",
+   "fr": "En recommandé. Il arrivera sous combien de jours ?",
+   "where": "Scène B1 b1u21"
+  },
+  {
+   "text": "Entre cinco y siete días. Aquí tiene su número de seguimiento.",
+   "fr": "Entre cinq et sept jours. Voici votre numéro de suivi.",
+   "where": "Scène B1 b1u21"
+  },
+  {
+   "text": "Gracias. Otra cosa: ayer pasó el repartidor, pero yo no estaba.",
+   "fr": "Merci. Autre chose : le livreur est passé hier, mais je n'étais pas là.",
+   "where": "Scène B1 b1u21"
+  },
+  {
+   "text": "Seguro que su paquete está en el punto de recogida. ¿Tiene el aviso de entrega?",
+   "fr": "Votre colis est sûrement au point relais. Vous avez l'avis de passage ?",
+   "where": "Scène B1 b1u21"
+  },
+  {
+   "text": "Primero, sofríe la cebolla en el aceite, a fuego lento.",
+   "fr": "D'abord, fais revenir les oignons dans l'huile, à feu doux.",
+   "where": "Scène B1 b1u22"
+  },
+  {
+   "text": "¿Así? ¿Y añado las especias ahora?",
+   "fr": "Comme ça ? Et j'ajoute les épices maintenant ?",
+   "where": "Scène B1 b1u22"
+  },
+  {
+   "text": "Sí, pero solo una pizca de guindilla: ¡pica mucho, cuidado!",
+   "fr": "Oui, mais juste une pincée de piment : c'est très épicé, attention !",
+   "where": "Scène B1 b1u22"
+  },
+  {
+   "text": "¿Y la carne?",
+   "fr": "Et la viande ?",
+   "where": "Scène B1 b1u22"
+  },
+  {
+   "text": "La dejé marinando anoche. La echamos y la dejamos guisar a fuego lento una hora.",
+   "fr": "Je l'ai fait mariner hier soir. On la met et on laisse mijoter une heure.",
+   "where": "Scène B1 b1u22"
+  },
+  {
+   "text": "¿Una hora? Ya tengo hambre… Mientras tanto, ¿preparo el arroz?",
+   "fr": "Une heure ? J'ai déjà faim… Pendant ce temps, je prépare le riz ?",
+   "where": "Scène B1 b1u22"
+  },
+  {
+   "text": "¡Bienvenido! ¿Ya has trabajado en un bar?",
+   "fr": "Bienvenue ! Tu as déjà travaillé dans un bar ?",
+   "where": "Scène B1 b1u23"
+  },
+  {
+   "text": "No, pero he hecho de canguro y aprendo rápido.",
+   "fr": "Non, mais j'ai fait du baby-sitting, et j'apprends vite.",
+   "where": "Scène B1 b1u23"
+  },
+  {
+   "text": "Perfecto. Empiezas a las seis de la tarde y terminas a medianoche. Cobras por horas.",
+   "fr": "Parfait. Tu commences à dix-huit heures et tu finis à minuit. Tu es payé à l'heure.",
+   "where": "Scène B1 b1u23"
+  },
+  {
+   "text": "Vale. ¿Y las propinas?",
+   "fr": "D'accord. Et les pourboires ?",
+   "where": "Scène B1 b1u23"
+  },
+  {
+   "text": "Las repartimos entre todos al final de la semana. ¡Ayudan bastante!",
+   "fr": "On les partage entre tout le monde à la fin de la semaine. Ça aide bien !",
+   "where": "Scène B1 b1u23"
+  },
+  {
+   "text": "Genial. Así podré pagarme los estudios.",
+   "fr": "Super. Avec ça, je pourrai payer mes études.",
+   "where": "Scène B1 b1u23"
   }
  ],
  "note": "Toutes les phrases du cours (générées depuis l’appli). La clé est calculée sur « langue|texte » : voir scripts/make-audio.mjs."

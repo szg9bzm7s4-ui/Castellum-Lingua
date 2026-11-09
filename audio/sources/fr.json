@@ -19572,6 +19572,1996 @@
    "text": "prendre rendez-vous à la mairie",
    "it": "prendere un appuntamento in comune",
    "where": "b2u7"
+  },
+  {
+   "text": "Bonjour ! Ça va ?",
+   "fr": "Bonjour ! Ça va ?",
+   "where": "Scène A1 u0"
+  },
+  {
+   "text": "Bonjour, madame ! Ça va bien, merci. Et vous ?",
+   "fr": "Bonjour, madame ! Ça va bien, merci. Et vous ?",
+   "where": "Scène A1 u0"
+  },
+  {
+   "text": "Très bien. Bonne journée !",
+   "fr": "Très bien. Bonne journée !",
+   "where": "Scène A1 u0"
+  },
+  {
+   "text": "Merci, vous aussi. Au revoir !",
+   "fr": "Merci, vous aussi. Au revoir !",
+   "where": "Scène A1 u0"
+  },
+  {
+   "text": "Salut ! Je m'appelle Léa. Et toi ?",
+   "fr": "Salut ! Je m'appelle Léa. Et toi ?",
+   "where": "Scène A1 u1"
+  },
+  {
+   "text": "Moi, c'est Sam. Enchanté !",
+   "fr": "Moi, c'est Sam. Enchanté !",
+   "where": "Scène A1 u1"
+  },
+  {
+   "text": "Tu viens d'où ?",
+   "fr": "Tu viens d'où ?",
+   "where": "Scène A1 u1"
+  },
+  {
+   "text": "Je viens de France. Et toi ?",
+   "fr": "Je viens de France. Et toi ?",
+   "where": "Scène A1 u1"
+  },
+  {
+   "text": "Moi, je suis canadienne. J'ai vingt-cinq ans.",
+   "fr": "Moi, je suis canadienne. J'ai vingt-cinq ans.",
+   "where": "Scène A1 u1"
+  },
+  {
+   "text": "Bonjour ! Combien coûtent les pommes ?",
+   "fr": "Bonjour ! Combien coûtent les pommes ?",
+   "where": "Scène A1 u2"
+  },
+  {
+   "text": "Deux euros le kilo.",
+   "fr": "Deux euros le kilo.",
+   "where": "Scène A1 u2"
+  },
+  {
+   "text": "Je voudrais trois kilos, s'il vous plaît.",
+   "fr": "Je voudrais trois kilos, s'il vous plaît.",
+   "where": "Scène A1 u2"
+  },
+  {
+   "text": "Voilà. Ça fait six euros.",
+   "fr": "Voilà. Ça fait six euros.",
+   "where": "Scène A1 u2"
+  },
+  {
+   "text": "Voici dix euros.",
+   "fr": "Voici dix euros.",
+   "where": "Scène A1 u2"
+  },
+  {
+   "text": "Et quatre euros de monnaie. Merci !",
+   "fr": "Et quatre euros de monnaie. Merci !",
+   "where": "Scène A1 u2"
+  },
+  {
+   "text": "C'est qui, sur cette photo ?",
+   "fr": "C'est qui, sur cette photo ?",
+   "where": "Scène A1 u3"
+  },
+  {
+   "text": "C'est ma mère, et à côté, mon père.",
+   "fr": "C'est ma mère, et à côté, mon père.",
+   "where": "Scène A1 u3"
+  },
+  {
+   "text": "Tu as des frères et sœurs ?",
+   "fr": "Tu as des frères et sœurs ?",
+   "where": "Scène A1 u3"
+  },
+  {
+   "text": "Oui, j'ai un frère et une sœur.",
+   "fr": "Oui, j'ai un frère et une sœur.",
+   "where": "Scène A1 u3"
+  },
+  {
+   "text": "Et ce petit garçon ?",
+   "fr": "Et ce petit garçon ?",
+   "where": "Scène A1 u3"
+  },
+  {
+   "text": "C'est mon neveu, il a quatre ans.",
+   "fr": "C'est mon neveu, il a quatre ans.",
+   "where": "Scène A1 u3"
+  },
+  {
+   "text": "Bonjour ! Qu'est-ce que je vous sers ?",
+   "fr": "Bonjour ! Qu'est-ce que je vous sers ?",
+   "where": "Scène A1 u4"
+  },
+  {
+   "text": "Un café et un croissant, s'il vous plaît.",
+   "fr": "Un café et un croissant, s'il vous plaît.",
+   "where": "Scène A1 u4"
+  },
+  {
+   "text": "Sur place ou à emporter ?",
+   "fr": "Sur place ou à emporter ?",
+   "where": "Scène A1 u4"
+  },
+  {
+   "text": "Sur place. Et un verre d'eau, aussi.",
+   "fr": "Sur place. Et un verre d'eau, aussi.",
+   "where": "Scène A1 u4"
+  },
+  {
+   "text": "Très bien. Ça fait trois euros cinquante.",
+   "fr": "Très bien. Ça fait trois euros cinquante.",
+   "where": "Scène A1 u4"
+  },
+  {
+   "text": "Excusez-moi, où est la gare, s'il vous plaît ?",
+   "fr": "Excusez-moi, où est la gare, s'il vous plaît ?",
+   "where": "Scène A1 u5"
+  },
+  {
+   "text": "C'est tout droit, puis à gauche.",
+   "fr": "C'est tout droit, puis à gauche.",
+   "where": "Scène A1 u5"
+  },
+  {
+   "text": "Non, à cinq minutes à pied.",
+   "fr": "Non, à cinq minutes à pied.",
+   "where": "Scène A1 u5"
+  },
+  {
+   "text": "Merci beaucoup !",
+   "fr": "Merci beaucoup !",
+   "where": "Scène A1 u5"
+  },
+  {
+   "text": "De rien !",
+   "fr": "De rien !",
+   "where": "Scène A1 u5"
+  },
+  {
+   "text": "Il fait beau aujourd'hui !",
+   "fr": "Il fait beau aujourd'hui !",
+   "where": "Scène A1 u6"
+  },
+  {
+   "text": "Oui, mais il y a des nuages là-bas.",
+   "fr": "Oui, mais il y a des nuages là-bas.",
+   "where": "Scène A1 u6"
+  },
+  {
+   "text": "Tu crois qu'il va pleuvoir ?",
+   "fr": "Tu crois qu'il va pleuvoir ?",
+   "where": "Scène A1 u6"
+  },
+  {
+   "text": "Peut-être cet après-midi. Je prends un parapluie.",
+   "fr": "Peut-être cet après-midi. Je prends un parapluie.",
+   "where": "Scène A1 u6"
+  },
+  {
+   "text": "Bonne idée. Il fait vingt degrés, c'est parfait.",
+   "fr": "Bonne idée. Il fait vingt degrés, c'est parfait.",
+   "where": "Scène A1 u6"
+  },
+  {
+   "text": "Je peux vous aider ?",
+   "fr": "Je peux vous aider ?",
+   "where": "Scène A1 u7"
+  },
+  {
+   "text": "Oui, je cherche un pull bleu.",
+   "fr": "Oui, je cherche un pull bleu.",
+   "where": "Scène A1 u7"
+  },
+  {
+   "text": "Celui-ci est joli, et il est chaud.",
+   "fr": "Celui-ci est joli, et il est chaud.",
+   "where": "Scène A1 u7"
+  },
+  {
+   "text": "Il est un peu grand. Vous l'avez en noir ?",
+   "fr": "Il est un peu grand. Vous l'avez en noir ?",
+   "where": "Scène A1 u7"
+  },
+  {
+   "text": "Oui, en noir et plus petit. Voilà.",
+   "fr": "Oui, en noir et plus petit. Voilà.",
+   "where": "Scène A1 u7"
+  },
+  {
+   "text": "Tu te lèves à quelle heure ?",
+   "fr": "Tu te lèves à quelle heure ?",
+   "where": "Scène A1 u8"
+  },
+  {
+   "text": "À sept heures. Je prends une douche et je bois un café.",
+   "fr": "À sept heures. Je prends une douche et je bois un café.",
+   "where": "Scène A1 u8"
+  },
+  {
+   "text": "Et tu viens au bureau comment ?",
+   "fr": "Et tu viens au bureau comment ?",
+   "where": "Scène A1 u8"
+  },
+  {
+   "text": "À vélo. Le soir, je fais les courses et je cuisine.",
+   "fr": "À vélo. Le soir, je fais les courses et je cuisine.",
+   "where": "Scène A1 u8"
+  },
+  {
+   "text": "Et tu te couches tard ?",
+   "fr": "Et tu te couches tard ?",
+   "where": "Scène A1 u8"
+  },
+  {
+   "text": "Non, vers onze heures.",
+   "fr": "Non, vers onze heures.",
+   "where": "Scène A1 u8"
+  },
+  {
+   "text": "Allez ! Tir… et but !",
+   "fr": "Allez ! Tir… et but !",
+   "where": "Scène A1 u9"
+  },
+  {
+   "text": "Quel but ! Ça fait un à zéro.",
+   "fr": "Quel but ! Ça fait un à zéro.",
+   "where": "Scène A1 u9"
+  },
+  {
+   "text": "C'est quoi ton équipe préférée ?",
+   "fr": "C'est quoi ton équipe préférée ?",
+   "where": "Scène A1 u9"
+  },
+  {
+   "text": "Je suis supporter de cette équipe depuis toujours.",
+   "fr": "Je suis supporter de cette équipe depuis toujours.",
+   "where": "Scène A1 u9"
+  },
+  {
+   "text": "Attention, l'arbitre siffle un penalty !",
+   "fr": "Attention, l'arbitre siffle un penalty !",
+   "where": "Scène A1 u9"
+  },
+  {
+   "text": "Entre ! Voici le salon.",
+   "fr": "Entre ! Voici le salon.",
+   "where": "Scène A1 u10"
+  },
+  {
+   "text": "C'est très lumineux ! Et la cuisine ?",
+   "fr": "C'est très lumineux ! Et la cuisine ?",
+   "where": "Scène A1 u10"
+  },
+  {
+   "text": "La cuisine est à droite, et ma chambre est au fond.",
+   "fr": "La cuisine est à droite, et ma chambre est au fond.",
+   "where": "Scène A1 u10"
+  },
+  {
+   "text": "Tu as un balcon ?",
+   "fr": "Tu as un balcon ?",
+   "where": "Scène A1 u10"
+  },
+  {
+   "text": "Oui, un petit balcon. Tu veux un thé dehors ?",
+   "fr": "Oui, un petit balcon. Tu veux un thé dehors ?",
+   "where": "Scène A1 u10"
+  },
+  {
+   "text": "Tu aimes les films d'horreur ?",
+   "fr": "Tu aimes les films d'horreur ?",
+   "where": "Scène A1 u11"
+  },
+  {
+   "text": "Non, je n'aime pas ça du tout. J'ai peur !",
+   "fr": "Non, je n'aime pas ça du tout. J'ai peur !",
+   "where": "Scène A1 u11"
+  },
+  {
+   "text": "Alors une comédie ?",
+   "fr": "Alors une comédie ?",
+   "where": "Scène A1 u11"
+  },
+  {
+   "text": "Oui, j'adore les comédies. Et toi ?",
+   "fr": "Oui, j'adore les comédies. Et toi ?",
+   "where": "Scène A1 u11"
+  },
+  {
+   "text": "Moi aussi. Et je préfère avec des pop-corn !",
+   "fr": "Moi aussi. Et je préfère avec des pop-corn !",
+   "where": "Scène A1 u11"
+  },
+  {
+   "text": "Bonjour, vous avez du lait ?",
+   "fr": "Bonjour, vous avez du lait ?",
+   "where": "Scène A1 u12"
+  },
+  {
+   "text": "Oui, au fond du magasin, dans le frigo.",
+   "fr": "Oui, au fond du magasin, dans le frigo.",
+   "where": "Scène A1 u12"
+  },
+  {
+   "text": "Merci. Et une baguette, s'il vous plaît.",
+   "fr": "Merci. Et une baguette, s'il vous plaît.",
+   "where": "Scène A1 u12"
+  },
+  {
+   "text": "Voilà. Vous payez par carte ?",
+   "fr": "Voilà. Vous payez par carte ?",
+   "where": "Scène A1 u12"
+  },
+  {
+   "text": "Non, en espèces. Voilà.",
+   "fr": "Non, en espèces. Voilà.",
+   "where": "Scène A1 u12"
+  },
+  {
+   "text": "Bon ben, hier soir, c'était super !",
+   "fr": "Bon ben, hier soir, c'était super !",
+   "where": "Scène A1 u13"
+  },
+  {
+   "text": "Ah bon ? Raconte !",
+   "fr": "Ah bon ? Raconte !",
+   "where": "Scène A1 u13"
+  },
+  {
+   "text": "Bof, le resto était moyen, mais le concert, génial !",
+   "fr": "Bof, le resto était moyen, mais le concert, génial !",
+   "where": "Scène A1 u13"
+  },
+  {
+   "text": "Trop bien ! Et après ?",
+   "fr": "Trop bien ! Et après ?",
+   "where": "Scène A1 u13"
+  },
+  {
+   "text": "Après, dodo. Je suis crevé !",
+   "fr": "Après, dodo. Je suis crevé !",
+   "where": "Scène A1 u13"
+  },
+  {
+   "text": "Elles sont belles, mes tomates ! Goûtez !",
+   "fr": "Elles sont belles, mes tomates ! Goûtez !",
+   "where": "Scène A1 u14"
+  },
+  {
+   "text": "Mmm, délicieuses. J'en prends un kilo.",
+   "fr": "Mmm, délicieuses. J'en prends un kilo.",
+   "where": "Scène A1 u14"
+  },
+  {
+   "text": "Et avec ça ?",
+   "fr": "Et avec ça ?",
+   "where": "Scène A1 u14"
+  },
+  {
+   "text": "Une salade et des oranges.",
+   "fr": "Une salade et des oranges.",
+   "where": "Scène A1 u14"
+  },
+  {
+   "text": "Allez, je vous fais un prix : cinq euros le tout.",
+   "fr": "Allez, je vous fais un prix : cinq euros le tout.",
+   "where": "Scène A1 u14"
+  },
+  {
+   "text": "Il est gentil, ton chien ?",
+   "fr": "Il est gentil, ton chien ?",
+   "where": "Scène A1 u15"
+  },
+  {
+   "text": "Oui, très gentil. Tu peux le caresser.",
+   "fr": "Oui, très gentil. Tu peux le caresser.",
+   "where": "Scène A1 u15"
+  },
+  {
+   "text": "Comment il s'appelle ?",
+   "fr": "Comment il s'appelle ?",
+   "where": "Scène A1 u15"
+  },
+  {
+   "text": "Il s'appelle Max. Il a trois ans.",
+   "fr": "Il s'appelle Max. Il a trois ans.",
+   "where": "Scène A1 u15"
+  },
+  {
+   "text": "Moi, j'ai un chat, mais il griffe !",
+   "fr": "Moi, j'ai un chat, mais il griffe !",
+   "where": "Scène A1 u15"
+  },
+  {
+   "text": "Bonjour. Qu'est-ce qui ne va pas ?",
+   "fr": "Bonjour. Qu'est-ce qui ne va pas ?",
+   "where": "Scène A1 u16"
+  },
+  {
+   "text": "J'ai mal à la tête et à la gorge.",
+   "fr": "J'ai mal à la tête et à la gorge.",
+   "where": "Scène A1 u16"
+  },
+  {
+   "text": "Vous avez de la fièvre ?",
+   "fr": "Vous avez de la fièvre ?",
+   "where": "Scène A1 u16"
+  },
+  {
+   "text": "Un peu, trente-huit.",
+   "fr": "Un peu, trente-huit.",
+   "where": "Scène A1 u16"
+  },
+  {
+   "text": "C'est un rhume. Reposez-vous et buvez beaucoup d'eau.",
+   "fr": "C'est un rhume. Reposez-vous et buvez beaucoup d'eau.",
+   "where": "Scène A1 u16"
+  },
+  {
+   "text": "Bonjour à tous ! Ouvrez vos livres page dix.",
+   "fr": "Bonjour à tous ! Ouvrez vos livres page dix.",
+   "where": "Scène A1 u17"
+  },
+  {
+   "text": "Pardon, je n'ai pas de livre.",
+   "fr": "Pardon, je n'ai pas de livre.",
+   "where": "Scène A1 u17"
+  },
+  {
+   "text": "Pas de problème, regarde avec ta voisine.",
+   "fr": "Pas de problème, regarde avec ta voisine.",
+   "where": "Scène A1 u17"
+  },
+  {
+   "text": "Comment on dit « pen » dans cette langue ?",
+   "fr": "Comment on dit « pen » dans cette langue ?",
+   "where": "Scène A1 u17"
+  },
+  {
+   "text": "Bonne question ! Écris-le au tableau.",
+   "fr": "Bonne question ! Écris-le au tableau.",
+   "where": "Scène A1 u17"
+  },
+  {
+   "text": "Pardon, vous avez l'heure ?",
+   "fr": "Pardon, vous avez l'heure ?",
+   "where": "Scène A1 u18"
+  },
+  {
+   "text": "Oui, il est neuf heures moins le quart.",
+   "fr": "Oui, il est neuf heures moins le quart.",
+   "where": "Scène A1 u18"
+  },
+  {
+   "text": "Oh là là, je suis en retard ! Le bus passe à quelle heure ?",
+   "fr": "Oh là là, je suis en retard ! Le bus passe à quelle heure ?",
+   "where": "Scène A1 u18"
+  },
+  {
+   "text": "Toutes les dix minutes, je crois.",
+   "fr": "Toutes les dix minutes, je crois.",
+   "where": "Scène A1 u18"
+  },
+  {
+   "text": "Ah, le voilà ! Merci et bonne journée !",
+   "fr": "Ah, le voilà ! Merci et bonne journée !",
+   "where": "Scène A1 u18"
+  },
+  {
+   "text": "Un jus d'orange bien frais, s'il te plaît.",
+   "fr": "Un jus d'orange bien frais, s'il te plaît.",
+   "where": "Scène A1 u19"
+  },
+  {
+   "text": "Avec des glaçons ?",
+   "fr": "Avec des glaçons ?",
+   "where": "Scène A1 u19"
+  },
+  {
+   "text": "Oui, merci. Et une bouteille d'eau pour mon amie.",
+   "fr": "Oui, merci. Et une bouteille d'eau pour mon amie.",
+   "where": "Scène A1 u19"
+  },
+  {
+   "text": "Plate ou gazeuse ?",
+   "fr": "Plate ou gazeuse ?",
+   "where": "Scène A1 u19"
+  },
+  {
+   "text": "Viens, il y a du pain, du beurre et de la confiture !",
+   "fr": "Viens, il y a du pain, du beurre et de la confiture !",
+   "where": "Scène A1 u20"
+  },
+  {
+   "text": "Super ! Il y a aussi des œufs ?",
+   "fr": "Super ! Il y a aussi des œufs ?",
+   "where": "Scène A1 u20"
+  },
+  {
+   "text": "Oui, et des fruits. Tu veux un thé ou un café ?",
+   "fr": "Oui, et des fruits. Tu veux un thé ou un café ?",
+   "where": "Scène A1 u20"
+  },
+  {
+   "text": "Un thé, avec un peu de sucre.",
+   "fr": "Un thé, avec un peu de sucre.",
+   "where": "Scène A1 u20"
+  },
+  {
+   "text": "Mange bien, la journée est longue !",
+   "fr": "Mange bien, la journée est longue !",
+   "where": "Scène A1 u20"
+  },
+  {
+   "text": "Tu parles quelles langues ?",
+   "fr": "Tu parles quelles langues ?",
+   "where": "Scène A1 u21"
+  },
+  {
+   "text": "Je parle français, un peu d'anglais, et j'apprends cette langue.",
+   "fr": "Je parle français, un peu d'anglais, et j'apprends cette langue.",
+   "where": "Scène A1 u21"
+  },
+  {
+   "text": "Bravo ! Tu parles très bien !",
+   "fr": "Bravo ! Tu parles très bien !",
+   "where": "Scène A1 u21"
+  },
+  {
+   "text": "Merci, c'est gentil ! Et toi, tu viens de quel pays ?",
+   "fr": "Merci, c'est gentil ! Et toi, tu viens de quel pays ?",
+   "where": "Scène A1 u21"
+  },
+  {
+   "text": "Du Japon. Je parle japonais et allemand.",
+   "fr": "Du Japon. Je parle japonais et allemand.",
+   "where": "Scène A1 u21"
+  },
+  {
+   "text": "Bonjour, ce bus va au centre-ville ?",
+   "fr": "Bonjour, ce bus va au centre-ville ?",
+   "where": "Scène A1 u22"
+  },
+  {
+   "text": "Oui, c'est le terminus.",
+   "fr": "Oui, c'est le terminus.",
+   "where": "Scène A1 u22"
+  },
+  {
+   "text": "Un ticket, s'il vous plaît. C'est combien ?",
+   "fr": "Un ticket, s'il vous plaît. C'est combien ?",
+   "where": "Scène A1 u22"
+  },
+  {
+   "text": "Deux euros. Vous descendez dans quatre arrêts.",
+   "fr": "Deux euros. Vous descendez dans quatre arrêts.",
+   "where": "Scène A1 u22"
+  },
+  {
+   "text": "Merci ! Vous pouvez me prévenir ?",
+   "fr": "Merci ! Vous pouvez me prévenir ?",
+   "where": "Scène A1 u22"
+  },
+  {
+   "text": "Le samedi, je joue au tennis. Le dimanche, je lis.",
+   "fr": "Le samedi, je joue au tennis. Le dimanche, je lis.",
+   "where": "Scène A1 u23"
+  },
+  {
+   "text": "Tu aimes la musique aussi ?",
+   "fr": "Tu aimes la musique aussi ?",
+   "where": "Scène A1 u23"
+  },
+  {
+   "text": "Oui, je joue de la guitare. Et toi ?",
+   "fr": "Oui, je joue de la guitare. Et toi ?",
+   "where": "Scène A1 u23"
+  },
+  {
+   "text": "Moi, je fais de la danse. On sort ensemble samedi ?",
+   "fr": "Moi, je fais de la danse. On sort ensemble samedi ?",
+   "where": "Scène A1 u23"
+  },
+  {
+   "text": "Bonjour, je suis la nouvelle comptable.",
+   "fr": "Bonjour, je suis la nouvelle comptable.",
+   "where": "Scène A1 u24"
+  },
+  {
+   "text": "Bienvenue ! Moi, je suis graphiste.",
+   "fr": "Bienvenue ! Moi, je suis graphiste.",
+   "where": "Scène A1 u24"
+  },
+  {
+   "text": "Tu travailles ici depuis longtemps ?",
+   "fr": "Tu travailles ici depuis longtemps ?",
+   "where": "Scène A1 u24"
+  },
+  {
+   "text": "Depuis deux ans. Je travaille de neuf heures à cinq heures.",
+   "fr": "Depuis deux ans. Je travaille de neuf heures à cinq heures.",
+   "where": "Scène A1 u24"
+  },
+  {
+   "text": "Super. On déjeune ensemble à midi ?",
+   "fr": "Super. On déjeune ensemble à midi ?",
+   "where": "Scène A1 u24"
+  },
+  {
+   "text": "On s'assoit sur l'herbe, sous l'arbre ?",
+   "fr": "On s'assoit sur l'herbe, sous l'arbre ?",
+   "where": "Scène A1 u25"
+  },
+  {
+   "text": "Oui, il y a de l'ombre. Regarde les canards sur le lac !",
+   "fr": "Oui, il y a de l'ombre. Regarde les canards sur le lac !",
+   "where": "Scène A1 u25"
+  },
+  {
+   "text": "On fait une promenade après ?",
+   "fr": "On fait une promenade après ?",
+   "where": "Scène A1 u25"
+  },
+  {
+   "text": "Bonne idée. Et après, une glace !",
+   "fr": "Bonne idée. Et après, une glace !",
+   "where": "Scène A1 u25"
+  },
+  {
+   "text": "D'accord, c'est moi qui invite !",
+   "fr": "D'accord, c'est moi qui invite !",
+   "where": "Scène A1 u25"
+  },
+  {
+   "text": "Salut ! Tu as passé un bon week-end ?",
+   "fr": "Salut ! Tu as passé un bon week-end ?",
+   "where": "Scène A2 a2u0"
+  },
+  {
+   "text": "Oui ! Samedi, je me suis levé tard et j'ai fait les courses.",
+   "fr": "Oui ! Samedi, je me suis levé tard et j'ai fait les courses.",
+   "where": "Scène A2 a2u0"
+  },
+  {
+   "text": "Et dimanche ?",
+   "fr": "Et dimanche ?",
+   "where": "Scène A2 a2u0"
+  },
+  {
+   "text": "Nous sommes allés au cinéma avec des amis. Et toi ?",
+   "fr": "Nous sommes allés au cinéma avec des amis. Et toi ?",
+   "where": "Scène A2 a2u0"
+  },
+  {
+   "text": "Moi, j'ai travaillé toute la journée…",
+   "fr": "Moi, j'ai travaillé toute la journée…",
+   "where": "Scène A2 a2u0"
+  },
+  {
+   "text": "Bonjour ! Vous avez la carte du magasin ?",
+   "fr": "Bonjour ! Vous avez la carte du magasin ?",
+   "where": "Scène A2 a2u1"
+  },
+  {
+   "text": "Non, je ne l'ai pas. Je voudrais aussi un sac, s'il vous plaît.",
+   "fr": "Non, je ne l'ai pas. Je voudrais aussi un sac, s'il vous plaît.",
+   "where": "Scène A2 a2u1"
+  },
+  {
+   "text": "Bien sûr. Ça fait vingt-trois euros cinquante.",
+   "fr": "Bien sûr. Ça fait vingt-trois euros cinquante.",
+   "where": "Scène A2 a2u1"
+  },
+  {
+   "text": "Oui. Voici votre ticket de caisse. Bonne journée !",
+   "fr": "Oui. Voici votre ticket de caisse. Bonne journée !",
+   "where": "Scène A2 a2u1"
+  },
+  {
+   "text": "J'ai de la fièvre et je tousse beaucoup.",
+   "fr": "J'ai de la fièvre et je tousse beaucoup.",
+   "where": "Scène A2 a2u2"
+  },
+  {
+   "text": "Depuis deux jours. J'ai aussi mal à la tête.",
+   "fr": "Depuis deux jours. J'ai aussi mal à la tête.",
+   "where": "Scène A2 a2u2"
+  },
+  {
+   "text": "Ce n'est pas grave. Voici l'ordonnance : un comprimé trois fois par jour.",
+   "fr": "Ce n'est pas grave. Voici l'ordonnance : un comprimé trois fois par jour.",
+   "where": "Scène A2 a2u2"
+  },
+  {
+   "text": "Allô, école Castellum, bonjour !",
+   "fr": "Allô, école Castellum, bonjour !",
+   "where": "Scène A2 a2u3"
+  },
+  {
+   "text": "Bonjour, je voudrais parler à Madame Rossi, s'il vous plaît.",
+   "fr": "Bonjour, je voudrais parler à Madame Rossi, s'il vous plaît.",
+   "where": "Scène A2 a2u3"
+  },
+  {
+   "text": "C'est de la part de qui ?",
+   "fr": "C'est de la part de qui ?",
+   "where": "Scène A2 a2u3"
+  },
+  {
+   "text": "C'est Sam. C'est pour le cours du soir.",
+   "fr": "C'est Sam. C'est pour le cours du soir.",
+   "where": "Scène A2 a2u3"
+  },
+  {
+   "text": "Ne quittez pas, je vous la passe.",
+   "fr": "Ne quittez pas, je vous la passe.",
+   "where": "Scène A2 a2u3"
+  },
+  {
+   "text": "Qu'est-ce que tu vas faire ce week-end ?",
+   "fr": "Qu'est-ce que tu vas faire ce week-end ?",
+   "where": "Scène A2 a2u4"
+  },
+  {
+   "text": "Demain, je vais voyager : je pars à la mer avec ma sœur.",
+   "fr": "Demain, je vais voyager : je pars à la mer avec ma sœur.",
+   "where": "Scène A2 a2u4"
+  },
+  {
+   "text": "Super ! Vous rentrez quand ?",
+   "fr": "Super ! Vous rentrez quand ?",
+   "where": "Scène A2 a2u4"
+  },
+  {
+   "text": "Dimanche soir. Et l'année prochaine, je vais apprendre à faire du surf !",
+   "fr": "Dimanche soir. Et l'année prochaine, je vais apprendre à faire du surf !",
+   "where": "Scène A2 a2u4"
+  },
+  {
+   "text": "Bon week-end, alors !",
+   "fr": "Bon week-end, alors !",
+   "where": "Scène A2 a2u4"
+  },
+  {
+   "text": "Voici l'appartement. Il est au troisième étage.",
+   "fr": "Voici l'appartement. Il est au troisième étage.",
+   "where": "Scène A2 a2u5"
+  },
+  {
+   "text": "Il y a un ascenseur ?",
+   "fr": "Il y a un ascenseur ?",
+   "where": "Scène A2 a2u5"
+  },
+  {
+   "text": "Oui. Et il y a deux chambres et un balcon.",
+   "fr": "Oui. Et il y a deux chambres et un balcon.",
+   "where": "Scène A2 a2u5"
+  },
+  {
+   "text": "Le loyer est de combien ?",
+   "fr": "Le loyer est de combien ?",
+   "where": "Scène A2 a2u5"
+  },
+  {
+   "text": "Huit cents euros par mois, charges comprises.",
+   "fr": "Huit cents euros par mois, charges comprises.",
+   "where": "Scène A2 a2u5"
+  },
+  {
+   "text": "Je le prends !",
+   "fr": "Je le prends !",
+   "where": "Scène A2 a2u5"
+  },
+  {
+   "text": "Tu es libre samedi soir ? Il y a un concert sur la place.",
+   "fr": "Tu es libre samedi soir ? Il y a un concert sur la place.",
+   "where": "Scène A2 a2u6"
+  },
+  {
+   "text": "Avec plaisir ! On se retrouve où ?",
+   "fr": "Avec plaisir ! On se retrouve où ?",
+   "where": "Scène A2 a2u6"
+  },
+  {
+   "text": "Devant le café, à neuf heures.",
+   "fr": "Devant le café, à neuf heures.",
+   "where": "Scène A2 a2u6"
+  },
+  {
+   "text": "Parfait. Je peux venir avec mon frère ?",
+   "fr": "Parfait. Je peux venir avec mon frère ?",
+   "where": "Scène A2 a2u6"
+  },
+  {
+   "text": "Bien sûr ! À samedi !",
+   "fr": "Bien sûr ! À samedi !",
+   "where": "Scène A2 a2u6"
+  },
+  {
+   "text": "Bienvenue ! Tu fais souvent du sport ?",
+   "fr": "Bienvenue ! Tu fais souvent du sport ?",
+   "where": "Scène A2 a2u7"
+  },
+  {
+   "text": "Je fais un footing le dimanche, c'est tout.",
+   "fr": "Je fais un footing le dimanche, c'est tout.",
+   "where": "Scène A2 a2u7"
+  },
+  {
+   "text": "D'accord. On commence par l'échauffement : dix minutes de vélo.",
+   "fr": "D'accord. On commence par l'échauffement : dix minutes de vélo.",
+   "where": "Scène A2 a2u7"
+  },
+  {
+   "text": "Et après ?",
+   "fr": "Et après ?",
+   "where": "Scène A2 a2u7"
+  },
+  {
+   "text": "Après, des exercices pour les jambes. Demain, tu vas avoir des courbatures !",
+   "fr": "Après, des exercices pour les jambes. Demain, tu vas avoir des courbatures !",
+   "where": "Scène A2 a2u7"
+  },
+  {
+   "text": "Tu as vu ma story ? J'ai posté une vidéo hier soir.",
+   "fr": "Tu as vu ma story ? J'ai posté une vidéo hier soir.",
+   "where": "Scène A2 a2u8"
+  },
+  {
+   "text": "Oui, je l'ai likée ! Tu as combien d'abonnés maintenant ?",
+   "fr": "Oui, je l'ai likée ! Tu as combien d'abonnés maintenant ?",
+   "where": "Scène A2 a2u8"
+  },
+  {
+   "text": "Deux cents. Ma copine, elle a déjà dix mille abonnés !",
+   "fr": "Deux cents. Ma copine, elle a déjà dix mille abonnés !",
+   "where": "Scène A2 a2u8"
+  },
+  {
+   "text": "Tu passes trop de temps sur ton téléphone, toi.",
+   "fr": "Tu passes trop de temps sur ton téléphone, toi.",
+   "where": "Scène A2 a2u8"
+  },
+  {
+   "text": "Peut-être… Mais abonne-toi à ma chaîne quand même !",
+   "fr": "Peut-être… Mais abonne-toi à ma chaîne quand même !",
+   "where": "Scène A2 a2u8"
+  },
+  {
+   "text": "Prends un parapluie, il va pleuvoir cet après-midi.",
+   "fr": "Prends un parapluie, il va pleuvoir cet après-midi.",
+   "where": "Scène A2 a2u9"
+  },
+  {
+   "text": "Mais il fait beau ! Il y a du soleil.",
+   "fr": "Mais il fait beau ! Il y a du soleil.",
+   "where": "Scène A2 a2u9"
+  },
+  {
+   "text": "Pour l'instant. La météo annonce une averse vers quatre heures.",
+   "fr": "Pour l'instant. La météo annonce une averse vers quatre heures.",
+   "where": "Scène A2 a2u9"
+  },
+  {
+   "text": "Et demain ?",
+   "fr": "Et demain ?",
+   "where": "Scène A2 a2u9"
+  },
+  {
+   "text": "Demain, il va faire plus froid qu'aujourd'hui. Prends aussi ton écharpe !",
+   "fr": "Demain, il va faire plus froid qu'aujourd'hui. Prends aussi ton écharpe !",
+   "where": "Scène A2 a2u9"
+  },
+  {
+   "text": "Coupe les oignons en petits morceaux.",
+   "fr": "Coupe les oignons en petits morceaux.",
+   "where": "Scène A2 a2u10"
+  },
+  {
+   "text": "C'est fait. Et maintenant ?",
+   "fr": "C'est fait. Et maintenant ?",
+   "where": "Scène A2 a2u10"
+  },
+  {
+   "text": "Fais chauffer l'huile dans une poêle, puis ajoute les tomates.",
+   "fr": "Fais chauffer l'huile dans une poêle, puis ajoute les tomates.",
+   "where": "Scène A2 a2u10"
+  },
+  {
+   "text": "Ça cuit combien de temps ?",
+   "fr": "Ça cuit combien de temps ?",
+   "where": "Scène A2 a2u10"
+  },
+  {
+   "text": "Vingt minutes à feu doux. Goûte : elle est assez salée ?",
+   "fr": "Vingt minutes à feu doux. Goûte : elle est assez salée ?",
+   "where": "Scène A2 a2u10"
+  },
+  {
+   "text": "Mmm, c'est parfait !",
+   "fr": "Mmm, c'est parfait !",
+   "where": "Scène A2 a2u10"
+  },
+  {
+   "text": "Je suis en galère, j'ai plus de batterie !",
+   "fr": "Je suis en galère, j'ai plus de batterie !",
+   "where": "Scène A2 a2u11"
+  },
+  {
+   "text": "T'inquiète, prends mon chargeur.",
+   "fr": "T'inquiète, prends mon chargeur.",
+   "where": "Scène A2 a2u11"
+  },
+  {
+   "text": "Merci ! Au fait, le film hier soir, il était grave bien !",
+   "fr": "Merci ! Au fait, le film hier soir, il était grave bien !",
+   "where": "Scène A2 a2u11"
+  },
+  {
+   "text": "Trop ! Et tes baskets, elles sont trop stylées.",
+   "fr": "Trop ! Et tes baskets, elles sont trop stylées.",
+   "where": "Scène A2 a2u11"
+  },
+  {
+   "text": "Allez, on y va, c'est chaud, on n'a que dix minutes !",
+   "fr": "Allez, on y va, c'est chaud, on n'a que dix minutes !",
+   "where": "Scène A2 a2u11"
+  },
+  {
+   "text": "Bonsoir ! Je peux vous aider ?",
+   "fr": "Bonsoir ! Je peux vous aider ?",
+   "where": "Scène A2 a2u12"
+  },
+  {
+   "text": "Bonsoir. J'ai réservé une chambre au nom de Martin, pour trois nuits.",
+   "fr": "Bonsoir. J'ai réservé une chambre au nom de Martin, pour trois nuits.",
+   "where": "Scène A2 a2u12"
+  },
+  {
+   "text": "Parfait. Une chambre double, petit-déjeuner compris. Voici votre carte.",
+   "fr": "Parfait. Une chambre double, petit-déjeuner compris. Voici votre carte.",
+   "where": "Scène A2 a2u12"
+  },
+  {
+   "text": "De sept heures à dix heures. Il faut libérer la chambre avant midi.",
+   "fr": "De sept heures à dix heures. Il faut libérer la chambre avant midi.",
+   "where": "Scène A2 a2u12"
+  },
+  {
+   "text": "Bonsoir ! Une table pour quatre, s'il vous plaît.",
+   "fr": "Bonsoir ! Une table pour quatre, s'il vous plaît.",
+   "where": "Scène A2 a2u13"
+  },
+  {
+   "text": "Bien sûr, suivez-moi… Vous avez choisi ?",
+   "fr": "Bien sûr, suivez-moi… Vous avez choisi ?",
+   "where": "Scène A2 a2u13"
+  },
+  {
+   "text": "En entrée, je vais prendre la soupe. Et comme plat, le poulet avec des frites.",
+   "fr": "En entrée, je vais prendre la soupe. Et comme plat, le poulet avec des frites.",
+   "where": "Scène A2 a2u13"
+  },
+  {
+   "text": "Très bien. Et pour boire ?",
+   "fr": "Très bien. Et pour boire ?",
+   "where": "Scène A2 a2u13"
+  },
+  {
+   "text": "Une carafe d'eau. Ah, et je suis allergique aux noix.",
+   "fr": "Une carafe d'eau. Ah, et je suis allergique aux noix.",
+   "where": "Scène A2 a2u13"
+  },
+  {
+   "text": "C'est noté, je préviens le chef.",
+   "fr": "C'est noté, je préviens le chef.",
+   "where": "Scène A2 a2u13"
+  },
+  {
+   "text": "Excusez-moi, quelle ligne va à la gare ?",
+   "fr": "Excusez-moi, quelle ligne va à la gare ?",
+   "where": "Scène A2 a2u14"
+  },
+  {
+   "text": "La ligne deux. Mais il faut changer à la prochaine station.",
+   "fr": "La ligne deux. Mais il faut changer à la prochaine station.",
+   "where": "Scène A2 a2u14"
+  },
+  {
+   "text": "D'accord. Un ticket, c'est combien ?",
+   "fr": "D'accord. Un ticket, c'est combien ?",
+   "where": "Scène A2 a2u14"
+  },
+  {
+   "text": "Un euro cinquante. Si vous restez un mois, prenez un abonnement.",
+   "fr": "Un euro cinquante. Si vous restez un mois, prenez un abonnement.",
+   "where": "Scène A2 a2u14"
+  },
+  {
+   "text": "Merci ! Il y a beaucoup de monde…",
+   "fr": "Merci ! Il y a beaucoup de monde…",
+   "where": "Scène A2 a2u14"
+  },
+  {
+   "text": "C'est l'heure de pointe. Le métro est bondé à cette heure-ci !",
+   "fr": "C'est l'heure de pointe. Le métro est bondé à cette heure-ci !",
+   "where": "Scène A2 a2u14"
+  },
+  {
+   "text": "Bon anniversaire ! Tiens, c'est pour toi.",
+   "fr": "Bon anniversaire ! Tiens, c'est pour toi.",
+   "where": "Scène A2 a2u15"
+  },
+  {
+   "text": "Oh, merci ! Il ne fallait pas !",
+   "fr": "Oh, merci ! Il ne fallait pas !",
+   "where": "Scène A2 a2u15"
+  },
+  {
+   "text": "Ouvre-le ! J'ai emballé le cadeau moi-même.",
+   "fr": "Ouvre-le ! J'ai emballé le cadeau moi-même.",
+   "where": "Scène A2 a2u15"
+  },
+  {
+   "text": "Un livre de cuisine ! Il est super, merci !",
+   "fr": "Un livre de cuisine ! Il est super, merci !",
+   "where": "Scène A2 a2u15"
+  },
+  {
+   "text": "Allez, souffle tes bougies !",
+   "fr": "Allez, souffle tes bougies !",
+   "where": "Scène A2 a2u15"
+  },
+  {
+   "text": "Alors, l'eau est bonne ?",
+   "fr": "Alors, l'eau est bonne ?",
+   "where": "Scène A2 a2u16"
+  },
+  {
+   "text": "Elle est gelée ! Mais il y a de belles vagues.",
+   "fr": "Elle est gelée ! Mais il y a de belles vagues.",
+   "where": "Scène A2 a2u16"
+  },
+  {
+   "text": "Attention, le drapeau est rouge maintenant.",
+   "fr": "Attention, le drapeau est rouge maintenant.",
+   "where": "Scène A2 a2u16"
+  },
+  {
+   "text": "Ah oui… Le maître-nageur siffle. Je reste sur le sable, alors.",
+   "fr": "Ah oui… Le maître-nageur siffle. Je reste sur le sable, alors.",
+   "where": "Scène A2 a2u16"
+  },
+  {
+   "text": "Mets de la crème, tu vas brûler ! Je vais chercher des glaces.",
+   "fr": "Mets de la crème, tu vas brûler ! Je vais chercher des glaces.",
+   "where": "Scène A2 a2u16"
+  },
+  {
+   "text": "Bonjour ! Vous prenez sans rendez-vous ?",
+   "fr": "Bonjour ! Vous prenez sans rendez-vous ?",
+   "where": "Scène A2 a2u17"
+  },
+  {
+   "text": "Oui, asseyez-vous. Qu'est-ce que je vous fais ?",
+   "fr": "Oui, asseyez-vous. Qu'est-ce que je vous fais ?",
+   "where": "Scène A2 a2u17"
+  },
+  {
+   "text": "Une coupe, mais pas trop court sur les côtés.",
+   "fr": "Une coupe, mais pas trop court sur les côtés.",
+   "where": "Scène A2 a2u17"
+  },
+  {
+   "text": "D'accord… Et voilà ! Ça vous plaît ?",
+   "fr": "D'accord… Et voilà ! Ça vous plaît ?",
+   "where": "Scène A2 a2u17"
+  },
+  {
+   "text": "C'est parfait, merci ! Ça fait combien ?",
+   "fr": "C'est parfait, merci ! Ça fait combien ?",
+   "where": "Scène A2 a2u17"
+  },
+  {
+   "text": "C'est ton tour de faire la vaisselle !",
+   "fr": "C'est ton tour de faire la vaisselle !",
+   "where": "Scène A2 a2u18"
+  },
+  {
+   "text": "D'accord, mais toi, tu passes l'aspirateur.",
+   "fr": "D'accord, mais toi, tu passes l'aspirateur.",
+   "where": "Scène A2 a2u18"
+  },
+  {
+   "text": "Ça marche. Et qui a laissé traîner ses chaussettes dans le salon ?",
+   "fr": "Ça marche. Et qui a laissé traîner ses chaussettes dans le salon ?",
+   "where": "Scène A2 a2u18"
+  },
+  {
+   "text": "Euh… c'est moi. Je les range !",
+   "fr": "Euh… c'est moi. Je les range !",
+   "where": "Scène A2 a2u18"
+  },
+  {
+   "text": "Et le frigo est vide : après, on fait les courses ensemble.",
+   "fr": "Et le frigo est vide : après, on fait les courses ensemble.",
+   "where": "Scène A2 a2u18"
+  },
+  {
+   "text": "Bonjour ! Je peux vous aider ?",
+   "fr": "Bonjour ! Je peux vous aider ?",
+   "where": "Scène A2 a2u19"
+  },
+  {
+   "text": "Oui, où sont les cabines, s'il vous plaît ?",
+   "fr": "Oui, où sont les cabines, s'il vous plaît ?",
+   "where": "Scène A2 a2u19"
+  },
+  {
+   "text": "Au fond, à droite… Alors, elle vous va ?",
+   "fr": "Au fond, à droite… Alors, elle vous va ?",
+   "where": "Scène A2 a2u19"
+  },
+  {
+   "text": "C'est trop serré. Vous l'avez en plus grand ?",
+   "fr": "C'est trop serré. Vous l'avez en plus grand ?",
+   "where": "Scène A2 a2u19"
+  },
+  {
+   "text": "Oui, voilà. Et aujourd'hui, il y a une réduction de vingt pour cent.",
+   "fr": "Oui, voilà. Et aujourd'hui, il y a une réduction de vingt pour cent.",
+   "where": "Scène A2 a2u19"
+  },
+  {
+   "text": "Super, je la prends ! C'est une bonne affaire.",
+   "fr": "Super, je la prends ! C'est une bonne affaire.",
+   "where": "Scène A2 a2u19"
+  },
+  {
+   "text": "Bonjour ! Deux entrées, s'il vous plaît.",
+   "fr": "Bonjour ! Deux entrées, s'il vous plaît.",
+   "where": "Scène A2 a2u20"
+  },
+  {
+   "text": "Vous êtes étudiants ? Il y a un tarif réduit.",
+   "fr": "Vous êtes étudiants ? Il y a un tarif réduit.",
+   "where": "Scène A2 a2u20"
+  },
+  {
+   "text": "Non. Il y a une visite guidée ce matin ?",
+   "fr": "Non. Il y a une visite guidée ce matin ?",
+   "where": "Scène A2 a2u20"
+  },
+  {
+   "text": "Oui, à onze heures. Sinon, il y a l'audioguide.",
+   "fr": "Oui, à onze heures. Sinon, il y a l'audioguide.",
+   "where": "Scène A2 a2u20"
+  },
+  {
+   "text": "Oui, mais sans flash. Le musée ferme à six heures. Bonne visite !",
+   "fr": "Oui, mais sans flash. Le musée ferme à six heures. Bonne visite !",
+   "where": "Scène A2 a2u20"
+  },
+  {
+   "text": "Entre, fais comme chez toi !",
+   "fr": "Entre, fais comme chez toi !",
+   "where": "Scène A2 a2u21"
+  },
+  {
+   "text": "Merci ! Je t'ai apporté un petit quelque chose.",
+   "fr": "Merci ! Je t'ai apporté un petit quelque chose.",
+   "where": "Scène A2 a2u21"
+  },
+  {
+   "text": "Des fleurs ! Elles sont magnifiques. Assieds-toi, le dîner est prêt.",
+   "fr": "Des fleurs ! Elles sont magnifiques. Assieds-toi, le dîner est prêt.",
+   "where": "Scène A2 a2u21"
+  },
+  {
+   "text": "C'était délicieux, merci pour tout !",
+   "fr": "C'était délicieux, merci pour tout !",
+   "where": "Scène A2 a2u21"
+  },
+  {
+   "text": "Avec plaisir ! Reviens quand tu veux.",
+   "fr": "Avec plaisir ! Reviens quand tu veux.",
+   "where": "Scène A2 a2u21"
+  },
+  {
+   "text": "Il est déjà tard, je vais y aller. Bonne nuit !",
+   "fr": "Il est déjà tard, je vais y aller. Bonne nuit !",
+   "where": "Scène A2 a2u21"
+  },
+  {
+   "text": "Bonsoir ! Vous plantez la tente ici ?",
+   "fr": "Bonsoir ! Vous plantez la tente ici ?",
+   "where": "Scène A2 a2u22"
+  },
+  {
+   "text": "Oui. Il y a des douches au camping ?",
+   "fr": "Oui. Il y a des douches au camping ?",
+   "where": "Scène A2 a2u22"
+  },
+  {
+   "text": "Oui, là-bas, à côté de l'accueil. Attention, il fait froid la nuit.",
+   "fr": "Oui, là-bas, à côté de l'accueil. Attention, il fait froid la nuit.",
+   "where": "Scène A2 a2u22"
+  },
+  {
+   "text": "On a des sacs de couchage. On peut faire un feu de camp ?",
+   "fr": "On a des sacs de couchage. On peut faire un feu de camp ?",
+   "where": "Scène A2 a2u22"
+  },
+  {
+   "text": "Non, c'est interdit en été. Mais regardez toutes ces étoiles !",
+   "fr": "Non, c'est interdit en été. Mais regardez toutes ces étoiles !",
+   "where": "Scène A2 a2u22"
+  },
+  {
+   "text": "Je suis en retard, désolé ! Le réveil n'a pas sonné.",
+   "fr": "Je suis en retard, désolé ! Le réveil n'a pas sonné.",
+   "where": "Scène A2 a2u23"
+  },
+  {
+   "text": "Ce n'est pas grave. Mais… il y a du café sur ton pull !",
+   "fr": "Ce n'est pas grave. Mais… il y a du café sur ton pull !",
+   "where": "Scène A2 a2u23"
+  },
+  {
+   "text": "Oh non ! Et en plus, j'ai raté le bus et j'ai perdu mes clés.",
+   "fr": "Oh non ! Et en plus, j'ai raté le bus et j'ai perdu mes clés.",
+   "where": "Scène A2 a2u23"
+  },
+  {
+   "text": "Quelle journée ! Tiens, j'ai un pull de rechange dans mon casier.",
+   "fr": "Quelle journée ! Tiens, j'ai un pull de rechange dans mon casier.",
+   "where": "Scène A2 a2u23"
+  },
+  {
+   "text": "Merci ! Heureusement que tu es là.",
+   "fr": "Merci ! Heureusement que tu es là.",
+   "where": "Scène A2 a2u23"
+  },
+  {
+   "text": "J'hésite à quitter mon travail pour faire le tour du monde. Qu'est-ce que tu en penses ?",
+   "fr": "J'hésite à quitter mon travail pour faire le tour du monde. Qu'est-ce que tu en penses ?",
+   "where": "Scène B1 b1u0"
+  },
+  {
+   "text": "À mon avis, c'est une bonne idée. Tu en parles depuis des années !",
+   "fr": "À mon avis, c'est une bonne idée. Tu en parles depuis des années !",
+   "where": "Scène B1 b1u0"
+  },
+  {
+   "text": "Oui, mais d'un côté j'ai envie de partir, de l'autre j'ai peur de tout perdre.",
+   "fr": "Oui, mais d'un côté j'ai envie de partir, de l'autre j'ai peur de tout perdre.",
+   "where": "Scène B1 b1u0"
+  },
+  {
+   "text": "Je comprends. Ça dépend : tu as assez d'économies ?",
+   "fr": "Je comprends. Ça dépend : tu as assez d'économies ?",
+   "where": "Scène B1 b1u0"
+  },
+  {
+   "text": "Pour un an, oui. Mais mes parents ne sont pas du tout d'accord.",
+   "fr": "Pour un an, oui. Mais mes parents ne sont pas du tout d'accord.",
+   "where": "Scène B1 b1u0"
+  },
+  {
+   "text": "Je pense que c'est ta vie. Si tu ne pars pas maintenant, tu le regretteras.",
+   "fr": "Je pense que c'est ta vie. Si tu ne pars pas maintenant, tu le regretteras.",
+   "where": "Scène B1 b1u0"
+  },
+  {
+   "text": "Tu n'as pas tort… Je vais y réfléchir sérieusement.",
+   "fr": "Tu n'as pas tort… Je vais y réfléchir sérieusement.",
+   "where": "Scène B1 b1u0"
+  },
+  {
+   "text": "Bonjour, asseyez-vous. Parlez-moi un peu de vous.",
+   "fr": "Bonjour, asseyez-vous. Parlez-moi un peu de vous.",
+   "where": "Scène B1 b1u1"
+  },
+  {
+   "text": "J'ai cinq ans d'expérience dans la vente, et je parle trois langues.",
+   "fr": "J'ai cinq ans d'expérience dans la vente, et je parle trois langues.",
+   "where": "Scène B1 b1u1"
+  },
+  {
+   "text": "Très bien. Quels sont vos points forts ?",
+   "fr": "Très bien. Quels sont vos points forts ?",
+   "where": "Scène B1 b1u1"
+  },
+  {
+   "text": "Je suis motivé et organisé, et j'aime travailler en équipe.",
+   "fr": "Je suis motivé et organisé, et j'aime travailler en équipe.",
+   "where": "Scène B1 b1u1"
+  },
+  {
+   "text": "Et pourquoi voulez-vous quitter votre poste actuel ?",
+   "fr": "Et pourquoi voulez-vous quitter votre poste actuel ?",
+   "where": "Scène B1 b1u1"
+  },
+  {
+   "text": "Je cherche de nouvelles responsabilités, et votre entreprise m'intéresse beaucoup.",
+   "fr": "Je cherche de nouvelles responsabilités, et votre entreprise m'intéresse beaucoup.",
+   "where": "Scène B1 b1u1"
+  },
+  {
+   "text": "Parfait. Nous vous rappellerons avant la fin de la semaine.",
+   "fr": "Parfait. Nous vous rappellerons avant la fin de la semaine.",
+   "where": "Scène B1 b1u1"
+  },
+  {
+   "text": "Bonjour, j'ai perdu ma valise. Elle n'est pas arrivée sur le tapis.",
+   "fr": "Bonjour, j'ai perdu ma valise. Elle n'est pas arrivée sur le tapis.",
+   "where": "Scène B1 b1u2"
+  },
+  {
+   "text": "Je suis désolé. Vous avez votre ticket de bagage ?",
+   "fr": "Je suis désolé. Vous avez votre ticket de bagage ?",
+   "where": "Scène B1 b1u2"
+  },
+  {
+   "text": "Oui, le voici. J'étais sur le vol de huit heures.",
+   "fr": "Oui, le voici. J'étais sur le vol de huit heures.",
+   "where": "Scène B1 b1u2"
+  },
+  {
+   "text": "Votre valise est restée à l'aéroport de départ. Elle arrivera demain matin.",
+   "fr": "Votre valise est restée à l'aéroport de départ. Elle arrivera demain matin.",
+   "where": "Scène B1 b1u2"
+  },
+  {
+   "text": "Demain ? Mais toutes mes affaires sont dedans ! Quelle est la solution ?",
+   "fr": "Demain ? Mais toutes mes affaires sont dedans ! Quelle est la solution ?",
+   "where": "Scène B1 b1u2"
+  },
+  {
+   "text": "On vous la livre à votre hôtel. Achetez le nécessaire, on vous remboursera.",
+   "fr": "On vous la livre à votre hôtel. Achetez le nécessaire, on vous remboursera.",
+   "where": "Scène B1 b1u2"
+  },
+  {
+   "text": "Regarde cette photo. C'est moi, à dix ans, devant notre maison.",
+   "fr": "Regarde cette photo. C'est moi, à dix ans, devant notre maison.",
+   "where": "Scène B1 b1u3"
+  },
+  {
+   "text": "Tu habitais à la campagne ?",
+   "fr": "Tu habitais à la campagne ?",
+   "where": "Scène B1 b1u3"
+  },
+  {
+   "text": "Oui. Nous jouions dans la rue toute la journée, il n'y avait presque pas de voitures.",
+   "fr": "Oui. Nous jouions dans la rue toute la journée, il n'y avait presque pas de voitures.",
+   "where": "Scène B1 b1u3"
+  },
+  {
+   "text": "Et vous n'aviez pas de téléphones portables !",
+   "fr": "Et vous n'aviez pas de téléphones portables !",
+   "where": "Scène B1 b1u3"
+  },
+  {
+   "text": "Non ! Le soir, mon grand-père racontait des histoires au coin du feu.",
+   "fr": "Non ! Le soir, mon grand-père racontait des histoires au coin du feu.",
+   "where": "Scène B1 b1u3"
+  },
+  {
+   "text": "Ça devait être une belle époque.",
+   "fr": "Ça devait être une belle époque.",
+   "where": "Scène B1 b1u3"
+  },
+  {
+   "text": "Oui… Je me souviens de chaque été passé là-bas.",
+   "fr": "Oui… Je me souviens de chaque été passé là-bas.",
+   "where": "Scène B1 b1u3"
+  },
+  {
+   "text": "On m'a proposé un poste à Montréal. Qu'est-ce que tu ferais, toi ?",
+   "fr": "On m'a proposé un poste à Montréal. Qu'est-ce que tu ferais, toi ?",
+   "where": "Scène B1 b1u4"
+  },
+  {
+   "text": "Si j'étais toi, j'accepterais tout de suite !",
+   "fr": "Si j'étais toi, j'accepterais tout de suite !",
+   "where": "Scène B1 b1u4"
+  },
+  {
+   "text": "Mais si je partais, je ne verrais plus ma famille.",
+   "fr": "Mais si je partais, je ne verrais plus ma famille.",
+   "where": "Scène B1 b1u4"
+  },
+  {
+   "text": "Tu pourrais revenir pour les vacances. Et ce serait une super expérience.",
+   "fr": "Tu pourrais revenir pour les vacances. Et ce serait une super expérience.",
+   "where": "Scène B1 b1u4"
+  },
+  {
+   "text": "C'est vrai… J'aimerais bien vivre à l'étranger un jour.",
+   "fr": "C'est vrai… J'aimerais bien vivre à l'étranger un jour.",
+   "where": "Scène B1 b1u4"
+  },
+  {
+   "text": "À ta place, je n'hésiterais pas. Et moi, je viendrais te voir !",
+   "fr": "À ta place, je n'hésiterais pas. Et moi, je viendrais te voir !",
+   "where": "Scène B1 b1u4"
+  },
+  {
+   "text": "Il y a de plus en plus de déchets dans le parc. Il faut faire quelque chose.",
+   "fr": "Il y a de plus en plus de déchets dans le parc. Il faut faire quelque chose.",
+   "where": "Scène B1 b1u5"
+  },
+  {
+   "text": "Je suis d'accord. On pourrait installer des poubelles pour recycler.",
+   "fr": "Je suis d'accord. On pourrait installer des poubelles pour recycler.",
+   "where": "Scène B1 b1u5"
+  },
+  {
+   "text": "Bonne idée. Et il faudrait aussi organiser une journée de nettoyage.",
+   "fr": "Bonne idée. Et il faudrait aussi organiser une journée de nettoyage.",
+   "where": "Scène B1 b1u5"
+  },
+  {
+   "text": "On pourrait le proposer à l'école : les enfants adorent ça.",
+   "fr": "On pourrait le proposer à l'école : les enfants adorent ça.",
+   "where": "Scène B1 b1u5"
+  },
+  {
+   "text": "Et puis, il faut moins prendre la voiture. La pollution est terrible ici.",
+   "fr": "Et puis, il faut moins prendre la voiture. La pollution est terrible ici.",
+   "where": "Scène B1 b1u5"
+  },
+  {
+   "text": "C'est vrai. Si la mairie améliorait les transports en commun, ce serait plus facile.",
+   "fr": "C'est vrai. Si la mairie améliorait les transports en commun, ce serait plus facile.",
+   "where": "Scène B1 b1u5"
+  },
+  {
+   "text": "Alors, comment ça s'est passé ?",
+   "fr": "Alors, comment ça s'est passé ?",
+   "where": "Scène B1 b1u6"
+  },
+  {
+   "text": "J'étais tellement contente de le revoir ! J'ai pleuré dès qu'il est arrivé.",
+   "fr": "J'étais tellement contente de le revoir ! J'ai pleuré dès qu'il est arrivé.",
+   "where": "Scène B1 b1u6"
+  },
+  {
+   "text": "Ça ne m'étonne pas. Trois ans, c'est long.",
+   "fr": "Ça ne m'étonne pas. Trois ans, c'est long.",
+   "where": "Scène B1 b1u6"
+  },
+  {
+   "text": "Oui… Je me sentais un peu seule sans lui.",
+   "fr": "Oui… Je me sentais un peu seule sans lui.",
+   "where": "Scène B1 b1u6"
+  },
+  {
+   "text": "Et lui, il allait bien ?",
+   "fr": "Et lui, il allait bien ?",
+   "where": "Scène B1 b1u6"
+  },
+  {
+   "text": "Il avait l'air fatigué, mais heureux. Ça m'a vraiment touchée.",
+   "fr": "Il avait l'air fatigué, mais heureux. Ça m'a vraiment touchée.",
+   "where": "Scène B1 b1u6"
+  },
+  {
+   "text": "Je suis content pour toi. Ça se voit, tu n'arrives pas à cacher ta joie !",
+   "fr": "Je suis content pour toi. Ça se voit, tu n'arrives pas à cacher ta joie !",
+   "where": "Scène B1 b1u6"
+  },
+  {
+   "text": "Écoute… je suis désolé pour hier. Je ne voulais pas te blesser.",
+   "fr": "Écoute… je suis désolé pour hier. Je ne voulais pas te blesser.",
+   "where": "Scène B1 b1u7"
+  },
+  {
+   "text": "Tu aurais pu me prévenir que tu ne venais pas. Je t'ai attendu une heure !",
+   "fr": "Tu aurais pu me prévenir que tu ne venais pas. Je t'ai attendu une heure !",
+   "where": "Scène B1 b1u7"
+  },
+  {
+   "text": "Tu as raison. Mon téléphone était à plat, mais ce n'est pas une excuse.",
+   "fr": "Tu as raison. Mon téléphone était à plat, mais ce n'est pas une excuse.",
+   "where": "Scène B1 b1u7"
+  },
+  {
+   "text": "Bon… On s'est disputés pour une bêtise, en fait.",
+   "fr": "Bon… On s'est disputés pour une bêtise, en fait.",
+   "where": "Scène B1 b1u7"
+  },
+  {
+   "text": "Oui, c'était un malentendu. On fait la paix ?",
+   "fr": "Oui, c'était un malentendu. On fait la paix ?",
+   "where": "Scène B1 b1u7"
+  },
+  {
+   "text": "D'accord, je te pardonne. Mais ne recommence pas !",
+   "fr": "D'accord, je te pardonne. Mais ne recommence pas !",
+   "where": "Scène B1 b1u7"
+  },
+  {
+   "text": "Samedi, c'est l'anniversaire de Léa. On lui prépare une fête surprise ?",
+   "fr": "Samedi, c'est l'anniversaire de Léa. On lui prépare une fête surprise ?",
+   "where": "Scène B1 b1u8"
+  },
+  {
+   "text": "Super idée ! On la fait chez moi, il y a de la place.",
+   "fr": "Super idée ! On la fait chez moi, il y a de la place.",
+   "where": "Scène B1 b1u8"
+  },
+  {
+   "text": "Parfait. J'invite ses amis de la fac. Chacun apporte quelque chose à boire.",
+   "fr": "Parfait. J'invite ses amis de la fac. Chacun apporte quelque chose à boire.",
+   "where": "Scène B1 b1u8"
+  },
+  {
+   "text": "Et moi, je m'occupe du gâteau. Mais comment on la fait venir sans qu'elle se doute de rien ?",
+   "fr": "Et moi, je m'occupe du gâteau. Mais comment on la fait venir sans qu'elle se doute de rien ?",
+   "where": "Scène B1 b1u8"
+  },
+  {
+   "text": "Dis-lui que tu as besoin d'aide pour un déménagement !",
+   "fr": "Dis-lui que tu as besoin d'aide pour un déménagement !",
+   "where": "Scène B1 b1u8"
+  },
+  {
+   "text": "Génial. Surtout, pas un mot à personne !",
+   "fr": "Génial. Surtout, pas un mot à personne !",
+   "where": "Scène B1 b1u8"
+  },
+  {
+   "text": "Allez, plus que cinq minutes ! Vous allez y arriver !",
+   "fr": "Allez, plus que cinq minutes ! Vous allez y arriver !",
+   "where": "Scène B1 b1u9"
+  },
+  {
+   "text": "Coach, je crois que je me suis blessé au genou…",
+   "fr": "Coach, je crois que je me suis blessé au genou…",
+   "where": "Scène B1 b1u9"
+  },
+  {
+   "text": "Tu peux encore courir ? Si on gagne ce match, on sera champions !",
+   "fr": "Tu peux encore courir ? Si on gagne ce match, on sera champions !",
+   "where": "Scène B1 b1u9"
+  },
+  {
+   "text": "Ça va, je continue. Je ne veux pas lâcher maintenant.",
+   "fr": "Ça va, je continue. Je ne veux pas lâcher maintenant.",
+   "where": "Scène B1 b1u9"
+  },
+  {
+   "text": "C'est fini… On a perdu de justesse, mais vous avez bien joué. Je suis fier de vous.",
+   "fr": "C'est fini… On a perdu de justesse, mais vous avez bien joué. Je suis fier de vous.",
+   "where": "Scène B1 b1u9"
+  },
+  {
+   "text": "L'année prochaine, on gagnera. Je m'entraînerai trois fois par semaine !",
+   "fr": "L'année prochaine, on gagnera. Je m'entraînerai trois fois par semaine !",
+   "where": "Scène B1 b1u9"
+  },
+  {
+   "text": "Il faut que je te raconte un truc… J'ai rencontré quelqu'un.",
+   "fr": "Il faut que je te raconte un truc… J'ai rencontré quelqu'un.",
+   "where": "Scène B1 b1u10"
+  },
+  {
+   "text": "Non ! Raconte ! Vous vous êtes rencontrés où ?",
+   "fr": "Non ! Raconte ! Vous vous êtes rencontrés où ?",
+   "where": "Scène B1 b1u10"
+  },
+  {
+   "text": "À la fac. Il m'a proposé de prendre un verre après le cours.",
+   "fr": "À la fac. Il m'a proposé de prendre un verre après le cours.",
+   "where": "Scène B1 b1u10"
+  },
+  {
+   "text": "Et alors ? Vous sortez ensemble ?",
+   "fr": "Et alors ? Vous sortez ensemble ?",
+   "where": "Scène B1 b1u10"
+  },
+  {
+   "text": "Pas encore… Je ne sais pas s'il me plaît vraiment. Tu en penses quoi ?",
+   "fr": "Pas encore… Je ne sais pas s'il me plaît vraiment. Tu en penses quoi ?",
+   "where": "Scène B1 b1u10"
+  },
+  {
+   "text": "Prends ton temps. Et tu sais, tu peux compter sur moi, je suis là.",
+   "fr": "Prends ton temps. Et tu sais, tu peux compter sur moi, je suis là.",
+   "where": "Scène B1 b1u10"
+  },
+  {
+   "text": "J'ai la flemme de faire la vaisselle…",
+   "fr": "J'ai la flemme de faire la vaisselle…",
+   "where": "Scène B1 b1u11"
+  },
+  {
+   "text": "Moi non plus. On la fait ce soir ?",
+   "fr": "Moi non plus. On la fait ce soir ?",
+   "where": "Scène B1 b1u11"
+  },
+  {
+   "text": "OK. Au fait, on se fait une bouffe avec les autres samedi prochain ?",
+   "fr": "OK. Au fait, on se fait une bouffe avec les autres samedi prochain ?",
+   "where": "Scène B1 b1u11"
+  },
+  {
+   "text": "Carrément ! Mais Marc vient ? Il se prend toujours la tête avec tout le monde.",
+   "fr": "Carrément ! Mais Marc vient ? Il se prend toujours la tête avec tout le monde.",
+   "where": "Scène B1 b1u11"
+  },
+  {
+   "text": "Qu'il vienne ou pas, je m'en fiche complètement.",
+   "fr": "Qu'il vienne ou pas, je m'en fiche complètement.",
+   "where": "Scène B1 b1u11"
+  },
+  {
+   "text": "Bon… Dépêche-toi, on est grave à la bourre pour le ciné !",
+   "fr": "Bon… Dépêche-toi, on est grave à la bourre pour le ciné !",
+   "where": "Scène B1 b1u11"
+  },
+  {
+   "text": "Bonjour, ici la société Lumen. Vous avez répondu à notre offre d'emploi ?",
+   "fr": "Bonjour, ici la société Lumen. Vous avez répondu à notre offre d'emploi ?",
+   "where": "Scène B1 b1u12"
+  },
+  {
+   "text": "Oui, tout à fait. J'ai envoyé ma candidature la semaine dernière.",
+   "fr": "Oui, tout à fait. J'ai envoyé ma candidature la semaine dernière.",
+   "where": "Scène B1 b1u12"
+  },
+  {
+   "text": "Votre CV nous intéresse. Nous aimerions vous rencontrer pour un entretien.",
+   "fr": "Votre CV nous intéresse. Nous aimerions vous rencontrer pour un entretien.",
+   "where": "Scène B1 b1u12"
+  },
+  {
+   "text": "Avec plaisir ! Je n'ai pas encore beaucoup d'expérience, mais j'apprends vite.",
+   "fr": "Avec plaisir ! Je n'ai pas encore beaucoup d'expérience, mais j'apprends vite.",
+   "where": "Scène B1 b1u12"
+  },
+  {
+   "text": "C'est ce qu'on cherche : quelqu'un de motivé et autonome. Jeudi à dix heures, ça vous va ?",
+   "fr": "C'est ce qu'on cherche : quelqu'un de motivé et autonome. Jeudi à dix heures, ça vous va ?",
+   "where": "Scène B1 b1u12"
+  },
+  {
+   "text": "Parfait, je serai là. Merci beaucoup !",
+   "fr": "Parfait, je serai là. Merci beaucoup !",
+   "where": "Scène B1 b1u12"
+  },
+  {
+   "text": "Mon ordinateur a planté et je ne peux plus rien faire !",
+   "fr": "Mon ordinateur a planté et je ne peux plus rien faire !",
+   "where": "Scène B1 b1u13"
+  },
+  {
+   "text": "Oui… et maintenant il me demande un mot de passe.",
+   "fr": "Oui… et maintenant il me demande un mot de passe.",
+   "where": "Scène B1 b1u13"
+  },
+  {
+   "text": "C'est celui que tu as noté dans ton carnet, non ?",
+   "fr": "C'est celui que tu as noté dans ton carnet, non ?",
+   "where": "Scène B1 b1u13"
+  },
+  {
+   "text": "Je l'ai oublié… pour la troisième fois cette semaine.",
+   "fr": "Je l'ai oublié… pour la troisième fois cette semaine.",
+   "where": "Scène B1 b1u13"
+  },
+  {
+   "text": "Pas de panique, on va le réinitialiser ensemble.",
+   "fr": "Pas de panique, on va le réinitialiser ensemble.",
+   "where": "Scène B1 b1u13"
+  },
+  {
+   "text": "Bonjour. Votre passeport, s'il vous plaît. Vous avez un bagage en soute ?",
+   "fr": "Bonjour. Votre passeport, s'il vous plaît. Vous avez un bagage en soute ?",
+   "where": "Scène B1 b1u14"
+  },
+  {
+   "text": "Oui, cette valise. Je voudrais une place côté hublot, s'il vous plaît.",
+   "fr": "Oui, cette valise. Je voudrais une place côté hublot, s'il vous plaît.",
+   "where": "Scène B1 b1u14"
+  },
+  {
+   "text": "C'est noté. Mais votre valise fait deux kilos de trop.",
+   "fr": "C'est noté. Mais votre valise fait deux kilos de trop.",
+   "where": "Scène B1 b1u14"
+  },
+  {
+   "text": "Ah… Je peux mettre quelques affaires dans mon sac à dos ?",
+   "fr": "Ah… Je peux mettre quelques affaires dans mon sac à dos ?",
+   "where": "Scène B1 b1u14"
+  },
+  {
+   "text": "Bien sûr. Voici votre carte d'embarquement. L'embarquement se fait porte 32 dans quarante minutes.",
+   "fr": "Bien sûr. Voici votre carte d'embarquement. L'embarquement se fait porte 32 dans quarante minutes.",
+   "where": "Scène B1 b1u14"
+  },
+  {
+   "text": "Merci. J'ai une correspondance à Lisbonne : j'espère qu'on ne sera pas en retard !",
+   "fr": "Merci. J'ai une correspondance à Lisbonne : j'espère qu'on ne sera pas en retard !",
+   "where": "Scène B1 b1u14"
+  },
+  {
+   "text": "Tu devrais regarder cette série, elle est géniale. J'ai vu toute la saison en un week-end !",
+   "fr": "Tu devrais regarder cette série, elle est géniale. J'ai vu toute la saison en un week-end !",
+   "where": "Scène B1 b1u15"
+  },
+  {
+   "text": "C'est quoi ? Un film d'horreur ? Moi, je préfère les comédies.",
+   "fr": "C'est quoi ? Un film d'horreur ? Moi, je préfère les comédies.",
+   "where": "Scène B1 b1u15"
+  },
+  {
+   "text": "Non, c'est un thriller. Au début, il y a un meurtre, et en fait le coupable, c'est…",
+   "fr": "Non, c'est un thriller. Au début, il y a un meurtre, et en fait le coupable, c'est…",
+   "where": "Scène B1 b1u15"
+  },
+  {
+   "text": "Stop ! Ne me spoile pas !",
+   "fr": "Stop ! Ne me spoile pas !",
+   "where": "Scène B1 b1u15"
+  },
+  {
+   "text": "D'accord, d'accord. On regarde le premier épisode ensemble, en VO ?",
+   "fr": "D'accord, d'accord. On regarde le premier épisode ensemble, en VO ?",
+   "where": "Scène B1 b1u15"
+  },
+  {
+   "text": "Oui, avec les sous-titres. Mais si la fin est nulle, c'est toi qui fais la vaisselle !",
+   "fr": "Oui, avec les sous-titres. Mais si la fin est nulle, c'est toi qui fais la vaisselle !",
+   "where": "Scène B1 b1u15"
+  },
+  {
+   "text": "Bonjour. Ma carte a été avalée par le distributeur ce matin.",
+   "fr": "Bonjour. Ma carte a été avalée par le distributeur ce matin.",
+   "where": "Scène B1 b1u16"
+  },
+  {
+   "text": "Ça arrive. Vous avez tapé un mauvais code PIN ?",
+   "fr": "Ça arrive. Vous avez tapé un mauvais code PIN ?",
+   "where": "Scène B1 b1u16"
+  },
+  {
+   "text": "Oui, trois fois… Et il y a une opération que je ne reconnais pas sur mon compte.",
+   "fr": "Oui, trois fois… Et il y a une opération que je ne reconnais pas sur mon compte.",
+   "where": "Scène B1 b1u16"
+  },
+  {
+   "text": "Je regarde… Un paiement de deux cents euros, hier soir, à l'étranger.",
+   "fr": "Je regarde… Un paiement de deux cents euros, hier soir, à l'étranger.",
+   "where": "Scène B1 b1u16"
+  },
+  {
+   "text": "Ce n'est pas moi ! Je voudrais faire opposition sur ma carte.",
+   "fr": "Ce n'est pas moi ! Je voudrais faire opposition sur ma carte.",
+   "where": "Scène B1 b1u16"
+  },
+  {
+   "text": "C'est fait. Vous recevrez une nouvelle carte dans cinq jours, sans frais.",
+   "fr": "C'est fait. Vous recevrez une nouvelle carte dans cinq jours, sans frais.",
+   "where": "Scène B1 b1u16"
+  },
+  {
+   "text": "Bonjour. Il y a un voyant allumé sur le tableau de bord, et les freins font un drôle de bruit.",
+   "fr": "Bonjour. Il y a un voyant allumé sur le tableau de bord, et les freins font un drôle de bruit.",
+   "where": "Scène B1 b1u17"
+  },
+  {
+   "text": "Je vais regarder… Les plaquettes de frein sont usées. Il faut les changer.",
+   "fr": "Je vais regarder… Les plaquettes de frein sont usées. Il faut les changer.",
+   "where": "Scène B1 b1u17"
+  },
+  {
+   "text": "D'accord. Vous pouvez me faire un devis ?",
+   "fr": "D'accord. Vous pouvez me faire un devis ?",
+   "where": "Scène B1 b1u17"
+  },
+  {
+   "text": "Cent quatre-vingts euros, avec la vidange. Et votre contrôle technique est dans un mois.",
+   "fr": "Cent quatre-vingts euros, avec la vidange. Et votre contrôle technique est dans un mois.",
+   "where": "Scène B1 b1u17"
+  },
+  {
+   "text": "Demain en fin d'après-midi. Je vous appelle quand c'est fini.",
+   "fr": "Demain en fin d'après-midi. Je vous appelle quand c'est fini.",
+   "where": "Scène B1 b1u17"
+  },
+  {
+   "text": "Bonjour ! Qu'est-ce qui ne va pas avec ce beau chien ?",
+   "fr": "Bonjour ! Qu'est-ce qui ne va pas avec ce beau chien ?",
+   "where": "Scène B1 b1u18"
+  },
+  {
+   "text": "Il ne mange plus depuis hier, et il boite de la patte arrière.",
+   "fr": "Il ne mange plus depuis hier, et il boite de la patte arrière.",
+   "where": "Scène B1 b1u18"
+  },
+  {
+   "text": "Voyons ça… Il a une petite blessure à la patte. Ce n'est pas grave.",
+   "fr": "Voyons ça… Il a une petite blessure à la patte. Ce n'est pas grave.",
+   "where": "Scène B1 b1u18"
+  },
+  {
+   "text": "Ouf ! Et pour la nourriture ?",
+   "fr": "Ouf ! Et pour la nourriture ?",
+   "where": "Scène B1 b1u18"
+  },
+  {
+   "text": "Il a sûrement mal. Je vous donne un médicament. Vous avez son carnet de santé ?",
+   "fr": "Il a sûrement mal. Je vous donne un médicament. Vous avez son carnet de santé ?",
+   "where": "Scène B1 b1u18"
+  },
+  {
+   "text": "Oui, le voici. Il a aussi besoin d'un vermifuge, je crois.",
+   "fr": "Oui, le voici. Il a aussi besoin d'un vermifuge, je crois.",
+   "where": "Scène B1 b1u18"
+  },
+  {
+   "text": "Je le note. Revenez dans une semaine s'il boite encore.",
+   "fr": "Je le note. Revenez dans une semaine s'il boite encore.",
+   "where": "Scène B1 b1u18"
+  },
+  {
+   "text": "Dans deux heures. Tu as déjà demandé il y a cinq minutes !",
+   "fr": "Dans deux heures. Tu as déjà demandé il y a cinq minutes !",
+   "where": "Scène B1 b1u19"
+  },
+  {
+   "text": "Je m'ennuie… Il y a une piscine pour les petits, à la location ?",
+   "fr": "Je m'ennuie… Il y a une piscine pour les petits, à la location ?",
+   "where": "Scène B1 b1u19"
+  },
+  {
+   "text": "Oui, et une plage juste à côté. Et demain, on va au parc d'attractions !",
+   "fr": "Oui, et une plage juste à côté. Et demain, on va au parc d'attractions !",
+   "where": "Scène B1 b1u19"
+  },
+  {
+   "text": "Oh non… On a oublié le chargeur de la tablette !",
+   "fr": "Oh non… On a oublié le chargeur de la tablette !",
+   "where": "Scène B1 b1u19"
+  },
+  {
+   "text": "Ce n'est pas grave. On joue à un jeu : chacun choisit une activité pour la semaine.",
+   "fr": "Ce n'est pas grave. On joue à un jeu : chacun choisit une activité pour la semaine.",
+   "where": "Scène B1 b1u19"
+  },
+  {
+   "text": "J'ai séché le cours ce matin… Tu peux me passer tes notes ?",
+   "fr": "J'ai séché le cours ce matin… Tu peux me passer tes notes ?",
+   "where": "Scène B1 b1u20"
+  },
+  {
+   "text": "D'accord, mais c'est la dernière fois ! Les examens sont la semaine prochaine.",
+   "fr": "D'accord, mais c'est la dernière fois ! Les examens sont la semaine prochaine.",
+   "where": "Scène B1 b1u20"
+  },
+  {
+   "text": "Je sais. Je révise toute la nuit depuis lundi.",
+   "fr": "Je sais. Je révise toute la nuit depuis lundi.",
+   "where": "Scène B1 b1u20"
+  },
+  {
+   "text": "Tu devrais dormir un peu, sinon tu ne retiendras rien.",
+   "fr": "Tu devrais dormir un peu, sinon tu ne retiendras rien.",
+   "where": "Scène B1 b1u20"
+  },
+  {
+   "text": "Tu as raison. Et toi, ton mémoire, ça avance ?",
+   "fr": "Tu as raison. Et toi, ton mémoire, ça avance ?",
+   "where": "Scène B1 b1u20"
+  },
+  {
+   "text": "Doucement… Il est à rendre en juin. Mais si je valide mon semestre, je pars en Erasmus !",
+   "fr": "Doucement… Il est à rendre en juin. Mais si je valide mon semestre, je pars en Erasmus !",
+   "where": "Scène B1 b1u20"
+  },
+  {
+   "text": "Bonjour, je voudrais envoyer ce colis à l'étranger.",
+   "fr": "Bonjour, je voudrais envoyer ce colis à l'étranger.",
+   "where": "Scène B1 b1u21"
+  },
+  {
+   "text": "En envoi normal ou en recommandé ?",
+   "fr": "En envoi normal ou en recommandé ?",
+   "where": "Scène B1 b1u21"
+  },
+  {
+   "text": "En recommandé. Il arrivera sous combien de jours ?",
+   "fr": "En recommandé. Il arrivera sous combien de jours ?",
+   "where": "Scène B1 b1u21"
+  },
+  {
+   "text": "Entre cinq et sept jours. Voici votre numéro de suivi.",
+   "fr": "Entre cinq et sept jours. Voici votre numéro de suivi.",
+   "where": "Scène B1 b1u21"
+  },
+  {
+   "text": "Merci. Autre chose : le livreur est passé hier, mais je n'étais pas là.",
+   "fr": "Merci. Autre chose : le livreur est passé hier, mais je n'étais pas là.",
+   "where": "Scène B1 b1u21"
+  },
+  {
+   "text": "Votre colis est sûrement au point relais. Vous avez l'avis de passage ?",
+   "fr": "Votre colis est sûrement au point relais. Vous avez l'avis de passage ?",
+   "where": "Scène B1 b1u21"
+  },
+  {
+   "text": "D'abord, fais revenir les oignons dans l'huile, à feu doux.",
+   "fr": "D'abord, fais revenir les oignons dans l'huile, à feu doux.",
+   "where": "Scène B1 b1u22"
+  },
+  {
+   "text": "Comme ça ? Et j'ajoute les épices maintenant ?",
+   "fr": "Comme ça ? Et j'ajoute les épices maintenant ?",
+   "where": "Scène B1 b1u22"
+  },
+  {
+   "text": "Oui, mais juste une pincée de piment : c'est très épicé, attention !",
+   "fr": "Oui, mais juste une pincée de piment : c'est très épicé, attention !",
+   "where": "Scène B1 b1u22"
+  },
+  {
+   "text": "Et la viande ?",
+   "fr": "Et la viande ?",
+   "where": "Scène B1 b1u22"
+  },
+  {
+   "text": "Je l'ai fait mariner hier soir. On la met et on laisse mijoter une heure.",
+   "fr": "Je l'ai fait mariner hier soir. On la met et on laisse mijoter une heure.",
+   "where": "Scène B1 b1u22"
+  },
+  {
+   "text": "Une heure ? J'ai déjà faim… Pendant ce temps, je prépare le riz ?",
+   "fr": "Une heure ? J'ai déjà faim… Pendant ce temps, je prépare le riz ?",
+   "where": "Scène B1 b1u22"
+  },
+  {
+   "text": "Bienvenue ! Tu as déjà travaillé dans un bar ?",
+   "fr": "Bienvenue ! Tu as déjà travaillé dans un bar ?",
+   "where": "Scène B1 b1u23"
+  },
+  {
+   "text": "Non, mais j'ai fait du baby-sitting, et j'apprends vite.",
+   "fr": "Non, mais j'ai fait du baby-sitting, et j'apprends vite.",
+   "where": "Scène B1 b1u23"
+  },
+  {
+   "text": "Parfait. Tu commences à dix-huit heures et tu finis à minuit. Tu es payé à l'heure.",
+   "fr": "Parfait. Tu commences à dix-huit heures et tu finis à minuit. Tu es payé à l'heure.",
+   "where": "Scène B1 b1u23"
+  },
+  {
+   "text": "D'accord. Et les pourboires ?",
+   "fr": "D'accord. Et les pourboires ?",
+   "where": "Scène B1 b1u23"
+  },
+  {
+   "text": "On les partage entre tout le monde à la fin de la semaine. Ça aide bien !",
+   "fr": "On les partage entre tout le monde à la fin de la semaine. Ça aide bien !",
+   "where": "Scène B1 b1u23"
+  },
+  {
+   "text": "Super. Avec ça, je pourrai payer mes études.",
+   "fr": "Super. Avec ça, je pourrai payer mes études.",
+   "where": "Scène B1 b1u23"
   }
  ],
  "note": "Toutes les phrases du cours (générées depuis l’appli). La clé est calculée sur « langue|texte » : voir scripts/make-audio.mjs."

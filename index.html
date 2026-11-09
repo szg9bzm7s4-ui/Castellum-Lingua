@@ -15575,7 +15575,13 @@ ${dark.replace(/(^|\})\s*([^{}]+)\{/g,(m,a,sel)=>a+sel.split(',').map(s=>':root[
       if(t.dataset.vplayall){const L=[...document.querySelectorAll("#vlScene [data-say]")].map(b=>b.dataset.say);let i=0,tok=Date.now();window.__vlPlay=tok;
         const next=()=>{if(window.__vlPlay!==tok||i>=L.length||!document.getElementById("vlScene"))return;const txt=L[i++];
           document.querySelectorAll("#vlScene .vl-line").forEach((el,k)=>el.classList.toggle("now",k===i-1));
-          try{speak(txt,S.tgt)}catch(err){}setTimeout(next,1300+txt.length*75)};next();return}
+          try{speak(txt,S.tgt)}catch(err){}
+          /* on attend la fin réelle de la réplique (fichier, voix en ligne ou voix de l'appareil), puis une courte pause */
+          const t0=Date.now(),max=4000+txt.length*110,A=window.CastellumAudio;
+          const wait=()=>{if(window.__vlPlay!==tok)return;const el=Date.now()-t0;let busy=false;
+            try{busy=(A&&(A.state==="loading"||A.state==="playing"))||(window.speechSynthesis&&speechSynthesis.speaking)}catch(err){}
+            if(el>max||(el>500&&!busy))setTimeout(next,450);else setTimeout(wait,150)};
+          setTimeout(wait,200)};next();return}
       if(t.dataset.vmap){S.ui=S.ui||{};S.ui.classicPath=false;save();render();return}
       if(t.dataset.vclassic){S.ui=S.ui||{};S.ui.classicPath=true;save();render();toast("Parcours classique activé");return}}
     const n=e.target.closest&&e.target.closest("#sheetRoot [data-node],#sheetRoot [data-special],#sheetRoot [data-openlist]");
@@ -15618,6 +15624,7 @@ ${dark.replace(/(^|\})\s*([^{}]+)\{/g,(m,a,sel)=>a+sel.split(',').map(s=>':root[
 .vl-can li.ok .vl-ck{background:#F2A57E;border-color:#F2A57E;color:#14324A}
 .vl-classic{margin:0;text-align:center}.vl-link{background:none;border:0;color:var(--muted,#4E5F6B);text-decoration:underline;font:inherit;font-size:.9rem;cursor:pointer;min-height:44px}
 .vl-sheet .vl-h3{margin:14px 0 4px;font-size:1rem}
+.vl-sheet>.section-head{display:flex;flex-wrap:nowrap;align-items:flex-start;gap:10px}.vl-sheet>.section-head>div{flex:1 1 auto;min-width:0}.vl-sheet>.section-head>.icon-btn{flex:none}
 .vl-set{margin:6px 0 8px;font-size:.95rem;line-height:1.45;font-style:italic;color:var(--muted,#4E5F6B)}
 .vl-playall{min-height:44px;padding:0 16px;border-radius:12px;border:0;background:#14324A;color:#fff;font:inherit;font-weight:700;cursor:pointer}
 .vl-who{font-size:.75rem;font-weight:700;color:var(--muted,#4E5F6B)}.vl-line.me{background:#FBEDE6;margin-left:24px}.vl-line.now{outline:2px solid #C2410C}

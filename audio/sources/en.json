@@ -19416,6 +19416,1991 @@
    "text": "I'm happy for the team",
    "fr": "Je suis heureux pour le groupe",
    "where": "t68"
+  },
+  {
+   "text": "Good morning! How are you?",
+   "fr": "Bonjour ! Ça va ?",
+   "where": "Scène A1 u0"
+  },
+  {
+   "text": "Good morning! Very well, thank you. And you?",
+   "fr": "Bonjour, madame ! Ça va bien, merci. Et vous ?",
+   "where": "Scène A1 u0"
+  },
+  {
+   "text": "Very well. Have a nice day!",
+   "fr": "Très bien. Bonne journée !",
+   "where": "Scène A1 u0"
+  },
+  {
+   "text": "Thanks, you too. Goodbye!",
+   "fr": "Merci, vous aussi. Au revoir !",
+   "where": "Scène A1 u0"
+  },
+  {
+   "text": "Hi! I'm Lea. And you?",
+   "fr": "Salut ! Je m'appelle Léa. Et toi ?",
+   "where": "Scène A1 u1"
+  },
+  {
+   "text": "I'm Sam. Nice to meet you!",
+   "fr": "Moi, c'est Sam. Enchanté !",
+   "where": "Scène A1 u1"
+  },
+  {
+   "text": "I'm from France. And you?",
+   "fr": "Je viens de France. Et toi ?",
+   "where": "Scène A1 u1"
+  },
+  {
+   "text": "I'm Canadian. I'm twenty-five.",
+   "fr": "Moi, je suis canadienne. J'ai vingt-cinq ans.",
+   "where": "Scène A1 u1"
+  },
+  {
+   "text": "Hello! How much are the apples?",
+   "fr": "Bonjour ! Combien coûtent les pommes ?",
+   "where": "Scène A1 u2"
+  },
+  {
+   "text": "Two euros a kilo.",
+   "fr": "Deux euros le kilo.",
+   "where": "Scène A1 u2"
+  },
+  {
+   "text": "I'd like three kilos, please.",
+   "fr": "Je voudrais trois kilos, s'il vous plaît.",
+   "where": "Scène A1 u2"
+  },
+  {
+   "text": "Here you are. That's six euros.",
+   "fr": "Voilà. Ça fait six euros.",
+   "where": "Scène A1 u2"
+  },
+  {
+   "text": "Here's ten euros.",
+   "fr": "Voici dix euros.",
+   "where": "Scène A1 u2"
+  },
+  {
+   "text": "And four euros change. Thank you!",
+   "fr": "Et quatre euros de monnaie. Merci !",
+   "where": "Scène A1 u2"
+  },
+  {
+   "text": "Who's that in this photo?",
+   "fr": "C'est qui, sur cette photo ?",
+   "where": "Scène A1 u3"
+  },
+  {
+   "text": "That's my mum, and next to her, my dad.",
+   "fr": "C'est ma mère, et à côté, mon père.",
+   "where": "Scène A1 u3"
+  },
+  {
+   "text": "Do you have brothers and sisters?",
+   "fr": "Tu as des frères et sœurs ?",
+   "where": "Scène A1 u3"
+  },
+  {
+   "text": "Yes, I have a brother and a sister.",
+   "fr": "Oui, j'ai un frère et une sœur.",
+   "where": "Scène A1 u3"
+  },
+  {
+   "text": "And this little boy?",
+   "fr": "Et ce petit garçon ?",
+   "where": "Scène A1 u3"
+  },
+  {
+   "text": "That's my nephew, he's four.",
+   "fr": "C'est mon neveu, il a quatre ans.",
+   "where": "Scène A1 u3"
+  },
+  {
+   "text": "Hello! What can I get you?",
+   "fr": "Bonjour ! Qu'est-ce que je vous sers ?",
+   "where": "Scène A1 u4"
+  },
+  {
+   "text": "A coffee and a croissant, please.",
+   "fr": "Un café et un croissant, s'il vous plaît.",
+   "where": "Scène A1 u4"
+  },
+  {
+   "text": "Eat in or take away?",
+   "fr": "Sur place ou à emporter ?",
+   "where": "Scène A1 u4"
+  },
+  {
+   "text": "Eat in. And a glass of water too.",
+   "fr": "Sur place. Et un verre d'eau, aussi.",
+   "where": "Scène A1 u4"
+  },
+  {
+   "text": "Fine. That's three fifty.",
+   "fr": "Très bien. Ça fait trois euros cinquante.",
+   "where": "Scène A1 u4"
+  },
+  {
+   "text": "Excuse me, where's the station, please?",
+   "fr": "Excusez-moi, où est la gare, s'il vous plaît ?",
+   "where": "Scène A1 u5"
+  },
+  {
+   "text": "Go straight on, then left.",
+   "fr": "C'est tout droit, puis à gauche.",
+   "where": "Scène A1 u5"
+  },
+  {
+   "text": "No, five minutes' walk.",
+   "fr": "Non, à cinq minutes à pied.",
+   "where": "Scène A1 u5"
+  },
+  {
+   "text": "Thanks a lot!",
+   "fr": "Merci beaucoup !",
+   "where": "Scène A1 u5"
+  },
+  {
+   "text": "You're welcome!",
+   "fr": "De rien !",
+   "where": "Scène A1 u5"
+  },
+  {
+   "text": "It's a nice day today!",
+   "fr": "Il fait beau aujourd'hui !",
+   "where": "Scène A1 u6"
+  },
+  {
+   "text": "Yes, but there are clouds over there.",
+   "fr": "Oui, mais il y a des nuages là-bas.",
+   "where": "Scène A1 u6"
+  },
+  {
+   "text": "Do you think it'll rain?",
+   "fr": "Tu crois qu'il va pleuvoir ?",
+   "where": "Scène A1 u6"
+  },
+  {
+   "text": "Maybe this afternoon. I'll take an umbrella.",
+   "fr": "Peut-être cet après-midi. Je prends un parapluie.",
+   "where": "Scène A1 u6"
+  },
+  {
+   "text": "Good idea. It's twenty degrees, perfect.",
+   "fr": "Bonne idée. Il fait vingt degrés, c'est parfait.",
+   "where": "Scène A1 u6"
+  },
+  {
+   "text": "Can I help you?",
+   "fr": "Je peux vous aider ?",
+   "where": "Scène A1 u7"
+  },
+  {
+   "text": "Yes, I'm looking for a blue jumper.",
+   "fr": "Oui, je cherche un pull bleu.",
+   "where": "Scène A1 u7"
+  },
+  {
+   "text": "This one is nice, and it's warm.",
+   "fr": "Celui-ci est joli, et il est chaud.",
+   "where": "Scène A1 u7"
+  },
+  {
+   "text": "It's a bit big. Do you have it in black?",
+   "fr": "Il est un peu grand. Vous l'avez en noir ?",
+   "where": "Scène A1 u7"
+  },
+  {
+   "text": "Yes, in black and smaller. Here you are.",
+   "fr": "Oui, en noir et plus petit. Voilà.",
+   "where": "Scène A1 u7"
+  },
+  {
+   "text": "What time do you get up?",
+   "fr": "Tu te lèves à quelle heure ?",
+   "where": "Scène A1 u8"
+  },
+  {
+   "text": "At seven. I have a shower and a coffee.",
+   "fr": "À sept heures. Je prends une douche et je bois un café.",
+   "where": "Scène A1 u8"
+  },
+  {
+   "text": "And how do you get to the office?",
+   "fr": "Et tu viens au bureau comment ?",
+   "where": "Scène A1 u8"
+  },
+  {
+   "text": "By bike. In the evening I do the shopping and cook.",
+   "fr": "À vélo. Le soir, je fais les courses et je cuisine.",
+   "where": "Scène A1 u8"
+  },
+  {
+   "text": "And do you go to bed late?",
+   "fr": "Et tu te couches tard ?",
+   "where": "Scène A1 u8"
+  },
+  {
+   "text": "No, around eleven.",
+   "fr": "Non, vers onze heures.",
+   "where": "Scène A1 u8"
+  },
+  {
+   "text": "Come on! Shot… and goal!",
+   "fr": "Allez ! Tir… et but !",
+   "where": "Scène A1 u9"
+  },
+  {
+   "text": "What a goal! One–nil.",
+   "fr": "Quel but ! Ça fait un à zéro.",
+   "where": "Scène A1 u9"
+  },
+  {
+   "text": "I've always supported this team.",
+   "fr": "Je suis supporter de cette équipe depuis toujours.",
+   "where": "Scène A1 u9"
+  },
+  {
+   "text": "Watch out, the referee's given a penalty!",
+   "fr": "Attention, l'arbitre siffle un penalty !",
+   "where": "Scène A1 u9"
+  },
+  {
+   "text": "Come in! This is the living room.",
+   "fr": "Entre ! Voici le salon.",
+   "where": "Scène A1 u10"
+  },
+  {
+   "text": "It's very bright! And the kitchen?",
+   "fr": "C'est très lumineux ! Et la cuisine ?",
+   "where": "Scène A1 u10"
+  },
+  {
+   "text": "The kitchen's on the right, and my bedroom's at the end.",
+   "fr": "La cuisine est à droite, et ma chambre est au fond.",
+   "where": "Scène A1 u10"
+  },
+  {
+   "text": "Do you have a balcony?",
+   "fr": "Tu as un balcon ?",
+   "where": "Scène A1 u10"
+  },
+  {
+   "text": "Yes, a small one. Do you want a tea outside?",
+   "fr": "Oui, un petit balcon. Tu veux un thé dehors ?",
+   "where": "Scène A1 u10"
+  },
+  {
+   "text": "Do you like horror films?",
+   "fr": "Tu aimes les films d'horreur ?",
+   "where": "Scène A1 u11"
+  },
+  {
+   "text": "No, I don't like them at all. They scare me!",
+   "fr": "Non, je n'aime pas ça du tout. J'ai peur !",
+   "where": "Scène A1 u11"
+  },
+  {
+   "text": "A comedy then?",
+   "fr": "Alors une comédie ?",
+   "where": "Scène A1 u11"
+  },
+  {
+   "text": "Yes, I love comedies. What about you?",
+   "fr": "Oui, j'adore les comédies. Et toi ?",
+   "where": "Scène A1 u11"
+  },
+  {
+   "text": "Me too. And I prefer it with popcorn!",
+   "fr": "Moi aussi. Et je préfère avec des pop-corn !",
+   "where": "Scène A1 u11"
+  },
+  {
+   "text": "Hello, do you have any milk?",
+   "fr": "Bonjour, vous avez du lait ?",
+   "where": "Scène A1 u12"
+  },
+  {
+   "text": "Yes, at the back of the shop, in the fridge.",
+   "fr": "Oui, au fond du magasin, dans le frigo.",
+   "where": "Scène A1 u12"
+  },
+  {
+   "text": "Thanks. And a baguette, please.",
+   "fr": "Merci. Et une baguette, s'il vous plaît.",
+   "where": "Scène A1 u12"
+  },
+  {
+   "text": "Here you are. Paying by card?",
+   "fr": "Voilà. Vous payez par carte ?",
+   "where": "Scène A1 u12"
+  },
+  {
+   "text": "No, cash. Here you are.",
+   "fr": "Non, en espèces. Voilà.",
+   "where": "Scène A1 u12"
+  },
+  {
+   "text": "Well, last night was great!",
+   "fr": "Bon ben, hier soir, c'était super !",
+   "where": "Scène A1 u13"
+  },
+  {
+   "text": "Really? Tell me!",
+   "fr": "Ah bon ? Raconte !",
+   "where": "Scène A1 u13"
+  },
+  {
+   "text": "Meh, the restaurant was so-so, but the concert was amazing!",
+   "fr": "Bof, le resto était moyen, mais le concert, génial !",
+   "where": "Scène A1 u13"
+  },
+  {
+   "text": "Brilliant! And then?",
+   "fr": "Trop bien ! Et après ?",
+   "where": "Scène A1 u13"
+  },
+  {
+   "text": "Then bed. I'm knackered!",
+   "fr": "Après, dodo. Je suis crevé !",
+   "where": "Scène A1 u13"
+  },
+  {
+   "text": "Lovely tomatoes! Have a taste!",
+   "fr": "Elles sont belles, mes tomates ! Goûtez !",
+   "where": "Scène A1 u14"
+  },
+  {
+   "text": "Mmm, delicious. I'll take a kilo.",
+   "fr": "Mmm, délicieuses. J'en prends un kilo.",
+   "where": "Scène A1 u14"
+  },
+  {
+   "text": "Anything else?",
+   "fr": "Et avec ça ?",
+   "where": "Scène A1 u14"
+  },
+  {
+   "text": "A lettuce and some oranges.",
+   "fr": "Une salade et des oranges.",
+   "where": "Scène A1 u14"
+  },
+  {
+   "text": "Go on, special price: five euros for the lot.",
+   "fr": "Allez, je vous fais un prix : cinq euros le tout.",
+   "where": "Scène A1 u14"
+  },
+  {
+   "text": "Is your dog friendly?",
+   "fr": "Il est gentil, ton chien ?",
+   "where": "Scène A1 u15"
+  },
+  {
+   "text": "Yes, very. You can stroke him.",
+   "fr": "Oui, très gentil. Tu peux le caresser.",
+   "where": "Scène A1 u15"
+  },
+  {
+   "text": "What's his name?",
+   "fr": "Comment il s'appelle ?",
+   "where": "Scène A1 u15"
+  },
+  {
+   "text": "His name's Max. He's three.",
+   "fr": "Il s'appelle Max. Il a trois ans.",
+   "where": "Scène A1 u15"
+  },
+  {
+   "text": "I've got a cat, but he scratches!",
+   "fr": "Moi, j'ai un chat, mais il griffe !",
+   "where": "Scène A1 u15"
+  },
+  {
+   "text": "Hello. What's the matter?",
+   "fr": "Bonjour. Qu'est-ce qui ne va pas ?",
+   "where": "Scène A1 u16"
+  },
+  {
+   "text": "I've got a headache and a sore throat.",
+   "fr": "J'ai mal à la tête et à la gorge.",
+   "where": "Scène A1 u16"
+  },
+  {
+   "text": "Do you have a temperature?",
+   "fr": "Vous avez de la fièvre ?",
+   "where": "Scène A1 u16"
+  },
+  {
+   "text": "A bit, thirty-eight.",
+   "fr": "Un peu, trente-huit.",
+   "where": "Scène A1 u16"
+  },
+  {
+   "text": "It's a cold. Get some rest and drink lots of water.",
+   "fr": "C'est un rhume. Reposez-vous et buvez beaucoup d'eau.",
+   "where": "Scène A1 u16"
+  },
+  {
+   "text": "Good morning, everyone! Open your books at page ten.",
+   "fr": "Bonjour à tous ! Ouvrez vos livres page dix.",
+   "where": "Scène A1 u17"
+  },
+  {
+   "text": "Sorry, I don't have a book.",
+   "fr": "Pardon, je n'ai pas de livre.",
+   "where": "Scène A1 u17"
+  },
+  {
+   "text": "No problem, share with the person next to you.",
+   "fr": "Pas de problème, regarde avec ta voisine.",
+   "where": "Scène A1 u17"
+  },
+  {
+   "text": "How do you say « pen » in this language?",
+   "fr": "Comment on dit « pen » dans cette langue ?",
+   "where": "Scène A1 u17"
+  },
+  {
+   "text": "Good question! Write it on the board.",
+   "fr": "Bonne question ! Écris-le au tableau.",
+   "where": "Scène A1 u17"
+  },
+  {
+   "text": "Excuse me, have you got the time?",
+   "fr": "Pardon, vous avez l'heure ?",
+   "where": "Scène A1 u18"
+  },
+  {
+   "text": "Yes, it's quarter to nine.",
+   "fr": "Oui, il est neuf heures moins le quart.",
+   "where": "Scène A1 u18"
+  },
+  {
+   "text": "Oh no, I'm late! What time does the bus come?",
+   "fr": "Oh là là, je suis en retard ! Le bus passe à quelle heure ?",
+   "where": "Scène A1 u18"
+  },
+  {
+   "text": "Every ten minutes, I think.",
+   "fr": "Toutes les dix minutes, je crois.",
+   "where": "Scène A1 u18"
+  },
+  {
+   "text": "Ah, here it is! Thanks, have a nice day!",
+   "fr": "Ah, le voilà ! Merci et bonne journée !",
+   "where": "Scène A1 u18"
+  },
+  {
+   "text": "A nice cold orange juice, please.",
+   "fr": "Un jus d'orange bien frais, s'il te plaît.",
+   "where": "Scène A1 u19"
+  },
+  {
+   "text": "With ice?",
+   "fr": "Avec des glaçons ?",
+   "where": "Scène A1 u19"
+  },
+  {
+   "text": "Yes, thanks. And a bottle of water for my friend.",
+   "fr": "Oui, merci. Et une bouteille d'eau pour mon amie.",
+   "where": "Scène A1 u19"
+  },
+  {
+   "text": "Still or sparkling?",
+   "fr": "Plate ou gazeuse ?",
+   "where": "Scène A1 u19"
+  },
+  {
+   "text": "Come on, there's bread, butter and jam!",
+   "fr": "Viens, il y a du pain, du beurre et de la confiture !",
+   "where": "Scène A1 u20"
+  },
+  {
+   "text": "Great! Are there eggs as well?",
+   "fr": "Super ! Il y a aussi des œufs ?",
+   "where": "Scène A1 u20"
+  },
+  {
+   "text": "Yes, and fruit. Do you want tea or coffee?",
+   "fr": "Oui, et des fruits. Tu veux un thé ou un café ?",
+   "where": "Scène A1 u20"
+  },
+  {
+   "text": "Tea, with a little sugar.",
+   "fr": "Un thé, avec un peu de sucre.",
+   "where": "Scène A1 u20"
+  },
+  {
+   "text": "Eat up, it's a long day!",
+   "fr": "Mange bien, la journée est longue !",
+   "where": "Scène A1 u20"
+  },
+  {
+   "text": "Which languages do you speak?",
+   "fr": "Tu parles quelles langues ?",
+   "where": "Scène A1 u21"
+  },
+  {
+   "text": "I speak French, a bit of English, and I'm learning this language.",
+   "fr": "Je parle français, un peu d'anglais, et j'apprends cette langue.",
+   "where": "Scène A1 u21"
+  },
+  {
+   "text": "Well done! You speak really well!",
+   "fr": "Bravo ! Tu parles très bien !",
+   "where": "Scène A1 u21"
+  },
+  {
+   "text": "Thanks, that's kind! And which country are you from?",
+   "fr": "Merci, c'est gentil ! Et toi, tu viens de quel pays ?",
+   "where": "Scène A1 u21"
+  },
+  {
+   "text": "From Japan. I speak Japanese and German.",
+   "fr": "Du Japon. Je parle japonais et allemand.",
+   "where": "Scène A1 u21"
+  },
+  {
+   "text": "Hello, does this bus go to the town centre?",
+   "fr": "Bonjour, ce bus va au centre-ville ?",
+   "where": "Scène A1 u22"
+  },
+  {
+   "text": "Yes, it's the last stop.",
+   "fr": "Oui, c'est le terminus.",
+   "where": "Scène A1 u22"
+  },
+  {
+   "text": "One ticket, please. How much is it?",
+   "fr": "Un ticket, s'il vous plaît. C'est combien ?",
+   "where": "Scène A1 u22"
+  },
+  {
+   "text": "Two euros. You get off in four stops.",
+   "fr": "Deux euros. Vous descendez dans quatre arrêts.",
+   "where": "Scène A1 u22"
+  },
+  {
+   "text": "Thanks! Can you tell me when?",
+   "fr": "Merci ! Vous pouvez me prévenir ?",
+   "where": "Scène A1 u22"
+  },
+  {
+   "text": "On Saturdays I play tennis. On Sundays I read.",
+   "fr": "Le samedi, je joue au tennis. Le dimanche, je lis.",
+   "where": "Scène A1 u23"
+  },
+  {
+   "text": "Do you like music too?",
+   "fr": "Tu aimes la musique aussi ?",
+   "where": "Scène A1 u23"
+  },
+  {
+   "text": "Yes, I play the guitar. And you?",
+   "fr": "Oui, je joue de la guitare. Et toi ?",
+   "where": "Scène A1 u23"
+  },
+  {
+   "text": "I dance. Shall we go out together on Saturday?",
+   "fr": "Moi, je fais de la danse. On sort ensemble samedi ?",
+   "where": "Scène A1 u23"
+  },
+  {
+   "text": "Hello, I'm the new accountant.",
+   "fr": "Bonjour, je suis la nouvelle comptable.",
+   "where": "Scène A1 u24"
+  },
+  {
+   "text": "Welcome! I'm a graphic designer.",
+   "fr": "Bienvenue ! Moi, je suis graphiste.",
+   "where": "Scène A1 u24"
+  },
+  {
+   "text": "Have you worked here long?",
+   "fr": "Tu travailles ici depuis longtemps ?",
+   "where": "Scène A1 u24"
+  },
+  {
+   "text": "For two years. I work nine to five.",
+   "fr": "Depuis deux ans. Je travaille de neuf heures à cinq heures.",
+   "where": "Scène A1 u24"
+  },
+  {
+   "text": "Great. Shall we have lunch together at noon?",
+   "fr": "Super. On déjeune ensemble à midi ?",
+   "where": "Scène A1 u24"
+  },
+  {
+   "text": "Shall we sit on the grass, under the tree?",
+   "fr": "On s'assoit sur l'herbe, sous l'arbre ?",
+   "where": "Scène A1 u25"
+  },
+  {
+   "text": "Yes, there's shade. Look at the ducks on the lake!",
+   "fr": "Oui, il y a de l'ombre. Regarde les canards sur le lac !",
+   "where": "Scène A1 u25"
+  },
+  {
+   "text": "Shall we go for a walk afterwards?",
+   "fr": "On fait une promenade après ?",
+   "where": "Scène A1 u25"
+  },
+  {
+   "text": "Good idea. And then an ice cream!",
+   "fr": "Bonne idée. Et après, une glace !",
+   "where": "Scène A1 u25"
+  },
+  {
+   "text": "OK, my treat!",
+   "fr": "D'accord, c'est moi qui invite !",
+   "where": "Scène A1 u25"
+  },
+  {
+   "text": "Hi! Did you have a good weekend?",
+   "fr": "Salut ! Tu as passé un bon week-end ?",
+   "where": "Scène A2 a2u0"
+  },
+  {
+   "text": "Yes! On Saturday I got up late and did the shopping.",
+   "fr": "Oui ! Samedi, je me suis levé tard et j'ai fait les courses.",
+   "where": "Scène A2 a2u0"
+  },
+  {
+   "text": "And on Sunday?",
+   "fr": "Et dimanche ?",
+   "where": "Scène A2 a2u0"
+  },
+  {
+   "text": "We went to the cinema with some friends. And you?",
+   "fr": "Nous sommes allés au cinéma avec des amis. Et toi ?",
+   "where": "Scène A2 a2u0"
+  },
+  {
+   "text": "I worked all day…",
+   "fr": "Moi, j'ai travaillé toute la journée…",
+   "where": "Scène A2 a2u0"
+  },
+  {
+   "text": "Hello! Do you have a loyalty card?",
+   "fr": "Bonjour ! Vous avez la carte du magasin ?",
+   "where": "Scène A2 a2u1"
+  },
+  {
+   "text": "No, I don't. I'd also like a bag, please.",
+   "fr": "Non, je ne l'ai pas. Je voudrais aussi un sac, s'il vous plaît.",
+   "where": "Scène A2 a2u1"
+  },
+  {
+   "text": "Sure. That's twenty-three euros fifty.",
+   "fr": "Bien sûr. Ça fait vingt-trois euros cinquante.",
+   "where": "Scène A2 a2u1"
+  },
+  {
+   "text": "Yes. Here's your receipt. Have a nice day!",
+   "fr": "Oui. Voici votre ticket de caisse. Bonne journée !",
+   "where": "Scène A2 a2u1"
+  },
+  {
+   "text": "Hello. What seems to be the problem?",
+   "fr": "Bonjour. Qu'est-ce qui ne va pas ?",
+   "where": "Scène A2 a2u2"
+  },
+  {
+   "text": "I have a fever and I cough a lot.",
+   "fr": "J'ai de la fièvre et je tousse beaucoup.",
+   "where": "Scène A2 a2u2"
+  },
+  {
+   "text": "For two days. I've got a headache too.",
+   "fr": "Depuis deux jours. J'ai aussi mal à la tête.",
+   "where": "Scène A2 a2u2"
+  },
+  {
+   "text": "It's nothing serious. Here's the prescription: one tablet three times a day.",
+   "fr": "Ce n'est pas grave. Voici l'ordonnance : un comprimé trois fois par jour.",
+   "where": "Scène A2 a2u2"
+  },
+  {
+   "text": "Hello, Castellum school, good morning!",
+   "fr": "Allô, école Castellum, bonjour !",
+   "where": "Scène A2 a2u3"
+  },
+  {
+   "text": "Good morning, I'd like to speak to Mrs Rossi, please.",
+   "fr": "Bonjour, je voudrais parler à Madame Rossi, s'il vous plaît.",
+   "where": "Scène A2 a2u3"
+  },
+  {
+   "text": "Who's calling, please?",
+   "fr": "C'est de la part de qui ?",
+   "where": "Scène A2 a2u3"
+  },
+  {
+   "text": "It's Sam. It's about the evening class.",
+   "fr": "C'est Sam. C'est pour le cours du soir.",
+   "where": "Scène A2 a2u3"
+  },
+  {
+   "text": "Hold the line, I'll put you through.",
+   "fr": "Ne quittez pas, je vous la passe.",
+   "where": "Scène A2 a2u3"
+  },
+  {
+   "text": "What are you doing this weekend?",
+   "fr": "Qu'est-ce que tu vas faire ce week-end ?",
+   "where": "Scène A2 a2u4"
+  },
+  {
+   "text": "Tomorrow I'm going away: I'm off to the seaside with my sister.",
+   "fr": "Demain, je vais voyager : je pars à la mer avec ma sœur.",
+   "where": "Scène A2 a2u4"
+  },
+  {
+   "text": "Great! When are you coming back?",
+   "fr": "Super ! Vous rentrez quand ?",
+   "where": "Scène A2 a2u4"
+  },
+  {
+   "text": "Sunday evening. And next year I'm going to learn to surf!",
+   "fr": "Dimanche soir. Et l'année prochaine, je vais apprendre à faire du surf !",
+   "where": "Scène A2 a2u4"
+  },
+  {
+   "text": "Have a good weekend, then!",
+   "fr": "Bon week-end, alors !",
+   "where": "Scène A2 a2u4"
+  },
+  {
+   "text": "Here's the flat. It's on the third floor.",
+   "fr": "Voici l'appartement. Il est au troisième étage.",
+   "where": "Scène A2 a2u5"
+  },
+  {
+   "text": "Is there a lift?",
+   "fr": "Il y a un ascenseur ?",
+   "where": "Scène A2 a2u5"
+  },
+  {
+   "text": "Yes. And there are two bedrooms and a balcony.",
+   "fr": "Oui. Et il y a deux chambres et un balcon.",
+   "where": "Scène A2 a2u5"
+  },
+  {
+   "text": "How much is the rent?",
+   "fr": "Le loyer est de combien ?",
+   "where": "Scène A2 a2u5"
+  },
+  {
+   "text": "Eight hundred euros a month, bills included.",
+   "fr": "Huit cents euros par mois, charges comprises.",
+   "where": "Scène A2 a2u5"
+  },
+  {
+   "text": "I'll take it!",
+   "fr": "Je le prends !",
+   "where": "Scène A2 a2u5"
+  },
+  {
+   "text": "Are you free on Saturday night? There's a gig in the square.",
+   "fr": "Tu es libre samedi soir ? Il y a un concert sur la place.",
+   "where": "Scène A2 a2u6"
+  },
+  {
+   "text": "I'd love to! Where shall we meet?",
+   "fr": "Avec plaisir ! On se retrouve où ?",
+   "where": "Scène A2 a2u6"
+  },
+  {
+   "text": "Outside the café, at nine.",
+   "fr": "Devant le café, à neuf heures.",
+   "where": "Scène A2 a2u6"
+  },
+  {
+   "text": "Perfect. Can I bring my brother?",
+   "fr": "Parfait. Je peux venir avec mon frère ?",
+   "where": "Scène A2 a2u6"
+  },
+  {
+   "text": "Of course! See you on Saturday!",
+   "fr": "Bien sûr ! À samedi !",
+   "where": "Scène A2 a2u6"
+  },
+  {
+   "text": "Welcome! Do you do much sport?",
+   "fr": "Bienvenue ! Tu fais souvent du sport ?",
+   "where": "Scène A2 a2u7"
+  },
+  {
+   "text": "I go for a run on Sundays, that's all.",
+   "fr": "Je fais un footing le dimanche, c'est tout.",
+   "where": "Scène A2 a2u7"
+  },
+  {
+   "text": "OK. We'll start with the warm-up: ten minutes on the bike.",
+   "fr": "D'accord. On commence par l'échauffement : dix minutes de vélo.",
+   "where": "Scène A2 a2u7"
+  },
+  {
+   "text": "And then?",
+   "fr": "Et après ?",
+   "where": "Scène A2 a2u7"
+  },
+  {
+   "text": "Then some leg exercises. Tomorrow your muscles will ache!",
+   "fr": "Après, des exercices pour les jambes. Demain, tu vas avoir des courbatures !",
+   "where": "Scène A2 a2u7"
+  },
+  {
+   "text": "Did you see my story? I posted a video last night.",
+   "fr": "Tu as vu ma story ? J'ai posté une vidéo hier soir.",
+   "where": "Scène A2 a2u8"
+  },
+  {
+   "text": "Yes, I liked it! How many followers have you got now?",
+   "fr": "Oui, je l'ai likée ! Tu as combien d'abonnés maintenant ?",
+   "where": "Scène A2 a2u8"
+  },
+  {
+   "text": "Two hundred. My girlfriend already has ten thousand!",
+   "fr": "Deux cents. Ma copine, elle a déjà dix mille abonnés !",
+   "where": "Scène A2 a2u8"
+  },
+  {
+   "text": "You spend too much time on your phone.",
+   "fr": "Tu passes trop de temps sur ton téléphone, toi.",
+   "where": "Scène A2 a2u8"
+  },
+  {
+   "text": "Maybe… But subscribe to my channel anyway!",
+   "fr": "Peut-être… Mais abonne-toi à ma chaîne quand même !",
+   "where": "Scène A2 a2u8"
+  },
+  {
+   "text": "Take an umbrella, it's going to rain this afternoon.",
+   "fr": "Prends un parapluie, il va pleuvoir cet après-midi.",
+   "where": "Scène A2 a2u9"
+  },
+  {
+   "text": "But it's lovely out! It's sunny.",
+   "fr": "Mais il fait beau ! Il y a du soleil.",
+   "where": "Scène A2 a2u9"
+  },
+  {
+   "text": "For now. The forecast says there'll be a shower around four.",
+   "fr": "Pour l'instant. La météo annonce une averse vers quatre heures.",
+   "where": "Scène A2 a2u9"
+  },
+  {
+   "text": "And tomorrow?",
+   "fr": "Et demain ?",
+   "where": "Scène A2 a2u9"
+  },
+  {
+   "text": "Tomorrow will be colder than today. Take your scarf too!",
+   "fr": "Demain, il va faire plus froid qu'aujourd'hui. Prends aussi ton écharpe !",
+   "where": "Scène A2 a2u9"
+  },
+  {
+   "text": "Chop the onions into small pieces.",
+   "fr": "Coupe les oignons en petits morceaux.",
+   "where": "Scène A2 a2u10"
+  },
+  {
+   "text": "Done. What now?",
+   "fr": "C'est fait. Et maintenant ?",
+   "where": "Scène A2 a2u10"
+  },
+  {
+   "text": "Heat the oil in a pan, then add the tomatoes.",
+   "fr": "Fais chauffer l'huile dans une poêle, puis ajoute les tomates.",
+   "where": "Scène A2 a2u10"
+  },
+  {
+   "text": "How long does it cook for?",
+   "fr": "Ça cuit combien de temps ?",
+   "where": "Scène A2 a2u10"
+  },
+  {
+   "text": "Twenty minutes on a low heat. Taste it: is there enough salt?",
+   "fr": "Vingt minutes à feu doux. Goûte : elle est assez salée ?",
+   "where": "Scène A2 a2u10"
+  },
+  {
+   "text": "Mmm, it's perfect!",
+   "fr": "Mmm, c'est parfait !",
+   "where": "Scène A2 a2u10"
+  },
+  {
+   "text": "I'm in a mess, my battery's dead!",
+   "fr": "Je suis en galère, j'ai plus de batterie !",
+   "where": "Scène A2 a2u11"
+  },
+  {
+   "text": "Don't worry, take my charger.",
+   "fr": "T'inquiète, prends mon chargeur.",
+   "where": "Scène A2 a2u11"
+  },
+  {
+   "text": "Thanks! By the way, that film last night was amazing!",
+   "fr": "Merci ! Au fait, le film hier soir, il était grave bien !",
+   "where": "Scène A2 a2u11"
+  },
+  {
+   "text": "Totally! And your trainers are so cool.",
+   "fr": "Trop ! Et tes baskets, elles sont trop stylées.",
+   "where": "Scène A2 a2u11"
+  },
+  {
+   "text": "Come on, let's go, we've only got ten minutes!",
+   "fr": "Allez, on y va, c'est chaud, on n'a que dix minutes !",
+   "where": "Scène A2 a2u11"
+  },
+  {
+   "text": "Good evening! Can I help you?",
+   "fr": "Bonsoir ! Je peux vous aider ?",
+   "where": "Scène A2 a2u12"
+  },
+  {
+   "text": "Good evening. I've booked a room under the name Martin, for three nights.",
+   "fr": "Bonsoir. J'ai réservé une chambre au nom de Martin, pour trois nuits.",
+   "where": "Scène A2 a2u12"
+  },
+  {
+   "text": "Perfect. A double room, breakfast included. Here's your key card.",
+   "fr": "Parfait. Une chambre double, petit-déjeuner compris. Voici votre carte.",
+   "where": "Scène A2 a2u12"
+  },
+  {
+   "text": "From seven to ten. Check-out is before noon.",
+   "fr": "De sept heures à dix heures. Il faut libérer la chambre avant midi.",
+   "where": "Scène A2 a2u12"
+  },
+  {
+   "text": "Good evening! A table for four, please.",
+   "fr": "Bonsoir ! Une table pour quatre, s'il vous plaît.",
+   "where": "Scène A2 a2u13"
+  },
+  {
+   "text": "Of course, follow me… Are you ready to order?",
+   "fr": "Bien sûr, suivez-moi… Vous avez choisi ?",
+   "where": "Scène A2 a2u13"
+  },
+  {
+   "text": "To start, I'll have the soup. And for the main, the chicken with chips.",
+   "fr": "En entrée, je vais prendre la soupe. Et comme plat, le poulet avec des frites.",
+   "where": "Scène A2 a2u13"
+  },
+  {
+   "text": "Very good. And to drink?",
+   "fr": "Très bien. Et pour boire ?",
+   "where": "Scène A2 a2u13"
+  },
+  {
+   "text": "A jug of water. Oh, and I'm allergic to nuts.",
+   "fr": "Une carafe d'eau. Ah, et je suis allergique aux noix.",
+   "where": "Scène A2 a2u13"
+  },
+  {
+   "text": "Noted, I'll let the chef know.",
+   "fr": "C'est noté, je préviens le chef.",
+   "where": "Scène A2 a2u13"
+  },
+  {
+   "text": "Excuse me, which line goes to the station?",
+   "fr": "Excusez-moi, quelle ligne va à la gare ?",
+   "where": "Scène A2 a2u14"
+  },
+  {
+   "text": "Line two. But you have to change at the next station.",
+   "fr": "La ligne deux. Mais il faut changer à la prochaine station.",
+   "where": "Scène A2 a2u14"
+  },
+  {
+   "text": "OK. How much is a ticket?",
+   "fr": "D'accord. Un ticket, c'est combien ?",
+   "where": "Scène A2 a2u14"
+  },
+  {
+   "text": "One euro fifty. If you're staying a month, get a monthly pass.",
+   "fr": "Un euro cinquante. Si vous restez un mois, prenez un abonnement.",
+   "where": "Scène A2 a2u14"
+  },
+  {
+   "text": "Thanks! It's so crowded…",
+   "fr": "Merci ! Il y a beaucoup de monde…",
+   "where": "Scène A2 a2u14"
+  },
+  {
+   "text": "It's rush hour. The underground is packed at this time!",
+   "fr": "C'est l'heure de pointe. Le métro est bondé à cette heure-ci !",
+   "where": "Scène A2 a2u14"
+  },
+  {
+   "text": "Happy birthday! Here, this is for you.",
+   "fr": "Bon anniversaire ! Tiens, c'est pour toi.",
+   "where": "Scène A2 a2u15"
+  },
+  {
+   "text": "Oh, thank you! You shouldn't have!",
+   "fr": "Oh, merci ! Il ne fallait pas !",
+   "where": "Scène A2 a2u15"
+  },
+  {
+   "text": "Open it! I wrapped it myself.",
+   "fr": "Ouvre-le ! J'ai emballé le cadeau moi-même.",
+   "where": "Scène A2 a2u15"
+  },
+  {
+   "text": "A cookbook! I love it, thank you!",
+   "fr": "Un livre de cuisine ! Il est super, merci !",
+   "where": "Scène A2 a2u15"
+  },
+  {
+   "text": "Go on, blow out your candles!",
+   "fr": "Allez, souffle tes bougies !",
+   "where": "Scène A2 a2u15"
+  },
+  {
+   "text": "So, is the water nice?",
+   "fr": "Alors, l'eau est bonne ?",
+   "where": "Scène A2 a2u16"
+  },
+  {
+   "text": "It's freezing! But the waves are great.",
+   "fr": "Elle est gelée ! Mais il y a de belles vagues.",
+   "where": "Scène A2 a2u16"
+  },
+  {
+   "text": "Careful, the flag's red now.",
+   "fr": "Attention, le drapeau est rouge maintenant.",
+   "where": "Scène A2 a2u16"
+  },
+  {
+   "text": "Oh yes… The lifeguard's blowing his whistle. I'll stay on the sand, then.",
+   "fr": "Ah oui… Le maître-nageur siffle. Je reste sur le sable, alors.",
+   "where": "Scène A2 a2u16"
+  },
+  {
+   "text": "Put some sun cream on, you'll burn! I'll go and get some ice creams.",
+   "fr": "Mets de la crème, tu vas brûler ! Je vais chercher des glaces.",
+   "where": "Scène A2 a2u16"
+  },
+  {
+   "text": "Hello! Do you take walk-ins?",
+   "fr": "Bonjour ! Vous prenez sans rendez-vous ?",
+   "where": "Scène A2 a2u17"
+  },
+  {
+   "text": "Yes, have a seat. What would you like?",
+   "fr": "Oui, asseyez-vous. Qu'est-ce que je vous fais ?",
+   "where": "Scène A2 a2u17"
+  },
+  {
+   "text": "A cut, but not too short at the sides.",
+   "fr": "Une coupe, mais pas trop court sur les côtés.",
+   "where": "Scène A2 a2u17"
+  },
+  {
+   "text": "OK… There you go! Do you like it?",
+   "fr": "D'accord… Et voilà ! Ça vous plaît ?",
+   "where": "Scène A2 a2u17"
+  },
+  {
+   "text": "It's perfect, thanks! How much is that?",
+   "fr": "C'est parfait, merci ! Ça fait combien ?",
+   "where": "Scène A2 a2u17"
+  },
+  {
+   "text": "It's your turn to do the washing-up!",
+   "fr": "C'est ton tour de faire la vaisselle !",
+   "where": "Scène A2 a2u18"
+  },
+  {
+   "text": "Fine, but you do the hoovering.",
+   "fr": "D'accord, mais toi, tu passes l'aspirateur.",
+   "where": "Scène A2 a2u18"
+  },
+  {
+   "text": "Deal. And who left their socks lying around in the living room?",
+   "fr": "Ça marche. Et qui a laissé traîner ses chaussettes dans le salon ?",
+   "where": "Scène A2 a2u18"
+  },
+  {
+   "text": "Er… that was me. I'll put them away!",
+   "fr": "Euh… c'est moi. Je les range !",
+   "where": "Scène A2 a2u18"
+  },
+  {
+   "text": "And the fridge is empty: afterwards we'll go shopping together.",
+   "fr": "Et le frigo est vide : après, on fait les courses ensemble.",
+   "where": "Scène A2 a2u18"
+  },
+  {
+   "text": "Hello! Can I help you?",
+   "fr": "Bonjour ! Je peux vous aider ?",
+   "where": "Scène A2 a2u19"
+  },
+  {
+   "text": "Yes, where are the fitting rooms, please?",
+   "fr": "Oui, où sont les cabines, s'il vous plaît ?",
+   "where": "Scène A2 a2u19"
+  },
+  {
+   "text": "At the back on the right… So, does it fit?",
+   "fr": "Au fond, à droite… Alors, elle vous va ?",
+   "where": "Scène A2 a2u19"
+  },
+  {
+   "text": "It's too tight. Have you got it in a bigger size?",
+   "fr": "C'est trop serré. Vous l'avez en plus grand ?",
+   "where": "Scène A2 a2u19"
+  },
+  {
+   "text": "Yes, here you go. And there's twenty percent off today.",
+   "fr": "Oui, voilà. Et aujourd'hui, il y a une réduction de vingt pour cent.",
+   "where": "Scène A2 a2u19"
+  },
+  {
+   "text": "Great, I'll take it! That's a bargain.",
+   "fr": "Super, je la prends ! C'est une bonne affaire.",
+   "where": "Scène A2 a2u19"
+  },
+  {
+   "text": "Hello! Two tickets, please.",
+   "fr": "Bonjour ! Deux entrées, s'il vous plaît.",
+   "where": "Scène A2 a2u20"
+  },
+  {
+   "text": "Are you students? There's a reduced rate.",
+   "fr": "Vous êtes étudiants ? Il y a un tarif réduit.",
+   "where": "Scène A2 a2u20"
+  },
+  {
+   "text": "No. Is there a guided tour this morning?",
+   "fr": "Non. Il y a une visite guidée ce matin ?",
+   "where": "Scène A2 a2u20"
+  },
+  {
+   "text": "Yes, at eleven. Otherwise there's the audio guide.",
+   "fr": "Oui, à onze heures. Sinon, il y a l'audioguide.",
+   "where": "Scène A2 a2u20"
+  },
+  {
+   "text": "Yes, but no flash. The museum closes at six. Enjoy your visit!",
+   "fr": "Oui, mais sans flash. Le musée ferme à six heures. Bonne visite !",
+   "where": "Scène A2 a2u20"
+  },
+  {
+   "text": "Come in, make yourself at home!",
+   "fr": "Entre, fais comme chez toi !",
+   "where": "Scène A2 a2u21"
+  },
+  {
+   "text": "Thanks! I've brought you a little something.",
+   "fr": "Merci ! Je t'ai apporté un petit quelque chose.",
+   "where": "Scène A2 a2u21"
+  },
+  {
+   "text": "Flowers! They're beautiful. Sit down, dinner's ready.",
+   "fr": "Des fleurs ! Elles sont magnifiques. Assieds-toi, le dîner est prêt.",
+   "where": "Scène A2 a2u21"
+  },
+  {
+   "text": "That was delicious, thanks for everything!",
+   "fr": "C'était délicieux, merci pour tout !",
+   "where": "Scène A2 a2u21"
+  },
+  {
+   "text": "My pleasure! Come back whenever you like.",
+   "fr": "Avec plaisir ! Reviens quand tu veux.",
+   "where": "Scène A2 a2u21"
+  },
+  {
+   "text": "It's late already, I'd better go. Good night!",
+   "fr": "Il est déjà tard, je vais y aller. Bonne nuit !",
+   "where": "Scène A2 a2u21"
+  },
+  {
+   "text": "Good evening! Are you pitching your tent here?",
+   "fr": "Bonsoir ! Vous plantez la tente ici ?",
+   "where": "Scène A2 a2u22"
+  },
+  {
+   "text": "Yes. Are there showers at the campsite?",
+   "fr": "Oui. Il y a des douches au camping ?",
+   "where": "Scène A2 a2u22"
+  },
+  {
+   "text": "Yes, over there, next to reception. Be careful, it gets cold at night.",
+   "fr": "Oui, là-bas, à côté de l'accueil. Attention, il fait froid la nuit.",
+   "where": "Scène A2 a2u22"
+  },
+  {
+   "text": "We've got sleeping bags. Can we have a campfire?",
+   "fr": "On a des sacs de couchage. On peut faire un feu de camp ?",
+   "where": "Scène A2 a2u22"
+  },
+  {
+   "text": "No, it's not allowed in summer. But look at all those stars!",
+   "fr": "Non, c'est interdit en été. Mais regardez toutes ces étoiles !",
+   "where": "Scène A2 a2u22"
+  },
+  {
+   "text": "I'm late, sorry! My alarm didn't go off.",
+   "fr": "Je suis en retard, désolé ! Le réveil n'a pas sonné.",
+   "where": "Scène A2 a2u23"
+  },
+  {
+   "text": "Never mind. But… there's coffee on your jumper!",
+   "fr": "Ce n'est pas grave. Mais… il y a du café sur ton pull !",
+   "where": "Scène A2 a2u23"
+  },
+  {
+   "text": "Oh no! And on top of that, I missed the bus and lost my keys.",
+   "fr": "Oh non ! Et en plus, j'ai raté le bus et j'ai perdu mes clés.",
+   "where": "Scène A2 a2u23"
+  },
+  {
+   "text": "What a day! Here, I've got a spare jumper in my locker.",
+   "fr": "Quelle journée ! Tiens, j'ai un pull de rechange dans mon casier.",
+   "where": "Scène A2 a2u23"
+  },
+  {
+   "text": "Thanks! Thank goodness you're here.",
+   "fr": "Merci ! Heureusement que tu es là.",
+   "where": "Scène A2 a2u23"
+  },
+  {
+   "text": "I'm not sure whether to quit my job and travel round the world. What do you think?",
+   "fr": "J'hésite à quitter mon travail pour faire le tour du monde. Qu'est-ce que tu en penses ?",
+   "where": "Scène B1 b1u0"
+  },
+  {
+   "text": "In my opinion, it's a good idea. You've been talking about it for years!",
+   "fr": "À mon avis, c'est une bonne idée. Tu en parles depuis des années !",
+   "where": "Scène B1 b1u0"
+  },
+  {
+   "text": "Yes, but on the one hand I want to go, and on the other I'm scared of losing everything.",
+   "fr": "Oui, mais d'un côté j'ai envie de partir, de l'autre j'ai peur de tout perdre.",
+   "where": "Scène B1 b1u0"
+  },
+  {
+   "text": "I understand. It depends: have you got enough savings?",
+   "fr": "Je comprends. Ça dépend : tu as assez d'économies ?",
+   "where": "Scène B1 b1u0"
+  },
+  {
+   "text": "For a year, yes. But my parents don't agree at all.",
+   "fr": "Pour un an, oui. Mais mes parents ne sont pas du tout d'accord.",
+   "where": "Scène B1 b1u0"
+  },
+  {
+   "text": "I think it's your life. If you don't go now, you'll regret it.",
+   "fr": "Je pense que c'est ta vie. Si tu ne pars pas maintenant, tu le regretteras.",
+   "where": "Scène B1 b1u0"
+  },
+  {
+   "text": "You're not wrong… I'll think about it seriously.",
+   "fr": "Tu n'as pas tort… Je vais y réfléchir sérieusement.",
+   "where": "Scène B1 b1u0"
+  },
+  {
+   "text": "Hello, have a seat. Tell me a little about yourself.",
+   "fr": "Bonjour, asseyez-vous. Parlez-moi un peu de vous.",
+   "where": "Scène B1 b1u1"
+  },
+  {
+   "text": "I have five years' experience in sales, and I speak three languages.",
+   "fr": "J'ai cinq ans d'expérience dans la vente, et je parle trois langues.",
+   "where": "Scène B1 b1u1"
+  },
+  {
+   "text": "Very good. What are your strengths?",
+   "fr": "Très bien. Quels sont vos points forts ?",
+   "where": "Scène B1 b1u1"
+  },
+  {
+   "text": "I'm motivated and organised, and I like working in a team.",
+   "fr": "Je suis motivé et organisé, et j'aime travailler en équipe.",
+   "where": "Scène B1 b1u1"
+  },
+  {
+   "text": "And why do you want to leave your current job?",
+   "fr": "Et pourquoi voulez-vous quitter votre poste actuel ?",
+   "where": "Scène B1 b1u1"
+  },
+  {
+   "text": "I'm looking for new responsibilities, and your company really interests me.",
+   "fr": "Je cherche de nouvelles responsabilités, et votre entreprise m'intéresse beaucoup.",
+   "where": "Scène B1 b1u1"
+  },
+  {
+   "text": "Perfect. We'll call you back before the end of the week.",
+   "fr": "Parfait. Nous vous rappellerons avant la fin de la semaine.",
+   "where": "Scène B1 b1u1"
+  },
+  {
+   "text": "Hello, I've lost my suitcase. It didn't come out on the carousel.",
+   "fr": "Bonjour, j'ai perdu ma valise. Elle n'est pas arrivée sur le tapis.",
+   "where": "Scène B1 b1u2"
+  },
+  {
+   "text": "I'm sorry. Do you have your baggage tag?",
+   "fr": "Je suis désolé. Vous avez votre ticket de bagage ?",
+   "where": "Scène B1 b1u2"
+  },
+  {
+   "text": "Yes, here it is. I was on the eight o'clock flight.",
+   "fr": "Oui, le voici. J'étais sur le vol de huit heures.",
+   "where": "Scène B1 b1u2"
+  },
+  {
+   "text": "Your suitcase stayed at the departure airport. It'll arrive tomorrow morning.",
+   "fr": "Votre valise est restée à l'aéroport de départ. Elle arrivera demain matin.",
+   "where": "Scène B1 b1u2"
+  },
+  {
+   "text": "Tomorrow? But all my things are in it! What's the solution?",
+   "fr": "Demain ? Mais toutes mes affaires sont dedans ! Quelle est la solution ?",
+   "where": "Scène B1 b1u2"
+  },
+  {
+   "text": "We'll deliver it to your hotel. Buy what you need and we'll refund you.",
+   "fr": "On vous la livre à votre hôtel. Achetez le nécessaire, on vous remboursera.",
+   "where": "Scène B1 b1u2"
+  },
+  {
+   "text": "Look at this photo. That's me, aged ten, in front of our house.",
+   "fr": "Regarde cette photo. C'est moi, à dix ans, devant notre maison.",
+   "where": "Scène B1 b1u3"
+  },
+  {
+   "text": "Did you live in the countryside?",
+   "fr": "Tu habitais à la campagne ?",
+   "where": "Scène B1 b1u3"
+  },
+  {
+   "text": "Yes. We played in the street all day; there were hardly any cars.",
+   "fr": "Oui. Nous jouions dans la rue toute la journée, il n'y avait presque pas de voitures.",
+   "where": "Scène B1 b1u3"
+  },
+  {
+   "text": "And you didn't have mobile phones!",
+   "fr": "Et vous n'aviez pas de téléphones portables !",
+   "where": "Scène B1 b1u3"
+  },
+  {
+   "text": "No! In the evenings my grandpa told stories by the fire.",
+   "fr": "Non ! Le soir, mon grand-père racontait des histoires au coin du feu.",
+   "where": "Scène B1 b1u3"
+  },
+  {
+   "text": "It must have been a lovely time.",
+   "fr": "Ça devait être une belle époque.",
+   "where": "Scène B1 b1u3"
+  },
+  {
+   "text": "Yes… I remember every summer I spent there.",
+   "fr": "Oui… Je me souviens de chaque été passé là-bas.",
+   "where": "Scène B1 b1u3"
+  },
+  {
+   "text": "I've been offered a job in Montreal. What would you do?",
+   "fr": "On m'a proposé un poste à Montréal. Qu'est-ce que tu ferais, toi ?",
+   "where": "Scène B1 b1u4"
+  },
+  {
+   "text": "If I were you, I'd accept straight away!",
+   "fr": "Si j'étais toi, j'accepterais tout de suite !",
+   "where": "Scène B1 b1u4"
+  },
+  {
+   "text": "But if I left, I wouldn't see my family any more.",
+   "fr": "Mais si je partais, je ne verrais plus ma famille.",
+   "where": "Scène B1 b1u4"
+  },
+  {
+   "text": "You could come back for the holidays. And it would be a great experience.",
+   "fr": "Tu pourrais revenir pour les vacances. Et ce serait une super expérience.",
+   "where": "Scène B1 b1u4"
+  },
+  {
+   "text": "That's true… I'd like to live abroad one day.",
+   "fr": "C'est vrai… J'aimerais bien vivre à l'étranger un jour.",
+   "where": "Scène B1 b1u4"
+  },
+  {
+   "text": "In your shoes, I wouldn't hesitate. And I'd come and visit you!",
+   "fr": "À ta place, je n'hésiterais pas. Et moi, je viendrais te voir !",
+   "where": "Scène B1 b1u4"
+  },
+  {
+   "text": "There's more and more rubbish in the park. We need to do something.",
+   "fr": "Il y a de plus en plus de déchets dans le parc. Il faut faire quelque chose.",
+   "where": "Scène B1 b1u5"
+  },
+  {
+   "text": "I agree. We could put in recycling bins.",
+   "fr": "Je suis d'accord. On pourrait installer des poubelles pour recycler.",
+   "where": "Scène B1 b1u5"
+  },
+  {
+   "text": "Good idea. And we should also organise a clean-up day.",
+   "fr": "Bonne idée. Et il faudrait aussi organiser une journée de nettoyage.",
+   "where": "Scène B1 b1u5"
+  },
+  {
+   "text": "We could suggest it to the school: the kids love that.",
+   "fr": "On pourrait le proposer à l'école : les enfants adorent ça.",
+   "where": "Scène B1 b1u5"
+  },
+  {
+   "text": "And we need to drive less. The pollution here is terrible.",
+   "fr": "Et puis, il faut moins prendre la voiture. La pollution est terrible ici.",
+   "where": "Scène B1 b1u5"
+  },
+  {
+   "text": "True. If the council improved public transport, it would be easier.",
+   "fr": "C'est vrai. Si la mairie améliorait les transports en commun, ce serait plus facile.",
+   "where": "Scène B1 b1u5"
+  },
+  {
+   "text": "So, how did it go?",
+   "fr": "Alors, comment ça s'est passé ?",
+   "where": "Scène B1 b1u6"
+  },
+  {
+   "text": "I was so happy to see him again! I cried as soon as he arrived.",
+   "fr": "J'étais tellement contente de le revoir ! J'ai pleuré dès qu'il est arrivé.",
+   "where": "Scène B1 b1u6"
+  },
+  {
+   "text": "I'm not surprised. Three years is a long time.",
+   "fr": "Ça ne m'étonne pas. Trois ans, c'est long.",
+   "where": "Scène B1 b1u6"
+  },
+  {
+   "text": "Yes… I felt a bit lonely without him.",
+   "fr": "Oui… Je me sentais un peu seule sans lui.",
+   "where": "Scène B1 b1u6"
+  },
+  {
+   "text": "And was he OK?",
+   "fr": "Et lui, il allait bien ?",
+   "where": "Scène B1 b1u6"
+  },
+  {
+   "text": "He looked tired, but happy. It really moved me.",
+   "fr": "Il avait l'air fatigué, mais heureux. Ça m'a vraiment touchée.",
+   "where": "Scène B1 b1u6"
+  },
+  {
+   "text": "I'm happy for you. It shows, you can't hide your joy!",
+   "fr": "Je suis content pour toi. Ça se voit, tu n'arrives pas à cacher ta joie !",
+   "where": "Scène B1 b1u6"
+  },
+  {
+   "text": "Listen… I'm sorry about yesterday. I didn't mean to hurt you.",
+   "fr": "Écoute… je suis désolé pour hier. Je ne voulais pas te blesser.",
+   "where": "Scène B1 b1u7"
+  },
+  {
+   "text": "You could have told me you weren't coming. I waited an hour for you!",
+   "fr": "Tu aurais pu me prévenir que tu ne venais pas. Je t'ai attendu une heure !",
+   "where": "Scène B1 b1u7"
+  },
+  {
+   "text": "You're right. My phone was dead, but that's no excuse.",
+   "fr": "Tu as raison. Mon téléphone était à plat, mais ce n'est pas une excuse.",
+   "where": "Scène B1 b1u7"
+  },
+  {
+   "text": "Well… We actually fell out over something silly.",
+   "fr": "Bon… On s'est disputés pour une bêtise, en fait.",
+   "where": "Scène B1 b1u7"
+  },
+  {
+   "text": "Yes, it was a misunderstanding. Shall we make up?",
+   "fr": "Oui, c'était un malentendu. On fait la paix ?",
+   "where": "Scène B1 b1u7"
+  },
+  {
+   "text": "OK, I forgive you. But don't do it again!",
+   "fr": "D'accord, je te pardonne. Mais ne recommence pas !",
+   "where": "Scène B1 b1u7"
+  },
+  {
+   "text": "It's Lea's birthday on Saturday. Shall we throw her a surprise party?",
+   "fr": "Samedi, c'est l'anniversaire de Léa. On lui prépare une fête surprise ?",
+   "where": "Scène B1 b1u8"
+  },
+  {
+   "text": "Great idea! Let's have it at my place, there's room.",
+   "fr": "Super idée ! On la fait chez moi, il y a de la place.",
+   "where": "Scène B1 b1u8"
+  },
+  {
+   "text": "Perfect. I'll invite her uni friends. Everyone brings something to drink.",
+   "fr": "Parfait. J'invite ses amis de la fac. Chacun apporte quelque chose à boire.",
+   "where": "Scène B1 b1u8"
+  },
+  {
+   "text": "And I'll take care of the cake. But how do we get her here without her suspecting anything?",
+   "fr": "Et moi, je m'occupe du gâteau. Mais comment on la fait venir sans qu'elle se doute de rien ?",
+   "where": "Scène B1 b1u8"
+  },
+  {
+   "text": "Tell her you need help moving house!",
+   "fr": "Dis-lui que tu as besoin d'aide pour un déménagement !",
+   "where": "Scène B1 b1u8"
+  },
+  {
+   "text": "Brilliant. And not a word to anyone!",
+   "fr": "Génial. Surtout, pas un mot à personne !",
+   "where": "Scène B1 b1u8"
+  },
+  {
+   "text": "Come on, only five minutes left! You can do it!",
+   "fr": "Allez, plus que cinq minutes ! Vous allez y arriver !",
+   "where": "Scène B1 b1u9"
+  },
+  {
+   "text": "Coach, I think I've hurt my knee…",
+   "fr": "Coach, je crois que je me suis blessé au genou…",
+   "where": "Scène B1 b1u9"
+  },
+  {
+   "text": "Can you still run? If we win this match, we'll be champions!",
+   "fr": "Tu peux encore courir ? Si on gagne ce match, on sera champions !",
+   "where": "Scène B1 b1u9"
+  },
+  {
+   "text": "I'm OK, I'll keep going. I don't want to give up now.",
+   "fr": "Ça va, je continue. Je ne veux pas lâcher maintenant.",
+   "where": "Scène B1 b1u9"
+  },
+  {
+   "text": "It's over… We lost by a whisker, but you played well. I'm proud of you.",
+   "fr": "C'est fini… On a perdu de justesse, mais vous avez bien joué. Je suis fier de vous.",
+   "where": "Scène B1 b1u9"
+  },
+  {
+   "text": "Next year we'll win. I'll train three times a week!",
+   "fr": "L'année prochaine, on gagnera. Je m'entraînerai trois fois par semaine !",
+   "where": "Scène B1 b1u9"
+  },
+  {
+   "text": "I have to tell you something… I've met someone.",
+   "fr": "Il faut que je te raconte un truc… J'ai rencontré quelqu'un.",
+   "where": "Scène B1 b1u10"
+  },
+  {
+   "text": "No way! Tell me! Where did you meet?",
+   "fr": "Non ! Raconte ! Vous vous êtes rencontrés où ?",
+   "where": "Scène B1 b1u10"
+  },
+  {
+   "text": "At uni. He asked me out for a drink after class.",
+   "fr": "À la fac. Il m'a proposé de prendre un verre après le cours.",
+   "where": "Scène B1 b1u10"
+  },
+  {
+   "text": "And? Are you going out?",
+   "fr": "Et alors ? Vous sortez ensemble ?",
+   "where": "Scène B1 b1u10"
+  },
+  {
+   "text": "Not yet… I don't know if I really like him. What do you think?",
+   "fr": "Pas encore… Je ne sais pas s'il me plaît vraiment. Tu en penses quoi ?",
+   "where": "Scène B1 b1u10"
+  },
+  {
+   "text": "Take your time. And you know you can count on me, I'm here.",
+   "fr": "Prends ton temps. Et tu sais, tu peux compter sur moi, je suis là.",
+   "where": "Scène B1 b1u10"
+  },
+  {
+   "text": "I can't be bothered to do the washing-up…",
+   "fr": "J'ai la flemme de faire la vaisselle…",
+   "where": "Scène B1 b1u11"
+  },
+  {
+   "text": "Me neither. Shall we do it tonight?",
+   "fr": "Moi non plus. On la fait ce soir ?",
+   "where": "Scène B1 b1u11"
+  },
+  {
+   "text": "OK. By the way, shall we get some food with the others next Saturday?",
+   "fr": "OK. Au fait, on se fait une bouffe avec les autres samedi prochain ?",
+   "where": "Scène B1 b1u11"
+  },
+  {
+   "text": "Definitely! But is Mark coming? He always picks fights with everyone.",
+   "fr": "Carrément ! Mais Marc vient ? Il se prend toujours la tête avec tout le monde.",
+   "where": "Scène B1 b1u11"
+  },
+  {
+   "text": "Whether he comes or not, I couldn't care less.",
+   "fr": "Qu'il vienne ou pas, je m'en fiche complètement.",
+   "where": "Scène B1 b1u11"
+  },
+  {
+   "text": "Right… Hurry up, we're seriously late for the cinema!",
+   "fr": "Bon… Dépêche-toi, on est grave à la bourre pour le ciné !",
+   "where": "Scène B1 b1u11"
+  },
+  {
+   "text": "Hello, this is Lumen. Did you apply for our job offer?",
+   "fr": "Bonjour, ici la société Lumen. Vous avez répondu à notre offre d'emploi ?",
+   "where": "Scène B1 b1u12"
+  },
+  {
+   "text": "Yes, that's right. I sent my application last week.",
+   "fr": "Oui, tout à fait. J'ai envoyé ma candidature la semaine dernière.",
+   "where": "Scène B1 b1u12"
+  },
+  {
+   "text": "We're interested in your CV. We'd like to meet you for an interview.",
+   "fr": "Votre CV nous intéresse. Nous aimerions vous rencontrer pour un entretien.",
+   "where": "Scène B1 b1u12"
+  },
+  {
+   "text": "I'd be glad to! I don't have much experience yet, but I learn fast.",
+   "fr": "Avec plaisir ! Je n'ai pas encore beaucoup d'expérience, mais j'apprends vite.",
+   "where": "Scène B1 b1u12"
+  },
+  {
+   "text": "That's what we're looking for: someone motivated and independent. Does Thursday at ten suit you?",
+   "fr": "C'est ce qu'on cherche : quelqu'un de motivé et autonome. Jeudi à dix heures, ça vous va ?",
+   "where": "Scène B1 b1u12"
+  },
+  {
+   "text": "Perfect, I'll be there. Thank you very much!",
+   "fr": "Parfait, je serai là. Merci beaucoup !",
+   "where": "Scène B1 b1u12"
+  },
+  {
+   "text": "My computer's crashed and I can't do anything!",
+   "fr": "Mon ordinateur a planté et je ne peux plus rien faire !",
+   "where": "Scène B1 b1u13"
+  },
+  {
+   "text": "Yes… and now it's asking me for a password.",
+   "fr": "Oui… et maintenant il me demande un mot de passe.",
+   "where": "Scène B1 b1u13"
+  },
+  {
+   "text": "It's the one you wrote in your notebook, isn't it?",
+   "fr": "C'est celui que tu as noté dans ton carnet, non ?",
+   "where": "Scène B1 b1u13"
+  },
+  {
+   "text": "I've forgotten it… for the third time this week.",
+   "fr": "Je l'ai oublié… pour la troisième fois cette semaine.",
+   "where": "Scène B1 b1u13"
+  },
+  {
+   "text": "Don't panic, we'll reset it together.",
+   "fr": "Pas de panique, on va le réinitialiser ensemble.",
+   "where": "Scène B1 b1u13"
+  },
+  {
+   "text": "Hello. Your passport, please. Do you have any hold luggage?",
+   "fr": "Bonjour. Votre passeport, s'il vous plaît. Vous avez un bagage en soute ?",
+   "where": "Scène B1 b1u14"
+  },
+  {
+   "text": "Yes, this suitcase. I'd like a window seat, please.",
+   "fr": "Oui, cette valise. Je voudrais une place côté hublot, s'il vous plaît.",
+   "where": "Scène B1 b1u14"
+  },
+  {
+   "text": "Done. But your suitcase is two kilos over.",
+   "fr": "C'est noté. Mais votre valise fait deux kilos de trop.",
+   "where": "Scène B1 b1u14"
+  },
+  {
+   "text": "Oh… Can I put a few things in my backpack?",
+   "fr": "Ah… Je peux mettre quelques affaires dans mon sac à dos ?",
+   "where": "Scène B1 b1u14"
+  },
+  {
+   "text": "Of course. Here's your boarding pass. Boarding is at gate 32 in forty minutes.",
+   "fr": "Bien sûr. Voici votre carte d'embarquement. L'embarquement se fait porte 32 dans quarante minutes.",
+   "where": "Scène B1 b1u14"
+  },
+  {
+   "text": "Thanks. I have a connection in Lisbon: I hope we won't be late!",
+   "fr": "Merci. J'ai une correspondance à Lisbonne : j'espère qu'on ne sera pas en retard !",
+   "where": "Scène B1 b1u14"
+  },
+  {
+   "text": "You should watch this series, it's brilliant. I watched the whole season in one weekend!",
+   "fr": "Tu devrais regarder cette série, elle est géniale. J'ai vu toute la saison en un week-end !",
+   "where": "Scène B1 b1u15"
+  },
+  {
+   "text": "What is it? Horror? I prefer comedies.",
+   "fr": "C'est quoi ? Un film d'horreur ? Moi, je préfère les comédies.",
+   "where": "Scène B1 b1u15"
+  },
+  {
+   "text": "No, it's a thriller. At the start there's a murder, and the killer is actually…",
+   "fr": "Non, c'est un thriller. Au début, il y a un meurtre, et en fait le coupable, c'est…",
+   "where": "Scène B1 b1u15"
+  },
+  {
+   "text": "Stop! No spoilers!",
+   "fr": "Stop ! Ne me spoile pas !",
+   "where": "Scène B1 b1u15"
+  },
+  {
+   "text": "OK, OK. Shall we watch the first episode together, in the original language?",
+   "fr": "D'accord, d'accord. On regarde le premier épisode ensemble, en VO ?",
+   "where": "Scène B1 b1u15"
+  },
+  {
+   "text": "Yes, with subtitles. But if the ending's rubbish, you're doing the washing-up!",
+   "fr": "Oui, avec les sous-titres. Mais si la fin est nulle, c'est toi qui fais la vaisselle !",
+   "where": "Scène B1 b1u15"
+  },
+  {
+   "text": "Hello. The cash machine swallowed my card this morning.",
+   "fr": "Bonjour. Ma carte a été avalée par le distributeur ce matin.",
+   "where": "Scène B1 b1u16"
+  },
+  {
+   "text": "It happens. Did you enter the wrong PIN?",
+   "fr": "Ça arrive. Vous avez tapé un mauvais code PIN ?",
+   "where": "Scène B1 b1u16"
+  },
+  {
+   "text": "Yes, three times… And there's a transaction on my account I don't recognise.",
+   "fr": "Oui, trois fois… Et il y a une opération que je ne reconnais pas sur mon compte.",
+   "where": "Scène B1 b1u16"
+  },
+  {
+   "text": "Let me look… A payment of two hundred euros, last night, abroad.",
+   "fr": "Je regarde… Un paiement de deux cents euros, hier soir, à l'étranger.",
+   "where": "Scène B1 b1u16"
+  },
+  {
+   "text": "That wasn't me! I'd like to cancel my card.",
+   "fr": "Ce n'est pas moi ! Je voudrais faire opposition sur ma carte.",
+   "where": "Scène B1 b1u16"
+  },
+  {
+   "text": "Done. You'll get a new card in five days, free of charge.",
+   "fr": "C'est fait. Vous recevrez une nouvelle carte dans cinq jours, sans frais.",
+   "where": "Scène B1 b1u16"
+  },
+  {
+   "text": "Hello. There's a warning light on the dashboard, and the brakes are making a funny noise.",
+   "fr": "Bonjour. Il y a un voyant allumé sur le tableau de bord, et les freins font un drôle de bruit.",
+   "where": "Scène B1 b1u17"
+  },
+  {
+   "text": "Let's have a look… The brake pads are worn. They need changing.",
+   "fr": "Je vais regarder… Les plaquettes de frein sont usées. Il faut les changer.",
+   "where": "Scène B1 b1u17"
+  },
+  {
+   "text": "OK. Can you give me a quote?",
+   "fr": "D'accord. Vous pouvez me faire un devis ?",
+   "where": "Scène B1 b1u17"
+  },
+  {
+   "text": "A hundred and eighty euros, including the oil change. And your MOT is due in a month.",
+   "fr": "Cent quatre-vingts euros, avec la vidange. Et votre contrôle technique est dans un mois.",
+   "where": "Scène B1 b1u17"
+  },
+  {
+   "text": "Tomorrow, late afternoon. I'll call you when it's done.",
+   "fr": "Demain en fin d'après-midi. Je vous appelle quand c'est fini.",
+   "where": "Scène B1 b1u17"
+  },
+  {
+   "text": "Hello! What's wrong with this lovely dog?",
+   "fr": "Bonjour ! Qu'est-ce qui ne va pas avec ce beau chien ?",
+   "where": "Scène B1 b1u18"
+  },
+  {
+   "text": "He hasn't eaten since yesterday, and he's limping on his back leg.",
+   "fr": "Il ne mange plus depuis hier, et il boite de la patte arrière.",
+   "where": "Scène B1 b1u18"
+  },
+  {
+   "text": "Let's see… He has a small wound on his paw. It's nothing serious.",
+   "fr": "Voyons ça… Il a une petite blessure à la patte. Ce n'est pas grave.",
+   "where": "Scène B1 b1u18"
+  },
+  {
+   "text": "Phew! And what about him not eating?",
+   "fr": "Ouf ! Et pour la nourriture ?",
+   "where": "Scène B1 b1u18"
+  },
+  {
+   "text": "He's probably in pain. I'll give you some medicine. Do you have his health record?",
+   "fr": "Il a sûrement mal. Je vous donne un médicament. Vous avez son carnet de santé ?",
+   "where": "Scène B1 b1u18"
+  },
+  {
+   "text": "Yes, here it is. I think he also needs worming.",
+   "fr": "Oui, le voici. Il a aussi besoin d'un vermifuge, je crois.",
+   "where": "Scène B1 b1u18"
+  },
+  {
+   "text": "I'll make a note. Come back in a week if he's still limping.",
+   "fr": "Je le note. Revenez dans une semaine s'il boite encore.",
+   "where": "Scène B1 b1u18"
+  },
+  {
+   "text": "In two hours. You asked five minutes ago!",
+   "fr": "Dans deux heures. Tu as déjà demandé il y a cinq minutes !",
+   "where": "Scène B1 b1u19"
+  },
+  {
+   "text": "I'm bored… Is there a kids' pool at the holiday house?",
+   "fr": "Je m'ennuie… Il y a une piscine pour les petits, à la location ?",
+   "where": "Scène B1 b1u19"
+  },
+  {
+   "text": "Yes, and a beach right next to it. And tomorrow we're going to the theme park!",
+   "fr": "Oui, et une plage juste à côté. Et demain, on va au parc d'attractions !",
+   "where": "Scène B1 b1u19"
+  },
+  {
+   "text": "Oh no… We've forgotten the tablet charger!",
+   "fr": "Oh non… On a oublié le chargeur de la tablette !",
+   "where": "Scène B1 b1u19"
+  },
+  {
+   "text": "Never mind. Let's play a game: everyone picks an activity for the week.",
+   "fr": "Ce n'est pas grave. On joue à un jeu : chacun choisit une activité pour la semaine.",
+   "where": "Scène B1 b1u19"
+  },
+  {
+   "text": "I skipped the lecture this morning… Can you lend me your notes?",
+   "fr": "J'ai séché le cours ce matin… Tu peux me passer tes notes ?",
+   "where": "Scène B1 b1u20"
+  },
+  {
+   "text": "OK, but it's the last time! Exams are next week.",
+   "fr": "D'accord, mais c'est la dernière fois ! Les examens sont la semaine prochaine.",
+   "where": "Scène B1 b1u20"
+  },
+  {
+   "text": "I know. I've been revising all night since Monday.",
+   "fr": "Je sais. Je révise toute la nuit depuis lundi.",
+   "where": "Scène B1 b1u20"
+  },
+  {
+   "text": "You should get some sleep, or you won't remember a thing.",
+   "fr": "Tu devrais dormir un peu, sinon tu ne retiendras rien.",
+   "where": "Scène B1 b1u20"
+  },
+  {
+   "text": "You're right. And how's your dissertation going?",
+   "fr": "Tu as raison. Et toi, ton mémoire, ça avance ?",
+   "where": "Scène B1 b1u20"
+  },
+  {
+   "text": "Slowly… It's due in June. But if I pass the semester, I'm going on Erasmus!",
+   "fr": "Doucement… Il est à rendre en juin. Mais si je valide mon semestre, je pars en Erasmus !",
+   "where": "Scène B1 b1u20"
+  },
+  {
+   "text": "Hello, I'd like to send this parcel abroad.",
+   "fr": "Bonjour, je voudrais envoyer ce colis à l'étranger.",
+   "where": "Scène B1 b1u21"
+  },
+  {
+   "text": "Standard or recorded delivery?",
+   "fr": "En envoi normal ou en recommandé ?",
+   "where": "Scène B1 b1u21"
+  },
+  {
+   "text": "Recorded. How many days will it take?",
+   "fr": "En recommandé. Il arrivera sous combien de jours ?",
+   "where": "Scène B1 b1u21"
+  },
+  {
+   "text": "Between five and seven days. Here's your tracking number.",
+   "fr": "Entre cinq et sept jours. Voici votre numéro de suivi.",
+   "where": "Scène B1 b1u21"
+  },
+  {
+   "text": "Thanks. Another thing: the courier came yesterday, but I wasn't in.",
+   "fr": "Merci. Autre chose : le livreur est passé hier, mais je n'étais pas là.",
+   "where": "Scène B1 b1u21"
+  },
+  {
+   "text": "Your parcel is probably at the pick-up point. Do you have the delivery notice?",
+   "fr": "Votre colis est sûrement au point relais. Vous avez l'avis de passage ?",
+   "where": "Scène B1 b1u21"
+  },
+  {
+   "text": "First, fry the onions gently in the oil over a low heat.",
+   "fr": "D'abord, fais revenir les oignons dans l'huile, à feu doux.",
+   "where": "Scène B1 b1u22"
+  },
+  {
+   "text": "Like this? Do I add the spices now?",
+   "fr": "Comme ça ? Et j'ajoute les épices maintenant ?",
+   "where": "Scène B1 b1u22"
+  },
+  {
+   "text": "Yes, but just a pinch of chilli: it's very hot, careful!",
+   "fr": "Oui, mais juste une pincée de piment : c'est très épicé, attention !",
+   "where": "Scène B1 b1u22"
+  },
+  {
+   "text": "And the meat?",
+   "fr": "Et la viande ?",
+   "where": "Scène B1 b1u22"
+  },
+  {
+   "text": "I marinated it last night. We put it in and let it simmer for an hour.",
+   "fr": "Je l'ai fait mariner hier soir. On la met et on laisse mijoter une heure.",
+   "where": "Scène B1 b1u22"
+  },
+  {
+   "text": "An hour? I'm already hungry… Shall I make the rice in the meantime?",
+   "fr": "Une heure ? J'ai déjà faim… Pendant ce temps, je prépare le riz ?",
+   "where": "Scène B1 b1u22"
+  },
+  {
+   "text": "Welcome! Have you worked in a bar before?",
+   "fr": "Bienvenue ! Tu as déjà travaillé dans un bar ?",
+   "where": "Scène B1 b1u23"
+  },
+  {
+   "text": "No, but I've done babysitting, and I learn fast.",
+   "fr": "Non, mais j'ai fait du baby-sitting, et j'apprends vite.",
+   "where": "Scène B1 b1u23"
+  },
+  {
+   "text": "Perfect. You start at six and finish at midnight. You're paid by the hour.",
+   "fr": "Parfait. Tu commences à dix-huit heures et tu finis à minuit. Tu es payé à l'heure.",
+   "where": "Scène B1 b1u23"
+  },
+  {
+   "text": "OK. And what about tips?",
+   "fr": "D'accord. Et les pourboires ?",
+   "where": "Scène B1 b1u23"
+  },
+  {
+   "text": "We share them between everyone at the end of the week. They help a lot!",
+   "fr": "On les partage entre tout le monde à la fin de la semaine. Ça aide bien !",
+   "where": "Scène B1 b1u23"
+  },
+  {
+   "text": "Great. With that, I'll be able to pay for my studies.",
+   "fr": "Super. Avec ça, je pourrai payer mes études.",
+   "where": "Scène B1 b1u23"
   }
  ],
  "note": "Toutes les phrases du cours (générées depuis l’appli). La clé est calculée sur « langue|texte » : voir scripts/make-audio.mjs."
