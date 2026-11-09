@@ -15742,7 +15742,22 @@ ${dark.replace(/(^|\})\s*([^{}]+)\{/g,(m,a,sel)=>a+sel.split(',').map(s=>':root[
 .vl-reg-tabs button[aria-checked="true"]{background:var(--card,#fff);font-weight:800;box-shadow:0 1px 3px rgba(0,0,0,.12)}
 .vl-reg-p{display:flex;flex-direction:column;gap:4px;padding:12px;border-radius:12px;border:1px solid var(--line,#E3E6E8)}
 .vl-reg-line{display:flex;gap:10px;align-items:center}.vl-reg-line b{font-size:1.1rem}
-@media (prefers-color-scheme:dark){.vl-opt.ok{background:#16351d;color:#cfe9d3}.vl-opt.bad{background:#3a1512;color:#f3c9c4}.vl-badge{color:#8fd19c}}`;
+`;
   document.head.appendChild(css);
+  /* Mode sombre : réglage du téléphone (sauf thème clair forcé) ou thème sombre choisi dans l'appli */
+  const DARK=`.vl-line{background:#1B2744}.vl-line.me{background:#3A2619}.vl-line b,.vl-reg-line b,.vl-turn>b,.vl-end b{color:#EEF2FF}
+.vl-line small,.vl-who,.vl-set,.vl-muted{color:#A9B8D0}.vl-line.now{outline-color:#F2A57E}
+.vl-turn,.vl-end,.vl-opt,.vl-reg-p{background:#16203A;color:#EEF2FF;border-color:#2C3A5C}
+.vl-opt.ok{background:#16351d;color:#cfe9d3;border-color:#3E8A50}.vl-opt.bad{background:#3a1512;color:#f3c9c4;border-color:#B42318}
+.vl-reg-tabs{background:#0F1830}.vl-reg-tabs button{color:#C9D4E8}.vl-reg-tabs button[aria-checked="true"]{background:#24345A;color:#fff}
+.vl-badge{color:#8fd19c}
+.vl{--vl-card:#16203A}.vl-tab,.vl-next,.vl-sx,.vl-q,.vl-step{background:#16203A;color:#EEF2FF;border-color:#2C3A5C}
+.vl-tab small,.vl-q small,.vl-sx small{color:#A9B8D0}.vl-tab.on{background:#EEF2FF;border-color:#EEF2FF;color:#13224F}.vl-tab.on small{color:#3A4A6B}
+.vl-next h2,.vl-head h1{color:#EEF2FF}.vl-chip{background:#24345A;color:#EEF2FF}
+.vl-step.done{background:#1E3A2A;border-color:#3E8A50;color:#cfe9d3}.vl-step.locked{opacity:.55}`;
+  const pre=(sel,css)=>css.replace(/(^|\})\s*([^{}]+)\{/g,(m,b,list)=>b+list.split(",").map(x=>sel+" "+x.trim()).join(",")+"{");
+  const dk=document.createElement("style");
+  dk.textContent="@media (prefers-color-scheme:dark){"+pre(':root:not([data-theme="light"])',DARK)+"}"+pre(':root[data-theme="dark"]',DARK);
+  document.head.appendChild(dk);
 })();
 </script>
