@@ -1,0 +1,8096 @@
+{
+ "lang": "la-e",
+ "note": "Latin, prononciation d'église (à l'italienne), voix italienne Kokoro. La clé est calculée sur « la-e|texte ».",
+ "items": [
+  {
+   "text": "Salvē!",
+   "say": "Salve!",
+   "where": "laa1u0"
+  },
+  {
+   "text": "Salvēte!",
+   "say": "Salvete!",
+   "where": "laa1u0"
+  },
+  {
+   "text": "Avē!",
+   "say": "Ave!",
+   "where": "laa1u0"
+  },
+  {
+   "text": "Valē!",
+   "say": "Vale!",
+   "where": "laa1u0"
+  },
+  {
+   "text": "Valēte!",
+   "say": "Valete!",
+   "where": "laa1u0"
+  },
+  {
+   "text": "Quid agis?",
+   "say": "Quid agis?",
+   "where": "laa1u0"
+  },
+  {
+   "text": "Bene valeō.",
+   "say": "Bene valeo.",
+   "where": "laa1u0"
+  },
+  {
+   "text": "Quis es?",
+   "say": "Quis es?",
+   "where": "laa1u0"
+  },
+  {
+   "text": "Mārcus sum.",
+   "say": "Marcus sum.",
+   "where": "laa1u0"
+  },
+  {
+   "text": "Grātiās tibi agō.",
+   "say": "Grazias tibi ago.",
+   "where": "laa1u0"
+  },
+  {
+   "text": "Ita vērō.",
+   "say": "Ita vero.",
+   "where": "laa1u0"
+  },
+  {
+   "text": "Minimē.",
+   "say": "Minime.",
+   "where": "laa1u0"
+  },
+  {
+   "text": "pater",
+   "say": "pater",
+   "where": "laa1u1"
+  },
+  {
+   "text": "māter",
+   "say": "mater",
+   "where": "laa1u1"
+  },
+  {
+   "text": "fīlius",
+   "say": "filius",
+   "where": "laa1u1"
+  },
+  {
+   "text": "fīlia",
+   "say": "filia",
+   "where": "laa1u1"
+  },
+  {
+   "text": "frāter",
+   "say": "frater",
+   "where": "laa1u1"
+  },
+  {
+   "text": "soror",
+   "say": "soror",
+   "where": "laa1u1"
+  },
+  {
+   "text": "avus",
+   "say": "avus",
+   "where": "laa1u1"
+  },
+  {
+   "text": "avia",
+   "say": "avia",
+   "where": "laa1u1"
+  },
+  {
+   "text": "familia",
+   "say": "familia",
+   "where": "laa1u1"
+  },
+  {
+   "text": "Pater et māter",
+   "say": "Pater et mater",
+   "where": "laa1u1"
+  },
+  {
+   "text": "Fīlia mea est.",
+   "say": "Filia mea est.",
+   "where": "laa1u1"
+  },
+  {
+   "text": "Familia Rōmāna magna est.",
+   "say": "Familia Romana magna est.",
+   "where": "laa1u1"
+  },
+  {
+   "text": "puella",
+   "say": "puella",
+   "where": "laa1u2"
+  },
+  {
+   "text": "rosa",
+   "say": "rosa",
+   "where": "laa1u2"
+  },
+  {
+   "text": "aqua",
+   "say": "aqua",
+   "where": "laa1u2"
+  },
+  {
+   "text": "via",
+   "say": "via",
+   "where": "laa1u2"
+  },
+  {
+   "text": "terra",
+   "say": "terra",
+   "where": "laa1u2"
+  },
+  {
+   "text": "īnsula",
+   "say": "insula",
+   "where": "laa1u2"
+  },
+  {
+   "text": "patria",
+   "say": "patria",
+   "where": "laa1u2"
+  },
+  {
+   "text": "vīta",
+   "say": "vita",
+   "where": "laa1u2"
+  },
+  {
+   "text": "Rōma",
+   "say": "Roma",
+   "where": "laa1u2"
+  },
+  {
+   "text": "Puella laeta est.",
+   "say": "Puella leta est.",
+   "where": "laa1u2"
+  },
+  {
+   "text": "Via longa est.",
+   "say": "Via longa est.",
+   "where": "laa1u2"
+  },
+  {
+   "text": "Rosae pulchrae sunt.",
+   "say": "Rose pulchre sunt.",
+   "where": "laa1u2"
+  },
+  {
+   "text": "sum",
+   "say": "sum",
+   "where": "laa1u3"
+  },
+  {
+   "text": "es",
+   "say": "es",
+   "where": "laa1u3"
+  },
+  {
+   "text": "est",
+   "say": "est",
+   "where": "laa1u3"
+  },
+  {
+   "text": "sumus",
+   "say": "sumus",
+   "where": "laa1u3"
+  },
+  {
+   "text": "estis",
+   "say": "estis",
+   "where": "laa1u3"
+  },
+  {
+   "text": "sunt",
+   "say": "sunt",
+   "where": "laa1u3"
+  },
+  {
+   "text": "Rōmānus sum.",
+   "say": "Romanus sum.",
+   "where": "laa1u3"
+  },
+  {
+   "text": "Ubi es?",
+   "say": "Ubi es?",
+   "where": "laa1u3"
+  },
+  {
+   "text": "Mārcus in vīllā est.",
+   "say": "Marcus in villa est.",
+   "where": "laa1u3"
+  },
+  {
+   "text": "Laetī sumus.",
+   "say": "Leti sumus.",
+   "where": "laa1u3"
+  },
+  {
+   "text": "Ubi estis?",
+   "say": "Ubi estis?",
+   "where": "laa1u3"
+  },
+  {
+   "text": "Errāre hūmānum est.",
+   "say": "Errare umanum est.",
+   "where": "laa1u3"
+  },
+  {
+   "text": "amō",
+   "say": "amo",
+   "where": "laa1u4"
+  },
+  {
+   "text": "vocō",
+   "say": "voco",
+   "where": "laa1u4"
+  },
+  {
+   "text": "laudō",
+   "say": "laudo",
+   "where": "laa1u4"
+  },
+  {
+   "text": "portō",
+   "say": "porto",
+   "where": "laa1u4"
+  },
+  {
+   "text": "spectō",
+   "say": "specto",
+   "where": "laa1u4"
+  },
+  {
+   "text": "labōrō",
+   "say": "laboro",
+   "where": "laa1u4"
+  },
+  {
+   "text": "Puella rosam amat.",
+   "say": "Puella rosam amat.",
+   "where": "laa1u4"
+  },
+  {
+   "text": "Agricola aquam portat.",
+   "say": "Agricola aquam portat.",
+   "where": "laa1u4"
+  },
+  {
+   "text": "Nautae īnsulam spectant.",
+   "say": "Naute insulam spectant.",
+   "where": "laa1u4"
+  },
+  {
+   "text": "Magistra puellās laudat.",
+   "say": "Magistra puellas laudat.",
+   "where": "laa1u4"
+  },
+  {
+   "text": "Rōmam amāmus.",
+   "say": "Romam amamus.",
+   "where": "laa1u4"
+  },
+  {
+   "text": "Ōrā et labōrā.",
+   "say": "Ora et labora.",
+   "where": "laa1u4"
+  },
+  {
+   "text": "dominus",
+   "say": "dominus",
+   "where": "laa1u5"
+  },
+  {
+   "text": "servus",
+   "say": "servus",
+   "where": "laa1u5"
+  },
+  {
+   "text": "amīcus",
+   "say": "amicus",
+   "where": "laa1u5"
+  },
+  {
+   "text": "equus",
+   "say": "equus",
+   "where": "laa1u5"
+  },
+  {
+   "text": "populus",
+   "say": "populus",
+   "where": "laa1u5"
+  },
+  {
+   "text": "deus",
+   "say": "deus",
+   "where": "laa1u5"
+  },
+  {
+   "text": "Dominus servum vocat.",
+   "say": "Dominus servum vocat.",
+   "where": "laa1u5"
+  },
+  {
+   "text": "Amīcus meus Rōmānus est.",
+   "say": "Amicus meus Romanus est.",
+   "where": "laa1u5"
+  },
+  {
+   "text": "Equī in agrō sunt.",
+   "say": "Equi in agro sunt.",
+   "where": "laa1u5"
+  },
+  {
+   "text": "Populus Rōmānus deōs laudat.",
+   "say": "Populus Romanus deos laudat.",
+   "where": "laa1u5"
+  },
+  {
+   "text": "Servī labōrant.",
+   "say": "Servi laborant.",
+   "where": "laa1u5"
+  },
+  {
+   "text": "Amīcum vocō.",
+   "say": "Amicum voco.",
+   "where": "laa1u5"
+  },
+  {
+   "text": "bellum",
+   "say": "bellum",
+   "where": "laa1u6"
+  },
+  {
+   "text": "verbum",
+   "say": "verbum",
+   "where": "laa1u6"
+  },
+  {
+   "text": "dōnum",
+   "say": "donum",
+   "where": "laa1u6"
+  },
+  {
+   "text": "templum",
+   "say": "templum",
+   "where": "laa1u6"
+  },
+  {
+   "text": "oppidum",
+   "say": "oppidum",
+   "where": "laa1u6"
+  },
+  {
+   "text": "forum",
+   "say": "forum",
+   "where": "laa1u6"
+  },
+  {
+   "text": "vīnum",
+   "say": "vinum",
+   "where": "laa1u6"
+  },
+  {
+   "text": "Templum magnum est.",
+   "say": "Templum magnum est.",
+   "where": "laa1u6"
+  },
+  {
+   "text": "Bella longa sunt.",
+   "say": "Bella longa sunt.",
+   "where": "laa1u6"
+  },
+  {
+   "text": "Dōnum tibi dō.",
+   "say": "Donum tibi do.",
+   "where": "laa1u6"
+  },
+  {
+   "text": "Verba volant, scrīpta manent.",
+   "say": "Verba volant, scripta manent.",
+   "where": "laa1u6"
+  },
+  {
+   "text": "In vīnō vēritās.",
+   "say": "In vino veritas.",
+   "where": "laa1u6"
+  },
+  {
+   "text": "bonus (bona, bonum)",
+   "say": "bonus",
+   "where": "laa1u7"
+  },
+  {
+   "text": "magnus (magna, magnum)",
+   "say": "magnus",
+   "where": "laa1u7"
+  },
+  {
+   "text": "parvus (parva, parvum)",
+   "say": "parvus",
+   "where": "laa1u7"
+  },
+  {
+   "text": "longus (longa, longum)",
+   "say": "longus",
+   "where": "laa1u7"
+  },
+  {
+   "text": "novus (nova, novum)",
+   "say": "novus",
+   "where": "laa1u7"
+  },
+  {
+   "text": "multī (multae, multa)",
+   "say": "multi",
+   "where": "laa1u7"
+  },
+  {
+   "text": "Puer bonus est.",
+   "say": "Puer bonus est.",
+   "where": "laa1u7"
+  },
+  {
+   "text": "Puella bona est.",
+   "say": "Puella bona est.",
+   "where": "laa1u7"
+  },
+  {
+   "text": "Templum novum est.",
+   "say": "Templum novum est.",
+   "where": "laa1u7"
+  },
+  {
+   "text": "Multī amīcī veniunt.",
+   "say": "Multi amici veniunt.",
+   "where": "laa1u7"
+  },
+  {
+   "text": "Parva īnsula pulchra est.",
+   "say": "Parva insula pulchra est.",
+   "where": "laa1u7"
+  },
+  {
+   "text": "Ars longa, vīta brevis.",
+   "say": "Ars longa, vita brevis.",
+   "where": "laa1u7"
+  },
+  {
+   "text": "domus",
+   "say": "domus",
+   "where": "laa1u8"
+  },
+  {
+   "text": "vīlla",
+   "say": "villa",
+   "where": "laa1u8"
+  },
+  {
+   "text": "ātrium",
+   "say": "atrium",
+   "where": "laa1u8"
+  },
+  {
+   "text": "culīna",
+   "say": "culina",
+   "where": "laa1u8"
+  },
+  {
+   "text": "cubiculum",
+   "say": "cubiculum",
+   "where": "laa1u8"
+  },
+  {
+   "text": "hortus",
+   "say": "ortus",
+   "where": "laa1u8"
+  },
+  {
+   "text": "iānua",
+   "say": "ianua",
+   "where": "laa1u8"
+  },
+  {
+   "text": "mēnsa",
+   "say": "mensa",
+   "where": "laa1u8"
+  },
+  {
+   "text": "Servus iānuam aperit.",
+   "say": "Servus ianuam aperit.",
+   "where": "laa1u8"
+  },
+  {
+   "text": "In ātriō sumus.",
+   "say": "In atrio sumus.",
+   "where": "laa1u8"
+  },
+  {
+   "text": "Hortus pulcher est.",
+   "say": "ortus pulcher est.",
+   "where": "laa1u8"
+  },
+  {
+   "text": "Cavē canem!",
+   "say": "Cave canem!",
+   "where": "laa1u8"
+  },
+  {
+   "text": "ūnus (I)",
+   "say": "unus",
+   "where": "laa1u9"
+  },
+  {
+   "text": "duo (II)",
+   "say": "duo",
+   "where": "laa1u9"
+  },
+  {
+   "text": "trēs (III)",
+   "say": "tres",
+   "where": "laa1u9"
+  },
+  {
+   "text": "quattuor (IV)",
+   "say": "quattuor",
+   "where": "laa1u9"
+  },
+  {
+   "text": "quīnque (V)",
+   "say": "quinque",
+   "where": "laa1u9"
+  },
+  {
+   "text": "sex (VI)",
+   "say": "sex",
+   "where": "laa1u9"
+  },
+  {
+   "text": "septem (VII)",
+   "say": "septem",
+   "where": "laa1u9"
+  },
+  {
+   "text": "octō (VIII)",
+   "say": "octo",
+   "where": "laa1u9"
+  },
+  {
+   "text": "novem (IX)",
+   "say": "novem",
+   "where": "laa1u9"
+  },
+  {
+   "text": "decem (X)",
+   "say": "decem",
+   "where": "laa1u9"
+  },
+  {
+   "text": "centum (C)",
+   "say": "centum",
+   "where": "laa1u9"
+  },
+  {
+   "text": "mīlle (M)",
+   "say": "mille",
+   "where": "laa1u9"
+  },
+  {
+   "text": "diēs",
+   "say": "dies",
+   "where": "laa1u10"
+  },
+  {
+   "text": "nox",
+   "say": "nox",
+   "where": "laa1u10"
+  },
+  {
+   "text": "hōra",
+   "say": "ora",
+   "where": "laa1u10"
+  },
+  {
+   "text": "annus",
+   "say": "annus",
+   "where": "laa1u10"
+  },
+  {
+   "text": "hodiē",
+   "say": "odie",
+   "where": "laa1u10"
+  },
+  {
+   "text": "crās",
+   "say": "cras",
+   "where": "laa1u10"
+  },
+  {
+   "text": "herī",
+   "say": "eri",
+   "where": "laa1u10"
+  },
+  {
+   "text": "māne",
+   "say": "mane",
+   "where": "laa1u10"
+  },
+  {
+   "text": "Nox est.",
+   "say": "Nox est.",
+   "where": "laa1u10"
+  },
+  {
+   "text": "Hodiē in forō sum.",
+   "say": "odie in foro sum.",
+   "where": "laa1u10"
+  },
+  {
+   "text": "Tempus fugit.",
+   "say": "Tempus fugit.",
+   "where": "laa1u10"
+  },
+  {
+   "text": "Carpe diem.",
+   "say": "Carpe diem.",
+   "where": "laa1u10"
+  },
+  {
+   "text": "Venī, vīdī, vīcī.",
+   "say": "Veni, vidi, vici.",
+   "where": "laa1u11"
+  },
+  {
+   "text": "Ālea iacta est.",
+   "say": "Alea iacta est.",
+   "where": "laa1u11"
+  },
+  {
+   "text": "Festīnā lentē.",
+   "say": "Festina lente.",
+   "where": "laa1u11"
+  },
+  {
+   "text": "Sapere audē.",
+   "say": "Sapere aude.",
+   "where": "laa1u11"
+  },
+  {
+   "text": "Mementō morī.",
+   "say": "Memento mori.",
+   "where": "laa1u11"
+  },
+  {
+   "text": "Fīat lūx.",
+   "say": "Fiat lux.",
+   "where": "laa1u11"
+  },
+  {
+   "text": "Vae victīs!",
+   "say": "Ve victis!",
+   "where": "laa1u11"
+  },
+  {
+   "text": "Panem et circēnsēs.",
+   "say": "Panem et circenses.",
+   "where": "laa1u11"
+  },
+  {
+   "text": "Mēns sāna in corpore sānō.",
+   "say": "Mens sana in corpore sano.",
+   "where": "laa1u11"
+  },
+  {
+   "text": "Nōsce tē ipsum.",
+   "say": "Nosce te ipsum.",
+   "where": "laa1u11"
+  },
+  {
+   "text": "Dum spīrō, spērō.",
+   "say": "Dum spiro, spero.",
+   "where": "laa1u11"
+  },
+  {
+   "text": "Per aspera ad astra.",
+   "say": "Per aspera ad astra.",
+   "where": "laa1u11"
+  },
+  {
+   "text": "habeō",
+   "say": "abeo",
+   "where": "laa2u0"
+  },
+  {
+   "text": "videō",
+   "say": "video",
+   "where": "laa2u0"
+  },
+  {
+   "text": "timeō",
+   "say": "timeo",
+   "where": "laa2u0"
+  },
+  {
+   "text": "teneō",
+   "say": "teneo",
+   "where": "laa2u0"
+  },
+  {
+   "text": "dēbeō",
+   "say": "debeo",
+   "where": "laa2u0"
+  },
+  {
+   "text": "moneō",
+   "say": "moneo",
+   "where": "laa2u0"
+  },
+  {
+   "text": "Multōs amīcōs habeō.",
+   "say": "Multos amicos abeo.",
+   "where": "laa2u0"
+  },
+  {
+   "text": "Templum videō.",
+   "say": "Templum video.",
+   "where": "laa2u0"
+  },
+  {
+   "text": "Servī dominum timent.",
+   "say": "Servi dominum timent.",
+   "where": "laa2u0"
+  },
+  {
+   "text": "Puer librum tenet.",
+   "say": "Puer librum tenet.",
+   "where": "laa2u0"
+  },
+  {
+   "text": "Labōrāre dēbēmus.",
+   "say": "Laborare debemus.",
+   "where": "laa2u0"
+  },
+  {
+   "text": "Magister discipulōs monet.",
+   "say": "Magister discipulos monet.",
+   "where": "laa2u0"
+  },
+  {
+   "text": "rēx (rēgis)",
+   "say": "rex",
+   "where": "laa2u1"
+  },
+  {
+   "text": "lēx (lēgis)",
+   "say": "lex",
+   "where": "laa2u1"
+  },
+  {
+   "text": "pāx (pācis)",
+   "say": "pax",
+   "where": "laa2u1"
+  },
+  {
+   "text": "homō (hominis)",
+   "say": "omo",
+   "where": "laa2u1"
+  },
+  {
+   "text": "mīles (mīlitis)",
+   "say": "miles",
+   "where": "laa2u1"
+  },
+  {
+   "text": "urbs (urbis)",
+   "say": "urbs",
+   "where": "laa2u1"
+  },
+  {
+   "text": "mare (maris)",
+   "say": "mare",
+   "where": "laa2u1"
+  },
+  {
+   "text": "nōmen (nōminis)",
+   "say": "nomen",
+   "where": "laa2u1"
+  },
+  {
+   "text": "corpus (corporis)",
+   "say": "corpus",
+   "where": "laa2u1"
+  },
+  {
+   "text": "Rēx lēgēs dat.",
+   "say": "Rex leges dat.",
+   "where": "laa2u1"
+  },
+  {
+   "text": "Mīlitēs urbem dēfendunt.",
+   "say": "Milites urbem defendunt.",
+   "where": "laa2u1"
+  },
+  {
+   "text": "Homō hominī lupus.",
+   "say": "omo omini lupus.",
+   "where": "laa2u1"
+  },
+  {
+   "text": "dīcō",
+   "say": "dico",
+   "where": "laa2u2"
+  },
+  {
+   "text": "dūcō",
+   "say": "duco",
+   "where": "laa2u2"
+  },
+  {
+   "text": "mittō",
+   "say": "mitto",
+   "where": "laa2u2"
+  },
+  {
+   "text": "scrībō",
+   "say": "scribo",
+   "where": "laa2u2"
+  },
+  {
+   "text": "legō",
+   "say": "lego",
+   "where": "laa2u2"
+  },
+  {
+   "text": "veniō",
+   "say": "venio",
+   "where": "laa2u2"
+  },
+  {
+   "text": "audiō",
+   "say": "audio",
+   "where": "laa2u2"
+  },
+  {
+   "text": "dormiō",
+   "say": "dormio",
+   "where": "laa2u2"
+  },
+  {
+   "text": "Epistulam scrībō.",
+   "say": "Epistulam scribo.",
+   "where": "laa2u2"
+  },
+  {
+   "text": "Dux mīlitēs dūcit.",
+   "say": "Dux milites ducit.",
+   "where": "laa2u2"
+  },
+  {
+   "text": "Puerī librōs legunt.",
+   "say": "Pueri libros legunt.",
+   "where": "laa2u2"
+  },
+  {
+   "text": "Vōcem audiō.",
+   "say": "Vocem audio.",
+   "where": "laa2u2"
+  },
+  {
+   "text": "Senātus Populusque Rōmānus",
+   "say": "Senatus Populusque Romanus",
+   "where": "laa2u3"
+  },
+  {
+   "text": "vōx populī",
+   "say": "vox populi",
+   "where": "laa2u3"
+  },
+  {
+   "text": "liber puerī",
+   "say": "liber pueri",
+   "where": "laa2u3"
+  },
+  {
+   "text": "domus dominī",
+   "say": "domus domini",
+   "where": "laa2u3"
+  },
+  {
+   "text": "fīlia rēgis",
+   "say": "filia regis",
+   "where": "laa2u3"
+  },
+  {
+   "text": "lūx mundī",
+   "say": "lux mundi",
+   "where": "laa2u3"
+  },
+  {
+   "text": "templum deōrum",
+   "say": "templum deorum",
+   "where": "laa2u3"
+  },
+  {
+   "text": "Vōx populī, vōx Deī.",
+   "say": "Vox populi, vox Dei.",
+   "where": "laa2u3"
+  },
+  {
+   "text": "Amor patriae magnus est.",
+   "say": "Amor patrie magnus est.",
+   "where": "laa2u3"
+  },
+  {
+   "text": "Nōmen puellae Iūlia est.",
+   "say": "Nomen puelle Iulia est.",
+   "where": "laa2u3"
+  },
+  {
+   "text": "Mīlitēs Caesaris fortēs sunt.",
+   "say": "Milites Cesaris fortes sunt.",
+   "where": "laa2u3"
+  },
+  {
+   "text": "Rōma caput mundī est.",
+   "say": "Roma caput mundi est.",
+   "where": "laa2u3"
+  },
+  {
+   "text": "Rosam puellae dō.",
+   "say": "Rosam puelle do.",
+   "where": "laa2u4"
+  },
+  {
+   "text": "Servus dominō pāret.",
+   "say": "Servus domino paret.",
+   "where": "laa2u4"
+  },
+  {
+   "text": "Mihi placet.",
+   "say": "Michi placet.",
+   "where": "laa2u4"
+  },
+  {
+   "text": "Puerīs fābulam nārrat.",
+   "say": "Pueris fabulam narrat.",
+   "where": "laa2u4"
+  },
+  {
+   "text": "cum amīcō",
+   "say": "cum amico",
+   "where": "laa2u4"
+  },
+  {
+   "text": "sine pecūniā",
+   "say": "sine pecunia",
+   "where": "laa2u4"
+  },
+  {
+   "text": "in urbe",
+   "say": "in urbe",
+   "where": "laa2u4"
+  },
+  {
+   "text": "Gladiō pugnat.",
+   "say": "Gladio pugnat.",
+   "where": "laa2u4"
+  },
+  {
+   "text": "Rōmā venit.",
+   "say": "Roma venit.",
+   "where": "laa2u4"
+  },
+  {
+   "text": "Nāve nāvigāmus.",
+   "say": "Nave navigamus.",
+   "where": "laa2u4"
+  },
+  {
+   "text": "Hostibus resistimus.",
+   "say": "ostibus resistimus.",
+   "where": "laa2u4"
+  },
+  {
+   "text": "Deō grātiās.",
+   "say": "Deo grazias.",
+   "where": "laa2u4"
+  },
+  {
+   "text": "in forō",
+   "say": "in foro",
+   "where": "laa2u5"
+  },
+  {
+   "text": "ad urbem",
+   "say": "ad urbem",
+   "where": "laa2u5"
+  },
+  {
+   "text": "ex urbe",
+   "say": "ex urbe",
+   "where": "laa2u5"
+  },
+  {
+   "text": "per viās",
+   "say": "per vias",
+   "where": "laa2u5"
+  },
+  {
+   "text": "ante templum",
+   "say": "ante templum",
+   "where": "laa2u5"
+  },
+  {
+   "text": "post bellum",
+   "say": "post bellum",
+   "where": "laa2u5"
+  },
+  {
+   "text": "sub arbore",
+   "say": "sub arbore",
+   "where": "laa2u5"
+  },
+  {
+   "text": "inter amīcōs",
+   "say": "inter amicos",
+   "where": "laa2u5"
+  },
+  {
+   "text": "prō patriā",
+   "say": "pro patria",
+   "where": "laa2u5"
+  },
+  {
+   "text": "dē rē pūblicā",
+   "say": "de re publica",
+   "where": "laa2u5"
+  },
+  {
+   "text": "Ad forum ambulāmus.",
+   "say": "Ad forum ambulamus.",
+   "where": "laa2u5"
+  },
+  {
+   "text": "Post nūbila, Phoebus.",
+   "say": "Post nubila, Febus.",
+   "where": "laa2u5"
+  },
+  {
+   "text": "eram",
+   "say": "eram",
+   "where": "laa2u6"
+  },
+  {
+   "text": "erat",
+   "say": "erat",
+   "where": "laa2u6"
+  },
+  {
+   "text": "amābam",
+   "say": "amabam",
+   "where": "laa2u6"
+  },
+  {
+   "text": "habēbat",
+   "say": "abebat",
+   "where": "laa2u6"
+  },
+  {
+   "text": "Rōma parva erat.",
+   "say": "Roma parva erat.",
+   "where": "laa2u6"
+  },
+  {
+   "text": "Puerī in hortō lūdēbant.",
+   "say": "Pueri in orto ludebant.",
+   "where": "laa2u6"
+  },
+  {
+   "text": "Agricolae agrōs arābant.",
+   "say": "Agricole agros arabant.",
+   "where": "laa2u6"
+  },
+  {
+   "text": "Rēx multōs servōs habēbat.",
+   "say": "Rex multos servos abebat.",
+   "where": "laa2u6"
+  },
+  {
+   "text": "Ubi erātis?",
+   "say": "Ubi eratis?",
+   "where": "laa2u6"
+  },
+  {
+   "text": "Nox erat.",
+   "say": "Nox erat.",
+   "where": "laa2u6"
+  },
+  {
+   "text": "Mīlitēs fortiter pugnābant.",
+   "say": "Milites fortiter pugnabant.",
+   "where": "laa2u6"
+  },
+  {
+   "text": "Diū exspectābāmus.",
+   "say": "Diu exspectabamus.",
+   "where": "laa2u6"
+  },
+  {
+   "text": "erō",
+   "say": "ero",
+   "where": "laa2u7"
+  },
+  {
+   "text": "erit",
+   "say": "erit",
+   "where": "laa2u7"
+  },
+  {
+   "text": "amābō",
+   "say": "amabo",
+   "where": "laa2u7"
+  },
+  {
+   "text": "vidēbis",
+   "say": "videbis",
+   "where": "laa2u7"
+  },
+  {
+   "text": "veniet",
+   "say": "veniet",
+   "where": "laa2u7"
+  },
+  {
+   "text": "Crās in forō erimus.",
+   "say": "Cras in foro erimus.",
+   "where": "laa2u7"
+  },
+  {
+   "text": "Epistulam tibi mittam.",
+   "say": "Epistulam tibi mittam.",
+   "where": "laa2u7"
+  },
+  {
+   "text": "Mox vidēbis.",
+   "say": "Mox videbis.",
+   "where": "laa2u7"
+  },
+  {
+   "text": "Caesar crās veniet.",
+   "say": "Cesar cras veniet.",
+   "where": "laa2u7"
+  },
+  {
+   "text": "Semper tē amābō.",
+   "say": "Semper te amabo.",
+   "where": "laa2u7"
+  },
+  {
+   "text": "Quid faciēs?",
+   "say": "Quid facies?",
+   "where": "laa2u7"
+  },
+  {
+   "text": "Nōn omnis moriar.",
+   "say": "Non omnis moriar.",
+   "where": "laa2u7"
+  },
+  {
+   "text": "fuī",
+   "say": "fui",
+   "where": "laa2u8"
+  },
+  {
+   "text": "amāvī",
+   "say": "amavi",
+   "where": "laa2u8"
+  },
+  {
+   "text": "vīdī",
+   "say": "vidi",
+   "where": "laa2u8"
+  },
+  {
+   "text": "vēnī",
+   "say": "veni",
+   "where": "laa2u8"
+  },
+  {
+   "text": "vīcī",
+   "say": "vici",
+   "where": "laa2u8"
+  },
+  {
+   "text": "dīxī",
+   "say": "dixi",
+   "where": "laa2u8"
+  },
+  {
+   "text": "Caesar Galliam vīcit.",
+   "say": "Cesar Galliam vicit.",
+   "where": "laa2u8"
+  },
+  {
+   "text": "Rōmulus Rōmam condidit.",
+   "say": "Romulus Romam condidit.",
+   "where": "laa2u8"
+  },
+  {
+   "text": "Hannibal Alpēs trānsiit.",
+   "say": "annibal Alpes transiit.",
+   "where": "laa2u8"
+  },
+  {
+   "text": "Quid fēcistī?",
+   "say": "Quid fecisti?",
+   "where": "laa2u8"
+  },
+  {
+   "text": "Nūntius vēnit.",
+   "say": "Nunzius venit.",
+   "where": "laa2u8"
+  },
+  {
+   "text": "Bene dīxistī.",
+   "say": "Bene dixisti.",
+   "where": "laa2u8"
+  },
+  {
+   "text": "ego",
+   "say": "ego",
+   "where": "laa2u9"
+  },
+  {
+   "text": "tū",
+   "say": "tu",
+   "where": "laa2u9"
+  },
+  {
+   "text": "nōs",
+   "say": "nos",
+   "where": "laa2u9"
+  },
+  {
+   "text": "vōs",
+   "say": "vos",
+   "where": "laa2u9"
+  },
+  {
+   "text": "is (ea, id)",
+   "say": "is",
+   "where": "laa2u9"
+  },
+  {
+   "text": "hic (haec, hoc)",
+   "say": "ic",
+   "where": "laa2u9"
+  },
+  {
+   "text": "ille (illa, illud)",
+   "say": "ille",
+   "where": "laa2u9"
+  },
+  {
+   "text": "quī (quae, quod)",
+   "say": "qui",
+   "where": "laa2u9"
+  },
+  {
+   "text": "Ego et tū amīcī sumus.",
+   "say": "Ego et tu amici sumus.",
+   "where": "laa2u9"
+  },
+  {
+   "text": "Hic liber meus est.",
+   "say": "ic liber meus est.",
+   "where": "laa2u9"
+  },
+  {
+   "text": "Puella quam amō Iūlia est.",
+   "say": "Puella quam amo Iulia est.",
+   "where": "laa2u9"
+  },
+  {
+   "text": "Ille vir est Caesar.",
+   "say": "Ille vir est Cesar.",
+   "where": "laa2u9"
+  },
+  {
+   "text": "Venī!",
+   "say": "Veni!",
+   "where": "laa2u10"
+  },
+  {
+   "text": "Audī!",
+   "say": "Audi!",
+   "where": "laa2u10"
+  },
+  {
+   "text": "Tacē!",
+   "say": "Tace!",
+   "where": "laa2u10"
+  },
+  {
+   "text": "Spectā!",
+   "say": "Specta!",
+   "where": "laa2u10"
+  },
+  {
+   "text": "Venīte!",
+   "say": "Venite!",
+   "where": "laa2u10"
+  },
+  {
+   "text": "Nōlī timēre!",
+   "say": "Noli timere!",
+   "where": "laa2u10"
+  },
+  {
+   "text": "Surge!",
+   "say": "Surge!",
+   "where": "laa2u10"
+  },
+  {
+   "text": "Dā mihi aquam!",
+   "say": "Da michi aquam!",
+   "where": "laa2u10"
+  },
+  {
+   "text": "Respice post tē!",
+   "say": "Respice post te!",
+   "where": "laa2u10"
+  },
+  {
+   "text": "Tolle, lege!",
+   "say": "Tolle, lege!",
+   "where": "laa2u10"
+  },
+  {
+   "text": "Nōlī mē tangere.",
+   "say": "Noli me tangere.",
+   "where": "laa2u10"
+  },
+  {
+   "text": "Ambulā mēcum!",
+   "say": "Ambula mecum!",
+   "where": "laa2u10"
+  },
+  {
+   "text": "cūria",
+   "say": "curia",
+   "where": "laa2u11"
+  },
+  {
+   "text": "thermae",
+   "say": "terme",
+   "where": "laa2u11"
+  },
+  {
+   "text": "amphitheātrum",
+   "say": "amfiteatrum",
+   "where": "laa2u11"
+  },
+  {
+   "text": "circus",
+   "say": "circus",
+   "where": "laa2u11"
+  },
+  {
+   "text": "aquaeductus",
+   "say": "aqueductus",
+   "where": "laa2u11"
+  },
+  {
+   "text": "senātor",
+   "say": "senator",
+   "where": "laa2u11"
+  },
+  {
+   "text": "cōnsul",
+   "say": "consul",
+   "where": "laa2u11"
+  },
+  {
+   "text": "legiō",
+   "say": "legio",
+   "where": "laa2u11"
+  },
+  {
+   "text": "imperātor",
+   "say": "imperator",
+   "where": "laa2u11"
+  },
+  {
+   "text": "Senātōrēs in cūriā sunt.",
+   "say": "Senatores in curia sunt.",
+   "where": "laa2u11"
+  },
+  {
+   "text": "Omnēs viae Rōmam dūcunt.",
+   "say": "Omnes vie Romam ducunt.",
+   "where": "laa2u11"
+  },
+  {
+   "text": "manus (manūs)",
+   "say": "manus",
+   "where": "lab1u0"
+  },
+  {
+   "text": "exercitus (exercitūs)",
+   "say": "exercitus",
+   "where": "lab1u0"
+  },
+  {
+   "text": "senātus (senātūs)",
+   "say": "senatus",
+   "where": "lab1u0"
+  },
+  {
+   "text": "cursus (cursūs)",
+   "say": "cursus",
+   "where": "lab1u0"
+  },
+  {
+   "text": "rēs (reī)",
+   "say": "res",
+   "where": "lab1u0"
+  },
+  {
+   "text": "spēs (speī)",
+   "say": "spes",
+   "where": "lab1u0"
+  },
+  {
+   "text": "fidēs (fideī)",
+   "say": "fides",
+   "where": "lab1u0"
+  },
+  {
+   "text": "rēs pūblica",
+   "say": "res publica",
+   "where": "lab1u0"
+  },
+  {
+   "text": "Exercitus Rōmānus magnus est.",
+   "say": "Exercitus Romanus magnus est.",
+   "where": "lab1u0"
+  },
+  {
+   "text": "Manus manum lavat.",
+   "say": "Manus manum lavat.",
+   "where": "lab1u0"
+  },
+  {
+   "text": "Spēs ultima dea.",
+   "say": "Spes ultima dea.",
+   "where": "lab1u0"
+  },
+  {
+   "text": "Rēs pūblica in perīculō est.",
+   "say": "Res publica in periculo est.",
+   "where": "lab1u0"
+  },
+  {
+   "text": "altus (altior, altissimus)",
+   "say": "altus",
+   "where": "lab1u1"
+  },
+  {
+   "text": "fortis (fortior, fortissimus)",
+   "say": "fortis",
+   "where": "lab1u1"
+  },
+  {
+   "text": "bonus (melior, optimus)",
+   "say": "bonus",
+   "where": "lab1u1"
+  },
+  {
+   "text": "malus (peior, pessimus)",
+   "say": "malus",
+   "where": "lab1u1"
+  },
+  {
+   "text": "magnus (maior, maximus)",
+   "say": "magnus",
+   "where": "lab1u1"
+  },
+  {
+   "text": "parvus (minor, minimus)",
+   "say": "parvus",
+   "where": "lab1u1"
+  },
+  {
+   "text": "Citius, altius, fortius.",
+   "say": "Cizius, alzius, forzius.",
+   "where": "lab1u1"
+  },
+  {
+   "text": "Rōma maior est quam Ostia.",
+   "say": "Roma maior est quam Ostia.",
+   "where": "lab1u1"
+  },
+  {
+   "text": "Mel dulcius est quam vīnum.",
+   "say": "Mel dulcius est quam vinum.",
+   "where": "lab1u1"
+  },
+  {
+   "text": "Optimus amīcus meus es.",
+   "say": "Optimus amicus meus es.",
+   "where": "lab1u1"
+  },
+  {
+   "text": "Nihil est melius quam pāx.",
+   "say": "Nichil est melius quam pax.",
+   "where": "lab1u1"
+  },
+  {
+   "text": "Iuppiter Optimus Maximus",
+   "say": "Iuppiter Optimus Maximus",
+   "where": "lab1u1"
+  },
+  {
+   "text": "amātus",
+   "say": "amatus",
+   "where": "lab1u2"
+  },
+  {
+   "text": "captus",
+   "say": "captus",
+   "where": "lab1u2"
+  },
+  {
+   "text": "missus",
+   "say": "missus",
+   "where": "lab1u2"
+  },
+  {
+   "text": "victus",
+   "say": "victus",
+   "where": "lab1u2"
+  },
+  {
+   "text": "legēns",
+   "say": "legens",
+   "where": "lab1u2"
+  },
+  {
+   "text": "cantāns",
+   "say": "cantans",
+   "where": "lab1u2"
+  },
+  {
+   "text": "Puella cantāns venit.",
+   "say": "Puella cantans venit.",
+   "where": "lab1u2"
+  },
+  {
+   "text": "Urbs capta ārdet.",
+   "say": "Urbs capta ardet.",
+   "where": "lab1u2"
+  },
+  {
+   "text": "Mīlitēs victī fugiunt.",
+   "say": "Milites victi fugiunt.",
+   "where": "lab1u2"
+  },
+  {
+   "text": "Epistulam missam legō.",
+   "say": "Epistulam missam lego.",
+   "where": "lab1u2"
+  },
+  {
+   "text": "Moritūrī tē salūtant.",
+   "say": "Morituri te salutant.",
+   "where": "lab1u2"
+  },
+  {
+   "text": "Hostēs fugientēs videō.",
+   "say": "ostes fugientes video.",
+   "where": "lab1u2"
+  },
+  {
+   "text": "Urbe captā, Rōmānī gaudent.",
+   "say": "Urbe capta, Romani gaudent.",
+   "where": "lab1u3"
+  },
+  {
+   "text": "Caesare duce, mīlitēs vincunt.",
+   "say": "Cesare duce, milites vincunt.",
+   "where": "lab1u3"
+  },
+  {
+   "text": "Sōle oriente, agricolae labōrant.",
+   "say": "Sole oriente, agricole laborant.",
+   "where": "lab1u3"
+  },
+  {
+   "text": "Bellō cōnfectō, pāx est.",
+   "say": "Bello confecto, pax est.",
+   "where": "lab1u3"
+  },
+  {
+   "text": "Hostibus victīs, exercitus redit.",
+   "say": "ostibus victis, exercitus redit.",
+   "where": "lab1u3"
+  },
+  {
+   "text": "Cicerōne cōnsule",
+   "say": "Cicerone consule",
+   "where": "lab1u3"
+  },
+  {
+   "text": "Mūtātīs mūtandīs",
+   "say": "Mutatis mutandis",
+   "where": "lab1u3"
+  },
+  {
+   "text": "Nūllō resistente",
+   "say": "Nullo resistente",
+   "where": "lab1u3"
+  },
+  {
+   "text": "Signō datō, pugnant.",
+   "say": "Signo dato, pugnant.",
+   "where": "lab1u3"
+  },
+  {
+   "text": "Duce mortuō, mīlitēs fugiunt.",
+   "say": "Duce mortuo, milites fugiunt.",
+   "where": "lab1u3"
+  },
+  {
+   "text": "Rē bene gestā, redeunt.",
+   "say": "Re bene gesta, redeunt.",
+   "where": "lab1u3"
+  },
+  {
+   "text": "Deō volente",
+   "say": "Deo volente",
+   "where": "lab1u3"
+  },
+  {
+   "text": "Dīcō tē venīre.",
+   "say": "Dico te venire.",
+   "where": "lab1u4"
+  },
+  {
+   "text": "Sciō Rōmam magnam esse.",
+   "say": "Scio Romam magnam esse.",
+   "where": "lab1u4"
+  },
+  {
+   "text": "Putō eum bonum esse.",
+   "say": "Puto eum bonum esse.",
+   "where": "lab1u4"
+  },
+  {
+   "text": "Caesar dīcit hostēs fugere.",
+   "say": "Cesar dicit ostes fugere.",
+   "where": "lab1u4"
+  },
+  {
+   "text": "Crēdimus deōs esse.",
+   "say": "Credimus deos esse.",
+   "where": "lab1u4"
+  },
+  {
+   "text": "Nūntius dīxit urbem captam esse.",
+   "say": "Nunzius dixit urbem captam esse.",
+   "where": "lab1u4"
+  },
+  {
+   "text": "Spērō tē valēre.",
+   "say": "Spero te valere.",
+   "where": "lab1u4"
+  },
+  {
+   "text": "Audiō Mārcum aegrōtāre.",
+   "say": "Audio Marcum egrotare.",
+   "where": "lab1u4"
+  },
+  {
+   "text": "Vidēmus nāvēs venīre.",
+   "say": "Videmus naves venire.",
+   "where": "lab1u4"
+  },
+  {
+   "text": "Cēnseō Carthāginem esse dēlendam.",
+   "say": "Censeo Cartaginem esse delendam.",
+   "where": "lab1u4"
+  },
+  {
+   "text": "Sentiō mē errāvisse.",
+   "say": "Senzio me erravisse.",
+   "where": "lab1u4"
+  },
+  {
+   "text": "Cōnstat Rōmulum Rōmam condidisse.",
+   "say": "Constat Romulum Romam condidisse.",
+   "where": "lab1u4"
+  },
+  {
+   "text": "Vīvat rēx!",
+   "say": "Vivat rex!",
+   "where": "lab1u5"
+  },
+  {
+   "text": "Eāmus!",
+   "say": "Eamus!",
+   "where": "lab1u5"
+  },
+  {
+   "text": "Gaudeāmus igitur.",
+   "say": "Gaudeamus igitur.",
+   "where": "lab1u5"
+  },
+  {
+   "text": "Requiēscat in pāce.",
+   "say": "Requiescat in pace.",
+   "where": "lab1u5"
+  },
+  {
+   "text": "Utinam venīrēs!",
+   "say": "Utinam venires!",
+   "where": "lab1u5"
+  },
+  {
+   "text": "Edō ut vīvam.",
+   "say": "Edo ut vivam.",
+   "where": "lab1u5"
+  },
+  {
+   "text": "Venit ut videat.",
+   "say": "Venit ut videat.",
+   "where": "lab1u5"
+  },
+  {
+   "text": "Cavē nē cadās.",
+   "say": "Cave ne cadas.",
+   "where": "lab1u5"
+  },
+  {
+   "text": "Rogō ut veniās.",
+   "say": "Rogo ut venias.",
+   "where": "lab1u5"
+  },
+  {
+   "text": "Ēsse oportet ut vīvās, nōn vīvere ut edās.",
+   "say": "Esse oportet ut vivas, non vivere ut edas.",
+   "where": "lab1u5"
+  },
+  {
+   "text": "Nē timeās.",
+   "say": "Ne timeas.",
+   "where": "lab1u5"
+  },
+  {
+   "text": "Quid faciam?",
+   "say": "Quid faciam?",
+   "where": "lab1u5"
+  },
+  {
+   "text": "Ōlim Numitor rēx Albae Longae erat.",
+   "say": "Olim Numitor rex Albe Longe erat.",
+   "where": "lab1u6"
+  },
+  {
+   "text": "Frāter eius Amūlius rēgnum occupāvit.",
+   "say": "Frater eius Amulius regnum occupavit.",
+   "where": "lab1u6"
+  },
+  {
+   "text": "Rhēa Silvia, fīlia Numitōris, geminōs peperit.",
+   "say": "Rhea Silvia, filia Numitoris, geminos peperit.",
+   "where": "lab1u6"
+  },
+  {
+   "text": "Amūlius puerōs in Tiberim iacī iussit.",
+   "say": "Amulius pueros in Tiberim iaci iussit.",
+   "where": "lab1u6"
+  },
+  {
+   "text": "Sed aqua puerōs in rīpam portāvit.",
+   "say": "Sed aqua pueros in ripam portavit.",
+   "where": "lab1u6"
+  },
+  {
+   "text": "Lupa puerōs invēnit et lacte aluit.",
+   "say": "Lupa pueros invenit et lacte aluit.",
+   "where": "lab1u6"
+  },
+  {
+   "text": "Deinde pāstor Faustulus eōs ēducāvit.",
+   "say": "Deinde pastor Faustulus eos educavit.",
+   "where": "lab1u6"
+  },
+  {
+   "text": "Puerī Rōmulus et Remus vocābantur.",
+   "say": "Pueri Romulus et Remus vocabantur.",
+   "where": "lab1u6"
+  },
+  {
+   "text": "Iuvenēs Amūlium interfēcērunt.",
+   "say": "Iuvenes Amulium interfecerunt.",
+   "where": "lab1u6"
+  },
+  {
+   "text": "Novam urbem condere cōnstituērunt.",
+   "say": "Novam urbem condere constituerunt.",
+   "where": "lab1u6"
+  },
+  {
+   "text": "Remus mūrōs frātris trānsiluit.",
+   "say": "Remus muros fratris transiluit.",
+   "where": "lab1u6"
+  },
+  {
+   "text": "Rōmulus eum occīdit et urbem Rōmam appellāvit.",
+   "say": "Romulus eum occidit et urbem Romam appellavit.",
+   "where": "lab1u6"
+  },
+  {
+   "text": "Gallia est omnis dīvīsa in partēs trēs.",
+   "say": "Gallia est omnis divisa in partes tres.",
+   "where": "lab1u7"
+  },
+  {
+   "text": "Caesar in Galliam cum legiōnibus vēnit.",
+   "say": "Cesar in Galliam cum legionibus venit.",
+   "where": "lab1u7"
+  },
+  {
+   "text": "Helvētiī ē fīnibus suīs exīre cōnstituērunt.",
+   "say": "elvezii e finibus suis exire constituerunt.",
+   "where": "lab1u7"
+  },
+  {
+   "text": "Caesar pontem in Rhēnō fēcit.",
+   "say": "Cesar pontem in Rheno fecit.",
+   "where": "lab1u7"
+  },
+  {
+   "text": "Mīlitēs castra posuērunt.",
+   "say": "Milites castra posuerunt.",
+   "where": "lab1u7"
+  },
+  {
+   "text": "Vercingetorīx Gallōs ad bellum vocāvit.",
+   "say": "Vercingetorix Gallos ad bellum vocavit.",
+   "where": "lab1u7"
+  },
+  {
+   "text": "Rōmānī Alesiam obsēdērunt.",
+   "say": "Romani Alesiam obsederunt.",
+   "where": "lab1u7"
+  },
+  {
+   "text": "Gallī fortiter pugnāvērunt, sed victī sunt.",
+   "say": "Galli fortiter pugnaverunt, sed victi sunt.",
+   "where": "lab1u7"
+  },
+  {
+   "text": "Vercingetorīx arma Caesarī trādidit.",
+   "say": "Vercingetorix arma Cesari tradidit.",
+   "where": "lab1u7"
+  },
+  {
+   "text": "Hominēs id quod volunt crēdunt.",
+   "say": "omines id quod volunt credunt.",
+   "where": "lab1u7"
+  },
+  {
+   "text": "Caesar commentāriōs dē bellō Gallicō scrīpsit.",
+   "say": "Cesar commentarios de bello Gallico scripsit.",
+   "where": "lab1u7"
+  },
+  {
+   "text": "Posteā Caesar Rubicōnem trānsiit.",
+   "say": "Postea Cesar Rubiconem transiit.",
+   "where": "lab1u7"
+  },
+  {
+   "text": "Pompēiī oppidum Campāniae erant.",
+   "say": "Pompeii oppidum Campanie erant.",
+   "where": "lab1u8"
+  },
+  {
+   "text": "Mōns Vesuvius prope oppidum stābat.",
+   "say": "Mons Vesuvius prope oppidum stabat.",
+   "where": "lab1u8"
+  },
+  {
+   "text": "Annō septuāgēsimō nōnō mōns ārsit.",
+   "say": "Anno septuagesimo nono mons arsit.",
+   "where": "lab1u8"
+  },
+  {
+   "text": "Nūbēs ingēns ē monte surgēbat.",
+   "say": "Nubes ingens e monte surgebat.",
+   "where": "lab1u8"
+  },
+  {
+   "text": "Cinis et lapidēs dē caelō cadēbant.",
+   "say": "Cinis et lapides de celo cadebant.",
+   "where": "lab1u8"
+  },
+  {
+   "text": "Incolae ad mare fugiēbant.",
+   "say": "Incole ad mare fugiebant.",
+   "where": "lab1u8"
+  },
+  {
+   "text": "Plīnius Maior nāvēs ad lītus dūxit.",
+   "say": "Plinius Maior naves ad litus duxit.",
+   "where": "lab1u8"
+  },
+  {
+   "text": "Ibi fūmō exstīnctus est.",
+   "say": "Ibi fumo exstinctus est.",
+   "where": "lab1u8"
+  },
+  {
+   "text": "Nepōs eius rem Tacitō nārrāvit.",
+   "say": "Nepos eius rem Tacito narravit.",
+   "where": "lab1u8"
+  },
+  {
+   "text": "Oppidum cinere opertum est.",
+   "say": "Oppidum cinere opertum est.",
+   "where": "lab1u8"
+  },
+  {
+   "text": "Multīs post saeculīs oppidum repertum est.",
+   "say": "Multis post seculis oppidum repertum est.",
+   "where": "lab1u8"
+  },
+  {
+   "text": "Hodiē Pompēiōs vīsitāre possumus.",
+   "say": "odie Pompeios visitare possumus.",
+   "where": "lab1u8"
+  },
+  {
+   "text": "manus",
+   "say": "manus",
+   "where": "lab1u9"
+  },
+  {
+   "text": "caput",
+   "say": "caput",
+   "where": "lab1u9"
+  },
+  {
+   "text": "lūx",
+   "say": "lux",
+   "where": "lab1u9"
+  },
+  {
+   "text": "corpus",
+   "say": "corpus",
+   "where": "lab1u9"
+  },
+  {
+   "text": "liber",
+   "say": "liber",
+   "where": "lab1u9"
+  },
+  {
+   "text": "mare",
+   "say": "mare",
+   "where": "lab1u9"
+  },
+  {
+   "text": "oculus",
+   "say": "oculus",
+   "where": "lab1u9"
+  },
+  {
+   "text": "Veni, vidi, vici.",
+   "say": "Veni, vidi, vici.",
+   "where": "t900"
+  },
+  {
+   "text": "Alea iacta est.",
+   "say": "Alea iacta est.",
+   "where": "t900"
+  },
+  {
+   "text": "Fortes fortuna adiuvat.",
+   "say": "Fortes fortuna adiuvat.",
+   "where": "t900"
+  },
+  {
+   "text": "Audentes fortuna iuvat.",
+   "say": "Audentes fortuna iuvat.",
+   "where": "t900"
+  },
+  {
+   "text": "Mens sana in corpore sano.",
+   "say": "Mens sana in corpore sano.",
+   "where": "t900"
+  },
+  {
+   "text": "Panem et circenses.",
+   "say": "Panem et circenses.",
+   "where": "t900"
+  },
+  {
+   "text": "Cave canem.",
+   "say": "Cave canem.",
+   "where": "t900"
+  },
+  {
+   "text": "Gutta cavat lapidem.",
+   "say": "Gutta cavat lapidem.",
+   "where": "t900"
+  },
+  {
+   "text": "Quis custodiet ipsos custodes?",
+   "say": "Quis custodiet ipsos custodes?",
+   "where": "t900"
+  },
+  {
+   "text": "Lupus est homo homini.",
+   "say": "Lupus est omo omini.",
+   "where": "t900"
+  },
+  {
+   "text": "Fugit inreparabile tempus.",
+   "say": "Fugit inreparabile tempus.",
+   "where": "t900"
+  },
+  {
+   "text": "Dulce et decorum est pro patria mori.",
+   "say": "Dulce et decorum est pro patria mori.",
+   "where": "t900"
+  },
+  {
+   "text": "Homo sum, humani nihil a me alienum puto.",
+   "say": "omo sum, umani nichil a me alienum puto.",
+   "where": "t900"
+  },
+  {
+   "text": "Patria est, ubicumque est bene.",
+   "say": "Patria est, ubicumque est bene.",
+   "where": "t900"
+  },
+  {
+   "text": "Tempus edax rerum.",
+   "say": "Tempus edax rerum.",
+   "where": "t900"
+  },
+  {
+   "text": "Experto credite.",
+   "say": "Experto credite.",
+   "where": "t900"
+  },
+  {
+   "text": "Ab ovo usque ad mala.",
+   "say": "Ab ovo usque ad mala.",
+   "where": "t900"
+  },
+  {
+   "text": "Labor omnia vicit improbus.",
+   "say": "Labor omnia vicit improbus.",
+   "where": "t900"
+  },
+  {
+   "text": "Vindica te tibi.",
+   "say": "Vindica te tibi.",
+   "where": "t901"
+  },
+  {
+   "text": "Omnia, Lucili, aliena sunt, tempus tantum nostrum est.",
+   "say": "Omnia, Lucili, aliena sunt, tempus tantum nostrum est.",
+   "where": "t901"
+  },
+  {
+   "text": "Dum differtur, vita transcurrit.",
+   "say": "Dum differtur, vita transcurrit.",
+   "where": "t901"
+  },
+  {
+   "text": "Homines, dum docent, discunt.",
+   "say": "omines, dum docent, discunt.",
+   "where": "t901"
+  },
+  {
+   "text": "Non vitae, sed scholae discimus.",
+   "say": "Non vite, sed schole discimus.",
+   "where": "t901"
+  },
+  {
+   "text": "Vita, si uti scias, longa est.",
+   "say": "Vita, si uti scias, longa est.",
+   "where": "t901"
+  },
+  {
+   "text": "Non exiguum temporis habemus, sed multum perdidimus.",
+   "say": "Non exiguum temporis abemus, sed multum perdidimus.",
+   "where": "t901"
+  },
+  {
+   "text": "Ducunt volentem fata, nolentem trahunt.",
+   "say": "Ducunt volentem fata, nolentem trahunt.",
+   "where": "t901"
+  },
+  {
+   "text": "Si vis amari, ama.",
+   "say": "Si vis amari, ama.",
+   "where": "t901"
+  },
+  {
+   "text": "Non quia difficilia sunt non audemus, sed quia non audemus difficilia sunt.",
+   "say": "Non quia difficilia sunt non audemus, sed quia non audemus difficilia sunt.",
+   "where": "t901"
+  },
+  {
+   "text": "Ignoranti quem portum petat nullus suus ventus est.",
+   "say": "Ignoranti quem portum petat nullus suus ventus est.",
+   "where": "t901"
+  },
+  {
+   "text": "Nusquam est qui ubique est.",
+   "say": "Nusquam est qui ubique est.",
+   "where": "t901"
+  },
+  {
+   "text": "Animum debes mutare, non caelum.",
+   "say": "Animum debes mutare, non celum.",
+   "where": "t901"
+  },
+  {
+   "text": "Recte facti fecisse merces est.",
+   "say": "Recte facti fecisse merces est.",
+   "where": "t901"
+  },
+  {
+   "text": "Non est ad astra mollis e terris via.",
+   "say": "Non est ad astra mollis e terris via.",
+   "where": "t901"
+  },
+  {
+   "text": "Magna servitus est magna fortuna.",
+   "say": "Magna servitus est magna fortuna.",
+   "where": "t901"
+  },
+  {
+   "text": "Otium sine litteris mors est.",
+   "say": "Ozium sine litteris mors est.",
+   "where": "t901"
+  },
+  {
+   "text": "Gallia est omnis divisa in partes tres.",
+   "say": "Gallia est omnis divisa in partes tres.",
+   "where": "t902"
+  },
+  {
+   "text": "Horum omnium fortissimi sunt Belgae.",
+   "say": "orum omnium fortissimi sunt Belge.",
+   "where": "t902"
+  },
+  {
+   "text": "Fere libenter homines id quod volunt credunt.",
+   "say": "Fere libenter omines id quod volunt credunt.",
+   "where": "t902"
+  },
+  {
+   "text": "Desilite, milites, nisi vultis aquilam hostibus prodere.",
+   "say": "Desilite, milites, nisi vultis aquilam ostibus prodere.",
+   "where": "t902"
+  },
+  {
+   "text": "Concordia parvae res crescunt, discordia maximae dilabuntur.",
+   "say": "Concordia parve res crescunt, discordia maxime dilabuntur.",
+   "where": "t902"
+  },
+  {
+   "text": "Urbem venalem et mature perituram, si emptorem invenerit!",
+   "say": "Urbem venalem et mature perituram, si emptorem invenerit!",
+   "where": "t902"
+  },
+  {
+   "text": "Vae victis!",
+   "say": "Ve victis!",
+   "where": "t902"
+  },
+  {
+   "text": "Hic manebimus optime.",
+   "say": "ic manebimus optime.",
+   "where": "t902"
+  },
+  {
+   "text": "Vincere scis, Hannibal; victoria uti nescis.",
+   "say": "Vincere scis, annibal; victoria uti nescis.",
+   "where": "t902"
+  },
+  {
+   "text": "Hannibal ad portas!",
+   "say": "annibal ad portas!",
+   "where": "t902"
+  },
+  {
+   "text": "Ave, Imperator, morituri te salutant.",
+   "say": "Ave, Imperator, morituri te salutant.",
+   "where": "t902"
+  },
+  {
+   "text": "Quintili Vare, legiones redde!",
+   "say": "Quintili Vare, legiones redde!",
+   "where": "t902"
+  },
+  {
+   "text": "Qualis artifex pereo!",
+   "say": "Qualis artifex pereo!",
+   "where": "t902"
+  },
+  {
+   "text": "Urbem Romam a principio reges habuere.",
+   "say": "Urbem Romam a principio reges abuere.",
+   "where": "t902"
+  },
+  {
+   "text": "Sine ira et studio.",
+   "say": "Sine ira et studio.",
+   "where": "t902"
+  },
+  {
+   "text": "Corruptissima re publica plurimae leges.",
+   "say": "Corruptissima re publica plurime leges.",
+   "where": "t902"
+  },
+  {
+   "text": "Omne ignotum pro magnifico est.",
+   "say": "Omne ignotum pro magnifico est.",
+   "where": "t902"
+  },
+  {
+   "text": "Ubi solitudinem faciunt, pacem appellant.",
+   "say": "Ubi solitudinem faciunt, pacem appellant.",
+   "where": "t902"
+  },
+  {
+   "text": "Vivamus, mea Lesbia, atque amemus.",
+   "say": "Vivamus, mea Lesbia, atque amemus.",
+   "where": "t903"
+  },
+  {
+   "text": "Da mi basia mille, deinde centum.",
+   "say": "Da mi basia mille, deinde centum.",
+   "where": "t903"
+  },
+  {
+   "text": "Passer, deliciae meae puellae.",
+   "say": "Passer, delicie mee puelle.",
+   "where": "t903"
+  },
+  {
+   "text": "Lugete, o Veneres Cupidinesque.",
+   "say": "Lugete, o Veneres Cupidinesque.",
+   "where": "t903"
+  },
+  {
+   "text": "Odi et amo. Quare id faciam, fortasse requiris.",
+   "say": "Odi et amo. Quare id faciam, fortasse requiris.",
+   "where": "t903"
+  },
+  {
+   "text": "Nescio, sed fieri sentio et excrucior.",
+   "say": "Nescio, sed fieri senzio et excrucior.",
+   "where": "t903"
+  },
+  {
+   "text": "Nulli se dicit mulier mea nubere malle quam mihi.",
+   "say": "Nulli se dicit mulier mea nubere malle quam michi.",
+   "where": "t903"
+  },
+  {
+   "text": "Militat omnis amans.",
+   "say": "Militat omnis amans.",
+   "where": "t903"
+  },
+  {
+   "text": "Video meliora proboque, deteriora sequor.",
+   "say": "Video meliora proboque, deteriora sequor.",
+   "where": "t903"
+  },
+  {
+   "text": "Ut ameris, amabilis esto.",
+   "say": "Ut ameris, amabilis esto.",
+   "where": "t903"
+  },
+  {
+   "text": "Donec eris felix, multos numerabis amicos.",
+   "say": "Donec eris felix, multos numerabis amicos.",
+   "where": "t903"
+  },
+  {
+   "text": "Est quaedam flere voluptas.",
+   "say": "Est quedam flere voluptas.",
+   "where": "t903"
+  },
+  {
+   "text": "Omnia mutantur, nihil interit.",
+   "say": "Omnia mutantur, nichil interit.",
+   "where": "t903"
+  },
+  {
+   "text": "Principiis obsta.",
+   "say": "Principiis obsta.",
+   "where": "t903"
+  },
+  {
+   "text": "Bene qui latuit, bene vixit.",
+   "say": "Bene qui latuit, bene vixit.",
+   "where": "t903"
+  },
+  {
+   "text": "Pyramus et Thisbe, iuvenum pulcherrimus alter.",
+   "say": "Piramus et Tisbe, iuvenum pulcherrimus alter.",
+   "where": "t903"
+  },
+  {
+   "text": "Non amo te, Sabidi, nec possum dicere quare.",
+   "say": "Non amo te, Sabidi, nec possum dicere quare.",
+   "where": "t903"
+  },
+  {
+   "text": "Nuper erat medicus, nunc est vispillo Diaulus.",
+   "say": "Nuper erat medicus, nunc est vispillo Diaulus.",
+   "where": "t903"
+  },
+  {
+   "text": "Nec tecum possum vivere nec sine te.",
+   "say": "Nec tecum possum vivere nec sine te.",
+   "where": "t903"
+  },
+  {
+   "text": "Quo usque tandem abutere, Catilina, patientia nostra?",
+   "say": "Quo usque tandem abutere, Catilina, pazienzia nostra?",
+   "where": "t904"
+  },
+  {
+   "text": "O tempora, o mores!",
+   "say": "O tempora, o mores!",
+   "where": "t904"
+  },
+  {
+   "text": "Abiit, excessit, evasit, erupit.",
+   "say": "Abiit, excessit, evasit, erupit.",
+   "where": "t904"
+  },
+  {
+   "text": "Cum tacent, clamant.",
+   "say": "Cum tacent, clamant.",
+   "where": "t904"
+  },
+  {
+   "text": "Cedant arma togae.",
+   "say": "Cedant arma toge.",
+   "where": "t904"
+  },
+  {
+   "text": "Historia testis temporum, lux veritatis, vita memoriae, magistra vitae.",
+   "say": "istoria testis temporum, lux veritatis, vita memorie, magistra vite.",
+   "where": "t904"
+  },
+  {
+   "text": "Silent enim leges inter arma.",
+   "say": "Silent enim leges inter arma.",
+   "where": "t904"
+  },
+  {
+   "text": "Summum ius, summa iniuria.",
+   "say": "Summum ius, summa iniuria.",
+   "where": "t904"
+  },
+  {
+   "text": "Amicus certus in re incerta cernitur.",
+   "say": "Amicus certus in re incerta cernitur.",
+   "where": "t904"
+  },
+  {
+   "text": "Salus populi suprema lex esto.",
+   "say": "Salus populi suprema lex esto.",
+   "where": "t904"
+  },
+  {
+   "text": "Cuiusvis hominis est errare, nullius nisi insipientis in errore perseverare.",
+   "say": "Cuiusvis ominis est errare, nullius nisi insipientis in errore perseverare.",
+   "where": "t904"
+  },
+  {
+   "text": "Mens cuiusque is est quisque.",
+   "say": "Mens cuiusque is est quisque.",
+   "where": "t904"
+  },
+  {
+   "text": "Ut sementem feceris, ita metes.",
+   "say": "Ut sementem feceris, ita metes.",
+   "where": "t904"
+  },
+  {
+   "text": "Omnium rerum principia parva sunt.",
+   "say": "Omnium rerum principia parva sunt.",
+   "where": "t904"
+  },
+  {
+   "text": "Nihil difficile amanti puto.",
+   "say": "Nichil difficile amanti puto.",
+   "where": "t904"
+  },
+  {
+   "text": "Haec studia adulescentiam alunt, senectutem oblectant.",
+   "say": "ec studia adulescenziam alunt, senectutem oblectant.",
+   "where": "t904"
+  },
+  {
+   "text": "Cui bono fuerit?",
+   "say": "Cui bono fuerit?",
+   "where": "t904"
+  },
+  {
+   "text": "Si hortum in bibliotheca habes, deerit nihil.",
+   "say": "Si ortum in biblioteca abes, deerit nichil.",
+   "where": "t904"
+  },
+  {
+   "text": "Otium cum dignitate.",
+   "say": "Ozium cum dignitate.",
+   "where": "t904"
+  },
+  {
+   "text": "Arma virumque cano.",
+   "say": "Arma virumque cano.",
+   "where": "t905"
+  },
+  {
+   "text": "Tantae molis erat Romanam condere gentem.",
+   "say": "Tante molis erat Romanam condere gentem.",
+   "where": "t905"
+  },
+  {
+   "text": "Forsan et haec olim meminisse iuvabit.",
+   "say": "Forsan et ec olim meminisse iuvabit.",
+   "where": "t905"
+  },
+  {
+   "text": "Sunt lacrimae rerum et mentem mortalia tangunt.",
+   "say": "Sunt lacrime rerum et mentem mortalia tangunt.",
+   "where": "t905"
+  },
+  {
+   "text": "Timeo Danaos et dona ferentes.",
+   "say": "Timeo Danaos et dona ferentes.",
+   "where": "t905"
+  },
+  {
+   "text": "Una salus victis nullam sperare salutem.",
+   "say": "Una salus victis nullam sperare salutem.",
+   "where": "t905"
+  },
+  {
+   "text": "Facilis descensus Averno.",
+   "say": "Facilis descensus Averno.",
+   "where": "t905"
+  },
+  {
+   "text": "Tu regere imperio populos, Romane, memento.",
+   "say": "Tu regere imperio populos, Romane, memento.",
+   "where": "t905"
+  },
+  {
+   "text": "Felix qui potuit rerum cognoscere causas.",
+   "say": "Felix qui potuit rerum cognoscere causas.",
+   "where": "t905"
+  },
+  {
+   "text": "Omnia vincit amor, et nos cedamus amori.",
+   "say": "Omnia vincit amor, et nos cedamus amori.",
+   "where": "t905"
+  },
+  {
+   "text": "Exegi monumentum aere perennius.",
+   "say": "Exegi monumentum ere perennius.",
+   "where": "t905"
+  },
+  {
+   "text": "Non omnis moriar.",
+   "say": "Non omnis moriar.",
+   "where": "t905"
+  },
+  {
+   "text": "Aequam memento rebus in arduis servare mentem.",
+   "say": "Equam memento rebus in arduis servare mentem.",
+   "where": "t905"
+  },
+  {
+   "text": "Nunc est bibendum.",
+   "say": "Nunc est bibendum.",
+   "where": "t905"
+  },
+  {
+   "text": "Ira furor brevis est.",
+   "say": "Ira furor brevis est.",
+   "where": "t905"
+  },
+  {
+   "text": "Sapere aude.",
+   "say": "Sapere aude.",
+   "where": "t905"
+  },
+  {
+   "text": "Naturam expellas furca, tamen usque recurret.",
+   "say": "Naturam expellas furca, tamen usque recurret.",
+   "where": "t905"
+  },
+  {
+   "text": "Graecia capta ferum victorem cepit.",
+   "say": "Grecia capta ferum victorem cepit.",
+   "where": "t905"
+  },
+  {
+   "text": "Parturient montes, nascetur ridiculus mus.",
+   "say": "Parturient montes, nascetur ridiculus mus.",
+   "where": "t905"
+  },
+  {
+   "text": "Gallia est omnis divisa in partes tres,",
+   "say": "Gallia est omnis divisa in partes tres,",
+   "where": "lac2u0"
+  },
+  {
+   "text": "quarum unam incolunt Belgae, aliam Aquitani,",
+   "say": "quarum unam incolunt Belge, aliam Aquitani,",
+   "where": "lac2u0"
+  },
+  {
+   "text": "tertiam qui ipsorum lingua Celtae, nostra Galli appellantur.",
+   "say": "terziam qui ipsorum lingua Celte, nostra Galli appellantur.",
+   "where": "lac2u0"
+  },
+  {
+   "text": "Hi omnes lingua, institutis, legibus inter se differunt.",
+   "say": "i omnes lingua, institutis, legibus inter se differunt.",
+   "where": "lac2u0"
+  },
+  {
+   "text": "Gallos ab Aquitanis Garumna flumen, a Belgis Matrona et Sequana dividit.",
+   "say": "Gallos ab Aquitanis Garumna flumen, a Belgis Matrona et Sequana dividit.",
+   "where": "lac2u0"
+  },
+  {
+   "text": "Horum omnium fortissimi sunt Belgae,",
+   "say": "orum omnium fortissimi sunt Belge,",
+   "where": "lac2u0"
+  },
+  {
+   "text": "propterea quod a cultu atque humanitate provinciae longissime absunt,",
+   "say": "propterea quod a cultu atque umanitate provincie longissime absunt,",
+   "where": "lac2u0"
+  },
+  {
+   "text": "minimeque ad eos mercatores saepe commeant",
+   "say": "minimeque ad eos mercatores sepe commeant",
+   "where": "lac2u0"
+  },
+  {
+   "text": "atque ea quae ad effeminandos animos pertinent important,",
+   "say": "atque ea que ad effeminandos animos pertinent important,",
+   "where": "lac2u0"
+  },
+  {
+   "text": "proximique sunt Germanis, qui trans Rhenum incolunt,",
+   "say": "proximique sunt Germanis, qui trans Rhenum incolunt,",
+   "where": "lac2u0"
+  },
+  {
+   "text": "quibuscum continenter bellum gerunt.",
+   "say": "quibuscum continenter bellum gerunt.",
+   "where": "lac2u0"
+  },
+  {
+   "text": "Qua de causa Helvetii quoque reliquos Gallos virtute praecedunt.",
+   "say": "Qua de causa elvezii quoque reliquos Gallos virtute precedunt.",
+   "where": "lac2u0"
+  },
+  {
+   "text": "Vivamus, mea Lesbia, atque amemus,",
+   "say": "Vivamus, mea Lesbia, atque amemus,",
+   "where": "lac2u1"
+  },
+  {
+   "text": "rumoresque senum severiorum",
+   "say": "rumoresque senum severiorum",
+   "where": "lac2u1"
+  },
+  {
+   "text": "omnes unius aestimemus assis!",
+   "say": "omnes unius estimemus assis!",
+   "where": "lac2u1"
+  },
+  {
+   "text": "Soles occidere et redire possunt:",
+   "say": "Soles occidere et redire possunt:",
+   "where": "lac2u1"
+  },
+  {
+   "text": "nobis cum semel occidit brevis lux,",
+   "say": "nobis cum semel occidit brevis lux,",
+   "where": "lac2u1"
+  },
+  {
+   "text": "nox est perpetua una dormienda.",
+   "say": "nox est perpetua una dormienda.",
+   "where": "lac2u1"
+  },
+  {
+   "text": "Da mi basia mille, deinde centum,",
+   "say": "Da mi basia mille, deinde centum,",
+   "where": "lac2u1"
+  },
+  {
+   "text": "dein mille altera, dein secunda centum,",
+   "say": "dein mille altera, dein secunda centum,",
+   "where": "lac2u1"
+  },
+  {
+   "text": "deinde usque altera mille, deinde centum.",
+   "say": "deinde usque altera mille, deinde centum.",
+   "where": "lac2u1"
+  },
+  {
+   "text": "Dein, cum milia multa fecerimus,",
+   "say": "Dein, cum milia multa fecerimus,",
+   "where": "lac2u1"
+  },
+  {
+   "text": "conturbabimus illa, ne sciamus,",
+   "say": "conturbabimus illa, ne sciamus,",
+   "where": "lac2u1"
+  },
+  {
+   "text": "aut ne quis malus invidere possit,",
+   "say": "aut ne quis malus invidere possit,",
+   "where": "lac2u1"
+  },
+  {
+   "text": "cum tantum sciat esse basiorum.",
+   "say": "cum tantum sciat esse basiorum.",
+   "where": "lac2u1"
+  },
+  {
+   "text": "Arma virumque cano, Troiae qui primus ab oris",
+   "say": "Arma virumque cano, Troie qui primus ab oris",
+   "where": "lac2u2"
+  },
+  {
+   "text": "Italiam, fato profugus, Laviniaque venit",
+   "say": "Italiam, fato profugus, Laviniaque venit",
+   "where": "lac2u2"
+  },
+  {
+   "text": "litora, multum ille et terris iactatus et alto",
+   "say": "litora, multum ille et terris iactatus et alto",
+   "where": "lac2u2"
+  },
+  {
+   "text": "vi superum saevae memorem Iunonis ob iram;",
+   "say": "vi superum seve memorem Iunonis ob iram;",
+   "where": "lac2u2"
+  },
+  {
+   "text": "multa quoque et bello passus, dum conderet urbem",
+   "say": "multa quoque et bello passus, dum conderet urbem",
+   "where": "lac2u2"
+  },
+  {
+   "text": "inferretque deos Latio, genus unde Latinum",
+   "say": "inferretque deos Lazio, genus unde Latinum",
+   "where": "lac2u2"
+  },
+  {
+   "text": "Albanique patres, atque altae moenia Romae.",
+   "say": "Albanique patres, atque alte menia Rome.",
+   "where": "lac2u2"
+  },
+  {
+   "text": "Musa, mihi causas memora, quo numine laeso,",
+   "say": "Musa, michi causas memora, quo numine leso,",
+   "where": "lac2u2"
+  },
+  {
+   "text": "quidve dolens, regina deum tot volvere casus",
+   "say": "quidve dolens, regina deum tot volvere casus",
+   "where": "lac2u2"
+  },
+  {
+   "text": "insignem pietate virum, tot adire labores",
+   "say": "insignem pietate virum, tot adire labores",
+   "where": "lac2u2"
+  },
+  {
+   "text": "impulerit. Tantaene animis caelestibus irae?",
+   "say": "impulerit. Tantene animis celestibus ire?",
+   "where": "lac2u2"
+  },
+  {
+   "text": "Quam diu etiam furor iste tuus nos eludet?",
+   "say": "Quam diu eziam furor iste tuus nos eludet?",
+   "where": "lac2u3"
+  },
+  {
+   "text": "Quem ad finem sese effrenata iactabit audacia?",
+   "say": "Quem ad finem sese effrenata iactabit audacia?",
+   "where": "lac2u3"
+  },
+  {
+   "text": "Nihilne te nocturnum praesidium Palati,",
+   "say": "Nichilne te nocturnum presidium Palati,",
+   "where": "lac2u3"
+  },
+  {
+   "text": "nihil urbis vigiliae, nihil timor populi,",
+   "say": "nichil urbis vigilie, nichil timor populi,",
+   "where": "lac2u3"
+  },
+  {
+   "text": "nihil concursus bonorum omnium,",
+   "say": "nichil concursus bonorum omnium,",
+   "where": "lac2u3"
+  },
+  {
+   "text": "nihil hic munitissimus habendi senatus locus,",
+   "say": "nichil ic munitissimus abendi senatus locus,",
+   "where": "lac2u3"
+  },
+  {
+   "text": "nihil horum ora voltusque moverunt?",
+   "say": "nichil orum ora voltusque moverunt?",
+   "where": "lac2u3"
+  },
+  {
+   "text": "Patere tua consilia non sentis?",
+   "say": "Patere tua consilia non sentis?",
+   "where": "lac2u3"
+  },
+  {
+   "text": "Senatus haec intellegit, consul videt;",
+   "say": "Senatus ec intellegit, consul videt;",
+   "where": "lac2u3"
+  },
+  {
+   "text": "hic tamen vivit.",
+   "say": "ic tamen vivit.",
+   "where": "lac2u3"
+  },
+  {
+   "text": "Carpe diem",
+   "say": "Carpe diem",
+   "where": "citation"
+  },
+  {
+   "text": "Veni, vidi, vici",
+   "say": "Veni, vidi, vici",
+   "where": "citation"
+  },
+  {
+   "text": "Alea iacta est",
+   "say": "Alea iacta est",
+   "where": "citation"
+  },
+  {
+   "text": "Errare humanum est",
+   "say": "Errare umanum est",
+   "where": "citation"
+  },
+  {
+   "text": "Dum spiro, spero",
+   "say": "Dum spiro, spero",
+   "where": "citation"
+  },
+  {
+   "text": "Festina lente",
+   "say": "Festina lente",
+   "where": "citation"
+  },
+  {
+   "text": "Memento mori",
+   "say": "Memento mori",
+   "where": "citation"
+  },
+  {
+   "text": "Panem et circenses",
+   "say": "Panem et circenses",
+   "where": "citation"
+  },
+  {
+   "text": "Mens sana in corpore sano",
+   "say": "Mens sana in corpore sano",
+   "where": "citation"
+  },
+  {
+   "text": "Cogito, ergo sum",
+   "say": "Cogito, ergo sum",
+   "where": "citation"
+  },
+  {
+   "text": "Lupus est homo homini",
+   "say": "Lupus est omo omini",
+   "where": "citation"
+  },
+  {
+   "text": "Per aspera ad astra",
+   "say": "Per aspera ad astra",
+   "where": "citation"
+  },
+  {
+   "text": "Audentes fortuna iuvat",
+   "say": "Audentes fortuna iuvat",
+   "where": "citation"
+  },
+  {
+   "text": "Fugit irreparabile tempus",
+   "say": "Fugit irreparabile tempus",
+   "where": "citation"
+  },
+  {
+   "text": "Omnia vincit amor",
+   "say": "Omnia vincit amor",
+   "where": "citation"
+  },
+  {
+   "text": "Si vis pacem, para bellum",
+   "say": "Si vis pacem, para bellum",
+   "where": "citation"
+  },
+  {
+   "text": "Nosce te ipsum",
+   "say": "Nosce te ipsum",
+   "where": "citation"
+  },
+  {
+   "text": "In vino veritas",
+   "say": "In vino veritas",
+   "where": "citation"
+  },
+  {
+   "text": "Verba volant, scripta manent",
+   "say": "Verba volant, scripta manent",
+   "where": "citation"
+  },
+  {
+   "text": "Ars longa, vita brevis",
+   "say": "Ars longa, vita brevis",
+   "where": "citation"
+  },
+  {
+   "text": "Fortes fortuna adiuvat",
+   "say": "Fortes fortuna adiuvat",
+   "where": "citation"
+  },
+  {
+   "text": "Gutta cavat lapidem",
+   "say": "Gutta cavat lapidem",
+   "where": "citation"
+  },
+  {
+   "text": "Ubi bene, ibi patria",
+   "say": "Ubi bene, ibi patria",
+   "where": "citation"
+  },
+  {
+   "text": "Nihil novi sub sole",
+   "say": "Nichil novi sub sole",
+   "where": "citation"
+  },
+  {
+   "text": "Sic transit gloria mundi",
+   "say": "Sic transit gloria mundi",
+   "where": "citation"
+  },
+  {
+   "text": "Docendo discimus",
+   "say": "Docendo discimus",
+   "where": "citation"
+  },
+  {
+   "text": "Primum non nocere",
+   "say": "Primum non nocere",
+   "where": "citation"
+  },
+  {
+   "text": "Ave, Caesar, morituri te salutant",
+   "say": "Ave, Cesar, morituri te salutant",
+   "where": "citation"
+  },
+  {
+   "text": "Odi et amo",
+   "say": "Odi et amo",
+   "where": "citation"
+  },
+  {
+   "text": "Labor omnia vicit improbus",
+   "say": "Labor omnia vicit improbus",
+   "where": "citation"
+  },
+  {
+   "text": "Fiat lux",
+   "say": "Fiat lux",
+   "where": "citation"
+  },
+  {
+   "text": "Non scholae, sed vitae discimus",
+   "say": "Non schole, sed vite discimus",
+   "where": "citation"
+  },
+  {
+   "text": "Dulce et decorum est pro patria mori",
+   "say": "Dulce et decorum est pro patria mori",
+   "where": "citation"
+  },
+  {
+   "text": "Aurea mediocritas",
+   "say": "Aurea mediocritas",
+   "where": "citation"
+  },
+  {
+   "text": "Natura non facit saltus",
+   "say": "Natura non facit saltus",
+   "where": "citation"
+  },
+  {
+   "text": "Timeo Danaos et dona ferentes",
+   "say": "Timeo Danaos et dona ferentes",
+   "where": "citation"
+  },
+  {
+   "text": "Tu quoque, mi fili?",
+   "say": "Tu quoque, mi fili?",
+   "where": "citation"
+  },
+  {
+   "text": "mater",
+   "say": "mater",
+   "where": "racine"
+  },
+  {
+   "text": "frater",
+   "say": "frater",
+   "where": "racine"
+  },
+  {
+   "text": "pes",
+   "say": "pes",
+   "where": "racine"
+  },
+  {
+   "text": "dens",
+   "say": "dens",
+   "where": "racine"
+  },
+  {
+   "text": "cor",
+   "say": "cor",
+   "where": "racine"
+  },
+  {
+   "text": "dies",
+   "say": "dies",
+   "where": "racine"
+  },
+  {
+   "text": "sol",
+   "say": "sol",
+   "where": "racine"
+  },
+  {
+   "text": "luna",
+   "say": "luna",
+   "where": "racine"
+  },
+  {
+   "text": "focus",
+   "say": "focus",
+   "where": "racine"
+  },
+  {
+   "text": "panis",
+   "say": "panis",
+   "where": "racine"
+  },
+  {
+   "text": "vinum",
+   "say": "vinum",
+   "where": "racine"
+  },
+  {
+   "text": "lac",
+   "say": "lac",
+   "where": "racine"
+  },
+  {
+   "text": "caballus",
+   "say": "caballus",
+   "where": "racine"
+  },
+  {
+   "text": "canis",
+   "say": "canis",
+   "where": "racine"
+  },
+  {
+   "text": "lupus",
+   "say": "lupus",
+   "where": "racine"
+  },
+  {
+   "text": "avis",
+   "say": "avis",
+   "where": "racine"
+  },
+  {
+   "text": "arbor",
+   "say": "arbor",
+   "where": "racine"
+  },
+  {
+   "text": "flos",
+   "say": "flos",
+   "where": "racine"
+  },
+  {
+   "text": "schola",
+   "say": "schola",
+   "where": "racine"
+  },
+  {
+   "text": "scribere",
+   "say": "scribere",
+   "where": "racine"
+  },
+  {
+   "text": "legere",
+   "say": "legere",
+   "where": "racine"
+  },
+  {
+   "text": "videre",
+   "say": "videre",
+   "where": "racine"
+  },
+  {
+   "text": "audire",
+   "say": "audire",
+   "where": "racine"
+  },
+  {
+   "text": "dicere",
+   "say": "dicere",
+   "where": "racine"
+  },
+  {
+   "text": "facere",
+   "say": "facere",
+   "where": "racine"
+  },
+  {
+   "text": "dormire",
+   "say": "dormire",
+   "where": "racine"
+  },
+  {
+   "text": "cantare",
+   "say": "cantare",
+   "where": "racine"
+  },
+  {
+   "text": "amare",
+   "say": "amare",
+   "where": "racine"
+  },
+  {
+   "text": "tempus",
+   "say": "tempus",
+   "where": "racine"
+  },
+  {
+   "text": "mensis",
+   "say": "mensis",
+   "where": "racine"
+  },
+  {
+   "text": "villa",
+   "say": "villa",
+   "where": "racine"
+  },
+  {
+   "text": "civitas",
+   "say": "civitas",
+   "where": "racine"
+  },
+  {
+   "text": "rex",
+   "say": "rex",
+   "where": "racine"
+  },
+  {
+   "text": "lex",
+   "say": "lex",
+   "where": "racine"
+  },
+  {
+   "text": "pax",
+   "say": "pax",
+   "where": "racine"
+  },
+  {
+   "text": "vox",
+   "say": "vox",
+   "where": "racine"
+  },
+  {
+   "text": "nomen",
+   "say": "nomen",
+   "where": "racine"
+  },
+  {
+   "text": "littera",
+   "say": "littera",
+   "where": "racine"
+  },
+  {
+   "text": "numerus",
+   "say": "numerus",
+   "where": "racine"
+  },
+  {
+   "text": "homo",
+   "say": "omo",
+   "where": "racine"
+  },
+  {
+   "text": "femina",
+   "say": "femina",
+   "where": "racine"
+  },
+  {
+   "text": "iuvenis",
+   "say": "iuvenis",
+   "where": "racine"
+  },
+  {
+   "text": "senex",
+   "say": "senex",
+   "where": "racine"
+  },
+  {
+   "text": "bonus",
+   "say": "bonus",
+   "where": "racine"
+  },
+  {
+   "text": "malus",
+   "say": "malus",
+   "where": "racine"
+  },
+  {
+   "text": "novus",
+   "say": "novus",
+   "where": "racine"
+  },
+  {
+   "text": "altus",
+   "say": "altus",
+   "where": "racine"
+  },
+  {
+   "text": "fortis",
+   "say": "fortis",
+   "where": "racine"
+  },
+  {
+   "text": "clarus",
+   "say": "clarus",
+   "where": "racine"
+  },
+  {
+   "text": "tres",
+   "say": "tres",
+   "where": "racine"
+  },
+  {
+   "text": "centum",
+   "say": "centum",
+   "where": "racine"
+  },
+  {
+   "text": "mille",
+   "say": "mille",
+   "where": "racine"
+  },
+  {
+   "text": "septem",
+   "say": "septem",
+   "where": "racine"
+  },
+  {
+   "text": "decem",
+   "say": "decem",
+   "where": "racine"
+  },
+  {
+   "text": "sanctus",
+   "say": "sanctus",
+   "where": "racine"
+  },
+  {
+   "text": "gratia",
+   "say": "grazia",
+   "where": "racine"
+  },
+  {
+   "text": "fabula",
+   "say": "fabula",
+   "where": "racine"
+  },
+  {
+   "text": "computare",
+   "say": "computare",
+   "where": "racine"
+  },
+  {
+   "text": "salarium",
+   "say": "salarium",
+   "where": "racine"
+  },
+  {
+   "text": "candidatus",
+   "say": "candidatus",
+   "where": "racine"
+  },
+  {
+   "text": "virus",
+   "say": "virus",
+   "where": "racine"
+  },
+  {
+   "text": "caelum",
+   "say": "celum",
+   "where": "racine"
+  },
+  {
+   "text": "mons",
+   "say": "mons",
+   "where": "racine"
+  },
+  {
+   "text": "fluvius",
+   "say": "fluvius",
+   "where": "racine"
+  },
+  {
+   "text": "insula",
+   "say": "insula",
+   "where": "racine"
+  },
+  {
+   "text": "porta",
+   "say": "porta",
+   "where": "racine"
+  },
+  {
+   "text": "aurum",
+   "say": "aurum",
+   "where": "racine"
+  },
+  {
+   "text": "ferrum",
+   "say": "ferrum",
+   "where": "racine"
+  },
+  {
+   "text": "Marcus et Iulia in villa habitant. Villa magna et pulchra est. Marcus puer Romanus est; Iulia puella est. Iulia rosas amat et cantat. Marcus in horto ludit.",
+   "say": "Marcus et Iulia in villa abitant. Villa magna et pulchra est. Marcus puer Romanus est; Iulia puella est. Iulia rosas amat et cantat. Marcus in orto ludit.",
+   "where": "texte villa"
+  },
+  {
+   "text": "Marcus",
+   "say": "Marcus",
+   "where": "mot villa"
+  },
+  {
+   "text": "et",
+   "say": "et",
+   "where": "mot villa"
+  },
+  {
+   "text": "Iulia",
+   "say": "Iulia",
+   "where": "mot villa"
+  },
+  {
+   "text": "in",
+   "say": "in",
+   "where": "mot villa"
+  },
+  {
+   "text": "habitant",
+   "say": "abitant",
+   "where": "mot villa"
+  },
+  {
+   "text": "Villa",
+   "say": "Villa",
+   "where": "mot villa"
+  },
+  {
+   "text": "magna",
+   "say": "magna",
+   "where": "mot villa"
+  },
+  {
+   "text": "pulchra",
+   "say": "pulchra",
+   "where": "mot villa"
+  },
+  {
+   "text": "puer",
+   "say": "puer",
+   "where": "mot villa"
+  },
+  {
+   "text": "Romanus",
+   "say": "Romanus",
+   "where": "mot villa"
+  },
+  {
+   "text": "rosas",
+   "say": "rosas",
+   "where": "mot villa"
+  },
+  {
+   "text": "amat",
+   "say": "amat",
+   "where": "mot villa"
+  },
+  {
+   "text": "cantat",
+   "say": "cantat",
+   "where": "mot villa"
+  },
+  {
+   "text": "horto",
+   "say": "orto",
+   "where": "mot villa"
+  },
+  {
+   "text": "ludit",
+   "say": "ludit",
+   "where": "mot villa"
+  },
+  {
+   "text": "Magister in schola docet. Discipuli tabulas habent et scribunt. Quintus non scribit; dormit. Magister clamat: «Quinte, surge!» Discipuli rident.",
+   "say": "Magister in schola docet. Discipuli tabulas abent et scribunt. Quintus non scribit; dormit. Magister clamat: «Quinte, surge!» Discipuli rident.",
+   "where": "texte schola"
+  },
+  {
+   "text": "Magister",
+   "say": "Magister",
+   "where": "mot schola"
+  },
+  {
+   "text": "docet",
+   "say": "docet",
+   "where": "mot schola"
+  },
+  {
+   "text": "Discipuli",
+   "say": "Discipuli",
+   "where": "mot schola"
+  },
+  {
+   "text": "tabulas",
+   "say": "tabulas",
+   "where": "mot schola"
+  },
+  {
+   "text": "habent",
+   "say": "abent",
+   "where": "mot schola"
+  },
+  {
+   "text": "scribunt",
+   "say": "scribunt",
+   "where": "mot schola"
+  },
+  {
+   "text": "Quintus",
+   "say": "Quintus",
+   "where": "mot schola"
+  },
+  {
+   "text": "non",
+   "say": "non",
+   "where": "mot schola"
+  },
+  {
+   "text": "scribit",
+   "say": "scribit",
+   "where": "mot schola"
+  },
+  {
+   "text": "dormit",
+   "say": "dormit",
+   "where": "mot schola"
+  },
+  {
+   "text": "clamat",
+   "say": "clamat",
+   "where": "mot schola"
+  },
+  {
+   "text": "Quinte",
+   "say": "Quinte",
+   "where": "mot schola"
+  },
+  {
+   "text": "surge",
+   "say": "surge",
+   "where": "mot schola"
+  },
+  {
+   "text": "rident",
+   "say": "rident",
+   "where": "mot schola"
+  },
+  {
+   "text": "Iulius vir Romanus est. Aemilia femina Romana est. Marcus filius Iulii est, Iulia filia Aemiliae. Familia servos multos habet. Iulius filium et filiam amat.",
+   "say": "Iulius vir Romanus est. Emilia femina Romana est. Marcus filius Iulii est, Iulia filia Emilie. Familia servos multos abet. Iulius filium et filiam amat.",
+   "where": "texte familia"
+  },
+  {
+   "text": "Iulius",
+   "say": "Iulius",
+   "where": "mot familia"
+  },
+  {
+   "text": "vir",
+   "say": "vir",
+   "where": "mot familia"
+  },
+  {
+   "text": "Aemilia",
+   "say": "Emilia",
+   "where": "mot familia"
+  },
+  {
+   "text": "Romana",
+   "say": "Romana",
+   "where": "mot familia"
+  },
+  {
+   "text": "filius",
+   "say": "filius",
+   "where": "mot familia"
+  },
+  {
+   "text": "Iulii",
+   "say": "Iulii",
+   "where": "mot familia"
+  },
+  {
+   "text": "filia",
+   "say": "filia",
+   "where": "mot familia"
+  },
+  {
+   "text": "Aemiliae",
+   "say": "Emilie",
+   "where": "mot familia"
+  },
+  {
+   "text": "Familia",
+   "say": "Familia",
+   "where": "mot familia"
+  },
+  {
+   "text": "servos",
+   "say": "servos",
+   "where": "mot familia"
+  },
+  {
+   "text": "multos",
+   "say": "multos",
+   "where": "mot familia"
+  },
+  {
+   "text": "habet",
+   "say": "abet",
+   "where": "mot familia"
+  },
+  {
+   "text": "filium",
+   "say": "filium",
+   "where": "mot familia"
+  },
+  {
+   "text": "filiam",
+   "say": "filiam",
+   "where": "mot familia"
+  },
+  {
+   "text": "Hodie Marcus ad forum ambulat. In foro mercatores panem et vinum vendunt. Orator cum civibus disputat. Marcus libenter audit, deinde domum redit.",
+   "say": "odie Marcus ad forum ambulat. In foro mercatores panem et vinum vendunt. Orator cum civibus disputat. Marcus libenter audit, deinde domum redit.",
+   "where": "texte forum"
+  },
+  {
+   "text": "Hodie",
+   "say": "odie",
+   "where": "mot forum"
+  },
+  {
+   "text": "ad",
+   "say": "ad",
+   "where": "mot forum"
+  },
+  {
+   "text": "ambulat",
+   "say": "ambulat",
+   "where": "mot forum"
+  },
+  {
+   "text": "In",
+   "say": "In",
+   "where": "mot forum"
+  },
+  {
+   "text": "foro",
+   "say": "foro",
+   "where": "mot forum"
+  },
+  {
+   "text": "mercatores",
+   "say": "mercatores",
+   "where": "mot forum"
+  },
+  {
+   "text": "panem",
+   "say": "panem",
+   "where": "mot forum"
+  },
+  {
+   "text": "vendunt",
+   "say": "vendunt",
+   "where": "mot forum"
+  },
+  {
+   "text": "Orator",
+   "say": "Orator",
+   "where": "mot forum"
+  },
+  {
+   "text": "cum",
+   "say": "cum",
+   "where": "mot forum"
+  },
+  {
+   "text": "civibus",
+   "say": "civibus",
+   "where": "mot forum"
+  },
+  {
+   "text": "disputat",
+   "say": "disputat",
+   "where": "mot forum"
+  },
+  {
+   "text": "libenter",
+   "say": "libenter",
+   "where": "mot forum"
+  },
+  {
+   "text": "audit",
+   "say": "audit",
+   "where": "mot forum"
+  },
+  {
+   "text": "deinde",
+   "say": "deinde",
+   "where": "mot forum"
+  },
+  {
+   "text": "domum",
+   "say": "domum",
+   "where": "mot forum"
+  },
+  {
+   "text": "redit",
+   "say": "redit",
+   "where": "mot forum"
+  },
+  {
+   "text": "Non amo te, Sabidi, nec possum dicere quare: hoc tantum possum dicere: non amo te.",
+   "say": "Non amo te, Sabidi, nec possum dicere quare: oc tantum possum dicere: non amo te.",
+   "where": "texte martial"
+  },
+  {
+   "text": "Non",
+   "say": "Non",
+   "where": "mot martial"
+  },
+  {
+   "text": "amo",
+   "say": "amo",
+   "where": "mot martial"
+  },
+  {
+   "text": "te",
+   "say": "te",
+   "where": "mot martial"
+  },
+  {
+   "text": "Sabidi",
+   "say": "Sabidi",
+   "where": "mot martial"
+  },
+  {
+   "text": "nec",
+   "say": "nec",
+   "where": "mot martial"
+  },
+  {
+   "text": "possum",
+   "say": "possum",
+   "where": "mot martial"
+  },
+  {
+   "text": "quare",
+   "say": "quare",
+   "where": "mot martial"
+  },
+  {
+   "text": "hoc",
+   "say": "oc",
+   "where": "mot martial"
+  },
+  {
+   "text": "tantum",
+   "say": "tantum",
+   "where": "mot martial"
+  },
+  {
+   "text": "Fame coacta vulpes alta in vinea uvam appetebat, summis saliens viribus. Quam tangere ut non potuit, discedens ait: «Nondum matura est; nolo acerbam sumere.»",
+   "say": "Fame coacta vulpes alta in vinea uvam appetebat, summis saliens viribus. Quam tangere ut non potuit, discedens ait: «Nondum matura est; nolo acerbam sumere.»",
+   "where": "texte vulpes"
+  },
+  {
+   "text": "Fame",
+   "say": "Fame",
+   "where": "mot vulpes"
+  },
+  {
+   "text": "coacta",
+   "say": "coacta",
+   "where": "mot vulpes"
+  },
+  {
+   "text": "vulpes",
+   "say": "vulpes",
+   "where": "mot vulpes"
+  },
+  {
+   "text": "alta",
+   "say": "alta",
+   "where": "mot vulpes"
+  },
+  {
+   "text": "vinea",
+   "say": "vinea",
+   "where": "mot vulpes"
+  },
+  {
+   "text": "uvam",
+   "say": "uvam",
+   "where": "mot vulpes"
+  },
+  {
+   "text": "appetebat",
+   "say": "appetebat",
+   "where": "mot vulpes"
+  },
+  {
+   "text": "summis",
+   "say": "summis",
+   "where": "mot vulpes"
+  },
+  {
+   "text": "saliens",
+   "say": "saliens",
+   "where": "mot vulpes"
+  },
+  {
+   "text": "viribus",
+   "say": "viribus",
+   "where": "mot vulpes"
+  },
+  {
+   "text": "Quam",
+   "say": "Quam",
+   "where": "mot vulpes"
+  },
+  {
+   "text": "tangere",
+   "say": "tangere",
+   "where": "mot vulpes"
+  },
+  {
+   "text": "ut",
+   "say": "ut",
+   "where": "mot vulpes"
+  },
+  {
+   "text": "potuit",
+   "say": "potuit",
+   "where": "mot vulpes"
+  },
+  {
+   "text": "discedens",
+   "say": "discedens",
+   "where": "mot vulpes"
+  },
+  {
+   "text": "ait",
+   "say": "ait",
+   "where": "mot vulpes"
+  },
+  {
+   "text": "Nondum",
+   "say": "Nondum",
+   "where": "mot vulpes"
+  },
+  {
+   "text": "matura",
+   "say": "matura",
+   "where": "mot vulpes"
+  },
+  {
+   "text": "nolo",
+   "say": "nolo",
+   "where": "mot vulpes"
+  },
+  {
+   "text": "acerbam",
+   "say": "acerbam",
+   "where": "mot vulpes"
+  },
+  {
+   "text": "sumere",
+   "say": "sumere",
+   "where": "mot vulpes"
+  },
+  {
+   "text": "Caesar Rubiconem transiit et dixit: «Alea iacta est.» Postea, post victoriam in Ponto, scripsit: «Veni, vidi, vici.»",
+   "say": "Cesar Rubiconem transiit et dixit: «Alea iacta est.» Postea, post victoriam in Ponto, scripsit: «Veni, vidi, vici.»",
+   "where": "texte caesar"
+  },
+  {
+   "text": "Caesar",
+   "say": "Cesar",
+   "where": "mot caesar"
+  },
+  {
+   "text": "Rubiconem",
+   "say": "Rubiconem",
+   "where": "mot caesar"
+  },
+  {
+   "text": "transiit",
+   "say": "transiit",
+   "where": "mot caesar"
+  },
+  {
+   "text": "dixit",
+   "say": "dixit",
+   "where": "mot caesar"
+  },
+  {
+   "text": "Alea",
+   "say": "Alea",
+   "where": "mot caesar"
+  },
+  {
+   "text": "iacta",
+   "say": "iacta",
+   "where": "mot caesar"
+  },
+  {
+   "text": "Postea",
+   "say": "Postea",
+   "where": "mot caesar"
+  },
+  {
+   "text": "post",
+   "say": "post",
+   "where": "mot caesar"
+  },
+  {
+   "text": "victoriam",
+   "say": "victoriam",
+   "where": "mot caesar"
+  },
+  {
+   "text": "Ponto",
+   "say": "Ponto",
+   "where": "mot caesar"
+  },
+  {
+   "text": "scripsit",
+   "say": "scripsit",
+   "where": "mot caesar"
+  },
+  {
+   "text": "Veni",
+   "say": "Veni",
+   "where": "mot caesar"
+  },
+  {
+   "text": "vidi",
+   "say": "vidi",
+   "where": "mot caesar"
+  },
+  {
+   "text": "vici",
+   "say": "vici",
+   "where": "mot caesar"
+  },
+  {
+   "text": "Nuper erat medicus, nunc est vispillo Diaulus: quod vispillo facit, fecerat et medicus.",
+   "say": "Nuper erat medicus, nunc est vispillo Diaulus: quod vispillo facit, fecerat et medicus.",
+   "where": "texte diaulus"
+  },
+  {
+   "text": "Nuper",
+   "say": "Nuper",
+   "where": "mot diaulus"
+  },
+  {
+   "text": "medicus",
+   "say": "medicus",
+   "where": "mot diaulus"
+  },
+  {
+   "text": "nunc",
+   "say": "nunc",
+   "where": "mot diaulus"
+  },
+  {
+   "text": "vispillo",
+   "say": "vispillo",
+   "where": "mot diaulus"
+  },
+  {
+   "text": "Diaulus",
+   "say": "Diaulus",
+   "where": "mot diaulus"
+  },
+  {
+   "text": "quod",
+   "say": "quod",
+   "where": "mot diaulus"
+  },
+  {
+   "text": "facit",
+   "say": "facit",
+   "where": "mot diaulus"
+  },
+  {
+   "text": "fecerat",
+   "say": "fecerat",
+   "where": "mot diaulus"
+  },
+  {
+   "text": "Thais habet nigros, niveos Laecania dentes. Quae ratio est? Emptos haec habet, illa suos.",
+   "say": "Tais abet nigros, niveos Lecania dentes. Que razio est? Emptos ec abet, illa suos.",
+   "where": "texte thais"
+  },
+  {
+   "text": "Thais",
+   "say": "Tais",
+   "where": "mot thais"
+  },
+  {
+   "text": "nigros",
+   "say": "nigros",
+   "where": "mot thais"
+  },
+  {
+   "text": "niveos",
+   "say": "niveos",
+   "where": "mot thais"
+  },
+  {
+   "text": "Laecania",
+   "say": "Lecania",
+   "where": "mot thais"
+  },
+  {
+   "text": "dentes",
+   "say": "dentes",
+   "where": "mot thais"
+  },
+  {
+   "text": "Quae",
+   "say": "Que",
+   "where": "mot thais"
+  },
+  {
+   "text": "ratio",
+   "say": "razio",
+   "where": "mot thais"
+  },
+  {
+   "text": "Emptos",
+   "say": "Emptos",
+   "where": "mot thais"
+  },
+  {
+   "text": "haec",
+   "say": "ec",
+   "where": "mot thais"
+  },
+  {
+   "text": "illa",
+   "say": "illa",
+   "where": "mot thais"
+  },
+  {
+   "text": "suos",
+   "say": "suos",
+   "where": "mot thais"
+  },
+  {
+   "text": "Homines, dum docent, discunt. Non vitae, sed scholae discimus. Vita, si uti scias, longa est.",
+   "say": "omines, dum docent, discunt. Non vite, sed schole discimus. Vita, si uti scias, longa est.",
+   "where": "texte maximes"
+  },
+  {
+   "text": "Homines",
+   "say": "omines",
+   "where": "mot maximes"
+  },
+  {
+   "text": "dum",
+   "say": "dum",
+   "where": "mot maximes"
+  },
+  {
+   "text": "docent",
+   "say": "docent",
+   "where": "mot maximes"
+  },
+  {
+   "text": "discunt",
+   "say": "discunt",
+   "where": "mot maximes"
+  },
+  {
+   "text": "vitae",
+   "say": "vite",
+   "where": "mot maximes"
+  },
+  {
+   "text": "sed",
+   "say": "sed",
+   "where": "mot maximes"
+  },
+  {
+   "text": "scholae",
+   "say": "schole",
+   "where": "mot maximes"
+  },
+  {
+   "text": "discimus",
+   "say": "discimus",
+   "where": "mot maximes"
+  },
+  {
+   "text": "Vita",
+   "say": "Vita",
+   "where": "mot maximes"
+  },
+  {
+   "text": "si",
+   "say": "si",
+   "where": "mot maximes"
+  },
+  {
+   "text": "uti",
+   "say": "uti",
+   "where": "mot maximes"
+  },
+  {
+   "text": "scias",
+   "say": "scias",
+   "where": "mot maximes"
+  },
+  {
+   "text": "longa",
+   "say": "longa",
+   "where": "mot maximes"
+  },
+  {
+   "text": "Ad rivum eundem lupus et agnus venerant, siti compulsi. Superior stabat lupus, longeque inferior agnus. Tunc fauce improba latro incitatus iurgii causam intulit.",
+   "say": "Ad rivum eundem lupus et agnus venerant, siti compulsi. Superior stabat lupus, longeque inferior agnus. Tunc fauce improba latro incitatus iurgii causam intulit.",
+   "where": "texte lupus"
+  },
+  {
+   "text": "Ad",
+   "say": "Ad",
+   "where": "mot lupus"
+  },
+  {
+   "text": "rivum",
+   "say": "rivum",
+   "where": "mot lupus"
+  },
+  {
+   "text": "eundem",
+   "say": "eundem",
+   "where": "mot lupus"
+  },
+  {
+   "text": "agnus",
+   "say": "agnus",
+   "where": "mot lupus"
+  },
+  {
+   "text": "venerant",
+   "say": "venerant",
+   "where": "mot lupus"
+  },
+  {
+   "text": "siti",
+   "say": "siti",
+   "where": "mot lupus"
+  },
+  {
+   "text": "compulsi",
+   "say": "compulsi",
+   "where": "mot lupus"
+  },
+  {
+   "text": "Superior",
+   "say": "Superior",
+   "where": "mot lupus"
+  },
+  {
+   "text": "stabat",
+   "say": "stabat",
+   "where": "mot lupus"
+  },
+  {
+   "text": "longeque",
+   "say": "longeque",
+   "where": "mot lupus"
+  },
+  {
+   "text": "inferior",
+   "say": "inferior",
+   "where": "mot lupus"
+  },
+  {
+   "text": "Tunc",
+   "say": "Tunc",
+   "where": "mot lupus"
+  },
+  {
+   "text": "fauce",
+   "say": "fauce",
+   "where": "mot lupus"
+  },
+  {
+   "text": "improba",
+   "say": "improba",
+   "where": "mot lupus"
+  },
+  {
+   "text": "latro",
+   "say": "latro",
+   "where": "mot lupus"
+  },
+  {
+   "text": "incitatus",
+   "say": "incitatus",
+   "where": "mot lupus"
+  },
+  {
+   "text": "iurgii",
+   "say": "iurgii",
+   "where": "mot lupus"
+  },
+  {
+   "text": "causam",
+   "say": "causam",
+   "where": "mot lupus"
+  },
+  {
+   "text": "intulit",
+   "say": "intulit",
+   "where": "mot lupus"
+  },
+  {
+   "text": "Gallia est omnis divisa in partes tres, quarum unam incolunt Belgae, aliam Aquitani, tertiam qui ipsorum lingua, Celtae, nostra Galli appellantur.",
+   "say": "Gallia est omnis divisa in partes tres, quarum unam incolunt Belge, aliam Aquitani, terziam qui ipsorum lingua, Celte, nostra Galli appellantur.",
+   "where": "texte gallia"
+  },
+  {
+   "text": "Gallia",
+   "say": "Gallia",
+   "where": "mot gallia"
+  },
+  {
+   "text": "omnis",
+   "say": "omnis",
+   "where": "mot gallia"
+  },
+  {
+   "text": "divisa",
+   "say": "divisa",
+   "where": "mot gallia"
+  },
+  {
+   "text": "partes",
+   "say": "partes",
+   "where": "mot gallia"
+  },
+  {
+   "text": "quarum",
+   "say": "quarum",
+   "where": "mot gallia"
+  },
+  {
+   "text": "unam",
+   "say": "unam",
+   "where": "mot gallia"
+  },
+  {
+   "text": "incolunt",
+   "say": "incolunt",
+   "where": "mot gallia"
+  },
+  {
+   "text": "Belgae",
+   "say": "Belge",
+   "where": "mot gallia"
+  },
+  {
+   "text": "aliam",
+   "say": "aliam",
+   "where": "mot gallia"
+  },
+  {
+   "text": "Aquitani",
+   "say": "Aquitani",
+   "where": "mot gallia"
+  },
+  {
+   "text": "tertiam",
+   "say": "terziam",
+   "where": "mot gallia"
+  },
+  {
+   "text": "qui",
+   "say": "qui",
+   "where": "mot gallia"
+  },
+  {
+   "text": "ipsorum",
+   "say": "ipsorum",
+   "where": "mot gallia"
+  },
+  {
+   "text": "lingua",
+   "say": "lingua",
+   "where": "mot gallia"
+  },
+  {
+   "text": "Celtae",
+   "say": "Celte",
+   "where": "mot gallia"
+  },
+  {
+   "text": "nostra",
+   "say": "nostra",
+   "where": "mot gallia"
+  },
+  {
+   "text": "Galli",
+   "say": "Galli",
+   "where": "mot gallia"
+  },
+  {
+   "text": "appellantur",
+   "say": "appellantur",
+   "where": "mot gallia"
+  },
+  {
+   "text": "Inops, potentem dum vult imitari, perit. In prato quondam rana conspexit bovem, et tacta invidia tantae magnitudinis rugosam inflavit pellem; tum natos suos interrogavit an bove esset latior. Illi negarunt.",
+   "say": "Inops, potentem dum vult imitari, perit. In prato quondam rana conspexit bovem, et tacta invidia tante magnitudinis rugosam inflavit pellem; tum natos suos interrogavit an bove esset lazior. Illi negarunt.",
+   "where": "texte rana"
+  },
+  {
+   "text": "Inops",
+   "say": "Inops",
+   "where": "mot rana"
+  },
+  {
+   "text": "potentem",
+   "say": "potentem",
+   "where": "mot rana"
+  },
+  {
+   "text": "vult",
+   "say": "vult",
+   "where": "mot rana"
+  },
+  {
+   "text": "imitari",
+   "say": "imitari",
+   "where": "mot rana"
+  },
+  {
+   "text": "perit",
+   "say": "perit",
+   "where": "mot rana"
+  },
+  {
+   "text": "prato",
+   "say": "prato",
+   "where": "mot rana"
+  },
+  {
+   "text": "quondam",
+   "say": "quondam",
+   "where": "mot rana"
+  },
+  {
+   "text": "rana",
+   "say": "rana",
+   "where": "mot rana"
+  },
+  {
+   "text": "conspexit",
+   "say": "conspexit",
+   "where": "mot rana"
+  },
+  {
+   "text": "bovem",
+   "say": "bovem",
+   "where": "mot rana"
+  },
+  {
+   "text": "tacta",
+   "say": "tacta",
+   "where": "mot rana"
+  },
+  {
+   "text": "invidia",
+   "say": "invidia",
+   "where": "mot rana"
+  },
+  {
+   "text": "tantae",
+   "say": "tante",
+   "where": "mot rana"
+  },
+  {
+   "text": "magnitudinis",
+   "say": "magnitudinis",
+   "where": "mot rana"
+  },
+  {
+   "text": "rugosam",
+   "say": "rugosam",
+   "where": "mot rana"
+  },
+  {
+   "text": "inflavit",
+   "say": "inflavit",
+   "where": "mot rana"
+  },
+  {
+   "text": "pellem",
+   "say": "pellem",
+   "where": "mot rana"
+  },
+  {
+   "text": "tum",
+   "say": "tum",
+   "where": "mot rana"
+  },
+  {
+   "text": "natos",
+   "say": "natos",
+   "where": "mot rana"
+  },
+  {
+   "text": "interrogavit",
+   "say": "interrogavit",
+   "where": "mot rana"
+  },
+  {
+   "text": "an",
+   "say": "an",
+   "where": "mot rana"
+  },
+  {
+   "text": "bove",
+   "say": "bove",
+   "where": "mot rana"
+  },
+  {
+   "text": "esset",
+   "say": "esset",
+   "where": "mot rana"
+  },
+  {
+   "text": "latior",
+   "say": "lazior",
+   "where": "mot rana"
+  },
+  {
+   "text": "Illi",
+   "say": "Illi",
+   "where": "mot rana"
+  },
+  {
+   "text": "negarunt",
+   "say": "negarunt",
+   "where": "mot rana"
+  },
+  {
+   "text": "Romanum imperium a Romulo exordium habet, qui Reae Silviae, Vestalis virginis, filius et Martis cum Remo fratre uno partu editus est. Is, decem et octo annos natus, urbem exiguam in Palatino monte constituit.",
+   "say": "Romanum imperium a Romulo exordium abet, qui Ree Silvie, Vestalis virginis, filius et Martis cum Remo fratre uno partu editus est. Is, decem et octo annos natus, urbem exiguam in Palatino monte constituit.",
+   "where": "texte romulus"
+  },
+  {
+   "text": "Romanum",
+   "say": "Romanum",
+   "where": "mot romulus"
+  },
+  {
+   "text": "imperium",
+   "say": "imperium",
+   "where": "mot romulus"
+  },
+  {
+   "text": "a",
+   "say": "a",
+   "where": "mot romulus"
+  },
+  {
+   "text": "Romulo",
+   "say": "Romulo",
+   "where": "mot romulus"
+  },
+  {
+   "text": "exordium",
+   "say": "exordium",
+   "where": "mot romulus"
+  },
+  {
+   "text": "Reae",
+   "say": "Ree",
+   "where": "mot romulus"
+  },
+  {
+   "text": "Silviae",
+   "say": "Silvie",
+   "where": "mot romulus"
+  },
+  {
+   "text": "Vestalis",
+   "say": "Vestalis",
+   "where": "mot romulus"
+  },
+  {
+   "text": "virginis",
+   "say": "virginis",
+   "where": "mot romulus"
+  },
+  {
+   "text": "Martis",
+   "say": "Martis",
+   "where": "mot romulus"
+  },
+  {
+   "text": "Remo",
+   "say": "Remo",
+   "where": "mot romulus"
+  },
+  {
+   "text": "fratre",
+   "say": "fratre",
+   "where": "mot romulus"
+  },
+  {
+   "text": "uno",
+   "say": "uno",
+   "where": "mot romulus"
+  },
+  {
+   "text": "partu",
+   "say": "partu",
+   "where": "mot romulus"
+  },
+  {
+   "text": "editus",
+   "say": "editus",
+   "where": "mot romulus"
+  },
+  {
+   "text": "Is",
+   "say": "Is",
+   "where": "mot romulus"
+  },
+  {
+   "text": "octo",
+   "say": "octo",
+   "where": "mot romulus"
+  },
+  {
+   "text": "annos",
+   "say": "annos",
+   "where": "mot romulus"
+  },
+  {
+   "text": "natus",
+   "say": "natus",
+   "where": "mot romulus"
+  },
+  {
+   "text": "urbem",
+   "say": "urbem",
+   "where": "mot romulus"
+  },
+  {
+   "text": "exiguam",
+   "say": "exiguam",
+   "where": "mot romulus"
+  },
+  {
+   "text": "Palatino",
+   "say": "Palatino",
+   "where": "mot romulus"
+  },
+  {
+   "text": "monte",
+   "say": "monte",
+   "where": "mot romulus"
+  },
+  {
+   "text": "constituit",
+   "say": "constituit",
+   "where": "mot romulus"
+  },
+  {
+   "text": "Horum omnium fortissimi sunt Belgae, propterea quod a cultu atque humanitate provinciae longissime absunt, minimeque ad eos mercatores saepe commeant.",
+   "say": "orum omnium fortissimi sunt Belge, propterea quod a cultu atque umanitate provincie longissime absunt, minimeque ad eos mercatores sepe commeant.",
+   "where": "texte belgae"
+  },
+  {
+   "text": "Horum",
+   "say": "orum",
+   "where": "mot belgae"
+  },
+  {
+   "text": "omnium",
+   "say": "omnium",
+   "where": "mot belgae"
+  },
+  {
+   "text": "fortissimi",
+   "say": "fortissimi",
+   "where": "mot belgae"
+  },
+  {
+   "text": "propterea",
+   "say": "propterea",
+   "where": "mot belgae"
+  },
+  {
+   "text": "cultu",
+   "say": "cultu",
+   "where": "mot belgae"
+  },
+  {
+   "text": "atque",
+   "say": "atque",
+   "where": "mot belgae"
+  },
+  {
+   "text": "humanitate",
+   "say": "umanitate",
+   "where": "mot belgae"
+  },
+  {
+   "text": "provinciae",
+   "say": "provincie",
+   "where": "mot belgae"
+  },
+  {
+   "text": "longissime",
+   "say": "longissime",
+   "where": "mot belgae"
+  },
+  {
+   "text": "absunt",
+   "say": "absunt",
+   "where": "mot belgae"
+  },
+  {
+   "text": "minimeque",
+   "say": "minimeque",
+   "where": "mot belgae"
+  },
+  {
+   "text": "eos",
+   "say": "eos",
+   "where": "mot belgae"
+  },
+  {
+   "text": "saepe",
+   "say": "sepe",
+   "where": "mot belgae"
+  },
+  {
+   "text": "commeant",
+   "say": "commeant",
+   "where": "mot belgae"
+  },
+  {
+   "text": "«Desilite,» inquit, «milites, nisi vultis aquilam hostibus prodere: ego certe meum rei publicae atque imperatori officium praestitero.»",
+   "say": "«Desilite,» inquit, «milites, nisi vultis aquilam ostibus prodere: ego certe meum rei publice atque imperatori officium prestitero.»",
+   "where": "texte aquilifer"
+  },
+  {
+   "text": "Desilite",
+   "say": "Desilite",
+   "where": "mot aquilifer"
+  },
+  {
+   "text": "inquit",
+   "say": "inquit",
+   "where": "mot aquilifer"
+  },
+  {
+   "text": "milites",
+   "say": "milites",
+   "where": "mot aquilifer"
+  },
+  {
+   "text": "nisi",
+   "say": "nisi",
+   "where": "mot aquilifer"
+  },
+  {
+   "text": "vultis",
+   "say": "vultis",
+   "where": "mot aquilifer"
+  },
+  {
+   "text": "aquilam",
+   "say": "aquilam",
+   "where": "mot aquilifer"
+  },
+  {
+   "text": "hostibus",
+   "say": "ostibus",
+   "where": "mot aquilifer"
+  },
+  {
+   "text": "prodere",
+   "say": "prodere",
+   "where": "mot aquilifer"
+  },
+  {
+   "text": "certe",
+   "say": "certe",
+   "where": "mot aquilifer"
+  },
+  {
+   "text": "meum",
+   "say": "meum",
+   "where": "mot aquilifer"
+  },
+  {
+   "text": "rei publicae",
+   "say": "rei publice",
+   "where": "mot aquilifer"
+  },
+  {
+   "text": "imperatori",
+   "say": "imperatori",
+   "where": "mot aquilifer"
+  },
+  {
+   "text": "officium",
+   "say": "officium",
+   "where": "mot aquilifer"
+  },
+  {
+   "text": "praestitero",
+   "say": "prestitero",
+   "where": "mot aquilifer"
+  },
+  {
+   "text": "Orandum est ut sit mens sana in corpore sano. Sed quis custodiet ipsos custodes?",
+   "say": "Orandum est ut sit mens sana in corpore sano. Sed quis custodiet ipsos custodes?",
+   "where": "texte iuvenalis"
+  },
+  {
+   "text": "Orandum",
+   "say": "Orandum",
+   "where": "mot iuvenalis"
+  },
+  {
+   "text": "sit",
+   "say": "sit",
+   "where": "mot iuvenalis"
+  },
+  {
+   "text": "mens",
+   "say": "mens",
+   "where": "mot iuvenalis"
+  },
+  {
+   "text": "sana",
+   "say": "sana",
+   "where": "mot iuvenalis"
+  },
+  {
+   "text": "corpore",
+   "say": "corpore",
+   "where": "mot iuvenalis"
+  },
+  {
+   "text": "sano",
+   "say": "sano",
+   "where": "mot iuvenalis"
+  },
+  {
+   "text": "Sed",
+   "say": "Sed",
+   "where": "mot iuvenalis"
+  },
+  {
+   "text": "quis",
+   "say": "quis",
+   "where": "mot iuvenalis"
+  },
+  {
+   "text": "custodiet",
+   "say": "custodiet",
+   "where": "mot iuvenalis"
+  },
+  {
+   "text": "ipsos",
+   "say": "ipsos",
+   "where": "mot iuvenalis"
+  },
+  {
+   "text": "custodes",
+   "say": "custodes",
+   "where": "mot iuvenalis"
+  },
+  {
+   "text": "Odi et amo. Quare id faciam, fortasse requiris. Nescio, sed fieri sentio et excrucior.",
+   "say": "Odi et amo. Quare id faciam, fortasse requiris. Nescio, sed fieri senzio et excrucior.",
+   "where": "texte odi"
+  },
+  {
+   "text": "Odi",
+   "say": "Odi",
+   "where": "mot odi"
+  },
+  {
+   "text": "Quare",
+   "say": "Quare",
+   "where": "mot odi"
+  },
+  {
+   "text": "id",
+   "say": "id",
+   "where": "mot odi"
+  },
+  {
+   "text": "faciam",
+   "say": "faciam",
+   "where": "mot odi"
+  },
+  {
+   "text": "fortasse",
+   "say": "fortasse",
+   "where": "mot odi"
+  },
+  {
+   "text": "requiris",
+   "say": "requiris",
+   "where": "mot odi"
+  },
+  {
+   "text": "Nescio",
+   "say": "Nescio",
+   "where": "mot odi"
+  },
+  {
+   "text": "fieri",
+   "say": "fieri",
+   "where": "mot odi"
+  },
+  {
+   "text": "sentio",
+   "say": "senzio",
+   "where": "mot odi"
+  },
+  {
+   "text": "excrucior",
+   "say": "excrucior",
+   "where": "mot odi"
+  },
+  {
+   "text": "Vivamus, mea Lesbia, atque amemus, rumoresque senum severiorum omnes unius aestimemus assis! Soles occidere et redire possunt: nobis cum semel occidit brevis lux, nox est perpetua una dormienda.",
+   "say": "Vivamus, mea Lesbia, atque amemus, rumoresque senum severiorum omnes unius estimemus assis! Soles occidere et redire possunt: nobis cum semel occidit brevis lux, nox est perpetua una dormienda.",
+   "where": "texte vivamus"
+  },
+  {
+   "text": "Vivamus",
+   "say": "Vivamus",
+   "where": "mot vivamus"
+  },
+  {
+   "text": "mea",
+   "say": "mea",
+   "where": "mot vivamus"
+  },
+  {
+   "text": "Lesbia",
+   "say": "Lesbia",
+   "where": "mot vivamus"
+  },
+  {
+   "text": "amemus",
+   "say": "amemus",
+   "where": "mot vivamus"
+  },
+  {
+   "text": "rumoresque",
+   "say": "rumoresque",
+   "where": "mot vivamus"
+  },
+  {
+   "text": "senum",
+   "say": "senum",
+   "where": "mot vivamus"
+  },
+  {
+   "text": "severiorum",
+   "say": "severiorum",
+   "where": "mot vivamus"
+  },
+  {
+   "text": "omnes",
+   "say": "omnes",
+   "where": "mot vivamus"
+  },
+  {
+   "text": "unius",
+   "say": "unius",
+   "where": "mot vivamus"
+  },
+  {
+   "text": "aestimemus",
+   "say": "estimemus",
+   "where": "mot vivamus"
+  },
+  {
+   "text": "assis",
+   "say": "assis",
+   "where": "mot vivamus"
+  },
+  {
+   "text": "Soles",
+   "say": "Soles",
+   "where": "mot vivamus"
+  },
+  {
+   "text": "occidere",
+   "say": "occidere",
+   "where": "mot vivamus"
+  },
+  {
+   "text": "redire",
+   "say": "redire",
+   "where": "mot vivamus"
+  },
+  {
+   "text": "possunt",
+   "say": "possunt",
+   "where": "mot vivamus"
+  },
+  {
+   "text": "nobis",
+   "say": "nobis",
+   "where": "mot vivamus"
+  },
+  {
+   "text": "semel",
+   "say": "semel",
+   "where": "mot vivamus"
+  },
+  {
+   "text": "occidit",
+   "say": "occidit",
+   "where": "mot vivamus"
+  },
+  {
+   "text": "brevis",
+   "say": "brevis",
+   "where": "mot vivamus"
+  },
+  {
+   "text": "lux",
+   "say": "lux",
+   "where": "mot vivamus"
+  },
+  {
+   "text": "perpetua",
+   "say": "perpetua",
+   "where": "mot vivamus"
+  },
+  {
+   "text": "una",
+   "say": "una",
+   "where": "mot vivamus"
+  },
+  {
+   "text": "dormienda",
+   "say": "dormienda",
+   "where": "mot vivamus"
+  },
+  {
+   "text": "Dum loquimur, fugerit invida aetas: carpe diem, quam minimum credula postero.",
+   "say": "Dum loquimur, fugerit invida etas: carpe diem, quam minimum credula postero.",
+   "where": "texte carpe"
+  },
+  {
+   "text": "Dum",
+   "say": "Dum",
+   "where": "mot carpe"
+  },
+  {
+   "text": "loquimur",
+   "say": "loquimur",
+   "where": "mot carpe"
+  },
+  {
+   "text": "fugerit",
+   "say": "fugerit",
+   "where": "mot carpe"
+  },
+  {
+   "text": "invida",
+   "say": "invida",
+   "where": "mot carpe"
+  },
+  {
+   "text": "aetas",
+   "say": "etas",
+   "where": "mot carpe"
+  },
+  {
+   "text": "carpe",
+   "say": "carpe",
+   "where": "mot carpe"
+  },
+  {
+   "text": "diem",
+   "say": "diem",
+   "where": "mot carpe"
+  },
+  {
+   "text": "quam",
+   "say": "quam",
+   "where": "mot carpe"
+  },
+  {
+   "text": "minimum",
+   "say": "minimum",
+   "where": "mot carpe"
+  },
+  {
+   "text": "credula",
+   "say": "credula",
+   "where": "mot carpe"
+  },
+  {
+   "text": "postero",
+   "say": "postero",
+   "where": "mot carpe"
+  },
+  {
+   "text": "Omnia, Lucili, aliena sunt, tempus tantum nostrum est. In huius rei unius fugacis ac lubricae possessionem natura nos misit.",
+   "say": "Omnia, Lucili, aliena sunt, tempus tantum nostrum est. In uius rei unius fugacis ac lubrice possessionem natura nos misit.",
+   "where": "texte tempus"
+  },
+  {
+   "text": "Omnia",
+   "say": "Omnia",
+   "where": "mot tempus"
+  },
+  {
+   "text": "Lucili",
+   "say": "Lucili",
+   "where": "mot tempus"
+  },
+  {
+   "text": "aliena",
+   "say": "aliena",
+   "where": "mot tempus"
+  },
+  {
+   "text": "nostrum",
+   "say": "nostrum",
+   "where": "mot tempus"
+  },
+  {
+   "text": "huius",
+   "say": "uius",
+   "where": "mot tempus"
+  },
+  {
+   "text": "rei",
+   "say": "rei",
+   "where": "mot tempus"
+  },
+  {
+   "text": "fugacis",
+   "say": "fugacis",
+   "where": "mot tempus"
+  },
+  {
+   "text": "ac",
+   "say": "ac",
+   "where": "mot tempus"
+  },
+  {
+   "text": "lubricae",
+   "say": "lubrice",
+   "where": "mot tempus"
+  },
+  {
+   "text": "possessionem",
+   "say": "possessionem",
+   "where": "mot tempus"
+  },
+  {
+   "text": "natura",
+   "say": "natura",
+   "where": "mot tempus"
+  },
+  {
+   "text": "nos",
+   "say": "nos",
+   "where": "mot tempus"
+  },
+  {
+   "text": "misit",
+   "say": "misit",
+   "where": "mot tempus"
+  },
+  {
+   "text": "Non exiguum temporis habemus, sed multum perdidimus. Satis longa vita et in maximarum rerum consummationem large data est, si tota bene collocaretur.",
+   "say": "Non exiguum temporis abemus, sed multum perdidimus. Satis longa vita et in maximarum rerum consummazionem large data est, si tota bene collocaretur.",
+   "where": "texte brevitas"
+  },
+  {
+   "text": "exiguum",
+   "say": "exiguum",
+   "where": "mot brevitas"
+  },
+  {
+   "text": "temporis",
+   "say": "temporis",
+   "where": "mot brevitas"
+  },
+  {
+   "text": "habemus",
+   "say": "abemus",
+   "where": "mot brevitas"
+  },
+  {
+   "text": "multum",
+   "say": "multum",
+   "where": "mot brevitas"
+  },
+  {
+   "text": "perdidimus",
+   "say": "perdidimus",
+   "where": "mot brevitas"
+  },
+  {
+   "text": "Satis",
+   "say": "Satis",
+   "where": "mot brevitas"
+  },
+  {
+   "text": "vita",
+   "say": "vita",
+   "where": "mot brevitas"
+  },
+  {
+   "text": "maximarum",
+   "say": "maximarum",
+   "where": "mot brevitas"
+  },
+  {
+   "text": "rerum",
+   "say": "rerum",
+   "where": "mot brevitas"
+  },
+  {
+   "text": "consummationem",
+   "say": "consummazionem",
+   "where": "mot brevitas"
+  },
+  {
+   "text": "large",
+   "say": "large",
+   "where": "mot brevitas"
+  },
+  {
+   "text": "data",
+   "say": "data",
+   "where": "mot brevitas"
+  },
+  {
+   "text": "tota",
+   "say": "tota",
+   "where": "mot brevitas"
+  },
+  {
+   "text": "bene",
+   "say": "bene",
+   "where": "mot brevitas"
+  },
+  {
+   "text": "collocaretur",
+   "say": "collocaretur",
+   "where": "mot brevitas"
+  },
+  {
+   "text": "Equo ne credite, Teucri. Quidquid id est, timeo Danaos et dona ferentes.",
+   "say": "Equo ne credite, Teucri. Quidquid id est, timeo Danaos et dona ferentes.",
+   "where": "texte danaos"
+  },
+  {
+   "text": "Equo",
+   "say": "Equo",
+   "where": "mot danaos"
+  },
+  {
+   "text": "ne",
+   "say": "ne",
+   "where": "mot danaos"
+  },
+  {
+   "text": "credite",
+   "say": "credite",
+   "where": "mot danaos"
+  },
+  {
+   "text": "Teucri",
+   "say": "Teucri",
+   "where": "mot danaos"
+  },
+  {
+   "text": "Quidquid",
+   "say": "Quidquid",
+   "where": "mot danaos"
+  },
+  {
+   "text": "timeo",
+   "say": "timeo",
+   "where": "mot danaos"
+  },
+  {
+   "text": "Danaos",
+   "say": "Danaos",
+   "where": "mot danaos"
+  },
+  {
+   "text": "dona",
+   "say": "dona",
+   "where": "mot danaos"
+  },
+  {
+   "text": "ferentes",
+   "say": "ferentes",
+   "where": "mot danaos"
+  },
+  {
+   "text": "Quo usque tandem abutere, Catilina, patientia nostra? Quam diu etiam furor iste tuus nos eludet? Quem ad finem sese effrenata iactabit audacia?",
+   "say": "Quo usque tandem abutere, Catilina, pazienzia nostra? Quam diu eziam furor iste tuus nos eludet? Quem ad finem sese effrenata iactabit audacia?",
+   "where": "texte catilina"
+  },
+  {
+   "text": "Quo usque",
+   "say": "Quo usque",
+   "where": "mot catilina"
+  },
+  {
+   "text": "tandem",
+   "say": "tandem",
+   "where": "mot catilina"
+  },
+  {
+   "text": "abutere",
+   "say": "abutere",
+   "where": "mot catilina"
+  },
+  {
+   "text": "Catilina",
+   "say": "Catilina",
+   "where": "mot catilina"
+  },
+  {
+   "text": "patientia",
+   "say": "pazienzia",
+   "where": "mot catilina"
+  },
+  {
+   "text": "Quam diu",
+   "say": "Quam diu",
+   "where": "mot catilina"
+  },
+  {
+   "text": "etiam",
+   "say": "eziam",
+   "where": "mot catilina"
+  },
+  {
+   "text": "furor",
+   "say": "furor",
+   "where": "mot catilina"
+  },
+  {
+   "text": "iste",
+   "say": "iste",
+   "where": "mot catilina"
+  },
+  {
+   "text": "tuus",
+   "say": "tuus",
+   "where": "mot catilina"
+  },
+  {
+   "text": "eludet",
+   "say": "eludet",
+   "where": "mot catilina"
+  },
+  {
+   "text": "Quem",
+   "say": "Quem",
+   "where": "mot catilina"
+  },
+  {
+   "text": "finem",
+   "say": "finem",
+   "where": "mot catilina"
+  },
+  {
+   "text": "sese",
+   "say": "sese",
+   "where": "mot catilina"
+  },
+  {
+   "text": "effrenata",
+   "say": "effrenata",
+   "where": "mot catilina"
+  },
+  {
+   "text": "iactabit",
+   "say": "iactabit",
+   "where": "mot catilina"
+  },
+  {
+   "text": "audacia",
+   "say": "audacia",
+   "where": "mot catilina"
+  },
+  {
+   "text": "Ita fac, mi Lucili: vindica te tibi, et tempus quod adhuc aut auferebatur aut subripiebatur aut excidebat collige et serva.",
+   "say": "Ita fac, mi Lucili: vindica te tibi, et tempus quod adhuc aut auferebatur aut subripiebatur aut excidebat collige et serva.",
+   "where": "texte seneca"
+  },
+  {
+   "text": "Ita",
+   "say": "Ita",
+   "where": "mot seneca"
+  },
+  {
+   "text": "fac",
+   "say": "fac",
+   "where": "mot seneca"
+  },
+  {
+   "text": "mi",
+   "say": "mi",
+   "where": "mot seneca"
+  },
+  {
+   "text": "vindica",
+   "say": "vindica",
+   "where": "mot seneca"
+  },
+  {
+   "text": "tibi",
+   "say": "tibi",
+   "where": "mot seneca"
+  },
+  {
+   "text": "adhuc",
+   "say": "adhuc",
+   "where": "mot seneca"
+  },
+  {
+   "text": "aut",
+   "say": "aut",
+   "where": "mot seneca"
+  },
+  {
+   "text": "auferebatur",
+   "say": "auferebatur",
+   "where": "mot seneca"
+  },
+  {
+   "text": "subripiebatur",
+   "say": "subripiebatur",
+   "where": "mot seneca"
+  },
+  {
+   "text": "excidebat",
+   "say": "excidebat",
+   "where": "mot seneca"
+  },
+  {
+   "text": "collige",
+   "say": "collige",
+   "where": "mot seneca"
+  },
+  {
+   "text": "serva",
+   "say": "serva",
+   "where": "mot seneca"
+  },
+  {
+   "text": "In nova fert animus mutatas dicere formas corpora; di, coeptis (nam vos mutastis et illas) adspirate meis.",
+   "say": "In nova fert animus mutatas dicere formas corpora; di, ceptis adspirate meis.",
+   "where": "texte ovidius"
+  },
+  {
+   "text": "nova",
+   "say": "nova",
+   "where": "mot ovidius"
+  },
+  {
+   "text": "fert",
+   "say": "fert",
+   "where": "mot ovidius"
+  },
+  {
+   "text": "animus",
+   "say": "animus",
+   "where": "mot ovidius"
+  },
+  {
+   "text": "mutatas",
+   "say": "mutatas",
+   "where": "mot ovidius"
+  },
+  {
+   "text": "formas",
+   "say": "formas",
+   "where": "mot ovidius"
+  },
+  {
+   "text": "corpora",
+   "say": "corpora",
+   "where": "mot ovidius"
+  },
+  {
+   "text": "di",
+   "say": "di",
+   "where": "mot ovidius"
+  },
+  {
+   "text": "coeptis",
+   "say": "ceptis",
+   "where": "mot ovidius"
+  },
+  {
+   "text": "nam",
+   "say": "nam",
+   "where": "mot ovidius"
+  },
+  {
+   "text": "vos",
+   "say": "vos",
+   "where": "mot ovidius"
+  },
+  {
+   "text": "mutastis",
+   "say": "mutastis",
+   "where": "mot ovidius"
+  },
+  {
+   "text": "illas",
+   "say": "illas",
+   "where": "mot ovidius"
+  },
+  {
+   "text": "adspirate",
+   "say": "adspirate",
+   "where": "mot ovidius"
+  },
+  {
+   "text": "meis",
+   "say": "meis",
+   "where": "mot ovidius"
+  },
+  {
+   "text": "Haec studia adulescentiam alunt, senectutem oblectant, secundas res ornant, adversis perfugium ac solacium praebent, delectant domi, non impediunt foris, pernoctant nobiscum, peregrinantur, rusticantur.",
+   "say": "ec studia adulescenziam alunt, senectutem oblectant, secundas res ornant, adversis perfugium ac solacium prebent, delectant domi, non impediunt foris, pernoctant nobiscum, peregrinantur, rusticantur.",
+   "where": "texte archias"
+  },
+  {
+   "text": "Haec",
+   "say": "ec",
+   "where": "mot archias"
+  },
+  {
+   "text": "studia",
+   "say": "studia",
+   "where": "mot archias"
+  },
+  {
+   "text": "adulescentiam",
+   "say": "adulescenziam",
+   "where": "mot archias"
+  },
+  {
+   "text": "alunt",
+   "say": "alunt",
+   "where": "mot archias"
+  },
+  {
+   "text": "senectutem",
+   "say": "senectutem",
+   "where": "mot archias"
+  },
+  {
+   "text": "oblectant",
+   "say": "oblectant",
+   "where": "mot archias"
+  },
+  {
+   "text": "secundas",
+   "say": "secundas",
+   "where": "mot archias"
+  },
+  {
+   "text": "res",
+   "say": "res",
+   "where": "mot archias"
+  },
+  {
+   "text": "ornant",
+   "say": "ornant",
+   "where": "mot archias"
+  },
+  {
+   "text": "adversis",
+   "say": "adversis",
+   "where": "mot archias"
+  },
+  {
+   "text": "perfugium",
+   "say": "perfugium",
+   "where": "mot archias"
+  },
+  {
+   "text": "solacium",
+   "say": "solacium",
+   "where": "mot archias"
+  },
+  {
+   "text": "praebent",
+   "say": "prebent",
+   "where": "mot archias"
+  },
+  {
+   "text": "delectant",
+   "say": "delectant",
+   "where": "mot archias"
+  },
+  {
+   "text": "domi",
+   "say": "domi",
+   "where": "mot archias"
+  },
+  {
+   "text": "impediunt",
+   "say": "impediunt",
+   "where": "mot archias"
+  },
+  {
+   "text": "foris",
+   "say": "foris",
+   "where": "mot archias"
+  },
+  {
+   "text": "pernoctant",
+   "say": "pernoctant",
+   "where": "mot archias"
+  },
+  {
+   "text": "nobiscum",
+   "say": "nobiscum",
+   "where": "mot archias"
+  },
+  {
+   "text": "peregrinantur",
+   "say": "peregrinantur",
+   "where": "mot archias"
+  },
+  {
+   "text": "rusticantur",
+   "say": "rusticantur",
+   "where": "mot archias"
+  },
+  {
+   "text": "O tempora, o mores! Senatus haec intellegit, consul videt; hic tamen vivit. Vivit? Immo vero etiam in senatum venit.",
+   "say": "O tempora, o mores! Senatus ec intellegit, consul videt; ic tamen vivit. Vivit? Immo vero eziam in senatum venit.",
+   "where": "texte tempora"
+  },
+  {
+   "text": "O",
+   "say": "O",
+   "where": "mot tempora"
+  },
+  {
+   "text": "tempora",
+   "say": "tempora",
+   "where": "mot tempora"
+  },
+  {
+   "text": "o",
+   "say": "o",
+   "where": "mot tempora"
+  },
+  {
+   "text": "mores",
+   "say": "mores",
+   "where": "mot tempora"
+  },
+  {
+   "text": "Senatus",
+   "say": "Senatus",
+   "where": "mot tempora"
+  },
+  {
+   "text": "intellegit",
+   "say": "intellegit",
+   "where": "mot tempora"
+  },
+  {
+   "text": "consul",
+   "say": "consul",
+   "where": "mot tempora"
+  },
+  {
+   "text": "videt",
+   "say": "videt",
+   "where": "mot tempora"
+  },
+  {
+   "text": "hic",
+   "say": "ic",
+   "where": "mot tempora"
+  },
+  {
+   "text": "tamen",
+   "say": "tamen",
+   "where": "mot tempora"
+  },
+  {
+   "text": "vivit",
+   "say": "vivit",
+   "where": "mot tempora"
+  },
+  {
+   "text": "Vivit",
+   "say": "Vivit",
+   "where": "mot tempora"
+  },
+  {
+   "text": "Immo",
+   "say": "Immo",
+   "where": "mot tempora"
+  },
+  {
+   "text": "vero",
+   "say": "vero",
+   "where": "mot tempora"
+  },
+  {
+   "text": "senatum",
+   "say": "senatum",
+   "where": "mot tempora"
+  },
+  {
+   "text": "venit",
+   "say": "venit",
+   "where": "mot tempora"
+  },
+  {
+   "text": "Exegi monumentum aere perennius, regalique situ pyramidum altius, quod non imber edax, non Aquilo impotens, possit diruere … Non omnis moriar.",
+   "say": "Exegi monumentum ere perennius, regalique situ piramidum alzius, quod non imber edax, non Aquilo impotens, possit diruere … Non omnis moriar.",
+   "where": "texte exegi"
+  },
+  {
+   "text": "Exegi",
+   "say": "Exegi",
+   "where": "mot exegi"
+  },
+  {
+   "text": "monumentum",
+   "say": "monumentum",
+   "where": "mot exegi"
+  },
+  {
+   "text": "aere",
+   "say": "ere",
+   "where": "mot exegi"
+  },
+  {
+   "text": "perennius",
+   "say": "perennius",
+   "where": "mot exegi"
+  },
+  {
+   "text": "regalique",
+   "say": "regalique",
+   "where": "mot exegi"
+  },
+  {
+   "text": "situ",
+   "say": "situ",
+   "where": "mot exegi"
+  },
+  {
+   "text": "pyramidum",
+   "say": "piramidum",
+   "where": "mot exegi"
+  },
+  {
+   "text": "altius",
+   "say": "alzius",
+   "where": "mot exegi"
+  },
+  {
+   "text": "imber",
+   "say": "imber",
+   "where": "mot exegi"
+  },
+  {
+   "text": "edax",
+   "say": "edax",
+   "where": "mot exegi"
+  },
+  {
+   "text": "Aquilo",
+   "say": "Aquilo",
+   "where": "mot exegi"
+  },
+  {
+   "text": "impotens",
+   "say": "impotens",
+   "where": "mot exegi"
+  },
+  {
+   "text": "possit",
+   "say": "possit",
+   "where": "mot exegi"
+  },
+  {
+   "text": "diruere",
+   "say": "diruere",
+   "where": "mot exegi"
+  },
+  {
+   "text": "moriar",
+   "say": "moriar",
+   "where": "mot exegi"
+  },
+  {
+   "text": "Arma virumque cano, Troiae qui primus ab oris Italiam, fato profugus, Laviniaque venit litora.",
+   "say": "Arma virumque cano, Troie qui primus ab oris Italiam, fato profugus, Laviniaque venit litora.",
+   "where": "texte aeneis"
+  },
+  {
+   "text": "Arma",
+   "say": "Arma",
+   "where": "mot aeneis"
+  },
+  {
+   "text": "virumque",
+   "say": "virumque",
+   "where": "mot aeneis"
+  },
+  {
+   "text": "cano",
+   "say": "cano",
+   "where": "mot aeneis"
+  },
+  {
+   "text": "Troiae",
+   "say": "Troie",
+   "where": "mot aeneis"
+  },
+  {
+   "text": "primus",
+   "say": "primus",
+   "where": "mot aeneis"
+  },
+  {
+   "text": "ab",
+   "say": "ab",
+   "where": "mot aeneis"
+  },
+  {
+   "text": "oris",
+   "say": "oris",
+   "where": "mot aeneis"
+  },
+  {
+   "text": "Italiam",
+   "say": "Italiam",
+   "where": "mot aeneis"
+  },
+  {
+   "text": "fato",
+   "say": "fato",
+   "where": "mot aeneis"
+  },
+  {
+   "text": "profugus",
+   "say": "profugus",
+   "where": "mot aeneis"
+  },
+  {
+   "text": "Laviniaque",
+   "say": "Laviniaque",
+   "where": "mot aeneis"
+  },
+  {
+   "text": "litora",
+   "say": "litora",
+   "where": "mot aeneis"
+  },
+  {
+   "text": "Auferre, trucidare, rapere falsis nominibus imperium, atque, ubi solitudinem faciunt, pacem appellant.",
+   "say": "Auferre, trucidare, rapere falsis nominibus imperium, atque, ubi solitudinem faciunt, pacem appellant.",
+   "where": "texte tacitus"
+  },
+  {
+   "text": "Auferre",
+   "say": "Auferre",
+   "where": "mot tacitus"
+  },
+  {
+   "text": "trucidare",
+   "say": "trucidare",
+   "where": "mot tacitus"
+  },
+  {
+   "text": "rapere",
+   "say": "rapere",
+   "where": "mot tacitus"
+  },
+  {
+   "text": "falsis",
+   "say": "falsis",
+   "where": "mot tacitus"
+  },
+  {
+   "text": "nominibus",
+   "say": "nominibus",
+   "where": "mot tacitus"
+  },
+  {
+   "text": "ubi",
+   "say": "ubi",
+   "where": "mot tacitus"
+  },
+  {
+   "text": "solitudinem",
+   "say": "solitudinem",
+   "where": "mot tacitus"
+  },
+  {
+   "text": "faciunt",
+   "say": "faciunt",
+   "where": "mot tacitus"
+  },
+  {
+   "text": "pacem",
+   "say": "pacem",
+   "where": "mot tacitus"
+  },
+  {
+   "text": "appellant",
+   "say": "appellant",
+   "where": "mot tacitus"
+  },
+  {
+   "text": "Suave, mari magno turbantibus aequora ventis, e terra magnum alterius spectare laborem;, non quia vexari quemquamst iucunda voluptas, sed quibus ipse malis careas quia cernere suave est.",
+   "say": "Suave, mari magno turbantibus equora ventis, e terra magnum alterius spectare laborem;, non quia vexari quemquamst iucunda voluptas, sed quibus ipse malis careas quia cernere suave est.",
+   "where": "texte lucretius"
+  },
+  {
+   "text": "Suave",
+   "say": "Suave",
+   "where": "mot lucretius"
+  },
+  {
+   "text": "mari",
+   "say": "mari",
+   "where": "mot lucretius"
+  },
+  {
+   "text": "magno",
+   "say": "magno",
+   "where": "mot lucretius"
+  },
+  {
+   "text": "turbantibus",
+   "say": "turbantibus",
+   "where": "mot lucretius"
+  },
+  {
+   "text": "aequora",
+   "say": "equora",
+   "where": "mot lucretius"
+  },
+  {
+   "text": "ventis",
+   "say": "ventis",
+   "where": "mot lucretius"
+  },
+  {
+   "text": "e",
+   "say": "e",
+   "where": "mot lucretius"
+  },
+  {
+   "text": "magnum",
+   "say": "magnum",
+   "where": "mot lucretius"
+  },
+  {
+   "text": "alterius",
+   "say": "alterius",
+   "where": "mot lucretius"
+  },
+  {
+   "text": "spectare",
+   "say": "spectare",
+   "where": "mot lucretius"
+  },
+  {
+   "text": "laborem",
+   "say": "laborem",
+   "where": "mot lucretius"
+  },
+  {
+   "text": "quia",
+   "say": "quia",
+   "where": "mot lucretius"
+  },
+  {
+   "text": "vexari",
+   "say": "vexari",
+   "where": "mot lucretius"
+  },
+  {
+   "text": "quemquamst",
+   "say": "quemquamst",
+   "where": "mot lucretius"
+  },
+  {
+   "text": "iucunda",
+   "say": "iucunda",
+   "where": "mot lucretius"
+  },
+  {
+   "text": "voluptas",
+   "say": "voluptas",
+   "where": "mot lucretius"
+  },
+  {
+   "text": "quibus",
+   "say": "quibus",
+   "where": "mot lucretius"
+  },
+  {
+   "text": "ipse",
+   "say": "ipse",
+   "where": "mot lucretius"
+  },
+  {
+   "text": "malis",
+   "say": "malis",
+   "where": "mot lucretius"
+  },
+  {
+   "text": "careas",
+   "say": "careas",
+   "where": "mot lucretius"
+  },
+  {
+   "text": "cernere",
+   "say": "cernere",
+   "where": "mot lucretius"
+  },
+  {
+   "text": "suave",
+   "say": "suave",
+   "where": "mot lucretius"
+  },
+  {
+   "text": "rosae",
+   "say": "rose",
+   "where": "atelier"
+  },
+  {
+   "text": "rosam",
+   "say": "rosam",
+   "where": "atelier"
+  },
+  {
+   "text": "rosās",
+   "say": "rosas",
+   "where": "atelier"
+  },
+  {
+   "text": "rosārum",
+   "say": "rosarum",
+   "where": "atelier"
+  },
+  {
+   "text": "rosīs",
+   "say": "rosis",
+   "where": "atelier"
+  },
+  {
+   "text": "rosā",
+   "say": "rosa",
+   "where": "atelier"
+  },
+  {
+   "text": "puellae",
+   "say": "puelle",
+   "where": "atelier"
+  },
+  {
+   "text": "puellam",
+   "say": "puellam",
+   "where": "atelier"
+  },
+  {
+   "text": "puellās",
+   "say": "puellas",
+   "where": "atelier"
+  },
+  {
+   "text": "puellārum",
+   "say": "puellarum",
+   "where": "atelier"
+  },
+  {
+   "text": "puellīs",
+   "say": "puellis",
+   "where": "atelier"
+  },
+  {
+   "text": "puellā",
+   "say": "puella",
+   "where": "atelier"
+  },
+  {
+   "text": "dominī",
+   "say": "domini",
+   "where": "atelier"
+  },
+  {
+   "text": "domine",
+   "say": "domine",
+   "where": "atelier"
+  },
+  {
+   "text": "dominum",
+   "say": "dominum",
+   "where": "atelier"
+  },
+  {
+   "text": "dominōs",
+   "say": "dominos",
+   "where": "atelier"
+  },
+  {
+   "text": "dominōrum",
+   "say": "dominorum",
+   "where": "atelier"
+  },
+  {
+   "text": "dominō",
+   "say": "domino",
+   "where": "atelier"
+  },
+  {
+   "text": "dominīs",
+   "say": "dominis",
+   "where": "atelier"
+  },
+  {
+   "text": "puerī",
+   "say": "pueri",
+   "where": "atelier"
+  },
+  {
+   "text": "puerum",
+   "say": "puerum",
+   "where": "atelier"
+  },
+  {
+   "text": "puerōs",
+   "say": "pueros",
+   "where": "atelier"
+  },
+  {
+   "text": "puerōrum",
+   "say": "puerorum",
+   "where": "atelier"
+  },
+  {
+   "text": "puerō",
+   "say": "puero",
+   "where": "atelier"
+  },
+  {
+   "text": "puerīs",
+   "say": "pueris",
+   "where": "atelier"
+  },
+  {
+   "text": "ager",
+   "say": "ager",
+   "where": "atelier"
+  },
+  {
+   "text": "agrī",
+   "say": "agri",
+   "where": "atelier"
+  },
+  {
+   "text": "agrum",
+   "say": "agrum",
+   "where": "atelier"
+  },
+  {
+   "text": "agrōs",
+   "say": "agros",
+   "where": "atelier"
+  },
+  {
+   "text": "agrōrum",
+   "say": "agrorum",
+   "where": "atelier"
+  },
+  {
+   "text": "agrō",
+   "say": "agro",
+   "where": "atelier"
+  },
+  {
+   "text": "agrīs",
+   "say": "agris",
+   "where": "atelier"
+  },
+  {
+   "text": "templa",
+   "say": "templa",
+   "where": "atelier"
+  },
+  {
+   "text": "templī",
+   "say": "templi",
+   "where": "atelier"
+  },
+  {
+   "text": "templōrum",
+   "say": "templorum",
+   "where": "atelier"
+  },
+  {
+   "text": "templō",
+   "say": "templo",
+   "where": "atelier"
+  },
+  {
+   "text": "templīs",
+   "say": "templis",
+   "where": "atelier"
+  },
+  {
+   "text": "rēx",
+   "say": "rex",
+   "where": "atelier"
+  },
+  {
+   "text": "rēgēs",
+   "say": "reges",
+   "where": "atelier"
+  },
+  {
+   "text": "rēgem",
+   "say": "regem",
+   "where": "atelier"
+  },
+  {
+   "text": "rēgis",
+   "say": "regis",
+   "where": "atelier"
+  },
+  {
+   "text": "rēgum",
+   "say": "regum",
+   "where": "atelier"
+  },
+  {
+   "text": "rēgī",
+   "say": "regi",
+   "where": "atelier"
+  },
+  {
+   "text": "rēgibus",
+   "say": "regibus",
+   "where": "atelier"
+  },
+  {
+   "text": "rēge",
+   "say": "rege",
+   "where": "atelier"
+  },
+  {
+   "text": "patrēs",
+   "say": "patres",
+   "where": "atelier"
+  },
+  {
+   "text": "patrem",
+   "say": "patrem",
+   "where": "atelier"
+  },
+  {
+   "text": "patris",
+   "say": "patris",
+   "where": "atelier"
+  },
+  {
+   "text": "patrum",
+   "say": "patrum",
+   "where": "atelier"
+  },
+  {
+   "text": "patrī",
+   "say": "patri",
+   "where": "atelier"
+  },
+  {
+   "text": "patribus",
+   "say": "patribus",
+   "where": "atelier"
+  },
+  {
+   "text": "patre",
+   "say": "patre",
+   "where": "atelier"
+  },
+  {
+   "text": "cīvis",
+   "say": "civis",
+   "where": "atelier"
+  },
+  {
+   "text": "cīvēs",
+   "say": "cives",
+   "where": "atelier"
+  },
+  {
+   "text": "cīvem",
+   "say": "civem",
+   "where": "atelier"
+  },
+  {
+   "text": "cīvium",
+   "say": "civium",
+   "where": "atelier"
+  },
+  {
+   "text": "cīvī",
+   "say": "civi",
+   "where": "atelier"
+  },
+  {
+   "text": "cīvibus",
+   "say": "civibus",
+   "where": "atelier"
+  },
+  {
+   "text": "cīve",
+   "say": "cive",
+   "where": "atelier"
+  },
+  {
+   "text": "corporis",
+   "say": "corporis",
+   "where": "atelier"
+  },
+  {
+   "text": "corporum",
+   "say": "corporum",
+   "where": "atelier"
+  },
+  {
+   "text": "corporī",
+   "say": "corpori",
+   "where": "atelier"
+  },
+  {
+   "text": "corporibus",
+   "say": "corporibus",
+   "where": "atelier"
+  },
+  {
+   "text": "nōmen",
+   "say": "nomen",
+   "where": "atelier"
+  },
+  {
+   "text": "nōmina",
+   "say": "nomina",
+   "where": "atelier"
+  },
+  {
+   "text": "nōminis",
+   "say": "nominis",
+   "where": "atelier"
+  },
+  {
+   "text": "nōminum",
+   "say": "nominum",
+   "where": "atelier"
+  },
+  {
+   "text": "nōminī",
+   "say": "nomini",
+   "where": "atelier"
+  },
+  {
+   "text": "nōminibus",
+   "say": "nominibus",
+   "where": "atelier"
+  },
+  {
+   "text": "nōmine",
+   "say": "nomine",
+   "where": "atelier"
+  },
+  {
+   "text": "manūs",
+   "say": "manus",
+   "where": "atelier"
+  },
+  {
+   "text": "manum",
+   "say": "manum",
+   "where": "atelier"
+  },
+  {
+   "text": "manuum",
+   "say": "manuum",
+   "where": "atelier"
+  },
+  {
+   "text": "manuī",
+   "say": "manui",
+   "where": "atelier"
+  },
+  {
+   "text": "manibus",
+   "say": "manibus",
+   "where": "atelier"
+  },
+  {
+   "text": "manū",
+   "say": "manu",
+   "where": "atelier"
+  },
+  {
+   "text": "rēs",
+   "say": "res",
+   "where": "atelier"
+  },
+  {
+   "text": "rem",
+   "say": "rem",
+   "where": "atelier"
+  },
+  {
+   "text": "reī",
+   "say": "rei",
+   "where": "atelier"
+  },
+  {
+   "text": "rērum",
+   "say": "rerum",
+   "where": "atelier"
+  },
+  {
+   "text": "rēbus",
+   "say": "rebus",
+   "where": "atelier"
+  },
+  {
+   "text": "rē",
+   "say": "re",
+   "where": "atelier"
+  },
+  {
+   "text": "diēī",
+   "say": "diei",
+   "where": "atelier"
+  },
+  {
+   "text": "diērum",
+   "say": "dierum",
+   "where": "atelier"
+  },
+  {
+   "text": "diēbus",
+   "say": "diebus",
+   "where": "atelier"
+  },
+  {
+   "text": "diē",
+   "say": "die",
+   "where": "atelier"
+  },
+  {
+   "text": "nauta",
+   "say": "nauta",
+   "where": "atelier"
+  },
+  {
+   "text": "nautae",
+   "say": "naute",
+   "where": "atelier"
+  },
+  {
+   "text": "nautam",
+   "say": "nautam",
+   "where": "atelier"
+  },
+  {
+   "text": "nautās",
+   "say": "nautas",
+   "where": "atelier"
+  },
+  {
+   "text": "nautārum",
+   "say": "nautarum",
+   "where": "atelier"
+  },
+  {
+   "text": "nautīs",
+   "say": "nautis",
+   "where": "atelier"
+  },
+  {
+   "text": "nautā",
+   "say": "nauta",
+   "where": "atelier"
+  },
+  {
+   "text": "virī",
+   "say": "viri",
+   "where": "atelier"
+  },
+  {
+   "text": "virum",
+   "say": "virum",
+   "where": "atelier"
+  },
+  {
+   "text": "virōs",
+   "say": "viros",
+   "where": "atelier"
+  },
+  {
+   "text": "virōrum",
+   "say": "virorum",
+   "where": "atelier"
+  },
+  {
+   "text": "virō",
+   "say": "viro",
+   "where": "atelier"
+  },
+  {
+   "text": "virīs",
+   "say": "viris",
+   "where": "atelier"
+  },
+  {
+   "text": "fīliī",
+   "say": "filii",
+   "where": "atelier"
+  },
+  {
+   "text": "fīlī",
+   "say": "fili",
+   "where": "atelier"
+  },
+  {
+   "text": "fīlium",
+   "say": "filium",
+   "where": "atelier"
+  },
+  {
+   "text": "fīliōs",
+   "say": "filios",
+   "where": "atelier"
+  },
+  {
+   "text": "fīliōrum",
+   "say": "filiorum",
+   "where": "atelier"
+  },
+  {
+   "text": "fīliō",
+   "say": "filio",
+   "where": "atelier"
+  },
+  {
+   "text": "fīliīs",
+   "say": "filiis",
+   "where": "atelier"
+  },
+  {
+   "text": "cōnsulēs",
+   "say": "consules",
+   "where": "atelier"
+  },
+  {
+   "text": "cōnsulem",
+   "say": "consulem",
+   "where": "atelier"
+  },
+  {
+   "text": "cōnsulis",
+   "say": "consulis",
+   "where": "atelier"
+  },
+  {
+   "text": "cōnsulum",
+   "say": "consulum",
+   "where": "atelier"
+  },
+  {
+   "text": "cōnsulī",
+   "say": "consuli",
+   "where": "atelier"
+  },
+  {
+   "text": "cōnsulibus",
+   "say": "consulibus",
+   "where": "atelier"
+  },
+  {
+   "text": "cōnsule",
+   "say": "consule",
+   "where": "atelier"
+  },
+  {
+   "text": "urbs",
+   "say": "urbs",
+   "where": "atelier"
+  },
+  {
+   "text": "urbēs",
+   "say": "urbes",
+   "where": "atelier"
+  },
+  {
+   "text": "urbis",
+   "say": "urbis",
+   "where": "atelier"
+  },
+  {
+   "text": "urbium",
+   "say": "urbium",
+   "where": "atelier"
+  },
+  {
+   "text": "urbī",
+   "say": "urbi",
+   "where": "atelier"
+  },
+  {
+   "text": "urbibus",
+   "say": "urbibus",
+   "where": "atelier"
+  },
+  {
+   "text": "urbe",
+   "say": "urbe",
+   "where": "atelier"
+  },
+  {
+   "text": "maria",
+   "say": "maria",
+   "where": "atelier"
+  },
+  {
+   "text": "maris",
+   "say": "maris",
+   "where": "atelier"
+  },
+  {
+   "text": "marium",
+   "say": "marium",
+   "where": "atelier"
+  },
+  {
+   "text": "marī",
+   "say": "mari",
+   "where": "atelier"
+  },
+  {
+   "text": "maribus",
+   "say": "maribus",
+   "where": "atelier"
+  },
+  {
+   "text": "animal",
+   "say": "animal",
+   "where": "atelier"
+  },
+  {
+   "text": "animālia",
+   "say": "animalia",
+   "where": "atelier"
+  },
+  {
+   "text": "animālis",
+   "say": "animalis",
+   "where": "atelier"
+  },
+  {
+   "text": "animālium",
+   "say": "animalium",
+   "where": "atelier"
+  },
+  {
+   "text": "animālī",
+   "say": "animali",
+   "where": "atelier"
+  },
+  {
+   "text": "animālibus",
+   "say": "animalibus",
+   "where": "atelier"
+  },
+  {
+   "text": "flūmen",
+   "say": "flumen",
+   "where": "atelier"
+  },
+  {
+   "text": "flūmina",
+   "say": "flumina",
+   "where": "atelier"
+  },
+  {
+   "text": "flūminis",
+   "say": "fluminis",
+   "where": "atelier"
+  },
+  {
+   "text": "flūminum",
+   "say": "fluminum",
+   "where": "atelier"
+  },
+  {
+   "text": "flūminī",
+   "say": "flumini",
+   "where": "atelier"
+  },
+  {
+   "text": "flūminibus",
+   "say": "fluminibus",
+   "where": "atelier"
+  },
+  {
+   "text": "flūmine",
+   "say": "flumine",
+   "where": "atelier"
+  },
+  {
+   "text": "exercitus",
+   "say": "exercitus",
+   "where": "atelier"
+  },
+  {
+   "text": "exercitūs",
+   "say": "exercitus",
+   "where": "atelier"
+  },
+  {
+   "text": "exercitum",
+   "say": "exercitum",
+   "where": "atelier"
+  },
+  {
+   "text": "exercituum",
+   "say": "exercituum",
+   "where": "atelier"
+  },
+  {
+   "text": "exercituī",
+   "say": "exercitui",
+   "where": "atelier"
+  },
+  {
+   "text": "exercitibus",
+   "say": "exercitibus",
+   "where": "atelier"
+  },
+  {
+   "text": "exercitū",
+   "say": "exercitu",
+   "where": "atelier"
+  },
+  {
+   "text": "cornū",
+   "say": "cornu",
+   "where": "atelier"
+  },
+  {
+   "text": "cornua",
+   "say": "cornua",
+   "where": "atelier"
+  },
+  {
+   "text": "cornūs",
+   "say": "cornus",
+   "where": "atelier"
+  },
+  {
+   "text": "cornuum",
+   "say": "cornuum",
+   "where": "atelier"
+  },
+  {
+   "text": "cornibus",
+   "say": "cornibus",
+   "where": "atelier"
+  },
+  {
+   "text": "domūs",
+   "say": "domus",
+   "where": "atelier"
+  },
+  {
+   "text": "domōs",
+   "say": "domos",
+   "where": "atelier"
+  },
+  {
+   "text": "domuum",
+   "say": "domuum",
+   "where": "atelier"
+  },
+  {
+   "text": "domuī",
+   "say": "domui",
+   "where": "atelier"
+  },
+  {
+   "text": "domibus",
+   "say": "domibus",
+   "where": "atelier"
+  },
+  {
+   "text": "domō",
+   "say": "domo",
+   "where": "atelier"
+  },
+  {
+   "text": "spēs",
+   "say": "spes",
+   "where": "atelier"
+  },
+  {
+   "text": "spem",
+   "say": "spem",
+   "where": "atelier"
+  },
+  {
+   "text": "speī",
+   "say": "spei",
+   "where": "atelier"
+  },
+  {
+   "text": "spērum",
+   "say": "sperum",
+   "where": "atelier"
+  },
+  {
+   "text": "spēbus",
+   "say": "spebus",
+   "where": "atelier"
+  },
+  {
+   "text": "spē",
+   "say": "spe",
+   "where": "atelier"
+  },
+  {
+   "text": "bona",
+   "say": "bona",
+   "where": "atelier"
+  },
+  {
+   "text": "bonum",
+   "say": "bonum",
+   "where": "atelier"
+  },
+  {
+   "text": "bone",
+   "say": "bone",
+   "where": "atelier"
+  },
+  {
+   "text": "bonam",
+   "say": "bonam",
+   "where": "atelier"
+  },
+  {
+   "text": "bonī",
+   "say": "boni",
+   "where": "atelier"
+  },
+  {
+   "text": "bonae",
+   "say": "bone",
+   "where": "atelier"
+  },
+  {
+   "text": "bonō",
+   "say": "bono",
+   "where": "atelier"
+  },
+  {
+   "text": "bonā",
+   "say": "bona",
+   "where": "atelier"
+  },
+  {
+   "text": "bonōs",
+   "say": "bonos",
+   "where": "atelier"
+  },
+  {
+   "text": "bonās",
+   "say": "bonas",
+   "where": "atelier"
+  },
+  {
+   "text": "bonōrum",
+   "say": "bonorum",
+   "where": "atelier"
+  },
+  {
+   "text": "bonārum",
+   "say": "bonarum",
+   "where": "atelier"
+  },
+  {
+   "text": "bonīs",
+   "say": "bonis",
+   "where": "atelier"
+  },
+  {
+   "text": "pulcher",
+   "say": "pulcher",
+   "where": "atelier"
+  },
+  {
+   "text": "pulchrum",
+   "say": "pulchrum",
+   "where": "atelier"
+  },
+  {
+   "text": "pulchram",
+   "say": "pulchram",
+   "where": "atelier"
+  },
+  {
+   "text": "pulchrī",
+   "say": "pulchri",
+   "where": "atelier"
+  },
+  {
+   "text": "pulchrae",
+   "say": "pulchre",
+   "where": "atelier"
+  },
+  {
+   "text": "pulchrō",
+   "say": "pulchro",
+   "where": "atelier"
+  },
+  {
+   "text": "pulchrā",
+   "say": "pulchra",
+   "where": "atelier"
+  },
+  {
+   "text": "pulchrōs",
+   "say": "pulchros",
+   "where": "atelier"
+  },
+  {
+   "text": "pulchrās",
+   "say": "pulchras",
+   "where": "atelier"
+  },
+  {
+   "text": "pulchrōrum",
+   "say": "pulchrorum",
+   "where": "atelier"
+  },
+  {
+   "text": "pulchrārum",
+   "say": "pulchrarum",
+   "where": "atelier"
+  },
+  {
+   "text": "pulchrīs",
+   "say": "pulchris",
+   "where": "atelier"
+  },
+  {
+   "text": "līber",
+   "say": "liber",
+   "where": "atelier"
+  },
+  {
+   "text": "lībera",
+   "say": "libera",
+   "where": "atelier"
+  },
+  {
+   "text": "līberum",
+   "say": "liberum",
+   "where": "atelier"
+  },
+  {
+   "text": "līberam",
+   "say": "liberam",
+   "where": "atelier"
+  },
+  {
+   "text": "līberī",
+   "say": "liberi",
+   "where": "atelier"
+  },
+  {
+   "text": "līberae",
+   "say": "libere",
+   "where": "atelier"
+  },
+  {
+   "text": "līberō",
+   "say": "libero",
+   "where": "atelier"
+  },
+  {
+   "text": "līberā",
+   "say": "libera",
+   "where": "atelier"
+  },
+  {
+   "text": "līberōs",
+   "say": "liberos",
+   "where": "atelier"
+  },
+  {
+   "text": "līberās",
+   "say": "liberas",
+   "where": "atelier"
+  },
+  {
+   "text": "līberōrum",
+   "say": "liberorum",
+   "where": "atelier"
+  },
+  {
+   "text": "līberārum",
+   "say": "liberarum",
+   "where": "atelier"
+  },
+  {
+   "text": "līberīs",
+   "say": "liberis",
+   "where": "atelier"
+  },
+  {
+   "text": "forte",
+   "say": "forte",
+   "where": "atelier"
+  },
+  {
+   "text": "fortem",
+   "say": "fortem",
+   "where": "atelier"
+  },
+  {
+   "text": "fortī",
+   "say": "forti",
+   "where": "atelier"
+  },
+  {
+   "text": "fortēs",
+   "say": "fortes",
+   "where": "atelier"
+  },
+  {
+   "text": "fortia",
+   "say": "forzia",
+   "where": "atelier"
+  },
+  {
+   "text": "fortium",
+   "say": "forzium",
+   "where": "atelier"
+  },
+  {
+   "text": "fortibus",
+   "say": "fortibus",
+   "where": "atelier"
+  },
+  {
+   "text": "ācer",
+   "say": "acer",
+   "where": "atelier"
+  },
+  {
+   "text": "ācris",
+   "say": "acris",
+   "where": "atelier"
+  },
+  {
+   "text": "ācre",
+   "say": "acre",
+   "where": "atelier"
+  },
+  {
+   "text": "ācrem",
+   "say": "acrem",
+   "where": "atelier"
+  },
+  {
+   "text": "ācrī",
+   "say": "acri",
+   "where": "atelier"
+  },
+  {
+   "text": "ācrēs",
+   "say": "acres",
+   "where": "atelier"
+  },
+  {
+   "text": "ācria",
+   "say": "acria",
+   "where": "atelier"
+  },
+  {
+   "text": "ācrium",
+   "say": "acrium",
+   "where": "atelier"
+  },
+  {
+   "text": "ācribus",
+   "say": "acribus",
+   "where": "atelier"
+  },
+  {
+   "text": "fēlīx",
+   "say": "felix",
+   "where": "atelier"
+  },
+  {
+   "text": "fēlīcem",
+   "say": "felicem",
+   "where": "atelier"
+  },
+  {
+   "text": "fēlīcis",
+   "say": "felicis",
+   "where": "atelier"
+  },
+  {
+   "text": "fēlīcī",
+   "say": "felici",
+   "where": "atelier"
+  },
+  {
+   "text": "fēlīcēs",
+   "say": "felices",
+   "where": "atelier"
+  },
+  {
+   "text": "fēlīcia",
+   "say": "felicia",
+   "where": "atelier"
+  },
+  {
+   "text": "fēlīcium",
+   "say": "felicium",
+   "where": "atelier"
+  },
+  {
+   "text": "fēlīcibus",
+   "say": "felicibus",
+   "where": "atelier"
+  },
+  {
+   "text": "ingēns",
+   "say": "ingens",
+   "where": "atelier"
+  },
+  {
+   "text": "ingentem",
+   "say": "ingentem",
+   "where": "atelier"
+  },
+  {
+   "text": "ingentis",
+   "say": "ingentis",
+   "where": "atelier"
+  },
+  {
+   "text": "ingentī",
+   "say": "ingenti",
+   "where": "atelier"
+  },
+  {
+   "text": "ingentēs",
+   "say": "ingentes",
+   "where": "atelier"
+  },
+  {
+   "text": "ingentia",
+   "say": "ingenzia",
+   "where": "atelier"
+  },
+  {
+   "text": "ingentium",
+   "say": "ingenzium",
+   "where": "atelier"
+  },
+  {
+   "text": "ingentibus",
+   "say": "ingentibus",
+   "where": "atelier"
+  },
+  {
+   "text": "melior",
+   "say": "melior",
+   "where": "atelier"
+  },
+  {
+   "text": "melius",
+   "say": "melius",
+   "where": "atelier"
+  },
+  {
+   "text": "meliōrem",
+   "say": "meliorem",
+   "where": "atelier"
+  },
+  {
+   "text": "meliōris",
+   "say": "melioris",
+   "where": "atelier"
+  },
+  {
+   "text": "meliōrī",
+   "say": "meliori",
+   "where": "atelier"
+  },
+  {
+   "text": "meliōre",
+   "say": "meliore",
+   "where": "atelier"
+  },
+  {
+   "text": "meliōrēs",
+   "say": "meliores",
+   "where": "atelier"
+  },
+  {
+   "text": "meliōra",
+   "say": "meliora",
+   "where": "atelier"
+  },
+  {
+   "text": "meliōrum",
+   "say": "meliorum",
+   "where": "atelier"
+  },
+  {
+   "text": "meliōribus",
+   "say": "melioribus",
+   "where": "atelier"
+  },
+  {
+   "text": "mē",
+   "say": "me",
+   "where": "atelier"
+  },
+  {
+   "text": "tē",
+   "say": "te",
+   "where": "atelier"
+  },
+  {
+   "text": "meī",
+   "say": "mei",
+   "where": "atelier"
+  },
+  {
+   "text": "tuī",
+   "say": "tui",
+   "where": "atelier"
+  },
+  {
+   "text": "mihi",
+   "say": "michi",
+   "where": "atelier"
+  },
+  {
+   "text": "vestrum",
+   "say": "vestrum",
+   "where": "atelier"
+  },
+  {
+   "text": "nōbīs",
+   "say": "nobis",
+   "where": "atelier"
+  },
+  {
+   "text": "vōbīs",
+   "say": "vobis",
+   "where": "atelier"
+  },
+  {
+   "text": "is",
+   "say": "is",
+   "where": "atelier"
+  },
+  {
+   "text": "ea",
+   "say": "ea",
+   "where": "atelier"
+  },
+  {
+   "text": "eum",
+   "say": "eum",
+   "where": "atelier"
+  },
+  {
+   "text": "eam",
+   "say": "eam",
+   "where": "atelier"
+  },
+  {
+   "text": "eius",
+   "say": "eius",
+   "where": "atelier"
+  },
+  {
+   "text": "eī",
+   "say": "ei",
+   "where": "atelier"
+  },
+  {
+   "text": "eō",
+   "say": "eo",
+   "where": "atelier"
+  },
+  {
+   "text": "eā",
+   "say": "ea",
+   "where": "atelier"
+  },
+  {
+   "text": "eae",
+   "say": "ee",
+   "where": "atelier"
+  },
+  {
+   "text": "eōs",
+   "say": "eos",
+   "where": "atelier"
+  },
+  {
+   "text": "eās",
+   "say": "eas",
+   "where": "atelier"
+  },
+  {
+   "text": "eōrum",
+   "say": "eorum",
+   "where": "atelier"
+  },
+  {
+   "text": "eārum",
+   "say": "earum",
+   "where": "atelier"
+  },
+  {
+   "text": "eīs",
+   "say": "eis",
+   "where": "atelier"
+  },
+  {
+   "text": "hunc",
+   "say": "unc",
+   "where": "atelier"
+  },
+  {
+   "text": "hanc",
+   "say": "anc",
+   "where": "atelier"
+  },
+  {
+   "text": "huic",
+   "say": "uic",
+   "where": "atelier"
+  },
+  {
+   "text": "hōc",
+   "say": "oc",
+   "where": "atelier"
+  },
+  {
+   "text": "hāc",
+   "say": "ac",
+   "where": "atelier"
+  },
+  {
+   "text": "hī",
+   "say": "i",
+   "where": "atelier"
+  },
+  {
+   "text": "hae",
+   "say": "e",
+   "where": "atelier"
+  },
+  {
+   "text": "hōs",
+   "say": "os",
+   "where": "atelier"
+  },
+  {
+   "text": "hās",
+   "say": "as",
+   "where": "atelier"
+  },
+  {
+   "text": "hōrum",
+   "say": "orum",
+   "where": "atelier"
+  },
+  {
+   "text": "hārum",
+   "say": "arum",
+   "where": "atelier"
+  },
+  {
+   "text": "hīs",
+   "say": "is",
+   "where": "atelier"
+  },
+  {
+   "text": "ille",
+   "say": "ille",
+   "where": "atelier"
+  },
+  {
+   "text": "illud",
+   "say": "illud",
+   "where": "atelier"
+  },
+  {
+   "text": "illum",
+   "say": "illum",
+   "where": "atelier"
+  },
+  {
+   "text": "illam",
+   "say": "illam",
+   "where": "atelier"
+  },
+  {
+   "text": "illīus",
+   "say": "illius",
+   "where": "atelier"
+  },
+  {
+   "text": "illī",
+   "say": "illi",
+   "where": "atelier"
+  },
+  {
+   "text": "illō",
+   "say": "illo",
+   "where": "atelier"
+  },
+  {
+   "text": "illā",
+   "say": "illa",
+   "where": "atelier"
+  },
+  {
+   "text": "illae",
+   "say": "ille",
+   "where": "atelier"
+  },
+  {
+   "text": "illōs",
+   "say": "illos",
+   "where": "atelier"
+  },
+  {
+   "text": "illās",
+   "say": "illas",
+   "where": "atelier"
+  },
+  {
+   "text": "illōrum",
+   "say": "illorum",
+   "where": "atelier"
+  },
+  {
+   "text": "illārum",
+   "say": "illarum",
+   "where": "atelier"
+  },
+  {
+   "text": "illīs",
+   "say": "illis",
+   "where": "atelier"
+  },
+  {
+   "text": "quī",
+   "say": "qui",
+   "where": "atelier"
+  },
+  {
+   "text": "quae",
+   "say": "que",
+   "where": "atelier"
+  },
+  {
+   "text": "quem",
+   "say": "quem",
+   "where": "atelier"
+  },
+  {
+   "text": "cuius",
+   "say": "cuius",
+   "where": "atelier"
+  },
+  {
+   "text": "cui",
+   "say": "cui",
+   "where": "atelier"
+  },
+  {
+   "text": "quō",
+   "say": "quo",
+   "where": "atelier"
+  },
+  {
+   "text": "quā",
+   "say": "qua",
+   "where": "atelier"
+  },
+  {
+   "text": "quōs",
+   "say": "quos",
+   "where": "atelier"
+  },
+  {
+   "text": "quās",
+   "say": "quas",
+   "where": "atelier"
+  },
+  {
+   "text": "quōrum",
+   "say": "quorum",
+   "where": "atelier"
+  },
+  {
+   "text": "quārum",
+   "say": "quarum",
+   "where": "atelier"
+  },
+  {
+   "text": "amās",
+   "say": "amas",
+   "where": "atelier"
+  },
+  {
+   "text": "amāmus",
+   "say": "amamus",
+   "where": "atelier"
+  },
+  {
+   "text": "amātis",
+   "say": "amatis",
+   "where": "atelier"
+  },
+  {
+   "text": "amant",
+   "say": "amant",
+   "where": "atelier"
+  },
+  {
+   "text": "amābās",
+   "say": "amabas",
+   "where": "atelier"
+  },
+  {
+   "text": "amābat",
+   "say": "amabat",
+   "where": "atelier"
+  },
+  {
+   "text": "amābāmus",
+   "say": "amabamus",
+   "where": "atelier"
+  },
+  {
+   "text": "amābātis",
+   "say": "amabatis",
+   "where": "atelier"
+  },
+  {
+   "text": "amābant",
+   "say": "amabant",
+   "where": "atelier"
+  },
+  {
+   "text": "amābis",
+   "say": "amabis",
+   "where": "atelier"
+  },
+  {
+   "text": "amābit",
+   "say": "amabit",
+   "where": "atelier"
+  },
+  {
+   "text": "amābimus",
+   "say": "amabimus",
+   "where": "atelier"
+  },
+  {
+   "text": "amābitis",
+   "say": "amabitis",
+   "where": "atelier"
+  },
+  {
+   "text": "amābunt",
+   "say": "amabunt",
+   "where": "atelier"
+  },
+  {
+   "text": "amāvistī",
+   "say": "amavisti",
+   "where": "atelier"
+  },
+  {
+   "text": "amāvit",
+   "say": "amavit",
+   "where": "atelier"
+  },
+  {
+   "text": "amāvimus",
+   "say": "amavimus",
+   "where": "atelier"
+  },
+  {
+   "text": "amāvistis",
+   "say": "amavistis",
+   "where": "atelier"
+  },
+  {
+   "text": "amāvērunt",
+   "say": "amaverunt",
+   "where": "atelier"
+  },
+  {
+   "text": "amāveram",
+   "say": "amaveram",
+   "where": "atelier"
+  },
+  {
+   "text": "amāverās",
+   "say": "amaveras",
+   "where": "atelier"
+  },
+  {
+   "text": "amāverat",
+   "say": "amaverat",
+   "where": "atelier"
+  },
+  {
+   "text": "amāverāmus",
+   "say": "amaveramus",
+   "where": "atelier"
+  },
+  {
+   "text": "amāverātis",
+   "say": "amaveratis",
+   "where": "atelier"
+  },
+  {
+   "text": "amāverant",
+   "say": "amaverant",
+   "where": "atelier"
+  },
+  {
+   "text": "amāverō",
+   "say": "amavero",
+   "where": "atelier"
+  },
+  {
+   "text": "amāveris",
+   "say": "amaveris",
+   "where": "atelier"
+  },
+  {
+   "text": "amāverit",
+   "say": "amaverit",
+   "where": "atelier"
+  },
+  {
+   "text": "amāverimus",
+   "say": "amaverimus",
+   "where": "atelier"
+  },
+  {
+   "text": "amāveritis",
+   "say": "amaveritis",
+   "where": "atelier"
+  },
+  {
+   "text": "amāverint",
+   "say": "amaverint",
+   "where": "atelier"
+  },
+  {
+   "text": "amor",
+   "say": "amor",
+   "where": "atelier"
+  },
+  {
+   "text": "amāris",
+   "say": "amaris",
+   "where": "atelier"
+  },
+  {
+   "text": "amātur",
+   "say": "amatur",
+   "where": "atelier"
+  },
+  {
+   "text": "amāmur",
+   "say": "amamur",
+   "where": "atelier"
+  },
+  {
+   "text": "amāminī",
+   "say": "amamini",
+   "where": "atelier"
+  },
+  {
+   "text": "amantur",
+   "say": "amantur",
+   "where": "atelier"
+  },
+  {
+   "text": "amābar",
+   "say": "amabar",
+   "where": "atelier"
+  },
+  {
+   "text": "amābāris",
+   "say": "amabaris",
+   "where": "atelier"
+  },
+  {
+   "text": "amābātur",
+   "say": "amabatur",
+   "where": "atelier"
+  },
+  {
+   "text": "amābāmur",
+   "say": "amabamur",
+   "where": "atelier"
+  },
+  {
+   "text": "amābāminī",
+   "say": "amabamini",
+   "where": "atelier"
+  },
+  {
+   "text": "amābantur",
+   "say": "amabantur",
+   "where": "atelier"
+  },
+  {
+   "text": "amābor",
+   "say": "amabor",
+   "where": "atelier"
+  },
+  {
+   "text": "amāberis",
+   "say": "amaberis",
+   "where": "atelier"
+  },
+  {
+   "text": "amābitur",
+   "say": "amabitur",
+   "where": "atelier"
+  },
+  {
+   "text": "amābimur",
+   "say": "amabimur",
+   "where": "atelier"
+  },
+  {
+   "text": "amābiminī",
+   "say": "amabimini",
+   "where": "atelier"
+  },
+  {
+   "text": "amābuntur",
+   "say": "amabuntur",
+   "where": "atelier"
+  },
+  {
+   "text": "amātus sum",
+   "say": "amatus sum",
+   "where": "atelier"
+  },
+  {
+   "text": "amātus es",
+   "say": "amatus es",
+   "where": "atelier"
+  },
+  {
+   "text": "amātus est",
+   "say": "amatus est",
+   "where": "atelier"
+  },
+  {
+   "text": "amātī sumus",
+   "say": "amati sumus",
+   "where": "atelier"
+  },
+  {
+   "text": "amātī estis",
+   "say": "amati estis",
+   "where": "atelier"
+  },
+  {
+   "text": "amātī sunt",
+   "say": "amati sunt",
+   "where": "atelier"
+  },
+  {
+   "text": "amātus eram",
+   "say": "amatus eram",
+   "where": "atelier"
+  },
+  {
+   "text": "amātus erās",
+   "say": "amatus eras",
+   "where": "atelier"
+  },
+  {
+   "text": "amātus erat",
+   "say": "amatus erat",
+   "where": "atelier"
+  },
+  {
+   "text": "amātī erāmus",
+   "say": "amati eramus",
+   "where": "atelier"
+  },
+  {
+   "text": "amātī erātis",
+   "say": "amati eratis",
+   "where": "atelier"
+  },
+  {
+   "text": "amātī erant",
+   "say": "amati erant",
+   "where": "atelier"
+  },
+  {
+   "text": "amātus erō",
+   "say": "amatus ero",
+   "where": "atelier"
+  },
+  {
+   "text": "amātus eris",
+   "say": "amatus eris",
+   "where": "atelier"
+  },
+  {
+   "text": "amātus erit",
+   "say": "amatus erit",
+   "where": "atelier"
+  },
+  {
+   "text": "amātī erimus",
+   "say": "amati erimus",
+   "where": "atelier"
+  },
+  {
+   "text": "amātī eritis",
+   "say": "amati eritis",
+   "where": "atelier"
+  },
+  {
+   "text": "amātī erunt",
+   "say": "amati erunt",
+   "where": "atelier"
+  },
+  {
+   "text": "amem",
+   "say": "amem",
+   "where": "atelier"
+  },
+  {
+   "text": "amēs",
+   "say": "ames",
+   "where": "atelier"
+  },
+  {
+   "text": "amet",
+   "say": "amet",
+   "where": "atelier"
+  },
+  {
+   "text": "amēmus",
+   "say": "amemus",
+   "where": "atelier"
+  },
+  {
+   "text": "amētis",
+   "say": "ametis",
+   "where": "atelier"
+  },
+  {
+   "text": "ament",
+   "say": "ament",
+   "where": "atelier"
+  },
+  {
+   "text": "amārem",
+   "say": "amarem",
+   "where": "atelier"
+  },
+  {
+   "text": "amārēs",
+   "say": "amares",
+   "where": "atelier"
+  },
+  {
+   "text": "amāret",
+   "say": "amaret",
+   "where": "atelier"
+  },
+  {
+   "text": "amārēmus",
+   "say": "amaremus",
+   "where": "atelier"
+  },
+  {
+   "text": "amārētis",
+   "say": "amaretis",
+   "where": "atelier"
+  },
+  {
+   "text": "amārent",
+   "say": "amarent",
+   "where": "atelier"
+  },
+  {
+   "text": "amāverim",
+   "say": "amaverim",
+   "where": "atelier"
+  },
+  {
+   "text": "amāvissem",
+   "say": "amavissem",
+   "where": "atelier"
+  },
+  {
+   "text": "amāvissēs",
+   "say": "amavisses",
+   "where": "atelier"
+  },
+  {
+   "text": "amāvisset",
+   "say": "amavisset",
+   "where": "atelier"
+  },
+  {
+   "text": "amāvissēmus",
+   "say": "amavissemus",
+   "where": "atelier"
+  },
+  {
+   "text": "amāvissētis",
+   "say": "amavissetis",
+   "where": "atelier"
+  },
+  {
+   "text": "amāvissent",
+   "say": "amavissent",
+   "where": "atelier"
+  },
+  {
+   "text": "amer",
+   "say": "amer",
+   "where": "atelier"
+  },
+  {
+   "text": "amēris",
+   "say": "ameris",
+   "where": "atelier"
+  },
+  {
+   "text": "amētur",
+   "say": "ametur",
+   "where": "atelier"
+  },
+  {
+   "text": "amēmur",
+   "say": "amemur",
+   "where": "atelier"
+  },
+  {
+   "text": "amēminī",
+   "say": "amemini",
+   "where": "atelier"
+  },
+  {
+   "text": "amentur",
+   "say": "amentur",
+   "where": "atelier"
+  },
+  {
+   "text": "amārer",
+   "say": "amarer",
+   "where": "atelier"
+  },
+  {
+   "text": "amārēris",
+   "say": "amareris",
+   "where": "atelier"
+  },
+  {
+   "text": "amārētur",
+   "say": "amaretur",
+   "where": "atelier"
+  },
+  {
+   "text": "amārēmur",
+   "say": "amaremur",
+   "where": "atelier"
+  },
+  {
+   "text": "amārēminī",
+   "say": "amaremini",
+   "where": "atelier"
+  },
+  {
+   "text": "amārentur",
+   "say": "amarentur",
+   "where": "atelier"
+  },
+  {
+   "text": "amātus sim",
+   "say": "amatus sim",
+   "where": "atelier"
+  },
+  {
+   "text": "amātus sīs",
+   "say": "amatus sis",
+   "where": "atelier"
+  },
+  {
+   "text": "amātus sit",
+   "say": "amatus sit",
+   "where": "atelier"
+  },
+  {
+   "text": "amātī sīmus",
+   "say": "amati simus",
+   "where": "atelier"
+  },
+  {
+   "text": "amātī sītis",
+   "say": "amati sitis",
+   "where": "atelier"
+  },
+  {
+   "text": "amātī sint",
+   "say": "amati sint",
+   "where": "atelier"
+  },
+  {
+   "text": "amātus essem",
+   "say": "amatus essem",
+   "where": "atelier"
+  },
+  {
+   "text": "amātus essēs",
+   "say": "amatus esses",
+   "where": "atelier"
+  },
+  {
+   "text": "amātus esset",
+   "say": "amatus esset",
+   "where": "atelier"
+  },
+  {
+   "text": "amātī essēmus",
+   "say": "amati essemus",
+   "where": "atelier"
+  },
+  {
+   "text": "amātī essētis",
+   "say": "amati essetis",
+   "where": "atelier"
+  },
+  {
+   "text": "amātī essent",
+   "say": "amati essent",
+   "where": "atelier"
+  },
+  {
+   "text": "amā",
+   "say": "ama",
+   "where": "atelier"
+  },
+  {
+   "text": "amāte",
+   "say": "amate",
+   "where": "atelier"
+  },
+  {
+   "text": "amāre",
+   "say": "amare",
+   "where": "atelier"
+  },
+  {
+   "text": "amārī",
+   "say": "amari",
+   "where": "atelier"
+  },
+  {
+   "text": "amāvisse",
+   "say": "amavisse",
+   "where": "atelier"
+  },
+  {
+   "text": "amātus esse",
+   "say": "amatus esse",
+   "where": "atelier"
+  },
+  {
+   "text": "amātūrus esse",
+   "say": "amaturus esse",
+   "where": "atelier"
+  },
+  {
+   "text": "amāns",
+   "say": "amans",
+   "where": "atelier"
+  },
+  {
+   "text": "amātus, -a, -um",
+   "say": "amatus, -a, -um",
+   "where": "atelier"
+  },
+  {
+   "text": "amātūrus, -a, -um",
+   "say": "amaturus, -a, -um",
+   "where": "atelier"
+  },
+  {
+   "text": "Domine, audi nos",
+   "say": "Domine, audi nos",
+   "where": "atelier"
+  },
+  {
+   "text": "Et tu, Brute?",
+   "say": "Et tu, Brute?",
+   "where": "atelier"
+  },
+  {
+   "text": "Poeta puellis fabulam narrat",
+   "say": "Peta puellis fabulam narrat",
+   "where": "atelier"
+  },
+  {
+   "text": "Puella nautae rosam dat",
+   "say": "Puella naute rosam dat",
+   "where": "atelier"
+  },
+  {
+   "text": "Agricola gladio pugnat",
+   "say": "Agricola gladio pugnat",
+   "where": "atelier"
+  },
+  {
+   "text": "Caesar consul fuit",
+   "say": "Cesar consul fuit",
+   "where": "atelier"
+  },
+  {
+   "text": "Puella rosam amat",
+   "say": "Puella rosam amat",
+   "where": "atelier"
+  },
+  {
+   "text": "Ar ma vi rum que ca no Tro iae qui pri mus ab o ris",
+   "say": "Ar ma vi rum que ca no Tro ie qui pri mus ab o ris",
+   "where": "atelier"
+  },
+  {
+   "text": "Ti ty re tu pa tu lae re cu bans sub teg mi ne fa gi",
+   "say": "Ti ti re tu pa tu le re cu bans sub teg mi ne fa gi",
+   "where": "atelier"
+  },
+  {
+   "text": "In no va fert a ni mus mu ta tas di ce re for mas",
+   "say": "In no va fert a ni mus mu ta tas di ce re for mas",
+   "where": "atelier"
+  },
+  {
+   "text": "Tan tae mo lis e rat Ro ma nam con de re gen tem",
+   "say": "Tan te mo lis e rat Ro ma nam con de re gen tem",
+   "where": "atelier"
+  },
+  {
+   "text": "At re gi na gra vi iam du dum sau ci a cu ra",
+   "say": "At re gi na gra vi iam du dum sau ci a cu ra",
+   "where": "atelier"
+  },
+  {
+   "text": "Ae ne a dum ge ne trix ho mi num di vum que vo lup tas",
+   "say": "E ne a dum ge ne trix o mi num di vum que vo lup tas",
+   "where": "atelier"
+  },
+  {
+   "text": "Tu re ge r’im pe ri o po pu los Ro ma ne me men to",
+   "say": "Tu re ge r’im pe ri o po pu los Ro ma ne me men to",
+   "where": "atelier"
+  },
+  {
+   "text": "li to ra mul t’il l’et ter ris iac ta tus et al to",
+   "say": "li to ra mul t’il l’et ter ris iac ta tus et al to",
+   "where": "atelier"
+  },
+  {
+   "text": "In fan dum re gi na iu bes re no va re do lo rem",
+   "say": "In fan dum re gi na iu bes re no va re do lo rem",
+   "where": "atelier"
+  },
+  {
+   "text": "Fe lix qui po tu it re rum cog nos ce re cau sas",
+   "say": "Fe lix qui po tu it re rum cog nos ce re cau sas",
+   "where": "atelier"
+  },
+  {
+   "text": "nos pa tri am fu gi mus tu Ti ty re len tus in um bra",
+   "say": "nos pa tri am fu gi mus tu Ti ti re len tus in um bra",
+   "where": "atelier"
+  },
+  {
+   "text": "Au re a pri ma sa tast ae tas quae vin di ce nul lo",
+   "say": "Au re a pri ma sa tast e tas que vin di ce nul lo",
+   "where": "atelier"
+  },
+  {
+   "text": "Ar ma gra vi nu me ro vi o len ta que bel la pa ra bam e de re ma te ri a con ve ni en te mo dis",
+   "say": "Ar ma gra vi nu me ro vi o len ta que bel la pa ra bam e de re ma te ri a con ve ni en te mo dis",
+   "where": "atelier"
+  }
+ ]
+}

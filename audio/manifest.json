@@ -25,6 +25,14 @@
   "hi": {
    "n": 3224,
    "voice": "kokoro-hf_alpha"
+  },
+  "la": {
+   "n": 1594,
+   "voice": "kokoro-if_sara"
+  },
+  "la-e": {
+   "n": 1594,
+   "voice": "kokoro-if_sara"
   }
  }
 }
