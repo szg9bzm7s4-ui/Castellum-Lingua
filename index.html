@@ -8950,6 +8950,7 @@ document.addEventListener('click',function(e){
       .replace(/\b([Mm])ihi\b/g,'$1ichi').replace(/\b([Nn])ihil/g,'$1ichil')
       .replace(/\bh/g,'').replace(/\bH/g,'');
   }
+  window.castellumLatinSay=latinForItalianVoice;
   function localeFor(code){
     return L[code]?.t||LOCALE_FALLBACK[code]||code;
   }
@@ -12964,7 +12965,13 @@ via|la route|voie|viaduc, via|via|vía|via|via, viaduct|
 aurum|l'or|or|aurifère|oro|oro|ouro|aureate|Le symbole chimique de l'or, Au, vient d'aurum.
 ferrum|le fer|fer|ferreux, ferroviaire|ferro|hierro|ferro|ferrous|Hierro : encore le f latin devenu h en espagnol.`;
   const ROOTS=ROOTS_RAW.split("\n").map(l=>{const a=l.split("|");return {la:a[0],s:a[1],fr:a[2],frs:a[3],it:a[4],es:a[5],pt:a[6],en:a[7],n:a[8]||""}});
-  const RL=[["fr","🇫🇷 français"],["it","🇮🇹 italien"],["es","🇪🇸 espagnol"],["pt","🇵🇹 portugais"],["en","🇬🇧 anglais"]];
+  /* Dérivés en allemand et en néerlandais (mots empruntés au latin ; entre parenthèses : pas de descendant direct). */
+  const ROOTS_DENL={"aqua":["Aquarium, Aquädukt","aquarium, aquaduct"],"pater":["Pater, Patriot","pater, patriot"],"mater":["Matrone, maternal","matrone, maternaal"],"frater":["Fraternität","frater, fraterniteit"],"caput":["Kapitel, Kapitän","kapitein, kapitaal"],"manus":["manuell, Manuskript","manueel, manuscript"],"pes, pedis":["Pedal, Pediküre","pedaal, pedicure"],"oculus":["Okular","oculair"],"dens, dentis":["Dentist, dental","dentaal"],"cor, cordis":["Courage, kordial","courage, cordiaal"],"nox, noctis":["Nocturne","nocturne"],"dies":["Diarium","diarium"],"sol":["Solarium, solar","solarium, solair"],"luna":["lunar","lunair"],"terra":["Terrasse, Territorium","terras, territorium"],"mare":["Marine, maritim","marine, maritiem"],"focus":["Fokus","focus"],"panis":["Kompanie, Kumpan","compagnie, kompaan"],"vinum":["Wein, Winzer","wijn"],"lac, lactis":["Laktose","lactose"],"caballus":["Kavallerie","cavalerie"],"canis":["Kanaille","kanalje"],"lupus":["Lupine","lupine"],"avis":["Aviatik","aviatiek"],"arbor":["Arboretum","arboretum"],"flos, floris":["Flora, Florist","flora, florist"],"schola":["Schule","school"],"liber, libri":["Libretto","libretto"],"scribere":["schreiben","schrijven"],"legere":["Lektüre, Legende","lectuur, legende"],"videre":["Video, Vision","video, visie"],"audire":["Audio, Auditorium","audio, auditorium"],"dicere":["Diktat, diktieren","dictee, dicteren"],"facere":["Fakt, Fabrik","feit, fabriek"],"dormire":["Dormitorium","dormitorium"],"cantare":["Kantate, Kantor","cantate, cantor"],"amare":["Amateur","amateur"],"tempus":["Tempo, temporär","tempo, temporeel"],"annus":["Annalen, Annuität","annalen, annuïteit"],"mensis":["Semester","semester"],"domus":["Dom","dom, domkerk"],"villa":["Villa","villa"],"civitas":["zivil, Zivilisation","civiel, civilisatie"],"rex, regis":["regieren, Regent","regeren, regent"],"lex, legis":["legal, legitim","legaal, legitiem"],"bellum":["Rebell","rebel"],"pax, pacis":["Pazifist","pacifist"],"vox, vocis":["Vokal","vocaal, vocalist"],"nomen":["Nomen, nominieren","nomineren"],"verbum":["Verb","verbum, verbaal"],"littera":["Literatur","letter, literatuur"],"numerus":["Nummer","nummer"],"populus":["populär, Pöbel","populair"],"homo, hominis":["Hominide","hominide"],"femina":["feminin","feminien"],"iuvenis":["juvenil, Junior","junior"],"senex, senior":["Senior, Senat","senior, senaat"],"bonus":["Bonus","bonus"],"malus":["maliziös","malafide"],"novus":["Novize, Novelle","novice"],"altus":["Alt (Stimme)","alt (stem)"],"fortis":["Fort, Forte","fort"],"clarus":["klar","klaar"],"liber":["liberal","liberaal"],"tres":["Trio","trio"],"centum":["Zentner, Prozent","cent, procent"],"mille":["Meile, Million","mijl, miljoen"],"septem":["September","september"],"decem":["Dezember, dezimal","december, decimaal"],"deus":["Deismus, Divinität","deïsme"],"sanctus":["Sankt","sint"],"gratia":["gratis, Gratulation","gratis, gratuleren"],"fabula":["Fabel","fabel"],"computare":["Computer","computer"],"salarium":["Salär","salaris"],"candidatus":["Kandidat","kandidaat"],"virus":["Virus","virus"],"caelum":["(Himmel)","(hemel)"],"mons, montis":["Montage","montage"],"fluvius / flumen":["fluvial","fluviaal"],"insula":["Insel, Isolation","isolatie"],"porta":["Pforte, Portal","poort, portaal"],"via":["via, Viadukt","via, viaduct"],"aurum":["(Gold; Symbol Au)","(goud; symbool Au)"],"ferrum":["Ferrit","ferriet"]};
+  ROOTS.forEach(r=>{const x=ROOTS_DENL[r.la];if(x){r.de=x[0];r.nl=x[1]}});
+  const RL_ALL=[["fr","🇫🇷 français"],["it","🇮🇹 italien"],["es","🇪🇸 espagnol"],["pt","🇵🇹 portugais"],["en","🇬🇧 anglais"],["de","🇩🇪 allemand"],["nl","🇳🇱 néerlandais"]];
+  /* La langue de l'apprenant passe en premier (le darija garde le français). */
+  const srcK=()=>{try{const x=S.src==="ary"?"fr":S.src;return RL_ALL.some(r=>r[0]===x)?x:"fr"}catch(e){return "fr"}};
+  const rlist=()=>{const k=srcK();return RL_ALL.filter(x=>x[0]===k).concat(RL_ALL.filter(x=>x[0]!==k))};
 
   /* =================== VERS : SCANSION DE L'HEXAMÈTRE =================== */
   // syllabes (avec ’ pour l'élision), quantités L / S (dernière : anceps), longueurs des pieds
@@ -12992,8 +12999,8 @@ ferrum|le fer|fer|ferreux, ferroviaire|ferro|hierro|ferro|ferrous|Hierro : encor
     if(g&&!g.done){
       const it=g.cur;
       html+=`<div class="lw-stat"><span>Question ${g.i+1} / ${g.n}</span><span>⭐ ${g.score}</span></div>`;
-      if(it.type==="up"){html+=`<div class="lw-card"><b>Quel mot latin se cache derrière cette famille ?</b><div style="margin-top:8px">${RL.map(([k,n])=>`<div class="lw-muted">${n} : <b style="color:var(--ink,#111)">${E(k==="fr"?it.r.fr:it.r[k])}</b></div>`).join("")}</div></div>`}
-      else{html+=`<div class="lw-card"><b>Quel mot français descend directement de…</b><div class="lw-big" style="margin-top:6px">${E(it.r.la)} <span class="lw-muted" style="font-size:.95rem">(${E(it.r.s)})</span></div></div>`}
+      if(it.type==="up"){html+=`<div class="lw-card"><b>Quel mot latin se cache derrière cette famille ?</b><div style="margin-top:8px">${rlist().map(([k,n])=>`<div class="lw-muted">${n} : <b style="color:var(--ink,#111)" data-noi18n="1" lang="${k}">${E(k==="fr"?it.r.fr:it.r[k])}</b></div>`).join("")}</div></div>`}
+      else{html+=`<div class="lw-card"><b>${srcK()==="fr"?"Quel mot français descend directement de…":"Quel mot de ta langue vient de…"}</b><div class="lw-big" style="margin-top:6px">${E(it.r.la)} <span class="lw-muted" style="font-size:.95rem">(${E(it.r.s)})</span></div></div>`}
       html+=`<div class="lw-row">${it.opts.map((o,k)=>`<button class="lw-opt ${g.ans!=null?(k===it.ok?"ok":g.ans===k?"ko":""):""}" data-lw="rans" data-k="${k}" ${g.ans!=null?"disabled":""}>${E(o)}</button>`).join("")}</div>`;
       if(g.ans!=null)html+=`<div class="lw-card">${rootCard(it.r)}</div><button class="lw-btn" data-lw="rnext">Continuer</button>`;
       return html;
@@ -13007,13 +13014,13 @@ ferrum|le fer|fer|ferreux, ferroviaire|ferro|hierro|ferro|ferrous|Hierro : encor
     return html;
   }
   function rootCard(r){return `<div style="display:flex;align-items:baseline;gap:8px;flex-wrap:wrap"><span class="lw-big">${E(r.la)}</span><span class="lw-muted">${E(r.s)}</span><button class="lw-x" style="width:28px;height:28px;font-size:.8rem" data-lw="say" data-t="${E(r.la.split(/[ ,/]/)[0])}">🔊</button></div>
-    <table class="lw-tbl" style="margin-top:6px">${RL.map(([k,n])=>`<tr><th style="width:38%">${n}</th><td class="f">${E(k==="fr"?r.fr:r[k])}${k==="fr"&&r.frs?`<span class="lw-muted" style="font-weight:600"> · mots savants : ${E(r.frs)}</span>`:""}</td></tr>`).join("")}</table>${r.n?`<p class="lw-muted" style="margin-top:8px">💡 ${E(r.n)}</p>`:""}`}
+    <table class="lw-tbl" style="margin-top:6px">${rlist().map(([k,n])=>`<tr><th style="width:38%">${n}</th><td class="f"><span data-noi18n="1" lang="${k}">${E(k==="fr"?r.fr:r[k])}</span>${k==="fr"&&r.frs?`<span class="lw-muted" style="font-weight:600"> · mots savants : <span data-noi18n="1" lang="fr">${E(r.frs)}</span></span>`:""}</td></tr>`).join("")}</table>${r.n?`<p class="lw-muted" style="margin-top:8px">💡 ${E(r.n)}</p>`:""}`}
   function rootsStart(){const pick=shuffle(ROOTS).slice(0,10);st.rg={n:pick.length,i:0,score:0,ans:null,list:pick.map((r,i)=>mkRootQ(r,i%2?"down":"up"))};st.rg.cur=st.rg.list[0]}
   function mkRootQ(r,type){
     const clean=s=>s.replace(/[()]/g,"").split(",")[0].trim();
     let right,pool;
     if(type==="up"){right=r.la;pool=ROOTS.filter(x=>x!==r).map(x=>x.la)}
-    else{if(/^\(/.test(r.fr))type="up";right=type==="up"?r.la:clean(r.fr);pool=ROOTS.filter(x=>x!==r&&!/^\(/.test(x.fr)).map(x=>type==="up"?x.la:clean(x.fr))}
+    else{const k=srcK(),w=x=>x[k]||x.fr;if(/^\(/.test(w(r)))type="up";right=type==="up"?r.la:clean(w(r));pool=ROOTS.filter(x=>x!==r&&!/^\(/.test(w(x))).map(x=>type==="up"?x.la:clean(w(x)))}
     const opts=shuffle([right,...shuffle(pool.filter(x=>x!==right)).slice(0,3)]);
     return {r,type,opts,ok:opts.indexOf(right)};
   }
@@ -14610,7 +14617,9 @@ Tu quoque, mi fili?|Toi aussi, mon fils ?|Tradition, d'après Suétone`;
       for(const k in ix)if(!f[k])f[k]={f:`${code}/${k}.mp3`,src:ix[k]==='n'?'native':'tts'};refresh()}).catch(()=>{idxLoading.delete(code)})}
   A.loadIndex=loadIndex;
   if(location.protocol!=='file:')fetch('audio/manifest.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).then(m=>{if(m&&(m.files||m.langs)){A.manifest=m;m.files=m.files||{};try{if(typeof S!=='undefined'&&S.tgt)loadIndex(S.tgt)}catch(e){}}refresh()}).catch(()=>{});
-  const fileFor=(code,text)=>{const m=A.manifest;if(!m)return null;if(m.langs&&m.langs[code])loadIndex(code);const f=m.files&&m.files[code];return f?f[key(code,text)]||null:null};
+  /* Latin : deux jeux de fichiers, prononciation classique (« la ») et d'église (« la-e »). */
+  const audioCode=code=>{try{if(code==='la'&&S.latin&&S.latin.pron==='eglise')return 'la-e'}catch(e){}return code};
+  const fileFor=(code0,text)=>{const code=audioCode(code0);const m=A.manifest;if(!m)return null;if(m.langs&&m.langs[code])loadIndex(code);const f=m.files&&m.files[code];return f?f[key(code,text)]||null:null};
   const rate=()=>{try{return Number(JSON.parse(localStorage.getItem('castellumAudioPrefsV2')||'{}').rate)||.92}catch(e){return .92}};
   const cloudReady=code=>!A.cloudOff&&CLOUD_LANGS.has(code)&&typeof Cloud!=='undefined'&&!!Cloud.user&&!!Cloud.client&&!!(window.CASTELLUM_CONFIG||{}).supabaseUrl&&navigator.onLine!==false;
   const deviceVoice=code=>{try{return !!voiceFor(code)}catch(e){return false}};

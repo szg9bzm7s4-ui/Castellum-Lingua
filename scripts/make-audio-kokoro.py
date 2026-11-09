@@ -14,7 +14,9 @@ Un enregistrement natif déjà présent n'est jamais remplacé. La clé est la m
 """
 import argparse, glob, json, os, re, subprocess, sys, tempfile, unicodedata
 
-VOICES = {"it": ("if_sara", "it"), "fr": ("ff_siwis", "fr-fr"), "es": ("ef_dora", "es"), "pt": ("pf_dora", "pt"), "en": ("bf_emma", "en-gb"), "hi": ("hf_alpha", "hi")}
+VOICES = {"it": ("if_sara", "it"), "fr": ("ff_siwis", "fr-fr"), "es": ("ef_dora", "es"), "pt": ("pf_dora", "pt"), "en": ("bf_emma", "en-gb"), "hi": ("hf_alpha", "hi"),
+          # latin : voix italienne ; « say » donne le texte réécrit pour la prononciation classique (la) ou d'église (la-e)
+          "la": ("if_sara", "it"), "la-e": ("if_sara", "it")}
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 def clean(t):
@@ -76,7 +78,7 @@ def main():
         if kk in seen or not clean(it["text"]): continue
         seen.add(kk); out = os.path.join(d, kk + ".mp3")
         if os.path.exists(out) and kk in ix and (ix[kk] == "n" or not a.force): continue
-        jobs.append((kk, it["text"], out))
+        jobs.append((kk, it.get("say") or it["text"], out))
     print(f"{a.lang} : {len(jobs)} phrases à générer ({a.workers} processus)…", flush=True)
     done = 0
     with Pool(a.workers, _init, (a.model, npz, voice, elang, a.speed, a.bitrate)) as pool:
