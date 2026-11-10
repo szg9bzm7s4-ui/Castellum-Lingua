@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta name="castellum-build" content="202611101409">
+<meta name="castellum-build" content="202611101457">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Apprends 63 langues avec le château : leçons, jeux, alphabets, grammaire et dictionnaire.">
@@ -14944,7 +14944,17 @@ Tu quoque, mi fili?|Toi aussi, mon fils ?|Tradition, d'après Suétone`;
       if(!Array.isArray(steps)||!steps.length)return steps;
       if(l<3)steps=produce(steps,items);
       steps=vary(steps,items);
-      const U=lvUnits()[u];const greet=(items||[]).find(x=>x&&x.t)||null;
+      const U=lvUnits()[u];
+      /* Mot d'ouverture : il dépend de la leçon (avant, c'était toujours le 1er mot de l'unité) */
+      const seen=new Set(),pool=[];steps.forEach(x=>{const it=x&&x.it;if(it&&it.t&&!x.alpha&&!seen.has(it.t)){seen.add(it.t);pool.push(it)}});
+      if(!pool.length)(items||[]).forEach(x=>{if(x&&x.t&&!seen.has(x.t)){seen.add(x.t);pool.push(x)}});
+      const ph=pool.filter(x=>/\s/.test(x.t.trim())&&!/^(l'|la |le |les |il |lo |el |los |las |o |a |os |as |the |der |die |das |de |het |un |una |une )\S+$/i.test(x.t.trim()));
+      const cand=(ph.length?ph:pool),GK=S.tgt+':'+S.level+':'+u,GM=(window.__lsGreet=window.__lsGreet||{})[GK]=(window.__lsGreet[GK]||{});
+      const used=new Set(Object.keys(GM).filter(k=>+k!==l).map(k=>GM[k])),ix=Math.max(0,LORDER.indexOf(l));
+      let greet=null;if(l<3&&pool[0]&&!used.has(pool[0].t))greet=pool[0];
+      if(!greet){const all=l<3?pool:cand.concat(pool.filter(x=>!cand.includes(x)));const st=(ix*2+u)%(all.length||1);
+        for(let k=0;k<all.length&&!greet;k++){const x=all[(st+k)%all.length];if(!used.has(x.t))greet=x}if(!greet)greet=all[st]||null}
+      if(greet)GM[l]=greet.t;
       if(greet)steps.unshift({k:'intro',scene:true,it:{t:greet.t,s:greet.s,p:greet.p||''},l,u,title:U?unitTitle(U):''});
     }catch(e){console.warn('lessons2',e)}
     return steps};
