@@ -15540,7 +15540,7 @@ ${dark.replace(/(^|\})\s*([^{}]+)\{/g,(m,a,sel)=>a+sel.split(',').map(s=>':root[
     /* Onglet Château : il a sa propre page (castleView), on ne la remplace pas par la carte */
     if(typeof view!=="undefined"&&view==="castle"){let h="";try{if(window.CastellumCastle&&window.CastellumCastle.view)h=window.CastellumCastle.view()}catch(e){}if(!h)return prev.apply(this,arguments);
       /* Une phrase pour dire à quoi sert cette page */
-      return typeof h==="string"?h.replace(/(<div class="cs-head">[\s\S]*?<\/div>)/,`$1<p class="cs-intro">${tr("Ici, c'est ton royaume. Chaque leçon te rapporte des pièces 🪙 : dépense-les pour agrandir ton château, rencontrer ses habitants et le défendre.")}</p>`):h}
+      return typeof h==="string"?h.replace(/(<div class="cs-head">[\s\S]*?<\/div>)/,`$1<p class="cs-intro">${tr("Ici, c'est ton royaume. Chaque leçon te rapporte des pièces 🪙 : dépense-les pour agrandir ton château, rencontrer ses habitants et le défendre.")}</p>${progressHTML()}`):h}
     if(S.ui&&S.ui.classicPath){const h=prev.apply(this,arguments);return typeof h==="string"?`<p class="vl-classic"><button class="vl-link" data-vmap="1">Voir la carte de la ville</button></p>`+h:h}
     let base="";try{base=prev.apply(this,arguments)}catch(e){}
     const pick=(re)=>{const m=typeof base==="string"&&base.match(re);return m?m[0]:""};
@@ -15551,8 +15551,13 @@ ${dark.replace(/(^|\})\s*([^{}]+)\{/g,(m,a,sel)=>a+sel.split(',').map(s=>':root[
     const lead=S.tgt==="la"?tr("Tu arrives à Rome. Chaque lieu de la ville est une étape pour apprendre à lire les Romains."):tr("Tu arrives à {V}. Chaque lieu de la ville est une situation à vivre.").replace("{V}",city);
     return `<div class="vl">${head}${levelBar()}
       <header class="vl-head"><span class="vl-eyebrow">${E(L[S.tgt].n)} · niveau ${S.level}</span><h1 data-noi18n="1">${E(city)}</h1><p class="vl-muted" data-noi18n="1">${E(lead)}</p></header>
-      ${test}${mapHTML(UN,cu)}${nextCard(UN,cu)}${quickHTML()}${passHTML(UN)}
+      ${test}${mapHTML(UN,cu)}${nextCard(UN,cu)}
       <p class="vl-classic"><button class="vl-link" data-vclassic="1">Revenir au parcours classique</button></p>${cp}</div>`};
+  /* Château : la progression en tête (chiffres du jour, passeport de la ville), le reste de la page est le château */
+  function progressHTML(){let st="";try{const d=day(),sk=streak(),goal=S.goal||20;
+      st=`<div class="cs-stats"><div><b>${d.xp||0}</b><span>${tr("XP aujourd'hui")}</span></div><div><b>${sk}</b><span>${tr("jours de série")}</span></div><div><b>${d.lessons||0}</b><span>${tr("leçons aujourd'hui")}</span></div><div><b>${Math.min(100,Math.round((d.xp||0)/goal*100))} %</b><span>${tr("objectif du jour")}</span></div></div>`}catch(e){}
+    let pass="";try{pass=passHTML(lvUnits())}catch(e){}
+    return `<section class="cs-progress"><h2 class="cs-h2">${tr("Ma progression")}</h2>${st}${pass}<button type="button" class="vl-link cs-more" data-go="profile">${tr("Toutes mes statistiques et réglages")} →</button></section><h2 class="cs-h2">${tr("Mon royaume")}</h2>`}
   /* Vraies scènes : data/scenes/<niveau>.js, un dialogue par lieu en 8 langues, chargé à la demande */
   const SC={},scLoading={},SC_LANGS=["fr","it","es","pt","en","de","nl","ary"];
   window.__castellumScenes=function(lv,d){SC[lv]=d};
@@ -15945,6 +15950,13 @@ button.vl-st{cursor:pointer}button.vl-st:hover{background:color-mix(in srgb,var(
 .jx .lx-foot.jx-fb.bad .badge::before{content:"✕"}
 .jx .tok.ghost{background:transparent;border:2px dashed var(--line);color:transparent;box-shadow:none}
 .charbar{display:none!important}
+.u2-tool[data-go="home"]{display:none!important}
+.cs-h2{margin:18px 2px 10px;font-size:1.25rem}
+.cs-progress{margin-bottom:6px}
+.cs-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-bottom:12px}
+.cs-stats>div{display:flex;flex-direction:column;align-items:center;gap:2px;padding:10px 4px;border-radius:14px;background:var(--surface);border:1.5px solid var(--line);text-align:center}
+.cs-stats b{font-size:1.25rem}.cs-stats span{font-size:.72rem;color:var(--muted);line-height:1.2}
+.cs-more{display:block;margin:10px auto 0;font-weight:700}
 #lxStep .bank .tok[data-b],#lxStep .tray .tok[data-unb]{touch-action:none;-webkit-user-select:none;user-select:none;cursor:grab}
 .jx-ghost{position:fixed;z-index:9999;pointer-events:none;margin:0!important;transform:rotate(-2deg) scale(1.06);box-shadow:0 10px 24px rgba(0,0,0,.22)!important;opacity:.96;cursor:grabbing}
 #lxStep .tok.jx-dragsrc{opacity:.3}
@@ -15983,12 +15995,21 @@ button.vl-st{cursor:pointer}button.vl-st:hover{background:color-mix(in srgb,var(
 .jx-fb .foot-in>div:last-child{justify-content:stretch!important;flex-wrap:nowrap!important}
 .jx-fb #nextBtn{flex:1}`;
   document.head.appendChild(css);
+  /* Menu simplifié : Apprendre · Pratiquer · Château, puis Outils. Progrès est dans le Château, Accueil disparaît
+     (on arrive sur Apprendre). Les pages restent accessibles par leurs liens. */
+  try{if(typeof NAV_SET==="function"&&typeof NAV_BASE!=="undefined"){
+    NAV_SET=function(){NAV.length=0;const main=["learn","play","castle"];main.forEach(k=>{const n=NAV_BASE.find(x=>x[0]===k);if(n)NAV.push(n)});
+      const signed=typeof Cloud!=="undefined"&&Cloud.signedIn;if(signed)NAV.push(["friends","Amis"],["account","Profil"]);else if(typeof Cloud!=="undefined"&&Cloud.enabled)NAV.push(["account","Se connecter"]);
+      NAV.push(...NAV_BASE.filter(n=>!main.includes(n[0])&&n[0]!=="profile"&&n[0]!=="home"))};NAV_SET()}}catch(e){}
+  if(typeof navHTML==="function"){const pN=navHTML;navHTML=function(mobile){if(!mobile)return pN.apply(this,arguments);
+    const cur=view==="list"?"lists":view;const items=[...NAV.slice(0,3),["more","Outils"]];
+    return items.map(([k,n])=>`<button ${k==="more"?'data-act="more"':`data-go="${k}"`} ${cur===k||(k==="castle"&&cur==="profile")||(k==="more"&&!["learn","play","castle","profile"].includes(cur))?'aria-current="page"':""} aria-label="${n}">${svgI(I[k==="more"?"more":k])}<span>${n}</span></button>`).join("")}}
   /* Plus de touches d'accents sous les champs (le clavier du téléphone suffit) : l'astuce ne les mentionne plus */
   try{const LONG=" Les touches sous la case t'aident à écrire les lettres spéciales.";
     for(const k in TIPS){if(typeof TIPS[k]==="string"&&TIPS[k].includes(LONG)){const full=TIPS[k],short=full.replace(LONG,"");TIPS[k]=short;
       if(typeof I18N!=="undefined")for(const l in I18N){const t=I18N[l]&&I18N[l][full];if(t&&I18N[l][short]==null){const m=t.match(/^.*?[.!。]\s/);I18N[l][short]=m?m[0].trim():t}}}}}catch(e){}
   /* Les cœurs n'existent plus : on retire les phrases et étiquettes qui en parlent encore (page Jouer) */
-  if(typeof render==="function"){const pr=render;render=function(){const r=pr.apply(this,arguments);try{
+  if(typeof render==="function"){const pr=render;render=function(){try{if(typeof view!=="undefined"&&view==="home")view="learn"}catch(err){}const r=pr.apply(this,arguments);try{
     document.querySelectorAll("#view .section-head p.muted").forEach(p=>{if(/cœur|cuor|coraz|hearts?\b|Herz|hart/i.test(p.textContent)&&p.closest("#view .section-head").querySelector("#playSet,.field")||/cœurs?/.test(p.textContent))p.remove()});
     document.querySelectorAll("#view .modes .mode .tag").forEach(t=>{if(/cœur|♥|heart|cuor|coraz|Herz|hart/i.test(t.textContent))t.classList.add("jx-gone")})}catch(e){}return r}}
   if(typeof I18N!=="undefined"){const V={it:{"Voix":"Voce","Voix du téléphone":"Voce del telefono","Audio intégré":"Audio integrato","aucune installée":"nessuna installata"},
@@ -15998,6 +16019,14 @@ button.vl-st{cursor:pointer}button.vl-st:hover{background:color-mix(in srgb,var(
     de:{"Voix":"Stimme","Voix du téléphone":"Stimme des Handys","Audio intégré":"Integriertes Audio","aucune installée":"keine installiert"},
     nl:{"Voix":"Stem","Voix du téléphone":"Stem van de telefoon","Audio intégré":"Ingebouwde audio","aucune installée":"geen geïnstalleerd"},
     ary:{"Voix":"S-sowt","Voix du téléphone":"Sowt t-tilifoun","Audio intégré":"L-audio dyal l-application","aucune installée":"ma kayn 7tta wa7ed"}};
+    const X={it:{"Ma progression":"I miei progressi","Mon royaume":"Il mio regno","Toutes mes statistiques et réglages":"Tutte le statistiche e le impostazioni"},
+      es:{"Ma progression":"Mi progreso","Mon royaume":"Mi reino","Toutes mes statistiques et réglages":"Todas mis estadísticas y ajustes"},
+      pt:{"Ma progression":"O meu progresso","Mon royaume":"O meu reino","Toutes mes statistiques et réglages":"Todas as estatísticas e definições"},
+      en:{"Ma progression":"My progress","Mon royaume":"My kingdom","Toutes mes statistiques et réglages":"All my stats and settings"},
+      de:{"Ma progression":"Mein Fortschritt","Mon royaume":"Mein Königreich","Toutes mes statistiques et réglages":"Alle Statistiken und Einstellungen"},
+      nl:{"Ma progression":"Mijn voortgang","Mon royaume":"Mijn koninkrijk","Toutes mes statistiques et réglages":"Al mijn statistieken en instellingen"},
+      ary:{"Ma progression":"T-ta9addom dyali","Mon royaume":"L-mamlaka dyali","Toutes mes statistiques et réglages":"Ga3 l-i7sa2iyat w l-i3dadat dyali"}};
+    for(const l in X){V[l]=V[l]||{};Object.assign(V[l],X[l])}
     const W={it:"Tocca le parole o trascinale",es:"Toca las palabras o arrástralas",pt:"Toca nas palavras ou arrasta-as",en:"Tap the words or drag them",de:"Tippe die Wörter an oder zieh sie",nl:"Tik de woorden aan of sleep ze",ary:"Wrrek 3la l-klimat wla jerrhom"};
     for(const l in W){V[l]=V[l]||{};V[l]["Touche les mots ou fais-les glisser"]=W[l]}
     for(const l in V){I18N[l]=I18N[l]||{};for(const k in V[l])if(I18N[l][k]==null)I18N[l][k]=V[l][k]}
