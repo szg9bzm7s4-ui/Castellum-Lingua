@@ -14684,7 +14684,7 @@ Tu quoque, mi fili?|Toi aussi, mon fils ?|Tradition, d'après Suétone`;
       const why=A.err==='offline'?'Pas de connexion : cet audio n\'est pas disponible hors ligne.':A.err==='novoice'?'Aucune voix pour cette langue sur cet appareil.':'L\'audio n\'a pas pu être chargé.';
       const hint=A.err==='novoice'&&CLOUD_LANGS.has(S.tgt)&&!(typeof Cloud!=='undefined'&&Cloud.user)?' <span>Connecte-toi pour utiliser la voix en ligne.</span>':'';
       return `⚠️ <span>${why}</span>${hint} <button type="button" class="a2-retry" data-a2="retry">Réessayer</button>`}
-    const s=sourceFor(S.tgt,text||A.text);
+    const s=(window.castellumDeviceFirst&&window.castellumDeviceFirst(S.tgt))?'device':sourceFor(S.tgt,text||A.text);
     if(!s)return `⚠️ <span>Aucune voix pour cette langue sur cet appareil.</span>${CLOUD_LANGS.has(S.tgt)&&!(typeof Cloud!=='undefined'&&Cloud.user)?' <span>Connecte-toi pour utiliser la voix en ligne.</span>':''} <span>Lis la transcription.</span>`;
     const native=s==='file'&&(fileFor(S.tgt,text||A.text)||{}).src==='native';
     return `${SRC[s][0]} <span>${native?'Enregistrement natif · fonctionne hors ligne':s==='file'?'Voix de synthèse intégrée · fonctionne hors ligne':SRC[s][1]}</span>`}
@@ -15828,7 +15828,7 @@ button.vl-st{cursor:pointer}button.vl-st:hover{background:color-mix(in srgb,var(
   window.castellumGlossLoad=()=>glossLoad(S.tgt);
   const pStep=renderStep;renderStep=function(){try{glossLoad(S.tgt)}catch(e){}const r=pStep.apply(this,arguments);try{const R=document.getElementById("lxRoot");if(R)R.classList.add("jx");const st=cur(),inn=document.getElementById("lxInner");if(st&&inn)inn.dataset.k=st.k}catch(e){}return r};
 
-  const pFoot=renderFoot;renderFoot=function(){const r=pFoot.apply(this,arguments);try{foot()}catch(e){}return r};
+  const pFoot=renderFoot;renderFoot=function(){const r=pFoot.apply(this,arguments);try{foot()}catch(e){}try{voiceChoice()}catch(e){}return r};
   function foot(){const st=cur(),f=document.getElementById("lxFoot");if(!st||!f||LX.game==="chrono")return;
     const R=document.getElementById("lxRoot");if(R)R.classList.add("jx");
     if(LX.state==="idle"){
@@ -15844,6 +15844,31 @@ button.vl-st{cursor:pointer}button.vl-st:hover{background:color-mix(in srgb,var(
     const title=f.querySelector(".foot-msg b");
     if(!good&&title&&st.k!=="card"&&st.k!=="match"){title.textContent=T("Pas tout à fait");
       const ans=title.nextElementSibling;if(ans&&ans.tagName==="SPAN"&&!f.querySelector(".jx-lab"))ans.insertAdjacentHTML("beforebegin",`<small class="jx-lab">${E(T("Bonne réponse :"))}</small>`)}}
+
+  /* Voix : celle du téléphone d'abord quand elle est native pour la langue (plus naturelle que l'audio
+     intégré, synthétisé avec un accent). Réglage « Audio intégré » pour revenir aux fichiers. Le latin garde ses fichiers. */
+  const DEV_LANGS=new Set(["it","fr","es","pt","en","de","nl"]);
+  const vsrc=()=>{try{return localStorage.getItem("castellumVoiceSrc")||"device"}catch(e){return "device"}};
+  function goodDevice(code){try{if(!DEV_LANGS.has(code)||vsrc()==="files"||!window.speechSynthesis)return null;
+    const v=typeof voiceFor==="function"?voiceFor(code):null;if(!v||!v.lang)return null;
+    if(!v.lang.toLowerCase().replace("_","-").startsWith(code))return null;
+    if(/espeak|festival|pico|mbrola/i.test(v.name||""))return null;return v}catch(e){return null}}
+  window.castellumDeviceFirst=code=>!!goodDevice(code);
+  const pSpeak=speak;speak=function(text,code,slow){code=code||S.tgt;const v=goodDevice(code);if(!v)return pSpeak.apply(this,arguments);
+    try{const A=window.CastellumAudio;if(A){A.seq++;try{if(A.audio&&!A.audio.paused)A.audio.pause()}catch(e){}A.state="idle"}
+      speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(String(text||"").replace(/\s*\(.*?\)/g,"").trim());
+      u.voice=v;u.lang=v.lang;u.__mine=true;let r=.92;try{r=Number(JSON.parse(localStorage.getItem("castellumAudioPrefsV2")||"{}").rate)||.92}catch(e){}
+      u.rate=slow?.62:r;speechSynthesis.speak(u);return true}catch(e){return pSpeak.apply(this,arguments)}};
+  function voiceChoice(){const more=document.querySelector("#lxStep .a2-more");if(!more||more.querySelector(".jx-vsrc"))return;
+    if(!DEV_LANGS.has(S.tgt))return;const cur=vsrc(),has=!!(typeof voiceFor==="function"&&voiceFor(S.tgt));
+    more.insertAdjacentHTML("afterbegin",`<div class="jx-vsrc" role="radiogroup" aria-label="${E(T("Voix"))}"><b>${E(T("Voix"))}</b>
+      <button type="button" role="radio" aria-checked="${cur!=="files"}" data-vsrc="device">📱 ${E(T("Voix du téléphone"))}${has?"":` <small>(${E(T("aucune installée"))})</small>`}</button>
+      <button type="button" role="radio" aria-checked="${cur==="files"}" data-vsrc="files">📦 ${E(T("Audio intégré"))}</button></div>`)}
+  document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("[data-vsrc]");if(!b)return;e.preventDefault();e.stopPropagation();
+    try{localStorage.setItem("castellumVoiceSrc",b.dataset.vsrc)}catch(err){}
+    b.parentElement.querySelectorAll("[data-vsrc]").forEach(x=>x.setAttribute("aria-checked",String(x===b)));
+    try{const A=window.CastellumAudio;if(A&&A.refresh)A.refresh()}catch(err){}
+    const st=cur();if(st&&st.it&&st.it.t)try{speak(st.it.t)}catch(err){}},true);
 
   /* Un toucher = une réponse (le module d'origine retient le choix, puis on vérifie) */
   function autoCheck(st){setTimeout(()=>{try{if(LX&&LX.state==="idle"&&LX.sel!=null&&cur()===st)check()}catch(e){}},170)}
@@ -15888,6 +15913,9 @@ button.vl-st{cursor:pointer}button.vl-st:hover{background:color-mix(in srgb,var(
 .jx .lx-foot.jx-fb.bad .badge::before{content:"✕"}
 .jx .tok.ghost{background:transparent;border:2px dashed var(--line);color:transparent;box-shadow:none}
 .charbar{display:none!important}
+.jx-vsrc{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:4px 0 8px}.jx-vsrc b{width:100%;font-size:.85rem}
+.jx-vsrc [data-vsrc]{min-height:40px;padding:6px 12px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-weight:700;font-size:.9rem;cursor:pointer}
+.jx-vsrc [data-vsrc][aria-checked="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
 .vl .cov2{display:none}
 .vl .levels{display:flex!important;flex-wrap:nowrap;overflow-x:auto;gap:6px;scrollbar-width:none;padding:2px 0 4px;margin:0}
 .vl .levels::-webkit-scrollbar{display:none}
@@ -15925,7 +15953,15 @@ button.vl-st{cursor:pointer}button.vl-st:hover{background:color-mix(in srgb,var(
   if(typeof render==="function"){const pr=render;render=function(){const r=pr.apply(this,arguments);try{
     document.querySelectorAll("#view .section-head p.muted").forEach(p=>{if(/cœur|cuor|coraz|hearts?\b|Herz|hart/i.test(p.textContent)&&p.closest("#view .section-head").querySelector("#playSet,.field")||/cœurs?/.test(p.textContent))p.remove()});
     document.querySelectorAll("#view .modes .mode .tag").forEach(t=>{if(/cœur|♥|heart|cuor|coraz|Herz|hart/i.test(t.textContent))t.classList.add("jx-gone")})}catch(e){}return r}}
-  if(typeof I18N!=="undefined"){const U={
+  if(typeof I18N!=="undefined"){const V={it:{"Voix":"Voce","Voix du téléphone":"Voce del telefono","Audio intégré":"Audio integrato","aucune installée":"nessuna installata"},
+    es:{"Voix":"Voz","Voix du téléphone":"Voz del teléfono","Audio intégré":"Audio integrado","aucune installée":"ninguna instalada"},
+    pt:{"Voix":"Voz","Voix du téléphone":"Voz do telemóvel","Audio intégré":"Áudio integrado","aucune installée":"nenhuma instalada"},
+    en:{"Voix":"Voice","Voix du téléphone":"Phone voice","Audio intégré":"Built-in audio","aucune installée":"none installed"},
+    de:{"Voix":"Stimme","Voix du téléphone":"Stimme des Handys","Audio intégré":"Integriertes Audio","aucune installée":"keine installiert"},
+    nl:{"Voix":"Stem","Voix du téléphone":"Stem van de telefoon","Audio intégré":"Ingebouwde audio","aucune installée":"geen geïnstalleerd"},
+    ary:{"Voix":"S-sowt","Voix du téléphone":"Sowt t-tilifoun","Audio intégré":"L-audio dyal l-application","aucune installée":"ma kayn 7tta wa7ed"}};
+    for(const l in V){I18N[l]=I18N[l]||{};for(const k in V[l])if(I18N[l][k]==null)I18N[l][k]=V[l][k]}
+    const U={
     it:{"Touche ta réponse":"Tocca la tua risposta","Je ne sais pas":"Non lo so","Touche un mot, puis sa traduction":"Tocca una parola, poi la sua traduzione","Pas tout à fait":"Non proprio"},
     es:{"Touche ta réponse":"Toca tu respuesta","Je ne sais pas":"No lo sé","Touche un mot, puis sa traduction":"Toca una palabra y luego su traducción","Pas tout à fait":"No del todo"},
     pt:{"Touche ta réponse":"Toca na tua resposta","Je ne sais pas":"Não sei","Touche un mot, puis sa traduction":"Toca numa palavra e depois na tradução","Pas tout à fait":"Não exatamente"},
