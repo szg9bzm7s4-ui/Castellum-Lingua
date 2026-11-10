@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta name="castellum-build" content="202611101329">
+<meta name="castellum-build" content="202611101333">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Apprends 63 langues avec le château : leçons, jeux, alphabets, grammaire et dictionnaire.">
@@ -15554,11 +15554,10 @@ ${dark.replace(/(^|\})\s*([^{}]+)\{/g,(m,a,sel)=>a+sel.split(',').map(s=>':root[
       <header class="vl-head"><span class="vl-eyebrow">${E(L[S.tgt].n)} · niveau ${S.level}</span><h1 data-noi18n="1">${E(city)}</h1><p class="vl-muted" data-noi18n="1">${E(lead)}</p></header>
       ${test}${mapHTML(UN,cu)}${nextCard(UN,cu)}
       <p class="vl-classic"><button class="vl-link" data-vclassic="1">Revenir au parcours classique</button></p>${cp}</div>`};
-  /* Château : la progression en tête (chiffres du jour, passeport de la ville), le reste de la page est le château */
+  /* Château : la progression en tête (chiffres du jour), le reste de la page est le château */
   function progressHTML(){let st="";try{const d=day(),sk=streak(),goal=S.goal||20;
       st=`<div class="cs-stats"><div><b>${d.xp||0}</b><span>${tr("XP aujourd'hui")}</span></div><div><b>${sk}</b><span>${tr("jours de série")}</span></div><div><b>${d.lessons||0}</b><span>${tr("leçons aujourd'hui")}</span></div><div><b>${Math.min(100,Math.round((d.xp||0)/goal*100))} %</b><span>${tr("objectif du jour")}</span></div></div>`}catch(e){}
-    let pass="";try{pass=passHTML(lvUnits())}catch(e){}
-    return `<section class="cs-progress"><h2 class="cs-h2">${tr("Ma progression")}</h2>${st}${pass}<button type="button" class="vl-link cs-more" data-go="profile">${tr("Toutes mes statistiques et réglages")} →</button></section><h2 class="cs-h2">${tr("Mon royaume")}</h2>`}
+    return `<section class="cs-progress"><h2 class="cs-h2">${tr("Ma progression")}</h2>${st}<button type="button" class="vl-link cs-more" data-go="profile">${tr("Toutes mes statistiques et réglages")} →</button></section><h2 class="cs-h2">${tr("Mon royaume")}</h2>`}
   /* Vraies scènes : data/scenes/<niveau>.js, un dialogue par lieu en 8 langues, chargé à la demande */
   const SC={},scLoading={},SC_LANGS=["fr","it","es","pt","en","de","nl","ary"];
   window.__castellumScenes=function(lv,d){SC[lv]=d};
