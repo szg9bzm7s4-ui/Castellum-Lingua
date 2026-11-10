@@ -15835,6 +15835,7 @@ button.vl-st{cursor:pointer}button.vl-st:hover{background:color-mix(in srgb,var(
       if(isChoice(st)&&hasOpts()){const skip=!!f.querySelector('[data-lx="skip"]');
         f.innerHTML=`<div class="foot-in jx-idle"><span class="jx-hint">${E(T("Touche ta réponse"))}</span>${skip?`<button class="jx-link" data-lx="skip">${E(T("Je ne sais pas"))}</button>`:""}</div>`;return}
       if(st.k==="match"){f.innerHTML=`<div class="foot-in jx-idle"><span class="jx-hint">${E(T("Touche un mot, puis sa traduction"))}</span></div>`;return}
+      if(st.k==="build"&&f.querySelector('[data-lx="check"]')&&!f.querySelector(".jx-hint")){const fi=f.querySelector(".foot-in");if(fi)fi.insertAdjacentHTML("afterbegin",`<span class="jx-hint jx-hint-build">${E(T("Touche les mots ou fais-les glisser"))}</span>`)}
       if(f.querySelector('[data-lx="check"]')){f.classList.add("jx-stack");
         f.querySelectorAll('.foot-left [data-lx]').forEach(b=>{b.classList.remove("btn","ghost","hint-btn");b.classList.add("jx-link");if(b.dataset.lx==="skip")b.textContent=T("Je ne sais pas")})}
       return}
@@ -15870,6 +15871,36 @@ button.vl-st{cursor:pointer}button.vl-st:hover{background:color-mix(in srgb,var(
     try{const A=window.CastellumAudio;if(A&&A.refresh)A.refresh()}catch(err){}
     const st=cur();if(st&&st.it&&st.it.t)try{speak(st.it.t)}catch(err){}},true);
 
+  /* « Traduis cette phrase » : glisser-déposer en plus du toucher.
+     Réserve → réponse (insertion à l'endroit du lâcher), réordonner dans la réponse, ramener vers la réserve pour retirer. */
+  let DR=null;
+  const inside=(el,e)=>{const r=el.getBoundingClientRect();return e.clientX>=r.left-12&&e.clientX<=r.right+12&&e.clientY>=r.top-16&&e.clientY<=r.bottom+16};
+  function insertIndex(tray,e,skip){const toks=[...tray.querySelectorAll(".tok")].filter(x=>x!==skip);
+    for(let i=0;i<toks.length;i++){const r=toks[i].getBoundingClientRect();if(e.clientY<r.top||(e.clientY<=r.bottom&&e.clientX<r.left+r.width/2))return i}return toks.length}
+  function markInsert(tray,idx,skip){if(!tray)return;const toks=[...tray.querySelectorAll(".tok")].filter(x=>x!==skip);
+    toks.forEach((t,i)=>t.classList.toggle("jx-before",i===idx));tray.classList.toggle("jx-end",idx>=0&&idx===toks.length)}
+  function dragEnd(){if(!DR)return;try{DR.g&&DR.g.remove()}catch(e){}DR.t&&DR.t.classList.remove("jx-dragsrc");
+    const tray=document.getElementById("tray");if(tray){tray.classList.remove("jx-over","jx-end");tray.querySelectorAll(".jx-before").forEach(x=>x.classList.remove("jx-before"))}DR=null}
+  document.addEventListener("pointerdown",e=>{if(e.button>0)return;const t=e.target.closest&&e.target.closest("#lxStep .bank .tok[data-b],#lxStep .tray .tok[data-unb]");
+    if(!t||typeof LX==="undefined"||!LX||LX.state!=="idle")return;const st=cur();if(!st||st.k!=="build")return;
+    DR={t,x:e.clientX,y:e.clientY,id:e.pointerId,on:false,from:t.dataset.b!=null?"bank":"tray",ix:+(t.dataset.b!=null?t.dataset.b:t.dataset.unb)}},true);
+  document.addEventListener("pointermove",e=>{if(!DR||e.pointerId!==DR.id)return;
+    if(!DR.on){if(Math.hypot(e.clientX-DR.x,e.clientY-DR.y)<8)return;DR.on=true;const r=DR.t.getBoundingClientRect();
+      const g=DR.t.cloneNode(true);g.removeAttribute("data-b");g.removeAttribute("data-unb");g.classList.add("jx-ghost");g.style.width=r.width+"px";g.style.left=r.left+"px";g.style.top=r.top+"px";
+      document.body.appendChild(g);DR.g=g;DR.ox=DR.x-r.left;DR.oy=DR.y-r.top;DR.t.classList.add("jx-dragsrc")}
+    e.preventDefault();DR.g.style.left=(e.clientX-DR.ox)+"px";DR.g.style.top=(e.clientY-DR.oy)+"px";
+    const tray=document.getElementById("tray");const over=!!(tray&&inside(tray,e));if(tray)tray.classList.toggle("jx-over",over);
+    markInsert(tray,over?insertIndex(tray,e,DR.from==="tray"?DR.t:null):-1,DR.from==="tray"?DR.t:null)},{passive:false});
+  document.addEventListener("pointerup",e=>{if(!DR||e.pointerId!==DR.id)return;const d=DR;if(!d.on){DR=null;return}
+    e.preventDefault();const tray=document.getElementById("tray");const over=!!(tray&&inside(tray,e));
+    const at=over?insertIndex(tray,e,d.from==="tray"?d.t:null):-1;dragEnd();window.__jxNoClick=Date.now();
+    const st=cur();if(!st||st.k!=="build"||LX.state!=="idle")return;
+    if(d.from==="bank"){if(!over)return;st.built.splice(at,0,d.ix);try{tone(SND.tap)}catch(err){}try{speak(st.bank[d.ix])}catch(err){}}
+    else{const val=st.built[d.ix];st.built.splice(d.ix,1);if(over)st.built.splice(at,0,val)}
+    const box=document.getElementById("lxStep");if(box)box.innerHTML=stepHTML(st);try{refreshCheck()}catch(err){}},true);
+  document.addEventListener("pointercancel",e=>{if(DR&&e.pointerId===DR.id)dragEnd()},true);
+  document.addEventListener("click",e=>{if(window.__jxNoClick&&Date.now()-window.__jxNoClick<250&&e.target.closest&&e.target.closest("#lxStep .tok,.jx-ghost")){e.stopPropagation();e.preventDefault()}},true);
+
   /* Un toucher = une réponse (le module d'origine retient le choix, puis on vérifie) */
   function autoCheck(st){setTimeout(()=>{try{if(LX&&LX.state==="idle"&&LX.sel!=null&&cur()===st)check()}catch(e){}},170)}
   document.addEventListener("click",e=>{const o=e.target.closest&&e.target.closest("#lxInner .opt");if(!o||o.disabled)return;
@@ -15900,6 +15931,7 @@ button.vl-st{cursor:pointer}button.vl-st:hover{background:color-mix(in srgb,var(
 .jx-stack .foot-in{display:flex;flex-direction:column;align-items:stretch;gap:4px}
 .jx-stack .foot-in>[data-lx="check"]{width:100%;order:1}
 .jx-stack .foot-left{order:2;display:flex;justify-content:center;gap:8px}
+.jx-stack .jx-hint-build{order:0;text-align:center;margin-bottom:4px}
 .jx-fb .foot-in{display:flex;flex-direction:column;align-items:stretch;gap:12px}
 .jx-fb .foot-msg{display:flex;align-items:flex-start;gap:12px}
 .jx-badge{width:36px;height:36px;border-radius:50%;display:flex!important;align-items:center;justify-content:center;font-weight:900;font-size:1.1rem;flex:none;background:var(--good);color:#fff}
@@ -15913,6 +15945,12 @@ button.vl-st{cursor:pointer}button.vl-st:hover{background:color-mix(in srgb,var(
 .jx .lx-foot.jx-fb.bad .badge::before{content:"✕"}
 .jx .tok.ghost{background:transparent;border:2px dashed var(--line);color:transparent;box-shadow:none}
 .charbar{display:none!important}
+#lxStep .bank .tok[data-b],#lxStep .tray .tok[data-unb]{touch-action:none;-webkit-user-select:none;user-select:none;cursor:grab}
+.jx-ghost{position:fixed;z-index:9999;pointer-events:none;margin:0!important;transform:rotate(-2deg) scale(1.06);box-shadow:0 10px 24px rgba(0,0,0,.22)!important;opacity:.96;cursor:grabbing}
+#lxStep .tok.jx-dragsrc{opacity:.3}
+#lxStep .tray.jx-over{border-color:var(--accent)!important;background:color-mix(in srgb,var(--accent) 8%,transparent)}
+#lxStep .tray .tok.jx-before{box-shadow:-6px 0 0 -2px var(--accent)!important;margin-left:8px}
+#lxStep .tray.jx-end::after{content:"";display:inline-block;width:4px;height:40px;border-radius:2px;background:var(--accent);vertical-align:middle;margin-left:4px}
 .jx-vsrc{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:4px 0 8px}.jx-vsrc b{width:100%;font-size:.85rem}
 .jx-vsrc [data-vsrc]{min-height:40px;padding:6px 12px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-weight:700;font-size:.9rem;cursor:pointer}
 .jx-vsrc [data-vsrc][aria-checked="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
@@ -15960,6 +15998,8 @@ button.vl-st{cursor:pointer}button.vl-st:hover{background:color-mix(in srgb,var(
     de:{"Voix":"Stimme","Voix du téléphone":"Stimme des Handys","Audio intégré":"Integriertes Audio","aucune installée":"keine installiert"},
     nl:{"Voix":"Stem","Voix du téléphone":"Stem van de telefoon","Audio intégré":"Ingebouwde audio","aucune installée":"geen geïnstalleerd"},
     ary:{"Voix":"S-sowt","Voix du téléphone":"Sowt t-tilifoun","Audio intégré":"L-audio dyal l-application","aucune installée":"ma kayn 7tta wa7ed"}};
+    const W={it:"Tocca le parole o trascinale",es:"Toca las palabras o arrástralas",pt:"Toca nas palavras ou arrasta-as",en:"Tap the words or drag them",de:"Tippe die Wörter an oder zieh sie",nl:"Tik de woorden aan of sleep ze",ary:"Wrrek 3la l-klimat wla jerrhom"};
+    for(const l in W){V[l]=V[l]||{};V[l]["Touche les mots ou fais-les glisser"]=W[l]}
     for(const l in V){I18N[l]=I18N[l]||{};for(const k in V[l])if(I18N[l][k]==null)I18N[l][k]=V[l][k]}
     const U={
     it:{"Touche ta réponse":"Tocca la tua risposta","Je ne sais pas":"Non lo so","Touche un mot, puis sa traduction":"Tocca una parola, poi la sua traduzione","Pas tout à fait":"Non proprio"},
