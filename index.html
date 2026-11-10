@@ -15761,3 +15761,123 @@ ${dark.replace(/(^|\})\s*([^{}]+)\{/g,(m,a,sel)=>a+sel.split(',').map(s=>':root[
   document.head.appendChild(dk);
 })();
 </script>
+<script id="castellum-jeux-ux">
+/* Exercices et jeux, plus simples à jouer :
+   - questions à choix : un seul toucher suffit, la réponse est vérifiée tout de suite ;
+   - « Passer » devient un lien discret « Je ne sais pas » ; « Indice » aussi ;
+   - la question s'affiche dans une grande carte, sans la mascotte à côté ;
+   - correction claire : « Pas tout à fait », puis « Bonne réponse : … » et l'explication ;
+   - « Associe les paires » n'affiche plus de bouton « Vérifier » inutile. */
+(function(){
+  if(typeof renderFoot!=="function"||typeof renderStep!=="function"||typeof check!=="function")return;
+  const T=t=>{try{return tr(t)}catch(e){return t}};
+  const E=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const cur=()=>(typeof LX!=="undefined"&&LX&&LX.steps)?LX.steps[LX.i]:null;
+  const isChoice=st=>!!st&&Array.isArray(st.opts)&&st.opts.length>1&&st.k!=="build"&&st.k!=="match";
+  const hasOpts=()=>!!document.querySelector("#lxInner .opt");
+
+  const pStep=renderStep;renderStep=function(){const r=pStep.apply(this,arguments);try{const R=document.getElementById("lxRoot");if(R)R.classList.add("jx");const st=cur(),inn=document.getElementById("lxInner");if(st&&inn)inn.dataset.k=st.k}catch(e){}return r};
+
+  const pFoot=renderFoot;renderFoot=function(){const r=pFoot.apply(this,arguments);try{foot()}catch(e){}return r};
+  function foot(){const st=cur(),f=document.getElementById("lxFoot");if(!st||!f||LX.game==="chrono")return;
+    const R=document.getElementById("lxRoot");if(R)R.classList.add("jx");
+    if(LX.state==="idle"){
+      if(isChoice(st)&&hasOpts()){const skip=!!f.querySelector('[data-lx="skip"]');
+        f.innerHTML=`<div class="foot-in jx-idle"><span class="jx-hint">${E(T("Touche ta réponse"))}</span>${skip?`<button class="jx-link" data-lx="skip">${E(T("Je ne sais pas"))}</button>`:""}</div>`;return}
+      if(st.k==="match"){f.innerHTML=`<div class="foot-in jx-idle"><span class="jx-hint">${E(T("Touche un mot, puis sa traduction"))}</span></div>`;return}
+      if(f.querySelector('[data-lx="check"]')){f.classList.add("jx-stack");
+        f.querySelectorAll('.foot-left [data-lx]').forEach(b=>{b.classList.remove("btn","ghost","hint-btn");b.classList.add("jx-link");if(b.dataset.lx==="skip")b.textContent=T("Je ne sais pas")})}
+      return}
+    if(LX.state!=="good"&&LX.state!=="bad")return;
+    const good=LX.state==="good";f.classList.add("jx-fb");
+    const badge=f.querySelector(".foot-msg .badge");if(badge){badge.className="badge jx-badge";badge.textContent=good?"✓":"✕";badge.setAttribute("aria-hidden","true")}
+    const title=f.querySelector(".foot-msg b");
+    if(!good&&title&&st.k!=="card"&&st.k!=="match"){title.textContent=T("Pas tout à fait");
+      const ans=title.nextElementSibling;if(ans&&ans.tagName==="SPAN"&&!f.querySelector(".jx-lab"))ans.insertAdjacentHTML("beforebegin",`<small class="jx-lab">${E(T("Bonne réponse :"))}</small>`)}}
+
+  /* Un toucher = une réponse (le module d'origine retient le choix, puis on vérifie) */
+  function autoCheck(st){setTimeout(()=>{try{if(LX&&LX.state==="idle"&&LX.sel!=null&&cur()===st)check()}catch(e){}},170)}
+  document.addEventListener("click",e=>{const o=e.target.closest&&e.target.closest("#lxInner .opt");if(!o||o.disabled)return;
+    const st=cur();if(!st||!isChoice(st)||LX.state!=="idle"||LX.game==="chrono")return;autoCheck(st)});
+  document.addEventListener("keydown",e=>{if(!/^[1-9]$/.test(e.key))return;const st=cur();if(!st||!isChoice(st)||!LX||LX.state!=="idle"||LX.game==="chrono")return;
+    if(e.target&&/INPUT|TEXTAREA/.test(e.target.tagName))return;autoCheck(st)});
+
+  const css=document.createElement("style");css.textContent=`
+.jx .q-title{font-size:1rem;font-weight:700;color:var(--muted);margin:2px 0 10px;letter-spacing:0}
+.jx .speaker{display:block}.jx .speaker>.mascot,.jx .speaker>img.mascot{display:none}
+.jx .bubble{width:100%;margin:0 0 18px;border-radius:18px;padding:18px;font-size:1.4rem;font-weight:800;line-height:1.3;background:var(--surface);border:2px solid var(--line);box-shadow:none;color:var(--ink)}
+.jx .bubble::before,.jx .bubble::after{display:none}
+.jx .opts{gap:10px}
+.jx .opt{min-height:58px;border-radius:14px;box-shadow:none;font-weight:700;font-size:1.08rem;padding:14px 16px;transition:transform .08s,border-color .15s,background .15s}
+.jx .opt:active{transform:scale(.98)}
+.jx .opt.right,.jx .opt.wrong{box-shadow:none}
+.jx .opt.right::after{content:"✓";margin-left:auto;font-weight:900;font-size:1.2rem}
+.jx .opt.wrong::after{content:"✕";margin-left:auto;font-weight:900;font-size:1.1rem}
+@media (pointer:coarse){.jx .opt kbd{display:none}}
+.jx .tip{padding:10px 14px;border-radius:14px;gap:10px;margin-bottom:14px;align-items:center}
+.jx .tip .mascot{width:32px!important;height:32px!important;flex:none}
+.jx .tip p{font-size:.88rem;line-height:1.35;margin:0}
+.jx .tok{border-radius:12px;min-height:46px;box-shadow:none;font-weight:700}
+.jx .tray{min-height:62px;border-radius:14px;border:2px dashed var(--line);padding:8px;margin-bottom:14px}
+.jx-idle{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:56px}
+.jx-hint{color:var(--muted);font-weight:600;font-size:.95rem}
+.jx-link{background:none;border:0;color:var(--accent);font:inherit;font-weight:700;font-size:.95rem;padding:8px 12px;min-height:40px;cursor:pointer;text-decoration:underline;text-underline-offset:3px;box-shadow:none}
+.jx-stack .foot-in{display:flex;flex-direction:column;align-items:stretch;gap:4px}
+.jx-stack .foot-in>[data-lx="check"]{width:100%;order:1}
+.jx-stack .foot-left{order:2;display:flex;justify-content:center;gap:8px}
+.jx-fb .foot-in{display:flex;flex-direction:column;align-items:stretch;gap:12px}
+.jx-fb .foot-msg{display:flex;align-items:flex-start;gap:12px}
+.jx-badge{width:36px;height:36px;border-radius:50%;display:flex!important;align-items:center;justify-content:center;font-weight:900;font-size:1.1rem;flex:none;background:var(--good);color:#fff}
+.lx-foot.bad .jx-badge{background:var(--bad)}
+.jx-fb .foot-msg b{font-size:1.2rem;display:block}
+.jx-fb .foot-msg>div>span[lang]{font-size:1.1rem;font-weight:800}
+.jx .lx-foot .mbadge img,.jx .lx-foot .badge img{display:none!important}
+.jx .lx-foot.jx-fb .badge{width:36px;height:36px;border-radius:50%;display:flex!important;align-items:center;justify-content:center;flex:none;background:var(--good);color:#fff;font-size:0}
+.jx .lx-foot.jx-fb.bad .badge{background:var(--bad)}
+.jx .lx-foot.jx-fb .badge::before{content:"✓";font-size:1.15rem;font-weight:900}
+.jx .lx-foot.jx-fb.bad .badge::before{content:"✕"}
+.jx .tok.ghost{background:transparent;border:2px dashed var(--line);color:transparent;box-shadow:none}
+.vl .cov2{display:none}
+.vl .levels{display:flex!important;flex-wrap:nowrap;overflow-x:auto;gap:6px;scrollbar-width:none;padding:2px 0 4px;margin:0}
+.vl .levels::-webkit-scrollbar{display:none}
+.vl .lvl{flex:0 0 auto!important;min-width:0!important;display:flex;flex-direction:column;align-items:center;gap:4px;padding:7px 14px 8px!important;border-radius:14px!important;box-shadow:none!important;border-width:1.5px}
+.vl .lvl>span{display:none}
+.vl .lvl b{font-size:.95rem}
+.vl .lvl i{display:block;width:30px;height:3px;border-radius:2px;background:var(--line);overflow:hidden}
+.vl .lvl i em{display:block;height:100%;background:var(--vl-acc,#C2410C)}
+.vl .lvl.on{background:var(--ink)!important;border-color:var(--ink)!important;color:var(--bg)!important}
+.vl .lvl.on b{color:var(--bg)}
+.vl .lvl{flex:1 1 0!important;padding-left:6px!important;padding-right:6px!important}
+.modes{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.modes .mode{display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding:14px!important;border-radius:16px!important;min-height:0;text-align:left;box-shadow:none!important;border:1.5px solid var(--line)!important;background:var(--surface)}
+.modes .mode .mode-ic{width:40px!important;height:40px!important;border-radius:12px!important;box-shadow:none!important}
+.modes .mode .mode-t b{font-size:1rem;line-height:1.2}
+.modes .mode .mode-t small{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:.82rem;line-height:1.3;margin-top:3px}
+.modes .mode[data-mode="review"]{grid-column:1/-1;flex-direction:row;align-items:center;border:2px solid var(--good)!important}
+.modes .mode .tag.jx-gone{display:none}
+.modes .mode:not([data-mode="review"]){flex-direction:column!important;align-items:flex-start!important;position:relative}
+.modes .mode:not([data-mode="review"])>*{width:auto!important;max-width:100%}
+.modes .mode .mode-t{flex:1 1 auto!important;min-width:0}
+.modes .mode .tag{position:absolute;top:10px;right:10px;margin:0!important}
+.modes .mode{display:flex!important;grid-template-columns:none!important;background:var(--surface)!important;color:var(--ink)!important}.modes .mode .mode-ic{grid-row:auto!important;grid-column:auto!important}.modes .mode .mode-t{grid-column:auto!important;padding-right:0}
+@media (min-width:900px){.modes{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.jx-lab{display:block;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;opacity:.8;margin-top:6px}
+.jx-fb .quip{display:none}
+.jx-fb .foot-in>div:last-child{justify-content:stretch!important;flex-wrap:nowrap!important}
+.jx-fb #nextBtn{flex:1}`;
+  document.head.appendChild(css);
+  /* Les cœurs n'existent plus : on retire les phrases et étiquettes qui en parlent encore (page Jouer) */
+  if(typeof render==="function"){const pr=render;render=function(){const r=pr.apply(this,arguments);try{
+    document.querySelectorAll("#view .section-head p.muted").forEach(p=>{if(/cœur|cuor|coraz|hearts?\b|Herz|hart/i.test(p.textContent)&&p.closest("#view .section-head").querySelector("#playSet,.field")||/cœurs?/.test(p.textContent))p.remove()});
+    document.querySelectorAll("#view .modes .mode .tag").forEach(t=>{if(/cœur|♥|heart|cuor|coraz|Herz|hart/i.test(t.textContent))t.classList.add("jx-gone")})}catch(e){}return r}}
+  if(typeof I18N!=="undefined"){const U={
+    it:{"Touche ta réponse":"Tocca la tua risposta","Je ne sais pas":"Non lo so","Touche un mot, puis sa traduction":"Tocca una parola, poi la sua traduzione","Pas tout à fait":"Non proprio"},
+    es:{"Touche ta réponse":"Toca tu respuesta","Je ne sais pas":"No lo sé","Touche un mot, puis sa traduction":"Toca una palabra y luego su traducción","Pas tout à fait":"No del todo"},
+    pt:{"Touche ta réponse":"Toca na tua resposta","Je ne sais pas":"Não sei","Touche un mot, puis sa traduction":"Toca numa palavra e depois na tradução","Pas tout à fait":"Não exatamente"},
+    en:{"Touche ta réponse":"Tap your answer","Je ne sais pas":"I don't know","Touche un mot, puis sa traduction":"Tap a word, then its translation","Pas tout à fait":"Not quite"},
+    de:{"Touche ta réponse":"Tippe deine Antwort an","Je ne sais pas":"Ich weiß es nicht","Touche un mot, puis sa traduction":"Tippe ein Wort an, dann seine Übersetzung","Pas tout à fait":"Nicht ganz"},
+    nl:{"Touche ta réponse":"Tik je antwoord aan","Je ne sais pas":"Ik weet het niet","Touche un mot, puis sa traduction":"Tik een woord aan en dan de vertaling","Pas tout à fait":"Niet helemaal"},
+    ary:{"Touche ta réponse":"Wrrek 3la l-jawab dyalek","Je ne sais pas":"Ma 3reftch","Touche un mot, puis sa traduction":"Wrrek 3la kelma, w men b3d 3la t-tarjama dyalha","Pas tout à fait":"Machi bezzaf"}};
+    for(const l in U){I18N[l]=I18N[l]||{};for(const k in U[l])if(I18N[l][k]==null)I18N[l][k]=U[l][k]}}
+})();
+</script>
