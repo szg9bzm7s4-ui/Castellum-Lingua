@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta name="castellum-build" content="202611111120">
+<meta name="castellum-build" content="202611111125">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Apprends 63 langues avec le château : leçons, jeux, alphabets, grammaire et dictionnaire.">
@@ -16478,6 +16478,7 @@ button.vl-st{cursor:pointer}button.vl-st:hover{background:color-mix(in srgb,var(
   document.head.appendChild(dk);
 })();
 </script>
+<script>/* Pas de son : traductions */(function(){if(typeof I18N==="undefined")return;const U={"it": {"Pas de son ?": "Niente audio?", "Monte le volume du téléphone.": "Alza il volume del telefono.", "iPhone : désactive le mode silencieux (petit interrupteur sur le côté). En mode silencieux, la voix du téléphone est coupée.": "iPhone: disattiva la modalità silenziosa (il piccolo interruttore sul lato). In modalità silenziosa la voce del telefono è muta.", "Toujours rien ? Passe à l'audio intégré : il marche même en mode silencieux.": "Ancora niente? Passa all'audio integrato: funziona anche in modalità silenziosa.", "Utiliser l'audio intégré": "Usa l'audio integrato", "Audio intégré activé": "Audio integrato attivato"}, "es": {"Pas de son ?": "¿No hay sonido?", "Monte le volume du téléphone.": "Sube el volumen del teléfono.", "iPhone : désactive le mode silencieux (petit interrupteur sur le côté). En mode silencieux, la voix du téléphone est coupée.": "iPhone: desactiva el modo silencio (el pequeño interruptor lateral). En modo silencio, la voz del teléfono se corta.", "Toujours rien ? Passe à l'audio intégré : il marche même en mode silencieux.": "¿Sigue sin sonar? Cambia al audio integrado: funciona incluso en modo silencio.", "Utiliser l'audio intégré": "Usar el audio integrado", "Audio intégré activé": "Audio integrado activado"}, "pt": {"Pas de son ?": "Sem som?", "Monte le volume du téléphone.": "Aumenta o volume do telemóvel.", "iPhone : désactive le mode silencieux (petit interrupteur sur le côté). En mode silencieux, la voix du téléphone est coupée.": "iPhone: desativa o modo silencioso (o pequeno interruptor lateral). No modo silencioso, a voz do telemóvel fica cortada.", "Toujours rien ? Passe à l'audio intégré : il marche même en mode silencieux.": "Ainda nada? Muda para o áudio integrado: funciona mesmo no modo silencioso.", "Utiliser l'audio intégré": "Usar o áudio integrado", "Audio intégré activé": "Áudio integrado ativado"}, "en": {"Pas de son ?": "No sound?", "Monte le volume du téléphone.": "Turn up the phone volume.", "iPhone : désactive le mode silencieux (petit interrupteur sur le côté). En mode silencieux, la voix du téléphone est coupée.": "iPhone: turn off silent mode (the small switch on the side). In silent mode, the phone's voice is muted.", "Toujours rien ? Passe à l'audio intégré : il marche même en mode silencieux.": "Still nothing? Switch to built-in audio: it works even in silent mode.", "Utiliser l'audio intégré": "Use built-in audio", "Audio intégré activé": "Built-in audio turned on"}, "de": {"Pas de son ?": "Kein Ton?", "Monte le volume du téléphone.": "Stell das Handy lauter.", "iPhone : désactive le mode silencieux (petit interrupteur sur le côté). En mode silencieux, la voix du téléphone est coupée.": "iPhone: Schalte den Stummmodus aus (der kleine Schalter an der Seite). Im Stummmodus bleibt die Stimme des Handys stumm.", "Toujours rien ? Passe à l'audio intégré : il marche même en mode silencieux.": "Immer noch nichts? Wechsle zum integrierten Audio: Es funktioniert auch im Stummmodus.", "Utiliser l'audio intégré": "Integriertes Audio verwenden", "Audio intégré activé": "Integriertes Audio aktiviert"}, "nl": {"Pas de son ?": "Geen geluid?", "Monte le volume du téléphone.": "Zet het volume van je telefoon hoger.", "iPhone : désactive le mode silencieux (petit interrupteur sur le côté). En mode silencieux, la voix du téléphone est coupée.": "iPhone: zet de stille modus uit (het kleine schuifje aan de zijkant). In de stille modus is de stem van de telefoon uitgeschakeld.", "Toujours rien ? Passe à l'audio intégré : il marche même en mode silencieux.": "Nog steeds niets? Schakel over naar ingebouwde audio: die werkt ook in de stille modus.", "Utiliser l'audio intégré": "Ingebouwde audio gebruiken", "Audio intégré activé": "Ingebouwde audio ingeschakeld"}, "ary": {"Pas de son ?": "Ma kaynch s-sowt?", "Monte le volume du téléphone.": "Tle3 s-sowt dyal t-tilifoun.", "iPhone : désactive le mode silencieux (petit interrupteur sur le côté). En mode silencieux, la voix du téléphone est coupée.": "iPhone: 7iyed l-mode silencieux (l-bouton s-sghir f j-jenb). F l-mode silencieux, sowt t-tilifoun kayt9te3.", "Toujours rien ? Passe à l'audio intégré : il marche même en mode silencieux.": "Mazal walo? Douz l l-audio dyal l-application: khddam 7tta f l-mode silencieux.", "Utiliser l'audio intégré": "Khdem b l-audio dyal l-application", "Audio intégré activé": "L-audio dyal l-application tkhddem"}};for(const l in U){I18N[l]=I18N[l]||{};for(const k in U[l])if(I18N[l][k]==null)I18N[l][k]=U[l][k]}})();</script>
 <script id="castellum-jeux-ux">
 /* Exercices et jeux, plus simples à jouer :
    - questions à choix : un seul toucher suffit, la réponse est vérifiée tout de suite ;
@@ -16525,7 +16526,8 @@ button.vl-st{cursor:pointer}button.vl-st:hover{background:color-mix(in srgb,var(
      intégré, synthétisé avec un accent). Réglage « Audio intégré » pour revenir aux fichiers. Le latin garde ses fichiers. */
   const DEV_LANGS=new Set(["it","fr","es","pt","en","de","nl"]);
   const vsrc=()=>{try{return localStorage.getItem("castellumVoiceSrc")||"device"}catch(e){return "device"}};
-  function goodDevice(code){try{if(!DEV_LANGS.has(code)||vsrc()==="files"||!window.speechSynthesis)return null;
+  let devBad=0;
+  function goodDevice(code){try{if(devBad>=2||!DEV_LANGS.has(code)||vsrc()==="files"||!window.speechSynthesis)return null;
     const v=typeof voiceFor==="function"?voiceFor(code):null;if(!v||!v.lang)return null;
     if(!v.lang.toLowerCase().replace("_","-").startsWith(code))return null;
     if(/espeak|festival|pico|mbrola/i.test(v.name||""))return null;return v}catch(e){return null}}
@@ -16534,7 +16536,26 @@ button.vl-st{cursor:pointer}button.vl-st:hover{background:color-mix(in srgb,var(
     try{const A=window.CastellumAudio;if(A){A.seq++;try{if(A.audio&&!A.audio.paused)A.audio.pause()}catch(e){}A.state="idle"}
       speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(String(text||"").replace(/\s*\(.*?\)/g,"").trim());
       u.voice=v;u.lang=v.lang;u.__mine=true;let r=.92;try{r=Number(JSON.parse(localStorage.getItem("castellumAudioPrefsV2")||"{}").rate)||.92}catch(e){}
-      u.rate=slow?.62:r;speechSynthesis.speak(u);return true}catch(e){return pSpeak.apply(this,arguments)}};
+      u.rate=slow?.62:r;
+      /* iPhone : un cancel() suivi tout de suite de speak() avale parfois la phrase ; et si la voix ne démarre pas,
+         on reprend l'audio intégré ou la voix en ligne au lieu de rester muet. */
+      const ss=speechSynthesis,busy=ss.speaking||ss.pending,args=arguments,self=this;let started=false,dead=false;
+      const back=()=>{if(dead||started||window.__jxUtt!==u)return;dead=true;devBad++;try{ss.cancel()}catch(e){}try{pSpeak.apply(self,args)}catch(e){}try{const A=window.CastellumAudio;if(A&&A.refresh)A.refresh()}catch(e){}};
+      u.onstart=()=>{started=true;devBad=0};u.onerror=ev=>{const k=ev&&ev.error;if(k==="interrupted"||k==="canceled")return;back()};
+      window.__jxUtt=u;if(busy){ss.cancel();setTimeout(()=>{if(window.__jxUtt===u)ss.speak(u)},90)}else ss.speak(u);
+      setTimeout(()=>{if(!started&&!ss.speaking)back()},1800);
+      return true}catch(e){return pSpeak.apply(this,arguments)}};
+  /* « Pas de son ? » : aide courte à côté de la source audio, avec un bouton pour passer à l'audio intégré */
+  function soundHelp(){document.querySelectorAll("#lxStep [data-a2-status]").forEach(el0=>{const el=el0.closest(".audio-premium-bar")||el0;if(el.nextElementSibling&&el.nextElementSibling.classList.contains("jx-nosound"))return;
+    el.insertAdjacentHTML("afterend",`<button type="button" class="jx-nosound" data-jxsound="1">${E(T("Pas de son ?"))}</button>`)})}
+  document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("[data-jxsound],[data-jxfiles]");if(!b)return;e.preventDefault();e.stopPropagation();
+    if(b.dataset.jxfiles){try{localStorage.setItem("castellumVoiceSrc","files")}catch(err){}try{const h=document.getElementById("jxHelp");if(h)h.remove()}catch(err){}try{const A=window.CastellumAudio;if(A&&A.refresh)A.refresh()}catch(err){}
+      const st=cur();if(st&&st.it&&st.it.t)try{speak(st.it.t)}catch(err){}try{toast(T("Audio intégré activé"))}catch(err){}return}
+    const old=document.getElementById("jxHelp");if(old){old.remove();return}
+    b.insertAdjacentHTML("afterend",`<div class="jx-help" id="jxHelp"><ol><li>${E(T("Monte le volume du téléphone."))}</li><li>${E(T("iPhone : désactive le mode silencieux (petit interrupteur sur le côté). En mode silencieux, la voix du téléphone est coupée."))}</li>
+      <li>${E(T("Toujours rien ? Passe à l'audio intégré : il marche même en mode silencieux."))}</li></ol>
+      <button type="button" class="jx-usefiles" data-jxfiles="1">📦 ${E(T("Utiliser l'audio intégré"))}</button></div>`)},true);
+  if(typeof renderFoot==="function"){const pf=renderFoot;renderFoot=function(){const r=pf.apply(this,arguments);try{soundHelp()}catch(e){}return r}}
   function voiceChoice(){const more=document.querySelector("#lxStep .a2-more");if(!more||more.querySelector(".jx-vsrc"))return;
     if(!DEV_LANGS.has(S.tgt))return;const cur=vsrc(),has=!!(typeof voiceFor==="function"&&voiceFor(S.tgt));
     more.insertAdjacentHTML("afterbegin",`<div class="jx-vsrc" role="radiogroup" aria-label="${E(T("Voix"))}"><b>${E(T("Voix"))}</b>
@@ -16662,6 +16683,10 @@ button.vl-st{cursor:pointer}button.vl-st:hover{background:color-mix(in srgb,var(
 @media (min-width:900px){.modes{grid-template-columns:repeat(3,minmax(0,1fr))}}
 .jx-lab{display:block;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;opacity:.8;margin-top:6px}
 .jx-fb .quip{display:none}
+.jx-nosound{all:unset;display:inline-block;margin:2px 0 0;font-size:.85rem;font-weight:700;color:var(--blue,#3b6cf6);text-decoration:underline;cursor:pointer;min-height:32px;line-height:32px}
+.jx-help{margin:6px 0 10px;padding:12px 14px;border-radius:14px;border:1.5px solid var(--line,#dfe3e6);background:var(--surface,#fff);color:var(--ink,#14324A);font-size:.92rem}
+.jx-help ol{margin:0 0 10px;padding-left:20px;display:flex;flex-direction:column;gap:6px;line-height:1.4}
+.jx-usefiles{all:unset;box-sizing:border-box;display:block;width:100%;text-align:center;min-height:46px;line-height:46px;border-radius:12px;background:var(--blue,#3b6cf6);color:#fff;font-weight:800;cursor:pointer}
 .jx-fb .foot-in>div:last-child{justify-content:stretch!important;flex-wrap:nowrap!important}
 .jx-fb #nextBtn{flex:1}`;
   document.head.appendChild(css);
