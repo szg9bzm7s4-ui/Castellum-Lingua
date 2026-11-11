@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta name="castellum-build" content="202611111125">
+<meta name="castellum-build" content="202611111127">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Apprends 63 langues avec le château : leçons, jeux, alphabets, grammaire et dictionnaire.">
@@ -16794,7 +16794,7 @@ button.vl-st{cursor:pointer}button.vl-st:hover{background:color-mix(in srgb,var(
 
   /* Outils : chaque outil dit à quoi il sert, et la visite peut être relancée */
   const DESC={dict:"Cherche un mot dans les deux sens",grammar:"Les règles, expliquées simplement",alpha:"Lire et prononcer les lettres",lists:"Des mots par thème : animaux, cuisine…",words:"Les mots que tu as mis de côté ⭐",errors:"Revois ce que tu as raté",teacher:"Pose tes questions, converse",langs:"Apprendre une autre langue",friends:"Tes amis et leurs progrès",account:"Sauvegarde ta progression"};
-  const deco=()=>{const s=document.querySelector("#sheetRoot .u2-tools");if(!s||s.dataset.ct)return;s.dataset.ct=1;
+  const deco=()=>{const s=document.querySelector("#sheetRoot .u2-tools");if(!s||s.dataset.ctdeco)return;s.dataset.ctdeco=1;
     s.querySelectorAll(".u2-tool").forEach(b=>{const key=b.dataset.go||(b.dataset.act==="errors"?"errors":"");if(DESC[key]&&!b.querySelector("small")){const bb=b.querySelector("b");if(bb){const w=document.createElement("span");w.className="ct-tt";bb.replaceWith(w);w.appendChild(bb);const sm=document.createElement("small");sm.textContent=T(DESC[key]);w.appendChild(sm)}}});
     const head=s.querySelector(".section-head");if(head&&!s.querySelector('[data-ct="tour"]')){const b=document.createElement("button");b.type="button";b.className="u2-tool wide ct-tourbtn";b.dataset.ct="tour";
       b.innerHTML=`<span aria-hidden="true">🧭</span><span class="ct-tt"><b>${E(T("Visite guidée de l'appli"))}</b><small>${E(T("1 minute pour tout découvrir"))}</small></span>`;head.after(b)}};
@@ -16817,7 +16817,7 @@ button.vl-st{cursor:pointer}button.vl-st:hover{background:color-mix(in srgb,var(
 .ct-opt{display:flex;gap:12px;align-items:center;text-align:left;width:100%;min-height:60px;padding:12px 14px;border-radius:16px;border:2px solid var(--line,#dfe3e6);background:var(--surface,#fff);color:var(--ink,#14324A);font:inherit;cursor:pointer}
 .ct-opt>span:first-child{font-size:1.5rem}.ct-opt span:last-child{display:flex;flex-direction:column}.ct-opt small{color:var(--ink-2,#4E5F6B)}
 .ct-opt.main{background:#C2410C;border-color:#C2410C;color:#fff}.ct-opt.main small{color:#ffe7d9}
-.ct-tt{display:flex;flex-direction:column;gap:1px;min-width:0}.ct-tt small{font-size:.76rem;font-weight:500;color:var(--ink-2,#4E5F6B);line-height:1.25}
+.ct-tt{display:flex;flex-direction:column;gap:1px;min-width:0;font-size:1rem!important;line-height:1.25}.u2-tool .ct-tt b{font-size:1rem!important;line-height:1.2}.u2-tool .ct-tt small{font-size:.8rem!important}.ct-tt small{font-size:.76rem;font-weight:500;color:var(--ink-2,#4E5F6B);line-height:1.25}
 .ct-tourbtn{margin:4px 0 6px;border-color:#f4b73b!important}
 @media (prefers-reduced-motion:reduce){.ct-card,.ct-burst{animation:none}}`;document.head.appendChild(css);
 })();
