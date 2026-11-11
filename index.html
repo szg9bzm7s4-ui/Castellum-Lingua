@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta name="castellum-build" content="202611101516">
+<meta name="castellum-build" content="202611111120">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Apprends 63 langues avec le château : leçons, jeux, alphabets, grammaire et dictionnaire.">
@@ -9522,7 +9522,8 @@ document.addEventListener('click',function(e){
   let ctUnlocked=false;
   ['pointerdown','touchend','keydown'].forEach(ev=>document.addEventListener(ev,()=>{
     if(ctUnlocked||typeof S==='undefined'||!ARABIZI_CODES.has(S.tgt))return;ctUnlocked=true;
-    try{const a=ctAudio();a.src=silentURL();const p=a.play();if(p&&p.catch)p.catch(()=>{})}catch(e){}},{capture:true,passive:true}));
+    try{const a=ctAudio();a.src=silentURL();const p=a.play();if(p&&p.catch)p.catch(()=>{})}catch(e){}
+    try{if(window.speechSynthesis&&ctAvailable()){const u=new SpeechSynthesisUtterance(' ');u.volume=0;speechSynthesis.speak(u)}}catch(e){}},{capture:true,passive:true}));
   async function ctFetch(text,code,slow){
     const key=code+'|'+(slow?1:0)+'|'+(AP.cloudMale?1:0)+'|'+text;
     if(CT.cache.has(key))return CT.cache.get(key);
@@ -9532,7 +9533,7 @@ document.addEventListener('click',function(e){
     if(!blob){
       const {data}=await Cloud.client.auth.getSession();const tok=data?.session?.access_token;if(!tok)throw new Error('nosession');
       const cfg=window.CASTELLUM_CONFIG,url=cfg.supabaseUrl.replace(/\/$/,'')+'/functions/v1/'+(cfg.ttsFunction||'castellum-tts');
-      const ctl=new AbortController(),to=setTimeout(()=>ctl.abort(),5000);let res;
+      const ctl=new AbortController(),to=setTimeout(()=>ctl.abort(),8000);let res;
       try{res=await fetch(url,{method:'POST',signal:ctl.signal,headers:{'Content-Type':'application/json',Authorization:'Bearer '+tok,apikey:cfg.supabaseAnonKey||''},body:JSON.stringify({text,lang:code,slow:!!slow,male:!!AP.cloudMale})})}finally{clearTimeout(to)}
       if(res.status===404||res.status===503){CT.off=true;throw new Error('noserver')}
       if(!res.ok)throw new Error('http '+res.status);
@@ -9546,8 +9547,8 @@ document.addEventListener('click',function(e){
   function ctStop(){CT.seq++;try{if(CT.audio&&!CT.audio.paused)CT.audio.pause()}catch(e){}}
   function ctSpeak(text,code,slow,fallback){
     const id=++CT.seq;
-    ctFetch(text,code,slow).then(u=>{if(id!==CT.seq)return;const a=ctAudio();a.src=u;return a.play()})
-      .catch(()=>{if(id===CT.seq)fallback()});
+    ctFetch(text,code,slow).then(u=>{CT.fail=0;if(id!==CT.seq)return;const a=ctAudio();a.src=u;const p=a.play();return p&&p.catch?p.catch(()=>{if(id===CT.seq)fallback()}):p},
+      err=>{CT.fail=(CT.fail||0)+1;CT.lastErr=String(err&&err.message||err);if(CT.fail>=2){CT.off=true;try{console.warn('Voix en ligne indisponible ('+CT.lastErr+') : voix de l\'appareil')}catch(e){}}if(id===CT.seq)fallback()});
   }
   try{const ss=window.speechSynthesis;if(ss&&!ss.__ctPatched){const orig=ss.cancel.bind(ss);ss.cancel=function(){ctStop();return orig()};ss.__ctPatched=true}}catch(e){}
   window.castellumCloudVoice={available:ctAvailable,names:CT_NAMES,state:CT};
@@ -9634,7 +9635,7 @@ document.addEventListener('click',function(e){
       let say=String(text||'').replace(/\s*\(.*?\)/g,'').trim();
       if(code==='la')say=latinForItalianVoice(say);
       else if(ARABIZI_CODES.has(code))say=arabiziToArabic(say,code);
-      if(cloud){const sv=say,rt=Number(AP.rate)||.92;ctSpeak(sv,code,slow,()=>{if(!v)return;try{const u2=new SpeechSynthesisUtterance(sv);u2.voice=v;u2.lang=v.lang||want;u2.rate=slow?Math.min(.68,rt*.72):rt;speechSynthesis.speak(u2)}catch(e){}});return true}
+      if(cloud){const sv=say,rt=Number(AP.rate)||.92;ctSpeak(sv,code,slow,()=>{if(!v){try{toast("Voix en ligne indisponible pour l'instant, et aucune voix arabe n'est installée sur cet appareil")}catch(e){}return}try{const u2=new SpeechSynthesisUtterance(sv);u2.voice=v;u2.lang=v.lang||want;u2.rate=slow?Math.min(.68,rt*.72):rt;speechSynthesis.speak(u2)}catch(e){}});return true}
       const u=new SpeechSynthesisUtterance(say);
       u.voice=v;
       u.lang=v.lang||want;
