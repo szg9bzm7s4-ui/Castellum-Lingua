@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta name="castellum-build" content="202611121105">
+<meta name="castellum-build" content="202611121358">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Apprends 63 langues avec le château : leçons, jeux, alphabets, grammaire et dictionnaire.">
@@ -7370,7 +7370,9 @@ const nodeKey=(u,l,lv=S.level)=>lv==="A1"?`${S.tgt}:${u}:${l}`:`${S.tgt}:${lv}:$
 function stepDone(u,l,lv=S.level){return !!(S.done[nodeKey(u,l,lv)]||S.done[nodeKey(u,BOSS,lv)])}
 function firstUndone(lv=S.level){const T=totalNodes(lv);for(let g=0;g<T;g++){if(!stepDone(Math.floor(g/LPU),LORDER[g%LPU],lv))return g}return T}
 function levelDone(lv){return lvUnits(lv).reduce((a,_,u)=>a+LORDER.filter(l=>stepDone(u,l,lv)).length,0)}
-function learnedItems(){const out=[];LEVEL_INFO.forEach(({id:lv})=>lvUnits(lv).forEach((U,u)=>{const d=setData(U.id);if(!d)return;[0,1,2].forEach(l=>{if(S.done[nodeKey(u,l,lv)]||S.done[nodeKey(u,3,lv)])out.push(...d.slice(l*4,l*4+4))})}));return out}
+/* Mots nouveaux par leçon : 4, 5 ou 6 selon la taille de l'unité, pour que les trois leçons de mots couvrent toute l'unité */
+function freshPer(n){return n>=18?6:n>=15?5:4}
+function learnedItems(){const out=[];LEVEL_INFO.forEach(({id:lv})=>lvUnits(lv).forEach((U,u)=>{const d=setData(U.id);if(!d)return;[0,1,2].forEach(l=>{if(S.done[nodeKey(u,l,lv)]||S.done[nodeKey(u,3,lv)]){const fp=freshPer(d.length);out.push(...d.slice(l*fp,l*fp+fp))}})}));return out}
 function allAvailableItems(){return SETS.flatMap(s=>setData(s.id)||[])}
 function mastery(items){if(!items?.length)return 0;return items.filter(it=>(S.known[knownKey(it)]||0)>=1).length}
 
@@ -7945,14 +7947,17 @@ function varied(it,pool,i,voice){
 function buildLesson(u,l,items){
   const voice=canSpeak(S.tgt);const steps=[];const pool=items;
   if(l<3){
-    const fresh=items.slice(l*4,l*4+4), old=items.slice(0,l*4);
+    const fp=freshPer(items.length),fresh=items.slice(l*fp,l*fp+fp), old=items.slice(0,l*fp);
     fresh.forEach((it,i)=>{if(!S.seen[S.tgt+it.t])steps.push({k:"intro",it});steps.push(makeStep(i%2?"rev":"mc",it,pool))});
     steps.push({k:"match",its:shuffle([...fresh,...shuffle(old).slice(0,1)]).slice(0,5)});
-    shuffle(fresh).forEach((it,i)=>steps.push(varied(it,pool,i,voice)));
-    shuffle(old).slice(0,2).forEach((it,i)=>steps.push(varied(it,pool,i+2,voice)));
+    /* deuxième passage : plus il y a de mots nouveaux, moins on les répète (la leçon garde la même durée) */
+    shuffle(fresh).slice(0,fp>4?3:4).forEach((it,i)=>steps.push(varied(it,pool,i,voice)));
+    shuffle(old).slice(0,fp>4?1:2).forEach((it,i)=>steps.push(varied(it,pool,i+2,voice)));
     if(canListen(S.tgt)&&!speakMuted()){const cand=fresh.filter(multi);steps.splice(Math.max(1,steps.length-2),0,{k:"speak",it:pick(cand.length?cand:fresh)})}
   }else if(l===4||l===5||l===6){
-    return sectionSteps(l,items,voice);
+    /* Écouter, Parler, En situation : chaque jeu met de côté un tiers différent de l'unité, pour ne pas retomber sur les mêmes phrases */
+    const sub=items.length>=12?items.filter((_,i)=>i%3!==l-4):items;
+    return sectionSteps(l,sub.length>=8?sub:items,voice);
   }else{
     shuffle(items).slice(0,12).forEach((it,i)=>steps.push(varied(it,pool,i,voice)));
     steps.splice(5,0,{k:"match",its:shuffle(items).slice(0,5)});
@@ -8644,7 +8649,7 @@ const __check=check;check=function(){const st=LX.steps[LX.i];if(st.k==="free"){i
 /* Leçons : on ajoute un dialogue ; le boss reçoit une mini-histoire */
 const __buildLesson=buildLesson;
 buildLesson=function(u,l,items){const steps=__buildLesson(u,l,items);
-  if(l<3){const d=dialogueSteps(items.slice(0,(l+1)*4),1);if(d.length)steps.splice(Math.max(2,steps.length-3),0,d[0])}
+  if(l<3){const d=dialogueSteps(items.slice(0,(l+1)*freshPer(items.length)),1);if(d.length)steps.splice(Math.max(2,steps.length-3),0,d[0])}
   else if(l===BOSS){const s=storySteps(items,1),d=dialogueSteps(items,1);steps.splice(3,0,...d);steps.splice(8,0,...s)}
   return steps};
 /* Modes de jeu supplémentaires */
@@ -15012,7 +15017,7 @@ Tu quoque, mi fili?|Toi aussi, mon fils ?|Tradition, d'après Suétone`;
     const r=prevFinish.apply(this,arguments);
     try{if(!info||info.mode!=='lesson'||info.duel||info.cp||info.sp)return r;
       const body=document.querySelector('#lxBody .done-screen');if(!body||body.querySelector('.ls-can'))return r;
-      let its=info.l<3?info.items.slice(info.l*4,info.l*4+4):[];
+      const fpI=freshPer(info.items.length);let its=info.l<3?info.items.slice(info.l*fpI,info.l*fpI+fpI):[];
       if(!its.length){const m=new Map();info.steps.forEach(s=>{if(s.it&&s.it.t&&!s.scene&&!m.has(s.it.t))m.set(s.it.t,s.it)});its=[...m.values()].slice(0,5)}
       const [n,av]=who();
       const chips=its.filter(x=>x&&x.t).map(x=>`<span class="ls-chip"><b lang="${S.tgt}" data-noi18n>${E(x.t)}</b><small data-noi18n>${E(x.s||'')}</small></span>`).join('');
