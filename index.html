@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta name="castellum-build" content="202611120907">
+<meta name="castellum-build" content="202611121105">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Apprends 63 langues avec le château : leçons, jeux, alphabets, grammaire et dictionnaire.">
@@ -16538,7 +16538,7 @@ button.vl-st{cursor:pointer}button.vl-st:hover{background:color-mix(in srgb,var(
     const R=document.getElementById("lxRoot");if(R)R.classList.add("jx");
     if(LX.state==="idle"){
       if(isChoice(st)&&hasOpts()){const skip=!!f.querySelector('[data-lx="skip"]');
-        f.innerHTML=`<div class="foot-in jx-idle"><span class="jx-hint">${E(T("Touche ta réponse"))}</span>${skip?`<button class="jx-link" data-lx="skip">${E(T("Je ne sais pas"))}</button>`:""}</div>`;return}
+        f.innerHTML=`<div class="foot-in jx-idle"><span class="jx-hint">${E(T("Touche ta réponse"))}</span>${skip?`<button class="jx-link" data-lx="skip">${E(T("Je ne sais pas"))}</button>`:""}${["listen","dictee"].includes(st.k)?`<button class="jx-link" data-lx="nohear">🔇 ${E(T("Je ne peux pas entendre"))}</button>`:""}</div>`;return}
       if(st.k==="match"){f.innerHTML=`<div class="foot-in jx-idle"><span class="jx-hint">${E(T("Touche un mot, puis sa traduction"))}</span></div>`;return}
       if(st.k==="build"&&f.querySelector('[data-lx="check"]')&&!f.querySelector(".jx-hint")){const fi=f.querySelector(".foot-in");if(fi)fi.insertAdjacentHTML("afterbegin",`<span class="jx-hint jx-hint-build">${E(T("Touche les mots ou fais-les glisser"))}</span>`)}
       if(f.querySelector('[data-lx="check"]')){f.classList.add("jx-stack");
