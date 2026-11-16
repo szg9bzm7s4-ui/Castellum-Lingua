@@ -65,13 +65,15 @@
     const pick=(re)=>{const m=typeof base==="string"&&base.match(re);return m?m[0]:""};
     const head=pick(/<div class="path-head">[\s\S]*?<\/div>/);
     const cp=pick(/<section class="checkpoint[\s\S]*?<\/section>/);
-    const test=pick(/<button class="rt-test"[\s\S]*?<\/button>/);
+    /* une fois le niveau commencé, la phrase d'accueil et le test de positionnement n'encombrent plus la page */
+    const started=firstUndone()>0;
+    const test=started?"":pick(/<button class="rt-test"[\s\S]*?<\/button>/);
     const UN=lvUnits(),cu=curUnitIx(),city=cityName();
     const lead=S.tgt==="la"?tr("Tu arrives à Rome. Chaque lieu de la ville est une étape pour apprendre à lire les Romains."):tr("Tu arrives à {V}. Chaque lieu de la ville est une situation à vivre.").replace("{V}",city);
     return `<div class="vl">${head}${levelBar()}
-      <header class="vl-head"><span class="vl-eyebrow">${E(L[S.tgt].n)} · niveau ${S.level}</span><h1 data-noi18n="1">${E(city)}</h1><p class="vl-muted" data-noi18n="1">${E(lead)}</p></header>
+      <header class="vl-head"><h1 data-noi18n="1">${E(city)}</h1>${started?"":`<p class="vl-muted" data-noi18n="1">${E(lead)}</p>`}</header>
       ${test}${nextCard(UN,cu)}<h2 class="vl-trail-h">${tr("Ton chemin dans la ville")}</h2>${mapHTML(UN,cu)}
-      <p class="vl-classic"><button class="vl-link" data-vclassic="1">Revenir au parcours classique</button></p>${cp}</div>`};
+      ${cp}</div>`};
   /* Château : la progression en tête (chiffres du jour), le reste de la page est le château */
   function progressHTML(){let st="";try{const d=day(),sk=streak(),goal=S.goal||20;
       st=`<div class="cs-stats"><div><b>${d.xp||0}</b><span>${tr("XP aujourd'hui")}</span></div><div><b>${sk}</b><span>${tr("jours de série")}</span></div><div><b>${d.lessons||0}</b><span>${tr("leçons aujourd'hui")}</span></div><div><b>${Math.min(100,Math.round((d.xp||0)/goal*100))} %</b><span>${tr("objectif du jour")}</span></div></div>`}catch(e){}

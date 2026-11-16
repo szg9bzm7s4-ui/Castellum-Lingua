@@ -87,9 +87,9 @@
     if(A.state==='error'&&(!text||clean(text)===clean(A.text))){
       const why=A.err==='offline'?'Pas de connexion : cet audio n\'est pas disponible hors ligne.':A.err==='novoice'?'Aucune voix pour cette langue sur cet appareil.':'L\'audio n\'a pas pu être chargé.';
       const hint=A.err==='novoice'&&CLOUD_LANGS.has(S.tgt)&&!(typeof Cloud!=='undefined'&&Cloud.user)?' <span>Connecte-toi pour utiliser la voix en ligne.</span>':'';
-      return `⚠️ <span>${why}</span>${hint} <button type="button" class="a2-retry" data-a2="retry">Réessayer</button>`}
+      return `<i class="a2-warn" aria-hidden="true">⚠️</i> <span>${why}</span>${hint} <button type="button" class="a2-retry" data-a2="retry">Réessayer</button>`}
     const s=(window.castellumDeviceFirst&&window.castellumDeviceFirst(S.tgt))?'device':sourceFor(S.tgt,text||A.text);
-    if(!s)return `⚠️ <span>Aucune voix pour cette langue sur cet appareil.</span>${CLOUD_LANGS.has(S.tgt)&&!(typeof Cloud!=='undefined'&&Cloud.user)?' <span>Connecte-toi pour utiliser la voix en ligne.</span>':''} <span>Lis la transcription.</span>`;
+    if(!s)return `<i class="a2-warn" aria-hidden="true">⚠️</i> <span>Aucune voix pour cette langue sur cet appareil.</span>${CLOUD_LANGS.has(S.tgt)&&!(typeof Cloud!=='undefined'&&Cloud.user)?' <span>Connecte-toi pour utiliser la voix en ligne.</span>':''} <span>Lis la transcription.</span>`;
     const native=s==='file'&&(fileFor(S.tgt,text||A.text)||{}).src==='native';
     return `${SRC[s][0]} <span>${native?'Enregistrement natif · fonctionne hors ligne':s==='file'?'Voix de synthèse intégrée · fonctionne hors ligne':SRC[s][1]}</span>`}
   A.statusHTML=statusHTML;
