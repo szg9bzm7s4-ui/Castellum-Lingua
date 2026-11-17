@@ -2,7 +2,7 @@
    chaque unité est un lieu de cette ville, regroupé par quartiers de 6. Un lieu s'ouvre sur sa scène
    (les premières phrases de l'unité, à écouter), puis ses étapes (les mêmes leçons qu'avant).
    Le passeport garde un tampon par lieu terminé et la liste de ce que l'on sait faire.
-   Pas de coffre ni de mascotte sur cette page. S.ui.classicPath = true revient à l'ancien chemin. */
+   Pas de coffre ni de mascotte sur cette page. L'ancien chemin n'est plus proposé. */
 (function(){
   if(typeof pathView!=="function"||typeof lvUnits!=="function")return;
   const prev=pathView;
@@ -60,7 +60,8 @@
       /* Ni habitants ni décorations : on garde le royaume, le siège et les amis */
       if(typeof h==="string")h=h.replace(/<section class="cs-card"><h2>[^<]*<span>(Les habitants|Décorations)<\/span>[\s\S]*?<\/section>/g,"");
       return typeof h==="string"?h.replace(/(<div class="cs-head">[\s\S]*?<\/div>)/,`$1<p class="cs-intro">${tr("Ici, c'est ton royaume. Chaque leçon te rapporte des pièces 🪙 : dépense-les pour agrandir ton château et le défendre.")}</p>${progressHTML()}`):h}
-    if(S.ui&&S.ui.classicPath){const h=prev.apply(this,arguments);return typeof h==="string"?`<p class="vl-classic"><button class="vl-link" data-vmap="1">Voir la carte de la ville</button></p>`+h:h}
+    /* L'ancien parcours (route sinueuse) n'est plus proposé : un réglage resté enregistré est effacé */
+    if(S.ui&&S.ui.classicPath){S.ui.classicPath=false;try{save()}catch(e){}}
     let base="";try{base=prev.apply(this,arguments)}catch(e){}
     const pick=(re)=>{const m=typeof base==="string"&&base.match(re);return m?m[0]:""};
     const head=pick(/<div class="path-head">[\s\S]*?<\/div>/);
@@ -134,7 +135,7 @@
             if(el>max||(el>500&&!busy))setTimeout(next,450);else setTimeout(wait,150)};
           setTimeout(wait,200)};next();return}
       if(t.dataset.vmap){S.ui=S.ui||{};S.ui.classicPath=false;save();render();return}
-      if(t.dataset.vclassic){S.ui=S.ui||{};S.ui.classicPath=true;save();render();toast("Parcours classique activé");return}}
+      if(t.dataset.vclassic){render();return}}
     const n=e.target.closest&&e.target.closest("#sheetRoot [data-node],#sheetRoot [data-special],#sheetRoot [data-openlist]");
     if(n&&!n.classList.contains("locked"))setTimeout(()=>{try{closeSheet()}catch(err){}},0)},true);
   window.castellumVille={on:()=>{S.ui=S.ui||{};S.ui.classicPath=false;save();render()}};
