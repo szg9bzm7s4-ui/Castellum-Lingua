@@ -15,6 +15,11 @@
         talk.forEach(el=>{const t=el.querySelector(":scope>h2");if(t)t.remove();box.appendChild(el)})}
       [...R.childNodes].forEach(n=>box.appendChild(n));
       const w=document.createElement("div");w.appendChild(box);return w.innerHTML}catch(e){return html}}}
+  /* Ordinateur : plus de carte de présentation dans la colonne de droite */
+  if(typeof railHTML==="function"){const pr=railHTML;railHTML=function(){const h=pr.apply(this,arguments);return typeof h==="string"?h.replace(/<div class="panel logo-card">[\s\S]*?<\/div><\/div>\s*$/,""):h}}
+  /* Listes : un titre simple, sans mention technique */
+  if(typeof listsView==="function"){const pl=listsView;listsView=function(){const h=pl.apply(this,arguments);
+    return typeof h==="string"?h.replace(/<span class="eyebrow">[^<]*contenu original[^<]*<\/span>/,"").replace(/<p class="muted">Aucun remplissage automatique[^<]*<\/p>/,""):h}}
   if(typeof I18N!=="undefined"){const U={it:["Esercitarsi","Parlare in situazione"],es:["Practicar","Hablar en situación"],pt:["Praticar","Falar em situação"],en:["Practise","Speak in real situations"],de:["Üben","In Situationen sprechen"],nl:["Oefenen","Spreken in situaties"],ary:["Tmren","Hder f l-mawa9if"]};
     for(const l in U){I18N[l]=I18N[l]||{};["Pratiquer","Parler en situation"].forEach((k,i)=>{if(I18N[l][k]==null)I18N[l][k]=U[l][i]})}}
   const css=document.createElement("style");css.id="castellum-interface-css";css.textContent=`
@@ -29,6 +34,24 @@
 #lxStep .a2-status:not(:has(.a2-warn,.a2-spin)){display:none}
 #lxStep .jx-nosound{font-size:.78rem;min-height:28px;line-height:28px;opacity:.85}
 .ls-story{display:none}
-.ls-scene{gap:12px}`;
+.ls-scene{gap:12px}
+/* Choix sélectionné (niveau, onglet, langue, réglage) : lisible, comme les onglets de la page Apprendre */
+#view [aria-pressed="true"]:not(.opt):not(.tok):not(.mt),#sheetRoot [aria-pressed="true"]:not(.opt),#welcomeRoot [aria-pressed="true"],#view .letters button.on,#view .seg button.on{background:var(--ink)!important;color:var(--bg)!important;border-color:var(--af-edge)!important}
+#view [aria-pressed="true"] *,#view .letters button.on *{color:inherit!important}
+/* Dictionnaire : les lettres tiennent sur une ligne qui défile */
+#view .letters{display:flex!important;flex-wrap:nowrap!important;overflow-x:auto;gap:6px!important;padding:2px 2px 8px;scrollbar-width:thin}
+#view .letters button{flex:none;min-width:40px;height:40px}
+.swap-btn{color:var(--ink)!important}
+/* Outils : une liste claire sur une colonne, la visite guidée à la fin */
+.u2-tools{display:flex;flex-direction:column}
+.u2-tools .u2-tgrid{display:grid!important;grid-template-columns:1fr!important;gap:8px!important}
+@media (min-width:700px){.u2-tools .u2-tgrid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+.u2-tools .u2-tool{min-height:58px!important;padding:8px 14px!important;gap:14px!important;box-shadow:none!important}
+.u2-tools .u2-tool>span:first-child{font-size:1.35rem;width:28px;text-align:center;flex:none}
+.u2-tools .u2-tool .ct-tt b{font-size:1rem!important}
+.u2-tools .u2-tool .ct-tt small{font-size:.82rem!important}
+.u2-tools .ct-tourbtn{order:99;margin-top:16px!important}
+.u2-tools .u2-tool.wide:not(.ct-tourbtn){order:98}
+.u2-tools h3{margin:14px 0 8px!important}`;
   document.head.appendChild(css);
 })();
