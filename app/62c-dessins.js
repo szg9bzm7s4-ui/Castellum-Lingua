@@ -25,8 +25,7 @@
       '<ellipse cx="36" cy="84" rx="5.5" ry="3.5" fill="#F0586C"/><ellipse cx="84" cy="84" rx="5.5" ry="3.5" fill="#F0586C"/>'+MOUTH[m]+
       (m==="party"?'<path d="M14 24l6 3M104 20l-5 5M10 44l7-1M108 40l6 3" stroke="#3DBE95" stroke-width="4" stroke-linecap="round"/><path d="M28 12l3 5M92 10l-3 5" stroke="#E4472B" stroke-width="4" stroke-linecap="round"/>':'')}
   window.castellumMascotSVG=art;
-  mascot=function(mood="idle",cls=""){
-    return `<svg class="mascot am-mascot ${cls}" data-mood="${mood}" viewBox="0 0 124 142" role="img" aria-label="La mascotte château">${art(mood)}</svg>`};
+  /* La mascotte d'origine (image) est conservée : ce dessin n'est plus utilisé à sa place. */
 
   /* ---------- Icônes des lieux ---------- */
   const P=d=>`<path d="${d}"/>`;
@@ -94,7 +93,6 @@
   window.castellumUnitIcon=U=>svg(iconName(U));
   function paint(){
     /* images de l'ancienne mascotte déjà affichées avant le chargement de ce module (écran de bienvenue) */
-    document.querySelectorAll("img.mascot").forEach(im=>{const cls=[...im.classList].filter(c=>c!=="mascot").join(" ");im.outerHTML=mascot(im.dataset.mood||"idle",cls)});
     try{const UN=lvUnits();
     document.querySelectorAll(".vl-stop .vl-node>span[aria-hidden]:not([data-am])").forEach(el=>{const b=el.closest("[data-vpin]");if(!b)return;const U=UN[+b.dataset.vpin];if(!U)return;el.dataset.am=1;el.innerHTML=svg(iconName(U))})}catch(e){}}
   new MutationObserver(paint).observe(document.body,{childList:true,subtree:true});
