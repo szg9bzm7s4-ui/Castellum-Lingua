@@ -52,6 +52,13 @@
 .u2-tools .u2-tool .ct-tt small{font-size:.82rem!important}
 .u2-tools .ct-tourbtn{order:99;margin-top:16px!important}
 .u2-tools .u2-tool.wide:not(.ct-tourbtn){order:98}
-.u2-tools h3{margin:14px 0 8px!important}`;
+.u2-tools h3{margin:14px 0 8px!important}
+/* Réactions de la mascotte (« Succès », séries) : petite bulle en haut, qui ne cache plus le contenu */
+.react{bottom:auto!important;top:calc(72px + env(safe-area-inset-top,0px))!important;align-items:center!important;gap:8px!important}
+.react-m{width:48px!important}
+/* Focus clavier : un contour jaune, visible sur tous les boutons (au lieu du rouge sur rouge) */
+.btn:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid var(--gold)!important;outline-offset:3px!important}
+#lxFoot .btn:focus:not(:focus-visible){outline:none!important}
+.react-b{margin-bottom:0!important;font-size:.95rem!important;padding:8px 12px!important;border:2.5px solid var(--af-edge)!important;box-shadow:3px 3px 0 var(--af-edge)!important}`;
   document.head.appendChild(css);
 })();
